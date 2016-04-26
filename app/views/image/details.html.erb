@@ -1,0 +1,17 @@
+<%= scrivito_medium_dialog do %>
+  <%= scrivito_details_for do %>
+    <%= scrivito_image_tag @obj %>
+  <% end %>
+
+  <%= scrivito_details_for do %>
+    <% if @obj.meta_data[:width] && @obj.meta_data[:height]%>
+      <div>
+        <%= @obj.meta_data[:width] %> × <%= @obj.meta_data[:height] %> px
+      </div>
+    <% end %>
+
+    <div>
+      <%= number_to_human_size @obj.meta_data[:content_length] %>
+    </div>
+  <% end %>
+<% end %>

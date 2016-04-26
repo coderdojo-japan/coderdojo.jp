@@ -1,0 +1,11 @@
+<%= scrivito_medium_dialog do %>
+  <%= scrivito_details_for do %>
+    <%= scrivito_tag :div, @obj, :blob do %>
+      <%= link_to @obj.description_for_editor, scrivito_path(@obj), :target => :blank %>
+    <% end %>
+  <% end %>
+
+  <%= scrivito_details_for do %>
+    <%= number_to_human_size @obj.meta_data[:content_length] %>
+  <% end %>
+<% end %>
