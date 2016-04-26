@@ -5,10 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= scrivito_head_tags %>
+
 </head>
 <body>
 
 <%= yield %>
+<%= scrivito_body_tags %>
 
 </body>
 </html>
