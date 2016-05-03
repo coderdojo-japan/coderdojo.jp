@@ -156,6 +156,9 @@ GEM
     scrivito_section_widgets (0.90.1)
       bundler
       scrivito
+    scrivito_teaser_widget (0.1.1)
+      bundler
+      scrivito
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -195,6 +198,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   scrivito (~> 1.3.0.rc1)
   scrivito_section_widgets
+  scrivito_teaser_widget
   sdoc (~> 0.4.0)
   spring
   sqlite3
