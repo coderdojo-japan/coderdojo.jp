@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Scrivitio gem
 gem 'scrivito', '~> 1.3.0.rc1'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'scrivito_section_widgets'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
