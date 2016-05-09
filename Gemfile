@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'pg'
+gem 'pg', '~> 0.18.4'
 
 gem 'rails', '4.2.6'
 gem 'scrivito', '~> 1.3.0.rc1'
@@ -16,12 +16,12 @@ group :assets do
   gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'uglifier', '>= 1.3.0'
 
-  gem 'scrivito_section_widgets'
-  gem 'scrivito_teaser_widget'
+  gem 'scrivito_section_widgets', '1.0.0'
+  gem 'scrivito_teaser_widget',  '0.1.1'
 end
 
 group :development do
-  gem 'spring'
-  gem 'sqlite3'
+  gem 'spring', '1.7.1'
+  gem 'sqlite3', '1.3.11'
   gem 'web-console', '~> 2.0'
 end
