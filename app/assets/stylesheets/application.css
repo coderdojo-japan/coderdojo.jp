@@ -13,3 +13,5 @@
  *= require scrivito
  *= require scrivito_section_widgets
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
