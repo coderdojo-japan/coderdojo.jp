@@ -9,7 +9,6 @@ gem 'scrivito', '~> 1.3.0.rc1'
 gem 'scrivito_section_widgets', '1.0.0'
 gem 'scrivito_teaser_widget',  '0.1.1'
 
-gem 'bootstrap-sass', '~> 3.3.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'

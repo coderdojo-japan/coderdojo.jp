@@ -14,4 +14,3 @@
 //= require jquery_ujs
 //= require scrivito
 //= require scrivito_section_widgets
-//= require bootstrap-sprockets
