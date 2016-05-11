@@ -13,3 +13,7 @@
  *= require scrivito
  *= require scrivito_section_widgets
  */
+body {
+    text-align: center
+}
+
