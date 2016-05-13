@@ -4,7 +4,7 @@ ruby '2.3.1'
 gem 'pg', '~> 0.18.4'
 
 gem 'rails', '4.2.6'
-gem 'scrivito', '~> 1.3.0.rc1'
+gem 'scrivito', '~> 1.3.0'
 
 gem 'scrivito_section_widgets', '1.0.0'
 gem 'scrivito_teaser_widget',  '0.1.1'
