@@ -12,13 +12,12 @@
  *
  *= require scrivito
  *= require scrivito_section_widgets
+ *= require bootstrap-material-design
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 body {
-    text-align: center
-}
-
-.container{
-	background-color: blue
+	align-content: center
 }
