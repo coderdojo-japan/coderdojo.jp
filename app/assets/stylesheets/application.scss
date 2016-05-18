@@ -12,8 +12,18 @@
  *
  *= require scrivito
  *= require scrivito_section_widgets
+ *= require bootstrap-material-design
  */
-body {
-    text-align: center
-}
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.widget.red {
+  background-color: #ff0000;
+}
+.widget.green {
+  background-color: #00ff00;
+}
+.widget.blue {
+  background-color: #0000ff;
+}
