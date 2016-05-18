@@ -18,4 +18,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.bg-blue{background-color:blue;}
+.widget.red {
+  background-color: #ff0000;
+}
+.widget.green {
+  background-color: #00ff00;
+}
+.widget.blue {
+  background-color: #0000ff;
+}

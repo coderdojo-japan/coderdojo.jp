@@ -2,5 +2,5 @@ class ParagraphWidget < Widget
   attribute :image, :reference
   attribute :headline, :string
   attribute :text, :string
-  attribute :color, :enum, values: %w[red green blue], default: 'blue'
+  attribute :background_color_select, :enum, values: ["red","green","blue"], default: "red" 
 end
