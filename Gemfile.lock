@@ -157,6 +157,9 @@ GEM
     scrivito_section_widgets (1.0.0)
       bundler
       scrivito
+    scrivito_space_widget (1.2.0)
+      bundler
+      scrivito
     scrivito_teaser_widget (0.1.1)
       bundler
       scrivito
@@ -200,6 +203,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   scrivito (~> 1.3.0)
   scrivito_section_widgets (= 1.0.0)
+  scrivito_space_widget
   scrivito_teaser_widget (= 0.1.1)
   sdoc (~> 0.4.0)
   simple_grid_rails
