@@ -1,0 +1,2 @@
+class FooterWidget < Widget
+end
