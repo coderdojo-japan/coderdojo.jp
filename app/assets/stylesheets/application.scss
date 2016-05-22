@@ -13,7 +13,9 @@
  *= require scrivito
  *= require scrivito_section_widgets
  */
-body {
-    text-align: center
-}
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.cover-bg-blue{background-color:#2275CA;}
+.cover-text-white{color:#FFFFFF;}
