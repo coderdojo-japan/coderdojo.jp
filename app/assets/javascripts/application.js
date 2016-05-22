@@ -16,5 +16,4 @@
 //= require scrivito_section_widgets
 //= require scrivito
 //= require bootstrap-sprockets
-//= require bootstrap-material-design
 
