@@ -1,3 +1,4 @@
 class FooterWidget < Widget
-  attribute :text, :string
+  attribute :headline, :html
+  attribute :text, :html
 end
