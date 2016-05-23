@@ -1,2 +1,0 @@
-class BlogWidget < Widget
-end
