@@ -1,1 +1,8 @@
-This is the show view of the <%= CoderDojoListWidget.description_for_editor %>.
+  <div class="row">
+    <div class="col-1">
+      <%= scrivito_image_tag widget, :image, class:'image-responsive'%>
+      <%= scrivito_tag :h1, widget, :headline, data: {newlines: false} %>
+      <%= scrivito_tag :p, widget, :tag, class:'cover-text-white'%> 
+      <%= scrivito_tag :p, widget, :caption, class:'cover-text-white'%> 
+    </div>
+ </div>
