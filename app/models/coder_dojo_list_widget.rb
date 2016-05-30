@@ -1,0 +1,2 @@
+class CoderDojoListWidget < Widget
+end
