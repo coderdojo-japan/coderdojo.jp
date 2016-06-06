@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  course: MyString
+  caption: MyString
+  venue: MyString
+  region: 1
+  logo_image_url: MyString
+  redirect_url: MyString
+  user_name: MyString
+  email: MyString
+
+two:
+  name: MyString
+  course: MyString
+  caption: MyString
+  venue: MyString
+  region: 1
+  logo_image_url: MyString
+  redirect_url: MyString
+  user_name: MyString
+  email: MyString
