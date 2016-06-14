@@ -18,17 +18,17 @@ class CoderDojoTest < ActiveSupport::TestCase
   end
 
   test "name should be present" do
-    @dojo.name  = "    "
+    @dojo.name  = "c" * 51
     assert_not @dojo.valid?
   end
   
   test "course should be present" do
-  	@dojo.course = "    "
+  	@dojo.course = "c" * 244 + "@example.com"
   	assert_not @dojo.valid?
   end
 
   test "caption should be present" do
-  	@dojo.caption = "    "
+  	@dojo.caption = "c " * 60
   	assert_not @dojo.valid?
   end
 
@@ -53,8 +53,13 @@ class CoderDojoTest < ActiveSupport::TestCase
   end
 
   test "user name should be present" do
-  	@dojo.user_name = "    "
+  	@dojo.user_name = "c" * 51
   	assert_not @dojo.valid?
   end
+  
+  test "user email should be present" do
+  	@dojo.email = "c" * 244 + "@example.com"
+  	assert_not @dojo.valid?
+ end
 
 end
