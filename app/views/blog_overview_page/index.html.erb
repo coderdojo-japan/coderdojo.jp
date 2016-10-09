@@ -1,6 +1,5 @@
 <% @blog_posts.each do |blog_post| %>
   <h4><%= link_to(scrivito_value(blog_post.title), scrivito_path(blog_post)) %></h4>
-  <p><%= scrivito_tag(:div, blog_post, :abstract) %></p>
 <% end %>
 
 <%= link_to("previous page", @previous_page) if @previous_page %>
