@@ -5,5 +5,7 @@
 <% end %>
 
 <%= scrivito_tag :h1, @obj, :title %>
-<%= scrivito_tag :div, @obj, :body %>
+<%= scrivito_tag(:div, @obj, :abstract) %>
 <%= scrivito_tag(:div, @obj, :created) %>
+<%= scrivito_image_tag(@obj, :image) %>
+<%= scrivito_tag :div, @obj, :body %>

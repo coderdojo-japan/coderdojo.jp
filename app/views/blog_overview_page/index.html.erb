@@ -1,5 +1,7 @@
 <% @blog_posts.each do |blog_post| %>
-  <h4><%= link_to(scrivito_value(blog_post.title), scrivito_path(blog_post)) %></h4>
+  <h2><%= link_to(scrivito_value(blog_post.title), scrivito_path(blog_post)) %></h2>
+  <%= content_tag(:p, scrivito_value(blog_post.abstract)) %>
+  <%= scrivito_image_tag(scrivito_value(blog_post.image)) %>
 <% end %>
 
 <%= link_to("previous page", @previous_page) if @previous_page %>
