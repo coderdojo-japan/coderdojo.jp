@@ -1,0 +1,8 @@
+<%= scrivito_tag_list :ul, @obj, :toclist do |list, child| %>
+  <%= list.tag :li do %>
+    <%= link_to child.display_title, scrivito_path(child) %>
+  <% end %>
+<% end %>
+
+<%= scrivito_tag :h1, @obj, :title %>
+<%= scrivito_tag :div, @obj, :body %>
