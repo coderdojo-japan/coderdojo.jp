@@ -1,0 +1,2 @@
+class LoginPageController < CmsController
+end
