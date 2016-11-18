@@ -1,4 +1,4 @@
 class FooterWidget < Widget
   attribute :headline, :html
-  attribute :paragraph, :html
+  attribute :line, :html
 end
