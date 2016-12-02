@@ -1,6 +1,6 @@
 class SoTechShaController < ApplicationController
-  def index
-    chapter = params[:chapter]
-    redirect_to "/#{chapter}"
+  def quiz
+    quiz = params[:quiz]
+    redirect_to "/#{quiz}"
   end
 end
