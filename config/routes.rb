@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Accsess from CoderdojoBook
-  get '/sotech_sha/:chapter', to: 'sotech_sha#index'
+  # Accsess from CoderDojo Book
+  get '/sotechsha/:chapter', to: 'so_tech_sha#index'
 
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
   # See the documentation of 'scrivito_route' for a detailed description.
