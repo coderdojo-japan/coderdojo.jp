@@ -1,0 +1,2 @@
+module SoTechShaHelper
+end

@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'pg', '~> 0.18.4'
-
 gem 'rails', '4.2.6'
 gem 'scrivito', '~> 1.3.0'
 
@@ -20,7 +18,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
-  gem 'spring', '1.7.1'
-  gem 'sqlite3', '1.3.11'
   gem 'web-console', '~> 2.0'
+  gem 'spring', '1.7.1'
+end
+
+group :development, :test do
+  gem 'sqlite3', '1.3.11'
+end
+
+group :production do
+  gem 'pg', '~> 0.18.4'
 end
