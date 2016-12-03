@@ -1,5 +1,6 @@
-.cd-fw, body {
-    text-align: center
+.cd-fw{
+    text-align: center;
+    background: #2275CA;
 }
 
 .meetup-item a, .mentor-person > header > a {
@@ -110,29 +111,40 @@ a {
     background: #FFF
 }
 
-body > footer {
+.footer-bottom  {
     margin: -.25em 0 0;
-    padding: 1.5em 0 4em;
-    color: #fff
+    padding: 2em 3.5em;
+    color: #fff;
+    background: #2275CA
 }
 
-body > footer h2 {
+.footer-bottom > h2 {
     font-size: 87.5%;
     margin-top: 0;
     margin-bottom: 2em
 }
 
-body > footer a {
-    color: inherit
+.footer-link {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-link:link {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-link:visited {
+    color: #fff;
+    text-decoration: underline
 }
 
 .title, body > footer a:hover {
     color: #fff
 }
 
-.title {
-    margin: 0;
-    padding: 2em
+.title{
+    background: #2275CA;
 }
 
 .title > i.cd:before {
@@ -189,190 +201,84 @@ body > footer a {
     }
 }
 
-body > section {
+@media only screen and (min-width:560px) {
+
+    .introduction {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 1.5em;
+        background: #fff
+    }
+
+    .detail-introduction {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 1.5em;
+    }
+}
+
+.introduction {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 1.5em;
     background: #fff
 }
 
-body > section > * {
-    margin: 0 auto;
-    max-width: 750px
+.introduction > p {
+    margin-bottom: .8em;
+    text-align: center
 }
 
-body > section:nth-child(even) {
-    background: #f7f7f7
+.detail-introduction {
+    max-width: 800px;
+    margin: auto;
+    padding: 0.5em 4em;
+    padding-bottom: 1.5em
 }
 
-body > section > h1 {
-    display: none
-}
-
-body > section > h2 {
-    font-size: 120%;
-    color: #999;
-    margin-bottom: .4em
-}
-
-body > section > ul {
+.list > ul {
+    display: inline-block;
     text-align: left;
     padding-left: 2em;
     color: #666
 }
 
-body > section > p {
-    margin-bottom: .8em;
-    text-align: left
+.detail-introduction > h2 {
+    font-size: 120%;
+    color: #999;
+    margin-bottom: .4em
 }
 
-.meetup, .meetup > ul {
-    text-align: center
+.grayscale-bg {
+    background: #f7f7f7;
+    width: 120%
 }
 
-@media only screen and (min-width:560px) {
-    body > section > ul {
-        padding-left: 7em
-    }
-
-    body > section > p {
-        text-align: center
-    }
-}
-
-body > section.cover {
-    padding: 0;
-    max-height: 500px;
+.cover {
     overflow: hidden;
-    background: #999;
-    line-height: 0
+    min-height: 150px;
+    background: #999
 }
 
 .cover > img {
     width: 100%;
-    max-width: 1200px
-}
-
-.meetup > ul, .mentor > ul {
-    list-style: none;
-    max-width: 100%
-}
-
-@media only screen and (min-width:560px) {
-    .cover > img {
-        / / margin-top: -100px;
-        margin-top: -10px
-    }
-}
-
-@media only screen and (min-width:720px) {
-    .cover > img {
-        margin-top: -25px
-    }
-}
-
-.meetup > ul {
-    padding: 0 0 1.5em
-}
-
-.meetup-item {
-    display: inline-block;
-    width: 85%;
-    margin: 10px;
-    background: #fff;
-    position: relative;
-    text-align: left
-}
-
-.meetup-item > header {
-    height: 150px;
-    position: relative;
-    overflow: hidden;
-    background: #c4cce2
-}
-
-.meetup-item > header > a > img {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -50%
-}
-
-.meetup-item > header > a > time {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    line-height: 1em;
-    color: #fff;
-    font-size: 200%;
-    text-align: center;
-    background: rgba(0, 0, 0, .4)
-}
-
-.meetup-item h3 {
-    line-height: 1.3em;
-    margin: 10px 5px 0;
-    padding: 0 0 5px;
-    border-bottom: 1px dashed #ccc;
-    font-size: 90%
-}
-
-.meetup-item p {
-    margin: 0;
-    padding: 10px 5px;
-    font-size: 90%
-}
-
-.meetup-item-props {
-    margin: 0;
-    padding: 10px 5px;
-    font-size: 90%;
-    list-style: none
-}
-
-.meetup-item-mentors {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 200px;
-    text-align: right
-}
-
-.meetup-item-mentors > li {
-    display: inline-block;
-    margin: 2px
-}
-
-.meetup-item-mentors > li img {
-    width: 32px;
-    border: 2px solid #fff;
-    border-radius: 18px
-}
-
-.meetup-item > footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5px;
-    font-size: 90%;
-    color: #ccc;
-    text-align: center
-}
-
-@media only screen and (min-width:560px) {
-    .meetup-item {
-        width: 220px;
-        height: 305px
-    }
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -3%
 }
 
 .mentor > ul {
     text-align: center;
     padding: 0 0 1.5em
+}
+
+.mentor > h2 {
+    font-size: 120%;
+    color: #999;
+    padding-top: 1em;
+    margin: .4em
 }
 
 .mentor-person {
@@ -400,10 +306,6 @@ body > section.cover {
     / / border-radius: 48px;
     background-size: cover;
     margin: 0 auto
-}
-
-header.title {
-    background: #2275CA
 }
 
 .mentor-person-name {
@@ -445,4 +347,9 @@ body {
 
 .meetup-item > header time, .title > h1 {
     font-family: 'Fjalla One', sans-serif
+}
+
+.full-width{
+    margin-left: -10%;
+    margin-right: -10%;
 }
