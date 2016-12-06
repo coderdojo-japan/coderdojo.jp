@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoderdojoJp</title>
+  <meta charset="utf-8">
+  <title>CoderDojo Japan - コーダー道場ジャパン</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= scrivito_head_tags %>
 
+  <meta name="viewport"          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description"       content="CoderDojoは子どものためのプログラミング道場です。2011年にアイルランドで始まり、全国では67ヶ所、世界では66ヶ国・1,150ヶ所で開催されています。" />
+  <meta property="og:title"      content="CoderDojo Japan">
+  <meta property="og:site_name"  content="CoderDojo Japan">
+  <meta property="og:url"        content="http://coderdojo.jp/">
+  <meta property="og:image"      content="http://coderdojo.jp/og-image.png">
+  <meta property="og:image:type" content="image/png">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-  <div class="container">
-
+  <div class="container-fluid">
     <%= yield %>
     <%= scrivito_body_tags %>
   </div>

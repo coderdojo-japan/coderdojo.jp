@@ -1,0 +1,355 @@
+.cd-fw{
+    text-align: center;
+    background: #2275CA;
+}
+
+.meetup-item a, .mentor-person > header > a {
+    text-decoration: none
+}
+
+@font-face {
+    font-family: coderdojo;
+    src: url(../font/coderdojo.eot);
+    src: url(../font/coderdojo.eot?#iefix) format('eot'), url(../font/coderdojo.woff) format('woff'), url(../font/coderdojo.ttf) format('truetype'), url(../font/coderdojo.svg#coderdojo) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.cd:before {
+    display: inline-block;
+    font-family: coderdojo;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.cd-lg {
+    font-size: 1.3333333333333333em;
+    line-height: .75em;
+    vertical-align: -15%
+}
+
+.meetup-item, .mentor-person {
+    overflow: hidden;
+    vertical-align: top
+}
+
+.cd-2x {
+    font-size: 2em
+}
+
+.cd-3x {
+    font-size: 3em
+}
+
+.cd-4x {
+    font-size: 4em
+}
+
+.cd-5x {
+    font-size: 5em
+}
+
+.cd-fw {
+    width: 1.2857142857142858em
+}
+
+.cd-spin {
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear
+}
+
+.cd-clock:before {
+    content: "\EA01"
+}
+
+.cd-connect:before {
+    content: "\EA02"
+}
+
+.cd-glyph07:before {
+    content: "\EA03"
+}
+
+.cd-glyph08:before {
+    content: "\EA04"
+}
+
+.cd-logo-jp:before {
+    content: "\EA05"
+}
+
+.cd-logo:before {
+    content: "\EA06"
+}
+
+.cd-pin:before {
+    content: "\EA07"
+}
+
+.cd-spinner:before {
+    content: "\EA08"
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px
+}
+
+a {
+    color: #2e9ad9
+}
+
+.under-construction {
+    color: #cd8585;
+    font-size: 75%;
+    margin: 0;
+    padding: .2em;
+    background: #FFF
+}
+
+.footer-bottom  {
+    margin: -.25em 0 0;
+    padding: 2em 3.5em;
+    color: #fff;
+    background: #2275CA
+}
+
+.footer-bottom > h2 {
+    font-size: 87.5%;
+    margin-top: 0;
+    margin-bottom: 2em
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-link:link {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-link:visited {
+    color: #fff;
+    text-decoration: underline
+}
+
+.title, body > footer a:hover {
+    color: #fff
+}
+
+.title{
+    background: #2275CA;
+}
+
+.title > i.cd:before {
+    font-size: 500%;
+    display: block
+}
+
+.title > h1 {
+    font-size: 1.5em;
+    margin: .5em 0 1em
+}
+
+.title > p {
+    padding: 0 1em;
+    margin: 0 auto;
+    max-width: 680px;
+    font-size: 130%
+}
+
+@media only screen and (min-width:560px) {
+    body > footer > ul li {
+        border-radius: 3px;
+        line-height: 2.8em
+    }
+
+    .title > i.cd:before {
+        font-size: 800%
+    }
+
+    .title > h1 {
+        font-size: 1.7em;
+        margin-bottom: .5em
+    }
+
+    .title > p {
+        padding: 0 3em;
+        font-size: 110%
+    }
+}
+
+@media only screen and (min-width:720px) {
+    .title > i.cd:before {
+        font-size: 1000%
+    }
+
+    .title > h1 {
+        font-size: 2.2em;
+        margin-bottom: .2em
+    }
+
+    .title > p {
+        padding: 0 5em;
+        font-size: 90%
+    }
+}
+
+@media only screen and (min-width:560px) {
+
+    .introduction {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 1.5em;
+        background: #fff
+    }
+
+    .detail-introduction {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 1.5em;
+    }
+}
+
+.introduction {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background: #fff
+}
+
+.introduction > p {
+    margin-bottom: .8em;
+    text-align: center
+}
+
+.detail-introduction {
+    max-width: 800px;
+    margin: auto;
+    padding: 0.5em 4em;
+    padding-bottom: 1.5em
+}
+
+.list > ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 2em;
+    color: #666
+}
+
+.detail-introduction > h2 {
+    font-size: 120%;
+    color: #999;
+    margin-bottom: .4em
+}
+
+.grayscale-bg {
+    background: #f7f7f7;
+    width: 120%
+}
+
+.cover {
+    overflow: hidden;
+    min-height: 150px;
+    background: #999
+}
+
+.cover > img {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -3%
+}
+
+.mentor > ul {
+    text-align: center;
+    padding: 0 0 1.5em
+}
+
+.mentor > h2 {
+    font-size: 120%;
+    color: #999;
+    padding-top: 1em;
+    margin: .4em
+}
+
+.mentor-person {
+    display: inline-block;
+    width: 85%;
+    margin: 10px;
+    padding: 15px 0;
+    background: #fff;
+    position: relative;
+    text-align: center
+}
+
+.mentor-person > p {
+    font-size: 90%;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 5px 0
+}
+
+.mentor-person-picture {
+    display: block;
+    height: 96px;
+    width: 96px;
+    background-position: center center;
+    / / border-radius: 48px;
+    background-size: cover;
+    margin: 0 auto
+}
+
+.mentor-person-name {
+    display: block;
+    margin: .5em 0
+}
+
+@media only screen and (min-width:560px) {
+    .mentor-person {
+        width: 220px;
+        height: 275px
+    }
+}
+
+.spinner {
+    height: 3em;
+    color: #ccc
+}
+
+.tags {
+    margin: 0 5px;
+    padding: 0;
+    list-style: none
+}
+
+.tags > li {
+    display: inline-block;
+    font-size: 80%;
+    color: #fff;
+    border-radius: .3em;
+    padding: .2em;
+    margin: .1em
+}
+
+body {
+    color: #f;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
+}
+
+.meetup-item > header time, .title > h1 {
+    font-family: 'Fjalla One', sans-serif
+}
+
+.full-width{
+    margin-left: -10%;
+    margin-right: -10%;
+}

@@ -1,0 +1,115 @@
+<div class="title text-center full-width">
+  <i class="cd cd-logo"></i>
+  <h1>CoderDojo Japan</h1>
+  <p>子どものためのプログラミング道場</p>
+  <br />
+</div>
+<section class="cover full-width">
+  <img src="/img/coderdojo-japan_cover.jpg">
+</section>
+<section class="introduction text-center list">
+  <p>CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では66カ国・1,150の道場、日本では全国に67以上の道場があります (2016年12月現在)。</p>
+  <p>各道場では、主に次のような内容を学ぶことができます。</p>
+  <ul>
+    <li>Scratch (ブロックを組合わせて簡単プログラミング)</li>
+    <li>HTML / CSS / JavaScript などを活用したWEBサイト作成</li>
+    <li>Arduinoなどの電子工作と組合わせたプログラミング、など</li>
+  </ul>
+  <br />
+  <p>各道場で学べる内容はそれぞれ異なりますが、CoderDojo の雰囲気は一様です。「どんな雰囲気か知りたい」という方は、下記のガイダンス資料をご参考にしてください。</p>
+  <div class="text-center">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/FAXoW4pBq172mQ" width="595" height="388" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+    <div style="margin-bottom:5px">スライドが見えない場合は<strong><a href="//www.slideshare.net/togazo/coderdojo-introduction-jp" title="CoderDojoガイダンス（最新版）" target="_blank">コチラ</a></strong>から閲覧してください</div>
+  </div>
+  <p style="margin-top:10px;">さらに詳しい道場の様子については、「<a href="http://bakemono.jp/reading/blog/web/2256/">CoderDojoとは? 運営者に話を聞いてみた!</a> (バケモノ.jp)」や「<a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場 CoderDojo をはじめてみませんか</a> (ICT教育ニュース)」を読んでみてください。それぞれインタビュー形式で話が構成されているので、より具体的なイメージが掴めるかなと思います :)</p>
+</section>
+<section class="mentor text-center full-width grayscale-bg" ng-controller="MentorController as mctrl">
+  <h2>全国の道場</h2>
+  <ul ng-if="loaded">
+    <li class="mentor-person" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="{{ mentor.url }}">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url({{ mentor.image_url }})'}"></span>
+          <span class="mentor-person-name">{{ mentor.name }}</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <li ng-repeat="tag in mentor.tags">{{ tag }}</li>
+      </ul>
+      <p>{{ mentor.description }}</p>
+    </li>
+  </ul>
+  <div class="spinner" ng-if="!loaded">道場情報を読み込み中...</div>
+</section>
+
+<section class="text-center">
+  <a class="twitter-timeline"  href="https://twitter.com/search?q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20OR%20%22Coder%20Dojo%22%20OR%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E9%81%93%E5%A0%B4%20lang%3Aja" data-partner="tweetdeck"data-widget-id="770838874780119041">CoderDojoに関するつぶやき</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
+<div class="full-width grayscale-bg">
+  <section class="detail-introduction list">
+    <h2 class="text-center">CoderDojo をもっと知りたい</h2>
+    <p>下記ウェブサイトから、より詳細な情報や、最新の情報にアクセスできます。</p>
+    <ul>
+  <li><a href="https://coderdojo.com/">CoderDojo (英語)</a></li>
+  <li><a href="https://www.facebook.com/groups/coderdojo.jp">CoderDojo Japan (Facebook)</a></li>
+  <li><a href="http://kata.coderdojo.com/wiki/KataJapan">CoderDojo Kata (Wiki)</a></li>
+    </ul>
+    <br/>
+
+    <p>本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。</p>
+    <p>「これまでの成り立ちを知りたい」「地元で CoderDojo を立ち上げてみたい」といった場合には <a href="http://kata.coderdojo.com/wiki/KataJapan">CoderDojo Kata</a> を参照してみてください。</p>
+    <br />
+    <h2 class="text-center">お問い合わせ</h2>
+    <p>取材や支援などのお問い合わせについては、下記フォームからお気軽にご連絡ください :)<br />
+  メールをご希望の場合は、担当の安川要平まで (<i>yohei@coderdojo.jp</i>) ご連絡ください。</p>
+
+    <!-- Contact Form via Wufoo -->
+    <div id="contact"></div>
+    <div id="wufoo-qkjthoy0qpuvg9" style="margin-top: -10px">>
+  <a href="https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9">問い合わせフォーム</a>.
+    </div>
+    <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">HTML Forms powered by <a href="http://www.wufoo.com">Wufoo</a>.</div>
+    <script type="text/javascript">
+  var qkjthoy0qpuvg9;(function(d, t) {
+  var s = d.createElement(t), options = {
+    'userName':'yasslab',
+    'formHash':'qkjthoy0qpuvg9',
+    'autoResize':true,
+    'height':'497',
+    'async':true,
+    'host':'wufoo.com',
+    'header':'show',
+    'ssl':true
+  };
+  s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+  s.onload = s.onreadystatechange = function() {
+    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try {
+      qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
+    } catch (e) {}
+  };
+  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+  })(document, 'script');
+    </script>
+  </section>
+</div>
+
+<footer class="footer-bottom full-width text-center ">
+  <h2><a href="https://www.facebook.com/groups/coderdojo.jp/" class="footer-link">CoderDojo Japan</a> 運営グループ</h2>
+  <p>本WEBサイトのソースコードや社団法人の定款などは <a href="https://github.com/coderdojo-japan/" class="footer-link">GitHub</a> 上で公開されています。</p>
+  <p>Copyright &copy; 2016 一般社団法人 CoderDojo Japan</p>
+</footer>
+<script src="js/angular.min.js"></script>
+<script src="js/parse.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-62337761-1");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
