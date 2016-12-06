@@ -17,4 +17,11 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     get "/sotechsha/gazou"
     assert_redirected_to "/sotechsha-gazou"
   end
+
+  test "SoTechShalink should be rendered" do
+    get "/sotechsha"
+    #so_tech_sha_overview_page.index がrenderされる
+    #タイトルが「「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ」である
+    #記事の件数　7件である
+  end
 end
