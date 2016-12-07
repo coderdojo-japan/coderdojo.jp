@@ -20,8 +20,10 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
 
   test "SoTechShalink should be rendered" do
     get "/sotechsha"
-    #so_tech_sha_overview_page.index がrenderされる
-    #タイトルが「「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ」である
-    #記事の件数　7件である
+    assert_template "so_tech_sha_overview_page/index"
+    assert_select "h1.page-header","「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ"
+    assert_select "a[href]", count:14
+    # Error
+    # assert_select "a[href=?]", /sotechsha-/ , count:14
   end
 end
