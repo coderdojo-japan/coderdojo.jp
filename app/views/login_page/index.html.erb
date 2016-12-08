@@ -1,3 +1,9 @@
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger" role="alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <%= scrivito_tag_list :ul, @obj, :toclist do |list, child| %>
   <%= list.tag :li do %>
     <%= link_to child.display_title, scrivito_path(child) %>
@@ -6,3 +12,15 @@
 
 <%= scrivito_tag :h1, @obj, :title %>
 <%= scrivito_tag :div, @obj, :body %>
+
+<%= form_tag session_path, role: 'form' do %>
+  <div class="form-group">
+    <%= label_tag :login, 'Login' %>
+    <%= text_field_tag :login, '', class: 'form-control', placeholder: 'Enter login' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password, 'Password' %>
+    <%= password_field_tag :password, '', class: 'form-control', placeholder: 'Enter password' %>
+  </div>
+  <button type="submit" class="btn btn-default">Log in</button>
+<% end %>

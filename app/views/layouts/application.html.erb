@@ -10,6 +10,15 @@
 </head>
 <body>
   <div class="container">
+    <% if logged_in? %>
+      <%= link_to session_path, class: 'navbar-btn navbar-right', method: :delete do %>
+        <button class="btn btn-warning">Log out</button>
+      <% end %>
+    <% else %>
+      <%= link_to scrivito_path(LoginPage.instance), class: 'navbar-btn navbar-right' do %>
+        <button class="btn btn-success">Log in</button>
+      <% end %>
+    <% end %>
 
     <%= yield %>
     <%= scrivito_body_tags %>

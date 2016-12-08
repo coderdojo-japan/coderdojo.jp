@@ -10,4 +10,13 @@ Scrivito.configure do |config|
 
   # Disable the default routes to allow route configuration
   config.inject_preset_routes = false
+
+  #LoginPage Added
+  config.editing_auth do |env|
+    request = ActionDispatch::Request.new(env)
+    if request.session[:user].present?
+      Scrivito::User.system_user
+    end
+  end
+
 end
