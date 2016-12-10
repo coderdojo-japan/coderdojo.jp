@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring', '1.7.1'
+  gem 'rspec-rails', '~> 3.0.0'
 end
 
 group :development, :test do

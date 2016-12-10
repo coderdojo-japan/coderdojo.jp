@@ -251,7 +251,6 @@ a {
 
 .grayscale-bg {
     background: #f7f7f7;
-    width: 120%
 }
 
 .cover {
@@ -337,7 +336,8 @@ a {
     color: #fff;
     border-radius: .3em;
     padding: .2em;
-    margin: .1em
+    margin: .1em;
+    background: #2275CA
 }
 
 body {
@@ -352,4 +352,9 @@ body {
 .full-width{
     margin-left: -10%;
     margin-right: -10%;
+}
+
+.loaded{
+  width: 90%;
+  display: inline-block
 }

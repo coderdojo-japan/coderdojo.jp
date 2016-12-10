@@ -25,21 +25,606 @@
 </section>
 <section class="mentor text-center full-width grayscale-bg" ng-controller="MentorController as mctrl">
   <h2>全国の道場</h2>
-  <ul ng-if="loaded">
-    <li class="mentor-person" ng-repeat="mentor in mentors">
+  <ul class="loaded">
+    <li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
       <header>
-        <a ng-href="{{ mentor.url }}">
-          <span class="mentor-person-picture" ng-style="{'background-image':'url({{ mentor.image_url }})'}"></span>
-          <span class="mentor-person-name">{{ mentor.name }}</span>
+        <a ng-href="http://coderdojo-asahikawa.github.io/" href="http://coderdojo-asahikawa.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/416298905086341/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/416298905086341/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">旭川 (北海道)</span>
         </a>
       </header>
       <ul class="tags">
-        <li ng-repeat="tag in mentor.tags">{{ tag }}</li>
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
       </ul>
-      <p>{{ mentor.description }}</p>
-    </li>
-  </ul>
-  <div class="spinner" ng-if="!loaded">道場情報を読み込み中...</div>
+      <p class="ng-binding">北海道旭川市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderdojoSendai" href="https://www.facebook.com/CoderdojoSendai">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_sendai.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_sendai.jpg);"></span>
+          <span class="mentor-person-name ng-binding">仙台 (東北)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ゲーム</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">アプリ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">仙台市青葉区で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderdojoIzumi" href="https://www.facebook.com/CoderdojoIzumi">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/542546935853207/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/542546935853207/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">泉 (東北)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">仙台市泉区で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.tome" href="https://www.facebook.com/coderdojo.tome">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">登米 (東北)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">3Dプリンタ</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">3DCAD</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">宮城県登米市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata" href="http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">新潟 (北陸)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">新潟県新潟市で開催予定</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://sites.google.com/a/coderdojo.com/maebashi-jp/" href="https://sites.google.com/a/coderdojo.com/maebashi-jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-maebashi.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-maebashi.png);"></span>
+          <span class="mentor-person-name ng-binding">前橋 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">マインクラフト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ゲーム</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">群馬県前橋市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-moriya.com/" href="http://coderdojo-moriya.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/3276838/CoderDojoMoriya-LOGO.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/3276838/CoderDojoMoriya-LOGO.jpg);"></span>
+          <span class="mentor-person-name ng-binding">守谷 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">IoT</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">電子工作</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">茨城県守谷市で毎月開催
+    </p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-saitama.com/" href="http://coderdojo-saitama.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/513118842140860/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/513118842140860/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">さいたま (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">アプリ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">埼玉県さいたま市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.hibarigaoka" href="https://www.facebook.com/coderdojo.hibarigaoka">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/497400593610071/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/497400593610071/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">ひばりヶ丘 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">埼玉県新座市で月2回開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderDojoHanno" href="https://www.facebook.com/CoderDojoHanno">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/1570008999931017/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/1570008999931017/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">飯能 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">埼玉県飯能市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderDojoTokorozawa/" href="https://www.facebook.com/CoderDojoTokorozawa/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-tokorozawa.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-tokorozawa.png);"></span>
+          <span class="mentor-person-name ng-binding">所沢 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">埼玉県所沢市で不定期に開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-kodaira.github.io/" href="http://coderdojo-kodaira.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/616010815134433/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/616010815134433/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">小平 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都小平市で隔週開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo.code4hachioji.org/" href="http://coderdojo.code4hachioji.org/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_hachioji.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_hachioji.jpg);"></span>
+          <span class="mentor-person-name ng-binding">八王子 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都八王子市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojonakano/" href="https://www.facebook.com/coderdojonakano/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-nakano.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-nakano.png);"></span>
+          <span class="mentor-person-name ng-binding">中野 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">HTML/CSS</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">JavaScript</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Arduino</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都中野区にて毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-suginami.github.io/" href="https://coderdojo-suginami.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://coderdojo-suginami.github.io/images/logo-namisuke-circle-200.png)'}" style="background-image: url(https://coderdojo-suginami.github.io/images/logo-namisuke-circle-200.png);"></span>
+          <span class="mentor-person-name ng-binding">すぎなみ (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">HTML</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">JavaScript</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Processing</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都杉並区で月1回程度開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://tokyo.coderdojo.jp/" href="http://tokyo.coderdojo.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/346407898743580/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/346407898743580/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">下北沢 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ゲーム</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都世田谷区で毎週開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojochofu.hatenablog.jp/" href="http://coderdojochofu.hatenablog.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-chofu.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-chofu.jpg);"></span>
+          <span class="mentor-person-name ng-binding">調布 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">JavaScript</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">HTML</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都調布市で毎月開催
+    </p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/groups/coderdojo.shibuya/" href="https://www.facebook.com/groups/coderdojo.shibuya/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">渋谷 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">東京都渋谷区で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojonoda/" href="https://www.facebook.com/coderdojonoda/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">野田 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県野田市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://urayasu.coderdojo.chiba.jp/" href="http://urayasu.coderdojo.chiba.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://urayasu.coderdojo.chiba.jp/images/cdlogo.png)'}" style="background-image: url(http://urayasu.coderdojo.chiba.jp/images/cdlogo.png);"></span>
+          <span class="mentor-person-name ng-binding">浦安 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県浦安市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-chiba.github.io/" href="http://coderdojo-chiba.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://coderdojo-chiba.github.io/images/CoderDojoChiba.png)'}" style="background-image: url(http://coderdojo-chiba.github.io/images/CoderDojoChiba.png);"></span>
+          <span class="mentor-person-name ng-binding">千葉 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県千葉市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://www.coderdojo-kashiwa.com/" href="http://www.coderdojo-kashiwa.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/472842399443384/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/472842399443384/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">柏 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県柏市で毎月3回開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://www.code-for-nagareyama.org/?cat=11" href="http://www.code-for-nagareyama.org/?cat=11">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">流山 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県流山市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-wakaba.github.io" href="http://coderdojo-wakaba.github.io">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">若葉 (関東)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Java</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">千葉県千葉市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo.shiojiri-osslabo.com/" href="http://coderdojo.shiojiri-osslabo.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/128374717310867/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/128374717310867/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">塩尻 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">長野県塩尻市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo.cowbell.jp/" href="http://coderdojo.cowbell.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo.png);"></span>
+          <span class="mentor-person-name ng-binding">福井 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">福井県福井市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://www.coderdojo-hamamatsu.org/" href="http://www.coderdojo-hamamatsu.org/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png)'}" style="background-image: url(https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png);"></span>
+          <span class="mentor-person-name ng-binding">浜松 (東海)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">静岡県浜松市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-toyohashi.doorkeeper.jp/" href="https://coderdojo-toyohashi.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-toyohashi.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-toyohashi.png);"></span>
+          <span class="mentor-person-name ng-binding">豊橋 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">アプリ開発</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">愛知県豊橋市で不定期開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-nagoya.github.io/" href="http://coderdojo-nagoya.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">名古屋 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Python</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">名古屋市中区で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-tempaku.hatenablog.com/" href="http://coderdojo-tempaku.hatenablog.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-tempaku.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-tempaku.png);"></span>
+          <span class="mentor-person-name ng-binding">天白 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">電子工作</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">名古屋市天白区で月2回開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-oharu.connpass.com/" href="http://coderdojo-oharu.connpass.com/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">大治 (中部)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">愛知県海部郡で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-nagaokakyo.doorkeeper.jp/" href="https://coderdojo-nagaokakyo.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dzpp79ucibp5a.cloudfront.net/groups_logos/4052_normal_1421068102_coderdojo-nagaokakyo_logo.png)'}" style="background-image: url(https://dzpp79ucibp5a.cloudfront.net/groups_logos/4052_normal_1421068102_coderdojo-nagaokakyo_logo.png);"></span>
+          <span class="mentor-person-name ng-binding">長岡京 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">京都府長岡京市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-nara-ikoma.github.io/" href="http://coderdojo-nara-ikoma.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/NARA_black.png)'}" style="background-image: url(https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/NARA_black.png);"></span>
+          <span class="mentor-person-name ng-binding">奈良 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">C#</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">奈良県奈良市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-nara-ikoma.github.io/" href="http://coderdojo-nara-ikoma.github.io/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/IKOMA_green.png)'}" style="background-image: url(https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/IKOMA_green.png);"></span>
+          <span class="mentor-person-name ng-binding">生駒 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">C#</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">奈良県生駒市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-otsu.doorkeeper.jp/" href="https://coderdojo-otsu.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">大津 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">滋賀県大津市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.kumano" href="https://www.facebook.com/coderdojo.kumano">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/254235038032617/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/254235038032617/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">熊野 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">アプリ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">和歌山県新宮市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-kyoto-fushimi.peatix.com/view" href="http://coderdojo-kyoto-fushimi.peatix.com/view">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">京都伏見 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">WEBサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Java</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">JavaScript</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">京都市伏見区墨染で隔月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-hirakata.github.io" href="http://coderdojo-hirakata.github.io">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">枚方 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">アプリ開発</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪府枚方市で隔月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderDojoHigashiosaka/" href="https://www.facebook.com/CoderDojoHigashiosaka/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-higasi-osaka.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-higasi-osaka.jpg);"></span>
+          <span class="mentor-person-name ng-binding">東大阪 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Android</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪府東大阪荒本で隔月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojo-nishinomiya.info/" href="http://coderdojo-nishinomiya.info/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://graph.facebook.com/1393015987582276/picture?type=large)'}" style="background-image: url(http://graph.facebook.com/1393015987582276/picture?type=large);"></span>
+          <span class="mentor-person-name ng-binding">西宮・梅田 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">電子工作</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">西宮/梅田でそれぞれ毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://zen.coderdojo.com/dojo/jp/osaka-osaka-prefecture/namba-osaka" href="https://zen.coderdojo.com/dojo/jp/osaka-osaka-prefecture/namba-osaka">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">なんば (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Java</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪市なんばで毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-hommachi.doorkeeper.jp/" href="https://coderdojo-hommachi.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_hommachi.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_hommachi.png);"></span>
+          <span class="mentor-person-name ng-binding">本町 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪府大阪市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.nishinari.osaka/" href="https://www.facebook.com/coderdojo.nishinari.osaka/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_nishinari.jpg)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_nishinari.jpg);"></span>
+          <span class="mentor-person-name ng-binding">西成 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪市西成区で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://coderdojo-sakai.doorkeeper.jp/" href="https://coderdojo-sakai.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">堺 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Java</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">大阪府堺市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.wakayama/" href="https://www.facebook.com/coderdojo.wakayama/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-wakayama.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-wakayama.png);"></span>
+          <span class="mentor-person-name ng-binding">和歌山 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">和歌山県和歌山市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://coderdojokobe.wixsite.com/home/" href="http://coderdojokobe.wixsite.com/home/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://static.wixstatic.com/media/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png/v1/fill/w_68,h_70,al_c,usm_0.66_1.00_0.01/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png)'}" style="background-image: url(https://static.wixstatic.com/media/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png/v1/fill/w_68,h_70,al_c,usm_0.66_1.00_0.01/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png);"></span>
+          <span class="mentor-person-name ng-binding">神戸 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">JavaScript</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">神戸市中央区で月１回	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderDojo-%E6%98%8E%E7%9F%B3-139582193048936/" href="https://www.facebook.com/CoderDojo-%E6%98%8E%E7%9F%B3-139582193048936/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://connpass-tokyo.s3.amazonaws.com/thumbs/ea/cd/eacd7eaeeef8c18d2def173281cb704d.png)'}" style="background-image: url(https://connpass-tokyo.s3.amazonaws.com/thumbs/ea/cd/eacd7eaeeef8c18d2def173281cb704d.png);"></span>
+          <span class="mentor-person-name ng-binding">明石 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Arduino</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">兵庫県明石市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://himejicoderdojo.doorkeeper.jp/" href="https://himejicoderdojo.doorkeeper.jp/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dzpp79ucibp5a.cloudfront.net/groups_logos/5887_normal_1435743920_CoderDojo5.png)'}" style="background-image: url(https://dzpp79ucibp5a.cloudfront.net/groups_logos/5887_normal_1435743920_CoderDojo5.png);"></span>
+          <span class="mentor-person-name ng-binding">姫路 (近畿)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">兵庫県姫路市で第3土曜日に毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="http://fukuyama100.com/coderdojo/" href="http://fukuyama100.com/coderdojo/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://fukuyama100.com/coderdojo/images/logo_fukuyama.png)'}" style="background-image: url(http://fukuyama100.com/coderdojo/images/logo_fukuyama.png);"></span>
+          <span class="mentor-person-name ng-binding">福山 (中国)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">広島県福山市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.hiroshima/" href="https://www.facebook.com/coderdojo.hiroshima/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-hiroshima.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-hiroshima.png);"></span>
+          <span class="mentor-person-name ng-binding">広島 (中国)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">広島県広島市で毎月開催	</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.itsukaichi" href="https://www.facebook.com/coderdojo.itsukaichi">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-itsukaichi.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo-itsukaichi.png);"></span>
+          <span class="mentor-person-name ng-binding">五日市 (中国)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">enchant.js</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Unity</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">広島県広島市で毎月開催
+    </p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/CoderDojoKurume/" href="https://www.facebook.com/CoderDojoKurume/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png)'}" style="background-image: url(https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png);"></span>
+          <span class="mentor-person-name ng-binding">久留米 (九州)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">PHP</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">福岡県久留米市で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://lmlab.net/coderdojo/" href="https://lmlab.net/coderdojo/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(http://lmlab.net/logos/coderdojo.png)'}" style="background-image: url(http://lmlab.net/logos/coderdojo.png);"></span>
+          <span class="mentor-person-name ng-binding">宮崎 (九州)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Ruby</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Python</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">ラズベリーパイ</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">宮崎県西臼杵郡で毎月開催</p>
+    </li><!-- end ngRepeat: mentor in mentors --><li class="mentor-person ng-scope" ng-repeat="mentor in mentors">
+      <header>
+        <a ng-href="https://www.facebook.com/coderdojo.miyakojima/" href="https://www.facebook.com/coderdojo.miyakojima/">
+          <span class="mentor-person-picture" ng-style="{'background-image':'url(https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg)'}" style="background-image: url(https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg);"></span>
+          <span class="mentor-person-name ng-binding">宮古島 (沖縄)</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <!-- ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Scratch</li><!-- end ngRepeat: tag in mentor.tags --><li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope">Webサイト</li><!-- end ngRepeat: tag in mentor.tags -->
+      </ul>
+      <p class="ng-binding">沖縄県宮古島市で不定期開催</p>
+    </li><!-- end ngRepeat: mentor in mentors -->
+    </ul>
 </section>
 
 <section class="text-center">
