@@ -17,6 +17,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
 
+gem 'rack-rewrite', '~> 1.5.0'
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring', '1.7.1'
