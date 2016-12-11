@@ -7,10 +7,15 @@ Official website of CoderDojo Japan integrated with Rails-based CMS (Scrivito)
 - デモ環境: http://coderdojo-japan.herokuapp.com/ (must be switched before the shutdown)
   - GitHub: https://github.com/yasslab/coderdojo.jp
 
-## Copyright
+## How to blog
 
-Initially developed by [YassLab](http://yasslab.jp/) in 2016,  
+- See [ブログ投稿編集手順書](https://docs.google.com/document/d/1Va1tImybdArVHAoLgqv035OXeUd0P8MB98hCiUyG5z4/edit)
+
+## Contributors
+
+Initially designed by [@cognitom](https://github.com/cognitom) in 2015, rebuilt by [YassLab](http://yasslab.jp/) team in 2016,  
 and passed to [CoderDojo Japan](http://coderdojo.jp/) in 2017.  
+
 Now published under MIT License.
 
 ```
