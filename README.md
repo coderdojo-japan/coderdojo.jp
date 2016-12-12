@@ -13,15 +13,10 @@ Initially designed by [@cognitom](https://github.com/cognitom) in 2015,
 replaced/developed by [YassLab](http://yasslab.jp/) team in 2016,  
 and now passed to [CoderDojo Japan](http://coderdojo.jp/).
 
-Now published under MIT License.
+## License
 
-```
-The MIT License (MIT)
-Copyright (c) 2016 CoderDojo Japan
+By following [Scrivito gem](https://rubygems.org/gems/scrivito), publishd under LGPL-3.0.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+This software can be used and modified under the LGPL-3.0. Please refer to   
+http://www.gnu.org/licenses/lgpl-3.0.html for the license text.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```
