@@ -9,7 +9,21 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
   test "Quizzes should be redirected" do
     @quizzes.each do |num|
       get "/sotechsha/#{num}"
-      assert_redirected_to "/#{num}"
+      assert_redirected_to "/sotechsha-#{num}"
     end
+  end
+
+  test "Gazoulink should be redirected" do
+    get "/sotechsha/gazou"
+    assert_redirected_to "/sotechsha-gazou"
+  end
+
+  test "SoTechShalink should be rendered" do
+    get "/sotechsha"
+    assert_template "so_tech_sha_overview_page/index"
+    assert_select "h1.page-header","「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ"
+    assert_select "a[href]", count:14
+    # Error
+    # assert_select "a[href=?]", /sotechsha-/ , count:14
   end
 end
