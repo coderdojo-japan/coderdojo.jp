@@ -13,7 +13,7 @@ Official website of CoderDojo Japan integrated with Rails-based CMS (Scrivito)
 
 ## Contributors
 
-Initially designed by [@cognitom](https://github.com/cognitom) in 2015, rebuilt by [YassLab](http://yasslab.jp/) team in 2016,  
+Initially designed by [@cognitom](https://github.com/cognitom) in 2015, developed by [YassLab](http://yasslab.jp/) team in 2016,  
 and passed to [CoderDojo Japan](http://coderdojo.jp/) in 2017.  
 
 Now published under MIT License.
