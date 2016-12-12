@@ -1,15 +1,11 @@
 # CoderDojo Japan
 
-Official website of CoderDojo Japan integrated with Rails-based CMS (Scrivito)
+Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](https://scrivito.com/))
 
-- 本番環境: http://coderdojo.jp (using Parse.com that will be shutdown on 2017 January)
+- Moving from: [Parse](http://parse.com/) that __will be shutdown on January 28, 2017__
   - GitHub: https://github.com/coderdojo-japan/web
-- デモ環境: http://coderdojo-japan.herokuapp.com/ (must be switched before the shutdown)
+- Migrated to: [Heroku](http://heroku.com/) (must be switched before the shutdown)
   - GitHub: https://github.com/yasslab/coderdojo.jp
-
-## How to blog
-
-- See [ブログ投稿編集手順書](https://docs.google.com/document/d/1Va1tImybdArVHAoLgqv035OXeUd0P8MB98hCiUyG5z4/edit)
 
 ## Contributors
 
