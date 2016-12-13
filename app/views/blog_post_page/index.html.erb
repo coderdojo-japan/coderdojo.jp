@@ -1,11 +1,13 @@
-<%= scrivito_tag_list :ul, @obj, :toclist do |list, child| %>
-  <%= list.tag :li do %>
-    <%= link_to child.display_title, scrivito_path(child) %>
+<div class="add-margin fontsize-for-blog">
+  <%= scrivito_tag_list :ul, @obj, :toclist do |list, child| %>
+    <%= list.tag :li do %>
+      <%= link_to child.display_title, scrivito_path(child) %>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= scrivito_tag :h1, @obj, :title %>
-<%= scrivito_tag(:div, @obj, :abstract) %>
-<%= scrivito_tag(:div, @obj, :created) %>
-<%= scrivito_image_tag(@obj, :image ,:class => "img-responsive")%>
-<%= scrivito_tag :div, @obj, :body %>
+  <%= scrivito_tag :h1, @obj, :title %>
+  <%= scrivito_tag(:div, @obj, :abstract) %>
+  <%= scrivito_tag(:div, @obj, :created) %>
+  <%= scrivito_image_tag(@obj, :image ,:class => "img-responsive")%>
+  <%= scrivito_tag :div, @obj, :body %>
+</div>
