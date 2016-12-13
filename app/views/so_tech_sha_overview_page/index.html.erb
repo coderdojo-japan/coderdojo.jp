@@ -10,7 +10,7 @@
   </div>
   <div class="col-md-5">
     <h3><%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post)) %></h3>
-    <%= content_tag(:p, scrivito_value(sts_post.abstract)) %>
+    <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),:length => 250,:escape => false)) %>
     <%= link_to("もっと読む", scrivito_path(sts_post), :class => "btn btn-primary") %>
   </div>
 </div>
