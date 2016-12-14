@@ -5,12 +5,14 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-    <img src="/img/sotechsha-top.jpg" class="img-responsive center-block" style="width:90%;">
+    <%= image_tag "sotechsha-top.jpg", class: "img-responsive center-block",
+                                       style: "width: 90%" %>
   </div>
   <div class="col-md-6">
     <% @sts_posts.each do |sts_post| %>
     <h3><%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post)) %></h3>
-    <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),:length => 250,:escape => false)) %>
+    <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),
+                    :length => 250, :escape => false)) %>
     <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-warning btn-block") %>
     <hr>
     <% end %>
