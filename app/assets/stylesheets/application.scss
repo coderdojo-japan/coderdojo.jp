@@ -25,3 +25,17 @@
 .fontsize-for-blog{
   font-size: 120%;
 }
+
+.snsb {
+    overflow: hidden;
+    clear: left;
+    margin-left: 13px;
+}
+.snsb li {
+    float: left;
+    margin-right: 4px;
+    list-style-type: none;
+}
+.snsb iframe {
+    margin: 0 !important;
+}
