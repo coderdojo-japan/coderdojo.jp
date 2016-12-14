@@ -10,9 +10,15 @@
 
   <meta name="viewport"          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="description"       content="CoderDojoは子どものためのプログラミング道場です。2011年にアイルランドで始まり、全国では67ヶ所、世界では66ヶ国・1,150ヶ所で開催されています。" />
-  <meta property="og:title"      content="CoderDojo Japan">
+  <% if @obj %>
+    <meta property="og:title"    content="<%= @obj.display_title %> | CoderDojo Japan">
+    <meta property="og:url"      content="http://coderdojo.jp/">
+  <% else %>
+    <meta property="og:title"    content="CoderDojo Japan">
+  <% end %>
+      
   <meta property="og:site_name"  content="CoderDojo Japan">
-  <meta property="og:url"        content="http://coderdojo.jp/">
+  
   <meta property="og:image"      content="http://coderdojo.jp/og-image.png">
   <meta property="og:image:type" content="image/png">
 

@@ -12,13 +12,13 @@
   <%= scrivito_tag :div, @obj, :abstract %>
   <ol class="snsb" style="margin-left: 0px">
     <li style="margin-top: -3px; margin-left: -40px;">
-      <div class="fb-like" data-href="<%= request.original_url %>" data-layout="button_count"
+      <div class="fb-like" data-href="<%= @obj.binary_url %>" data-layout="button_count"
 	   data-action="like" data-show-faces="true" data-share="true"></div></li>
     <li><a href="https://twitter.com/share" class="twitter-share-button"
-	   data-url="<%= request.original_url %>" data-text="<%= @obj.display_title %>"
+	   data-url="<%= @obj.binary_url %>" data-text="<%= @obj.display_title %>"
 	   data-lang="ja" data-hashtags="CoderDojo" data-via="CoderDojoJapan" width="100">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
     <li><iframe src="http://ghbtns.com/github-btn.html?user=yasslab&repo=coderdojo.jp&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
-    <li><a href="http://b.hatena.ne.jp/entry/<%= request.original_url %>"
+    <li><a href="http://b.hatena.ne.jp/entry/<%= @obj.binary_url %>"
 	   class="hatena-bookmark-button"
 	   data-hatena-bookmark-title="<%= @obj.display_title %>"
 	   data-hatena-bookmark-layout="standard-balloon"
@@ -39,13 +39,13 @@
 
   <ol class="snsb" style="margin-left: 0px; margin-top: 100px; padding-bottom: 30px;">
     <li style="margin-top: -3px; margin-left: -40px;">
-      <div class="fb-like" data-href="<%= request.original_url %>" data-layout="button_count"
+      <div class="fb-like" data-href="<%= @obj.binary_url %>" data-layout="button_count"
 	   data-action="like" data-show-faces="true" data-share="true"></div></li>
     <li><a href="https://twitter.com/share" class="twitter-share-button"
-	   data-url="<%= request.original_url %>" data-text="<%= @obj.display_title %>"
+	   data-url="<%= @obj.binary_url %>" data-text="<%= @obj.display_title %>"
 	   data-lang="ja" data-hashtags="CoderDojo" data-via="CoderDojoJapan" width="100">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
     <li><iframe src="http://ghbtns.com/github-btn.html?user=yasslab&repo=coderdojo.jp&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></li>
-    <li><a href="http://b.hatena.ne.jp/entry/<%= request.original_url %>"
+    <li><a href="http://b.hatena.ne.jp/entry/<%= @obj.binary_url %>"
 	   class="hatena-bookmark-button"
 	   data-hatena-bookmark-title="<%= @obj.display_title %>"
 	   data-hatena-bookmark-layout="standard-balloon"
