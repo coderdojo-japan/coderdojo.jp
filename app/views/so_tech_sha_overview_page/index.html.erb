@@ -11,7 +11,7 @@
     <% @sts_posts.each do |sts_post| %>
     <h3><%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post)) %></h3>
     <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),:length => 250,:escape => false)) %>
-    <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-primary") %>
+    <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-warning btn-block") %>
     <hr>
     <% end %>
   </div>
