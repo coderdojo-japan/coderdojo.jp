@@ -22,6 +22,32 @@
     <div style="margin-bottom:5px">スライドが見えない場合は<strong><a href="//www.slideshare.net/togazo/coderdojo-introduction-jp" title="CoderDojoガイダンス（最新版）" target="_blank">コチラ</a></strong>から閲覧してください</div>
   </div>
   <p style="margin-top:10px;">さらに詳しい道場の様子については、「<a href="http://bakemono.jp/reading/blog/web/2256/">CoderDojoとは? 運営者に話を聞いてみた!</a> (バケモノ.jp)」や「<a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場 CoderDojo をはじめてみませんか</a> (ICT教育ニュース)」を読んでみてください。それぞれインタビュー形式で話が構成されているので、より具体的なイメージが掴めるかなと思います :)</p>
+
+  <ol style="list-style:none;">
+    <li style="display: inline-block; line-height: 11px;">
+      <div class="fb-like" data-href="<%= @obj.binary_url %>" data-layout="button_count"
+	   data-action="like" data-show-faces="true" data-share="true"></div></li>
+    <li style="display: inline-block;">
+      <a href="https://twitter.com/share" class="twitter-share-button"
+	   data-url="<%= @obj.binary_url %>" data-text="<%= @obj.display_title %>"
+	   data-lang="ja" data-hashtags="CoderDojo" data-via="CoderDojoJapan" width="100">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+    <li style="display: inline-block;"><a href="http://b.hatena.ne.jp/entry/<%= @obj.binary_url %>"
+	   class="hatena-bookmark-button"
+	   data-hatena-bookmark-title="<%= @obj.display_title %>"
+	   data-hatena-bookmark-layout="standard-balloon"
+	   data-hatena-bookmark-lang="ja"
+	   title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+    <li style="display: inline-block;"><div class="g-plusone" data-size="medium" data-lang="ja"></div>
+      <script type="text/javascript">
+	(function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+      </script>
+    </li>
+  </ol>
+
 </section>
 <section class="mentor text-center full-width grayscale-bg" ng-controller="MentorController as mctrl">
   <h2>全国の道場</h2>
