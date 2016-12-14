@@ -61,5 +61,6 @@ Rails.application.routes.draw do
   scrivito_route '/*permalink', using: 'permalink', format: false
 
   resource :session, only: [:create, :destroy]
+  resources :users
 
 end

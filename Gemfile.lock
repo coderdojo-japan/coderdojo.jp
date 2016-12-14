@@ -40,6 +40,7 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
@@ -188,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.11)
   bootstrap-sass (~> 3.3.5)
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
@@ -209,4 +211,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.3
+   1.13.6
