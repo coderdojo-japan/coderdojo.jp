@@ -7,8 +7,8 @@
 
 　<%= content_tag(:div,  scrivito_value(@obj.created.strftime("%Y年%m月%d日")), :class => "text-muted h4") %>
   <hr>
-  <%= scrivito_tag :h1, @obj, :title %>
-  <%= scrivito_tag(:div, @obj, :abstract) %>
-  <%= scrivito_image_tag(@obj, :image ,:class => "img-responsive")%>
+  <%= scrivito_tag :h1,  @obj, :title %>
+  <%= scrivito_tag :div, @obj, :abstract %>
+  <%= scrivito_image_tag @obj, :image ,:class => "img-responsive" %>
   <%= scrivito_tag :div, @obj, :body %>
 </div>
