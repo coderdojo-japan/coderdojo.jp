@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class SoTechShaTest < ActionDispatch::IntegrationTest
@@ -25,5 +26,12 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     assert_select "a[href]", count:14
     # Error
     # assert_select "a[href=?]", /sotechsha-/ , count:14
+    assert_select "img", count:1
+  end
+
+  test "Datetime should be formatted" do
+    post_path = "sotechsha-1"
+    get "/#{post_path}"
+    assert_select ".h4", /^\d{4}\/\d{2}\/\d{2}$/
   end
 end
