@@ -17,7 +17,7 @@ and passed to [CoderDojo Japan](http://github.com/coderdojo-japan) organization 
 
 Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3.0, the author allows us to put MIT license. 😆✨
 
-> Sorry for the late reply, I wanted to confer with our team. 
+> Sorry for the late reply, I wanted to confer with our team.   
 > There is no conflict in the licenses and you are welcome to use the MIT license.  
 
 So, this application can be used and modified under the MIT License! 🆗
