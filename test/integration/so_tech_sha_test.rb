@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class SoTechShaTest < ActionDispatch::IntegrationTest
@@ -25,7 +26,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     assert_select "a[href]", count:14
     # Error
     # assert_select "a[href=?]", /sotechsha-/ , count:14
-    assert_select "img",count:1
+    assert_select "img", count:1
   end
 
   test "Datatime should be formatted" do
