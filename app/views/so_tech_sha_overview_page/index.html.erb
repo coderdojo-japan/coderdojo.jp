@@ -3,19 +3,19 @@
     <h1 class="page-header">「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ</h1>
   </div>
 </div>
-<% @sts_posts.each do |sts_post| %>
 <div class="row">
-  <div class="col-md-7">
-    <%= scrivito_image_tag(scrivito_value(sts_post.image), :class => "img-responsive") %>
+  <div class="col-md-6">
+    <img src="/img/sotechsha-top.jpg" class="img-responsive center-block" style="width:90%;">
   </div>
-  <div class="col-md-5">
+  <div class="col-md-6">
+    <% @sts_posts.each do |sts_post| %>
     <h3><%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post)) %></h3>
     <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),:length => 250,:escape => false)) %>
-    <%= link_to("もっと読む", scrivito_path(sts_post), :class => "btn btn-primary") %>
+    <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-primary") %>
+    <hr>
+    <% end %>
   </div>
 </div>
-<hr>
-<% end %>
 
 <%= link_to("previous page", @previous_page) if @previous_page %>
 <%= link_to("next page", @next_page) if @next_page %>
