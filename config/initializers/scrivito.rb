@@ -11,12 +11,13 @@ Scrivito.configure do |config|
   # Disable the default routes to allow route configuration
   config.inject_preset_routes = false
 
-  # Basic Authentification with Session
-  # See https://scrivito.com/permissions for details.
+  # Scrivito-integrated Basic Auth with Session
+  # See the following login page tutorial for details
+  # https://scrivito.com/adding-a-log-in-page-to-your-application-71c659702470e21c
   config.editing_auth do |env|
-    user_id = env['rack.session']['user_id']
+    request = ActionDispatch::Request.new(env)
 
-    if user_id
+    if request.session[:user].present?
       Scrivito::User.system_user
     end
   end

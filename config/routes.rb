@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/blogs/2016/12/12/new-backend')
+  get "/login",                           to: 'login_page#index'
+
+  # Sessions
+  resource :session, only: [:create, :destroy]
+
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
   # See the documentation of 'scrivito_route' for a detailed description.
   scrivito_route '/',              using: 'homepage'
