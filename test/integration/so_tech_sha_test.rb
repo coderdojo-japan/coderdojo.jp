@@ -32,6 +32,6 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
   test "Datetime should be formatted" do
     post_path = "sotechsha-1"
     get "/#{post_path}"
-    assert_select ".h4", /^\d{4}\/\d{2}\/\d{2}$/
+    assert_select ".h4", /^\d{4}年\d{2}月\d{2}日$/
   end
 end
