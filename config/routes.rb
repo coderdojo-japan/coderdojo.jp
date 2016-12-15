@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/blogs/2016/12/12/new-backend')
-  get "/login",                           to: 'login_page#index'
 
   # Sessions
   resource :session, only: [:create, :destroy]
