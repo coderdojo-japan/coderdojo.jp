@@ -1,0 +1,29 @@
+<%= scrivito_tag :h1,  @obj, :title %>
+<%= scrivito_tag :div, @obj, :body %>
+
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger" role="alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<%= form_tag session_path, role: 'form' do %>
+  <div class="form-group">
+    <%= label_tag      :email, 'メールアドレス' %>
+    <%= text_field_tag :email, '', class: 'form-control', placeholder: '' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag          :password, 'パスワード' %>
+    <%= password_field_tag :password, '', class: 'form-control', placeholder: '' %>
+  </div>
+  <button type="submit" class="btn btn-default">ログイン</button>
+<% end %>
+
+<% if Rails.env.development? %>
+  <hr />
+  <%= scrivito_tag_list :ul, @obj, :toclist do |list, child| %>
+    <%= list.tag :li do %>
+      <%= link_to child.display_title, scrivito_path(child) %>
+    <% end %>
+  <% end %>
+<% end %>
