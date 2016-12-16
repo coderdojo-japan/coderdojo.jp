@@ -18,15 +18,6 @@ class SessionsController < ApplicationController
     redirect_to sotechsha_path
   end
 
-  def logout
-    unless logged_in?
-      flash[:alert] = "ログインしていません"
-      redirect_to sotechsha_path
-    else
-      redirect_to sotechsha_path
-    end
-  end
-
   private
 
   def valid_credentials?(email, password)
