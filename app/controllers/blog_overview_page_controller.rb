@@ -18,9 +18,6 @@ class BlogOverviewPageController < CmsController
     if total > offset + POSTS_PER_PAGE
       @next_page = scrivito_path(@obj, offset: offset + POSTS_PER_PAGE)
     end
-
-    Scrivito::Workspace.use(ENV["SCRIVITO_WORKSPACE"])
-    LoginPage.create(title: 'ログイン')
   end
 
 end
