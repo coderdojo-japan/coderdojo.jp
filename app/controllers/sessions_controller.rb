@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class SessionsController < ApplicationController
-  before_filter :logged_in_user, only: [:create, :destroy]
+  before_filter :logged_in_user, only: [:destroy]
 
   def create
     if valid_credentials?(params[:email], params[:password])
