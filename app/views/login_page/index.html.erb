@@ -1,12 +1,6 @@
 <%= scrivito_tag :h1,  @obj, :title %>
 <%= scrivito_tag :div, @obj, :body %>
 
-<% if flash[:alert].present? %>
-  <div class="alert alert-danger" role="alert">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
-
 <%= form_tag session_path, role: 'form' do %>
   <div class="form-group">
     <%= label_tag      :email, 'メールアドレス' %>
