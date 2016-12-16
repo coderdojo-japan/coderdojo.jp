@@ -10,7 +10,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "login with invalid information" do
     get @login_path
     assert_template 'login_page/index'
-    post session_path, params: { session: { email: "", password: "" } }
+    post session_path, { email: "", password: "" }
     assert_redirected_to @login_path
     assert_not flash.empty?
     get @login_path
@@ -19,10 +19,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with valid information" do
     get @login_path
-    post session_path, params: { session: { email:    ENV['SCRIVITO_EMAIL'],
-                                            password: ENV["SCRIVITO_PASSWORD"] } }
+    post session_path, { email:    ENV['SCRIVITO_EMAIL'],
+                         password: ENV["SCRIVITO_PASSWORD"] }
     assert_redirected_to "/sotechsha"
     assert_equal session[:user] , ENV['SCRIVITO_EMAIL']
+    follow_redirect!
     assert_template "so_tech_sha_overview_page/index"
   end
 end
