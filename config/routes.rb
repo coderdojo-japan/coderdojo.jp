@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/releases/2016/12/12/new-backend", to: redirect('/blogs/2016/12/12/new-backend')
 
   # Sessions
+  get '/logout',       to: 'sessions#destroy'
   resource :session, only: [:create, :destroy]
 
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
