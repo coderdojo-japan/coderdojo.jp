@@ -40,6 +40,7 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+    backports (3.6.8)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
@@ -59,9 +60,24 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    ethon (0.10.1)
+      ffi (>= 1.3.0)
     execjs (2.6.0)
+    faraday (0.10.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.1)
+      faraday (>= 0.7.4, < 1.0)
+    ffi (1.9.14)
+    gh (0.15.0)
+      addressable (~> 2.4.0)
+      backports
+      faraday (~> 0.8)
+      multi_json (~> 1.0)
+      net-http-persistent (~> 2.9)
+      net-http-pipeline
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    highline (1.7.8)
     hyp_diff (0.0.4)
       diff-lcs (~> 1.2.5)
       nokogiri (~> 1.6.5)
@@ -76,6 +92,8 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -89,6 +107,8 @@ GEM
     minitest (5.8.4)
     multi_json (1.12.0)
     multipart-post (2.0.0)
+    net-http-persistent (2.9.4)
+    net-http-pipeline (1.0.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -98,6 +118,9 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    pusher-client (0.6.2)
+      json
+      websocket (~> 1.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -199,6 +222,17 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
+    travis (1.8.5)
+      backports
+      faraday (~> 0.9)
+      faraday_middleware (~> 0.9, >= 0.9.1)
+      gh (~> 0.13)
+      highline (~> 1.6)
+      launchy (~> 2.1)
+      pusher-client (~> 0.4)
+      typhoeus (~> 0.6, >= 0.6.8)
+    typhoeus (0.8.0)
+      ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -208,6 +242,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    websocket (1.2.3)
 
 PLATFORMS
   ruby
@@ -220,6 +255,7 @@ DEPENDENCIES
   pg (~> 0.18.4)
   pry-rails
   rails (= 4.2.6)
+  rake
   rspec-rails (~> 3.0.0)
   sass-rails (~> 5.0)
   scrivito (~> 1.3.0)
@@ -229,6 +265,7 @@ DEPENDENCIES
   simple_grid_rails
   spring (= 1.7.1)
   sqlite3 (= 1.3.11)
+  travis
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 

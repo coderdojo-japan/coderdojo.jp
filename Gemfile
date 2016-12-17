@@ -24,8 +24,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-rails'
   gem 'sqlite3', '1.3.11'
+  gem 'pry-rails'
+  gem 'rake'
+  gem 'travis'
 end
 
 group :production do
