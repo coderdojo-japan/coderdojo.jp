@@ -14,6 +14,7 @@ namespace :dojos do
     dojos.each do |dojo|
       dojo['description'].strip!
       dojo.delete 'objectId'  # Delete Parse-specific key
+      dojo.delete 'createdAt' # This is managed by database
       dojo.delete 'updatedAt' # This is managed by database
     end
 
@@ -35,7 +36,7 @@ namespace :dojos do
       d.logo        = dojo['image_url']
       d.tags        = dojo['tags']
       d.url         = dojo['url']
-      d.created_at  = Time.zone.parse(dojo['createdAt']) || Time.zone.now
+      d.created_at  ||= Time.zone.parse(dojo['createdAt']) || Time.zone.now
       d.updated_at  = Time.zone.now
 
       d.save!
