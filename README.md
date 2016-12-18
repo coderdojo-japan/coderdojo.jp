@@ -1,3 +1,5 @@
+[![Cover](https://raw.githubusercontent.com/yasslab/coderdojo.jp/master/public/cover.png)](http://coderdojo.jp/)
+
 # CoderDojo Japan
 
 Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](https://scrivito.com/))
