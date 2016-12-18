@@ -35,7 +35,7 @@ namespace :dojos do
       d.logo        = dojo['image_url']
       d.tags        = dojo['tags']
       d.url         = dojo['url']
-      d.created_at  = Time.zone.parse(dojo['createdAt'])
+      d.created_at  = Time.zone.parse(dojo['createdAt']) || Time.zone.now
       d.updated_at  = Time.zone.now
 
       d.save!
