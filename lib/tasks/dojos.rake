@@ -18,4 +18,26 @@ namespace :dojos do
 
     YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
   end
+
+  desc '現在のyamlファイルを元にデータベースを更新します'
+  task update_db_by_yaml: :environment do
+    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+    dojos.sort_by{ |hash| hash['createdAt'] }
+
+    dojos.each do |dojo|
+      d = Dojo.find_by(name: dojo['name']) || Dojo.new
+
+      d.name        = dojo['name']
+      d.email       = ''
+      d.order       = dojo['order']
+      d.description = dojo['description']
+      d.logo        = dojo['image_url']
+      d.tags        = dojo['tags']
+      d.url         = dojo['url']
+      d.created_at  = Time.zone.parse(dojo['createdAt'])
+      d.updated_at  = Time.zone.parse(dojo['createdAt'])
+
+      d.save!
+    end
+  end
 end
