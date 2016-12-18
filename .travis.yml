@@ -1,1 +1,11 @@
 language: ruby
+deploy:
+  provider: heroku
+  api_key:
+    secure: ch+AytdMVQEE2Zn09zXCqkCMPGKRnUnuRDonT9W7IRTJIeI081b5MPH7B9XL6ukl0Rt7b+KJ/YuIFvm/uvt+nvoWaPuz6AeS/ppGQLeaZ4i3mPa/w33zJFs+3Oo9afDVAolrkJh3fdScjsOKxXFwt0mVSLLf3mrcbPxAF//xm4RdXjANbNKCUqZtpMNRzhGX6+ek8JjC3Z1043cjoPNUTLLVhXRk21za6eW2/dZ560ZB7CPPVrqgAGYur8CkHOr4RtWdy41B0bAJT6COVD0XgM4z+PCLzOXYQJRf8wGbV9vwi5GXSG4l2RnPSCvYMnWWUdAV3MgfIaW664qj8IZqOUjmolqHolKeg+8pI1OqYiDDSh/OtNQFkaPsX/TzU4EWbW74a/gYpLaoMaWf95bOytFFd0XZ9bF6ZZE5ZoggjSU48bFXq/mELjcM2RBe+YtgciQU3iv4C01nfQM1y8x/tKa2Tym8I5MP4psuEvy64DGEw4IKMaTMuZn6hJT3Si9FjL1+mg3OTO/CYxrSQM2EX5ai1n0iEhEOeG9H8EhKeBEjrNtGM0VaS684QClKgPawsyGdo6zk57sGVdo5UMi456NoyWVkMZlFtWUsrvnTOaLHfRhd+jSMEWqsdP5V+KbeRq60Pb1pSS3nV8dJtg+Sqtl+MC0yjbAi2h9BREmaPH4=
+  app:
+    master: coderdojo-japan
+  run:
+      - "bundle exec rake db:migrate"
+      - "bundle exec rake dojos:update_db_by_yaml"
+      
