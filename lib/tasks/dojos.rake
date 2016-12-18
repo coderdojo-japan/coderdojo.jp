@@ -14,7 +14,7 @@ namespace :dojos do
     dojos.each do |dojo|
       dojo['description'].strip!
       dojo.delete 'objectId'  # Delete Parse-specific key
-      #dojo.delete 'updatedAt' # This is managed by database
+      dojo.delete 'updatedAt' # This is managed by database
     end
 
     YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
@@ -36,7 +36,7 @@ namespace :dojos do
       d.tags        = dojo['tags']
       d.url         = dojo['url']
       d.created_at  = Time.zone.parse(dojo['createdAt'])
-      d.updated_at  = Time.zone.parse(dojo['updatedAt'])
+      d.updated_at  = Time.zone.now
 
       d.save!
     end
