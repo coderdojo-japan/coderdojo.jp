@@ -2,6 +2,8 @@
 
 # CoderDojo Japan
 
+[![Build Status](https://travis-ci.org/yasslab/coderdojo.jp.svg?branch=master)](https://travis-ci.org/yasslab/coderdojo.jp#)
+
 Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](https://scrivito.com/))
 
 - Moving from: [Parse](http://parse.com/) that __will be shutdown on January 28, 2017__
