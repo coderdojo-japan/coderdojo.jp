@@ -23,7 +23,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     get "/sotechsha"
     assert_template "so_tech_sha_overview_page/index"
     assert_select "h1.page-header","「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ"
-    assert_select "a[href]", count:14
+    assert_select "a[href]", count:16
     # Error
     # assert_select "a[href=?]", /sotechsha-/ , count:14
     assert_select "img", count:1
