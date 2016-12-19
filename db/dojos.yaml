@@ -189,9 +189,9 @@
   - Webサイト
   - PHP
   - Ruby
-  url: http://urayasu.coderdojo.chiba.jp/
+  url: http://chiba.coderdojo.chiba.jp/
 - description: 千葉県千葉市で毎月開催
-  image_url: http://coderdojo-chiba.github.io/images/CoderDojoChiba.png
+  image_url: http://chiba.coderdojo.chiba.jp/images/CoderDojoChiba.png
   name: 千葉 (関東)
   order: 30
   tags:
@@ -214,14 +214,14 @@
   tags:
   - Scratch
   url: http://www.code-for-nagareyama.org/?cat=11
-- description: 千葉県千葉市で毎月開催
-  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
+- description: 千葉市若葉区で毎月開催
+  image_url: http://wakaba.coderdojo.chiba.jp/images/dojologo.png
   name: 若葉 (関東)
   order: 33
   tags:
   - Scratch
   - Java
-  url: http://coderdojo-wakaba.github.io
+  url: http://wakaba.coderdojo.chiba.jp/
 - description: 神奈川県藤沢市で不定期開催
   image_url: https://dl.dropboxusercontent.com/u/76068877/coderdojofujisawa-logo.png
   name: 藤沢 (関東)
