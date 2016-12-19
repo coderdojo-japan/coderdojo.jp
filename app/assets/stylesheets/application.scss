@@ -30,11 +30,13 @@
     overflow: hidden;
     clear: left;
     margin-left: 13px;
+    padding: 0 ;
 }
 .snsb li {
     float: left;
-    margin-right: 4px;
+    margin: 4px;
     list-style-type: none;
+    line-height: 0;
 }
 .snsb iframe {
     margin: 0 !important;
