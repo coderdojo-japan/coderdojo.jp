@@ -4,19 +4,19 @@ require 'test_helper'
 class SoTechShaTest < ActionDispatch::IntegrationTest
   def setup
     # Quizzes on the book
-    @quizzes = (1..6).to_a
+    @quizzes = (0..6).to_a
   end
 
-  test "Quizzes should be redirected" do
+  test "Quizzes should be permalink" do
     @quizzes.each do |num|
       get "/sotechsha/#{num}"
-      assert_redirected_to "/sotechsha-#{num}"
+      assert_response :success
     end
   end
 
-  test "Gazoulink should be redirected" do
+  test "Gazoulink should be permalink" do
     get "/sotechsha/gazou"
-    assert_redirected_to "/sotechsha-gazou"
+    assert_response :success
   end
 
   test "SoTechShalink should be rendered" do
@@ -30,7 +30,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
   end
 
   test "Datetime should be formatted" do
-    post_path = "sotechsha-1"
+    post_path = "sotechsha/1"
     get "/#{post_path}"
     assert_select ".h4", /^\d{4}年\d{2}月\d{2}日$/
   end

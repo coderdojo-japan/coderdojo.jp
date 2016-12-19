@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   # Accsess from CoderDojo Book
   get '/sotechsha',       to: 'so_tech_sha_overview_page#index'
-  get '/sotechsha/:quiz', to: 'so_tech_sha#quiz'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/blogs/2016/12/12/new-backend')
