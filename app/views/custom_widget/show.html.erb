@@ -3,9 +3,9 @@
   <h1>CoderDojo Japan</h1>
   <p>子どものためのプログラミング道場</p>
   <br />
-</div>  
+</div>
 <section class="cover full-width">
-  <img src="/img/coderdojo-japan_cover.jpg">
+  <%= image_tag "coderdojo-japan_cover.png"%>
 </section>
 <section class="introduction text-center list">
   <p>CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では66カ国・1,150の道場、日本では全国に67以上の道場があります (2016年12月現在)。</p>
@@ -61,7 +61,7 @@
 	    <span class="mentor-person-name ng-binding"><%= dojo.name %></span>
 	  </a>
 	</header>
-	<ul class="tags">	
+	<ul class="tags">
 	<% dojo.tags.each do |tag| %>
           <li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope"><%= tag %></li>
 	<% end %>
