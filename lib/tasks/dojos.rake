@@ -42,4 +42,16 @@ namespace :dojos do
       d.save!
     end
   end
+
+  desc '現在のyamlファイルのカラムをソートします'
+  task sort_yaml: :environment do
+    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+
+    # Dojo column should start with 'name' for human-readability
+    dojos.map! do |dojo|
+      dojo.sort_by{|a,b| a.last}.to_h
+    end
+
+    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+  end
 end
