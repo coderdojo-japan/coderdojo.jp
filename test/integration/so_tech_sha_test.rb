@@ -12,7 +12,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
       get "/sotechsha/#{num}"
       assert_response :success
       assert_equal "/sotechsha/#{num}", path
-      # Todo delete case later
+      # TODO: Test 1, 3, and 6 when they are ready
       case num
       when 0,2,4,5 then
           num = num == 0 ? "序" : num
