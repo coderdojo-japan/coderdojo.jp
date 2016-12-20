@@ -124,6 +124,15 @@
   - Scratch
   - Webサイト
   - PHP
+- name: 高田馬場 (関東)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-takadanobaba.jpg
+  url: http://coderdojo-tdbb.com/
+  description: 東京都新宿区高田馬場で毎月開催
+  order: 17
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - Ruby
 - name: 中野 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-nakano.png
   url: https://www.facebook.com/coderdojonakano/
