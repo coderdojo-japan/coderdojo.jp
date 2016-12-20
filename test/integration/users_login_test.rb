@@ -4,7 +4,7 @@ require 'test_helper'
 class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
     login = LoginPage.instance
-    @login_path = "/"+login.slug+"-"+login.id
+    @login_path = "/#{login.slug + login.id}"
   end
 
   test "login with invalid information" do
