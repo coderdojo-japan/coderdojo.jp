@@ -487,6 +487,15 @@
   - Ruby
   - Python
   - ラズベリーパイ
+- name: 嘉手納 (沖縄)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
+  url: http://coderdojokadena.hatenablog.jp/
+  description: 中頭郡嘉手納町で月１日、日曜開催
+  order: 180
+  tags:
+  - Scratch
+  - Hour of Code
+  - LEGO Mindstorms
 - name: 宮古島 (沖縄)
   image_url: https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg
   url: https://www.facebook.com/coderdojo.miyakojima/
