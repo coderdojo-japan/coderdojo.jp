@@ -35,6 +35,16 @@
   - Scratch
   - 3Dプリンタ
   - 3DCAD
+- name: 中新田 (東北)
+  image_url: https://graph.facebook.com/247957532245205/picture?type=large
+  url: https://www.facebook.com/coderdojoNakaniida/
+  description: 宮城県加美町中新田で不定期開催
+  order: 6
+  tags:
+  - Scratch
+  - HTML/CSS
+  - Minecraft
+  - Arduino
 - name: 新潟 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
   url: http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata
