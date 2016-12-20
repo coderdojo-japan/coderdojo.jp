@@ -499,7 +499,7 @@
 - name: 嘉手納 (沖縄)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
   url: http://coderdojokadena.hatenablog.jp/
-  description: 中頭郡嘉手納町で月１日、日曜開催
+  description: 沖縄県中頭郡で毎月開催
   order: 180
   tags:
   - Scratch
