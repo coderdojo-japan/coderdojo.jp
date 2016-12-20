@@ -1,142 +1,143 @@
 ---
-- description: 北海道旭川市で不定期開催
-  image_url: http://graph.facebook.com/416298905086341/picture?type=large
-  name: 旭川 (北海道)
-  order: 1
+- name: 旭川 (北海道)
   source: '416298905086341'
+  url: http://coderdojo-asahikawa.github.io/
+  image_url: http://graph.facebook.com/416298905086341/picture?type=large
+  description: 北海道旭川市で不定期開催
+  order: 1
   tags:
   - Scratch
   - ラズベリーパイ
-  url: http://coderdojo-asahikawa.github.io/
-- description: 仙台市青葉区で毎月開催
-  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_sendai.jpg
-  name: 仙台 (東北)
-  order: 3
+- name: 仙台 (東北)
   source: '546571472044333'
+  url: https://www.facebook.com/CoderdojoSendai
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_sendai.jpg
+  description: 仙台市青葉区で毎月開催
+  order: 3
   tags:
   - Scratch
   - ゲーム
   - アプリ
-  url: https://www.facebook.com/CoderdojoSendai
-- description: 仙台市泉区で不定期開催
-  image_url: http://graph.facebook.com/542546935853207/picture?type=large
-  name: 泉 (東北)
-  order: 4
+- name: 泉 (東北)
   source: '542546935853207'
+  url: https://www.facebook.com/CoderdojoIzumi
+  image_url: http://graph.facebook.com/542546935853207/picture?type=large
+  description: 仙台市泉区で不定期開催
+  order: 4
   tags:
   - Scratch
-  url: https://www.facebook.com/CoderdojoIzumi
-- description: 宮城県登米市で毎月開催
+- name: 登米 (東北)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 登米 (東北)
+  url: https://www.facebook.com/coderdojo.tome
+  description: 宮城県登米市で毎月開催
   order: 5
   tags:
   - Scratch
   - 3Dプリンタ
   - 3DCAD
-  url: https://www.facebook.com/coderdojo.tome
-- description: 新潟県新潟市で開催予定
+- name: 新潟 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 新潟 (中部)
+  url: http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata
+  description: 新潟県新潟市で開催予定
   order: 6
   tags:
   - Scratch
-  url: http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata
-- description: 石川県金沢市で毎週開催
+- name: 金沢 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 金沢 (中部)
+  url: https://www.facebook.com/coderdojo.kanazawa/
+  description: 石川県金沢市で毎週開催
   order: 7
   tags:
   - JavaScript
   - HackforPlay
-  url: https://www.facebook.com/coderdojo.kanazawa/
-- description: 群馬県前橋市で毎月開催
+- name: 前橋 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-maebashi.png
-  name: 前橋 (関東)
+  url: https://sites.google.com/a/coderdojo.com/maebashi-jp/
+  description: 群馬県前橋市で毎月開催
   order: 8
   tags:
   - Scratch
   - マインクラフト
   - ラズベリーパイ
   - ゲーム
-  url: https://sites.google.com/a/coderdojo.com/maebashi-jp/
-- description: 茨城県守谷市で毎月開催
+- name: 守谷 (関東)
   image_url: https://dl.dropboxusercontent.com/u/3276838/CoderDojoMoriya-LOGO.jpg
-  name: 守谷 (関東)
+  url: http://coderdojo-moriya.com/
+  description: 茨城県守谷市で毎月開催
   order: 9
   tags:
   - Scratch
   - IoT
   - 電子工作
-  url: http://coderdojo-moriya.com/
-- description: 埼玉県さいたま市で毎月開催
-  image_url: http://graph.facebook.com/513118842140860/picture?type=large
-  name: さいたま (関東)
-  order: 10
+- name: さいたま (関東)
   source: '513118842140860'
+  url: http://coderdojo-saitama.com/
+  image_url: http://graph.facebook.com/513118842140860/picture?type=large
+  description: 埼玉県さいたま市で毎月開催
+  order: 10
   tags:
   - Scratch
   - Webサイト
   - アプリ
-  url: http://coderdojo-saitama.com/
-- description: 埼玉県新座市で月2回開催
-  image_url: http://graph.facebook.com/497400593610071/picture?type=large
-  name: ひばりヶ丘 (関東)
-  order: 11
+- name: ひばりヶ丘 (関東)
   source: '497400593610071'
+  url: http://coderdojo.hanare-hibari.info/
+  image_url: http://graph.facebook.com/497400593610071/picture?type=large
+  description: 埼玉県新座市で月2回開催
+  order: 11
   tags:
   - Scratch
   - ラズベリーパイ
-  url: http://coderdojo.hanare-hibari.info/
-- description: 埼玉県飯能市で毎月開催
-  image_url: http://graph.facebook.com/1570008999931017/picture?type=large
-  name: 飯能 (関東)
-  order: 12
+- name: 飯能 (関東)
   source: '1570008999931017'
-  tags:
-  - Scratch
   url: https://www.facebook.com/CoderDojoHanno
-- description: 埼玉県所沢市で不定期に開催
-  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-tokorozawa.png
-  name: 所沢 (関東)
-  order: 13
-  source: '617011185103868'
+  image_url: http://graph.facebook.com/1570008999931017/picture?type=large
+  description: 埼玉県飯能市で毎月開催
+  order: 12
   tags:
   - Scratch
+- name: 所沢 (関東)
+  source: '617011185103868'
   url: https://www.facebook.com/CoderDojoTokorozawa/
-- description: 東京都小平市で隔週開催
-  image_url: http://graph.facebook.com/616010815134433/picture?type=large
-  name: 小平 (関東)
-  order: 14
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-tokorozawa.png
+  description: 埼玉県所沢市で不定期に開催
+  order: 13
+  tags:
+  - Scratch
+- name: 小平 (関東)
   source: '616010815134433'
+  url: http://coderdojo-kodaira.github.io/
+  image_url: http://graph.facebook.com/616010815134433/picture?type=large
+  description: 東京都小平市で隔週開催
+  order: 14
   tags:
   - Scratch
   - Minecraft
   - 情報工学基礎
-  url: http://coderdojo-kodaira.github.io/
-- description: 東京都八王子市で毎月開催
-  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_hachioji.jpg
-  name: 八王子 (関東)
-  order: 15
+- name: 八王子 (関東)
   source: '333796043464105'
+  url: http://coderdojo.code4hachioji.org/
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_hachioji.jpg
+  description: 東京都八王子市で毎月開催
+  order: 15
   tags:
   - Scratch
   - Webサイト
   - PHP
-  url: http://coderdojo.code4hachioji.org/
-- description: 東京都中野区にて毎月開催
+- name: 中野 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-nakano.png
-  name: 中野 (関東)
+  url: https://www.facebook.com/coderdojonakano/
+  description: 東京都中野区にて毎月開催
   order: 18
   tags:
   - Scratch
   - HTML/CSS
   - JavaScript
   - Arduino
-  url: https://www.facebook.com/coderdojonakano/
-- description: 東京都杉並区で月1回程度開催
+- name: すぎなみ (関東)
   image_url: https://coderdojo-suginami.github.io/images/logo-namisuke-circle-200.png
-  name: すぎなみ (関東)
+  url: https://coderdojo-suginami.github.io/
+  description: 東京都杉並区で月1回程度開催
   order: 19
   tags:
   - Scratch
@@ -144,20 +145,20 @@
   - HTML
   - JavaScript
   - Processing
-  url: https://coderdojo-suginami.github.io/
-- description: 東京都世田谷区で毎週開催
-  image_url: http://graph.facebook.com/346407898743580/picture?type=large
-  name: 下北沢 (関東)
-  order: 20
+- name: 下北沢 (関東)
   source: '346407898743580'
+  url: http://tokyo.coderdojo.jp/
+  image_url: http://graph.facebook.com/346407898743580/picture?type=large
+  description: 東京都世田谷区で毎週開催
+  order: 20
   tags:
   - Scratch
   - Webサイト
   - ゲーム
-  url: http://tokyo.coderdojo.jp/
-- description: 東京都調布市で毎月開催
+- name: 調布 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-chofu.jpg
-  name: 調布 (関東)
+  url: http://coderdojochofu.hatenablog.jp/
+  description: 東京都調布市で毎月開催
   order: 21
   tags:
   - Scratch
@@ -165,218 +166,218 @@
   - HTML
   - Ruby
   - ラズベリーパイ
-  url: http://coderdojochofu.hatenablog.jp/
-- description: 東京都渋谷区で不定期開催
+- name: 渋谷 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 渋谷 (関東)
+  url: https://www.facebook.com/groups/coderdojo.shibuya/
+  description: 東京都渋谷区で不定期開催
   order: 22
   tags:
   - Scratch
-  url: https://www.facebook.com/groups/coderdojo.shibuya/
-- description: 千葉県野田市で毎月開催
+- name: 野田 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 野田 (関東)
+  url: https://www.facebook.com/coderdojonoda/
+  description: 千葉県野田市で毎月開催
   order: 28
   tags:
   - Scratch
-  url: https://www.facebook.com/coderdojonoda/
-- description: 千葉県浦安市で毎月開催
+- name: 浦安 (関東)
   image_url: http://urayasu.coderdojo.chiba.jp/images/cdlogo.png
-  name: 浦安 (関東)
+  url: http://urayasu.coderdojo.chiba.jp/
+  description: 千葉県浦安市で毎月開催
   order: 29
   tags:
   - Scratch
   - Webサイト
   - PHP
   - Ruby
-  url: http://urayasu.coderdojo.chiba.jp/
-- description: 千葉県千葉市で毎月開催
+- name: 千葉 (関東)
   image_url: http://chiba.coderdojo.chiba.jp/images/CoderDojoChiba.png
-  name: 千葉 (関東)
+  url: http://chiba.coderdojo.chiba.jp/
+  description: 千葉県千葉市で毎月開催
   order: 30
   tags:
   - Scratch
   - Webサイト
   - PHP
-  url: http://chiba.coderdojo.chiba.jp/
-- description: 千葉県柏市で毎月3回開催
-  image_url: http://graph.facebook.com/472842399443384/picture?type=large
-  name: 柏 (関東)
-  order: 31
+- name: 柏 (関東)
   source: '472842399443384'
+  url: http://www.coderdojo-kashiwa.com/
+  image_url: http://graph.facebook.com/472842399443384/picture?type=large
+  description: 千葉県柏市で毎月3回開催
+  order: 31
   tags:
   - Scratch
-  url: http://www.coderdojo-kashiwa.com/
-- description: 千葉県流山市で毎月開催
+- name: 流山 (関東)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 流山 (関東)
+  url: http://www.code-for-nagareyama.org/?cat=11
+  description: 千葉県流山市で毎月開催
   order: 32
   tags:
   - Scratch
-  url: http://www.code-for-nagareyama.org/?cat=11
-- description: 千葉市若葉区で毎月開催
+- name: 若葉 (関東)
   image_url: http://wakaba.coderdojo.chiba.jp/images/dojologo.png
-  name: 若葉 (関東)
+  url: http://wakaba.coderdojo.chiba.jp/
+  description: 千葉市若葉区で毎月開催
   order: 33
   tags:
   - Scratch
   - Java
-  url: http://wakaba.coderdojo.chiba.jp/
-- description: 神奈川県藤沢市で不定期開催
+- name: 藤沢 (関東)
   image_url: https://dl.dropboxusercontent.com/u/76068877/coderdojofujisawa-logo.png
-  name: 藤沢 (関東)
+  url: https://e9190f805e8f6cb2d391ddd702.doorkeeper.jp/events/55358
+  description: 神奈川県藤沢市で不定期開催
   order: 35
   tags:
   - Scratch
   - Viscuit
   - Webサイト
-  url: https://e9190f805e8f6cb2d391ddd702.doorkeeper.jp/events/55358
-- description: 長野県塩尻市で毎月開催
-  image_url: http://graph.facebook.com/128374717310867/picture?type=large
-  name: 塩尻 (中部)
-  order: 40
+- name: 塩尻 (中部)
   source: '128374717310867'
+  url: http://coderdojo.shiojiri-osslabo.com/
+  image_url: http://graph.facebook.com/128374717310867/picture?type=large
+  description: 長野県塩尻市で毎月開催
+  order: 40
   tags:
   - Scratch
   - Ruby
-  url: http://coderdojo.shiojiri-osslabo.com/
-- description: 福井県福井市で不定期開催
-  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo.png
-  name: 福井 (中部)
-  order: 41
+- name: 福井 (中部)
   source: '389420301140591'
+  url: http://coderdojo.cowbell.jp/
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo.png
+  description: 福井県福井市で不定期開催
+  order: 41
   tags:
   - Scratch
   - Webサイト
-  url: http://coderdojo.cowbell.jp/
-- description: 静岡県浜松市で毎月開催
+- name: 浜松 (東海)
   image_url: https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png
-  name: 浜松 (東海)
+  url: http://www.coderdojo-hamamatsu.org/
+  description: 静岡県浜松市で毎月開催
   order: 43
   tags:
   - Scratch
   - Webサイト
   - Ruby
-  url: http://www.coderdojo-hamamatsu.org/
-- description: 愛知県豊橋市で不定期開催
+- name: 豊橋 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-toyohashi.png
-  name: 豊橋 (中部)
+  url: https://coderdojo-toyohashi.doorkeeper.jp/
+  description: 愛知県豊橋市で不定期開催
   order: 44
   tags:
   - Scratch
   - アプリ開発
   - ラズベリーパイ
-  url: https://coderdojo-toyohashi.doorkeeper.jp/
-- description: 名古屋市中区で毎月開催
+- name: 名古屋 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 名古屋 (中部)
+  url: http://coderdojo-nagoya.github.io/
+  description: 名古屋市中区で毎月開催
   order: 45
   tags:
   - Scratch
   - Webサイト
   - Python
-  url: http://coderdojo-nagoya.github.io/
-- description: 名古屋市天白区で月2回開催
+- name: 天白 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-tempaku.png
-  name: 天白 (中部)
+  url: http://coderdojo-tempaku.hatenablog.com/
+  description: 名古屋市天白区で月2回開催
   order: 46
   tags:
   - Scratch
   - Webサイト
   - 電子工作
-  url: http://coderdojo-tempaku.hatenablog.com/
-- description: 愛知県海部郡で毎月開催
+- name: 大治 (中部)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 大治 (中部)
+  url: http://coderdojo-oharu.connpass.com/
+  description: 愛知県海部郡で毎月開催
   order: 47
   tags:
   - Scratch
-  url: http://coderdojo-oharu.connpass.com/
-- description: 京都府長岡京市で毎月開催
-  image_url: https://dzpp79ucibp5a.cloudfront.net/groups_logos/4052_normal_1421068102_coderdojo-nagaokakyo_logo.png
-  name: 長岡京 (近畿)
-  order: 49
+- name: 長岡京 (近畿)
   source: '1559696050934193'
+  url: https://coderdojo-nagaokakyo.doorkeeper.jp/
+  image_url: https://dzpp79ucibp5a.cloudfront.net/groups_logos/4052_normal_1421068102_coderdojo-nagaokakyo_logo.png
+  description: 京都府長岡京市で毎月開催
+  order: 49
   tags:
   - Scratch
-  url: https://coderdojo-nagaokakyo.doorkeeper.jp/
-- description: 奈良県奈良市で毎月開催
-  image_url: https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/NARA_black.png
-  name: 奈良 (近畿)
-  order: 50
+- name: 奈良 (近畿)
   source: '753930831309387'
+  url: http://coderdojo-nara-ikoma.github.io/
+  image_url: https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/NARA_black.png
+  description: 奈良県奈良市で毎月開催
+  order: 50
   tags:
   - Scratch
   - Webサイト
   - C#
-  url: http://coderdojo-nara-ikoma.github.io/
-- description: 奈良県生駒市で毎月開催
+- name: 生駒 (近畿)
   image_url: https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/IKOMA_green.png
-  name: 生駒 (近畿)
+  url: http://coderdojo-nara-ikoma.github.io/
+  description: 奈良県生駒市で毎月開催
   order: 51
   tags:
   - Scratch
   - Webサイト
   - C#
-  url: http://coderdojo-nara-ikoma.github.io/
-- description: 滋賀県大津市で不定期開催
+- name: 大津 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 大津 (近畿)
+  url: https://coderdojo-otsu.doorkeeper.jp/
+  description: 滋賀県大津市で不定期開催
   order: 53
   tags:
   - Scratch
-  url: https://coderdojo-otsu.doorkeeper.jp/
-- description: 和歌山県新宮市で不定期開催
-  image_url: http://graph.facebook.com/254235038032617/picture?type=large
-  name: 熊野 (近畿)
-  order: 55
+- name: 熊野 (近畿)
   source: '254235038032617'
+  url: https://www.facebook.com/coderdojo.kumano
+  image_url: http://graph.facebook.com/254235038032617/picture?type=large
+  description: 和歌山県新宮市で不定期開催
+  order: 55
   tags:
   - Scratch
   - Webサイト
   - アプリ
-  url: https://www.facebook.com/coderdojo.kumano
-- description: 京都市伏見区墨染で隔月開催
+- name: 京都伏見 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 京都伏見 (近畿)
+  url: http://coderdojo-kyoto-fushimi.peatix.com/view
+  description: 京都市伏見区墨染で隔月開催
   order: 56
   tags:
   - Scratch
   - WEBサイト
   - Java
   - JavaScript
-  url: http://coderdojo-kyoto-fushimi.peatix.com/view
-- description: 大阪府枚方市で隔月開催
+- name: 枚方 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 枚方 (近畿)
+  url: http://coderdojo-hirakata.github.io
+  description: 大阪府枚方市で隔月開催
   order: 57
   tags:
   - Scratch
   - Webサイト
   - アプリ開発
-  url: http://coderdojo-hirakata.github.io
-- description: 大阪府東大阪荒本で隔月開催
+- name: 東大阪 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-higasi-osaka.jpg
-  name: 東大阪 (近畿)
+  url: https://www.facebook.com/CoderDojoHigashiosaka/
+  description: 大阪府東大阪荒本で隔月開催
   order: 59
   tags:
   - Scratch
   - Webサイト
   - Android
-  url: https://www.facebook.com/CoderDojoHigashiosaka/
-- description: 西宮/梅田でそれぞれ毎月開催
-  image_url: http://graph.facebook.com/1393015987582276/picture?type=large
-  name: 西宮・梅田 (近畿)
-  order: 60
+- name: 西宮・梅田 (近畿)
   source: '1393015987582276'
+  url: http://coderdojo-nishinomiya.info/
+  image_url: http://graph.facebook.com/1393015987582276/picture?type=large
+  description: 西宮/梅田でそれぞれ毎月開催
+  order: 60
   tags:
   - Scratch
   - Webサイト
   - 電子工作
-  url: http://coderdojo-nishinomiya.info/
-- description: 大阪市なんばで毎月開催
+- name: なんば (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: なんば (近畿)
+  url: https://zen.coderdojo.com/dojo/jp/osaka-osaka-prefecture/namba-osaka
+  description: 大阪市なんばで毎月開催
   order: 61
   tags:
   - Scratch
@@ -384,114 +385,113 @@
   - PHP
   - Ruby
   - Java
-  url: https://zen.coderdojo.com/dojo/jp/osaka-osaka-prefecture/namba-osaka
-- description: 大阪府大阪市で不定期開催
+- name: 本町 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_hommachi.png
-  name: 本町 (近畿)
+  url: https://coderdojo-hommachi.doorkeeper.jp/
+  description: 大阪府大阪市で不定期開催
   order: 62
   tags:
   - Scratch
   - Ruby
-  url: https://coderdojo-hommachi.doorkeeper.jp/
-- description: 大阪市西成区で毎月開催
+- name: 西成 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_nishinari.jpg
-  name: 西成 (近畿)
+  url: https://www.facebook.com/coderdojo.nishinari.osaka/
+  description: 大阪市西成区で毎月開催
   order: 63
   tags:
   - Scratch
   - ラズベリーパイ
-  url: https://www.facebook.com/coderdojo.nishinari.osaka/
-- description: 大阪府堺市で毎月開催
+- name: 堺 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 堺 (近畿)
+  url: https://coderdojo-sakai.doorkeeper.jp/
+  description: 大阪府堺市で毎月開催
   order: 65
   tags:
   - Scratch
   - PHP
   - Java
-  url: https://coderdojo-sakai.doorkeeper.jp/
-- description: 和歌山県和歌山市で毎月開催
+- name: 和歌山 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-wakayama.png
-  name: 和歌山 (近畿)
+  url: https://www.facebook.com/coderdojo.wakayama/
+  description: 和歌山県和歌山市で毎月開催
   order: 68
   tags:
   - Scratch
-  url: https://www.facebook.com/coderdojo.wakayama/
-- description: 神戸市中央区で月１回
+- name: 神戸 (近畿)
   image_url: https://static.wixstatic.com/media/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png/v1/fill/w_68,h_70,al_c,usm_0.66_1.00_0.01/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png
-  name: 神戸 (近畿)
+  url: http://coderdojokobe.wixsite.com/home/
+  description: 神戸市中央区で月１回
   order: 70
   tags:
   - Scratch
   - JavaScript
-  url: http://coderdojokobe.wixsite.com/home/
-- description: 兵庫県明石市で毎月開催
+- name: 明石 (近畿)
   image_url: https://connpass-tokyo.s3.amazonaws.com/thumbs/ea/cd/eacd7eaeeef8c18d2def173281cb704d.png
-  name: 明石 (近畿)
+  url: https://www.facebook.com/CoderDojo-%E6%98%8E%E7%9F%B3-139582193048936/
+  description: 兵庫県明石市で毎月開催
   order: 73
   tags:
   - Scratch
   - Webサイト
   - Arduino
-  url: https://www.facebook.com/CoderDojo-%E6%98%8E%E7%9F%B3-139582193048936/
-- description: 兵庫県姫路市で第3土曜日に毎月開催
+- name: 姫路 (近畿)
   image_url: https://dzpp79ucibp5a.cloudfront.net/groups_logos/5887_normal_1435743920_CoderDojo5.png
-  name: 姫路 (近畿)
+  url: https://himejicoderdojo.doorkeeper.jp/
+  description: 兵庫県姫路市で第3土曜日に毎月開催
   order: 75
   tags:
   - Scratch
   - ラズベリーパイ
   - Webサイト
-  url: https://himejicoderdojo.doorkeeper.jp/
-- description: 広島県福山市で不定期開催
+- name: 福山 (中国)
   image_url: http://fukuyama100.com/coderdojo/images/logo_fukuyama.png
-  name: 福山 (中国)
+  url: http://fukuyama100.com/coderdojo/
+  description: 広島県福山市で不定期開催
   order: 79
   tags:
   - Scratch
-  url: http://fukuyama100.com/coderdojo/
-- description: 広島県広島市で毎月開催
+- name: 広島 (中国)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-hiroshima.png
-  name: 広島 (中国)
+  url: https://www.facebook.com/coderdojo.hiroshima/
+  description: 広島県広島市で毎月開催
   order: 80
   tags:
   - Scratch
   - Webサイト
   - PHP
-  url: https://www.facebook.com/coderdojo.hiroshima/
-- description: 広島県広島市で毎月開催
+- name: 五日市 (中国)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-itsukaichi.png
-  name: 五日市 (中国)
+  url: https://www.facebook.com/coderdojo.itsukaichi
+  description: 広島県広島市で毎月開催
   order: 81
   tags:
   - Scratch
   - enchant.js
   - Unity
-  url: https://www.facebook.com/coderdojo.itsukaichi
-- description: 福岡県久留米市で毎月開催
+- name: 久留米 (九州)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
-  name: 久留米 (九州)
+  url: https://www.facebook.com/CoderDojoKurume/
+  description: 福岡県久留米市で毎月開催
   order: 90
   tags:
   - Scratch
   - Webサイト
   - PHP
-  url: https://www.facebook.com/CoderDojoKurume/
-- description: 宮崎県西臼杵郡で毎月開催
+- name: 宮崎 (九州)
   image_url: http://lmlab.net/logos/coderdojo.png
-  name: 宮崎 (九州)
+  url: https://lmlab.net/coderdojo/
+  description: 宮崎県西臼杵郡で毎月開催
   order: 95
   tags:
   - Scratch
   - Ruby
   - Python
   - ラズベリーパイ
-  url: https://lmlab.net/coderdojo/
-- description: 沖縄県宮古島市で不定期開催
+- name: 宮古島 (沖縄)
   image_url: https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg
-  name: 宮古島 (沖縄)
+  url: https://www.facebook.com/coderdojo.miyakojima/
+  description: 沖縄県宮古島市で不定期開催
   order: 200
   tags:
   - Scratch
   - Webサイト
-  url: https://www.facebook.com/coderdojo.miyakojima/
