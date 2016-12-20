@@ -13,7 +13,7 @@
   url: https://www.facebook.com/CoderdojoSendai
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_sendai.jpg
   description: 仙台市青葉区で毎月開催
-  order: 3
+  order: 2
   tags:
   - Scratch
   - ゲーム
@@ -23,14 +23,14 @@
   url: https://www.facebook.com/CoderdojoIzumi
   image_url: http://graph.facebook.com/542546935853207/picture?type=large
   description: 仙台市泉区で不定期開催
-  order: 4
+  order: 3
   tags:
   - Scratch
 - name: 登米 (東北)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
   url: https://www.facebook.com/coderdojo.tome
   description: 宮城県登米市で毎月開催
-  order: 5
+  order: 4
   tags:
   - Scratch
   - 3Dプリンタ
@@ -39,10 +39,10 @@
   image_url: https://graph.facebook.com/247957532245205/picture?type=large
   url: https://www.facebook.com/coderdojoNakaniida/
   description: 宮城県加美町中新田で不定期開催
-  order: 6
+  order: 5
   tags:
   - Scratch
-  - HTML/CSS
+  - Webサイト
   - Minecraft
   - Arduino
 - name: 新潟 (中部)
@@ -67,7 +67,7 @@
   order: 8
   tags:
   - Scratch
-  - マインクラフト
+  - Minecraft
   - ラズベリーパイ
   - ゲーム
 - name: 守谷 (関東)
