@@ -16,7 +16,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
       case num
       when 0,2,4,5 then
           num = num == 0 ? "序" : num
-          assert_select 'h1', "#{num}章課題　模範解答"
+          assert_select 'h1', "#{num.to_s.tr("0-9", "０-９")}章課題 答え"
       end
     end
   end
@@ -26,14 +26,14 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "SoTechShalink should be rendered" do
+  test "SoTechSha link should be rendered" do
     get "/sotechsha"
     assert_template "so_tech_sha_overview_page/index"
-    assert_select "h1.page-header","「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ"
-    assert_select "a[href]", count:16
-    # Error
-    # assert_select "a[href=?]", /sotechsha-/ , count:14
-    assert_select "img", count:1
+    #assert_select "h1.page-header", "Scratchでつくる! たのしむ! プログラミング道場"
+    assert_select "a[href]", count:24
+    assert_select "footer", count:1
+    # topimg,snsbtn
+    assert_select "img", count:2
   end
 
   test "Datetime should be formatted" do
