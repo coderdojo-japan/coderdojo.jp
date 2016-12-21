@@ -1,11 +1,8 @@
 <nav class="navbar navbar-default">
-  <div class="navbar-header">
-    <a href="#" class="navbar-brand">サイトマップ</a>
-  </div>
   <ul class="nav navbar-nav">
     <% @sts_posts.each do |sts_post| %>
     <li>
-    <%= link_to("・"+scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "") %></li>
+    <%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "") %></li>
     <% end %>
   </ul>
 </nav>
