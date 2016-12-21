@@ -14,7 +14,7 @@
   </div>
   <div class="col-md-6">
     <% @sts_posts.each do |sts_post| %>
-    <h3><%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post)) %></h3>
+    <h3><%= content_tag(:strong, scrivito_value(sts_post.title)) %></h3>
     <%= content_tag(:p, truncate(scrivito_value(sts_post.abstract),
                     :length => 250, :escape => false)) %>
     <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-warning btn-block") %>
@@ -25,3 +25,5 @@
 
 <%= link_to("previous page", @previous_page) if @previous_page %>
 <%= link_to("next page", @next_page) if @next_page %>
+
+<%= render 'shared/footer_sotechsha' %>
