@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+      <span class="sr-only">サイトマップ</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="#" class="navbar-brand">サイトマップ</a>
+  </div>
+
+  <div id="gnavi" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <% @sts_posts.each do |sts_post| %>
+      <li>
+      <%= link_to("・"+scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "") %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+<hr>
+<p class="text-right"><a href="/">CoderDojo Japan公式ホームページ</a> |
+  <a href="https://www.amazon.co.jp/exec/obidos/ASIN/4800711517/sotechscojp-22">Amazon(書籍リンク)</a> |
+  <a href="http://www.sotechsha.co.jp/sp/1151/index.html">サポートページ</a></p>
