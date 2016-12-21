@@ -522,6 +522,13 @@
   - Scratch
   - Hour of Code
   - LEGO Mindstorms
+- name: 那覇 (沖縄)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_okinawa.png
+  url: https://www.facebook.com/coderdojo.okinawa
+  description: 沖縄県那覇市で不定期開催
+  order: 190
+  tags:
+  - Scratch
 - name: 宮古島 (沖縄)
   image_url: https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg
   url: https://www.facebook.com/coderdojo.miyakojima/
