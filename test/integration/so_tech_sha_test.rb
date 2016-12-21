@@ -29,7 +29,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
   test "SoTechSha link should be rendered" do
     get "/sotechsha"
     assert_template "so_tech_sha_overview_page/index"
-    assert_select "h1.page-header","Scratchでつくる! たのしむ! プログラミング道場"
+    #assert_select "h1.page-header", "Scratchでつくる! たのしむ! プログラミング道場"
     assert_select "a[href]", count:24
     assert_select "footer", count:1
     # topimg,snsbtn
