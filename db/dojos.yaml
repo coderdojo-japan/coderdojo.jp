@@ -196,9 +196,16 @@
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
   url: https://www.facebook.com/coderdojonoda/
   description: 千葉県野田市で毎月開催
-  order: 28
+  order: 26
   tags:
   - Scratch
+- name: 市川 (関東)
+  image_url: https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/15589865_1877416715821670_9072628354775515341_n.jpg?oh=dad46cea4bf907cfb787d5bc4b957aef&oe=58ECE70F
+  url: https://www.facebook.com/coderdojoichikawa/
+  description: 千葉県市川市で毎月開催
+  order: 28
+  tags:
+  - WordPress
 - name: 浦安 (関東)
   image_url: http://urayasu.coderdojo.chiba.jp/images/cdlogo.png
   url: http://urayasu.coderdojo.chiba.jp/
