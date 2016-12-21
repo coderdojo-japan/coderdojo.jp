@@ -30,9 +30,10 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
     get "/sotechsha"
     assert_template "so_tech_sha_overview_page/index"
     assert_select "h1.page-header","「Scratchでつくる! たのしむ! プログラミング道場」Webコンテンツ"
-    assert_select "a[href]", count:21
+    assert_select "a[href]", count:23
     assert_select "footer", count:1
-    assert_select "img", count:1
+    # topimg,snsbtn
+    assert_select "img", count:2
   end
 
   test "Datetime should be formatted" do
