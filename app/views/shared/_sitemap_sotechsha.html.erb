@@ -1,8 +1,8 @@
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <ul class="nav navbar-nav">
     <% @sts_posts.each do |sts_post| %>
-    <li>
-    <%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "text-center") %></li>
+    <li><span class="list-group">
+      <%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "list-group-item list-group-item-success text-center") %></span></li>
     <% end %>
   </ul>
 </nav>
