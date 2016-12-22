@@ -41,3 +41,11 @@
 .snsb iframe {
     margin: 0 !important;
 }
+
+.navbar-default .navbar-nav >li > a{
+  color: #337ab7;
+  &:hover{
+    color: #337ab7;
+    text-decoration: underline;
+  }
+}
