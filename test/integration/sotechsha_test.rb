@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
 
-class SoTechShaTest < ActionDispatch::IntegrationTest
+class SotechshaTest < ActionDispatch::IntegrationTest
   def setup
     # Quizzes on the book
     @quizzes = (0..6).to_a
@@ -26,7 +26,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
 
   test "SoTechSha link should be rendered" do
     get "/sotechsha"
-    assert_template "so_tech_sha_overview_page/index"
+    assert_template "sotechsha_overview_page/index"
     #assert_select "h1.page-header", "Scratchでつくる! たのしむ! プログラミング道場"
     assert_select "a[href]", count:24
     assert_select "footer", count:1
