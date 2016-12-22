@@ -24,6 +24,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to "/sotechsha"
     assert_equal session[:user] , ENV['SCRIVITO_EMAIL']
     follow_redirect!
-    assert_template "so_tech_sha_overview_page/index"
+    assert_template "sotechsha_overview_page/index"
   end
 end

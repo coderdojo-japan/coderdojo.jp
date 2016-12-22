@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SoTechShaControllerTest < ActionController::TestCase
+class SotechshaControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

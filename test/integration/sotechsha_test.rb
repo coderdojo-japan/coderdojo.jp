@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
 
-class SoTechShaTest < ActionDispatch::IntegrationTest
+class SotechshaTest < ActionDispatch::IntegrationTest
   def setup
     # Quizzes on the book
     @quizzes = (0..6).to_a
@@ -12,12 +12,10 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
       get "/sotechsha/#{num}"
       assert_response :success
       assert_equal "/sotechsha/#{num}", path
-      # TODO: Test 1, 3, and 6 when they are ready
-      case num
-      when 0,2,4,5 then
-          num = num == 0 ? "序" : num
-          assert_select 'h1', "#{num.to_s.tr("0-9", "０-９")}章課題"
-      end
+      # TODO: Test 1 and 3  they are ready
+      next if num == 1 or num == 3
+      ch = num.to_s.tr("0-9", "０-９").gsub("０", "序")
+      assert_select 'h1', "#{ch}章課題"
     end
   end
 
@@ -28,7 +26,7 @@ class SoTechShaTest < ActionDispatch::IntegrationTest
 
   test "SoTechSha link should be rendered" do
     get "/sotechsha"
-    assert_template "so_tech_sha_overview_page/index"
+    assert_template "sotechsha_overview_page/index"
     #assert_select "h1.page-header", "Scratchでつくる! たのしむ! プログラミング道場"
     assert_select "a[href]", count:24
     assert_select "footer", count:1
