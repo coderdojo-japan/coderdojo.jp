@@ -5,16 +5,15 @@
     <% end %>
   <% end %>
 
-  <%= content_tag  :div, scrivito_value(@obj.created.strftime("%Y年%m月%d日")),
-                   class: "text-muted h4" %>
-  <hr>
+
+
   <%= scrivito_tag :h1,  @obj, :title %>
   <%= scrivito_tag :div, @obj, :abstract %>
   <%= scrivito_image_tag @obj, :image, class: "img-responsive" %>
   <%= scrivito_tag :div, @obj, :body %>
-  <div style="margin-left: 0px; margin-top: 100px;" />
-  <div style="margin-left: 0px; padding-bottom: 30px;" />
-
-</div>
+  <hr>
+  <%= content_tag  :div, scrivito_value(@obj.created.strftime("作成日:%Y年%m月%d日")),
+                   class: "text-muted text-right h5" %>
+  <div style="margin-left: 0px; padding-bottom: 30px;"></div>
 <%= render 'shared/sitemap_sotechsha' %>
 <%= render 'shared/footer' %>

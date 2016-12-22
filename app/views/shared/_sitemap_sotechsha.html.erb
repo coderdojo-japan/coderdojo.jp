@@ -2,7 +2,7 @@
   <ul class="nav navbar-nav">
     <% @sts_posts.each do |sts_post| %>
     <li>
-    <%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "") %></li>
+    <%= link_to(scrivito_value(sts_post.title), scrivito_path(sts_post), :class => "text-center") %></li>
     <% end %>
   </ul>
 </nav>
