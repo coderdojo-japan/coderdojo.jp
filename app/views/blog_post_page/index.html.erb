@@ -15,5 +15,5 @@
   <%= content_tag  :div, scrivito_value(@obj.created.strftime("作成日:%Y年%m月%d日")),
                    class: "text-muted text-right h5" %>
   <div style="margin-left: 0px; padding-bottom: 30px;"></div>
-<%= render 'shared/sitemap_sotechsha' %>
+<%= render 'shared/sitemap_sotechsha' if @sts_posts %>
 <%= render 'shared/footer' %>
