@@ -318,6 +318,16 @@
   order: 47
   tags:
   - Scratch
+- name: 伊勢 (近畿)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
+  url: https://twitter.com/coderdojo_ise
+  description: 三重県伊勢市で不定期に開催
+  order: 48
+  tags:
+  - Scratch
+  - LEGO
+  - LabVIEW
+  - 3D CAD
 - name: 長岡京 (近畿)
   source: '1559696050934193'
   url: https://coderdojo-nagaokakyo.doorkeeper.jp/
