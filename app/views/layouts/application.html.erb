@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <% if @obj %>
+  <% if @obj && @obj.display_title != "Page"  %>
     <title><%= @obj.display_title %> - CoderDojo Japan</title>
   <% else %>
     <title>CoderDojo Japan - コーダー道場ジャパン</title>
