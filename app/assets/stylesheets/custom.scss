@@ -1,0 +1,34 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Customized by YassLab
+
+.add-margin{
+  margin-right: 10%;
+  margin-left:  10%;
+}
+
+.fontsize-for-blog{
+  font-size: 120%;
+}
+
+.snsb {
+    overflow: hidden;
+    clear: left;
+    margin-left: 13px;
+    padding: 0 ;
+}
+.snsb li {
+    float: left;
+    margin: 4px;
+    list-style-type: none;
+    line-height: 0;
+}
+.snsb iframe {
+    margin: 0 !important;
+}
+
+
+// Customized by @coderdojo-tokyo
+
+
