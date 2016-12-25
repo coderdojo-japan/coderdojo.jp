@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/sotechsha',       to: 'sotechsha_overview_page#index'
 
   # Redirects
-  get "/releases/2016/12/12/new-backend", to: redirect('/blogs/2016/12/12/new-backend')
+  get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
+  get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
 
   # Sessions
   get '/logout',       to: 'sessions#destroy'
