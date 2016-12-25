@@ -6,7 +6,7 @@ class BlogTest < ActionDispatch::IntegrationTest
   end
 
   test "Blog post should be rendered" do
-    get "/blogs/2016/12/12/new-backend"
+    get "/news/2016/12/12/new-backend"
     assert_template "blog_post_page/index"
     assert_template partial: '_sitemap_sotechsha', count: 0
     assert_template partial: '_footer', count: 1
