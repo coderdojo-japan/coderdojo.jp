@@ -42,8 +42,8 @@
 
 @font-face {
     font-family: coderdojo;
-    src: url(../font/coderdojo.eot);
-    src: url(../font/coderdojo.eot?#iefix) format('eot'), url(../font/coderdojo.woff) format('woff'), url(../font/coderdojo.ttf) format('truetype'), url(../font/coderdojo.svg#coderdojo) format('svg');
+    src: url(/font/coderdojo.eot);
+    src: url(/font/coderdojo.eot?#iefix) format('eot'), url(/font/coderdojo.woff) format('woff'), url(/font/coderdojo.ttf) format('truetype'), url(/font/coderdojo.svg#coderdojo) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -335,7 +335,7 @@ a {
     height: 96px;
     width: 96px;
     background-position: center center;
-    / / border-radius: 48px;
+    // border-radius: 48px;
     background-size: cover;
     margin: 0 auto
 }
