@@ -50,20 +50,20 @@
   </ol>
 
 </section>
-<section class="mentor text-center full-width grayscale-bg" id="dojos">
+<section class="dojos text-center full-width grayscale-bg" id="dojos">
   <h2>全国の道場</h2>
   <ul class="loaded">
     <% @dojos.each do |dojo| %>
-      <li class="mentor-person ng-scope">
+      <li class="dojo ng-scope">
 	<header>
 	  <a href="<%= dojo.url %>">
-	    <span class="mentor-person-picture" style="background-image: url(<%= dojo.logo %>);"></span>
-	    <span class="mentor-person-name ng-binding"><%= dojo.name %></span>
+	    <span class="dojo-picture" style="background-image: url(<%= dojo.logo %>);"></span>
+	    <span class="dojo-name ng-binding"><%= dojo.name %></span>
 	  </a>
 	</header>
 	<ul class="tags">
 	<% dojo.tags.each do |tag| %>
-          <li ng-repeat="tag in mentor.tags" class="ng-binding ng-scope"><%= tag %></li>
+          <li class="ng-binding ng-scope"><%= tag %></li>
 	<% end %>
 	</ul>
 	<p class="ng-binding"><%= dojo.description %></p>

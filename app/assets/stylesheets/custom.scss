@@ -36,7 +36,7 @@
     background: #2275CA;
 }
 
-.meetup-item a, .mentor-person > header > a {
+.meetup-item a, .dojo > header > a {
     text-decoration: none
 }
 
@@ -64,7 +64,7 @@
     vertical-align: -15%
 }
 
-.meetup-item, .mentor-person {
+.meetup-item, .dojo {
     overflow: hidden;
     vertical-align: top
 }
@@ -301,19 +301,19 @@ a {
     margin-top: -3%
 }
 
-.mentor > ul {
+.dojos > ul {
     text-align: center;
     padding: 0 0 1.5em
 }
 
-.mentor > h2 {
+.dojos > h2 {
     font-size: 120%;
     color: #999;
     padding-top: 1em;
     margin: .4em
 }
 
-.mentor-person {
+.dojo {
     display: inline-block;
     width: 85%;
     margin: 10px;
@@ -323,14 +323,14 @@ a {
     text-align: center
 }
 
-.mentor-person > p {
+.dojo > p {
     font-size: 90%;
     padding: 5px 10px;
     text-align: center;
     margin: 5px 0
 }
 
-.mentor-person-picture {
+.dojo-picture {
     display: block;
     height: 96px;
     width: 96px;
@@ -340,13 +340,13 @@ a {
     margin: 0 auto
 }
 
-.mentor-person-name {
+.dojo-name {
     display: block;
     margin: .5em 0
 }
 
 @media only screen and (min-width:560px) {
-    .mentor-person {
+    .dojo {
         width: 220px;
         height: 275px
     }
