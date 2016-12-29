@@ -68,6 +68,8 @@ GEM
     faraday_middleware (0.10.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.14)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     gh (0.15.0)
       addressable (~> 2.4.0)
       backports
@@ -250,6 +252,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
   coffee-rails (~> 4.1.0)
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.18.4)
