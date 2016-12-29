@@ -1,4 +1,8 @@
 language: ruby
+dependencies:
+  cache_directories:
+    - 'public/assets'
+    - 'tmp/cache/assets'
 deploy:
   provider: heroku
   api_key:
