@@ -107,6 +107,8 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    minitest-retry (0.1.6)
+      minitest (>= 5.0)
     multi_json (1.12.0)
     multipart-post (2.0.0)
     net-http-persistent (2.9.4)
@@ -255,6 +257,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-retry
   pg (~> 0.18.4)
   pry-rails
   rails (= 4.2.6)

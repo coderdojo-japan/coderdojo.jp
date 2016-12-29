@@ -30,6 +30,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rake'
   gem 'travis'
+  gem 'minitest-retry'
 end
 
 group :production do
