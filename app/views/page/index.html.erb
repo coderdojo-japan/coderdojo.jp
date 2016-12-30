@@ -1,44 +1,46 @@
-
 <% if @obj && !@obj.permalink.nil?  %>
-  <!--
+  <!-- Navigation -->
   <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
-          Menu <i class="fa fa-bars"></i>
+          目次 <i class="fa fa-bars"></i>
 	</button>
 	<a class="navbar-brand" href="#top">CoderDojo Kata</a>
       </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul class="nav navbar-nav navbar-right">
 	  <li>
-            <a href="#">はじめに</a>
+            <a href="#README">はじめに</a>
           </li>
           <li>
-            <a href="#">学ぶ</a>
+            <a href="#learn">学ぶ</a>
           </li>
 	  <li>
-            <a href="#">腕試し</a>
+            <a href="#challenge">腕試し</a>
           </li>
 	  <li>
-            <a href="#">立ち上げる</a>
+            <a href="#startup">立ち上げる</a>
           </li>
 	  <li>
-            <a href="#">FAQ</a>
+            <a href="#faq">FAQ</a>
           </li>
 
 
 	</ul>
       </div>
+      <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
   </nav>
-  -->
 
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('img/kata-cover.png')">
+  <header class="intro-header" style="padding-top: 100px; background-image: url('img/kata-cover.png')">
     <div class="container">
       <div class="row">
 	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -58,7 +60,7 @@
 	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fontsize-bigger">
 	  <%= scrivito_tag :div, @obj, :body %>
 	  <hr>
-	  <p align="right" style="color: grey; padding-bottom: 50px;">更新日: <%= @obj.last_changed.strftime("作成日:%Y年%m月%d日") %></p>
+	  <p align="right" style="color: grey; padding-bottom: 50px;">更新日: <%= @obj.last_changed.strftime("%Y年%m月%d日") %></p>
 	</div>
       </div>
     </div>
