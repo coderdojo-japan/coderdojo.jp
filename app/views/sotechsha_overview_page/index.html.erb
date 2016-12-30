@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row container-fluid">
   <div class="col-md-6" id="top">
     <%= image_tag "sotechsha-1_book-cover.png",
 	class: "img-responsive center-block",
@@ -19,7 +19,9 @@
     <hr>
     <% end %>
   </div>
+  <div class="col-md-6">
+    <%= render 'shared/social_buttons' %>
+    <%= render 'shared/sitemap_sotechsha' %>
+    <%= render 'shared/footer' %>
+  </div>
 </div>
-<%= render 'shared/social_buttons' %>
-<%= render 'shared/sitemap_sotechsha' %>
-<%= render 'shared/footer' %>
