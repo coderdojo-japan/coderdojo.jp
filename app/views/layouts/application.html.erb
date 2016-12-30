@@ -58,13 +58,11 @@
 
 </head>
 <body>
-  <div class="container-fluid">
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>
-    <%= scrivito_body_tags %>
-  </div>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= yield %>
+  <%= scrivito_body_tags %>
 </body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

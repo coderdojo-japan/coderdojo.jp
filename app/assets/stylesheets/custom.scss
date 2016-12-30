@@ -3,12 +3,16 @@
 
 // Customized by YassLab
 
+.full-width{
+    margin-left:  -2%;
+    margin-right: -1.9%;
+}
+  
 .headline{
   color: white;
   background: #2275CA;
   padding: 10px 10px 10px 20px;
   margin:  30px auto;
-
 }
 
 .headline-anchor{
@@ -136,7 +140,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px
+    font-size: 16px;
+    color: #f;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
 }
 
 a {
@@ -184,7 +190,8 @@ a {
 }
 
 .title{
-    background: #2275CA;
+  padding-top: 15px;
+  background: #2275CA;
 }
 
 .title > i.cd:before {
@@ -201,7 +208,7 @@ a {
     padding: 0 1em;
     margin: 0 auto;
     max-width: 680px;
-    font-size: 130%
+    //font-size: 130%
 }
 
 @media only screen and (min-width:560px) {
@@ -300,6 +307,7 @@ a {
 }
 
 .cover > img {
+    height: 100%;
     width: 100%;
     max-width: 1000px;
     margin-left: auto;
@@ -380,19 +388,10 @@ a {
     background: #2275CA
 }
 
-body {
-    color: #f;
-    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
-}
-
 .meetup-item > header time, .title > h1 {
     font-family: 'Fjalla One', sans-serif
 }
 
-.full-width{
-    margin-left:  -2%;
-    margin-right: -1.9%;
-}
 
 .loaded{
   width: 90%;
