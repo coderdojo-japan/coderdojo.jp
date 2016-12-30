@@ -2,31 +2,30 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails',    '4.2.6'
-gem 'scrivito', '~> 1.3.0'
+gem 'scrivito'
 
-gem 'scrivito_section_widgets', '1.0.0'
-gem 'scrivito_teaser_widget',   '0.1.1'
+gem 'scrivito_section_widgets'
+gem 'scrivito_teaser_widget'
 
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jbuilder',     '~> 2.0'
+gem 'coffee-rails'
+gem 'jbuilder'
 gem 'jquery-rails'
 
 gem 'simple_grid_rails'
-gem "bootstrap-sass", "~> 3.3.5"
-gem 'sass-rails',     '~> 5.0'
-gem 'sdoc',           '~> 0.4.0', group: :doc
-gem 'uglifier',       '>= 1.3.0'
+gem "bootstrap-sass"
+gem 'sass-rails'
+gem 'uglifier'
 
 gem 'font-awesome-rails'
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring',      '1.7.1'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'web-console'
+  gem 'spring'
+  gem 'rspec-rails'
 end
 
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
+  gem 'sqlite3'
   gem 'pry-rails'
   gem 'rake'
   gem 'travis'
@@ -34,5 +33,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.18.4'
+  gem 'pg'
 end
