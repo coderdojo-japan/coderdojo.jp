@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.3.3'
 
-gem 'rails',    '4.2.6'
+gem 'rails',    '~> 4.2.7'
 gem 'scrivito'
 
 gem 'scrivito_section_widgets'
