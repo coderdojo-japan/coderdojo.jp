@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
   get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
 
+  # Issue SSL Certification
+  get "/.well-known/acme-challenge/:id" => "page#letsencrypt"
+
   # Sessions
   get '/logout',       to: 'sessions#destroy'
   resource :session, only: [:create, :destroy]
