@@ -17,7 +17,7 @@ Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](
 
 - [Ruby](http://ruby-lang.org/)
 - [Ruby on Rails](http://rubyonrails.org/)
-- [Scrivito](https://scrivito.com/)'s secret keys (ask @yasulab)
+- [Scrivito](https://scrivito.com/)'s secret keys (ask [@yasulab](https://github.com/yasulab))
 
 ### Setup 
 
