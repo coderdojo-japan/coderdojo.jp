@@ -11,6 +11,27 @@ Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](
 - Migrated to: [Heroku](http://heroku.com/) (must be switched before the shutdown)
   - GitHub: https://github.com/yasslab/coderdojo.jp
 
+## How to contribute
+
+### Requirements
+
+- [Ruby](http://ruby-lang.org/)
+- [Ruby on Rails](http://rubyonrails.org/)
+- [Scrivito](https://scrivito.com/)'s secret keys (ask @yasulab)
+
+### Setup 
+
+1. Fork and clone this repository.
+2. Set Scrivito's secret keys to `SCRIVITO_TENANT` and `SCRIVITO_API_KEY`
+3. `$ bundle install --without production`
+4. `$ bundle exec rake db:migrate`
+5. `$ bundle exec rake dojos:update_db_by_yaml`
+6. `$ bundle exec rake test`
+7. `$ rails server`
+8. Access to [localhost:3000](http://localhost:3000).
+
+If you successfully set up, you can see the same page as [coderdojo.jp](http://coderdojo.jp).
+
 ## Contributors
 
 Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
