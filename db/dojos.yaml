@@ -222,7 +222,7 @@
   - Python
   - WordPress
 - name: 浦安 (関東)
-  image_url: http://urayasu.coderdojo.chiba.jp/images/cdlogo.png
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-urayasu.png
   url: http://urayasu.coderdojo.chiba.jp/
   description: 千葉県浦安市で毎月開催
   order: 15
@@ -232,7 +232,7 @@
   - PHP
   - Ruby
 - name: 千葉 (関東)
-  image_url: http://chiba.coderdojo.chiba.jp/images/CoderDojoChiba.png
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-chiba.png
   url: http://chiba.coderdojo.chiba.jp/
   description: 千葉県千葉市で毎月開催
   order: 18
@@ -256,7 +256,7 @@
   tags:
   - Scratch
 - name: 若葉 (関東)
-  image_url: http://wakaba.coderdojo.chiba.jp/images/dojologo.png
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-wakaba.png
   url: http://wakaba.coderdojo.chiba.jp/
   description: 千葉市若葉区で毎月開催
   order: 27
