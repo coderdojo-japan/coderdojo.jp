@@ -207,6 +207,8 @@ GEM
       scrivito
     scrivito_ui (1.6.1)
       railties
+    secure_headers (3.5.1)
+      useragent
     simple_grid_rails (0.1.0)
     slop (3.6.0)
     spring (2.0.0)
@@ -237,6 +239,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
+    useragent (0.16.8)
     web-console (3.3.0)
       activemodel (>= 4.2)
       debug_inspector
@@ -262,6 +265,7 @@ DEPENDENCIES
   scrivito
   scrivito_section_widgets
   scrivito_teaser_widget
+  secure_headers
   simple_grid_rails
   spring
   sqlite3

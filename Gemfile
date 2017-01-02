@@ -18,6 +18,9 @@ gem 'uglifier'
 
 gem 'font-awesome-rails'
 
+# For SSL and CORS
+gem 'secure_headers'
+
 group :development do
   gem 'web-console'
   gem 'spring'
