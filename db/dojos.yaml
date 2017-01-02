@@ -2,7 +2,7 @@
 - name: 旭川 (北海道)
   source: '416298905086341'
   url: http://coderdojo-asahikawa.github.io/
-  image_url: http://graph.facebook.com/416298905086341/picture?type=large
+  image_url: https://graph.facebook.com/416298905086341/picture?type=large
   description: 北海道旭川市で不定期開催
   order: -100
   tags:
@@ -33,7 +33,7 @@
 - name: 泉 (東北)
   source: '542546935853207'
   url: https://www.facebook.com/CoderdojoIzumi
-  image_url: http://graph.facebook.com/542546935853207/picture?type=large
+  image_url: https://graph.facebook.com/542546935853207/picture?type=large
   description: 仙台市泉区で不定期開催
   order: -75
   tags:
@@ -94,7 +94,7 @@
 - name: さいたま (関東)
   source: '513118842140860'
   url: http://coderdojo-saitama.com/
-  image_url: http://graph.facebook.com/513118842140860/picture?type=large
+  image_url: https://graph.facebook.com/513118842140860/picture?type=large
   description: 埼玉県さいたま市で毎月開催
   order: -15
   tags:
@@ -104,7 +104,7 @@
 - name: ひばりヶ丘 (関東)
   source: '497400593610071'
   url: http://coderdojo.hanare-hibari.info/
-  image_url: http://graph.facebook.com/497400593610071/picture?type=large
+  image_url: https://graph.facebook.com/497400593610071/picture?type=large
   description: 埼玉県新座市で月2回開催
   order: -13
   tags:
@@ -113,7 +113,7 @@
 - name: 飯能 (関東)
   source: '1570008999931017'
   url: https://www.facebook.com/CoderDojoHanno
-  image_url: http://graph.facebook.com/1570008999931017/picture?type=large
+  image_url: https://graph.facebook.com/1570008999931017/picture?type=large
   description: 埼玉県飯能市で毎月開催
   order: -11
   tags:
@@ -129,7 +129,7 @@
 - name: 小平 (関東)
   source: '616010815134433'
   url: http://coderdojo-kodaira.github.io/
-  image_url: http://graph.facebook.com/616010815134433/picture?type=large
+  image_url: https://graph.facebook.com/616010815134433/picture?type=large
   description: 東京都小平市で隔週開催
   order: -7
   tags:
@@ -179,7 +179,7 @@
 - name: 下北沢 (関東)
   source: '346407898743580'
   url: http://tokyo.coderdojo.jp/
-  image_url: http://graph.facebook.com/346407898743580/picture?type=large
+  image_url: https://graph.facebook.com/346407898743580/picture?type=large
   description: 東京都世田谷区で毎週開催
   order: 0
   tags:
@@ -243,7 +243,7 @@
 - name: 柏 (関東)
   source: '472842399443384'
   url: http://www.coderdojo-kashiwa.com/
-  image_url: http://graph.facebook.com/472842399443384/picture?type=large
+  image_url: https://graph.facebook.com/472842399443384/picture?type=large
   description: 千葉県柏市で毎月3回開催
   order: 21
   tags:
@@ -275,7 +275,7 @@
 - name: 塩尻 (中部)
   source: '128374717310867'
   url: http://coderdojo.shiojiri-osslabo.com/
-  image_url: http://graph.facebook.com/128374717310867/picture?type=large
+  image_url: https://graph.facebook.com/128374717310867/picture?type=large
   description: 長野県塩尻市で毎月開催
   order: 40
   tags:
@@ -380,7 +380,7 @@
 - name: 熊野 (近畿)
   source: '254235038032617'
   url: https://www.facebook.com/coderdojo.kumano
-  image_url: http://graph.facebook.com/254235038032617/picture?type=large
+  image_url: https://graph.facebook.com/254235038032617/picture?type=large
   description: 和歌山県新宮市で不定期開催
   order: 55
   tags:
@@ -418,7 +418,7 @@
 - name: 西宮・梅田 (近畿)
   source: '1393015987582276'
   url: http://coderdojo-nishinomiya.info/
-  image_url: http://graph.facebook.com/1393015987582276/picture?type=large
+  image_url: https://graph.facebook.com/1393015987582276/picture?type=large
   description: 西宮/梅田でそれぞれ毎月開催
   order: 60
   tags:
@@ -495,7 +495,7 @@
   - ラズベリーパイ
   - Webサイト
 - name: 福山 (中国)
-  image_url: http://fukuyama100.com/coderdojo/images/logo_fukuyama.png
+  image_url: https://fukuyama100.com/coderdojo/images/logo_fukuyama.png
   url: http://fukuyama100.com/coderdojo/
   description: 広島県福山市で不定期開催
   order: 79
@@ -529,7 +529,7 @@
   - Webサイト
   - PHP
 - name: 宮崎 (九州)
-  image_url: http://lmlab.net/logos/coderdojo.png
+  image_url: https://lmlab.net/logos/coderdojo.png
   url: https://lmlab.net/coderdojo/
   description: 宮崎県西臼杵郡で毎月開催
   order: 95
