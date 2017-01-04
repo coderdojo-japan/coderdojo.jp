@@ -93,6 +93,13 @@
   - Minecraft
   - ラズベリーパイ
   - ゲーム
+- name: 水戸 (関東)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo-mito.png
+  url: http://coderdojo-mito.com/
+  description: 茨城県水戸市で毎月開催
+  order: -25
+  tags:
+  - Scratch
 - name: 守谷 (関東)
   image_url: https://dl.dropboxusercontent.com/u/3276838/CoderDojoMoriya-LOGO.jpg
   url: http://coderdojo-moriya.com/
