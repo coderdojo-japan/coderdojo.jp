@@ -415,11 +415,18 @@
   - WEBサイト
   - Java
   - JavaScript
+- name: 高槻 (近畿)
+  image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
+  url: https://www.facebook.com/coderdojotakatsuki/
+  description: 大阪府高槻市で不定期に開催
+  order: 57
+  tags:
+  - Scratch
 - name: 枚方 (近畿)
   image_url: https://dl.dropboxusercontent.com/u/2819285/coderdojo_japan.png
   url: http://coderdojo-hirakata.github.io
   description: 大阪府枚方市で隔月開催
-  order: 57
+  order: 58
   tags:
   - Scratch
   - Webサイト
