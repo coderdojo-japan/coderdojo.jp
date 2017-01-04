@@ -8,6 +8,17 @@
   tags:
   - Scratch
   - ラズベリーパイ
+- name: 札幌 (北海道)
+  source: 
+  url: http://www.coderdojo-sapporo.jp/
+  image_url: https://i1.wp.com/coderdojo-sapporo.jp/wp/wp-content/uploads/2017/01/CoderDojoSapporo_badge_001.jpg
+  description: 北海道札幌市で月２回開催
+  order: -95
+  tags:
+  - Scratch
+  - Arduino
+  - ラズベリーパイ
+  - 電子工作
 - name: 札幌@東部 (北海道)
   source: '349502068723800'
   url: https://www.facebook.com/coderdojo.sapporo/
