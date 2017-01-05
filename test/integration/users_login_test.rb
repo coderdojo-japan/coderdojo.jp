@@ -26,4 +26,14 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template "sotechsha_overview_page/index"
   end
+
+  test "successful login by friendly fowording" do
+    get "/sotechsha/gazou"
+    get @login_path
+    post session_path, { email:    ENV['SCRIVITO_EMAIL'],
+                         password: ENV["SCRIVITO_PASSWORD"] }
+    assert_redirected_to "/sotechsha/gazou"
+    follow_redirect!
+    assert_template "blog_post_page/index.html"
+  end
 end
