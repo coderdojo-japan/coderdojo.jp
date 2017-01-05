@@ -1,12 +1,11 @@
 class ApplicationController < ActionController::Base
-  before_action :store_location , :unless=> :login_page_access?
+  before_action :store_location , unless: :login_page_access?
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
   include SessionsHelper
-  
+
   private
 
     def store_location
@@ -14,7 +13,7 @@ class ApplicationController < ActionController::Base
     end
 
     def login_page_access?
-      self.controller_name == 'login_page' || self.controller_name =='sessions'
+      %w(login_page sessions).include? self.controller_name
     end
 
 end
