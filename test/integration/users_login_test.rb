@@ -34,6 +34,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
                          password: ENV["SCRIVITO_PASSWORD"] }
     assert_redirected_to "/sotechsha/gazou"
     follow_redirect!
-    assert_template "blog_post_page/index.html"
+    # assert_template "blog_post_page/index.html"
+    assert_equal "/sotechsha/gazou", path
   end
 end
