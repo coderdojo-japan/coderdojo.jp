@@ -1,5 +1,5 @@
 require 'test_helper'
-
+include Scrivito::ControllerHelper
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
@@ -21,20 +21,26 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     get @login_path
     post session_path, { email:    ENV['SCRIVITO_EMAIL'],
                          password: ENV["SCRIVITO_PASSWORD"] }
-    assert_redirected_to "/sotechsha"
+    assert_redirected_to scrivito_path(Obj.root)
     assert_equal session[:user] , ENV['SCRIVITO_EMAIL']
     follow_redirect!
-    assert_template "sotechsha_overview_page/index"
+    assert_template "page/index"
   end
 
-  test "successful login by friendly fowording" do
-    get "/sotechsha/gazou"
+  test "successful login followed by logout with friendly fowordings" do
+    test_url = "/kata"
+    get test_url
     get @login_path
     post session_path, { email:    ENV['SCRIVITO_EMAIL'],
                          password: ENV["SCRIVITO_PASSWORD"] }
-    assert_redirected_to "/sotechsha/gazou"
+    assert_redirected_to test_url
     follow_redirect!
     # assert_template "blog_post_page/index.html"
-    assert_equal "/sotechsha/gazou", path
+    assert_equal test_url, path
+
+    get "/logout"
+    assert_redirected_to test_url
+    follow_redirect!
+    assert_equal test_url, path
   end
 end

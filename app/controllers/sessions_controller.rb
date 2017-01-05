@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     if valid_credentials?(params[:email], params[:password])
       session[:user] = params[:email]
-      redirect_back_or sotechsha_path
+      redirect_back_or scrivito_path(Obj.root)
     else
       flash[:alert] = "メールアドレスとパスワードの組み合わせが間違っています ><💦 "
       redirect_to scrivito_path(LoginPage.instance)
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
   def destroy
     flash[:success] = "ログアウトしました 🏃💨🚪"
     session[:user] = nil
-    redirect_to sotechsha_path
+    redirect_back_or scrivito_path(Obj.root)
   end
 
   private
