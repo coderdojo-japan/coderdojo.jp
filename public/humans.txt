@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+puts eval(%( [1_2_5_1_6,1_2_4_7_3,1_2_5_2_1,
+1  ##  ##                 ##          ##    _
+2   ####   ##   #### #### ##      ##  ##    _
+5    ##      #  #    #    ##        # ##    _
+0    ##    ###  #### #### ##      ### ####  _
+8    ##   #  #     #    # ##     #  # ##  # ]
+.    ##    ###  #### #### ######  ### ####  m
+ap{|c|c.chr('utf-8')}).gsub(/\s|#/,'')).join
+
+__END__
+
+Team YassLab
+https://github.com/orgs/yasslab/people
+
+YassLab - Having a Good Life with OpenSource ;)
+http://yasslab.jp/
