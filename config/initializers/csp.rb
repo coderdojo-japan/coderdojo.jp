@@ -4,7 +4,6 @@ SecureHeaders::Configuration.default do |config|
     preserve_schemes: true,             # default: false.
 
     default_src: %w(* 'unsafe-inline' 'unsafe-eval' data:
-*.dropboxusercontent.com
 *.google-analytics.com *.googleapis.com *.google.com *.gstatic.com
 *.facebook.net *.facebook.com *.twitter.com
 *.hatena.ne.jp *.st-hatena.com
