@@ -5,10 +5,7 @@
 	alt: "Scratchでつくる! たのしむ! プログラミング道場",
         style: "width: 90%"
 	%>
-    <div>
-      <p>ソーテック社の書籍詳細は<a href="http://www.sotechsha.co.jp/pc/html/1151.htm" target="_blank">コチラ</a>。</p>
-      <p>本ページでは書籍内で利用する素材や、課題の答えを掲載しています。</p>
-    </div>
+    <%= scrivito_tag :div, @obj, :body %>
   </div>
   <div class="col-md-6">
     <% @sts_posts.each do |sts_post| %>
