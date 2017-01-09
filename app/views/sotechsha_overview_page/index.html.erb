@@ -5,7 +5,10 @@
 	alt: "Scratchでつくる! たのしむ! プログラミング道場",
         style: "width: 90%"
 	%>
-    <%= scrivito_tag :div, @obj, :body %>
+
+    <div style="text-align: center; font-size: 19.2px;">
+      <%= scrivito_tag :div, @obj, :body, class: "img-responsive center-block" %>
+    </div>
   </div>
   <div class="col-md-6">
     <% @sts_posts.each do |sts_post| %>
@@ -15,8 +18,7 @@
     <%= link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-warning btn-block") %>
     <hr>
     <% end %>
-  </div>
-  <div class="col-md-6">
+
     <%= render 'shared/social_buttons' %>
     <%= render 'shared/sitemap_sotechsha' %>
     <%= render 'shared/footer' %>
