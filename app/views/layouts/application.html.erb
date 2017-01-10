@@ -29,8 +29,8 @@
   <% end %>
   
   <% if @obj && @obj.permalink == "kata" %>
-    <meta name="description"        content="全国の CoderDojo で活用されている資料や教材、子ども向けのプログラミングキャンプ・プログラミングコンテスト情報、CoderDojo の立ち上げ方・関わり方など、CoderDojo を中心にして色々なトピックまとめています。" />
-    <meta property="og:description" content="全国の CoderDojo で活用されている資料や教材、子ども向けのプログラミングキャンプ・プログラミングコンテスト情報、CoderDojo の立ち上げ方・関わり方など、CoderDojo を中心にして色々なトピックまとめています。" />
+    <meta name="description"        content="<%= kata_description %>" />
+    <meta property="og:description" content="<%= kata_description %>" />
   <% else %>
     <meta name="description"        content="<%= meta_description(yield(:meta_description)) %>" />
     <meta property="og:description" content="<%= meta_description(yield(:meta_description)) %>" />

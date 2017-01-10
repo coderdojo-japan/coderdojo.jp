@@ -11,9 +11,13 @@ module ApplicationHelper
 
   def meta_description(description)
     if description.empty?
-      "CoderDojo は子どものためのプログラミング道場です。2011年にアイルランドで始まり、全国では70ヶ所以上、世界では66ヶ国・1,150ヶ所で開催されています。"
+      "CoderDojo は子どものためのプログラミング道場です。2011年にアイルランドで始まり、全国では#{Dojo::NUM_OF_JAPAN_DOJOS}ヶ所以上、世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WHOLE_DOJOS}ヶ所で開催されています。(#{Dojo::UPDATED_DATE})"
     else
       description
     end
+  end
+
+  def kata_description
+    "全国の CoderDojo で活用されている資料や教材、子ども向けのプログラミングキャンプ・プログラミングコンテスト情報、CoderDojo の立ち上げ方・関わり方など、CoderDojo を中心にして色々なトピックまとめています。"
   end
 end
