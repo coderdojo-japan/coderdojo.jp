@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Issue SSL Certification
   get "/.well-known/acme-challenge/:id" => "page#letsencrypt"
+  get "/.well-known/acme-challenge/:id" => "plain_page#letsencrypt"
 
   # Sessions
   get '/logout',       to: 'sessions#destroy'
