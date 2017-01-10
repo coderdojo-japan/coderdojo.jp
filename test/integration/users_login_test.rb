@@ -24,7 +24,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to scrivito_path(Obj.root)
     assert_equal session[:user] , ENV['SCRIVITO_EMAIL']
     follow_redirect!
-    assert_template "page/index"
+    assert_template "plain_page/index"
   end
 
   test "successful login followed by logout with friendly fowordings" do
