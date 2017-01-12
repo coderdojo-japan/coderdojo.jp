@@ -38,21 +38,22 @@ div #README{
     margin: 0 !important;
 }
 .sponsers_logo {
+    // background-color:white;
     margin: 5px;
     a{
       text-decoration: none;
+      cursor: none;
     }
     img{
       height:50px;
-      margin:10px 25px;
-      @include opacity(0.5);
+      margin:10px 15px;
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
       -o-filter: grayscale(100%);
       -ms-filter: grayscale(100%);
       filter: grayscale(100%);
          &:hover {
-            @include opacity(1);
+            cursor: pointer;
             -webkit-filter: grayscale(0%);
             -moz-filter: grayscale(0%);
             -o-filter: grayscale(0%);
