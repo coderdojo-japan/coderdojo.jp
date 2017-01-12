@@ -38,16 +38,44 @@ div #README{
     margin: 0 !important;
 }
 .sponsers_logo {
-    margin: 5px;
+    ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: 0;
+    }
+    li{
+        padding: 0;
+        margin: 10px 0px 10px 1px;
+        list-style-type:none;
+        display: inline-block;
+        width: 21%;
+        font-size: 12px;
+    }
+    
     a{
       text-decoration: none;
       cursor: none;
     }
     img{
-      height:50px;
-      margin:10px 15px;
+      width:100%;
          &:hover {
             cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width:720px) {
+    .sponsers_logo{
+        li{
+            width: 46%;
+        }
+    }
+}
+@media only screen and (max-width:560px) {
+    .sponsers_logo{
+        li{
+            width: 90%;
         }
     }
 }
