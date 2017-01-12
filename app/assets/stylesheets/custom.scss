@@ -37,7 +37,23 @@ div #README{
 .snsb iframe {
     margin: 0 !important;
 }
-
+.sponsers_logo img{
+  width:200px;
+  // @include opacity(0.3);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  &:hover {
+     // @include opacity(1);
+     -webkit-filter: grayscale(0%);
+     -moz-filter: grayscale(0%);
+     -o-filter: grayscale(0%);
+     -ms-filter: grayscale(0%);
+     filter: grayscale0(0%);
+  }
+}
 
 // Customized by @coderdojo-tokyo
 
