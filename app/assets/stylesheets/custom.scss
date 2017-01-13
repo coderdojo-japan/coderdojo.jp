@@ -38,6 +38,35 @@ div #README{
     margin: 0 !important;
 }
 
+// Sponsor section
+.sponsors_logo {
+  ul{
+    padding-left: 0px;
+  }
+  li{
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 20px;
+    width:  300px;
+    height: 120px;
+    
+    @media only screen and (min-width: 560px) {
+      padding: 20px  0px 0px  0px;
+      margin:   0px  0px 0px  0px;
+      width:  220px;
+      height: 100px;
+    }
+    @media only screen and (min-width: 720px) {
+      padding:  0px 20px 0px 20px;
+      margin:  20px  0px 0px  0px;
+      width:  320px;
+      height: 100px;
+    }
+    img{
+      width:100%;
+    }
+  }
+}
 
 // Customized by @coderdojo-tokyo
 
