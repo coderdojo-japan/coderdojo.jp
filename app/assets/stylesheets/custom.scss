@@ -71,6 +71,9 @@ div #README{
     }
     img{
       width:100%;
+      &:hover {
+	cursor: pointer;
+      }
     }
   }
 }
