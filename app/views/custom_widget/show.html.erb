@@ -67,19 +67,19 @@
   <ul class="loaded">
     <% @dojos ||= [] %>
     <% @dojos.each do |dojo| %>
-      <li class="dojo ng-scope">
+      <li class="dojo">
 	<header>
 	  <a href="<%= dojo.url %>">
 	    <span class="dojo-picture" style="background-image: url(<%= dojo.logo %>);"></span>
-	    <span class="dojo-name ng-binding"><%= dojo.name %></span>
+	    <span class="dojo-name"><%= dojo.name %></span>
 	  </a>
 	</header>
 	<ul class="tags">
 	<% dojo.tags.each do |tag| %>
-          <li class="ng-binding ng-scope"><%= tag %></li>
+          <li><%= tag %></li>
 	<% end %>
 	</ul>
-	<p class="ng-binding"><%= dojo.description %></p>
+	<p><%= dojo.description %></p>
       </li>
     <% end %>
   </ul>

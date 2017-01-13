@@ -75,7 +75,7 @@ div #README{
     background: #2275CA;
 }
 
-.meetup-item a, .dojo > header > a {
+.dojo > header > a {
     text-decoration: none
 }
 
@@ -103,7 +103,7 @@ div #README{
     vertical-align: -15%
 }
 
-.meetup-item, .dojo {
+.dojo {
     overflow: hidden;
     vertical-align: top
 }
@@ -416,7 +416,7 @@ a {
     background: #2275CA
 }
 
-.meetup-item > header time, .title > h1 {
+.title > h1 {
     font-family: 'Fjalla One', sans-serif
 }
 
