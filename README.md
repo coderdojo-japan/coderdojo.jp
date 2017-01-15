@@ -1,23 +1,27 @@
-[![Cover](https://raw.githubusercontent.com/yasslab/coderdojo.jp/master/public/cover.png)](http://coderdojo.jp/)
+[![Cover](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/master/public/cover.png)](https://coderdojo.jp/)
 
 # CoderDojo Japan
 
-[![Build Status](https://travis-ci.org/yasslab/coderdojo.jp.svg?branch=master)](https://travis-ci.org/yasslab/coderdojo.jp#)
+[![Build Status](https://travis-ci.org/coderdojo-japan/coderdojo.jp.svg?branch=master)](https://travis-ci.org/coderdojo-japan/coderdojo.jp#)
 
 Official website of CoderDojo Japan integrated with Rails-based CMS ([Scrivito](https://scrivito.com/))
 
 - Moving from: [Parse](http://parse.com/) that __will be shutdown on January 28, 2017__
   - GitHub: https://github.com/coderdojo-japan/web
 - Migrated to: [Heroku](http://heroku.com/) (must be switched before the shutdown)
-  - GitHub: https://github.com/yasslab/coderdojo.jp
+  - GitHub: https://github.com/coderdojo-japan/coderdojo.jp
 
 ## How to contribute
+
+Fulfill the requirements, setup by following the instructions, and send a pull request for anything you want to contribute.
 
 ### Requirements
 
 - [Ruby](http://ruby-lang.org/)
 - [Ruby on Rails](http://rubyonrails.org/)
-- [Scrivito](https://scrivito.com/)'s secret keys (ask [@yasulab](https://github.com/yasulab))
+- [Scrivito](https://scrivito.com/)
+   - Signup and get your own keys to connect Scrivito.
+   - Or, ask [@yasulab](https://github.com/yasulab) for production keys
 
 ### Setup 
 
@@ -35,8 +39,8 @@ If you successfully set up, you can see the same page as [coderdojo.jp](http://c
 ## Contributors
 
 Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
-replaced/developed by [YassLab](http://yasslab.jp/) team in 2016, and   
-will be migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
+replaced/developed by [YassLab](https://yasslab.jp/) team in 2016, and   
+had been migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
 
 ## License
 
@@ -49,7 +53,7 @@ So, this application can be used and modified under the MIT License! 🆗
 
 ### The MIT License (MIT)
 
-Copyright &copy; 2016 [YassLab](http://yasslab.jp/)
+Copyright &copy; 2017 [CoderDojo Japan](https://coderdojo.jp/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
