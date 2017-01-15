@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.0'
 
-gem 'rails',    '~> 4.2.7'
+gem 'rails',    '~> 5.0'
 gem 'scrivito'
 
 gem 'scrivito_section_widgets'
@@ -33,6 +33,10 @@ group :development, :test do
   gem 'rake'
   gem 'travis'
   gem 'minitest-retry'
+end
+
+group :test do
+  gem 'rails-controller-testing'
 end
 
 group :production do
