@@ -28,9 +28,9 @@ Fulfill the requirements, setup by following the instructions, and send a pull r
 1. Fork and clone this repository.
 2. Set Scrivito's secret keys to `SCRIVITO_TENANT` and `SCRIVITO_API_KEY`
 3. `$ bundle install --without production`
-4. `$ bundle exec rake db:migrate`
-5. `$ bundle exec rake dojos:update_db_by_yaml`
-6. `$ bundle exec rake test`
+4. `$ bundle exec rails db:migrate`
+5. `$ bundle exec rails dojos:update_db_by_yaml`
+6. `$ bundle exec rails test`
 7. `$ rails server`
 8. Access to [localhost:3000](http://localhost:3000).
 

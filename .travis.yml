@@ -10,6 +10,6 @@ deploy:
   app:
     master: coderdojo-japan
   run:
-      - "bundle exec rake db:migrate"
-      - "bundle exec rake dojos:update_db_by_yaml"
+      - "bundle exec rails db:migrate"
+      - "bundle exec rails dojos:update_db_by_yaml"
       
