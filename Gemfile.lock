@@ -94,6 +94,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.0.3)
+    kramdown (1.13.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     loofah (2.0.3)
@@ -265,6 +266,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder
   jquery-rails
+  kramdown
   minitest-retry
   pg
   pry-rails

@@ -6,6 +6,6 @@ class ContractsController < ApplicationController
     filename = params[:id]
     contract = Contract.new(filename)
     raise unless contract.exists?
-    @content = contract.content
+    @content = Kramdown::Document.new(contract.content, input: 'GFM').to_html
   end
 end
