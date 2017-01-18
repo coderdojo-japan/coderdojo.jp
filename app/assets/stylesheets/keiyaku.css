@@ -1,0 +1,86 @@
+.keiyaku {
+  counter-reset: keiyaku-chapter;
+  position: relative;
+  font-family: serif;
+}
+.keiyaku > h1 {
+  text-align: center;
+}
+.keiyaku > h1:first-child {
+  margin-top: 0;
+}
+.keiyaku > h2 {
+  counter-reset: keiyaku-paragraph;
+  counter-increment: keiyaku-chapter;
+}
+.keiyaku > h2::before {
+  content: "\7B2C" counter(keiyaku-chapter) "\6761\FF08";
+}
+.keiyaku > h2::after {
+  content: "\FF09";
+}
+.keiyaku > p {
+  counter-increment: keiyaku-paragraph;
+  text-indent: 1em;
+  padding-left: 1em;
+}
+.keiyaku > h1 + p,
+.keiyaku > h2 + p,
+.keiyaku > hr + p,
+.keiyaku > p:first-of-type {
+  text-indent: 0;
+  padding-left: 0;
+}
+.keiyaku > p::before {
+  content: counter(keiyaku-paragraph) " ";
+  font-weight: bold;
+  margin-left: -2em;
+  margin-right: 1em;
+}
+.keiyaku > h1 + p::before,
+.keiyaku > h2 + p::before,
+.keiyaku > hr + p::before,
+.keiyaku > p:first-of-type::before {
+  content: none;
+}
+.keiyaku > ul {
+  padding: 0 0 0 2.5em;
+}
+.keiyaku > ol {
+  list-style: none;
+  counter-reset: keiyaku-ordered-list;
+  padding: 0 0 0 2.5em;
+}
+.keiyaku > ol > li {
+  counter-increment: keiyaku-ordered-list;
+  text-indent: -2.5em;
+}
+.keiyaku > ol > li::before {
+  content: "\FF08" counter(keiyaku-ordered-list) "\FF09";
+}
+.keiyaku > hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 2em 0;
+}
+.keiyaku > h4 {
+  position: absolute;
+  margin: 0;
+  right: 30em;
+  font-size: 100%;
+}
+.keiyaku > h4 + ul {
+  margin: 0 0 2em auto;
+  width: 28em;
+  list-style: none;
+}
+.keiyaku > h4 + ul > li:last-child::after {
+  content: "\329E";
+  position: absolute;
+  right: 1em;
+}
+.keiyaku > blockquote {
+  border: 1px solid black;
+  padding: .5em 1.5em;
+  margin: 1em 0 1.5em;
+}
