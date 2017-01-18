@@ -1,5 +1,8 @@
-<ul>
-  <% @contracts.each do |contract| %>
-    <li><%= link_to contract, contract_path(contract) %></li>
-  <% end %>
-</ul>
+<h2>CoderDojo Japan 法務資料まとめ</h2>
+<section class='keiyaku'>
+  <ul>
+    <% @contracts.each do |contract| %>
+      <li><%= link_to contract, contract_path(contract) %></li>
+    <% end %>
+  </ul>
+</section>
