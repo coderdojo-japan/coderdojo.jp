@@ -14,10 +14,10 @@
   counter-increment: keiyaku-chapter;
 }
 .keiyaku > h2::before {
-  content: "\7B2C" counter(keiyaku-chapter) "\6761\FF08";
+  //content: "\7B2C" counter(keiyaku-chapter) "\6761\FF08";
 }
 .keiyaku > h2::after {
-  content: "\FF09";
+  //content: "\FF09";
 }
 .keiyaku > p {
   counter-increment: keiyaku-paragraph;
@@ -32,7 +32,7 @@
   padding-left: 0;
 }
 .keiyaku > p::before {
-  content: counter(keiyaku-paragraph) " ";
+  //content: counter(keiyaku-paragraph) " ";
   font-weight: bold;
   margin-left: -2em;
   margin-right: 1em;
