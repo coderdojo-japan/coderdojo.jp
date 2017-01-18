@@ -7,13 +7,18 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     @login_path = "/#{login.slug + login.id}"
   end
 
-  test "login with invalid information" do
+  test "SSL login with invalid information" do
+    https!
     get @login_path
     assert_template 'login_page/index'
+
     post session_path, params: { email: "", password: "" }
     assert_redirected_to @login_path
     assert_not flash.empty?
+
+    https! false
     get @login_path
+    assert_response :success
     assert flash.present?
   end
 
