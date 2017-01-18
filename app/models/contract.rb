@@ -2,6 +2,14 @@
 class Contract
   attr_reader :id, :version
 
+  class << self
+    def all
+      Dir.glob('db/contracts/*.md').map do |filename|
+        File.basename(filename, '.*')
+      end
+    end
+  end
+
   def initialize(filename, version='1.0.0')
     @filename = filename
     @version  = version
