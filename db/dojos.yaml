@@ -464,11 +464,12 @@
 - name: 本町 (近畿)
   image_url: /img/dojos/coderdojo_hommachi.png
   url: https://coderdojo-hommachi.doorkeeper.jp/
-  description: 大阪府大阪市で不定期開催
+  description: 大阪府大阪市で隔月開催
   order: 62
   tags:
   - Scratch
   - Ruby
+  - 電子工作
 - name: 西成 (近畿)
   image_url: /img/dojos/coderdojo_nishinari.jpg
   url: https://www.facebook.com/coderdojo.nishinari.osaka/
