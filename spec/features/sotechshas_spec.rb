@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature "Sotechsha"  do
-  
+RSpec.feature "Sotechsha", type: :feature  do
+
   describe "GET /sotechsha/num" do
     scenario "Quizzes should be permalink" do
       (0..6).each do |num|
@@ -20,7 +20,7 @@ feature "Sotechsha"  do
       expect(page).to have_selector "img", count: 2
     end
   end
-  
+
   describe "GET /sotechsha/1" do
     scenario "Datetime should be formatted" do
       visit "/sotechsha/1"

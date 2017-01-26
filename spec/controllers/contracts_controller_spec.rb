@@ -4,7 +4,6 @@ RSpec.describe ContractsController, type: :controller do
   describe "GET #index" do
     it "show @contrcts" do
       get :index
-      expect(response).to have_http_status(:success)
       expect(assigns(:contracts)).to eq Contract.all
     end
   end
