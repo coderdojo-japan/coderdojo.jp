@@ -8,7 +8,7 @@ RSpec.describe BlogPostPageController, type: :controller do
       obj = Obj.find_by_permalink!("news/2016/12/12/new-backend")
       request.for_scrivito_obj(obj)
       get :index
-      expect(controller.instance_variable_get("@sts_posts")).to eq nil
+      expect(assigns(:sts_posts)).to eq nil
       expect(response).to render_template "blog_post_page/index", count:1
       expect(response).to_not render_template partial: "sitemap_sotechsha"
       expect(response).to render_template partial: "_footer", count:1
@@ -18,7 +18,7 @@ RSpec.describe BlogPostPageController, type: :controller do
       request.for_scrivito_obj(obj)
       get :index
       sts_posts = BlogPostPage.where(:_permalink, :starts_with, 'sotechsha/').order(created: :asc)
-      # expect(controller.instance_variable_get("@sts_posts")).to eq sts_posts
+      expect(assigns(:sts_posts).to_a).to eq sts_posts.to_a
       expect(response).to render_template "blog_post_page/index"
       expect(response).to render_template partial: "_sitemap_sotechsha", count: 1
       expect(response).to render_template partial: "_footer", count: 1
