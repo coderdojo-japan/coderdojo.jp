@@ -30,7 +30,6 @@ gem 'faraday_middleware', '0.10'
 group :development do
   gem 'web-console'
   gem 'spring'
-  gem 'rspec-rails'
 end
 
 group :development, :test do
@@ -39,6 +38,10 @@ group :development, :test do
   gem 'rake'
   gem 'travis'
   gem 'minitest-retry'
+
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :test do

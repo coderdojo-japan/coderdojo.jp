@@ -47,6 +47,15 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    capybara (2.11.0)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -175,6 +184,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rubyzip (1.2.0)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -216,6 +226,10 @@ GEM
       railties
     secure_headers (3.6.1)
       useragent
+    selenium-webdriver (3.0.5)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     simple_grid_rails (0.1.0)
     slop (3.6.0)
     spring (2.0.1)
@@ -256,12 +270,15 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-sass
+  capybara
   coffee-rails
   faraday_middleware (= 0.10)
   font-awesome-rails
@@ -274,12 +291,13 @@ DEPENDENCIES
   rails (~> 5.0)
   rails-controller-testing
   rake
-  rspec-rails
+  rspec-rails (~> 3.5)
   sass-rails
   scrivito
   scrivito_section_widgets
   scrivito_teaser_widget
   secure_headers
+  selenium-webdriver
   simple_grid_rails
   spring
   sqlite3
