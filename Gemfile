@@ -23,6 +23,9 @@ gem 'secure_headers'
 # Rendering legal documents
 gem 'kramdown'
 
+# TODO: Delete this if the following issue is fixed
+# https://github.com/bundler/bundler/issues/5332
+gem 'faraday_middleware', '0.10'
 
 group :development do
   gem 'web-console'

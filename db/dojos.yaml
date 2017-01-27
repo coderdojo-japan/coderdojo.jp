@@ -85,7 +85,7 @@
   - HackforPlay
 - name: 前橋 (関東)
   image_url: /img/dojos/coderdojo-maebashi.png
-  url: https://sites.google.com/a/coderdojo.com/maebashi-jp/
+  url: https://vtmacs003b.github.io/maebashi.jp/
   description: 群馬県前橋市で毎月開催
   order: -30
   tags:
@@ -281,6 +281,13 @@
   tags:
   - Scratch
   - Java
+- name: 新羽 (関東)
+  image_url: /img/dojos/coderdojo-nippa.png
+  url: https://www.facebook.com/CoderDojoNippa/
+  description: 横浜市港北区の新羽町で開催予定
+  order: 33
+  tags:
+  - Scratch
 - name: 藤沢 (関東)
   image_url: /img/dojos/coderdojo-fujisawa.png
   url: https://e9190f805e8f6cb2d391ddd702.doorkeeper.jp/events/55358
