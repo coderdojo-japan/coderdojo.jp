@@ -215,6 +215,13 @@
   - HTML
   - Ruby
   - ラズベリーパイ
+- name: 西新宿 (関東)
+  image_url: https://connpass-tokyo.s3.amazonaws.com/thumbs/e8/da/e8da77df68c22559fe6febc516ae1268.png
+  url: https://coderdojo-nishishinjuku.connpass.com/
+  description: 東京都新宿区で毎月開催予定
+  order: 5
+  tags:
+  - Scratch
 - name: 渋谷 (関東)
   image_url: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/groups/coderdojo.shibuya/
