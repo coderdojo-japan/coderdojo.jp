@@ -295,6 +295,13 @@
   order: 33
   tags:
   - Scratch
+- name: 横浜 (関東)
+  image_url: /img/dojos/coderdojo_japan.png
+  url: https://coderdojo-yokohama.connpass.com/
+  description: 神奈川県横浜市で毎月開催予定
+  order: 34
+  tags:
+  - Scratch
 - name: 藤沢 (関東)
   image_url: /img/dojos/coderdojo-fujisawa.png
   url: https://e9190f805e8f6cb2d391ddd702.doorkeeper.jp/events/55358
