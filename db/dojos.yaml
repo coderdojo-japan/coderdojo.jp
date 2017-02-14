@@ -70,11 +70,13 @@
   - Arduino
 - name: 新潟 (中部)
   image_url: /img/dojos/coderdojo_japan.png
-  url: http://zen.coderdojo.com/dojo/jp/niigata-niigata-prefecture/niigata
-  description: 新潟県新潟市で開催予定
+  url: http://coderdojo.niigata.jp/
+  description: 新潟県新潟市で毎月3回開催
   order: -50
   tags:
   - Scratch
+  - Minecraft
+  - Arduino
 - name: 金沢 (中部)
   image_url: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/coderdojo.kanazawa/
