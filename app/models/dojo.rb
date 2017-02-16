@@ -14,6 +14,15 @@ class Dojo < ApplicationRecord
   validates :description, presence: true, length: { maximum: 50 }
   validates :logo,        presence: false
   validates :tags,        presence: true
+  validate  :number_of_tags
   validates :url,         presence: true
 
+  private
+
+  def number_of_tags
+    num_of_tags = self.tags.length
+    if num_of_tags > 5
+      errors.add(:number_of_tags, 'should be 1 to 5')
+    end
+  end
 end
