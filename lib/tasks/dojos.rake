@@ -33,7 +33,7 @@ namespace :dojos do
       d.email       = ''
       d.order       = dojo['order']
       d.description = dojo['description']
-      d.logo        = dojo['image_url']
+      d.logo        = dojo['logo']
       d.tags        = dojo['tags']
       d.url         = dojo['url']
       d.created_at  = dojo['createdAt'] ? Time.zone.parse(dojo['createdAt']) : Time.zone.now
