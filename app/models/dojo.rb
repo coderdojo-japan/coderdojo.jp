@@ -17,6 +17,13 @@ class Dojo < ApplicationRecord
   validate  :number_of_tags
   validates :url,         presence: true
 
+  def self.valid_yaml_format?(path_to_file)
+    !!YAML.load_file(path_to_file)
+  rescue Exception => e
+    #STDERR.puts e.message
+    return false
+  end
+
   private
 
   def number_of_tags
