@@ -1,6 +1,5 @@
 ---
 - name: 旭川 (北海道)
-  source: '416298905086341'
   url: http://coderdojo-asahikawa.github.io/
   image_url: https://graph.facebook.com/416298905086341/picture?type=large
   description: 北海道旭川市で不定期開催
@@ -9,7 +8,6 @@
   - Scratch
   - ラズベリーパイ
 - name: 札幌 (北海道)
-  source: 
   url: http://www.coderdojo-sapporo.jp/
   image_url: https://i1.wp.com/coderdojo-sapporo.jp/wp/wp-content/uploads/2017/01/CoderDojoSapporo_badge_001.jpg
   description: 北海道札幌市で月２回開催
@@ -20,7 +18,6 @@
   - ラズベリーパイ
   - 電子工作
 - name: 札幌@東部 (北海道)
-  source: '349502068723800'
   url: https://www.facebook.com/coderdojo.sapporo/
   image_url: /img/dojos/coderdojo_japan.png
   description: 北海道札幌市で不定期開催
@@ -32,7 +29,6 @@
   - Webサイト
   - Unity
 - name: 仙台 (東北)
-  source: '546571472044333'
   url: https://www.facebook.com/CoderdojoSendai
   image_url: /img/dojos/coderdojo_sendai.jpg
   description: 仙台市青葉区で毎月開催
@@ -42,7 +38,6 @@
   - ゲーム
   - アプリ
 - name: 泉 (東北)
-  source: '542546935853207'
   url: https://www.facebook.com/CoderdojoIzumi
   image_url: https://graph.facebook.com/542546935853207/picture?type=large
   description: 仙台市泉区で不定期開催
@@ -110,7 +105,6 @@
   - IoT
   - 電子工作
 - name: さいたま (関東)
-  source: '513118842140860'
   url: http://coderdojo-saitama.com/
   image_url: https://graph.facebook.com/513118842140860/picture?type=large
   description: 埼玉県さいたま市で毎月開催
@@ -120,7 +114,6 @@
   - Webサイト
   - アプリ
 - name: ひばりヶ丘 (関東)
-  source: '497400593610071'
   url: http://coderdojo.hanare-hibari.info/
   image_url: https://graph.facebook.com/497400593610071/picture?type=large
   description: 埼玉県新座市で月2回開催
@@ -129,7 +122,6 @@
   - Scratch
   - ラズベリーパイ
 - name: 飯能 (関東)
-  source: '1570008999931017'
   url: https://www.facebook.com/CoderDojoHanno
   image_url: https://graph.facebook.com/1570008999931017/picture?type=large
   description: 埼玉県飯能市で毎月開催
@@ -137,7 +129,6 @@
   tags:
   - Scratch
 - name: 所沢 (関東)
-  source: '617011185103868'
   url: https://www.facebook.com/CoderDojoTokorozawa/
   image_url: /img/dojos/coderdojo-tokorozawa.png
   description: 埼玉県所沢市で不定期に開催
@@ -145,7 +136,6 @@
   tags:
   - Scratch
 - name: 小平 (関東)
-  source: '616010815134433'
   url: http://coderdojo-kodaira.github.io/
   image_url: https://graph.facebook.com/616010815134433/picture?type=large
   description: 東京都小平市で隔週開催
@@ -155,7 +145,6 @@
   - Minecraft
   - 情報工学基礎
 - name: 八王子 (関東)
-  source: '333796043464105'
   url: http://coderdojo.code4hachioji.org/
   image_url: /img/dojos/coderdojo_hachioji.jpg
   description: 東京都八王子市で毎月開催
@@ -195,7 +184,6 @@
   - JavaScript
   - Processing
 - name: 下北沢 (関東)
-  source: '346407898743580'
   url: http://tokyo.coderdojo.jp/
   image_url: https://graph.facebook.com/346407898743580/picture?type=large
   description: 東京都世田谷区で毎週開催
@@ -266,7 +254,6 @@
   - Webサイト
   - PHP
 - name: 柏 (関東)
-  source: '472842399443384'
   url: http://www.coderdojo-kashiwa.com/
   image_url: https://graph.facebook.com/472842399443384/picture?type=large
   description: 千葉県柏市で毎月3回開催
@@ -312,7 +299,6 @@
   - Viscuit
   - Webサイト
 - name: 塩尻 (中部)
-  source: '128374717310867'
   url: http://coderdojo.shiojiri-osslabo.com/
   image_url: https://graph.facebook.com/128374717310867/picture?type=large
   description: 長野県塩尻市で毎月開催
@@ -321,7 +307,6 @@
   - Scratch
   - Ruby
 - name: 福井 (中部)
-  source: '389420301140591'
   url: http://coderdojo.cowbell.jp/
   image_url: /img/dojos/coderdojo.png
   description: 福井県福井市で不定期開催
@@ -382,7 +367,6 @@
   - LEGO
   - LabVIEW
 - name: 長岡京 (近畿)
-  source: '1559696050934193'
   url: https://coderdojo-nagaokakyo.doorkeeper.jp/
   image_url: https://dzpp79ucibp5a.cloudfront.net/groups_logos/4052_normal_1421068102_coderdojo-nagaokakyo_logo.png
   description: 京都府長岡京市で毎月開催
@@ -390,7 +374,6 @@
   tags:
   - Scratch
 - name: 奈良 (近畿)
-  source: '753930831309387'
   url: http://coderdojo-nara-ikoma.github.io/
   image_url: https://raw.githubusercontent.com/coderdojo-nara-ikoma/document/master/icon/NARA_black.png
   description: 奈良県奈良市で毎月開催
@@ -416,7 +399,6 @@
   tags:
   - Scratch
 - name: 熊野 (近畿)
-  source: '254235038032617'
   url: https://www.facebook.com/coderdojo.kumano
   image_url: https://graph.facebook.com/254235038032617/picture?type=large
   description: 和歌山県新宮市で不定期開催
@@ -461,7 +443,6 @@
   - Webサイト
   - Android
 - name: 西宮・梅田 (近畿)
-  source: '1393015987582276'
   url: http://coderdojo-nishinomiya.info/
   image_url: https://graph.facebook.com/1393015987582276/picture?type=large
   description: 西宮/梅田でそれぞれ毎月開催
