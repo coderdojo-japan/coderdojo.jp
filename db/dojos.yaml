@@ -325,10 +325,10 @@
   - Scratch
   - Webサイト
   - Ruby
-- name: 尾張 (中部)
-  logo: https://coderdojoowari.org/application/files/3414/8755/7931/CoderDojoOwari_Icon.svg
-  url: https://coderdojoowari.org/
-  description: 愛知県岩倉市で毎月開催
+- name: 名古屋 (中部)
+  logo: /img/dojos/coderdojo_japan.png
+  url: http://coderdojonagoya.hatenablog.com/
+  description: 名古屋市中区で毎月開催
   order: 43
   tags:
   - Scratch
@@ -341,10 +341,10 @@
   - Scratch
   - Webサイト
   - 電子工作
-- name: 名古屋 (中部)
-  logo: /img/dojos/coderdojo_japan.png
-  url: http://coderdojonagoya.hatenablog.com/
-  description: 名古屋市中区で毎月開催
+- name: 尾張 (中部)
+  logo: https://coderdojoowari.org/application/files/3414/8755/7931/CoderDojoOwari_Icon.svg
+  url: https://coderdojoowari.org/
+  description: 愛知県岩倉市で毎月開催
   order: 45
   tags:
   - Scratch
