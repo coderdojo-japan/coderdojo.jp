@@ -343,13 +343,11 @@
   - 電子工作
 - name: 名古屋 (中部)
   logo: /img/dojos/coderdojo_japan.png
-  url: http://coderdojo-nagoya.github.io/
+  url: http://coderdojonagoya.hatenablog.com/
   description: 名古屋市中区で毎月開催
   order: 45
   tags:
   - Scratch
-  - Webサイト
-  - Python
 - name: 大治 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo-oharu.connpass.com/
