@@ -320,20 +320,27 @@
   logo: https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png
   url: http://www.coderdojo-hamamatsu.org/
   description: 静岡県浜松市で毎月開催
-  order: 43
+  order: 42
   tags:
   - Scratch
   - Webサイト
   - Ruby
-- name: 豊橋 (中部)
-  logo: /img/dojos/coderdojo-toyohashi.png
-  url: https://www.facebook.com/coderdojo.toyohashi/
-  description: 愛知県豊橋市で不定期開催
+- name: 尾張 (中部)
+  logo: https://coderdojoowari.org/application/files/3414/8755/7931/CoderDojoOwari_Icon.svg
+  url: https://coderdojoowari.org/
+  description: 愛知県岩倉市で毎月開催
+  order: 43
+  tags:
+  - Scratch
+- name: 天白 (中部)
+  logo: /img/dojos/coderdojo-tempaku.png
+  url: http://coderdojo-tempaku.hatenablog.com/
+  description: 名古屋市天白区で月2回開催
   order: 44
   tags:
   - Scratch
-  - アプリ開発
-  - ラズベリーパイ
+  - Webサイト
+  - 電子工作
 - name: 名古屋 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo-nagoya.github.io/
@@ -343,22 +350,22 @@
   - Scratch
   - Webサイト
   - Python
-- name: 天白 (中部)
-  logo: /img/dojos/coderdojo-tempaku.png
-  url: http://coderdojo-tempaku.hatenablog.com/
-  description: 名古屋市天白区で月2回開催
-  order: 46
-  tags:
-  - Scratch
-  - Webサイト
-  - 電子工作
 - name: 大治 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo-oharu.connpass.com/
   description: 愛知県海部郡で毎月開催
+  order: 46
+  tags:
+  - Scratch
+- name: 豊橋 (中部)
+  logo: /img/dojos/coderdojo-toyohashi.png
+  url: https://www.facebook.com/coderdojo.toyohashi/
+  description: 愛知県豊橋市で不定期開催
   order: 47
   tags:
   - Scratch
+  - アプリ開発
+  - ラズベリーパイ
 - name: 伊勢 (近畿)
   logo: https://image.jimcdn.com/app/cms/image/transf/dimension=90x1024:format=png/path/s5113e30c46a816ab/image/ib497ad222f9ebf4c/version/1486863386/image.png
   url: https://coderdojo-ise.jimdo.com/
