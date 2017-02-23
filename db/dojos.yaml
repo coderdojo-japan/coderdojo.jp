@@ -279,8 +279,8 @@
   - Java
 - name: 新羽 (関東)
   logo: /img/dojos/coderdojo-nippa.png
-  url: https://www.facebook.com/CoderDojoNippa/
-  description: 横浜市港北区の新羽町で開催予定
+  url: https://coderdojo-nippa.connpass.com/
+  description: 横浜市港北区の新羽町で不定期開催
   order: 33
   tags:
   - Scratch
