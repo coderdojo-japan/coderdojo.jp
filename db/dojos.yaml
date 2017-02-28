@@ -90,6 +90,13 @@
   - Minecraft
   - ラズベリーパイ
   - ゲーム
+- name: ひたちなか (関東)
+  logo: /img/dojos/coderdojo-hitachinaka.png
+  url: https://www.facebook.com/coderdojo.hitachinaka/
+  description: 茨城県ひたちなか市で毎月開催
+  order: -26
+  tags:
+  - Scratch
 - name: 水戸 (関東)
   logo: /img/dojos/coderdojo-mito.png
   url: http://coderdojo-mito.com/
