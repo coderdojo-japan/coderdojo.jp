@@ -18,6 +18,14 @@ div #README{
   margin-top: -75px;
 }
 
+img{
+  width:100%;
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+
 .fontsize-bigger{
   font-size: 120%;
 }
