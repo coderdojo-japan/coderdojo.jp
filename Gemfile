@@ -38,6 +38,7 @@ group :development, :test do
   gem 'rake'
   gem 'travis'
   gem 'minitest-retry'
+  gem 'rspec-retry'
 
   gem 'selenium-webdriver'
   gem 'capybara'
