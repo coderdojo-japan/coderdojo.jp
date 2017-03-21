@@ -44,6 +44,7 @@
   content: none;
 }
 .keiyaku > ul {
+  list-style: none;        
   padding: 0 0 0 2.5em;
 }
 .keiyaku > ol {
@@ -83,4 +84,7 @@
   border: 1px solid black;
   padding: .5em 1.5em;
   margin: 1em 0 1.5em;
+}
+.keiyaku > ol > li > ul {
+  list-style: none;
 }
