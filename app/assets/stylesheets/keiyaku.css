@@ -23,6 +23,7 @@
   counter-increment: keiyaku-paragraph;
   text-indent: 1em;
   padding-left: 1em;
+  line-height: 1.7em;
 }
 .keiyaku > h1 + p,
 .keiyaku > h2 + p,
