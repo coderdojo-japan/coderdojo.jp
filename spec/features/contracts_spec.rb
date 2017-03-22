@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.feature "Contracts", type: :feature do
-  describe "GET /contracts" do
+  describe "GET /mou" do
     scenario "Contract index should be exist" do
-      visit "/contracts"
+      visit "/mou"
       expect(page).to have_http_status(:success)
       expect(page).to have_css 'section.keiyaku a[href]', count:Contract.all.count
     end
     scenario "Teikan should be exist" do
-      visit "/contracts/teikan"
+      visit "/mou/charter"
       expect(page).to have_http_status(:success)
     end
   end
