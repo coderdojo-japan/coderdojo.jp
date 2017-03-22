@@ -1,4 +1,4 @@
-# CoderDojo 憲章 ([原文](http://kata.coderdojo.com/wiki/CoderDojo_Charter_of_Ethics))
+# CoderDojo 憲章<br/>([原文](/mou/charter_en))
 <br/>
 
 すべての道場は、次の CoderDojo Charter (憲章) に同意する必要があります。この憲章には、すべての道場の基礎となる CoderDojo の基本的な理念と最重要事項が含まれています。この憲章は、共同設立者であるジェームズ・ウェルトンによって、CoderDojoグループ全体へ2013年12月3日に公表されました。
