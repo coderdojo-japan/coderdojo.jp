@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
-  resources :contracts, only: [:index, :show]
+  resources :contracts, only: [:index, :show], path: '/mou'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
