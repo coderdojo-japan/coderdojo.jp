@@ -6,7 +6,10 @@ class ContractsController < ApplicationController
   def show
     filename = params[:id]
     contract = Contract.new(filename)
-    raise unless contract.exists?
-    @content = Kramdown::Document.new(contract.content, input: 'GFM').to_html
+    if contract.exists?
+      @content = Kramdown::Document.new(contract.content, input: 'GFM').to_html
+    else
+      redirect_to scrivito_path(Obj.root)
+    end
   end
 end
