@@ -1,0 +1,10 @@
+<h2>CoderDojo Japan ドキュメント集め</h2>
+<section class='keiyaku'>
+  <ul>
+    <% @docs.each do |doc| %>
+      <li><%= link_to doc, doc_path(doc) %></li>
+    <% end %>
+  </ul>
+</section>
+
+<%= render 'shared/footer_page' %>

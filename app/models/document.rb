@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
-class Contract
+class Document
   attr_reader :id, :version
+  DOCS_PATH = 'db/docs'
 
   class << self
     def all
-      Dir.glob('db/contracts/*.md').map do |filename|
+      Dir.glob("#{DOCS_PATH}/*.md").map do |filename|
         File.basename(filename, '.*')
       end
     end
@@ -19,7 +19,7 @@ class Contract
   # バージョンとidは外部からの入力を受け付けているので、攻撃者によって、
   # ファイルシステム上のファイル名が`.md`で終わる任意のファイルの内容を表示されてしまう
   def path
-    "db/contracts/#{@filename}.md"
+    "#{DOCS_PATH}/#{@filename}.md"
   end
 
   def exists?
