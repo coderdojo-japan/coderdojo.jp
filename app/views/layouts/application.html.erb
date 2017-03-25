@@ -36,9 +36,17 @@
     <meta property="og:description" content="<%= meta_description(yield(:meta_description)) %>" />
   <% end %>
 
+  <meta property="og:type"       content="website">
   <meta property="og:image"      content="https://coderdojo.jp/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:site_name"  content="CoderDojo Japan">
+
+  <meta name="twitter:card"  content="summary" />
+  <meta name="twitter:site"  content="@CoderDojoJapan" />
+  <meta name="twitter:title" content="CoderDojo Japan - 子どものためのプログラミング道場" />
+  <meta name="twitter:description" content="<%= meta_description(yield(:meta_description)) %>" />
+  <meta name="twitter:image" content="https://coderdojo.jp/og-image.png" />
+  <meta name="twitter:url"   content="https://coderdojo.jp/" />
 
   <link rel="apple-touch-icon" sizes="57x57"   href="/img/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60"   href="/img/apple-icon-60x60.png">
