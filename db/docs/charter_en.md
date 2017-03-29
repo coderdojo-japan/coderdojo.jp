@@ -24,7 +24,7 @@ All Dojos are independent, autonomous, community groups set up to inspire young 
 - - We commit to encouraging collaboration, peer to peer mentoring and project work between the attendees
 - - We commit to welcoming volunteers and children regardless of gender, race, sexual orientation, creed, religion or ability.
 
-CoderDojo FOundation (CDF) commitments to you:
+CoderDojo Foundation (CDF) commitments to you:
 
 - - CDF commits to act in the interest of the global CoderDojo community
 - - CDF commits to facilitating the community to share its knowledge
