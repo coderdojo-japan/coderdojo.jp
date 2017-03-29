@@ -15,7 +15,6 @@ For the purposes of this Charter, "CoderDojo" shall mean the open source, volunt
 All Dojos are independent, autonomous, community groups set up to inspire young people to learn code. All Dojos have different styles of operating but they all hold the same ethos.
 
 - - We commit to inspiring and supporting young people to learn how to create technology
-- - We commit to inspiring and supporting young people to learn how to create technology
 - - We commit to the highest possible standards of child protection in our jurisdiction
 - - We commit to not charging children attending nor their parents
 - - We commit to encourage parent participation within our Dojo
