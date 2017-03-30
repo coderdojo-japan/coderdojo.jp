@@ -63,6 +63,17 @@
   - Webサイト
   - Minecraft
   - Arduino
+- name: 山形 (東北)
+  logo: /img/dojos/coderdojo-yamagata.png
+  url: https://zen.coderdojo.com/dojo/jp/ri4-ben3-shan1-xing2-xian4-shan1-xing2-shi4/yamagata
+  description: 山形県山形市で毎月開催
+  order: -58
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - センサー
+  - ロボット
+  - AI
 - name: 新潟 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo.niigata.jp/
