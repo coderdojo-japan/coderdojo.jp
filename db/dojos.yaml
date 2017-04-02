@@ -28,6 +28,17 @@
   - ゲーム
   - Webサイト
   - Unity
+- name: 秋田 (東北)
+  url: http://coderdojo.akita.red/
+  logo: /img/dojos/coderdojo_japan.png
+  description: 秋田県秋田市で毎月1~2回開催
+  order: -85
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
+  - Swift
+  - Android
 - name: 仙台 (東北)
   url: https://www.facebook.com/CoderdojoSendai
   logo: /img/dojos/coderdojo_sendai.jpg
