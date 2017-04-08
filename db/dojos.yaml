@@ -310,21 +310,28 @@
   logo: /img/dojos/coderdojo-nippa.png
   url: https://coderdojo-nippa.connpass.com/
   description: 横浜市港北区の新羽町で不定期開催
-  order: 33
+  order: 32
+  tags:
+  - Scratch
+- name: 長津田 (関東)
+  logo: /img/dojos/coderdojo-nagatsuta.png
+  url: https://coderdojo-nagatsuta.connpass.com/ 
+  description: 横浜市緑区で毎月開催
+  order: 34
   tags:
   - Scratch
 - name: 横浜 (関東)
   logo: /img/dojos/coderdojo_japan.png
   url: https://coderdojo-yokohama.connpass.com/
   description: 神奈川県横浜市で毎月開催予定
-  order: 34
+  order: 36
   tags:
   - Scratch
 - name: 藤沢 (関東)
   logo: /img/dojos/coderdojo-fujisawa.png
   url: http://coderdojofujisawa.hatenablog.com/
   description: 神奈川県藤沢市で不定期開催
-  order: 35
+  order: 38
   tags:
   - Scratch
   - Viscuit
