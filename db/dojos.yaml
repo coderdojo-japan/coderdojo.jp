@@ -159,6 +159,13 @@
   order: -11
   tags:
   - Scratch
+- name: 小手指 (関東)
+  url: https://coderdojokotesashi.github.io/
+  logo: https://coderdojokotesashi.github.io/images/coderdojo_kote_logo.png
+  description: 埼玉県所沢市小手指にて毎月開催
+  order: -10
+  tags:
+  - Scratch
 - name: 所沢 (関東)
   url: https://www.facebook.com/CoderDojoTokorozawa/
   logo: /img/dojos/coderdojo-tokorozawa.png
