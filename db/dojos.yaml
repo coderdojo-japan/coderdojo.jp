@@ -85,6 +85,17 @@
   - センサー
   - ロボット
   - AI
+- name: 会津 (東北)
+  logo: https://cart-imgs.fc2.com/upfile/matsubaranouen/CoderDojoAizuLogo250x250.png
+  url: http://cdaizuentry.peatix.com/
+  description: 会津若松市内で毎月第３土曜に開催
+  order: -55
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - Python、
+  - Java、
+  - Webサイト
 - name: 新潟 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo.niigata.jp/
