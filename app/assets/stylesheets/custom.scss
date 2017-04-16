@@ -2,7 +2,14 @@
 @import "bootstrap";
 
 // Customized by YassLab
-  
+
+.cursor-default{
+  cursor: default !important;
+}
+.cursor-pointer{
+  cursor: pointer !important;
+}
+
 .headline{
   color: white;
   background: #2275CA;
@@ -21,7 +28,7 @@ div #README{
 img{
   width:100%;
   &:hover {
-    cursor: pointer !important;
+    cursor: default;
   }
 }
 

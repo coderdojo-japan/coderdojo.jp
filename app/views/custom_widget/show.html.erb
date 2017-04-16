@@ -5,7 +5,7 @@
   <br />
 </div>
 <section class="cover">
-  <%= image_tag "coderdojo-japan_cover.jpg"%>
+  <%= image_tag "coderdojo-japan_cover.jpg", class: "cursor-default" %>
 </section>
 
 <section class="introduction text-center list">
@@ -108,7 +108,7 @@
     <p>本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。</p>
     <p>「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には <a href="/kata">CoderDojo Kata</a> を参照してみてください。</p>
     <%= link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata',
-		      style: 'margin-bottom: 15px;'), '/kata'%>
+		      class: 'cursor-pointer', style: 'margin-bottom: 15px;'), '/kata'%>
   </section>
 </div>
 
