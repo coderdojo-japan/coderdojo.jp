@@ -602,6 +602,16 @@
   - Scratch
   - ラズベリーパイ
   - Webサイト
+- name: 岡山 岡南 (近畿)
+  logo: /img/dojos/coderdojo-okayama.png
+  url: http://coderdojo-konan.media-interesting.info/
+  description: 岡山県岡山市南区で毎月開催
+  order: 77
+  tags:
+  - Scratch
+  - ゲーム開発
+  - Unity
+  - Android
 - name: 福山 (中国)
   logo: https://fukuyama100.com/coderdojo/images/logo_fukuyama.png
   url: http://fukuyama100.com/coderdojo/
