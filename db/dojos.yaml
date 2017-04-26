@@ -283,6 +283,13 @@
   - Webサイト
   - Python
   - WordPress
+- name: 市川真間 (関東)
+  logo: /img/dojos/coderdojo_ichikawa-mama.jpg
+  url: http://beyondbb.jp/CDmama/index.html
+  description: 千葉県JR市川駅近辺で毎月2回開催
+  order: 13
+  tags:
+  - Scratch
 - name: 浦安 (関東)
   logo: /img/dojos/coderdojo-urayasu.png
   url: http://urayasu.coderdojo.chiba.jp/
