@@ -340,11 +340,13 @@
   - Scratch
 - name: 長津田 (関東)
   logo: /img/dojos/coderdojo-nagatsuta.png
-  url: https://coderdojo-nagatsuta.connpass.com/ 
+  url: https://coderdojo-nagatsuta.connpass.com/
   description: 横浜市緑区で毎月開催
   order: 34
   tags:
   - Scratch
+  - Minecraft
+  - Hour of Code
 - name: 横浜 (関東)
   logo: /img/dojos/coderdojo_japan.png
   url: https://coderdojo-yokohama.connpass.com/
