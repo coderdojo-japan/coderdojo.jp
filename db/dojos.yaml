@@ -618,9 +618,10 @@
   order: 77
   tags:
   - Scratch
-  - ゲーム開発
-  - Unity
-  - Android
+  - ゲーム開発(Unity)
+  - C#
+  - Androidアプリ開発
+  - JavaScript
 - name: 福山 (中国)
   logo: https://fukuyama100.com/coderdojo/images/logo_fukuyama.png
   url: http://fukuyama100.com/coderdojo/
