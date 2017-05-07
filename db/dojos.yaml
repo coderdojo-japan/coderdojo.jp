@@ -331,6 +331,15 @@
   tags:
   - Scratch
   - Java
+- name: 木更津 (関東)
+  logo: /img/dojos/coderdojo-kisarazu.png
+  url: https://coderdojo-kisarazu.github.io/
+  description: 千葉県木更津市で毎月開催
+  order: 27
+  tags:
+  - Scratch
+  - Webサイト
+  - Java
 - name: 新羽 (関東)
   logo: /img/dojos/coderdojo-nippa.png
   url: https://coderdojo-nippa.connpass.com/
