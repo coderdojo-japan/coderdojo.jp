@@ -559,8 +559,8 @@
   - Scratch
   - ラズベリーパイ
 - name: 堺 (近畿)
-  logo: /img/dojos/coderdojo_japan.png
-  url: https://coderdojo-sakai.doorkeeper.jp/
+  logo: /img/dojos/coderdojo-sakai.png
+  url: https://coderdojo-sakai.github.io/
   description: 大阪府堺市で毎月開催
   order: 65
   tags:
