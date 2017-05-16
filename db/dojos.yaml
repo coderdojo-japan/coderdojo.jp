@@ -376,7 +376,7 @@
   url: http://coderdojo.shiojiri-osslabo.com/
   logo: https://graph.facebook.com/128374717310867/picture?type=large
   description: 長野県塩尻市で毎月開催
-  order: 40
+  order: 39
   tags:
   - Scratch
   - Ruby
@@ -384,7 +384,7 @@
   url: http://coderdojo.cowbell.jp/
   logo: /img/dojos/coderdojo.png
   description: 福井県福井市で不定期開催
-  order: 41
+  order: 40
   tags:
   - Scratch
   - Webサイト
@@ -392,7 +392,7 @@
   logo: https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png
   url: http://www.coderdojo-hamamatsu.org/
   description: 静岡県浜松市で毎月開催
-  order: 42
+  order: 41
   tags:
   - Scratch
   - Webサイト
@@ -401,14 +401,14 @@
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojonagoya.hatenablog.com/
   description: 名古屋市中区で毎月開催
-  order: 43
+  order: 42
   tags:
   - Scratch
 - name: 天白 (中部)
   logo: /img/dojos/coderdojo-tempaku.png
   url: http://coderdojo-tempaku.hatenablog.com/
   description: 名古屋市天白区で月2回開催
-  order: 44
+  order: 43
   tags:
   - Scratch
   - Webサイト
@@ -417,16 +417,25 @@
   logo: https://coderdojoowari.org/application/files/3414/8755/7931/CoderDojoOwari_Icon.svg
   url: https://coderdojoowari.org/
   description: 愛知県岩倉市で毎月開催
-  order: 45
+  order: 44
   tags:
   - Scratch
 - name: 大治 (中部)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo-oharu.connpass.com/
   description: 愛知県海部郡で毎月開催
+  order: 45
+  tags:
+  - Scratch
+- name: 新城 (中部)
+  logo: /img/dojos/coderdojo_japan.png
+  url: https://www.facebook.com/CoderDojo-Shinshiro-842752475889001/
+  description: 愛知県新城市で毎月開催
   order: 46
   tags:
   - Scratch
+  - Webサイト
+  - ラズベリーパイ
 - name: 豊橋 (中部)
   logo: /img/dojos/coderdojo-toyohashi.png
   url: https://www.facebook.com/coderdojo.toyohashi/
