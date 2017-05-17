@@ -39,6 +39,13 @@
   - PHP
   - Swift
   - Android
+- name: 泉 (東北)
+  url: https://www.facebook.com/CoderdojoIzumi
+  logo: https://graph.facebook.com/542546935853207/picture?type=large
+  description: 仙台市泉区で不定期開催
+  order: -82
+  tags:
+  - Scratch
 - name: 仙台 (東北)
   url: https://www.facebook.com/CoderdojoSendai
   logo: /img/dojos/coderdojo_sendai.jpg
@@ -48,13 +55,15 @@
   - Scratch
   - ゲーム
   - アプリ
-- name: 泉 (東北)
-  url: https://www.facebook.com/CoderdojoIzumi
-  logo: https://graph.facebook.com/542546935853207/picture?type=large
-  description: 仙台市泉区で不定期開催
-  order: -75
+- name: 名取 (東北)
+  url: https://www.facebook.com/CoderDojo-Natori-1379707208756830
+  logo: /img/dojos/coderdojo-natori.png
+  description: 宮城県名取市で毎月第4土曜日に開催
+  order: -78
   tags:
   - Scratch
+  - Webサイト
+  - ゲーム
 - name: 登米 (東北)
   logo: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/coderdojo.tome
