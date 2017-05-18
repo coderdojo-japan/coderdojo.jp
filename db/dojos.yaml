@@ -341,7 +341,6 @@
   order: 100
   tags:
   - Scratch
-  - Java
 - name: 木更津 (関東)
   logo: /img/dojos/coderdojo-kisarazu.png
   url: https://coderdojo-kisarazu.github.io/
