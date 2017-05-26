@@ -17,6 +17,9 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'font-awesome-rails'
 
+# For redirection
+gem 'rack-host-redirect'
+
 # For SSL and CORS
 gem 'secure_headers'
 

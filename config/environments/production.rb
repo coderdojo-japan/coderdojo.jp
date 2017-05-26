@@ -83,4 +83,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Redirect by using rack-host-redirect gem
+  config.middleware.use Rack::HostRedirect, {
+    %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
+  }
 end
