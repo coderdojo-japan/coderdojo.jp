@@ -1,5 +1,5 @@
 class Dojo < ApplicationRecord
-  NUM_OF_COUNTRIES   = "70"
+  NUM_OF_COUNTRIES   = "69"
   NUM_OF_WHOLE_DOJOS = "1,200"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
