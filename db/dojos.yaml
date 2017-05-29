@@ -523,9 +523,9 @@
   tags:
   - Scratch
 - name: 枚方 (近畿)
-  logo: /img/dojos/coderdojo_japan.png
-  url: http://coderdojo-hirakata.github.io
-  description: 大阪府枚方市で隔月開催
+  logo: /img/dojos/coderdojo-hirakata.png
+  url: http://coderdojo-hirakata.org
+  description: 大阪府枚方市で毎月開催
   order: 290
   tags:
   - Scratch
