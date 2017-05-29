@@ -341,6 +341,13 @@
   order: 100
   tags:
   - Scratch
+- name: 船橋＠凛童舎 (関東)
+  logo: https://github.com/coderdojofunabashi/coderdojofunabashi.github.io/blob/master/image/coderdojo_radder.jpg?raw=true
+  url: https://www.facebook.com/coderdojofunabashi/
+  description: 千葉県船橋市で毎月開催
+  order: 105
+  tags:
+  - Scratch
 - name: 木更津 (関東)
   logo: /img/dojos/coderdojo-kisarazu.png
   url: https://coderdojo-kisarazu.github.io/
