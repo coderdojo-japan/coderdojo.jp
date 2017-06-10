@@ -389,6 +389,16 @@
   - Scratch
   - Viscuit
   - Webサイト
+- name: 安曇野 (中部)
+  url: https://www.facebook.com/CoderDojoAzumino/
+  logo: /img/dojos/coderdojo-azumino.png
+  description: 長野県安曇野市で毎月開催
+  order: 158
+  tags:
+  - Scratch
+  - LEGO WeDo
+  - ラズベリーパイ
+  - Arduino
 - name: 塩尻 (中部)
   url: http://coderdojo.shiojiri-osslabo.com/
   logo: https://graph.facebook.com/128374717310867/picture?type=large
