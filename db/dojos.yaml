@@ -389,6 +389,13 @@
   - Scratch
   - Viscuit
   - Webサイト
+- name: 甲府 (中部)
+  url: https://www.facebook.com/coderdojo.kofu/
+  logo: /img/dojos/coderdojo-kofu.png
+  description: 山梨県甲府市で毎月開催
+  order: 155
+  tags:
+  - Scratch
 - name: 安曇野 (中部)
   url: https://www.facebook.com/CoderDojoAzumino/
   logo: /img/dojos/coderdojo-azumino.png
