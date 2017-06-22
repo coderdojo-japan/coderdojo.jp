@@ -264,7 +264,7 @@
 - name: 西新宿 (関東)
   logo: https://connpass-tokyo.s3.amazonaws.com/thumbs/e8/da/e8da77df68c22559fe6febc516ae1268.png
   url: https://coderdojo-nishishinjuku.connpass.com/
-  description: 東京都新宿区で毎月開催予定
+  description: 東京都新宿区で毎月開催
   order: 15
   tags:
   - Scratch
@@ -376,7 +376,7 @@
 - name: 横浜 (関東)
   logo: /img/dojos/coderdojo_japan.png
   url: https://coderdojo-yokohama.connpass.com/
-  description: 神奈川県横浜市で毎月開催予定
+  description: 神奈川県横浜市で毎月開催
   order: 140
   tags:
   - Scratch
