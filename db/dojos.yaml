@@ -126,12 +126,23 @@
   logo: /img/dojos/coderdojo-maebashi.png
   url: https://vtmacs003b.github.io/maebashi.jp/
   description: 群馬県前橋市で毎月開催
-  order: -120
+  order: -130
   tags:
   - Scratch
   - Minecraft
   - ラズベリーパイ
   - ゲーム
+- name: さくら (関東)
+  logo: https://coderdojo-sakura.github.io/img/logo.png
+  url: https://coderdojo-sakura.github.io/
+  description: 栃木県さくら市で毎月開催
+  order: -120
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - Java
+  - PHP
+  - CSS
 - name: ひたちなか (関東)
   logo: /img/dojos/coderdojo-hitachinaka.png
   url: https://www.facebook.com/coderdojo.hitachinaka/
