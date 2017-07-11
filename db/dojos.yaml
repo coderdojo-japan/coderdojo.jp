@@ -55,6 +55,15 @@
   - Scratch
   - ゲーム
   - アプリ
+- name: 愛子 (東北)
+  url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
+  logo: /img/dojos/coderdojo_japan.png
+  description: 仙台市青葉区愛子で不定期開催	
+  order: -213
+  tags:
+  - Scratch
+  - Webサイト
+  - ゲーム
 - name: 名取 (東北)
   url: https://www.facebook.com/CoderDojo-Natori-1379707208756830
   logo: /img/dojos/coderdojo-natori.png
