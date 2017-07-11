@@ -1,12 +1,4 @@
 ---
-- name: 旭川 (北海道)
-  url: http://coderdojo-asahikawa.github.io/
-  logo: https://graph.facebook.com/416298905086341/picture?type=large
-  description: 北海道旭川市で不定期開催
-  order: -300
-  tags:
-  - Scratch
-  - ラズベリーパイ
 - name: 札幌 (北海道)
   url: http://www.coderdojo-sapporo.jp/
   logo: https://i1.wp.com/coderdojo-sapporo.jp/wp/wp-content/uploads/2017/01/CoderDojoSapporo_badge_001.jpg
