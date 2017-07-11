@@ -42,14 +42,14 @@
 - name: 泉 (東北)
   url: https://www.facebook.com/CoderdojoIzumi
   logo: https://graph.facebook.com/542546935853207/picture?type=large
-  description: 仙台市泉区で不定期開催
+  description: 宮城県仙台市泉区で不定期開催
   order: -220
   tags:
   - Scratch
 - name: 仙台 (東北)
   url: https://www.facebook.com/CoderdojoSendai
   logo: /img/dojos/coderdojo_sendai.jpg
-  description: 仙台市青葉区で毎月開催
+  description: 宮城県仙台市青葉区で毎月開催
   order: -215
   tags:
   - Scratch
@@ -58,7 +58,7 @@
 - name: 愛子 (東北)
   url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
   logo: /img/dojos/coderdojo_japan.png
-  description: 仙台市青葉区愛子で不定期開催	
+  description: 宮城県仙台市青葉区愛子で不定期開催	
   order: -213
   tags:
   - Scratch
