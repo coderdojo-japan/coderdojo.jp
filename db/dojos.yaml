@@ -38,15 +38,6 @@
   order: -220
   tags:
   - Scratch
-- name: 仙台 (東北)
-  url: https://www.facebook.com/CoderdojoSendai
-  logo: /img/dojos/coderdojo_sendai.jpg
-  description: 宮城県仙台市青葉区で毎月開催
-  order: -215
-  tags:
-  - Scratch
-  - ゲーム
-  - アプリ
 - name: 愛子 (東北)
   url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
   logo: /img/dojos/coderdojo_japan.png
