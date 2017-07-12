@@ -392,6 +392,13 @@
   order: 140
   tags:
   - Scratch
+- name: 海老名 (関東)
+  logo: /img/dojos/coderdojo-ebina.png
+  url: https://coderdojo-ebina.connpass.com/
+  description: 神奈川県海老名市で不定期開催
+  order: 145
+  tags:
+  - Scratch
 - name: 藤沢 (関東)
   logo: https://graph.facebook.com/176015682872663/picture?type=large
   url: http://coderdojofujisawa.hatenablog.com/
