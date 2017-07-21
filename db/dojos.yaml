@@ -720,6 +720,16 @@
   - Webサイト
   - PHP
   - Ruby
+- name: 光 (中国)
+  logo: /img/dojos/coderdojo-hikari.png
+  url: http://coderdojo-hikari.com/
+  description: 山口県光市で毎月開催
+  order: 435
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
+  - アプリ開発
 - name: 久留米 (九州)
   logo: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/CoderDojoKurume/
