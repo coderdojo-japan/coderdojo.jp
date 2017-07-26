@@ -1,4 +1,6 @@
 # 一般社団法人 CoderDojo Japan 定款
+<center>(<a href="https://github.com/coderdojo-japan/info/blob/master/teikan.md">GitHub で見る</a>)</center>
+<br/>
 
 ## 第1章 総則
 
