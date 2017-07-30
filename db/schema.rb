@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161217063010) do
+ActiveRecord::Schema.define(version: 20170730050122) do
 
   create_table "dojos", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 20161217063010) do
     t.text     "tags"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "event_histories", force: :cascade do |t|
+    t.integer  "dojo_id",          null: false
+    t.string   "dojo_name",        null: false
+    t.string   "service_name",     null: false
+    t.integer  "service_group_id", null: false
+    t.integer  "event_id",         null: false
+    t.string   "event_url",        null: false
+    t.integer  "participants",     null: false
+    t.datetime "evented_at",       null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["dojo_id"], name: "index_event_histories_on_dojo_id"
+    t.index ["evented_at", "dojo_id"], name: "index_event_histories_on_evented_at_and_dojo_id"
+    t.index ["service_name", "event_id"], name: "index_event_histories_on_service_name_and_event_id", unique: true
   end
 
 end
