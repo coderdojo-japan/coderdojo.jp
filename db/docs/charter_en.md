@@ -48,4 +48,4 @@ CoderDojo Foundation (CDF) commitments to you:
 # Disclaimer of Liability
 
 - - CoderDojo Foundation accepts no responsibility or liability whatsoever where a party is injured while engaging in the activities of a registered group. It is the responsibility of each club to ensure they maintain valid and appropriate insurance.
-- - You are solely responsible for the activities conducted by your own Dojo. Agreeing to this Charter does not constitute endorsement of those activities by the CoderDojo Foundation..
+- - You are solely responsible for the activities conducted by your own Dojo. Agreeing to this Charter does not constitute endorsement of those activities by the CoderDojo Foundation.
