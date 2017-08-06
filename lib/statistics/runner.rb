@@ -1,21 +1,25 @@
 module Statistics
   class Runner
     class << self
-      def run
+      def run(date:)
         cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_service: { name: 'connpass' }).to_a
         drkp_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_service: { name: 'doorkeeper' }).to_a
 
-        Connpass.run(cnps_dojos)
-        Doorkeeper.run(drkp_dojos)
+        Connpass.run(cnps_dojos, date)
+        Doorkeeper.run(drkp_dojos, date)
       end
     end
 
     class Connpass
       class << self
-        def run(dojos)
+        def run(dojos, date)
           cnps = Cilient::Connpass.new
+          params = {
+            yyyymm: "#{date.year}#{date.month}"
+          }
+
           dojos.each do |dojo|
-            cnps.fetch_events(series_id: dojo.dojo_event_service.group_id).each do |e|
+            cnps.fetch_events(params.merge(series_id: dojo.dojo_event_service.group_id)).each do |e|
               next unless e.dig('series', 'id') == dojo.dojo_event_service.group_id
 
               EventHistory.create!(dojo_id: dojo.id,
@@ -34,10 +38,15 @@ module Statistics
 
     class Doorkeeper
       class << self
-        def run(dojos)
+        def run(dojos, date)
           drkp = Client::Doorkeeper.new
+          params = {
+            since_at: date.beginning_of_month,
+            until_at: date.end_of_month
+          }
+
           dojos.each do |dojo|
-            drkp.fetch_events(group_id: dojo.dojo_event_service.group_id).each do |e|
+            drkp.fetch_events(params.merge(group_id: dojo.dojo_event_service.group_id)).each do |e|
               next unless e['group'] == dojo.dojo_event_service.group_id
 
               EventHistory.create!(dojo_id: dojo.id,
