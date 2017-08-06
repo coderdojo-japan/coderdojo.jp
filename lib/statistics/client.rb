@@ -68,13 +68,13 @@ module Statistics
 
     class Doorkeeper
       ENDPOINT = 'https://api.doorkeeper.jp'.freeze
-      DEFAULT_SINCE = Time.zone.parse('2010-07-01')
-      DEFAULT_UNTIL = Time.zone.now.end_of_day
 
       def initialize
         @client = Client.new(ENDPOINT) do |c|
           c.authorization(:Bearer, ENV.fetch('DOORKEEPER_API_TOKEN'))
         end
+        @default_since = Time.zone.parse('2010-07-01')
+        @default_until = Time.zone.now.end_of_day
       end
 
       def fetch_group_id(keyword:)
@@ -83,7 +83,7 @@ module Statistics
           .dig('event', 'group')
       end
 
-      def fetch_events(group_id:, since_at: DEFAULT_SINCE, until_at: DEFAULT_UNTIL)
+      def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
         params = {
           page: 1,
           since: since_at,
