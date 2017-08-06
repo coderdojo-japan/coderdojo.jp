@@ -2,8 +2,8 @@ module Statistics
   class Aggregation
     class << self
       def run(date:)
-        cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_service: { name: 'connpass' }).to_a
-        drkp_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_service: { name: 'doorkeeper' }).to_a
+        cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: 'connpass' }).to_a
+        drkp_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: 'doorkeeper' }).to_a
 
         Connpass.run(cnps_dojos, date)
         Doorkeeper.run(drkp_dojos, date)
@@ -13,7 +13,7 @@ module Statistics
     class Connpass
       class << self
         def run(dojos, date)
-          cnps = Cilient::Connpass.new
+          cnps = Client::Connpass.new
           params = {
             yyyymm: "#{date.year}#{date.month}"
           }
