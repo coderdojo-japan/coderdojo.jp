@@ -1,5 +1,5 @@
 module Statistics
-  class Runner
+  class Aggregation
     class << self
       def run(date:)
         cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_service: { name: 'connpass' }).to_a
