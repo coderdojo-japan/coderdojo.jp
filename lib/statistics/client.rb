@@ -15,7 +15,7 @@ module Statistics
 
     def connection_for(endpoint, &block)
       Faraday.new(endpoint) do |f|
-        f.response :logger if self.debug
+        f.response :logger if self.class.debug
         f.response :json, :content_type => /\bjson$/
         f.response :raise_error
 
