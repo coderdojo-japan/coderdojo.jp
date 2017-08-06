@@ -39,15 +39,37 @@ module Statistics
           .dig('series', 'id')
       end
 
-      def fetch_events(series_id:)
-        @client.get('event/', series_id: series_id, count: 100)
-          .fetch('events')
+      def fetch_events(series_id:, yyyymm: nil)
+        params = {
+          series_id: series_id,
+          start: 1,
+          count: 100
+        }
+        params[:ym] = yyyymm if yyyymm
+        events = []
+
+        loop do
+          part = @client.get('event/', params)
+
+          break if part['results_returned'].zero?
+
+          events.push(*part.fetch('events'))
+
+          break if part.size < params[:count]
+
+          break if params[:start] + params[:count] > part['results_available']
+
+          params[:start] += params[:count]
+        end
+
+        events
       end
     end
 
     class Doorkeeper
       ENDPOINT = 'https://api.doorkeeper.jp'.freeze
-      DEFAULT_SINCE = Date.parse('2010-07-01')
+      DEFAULT_SINCE = Time.zone.parse('2010-07-01')
+      DEFAULT_UNTIL = Time.zone.now.end_of_day
 
       def initialize
         @client = Client.new(ENDPOINT) do |c|
@@ -61,8 +83,27 @@ module Statistics
           .dig('event', 'group')
       end
 
-      def fetch_events(group_id:, offset: 1, since: DEFAULT_SINCE)
-        @client.get("groups/#{group_id}/events", offset: offset, since: since)
+      def fetch_events(group_id:, since_at: DEFAULT_SINCE, until_at: DEFAULT_UNTIL)
+        params = {
+          page: 1,
+          since: since_at,
+          until: until_at
+        }
+        events = []
+
+        loop do
+          part = @client.get("groups/#{group_id}/events", params)
+
+          break if part.size.zero?
+
+          events.push(*part)
+
+          break if part.size < 25   # 25 items / 1 request
+
+          params[:page] += 1
+        end
+
+        events
       end
     end
   end
