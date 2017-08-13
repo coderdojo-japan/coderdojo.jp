@@ -22,14 +22,14 @@ module Statistics
             cnps.fetch_events(params.merge(series_id: dojo.dojo_event_service.group_id)).each do |e|
               next unless e.dig('series', 'id') == dojo.dojo_event_service.group_id
 
-              EventHistory.find_or_create_by!(dojo_id: dojo.id,
-                                              dojo_name: dojo.name,
-                                              service_name: dojo.dojo_event_service.name,
-                                              service_group_id: dojo.dojo_event_service.group_id,
-                                              event_id: e['event_id'],
-                                              event_url: e['event_url'],
-                                              participants: e['accepted'],
-                                              evented_at: Time.zone.parse(e['started_at']))
+              EventHistory.create!(dojo_id: dojo.id,
+                                   dojo_name: dojo.name,
+                                   service_name: dojo.dojo_event_service.name,
+                                   service_group_id: dojo.dojo_event_service.group_id,
+                                   event_id: e['event_id'],
+                                   event_url: e['event_url'],
+                                   participants: e['accepted'],
+                                   evented_at: Time.zone.parse(e['started_at']))
             end
           end
         end
@@ -49,14 +49,14 @@ module Statistics
             drkp.fetch_events(params.merge(group_id: dojo.dojo_event_service.group_id)).each do |e|
               next unless e['group'] == dojo.dojo_event_service.group_id
 
-              EventHistory.find_or_create_by!(dojo_id: dojo.id,
-                                              dojo_name: dojo.name,
-                                              service_name: dojo.dojo_event_service.name,
-                                              service_group_id: dojo.dojo_event_service.group_id,
-                                              event_id: e['id'],
-                                              event_url: e['public_url'],
-                                              participants: e['participants'],
-                                              evented_at: Time.zone.parse(e['starts_at']))
+              EventHistory.create!(dojo_id: dojo.id,
+                                   dojo_name: dojo.name,
+                                   service_name: dojo.dojo_event_service.name,
+                                   service_group_id: dojo.dojo_event_service.group_id,
+                                   event_id: e['id'],
+                                   event_url: e['public_url'],
+                                   participants: e['participants'],
+                                   evented_at: Time.zone.parse(e['starts_at']))
             end
           end
         end

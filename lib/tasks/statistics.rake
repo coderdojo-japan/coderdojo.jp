@@ -15,6 +15,9 @@ namespace :statistics do
 
     raise ArgumentError, "Invalid format: #{args[:yyyymm]}" if date.nil?
 
+
+    EventHistory.where(evented_at: date.beginning_of_month..date.end_of_month).delete_all
+
     Statistics::Aggregation.run(date: date)
   end
 
