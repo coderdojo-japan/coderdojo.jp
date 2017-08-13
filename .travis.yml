@@ -14,6 +14,8 @@ deploy:
       - "bundle exec rails dojos:update_db_by_yaml"
 rvm:
   - 2.4.0
+cache:
+  - bundler
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake
