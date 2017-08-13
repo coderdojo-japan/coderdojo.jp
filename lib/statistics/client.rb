@@ -32,11 +32,8 @@ module Statistics
         @client = Client.new(ENDPOINT)
       end
 
-      def fetch_series_id(**params)
-        @client.get('event/', params.merge(count: 1))
-          .fetch('events')
-          .first
-          .dig('series', 'id')
+      def search(keyword:)
+        @client.get('event/', { keyword: keyword, count: 100 })
       end
 
       def fetch_events(series_id:, yyyymm: nil)
@@ -77,10 +74,8 @@ module Statistics
         @default_until = Time.zone.now.end_of_day
       end
 
-      def fetch_group_id(keyword:)
-        @client.get('events', q: keyword, since: DEFAULT_SINCE)
-          .first
-          .dig('event', 'group')
+      def search(keyword:)
+        @client.get('events', q: keyword, since: @default_since)
       end
 
       def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
