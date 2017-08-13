@@ -17,4 +17,16 @@ namespace :statistics do
 
     Statistics::Aggregation.run(date: date)
   end
+
+  task :search, [:keyword] => :environment do |tasks, args|
+    raise ArgumentError, 'Require the keyword' if args[:keyword].nil?
+
+    require 'pp'
+
+    puts 'Searching Connpass'
+    pp Statistics::Client::Connpass.new.search(keyword: args[:keyword])
+
+    puts 'Searching Doorkeeper'
+    pp Statistics::Client::Doorkeeper.new.search(keyword: args[:keyword])
+  end
 end
