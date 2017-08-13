@@ -21,6 +21,7 @@ namespace :statistics do
     Statistics::Aggregation.run(date: date)
   end
 
+  desc 'キーワードからイベント情報を検索します'
   task :search, [:keyword] => :environment do |tasks, args|
     raise ArgumentError, 'Require the keyword' if args[:keyword].nil?
 
