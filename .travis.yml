@@ -15,5 +15,5 @@ deploy:
 cache:
   - bundler
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:migrate --trace
   - bundle exec rake
