@@ -41,7 +41,7 @@
 - name: 愛子 (東北)
   url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
   logo: /img/dojos/coderdojo_japan.png
-  description: 宮城県仙台市青葉区愛子で不定期開催	
+  description: 宮城県仙台市青葉区愛子で不定期開催
   order: -213
   tags:
   - Scratch
@@ -369,7 +369,7 @@
   - Scratch
 - name: 長津田 (関東)
   logo: /img/dojos/coderdojo-nagatsuta.png
-  url: https://coderdojo-nagatsuta.connpass.com/
+  url: https://coderdojo-nagatsuta.github.io/
   description: 横浜市緑区で毎月開催
   order: 130
   tags:
