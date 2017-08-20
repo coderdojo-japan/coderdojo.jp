@@ -17,3 +17,6 @@ cache:
 script:
   - bundle exec rake db:migrate --trace
   - bundle exec rake
+env:
+  global:
+    - TZ='Asia/Tokyo'

@@ -14,6 +14,5 @@ module CoderdojoJp
 
     # Timezone
     config.time_zone = 'Asia/Tokyo'
-    ENV['TZ'] = 'Asia/Tokyo'
   end
 end
