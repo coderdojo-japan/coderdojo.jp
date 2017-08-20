@@ -13,7 +13,7 @@ module Statistics
 
     private
 
-    def connection_for(endpoint, &block)
+    def connection_for(endpoint)
       Faraday.new(endpoint) do |f|
         f.response :logger if self.class.debug
         f.response :json, :content_type => /\bjson$/
