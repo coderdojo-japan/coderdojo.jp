@@ -20,8 +20,8 @@ RSpec.describe Statistics::Aggregation do
     before do
       d1 = Dojo.create(name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
       d2 = Dojo.create(name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
-      DojoEventService.create(dojo_id: d1.id, name: 'connpass', group_id: 9876)
-      DojoEventService.create(dojo_id: d2.id, name: 'doorkeeper', group_id: 5555)
+      DojoEventService.create(dojo_id: d1.id, name: :connpass, group_id: 9876)
+      DojoEventService.create(dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
     end
 
     subject { Statistics::Aggregation.run(date: Time.current) }

@@ -2,8 +2,8 @@ module Statistics
   class Aggregation
     class << self
       def run(date:)
-        cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: 'connpass' }).to_a
-        drkp_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: 'doorkeeper' }).to_a
+        cnps_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: :connpass }).to_a
+        drkp_dojos = Dojo.joins(:dojo_event_service).where(dojo_event_services: { name: :doorkeeper }).to_a
 
         Connpass.run(cnps_dojos, date)
         Doorkeeper.run(drkp_dojos, date)

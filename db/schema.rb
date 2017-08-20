@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820085052) do
+ActiveRecord::Schema.define(version: 20170820090605) do
 
   create_table "dojo_event_services", force: :cascade do |t|
     t.integer  "dojo_id",    null: false
-    t.string   "name",       null: false
+    t.integer  "name",       null: false
     t.string   "url"
     t.integer  "group_id",   null: false
     t.datetime "created_at", null: false
