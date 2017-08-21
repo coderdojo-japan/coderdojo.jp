@@ -284,6 +284,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails
+  faraday
   faraday_middleware (= 0.10)
   font-awesome-rails
   jbuilder
@@ -315,4 +316,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.7
+   1.15.3

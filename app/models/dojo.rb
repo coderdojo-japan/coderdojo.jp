@@ -3,6 +3,9 @@ class Dojo < ApplicationRecord
   NUM_OF_WHOLE_DOJOS = "1,250"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
+  has_one :dojo_event_service
+  has_many :event_histories
+
   serialize :tags
   default_scope -> { order(order: :asc) }
   before_save { self.email = self.email.downcase }

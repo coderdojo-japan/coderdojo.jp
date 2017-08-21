@@ -12,4 +12,11 @@ deploy:
   run:
       - "bundle exec rails db:migrate"
       - "bundle exec rails dojos:update_db_by_yaml"
-      
+cache:
+  - bundler
+script:
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake
+env:
+  global:
+    - TZ='Asia/Tokyo'
