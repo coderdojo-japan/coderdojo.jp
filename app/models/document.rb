@@ -15,19 +15,21 @@ class Document
     @version  = version
   end
 
-  # [FIXME] - セキュリティ上の問題がある
-  # バージョンとidは外部からの入力を受け付けているので、攻撃者によって、
-  # ファイルシステム上のファイル名が`.md`で終わる任意のファイルの内容を表示されてしまう
   def path
     "#{DOCS_PATH}/#{@filename}.md"
   end
 
+  def valid_file_name?
+    self.class.all.include?(@filename)
+  end
+
   def exists?
     return false if path.include? "\u0000"
+    return false unless valid_file_name?
     File.exists?(path)
   end
 
   def content
-    @content ||= File.read(path)
+    @content ||= valid_file_name? ? File.read(path) : ''
   end
 end

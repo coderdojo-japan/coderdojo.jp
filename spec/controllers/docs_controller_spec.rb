@@ -14,5 +14,11 @@ RSpec.describe DocsController, type: :controller do
       expected = Kramdown::Document.new(doc.content, input: 'GFM').to_html
       expect(assigns(:content)).to eq expected
     end
+
+    it 'when invalid filename' do
+      get :show, params: { id: '../not_found' }
+      expect(response).to redirect_to controller.scrivito_path(Obj.root)
+      expect(response.status).to eq 302
+    end
   end
 end
