@@ -48,9 +48,7 @@
 
 ## 帰属
 
-この行動規範は
-[https://www.contributor-covenant.org/ja/version/1/4/code-of-conduct/](https://www.contributor-covenant.org/ja/version/1/4/code-of-conduct/) にある
-[Contributor Covenant][homepage] バージョン 1.4 を参考にして作成されました。
+この行動規範は [https://www.contributor-covenant.org/ja/version/1/4/code-of-conduct/](https://www.contributor-covenant.org/ja/version/1/4/code-of-conduct/) にある [Contributor Covenant][homepage] バージョン 1.4 を参考にして作成されました。
 
 [homepage]: https://www.contributor-covenant.org
 
