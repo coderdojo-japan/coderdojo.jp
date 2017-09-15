@@ -285,6 +285,13 @@
   order: 20
   tags:
   - Scratch
+- name: 秋葉原 (関東)
+  logo: /img/dojos/coderdojo_japan.png
+  url: https://www.facebook.com/coderdojoakihabara.goodworks/
+  description: 東京都千代田区で毎月開催
+  order: 23
+  tags:
+  - Scratch
 - name: 野田 (関東)
   logo: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/coderdojonoda/
