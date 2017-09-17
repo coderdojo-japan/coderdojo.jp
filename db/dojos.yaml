@@ -114,13 +114,6 @@
   tags:
   - JavaScript
   - HackforPlay
-- name: 海津 (中部)
-  logo: /img/dojos/coderdojo_japan.png
-  url: https://coderdojo-kaizu.jimdo.com/
-  description: 岐阜県海津市で毎月2回開催
-  order: -140
-  tags:
-  - Scratch
 - name: 前橋 (関東)
   logo: /img/dojos/coderdojo-maebashi.png
   url: https://vtmacs003b.github.io/maebashi.jp/
@@ -512,6 +505,13 @@
   - Scratch
   - アプリ開発
   - ラズベリーパイ
+- name: 海津 (中部)
+  logo: /img/dojos/coderdojo_japan.png
+  url: https://coderdojo-kaizu.jimdo.com/
+  description: 岐阜県海津市で毎月2回開催
+  order: 225
+  tags:
+  - Scratch
 - name: 伊勢 (近畿)
   logo: https://image.jimcdn.com/app/cms/image/transf/dimension=90x1024:format=png/path/s5113e30c46a816ab/image/ib497ad222f9ebf4c/version/1486863386/image.png
   url: https://coderdojo-ise.jimdo.com/
