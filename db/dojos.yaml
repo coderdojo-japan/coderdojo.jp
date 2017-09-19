@@ -677,9 +677,8 @@
   order: 340
   tags:
   - Scratch
-
 - name: 北神戸 (近畿)
-  logo: https://dl.dropboxusercontent.com/u/2819285/coderdojo-kitakobe.png
+  logo: /img/dojos/coderdojo-kitakobe.png
   url: https://www.facebook.com/KitakobeDojo/
   description: 神戸市北区で毎月開催
   order: 350
