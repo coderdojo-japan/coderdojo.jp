@@ -553,15 +553,6 @@
   order: 260
   tags:
   - Scratch
-- name: 熊野 (近畿)
-  url: https://www.facebook.com/coderdojo.kumano
-  logo: https://graph.facebook.com/254235038032617/picture?type=large
-  description: 和歌山県新宮市で不定期開催
-  order: 270
-  tags:
-  - Scratch
-  - Webサイト
-  - アプリ
 - name: 京都伏見 (近畿)
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojo-kyoto-fushimi.peatix.com/view
@@ -661,6 +652,24 @@
   - Swift
   - Android
   - Java
+- name: 熊野 (近畿)
+  url: https://www.facebook.com/coderdojo.kumano
+  logo: https://graph.facebook.com/254235038032617/picture?type=large
+  description: 和歌山県新宮市で不定期開催
+  order: 333
+  tags:
+  - Scratch
+  - Webサイト
+  - アプリ
+- name: 南紀田辺 (近畿)
+  url: https://coderdojo-nanki-tanabe.jimdo.com/
+  logo: /img/dojos/coderdojo-nanki-tanabe.png
+  description: 和歌山県田辺市で毎月開催	
+  order: 335
+  tags:
+  - Scratch
+  - ScratchJr
+  - ラズベリーパイ
 - name: 和歌山 (近畿)
   logo: /img/dojos/coderdojo-wakayama.png
   url: https://www.facebook.com/coderdojo.wakayama/
@@ -668,6 +677,7 @@
   order: 340
   tags:
   - Scratch
+
 - name: 北神戸 (近畿)
   logo: https://dl.dropboxusercontent.com/u/2819285/coderdojo-kitakobe.png
   url: https://www.facebook.com/KitakobeDojo/
