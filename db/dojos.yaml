@@ -3,7 +3,7 @@
   url: http://www.coderdojo-sapporo.jp/
   logo: https://i1.wp.com/coderdojo-sapporo.jp/wp/wp-content/uploads/2017/01/CoderDojoSapporo_badge_001.jpg
   description: 北海道札幌市で月２回開催
-  order: -290
+  order: -300
   tags:
   - Scratch
   - Arduino
@@ -13,13 +13,22 @@
   url: https://www.facebook.com/coderdojo.sapporo/
   logo: /img/dojos/coderdojo_japan.png
   description: 北海道札幌市で不定期開催
-  order: -280
+  order: -290
   tags:
   - Scratch
   - ラズベリーパイ
   - ゲーム
   - Webサイト
   - Unity
+- name: 恵庭 (北海道)
+  url: https://www.facebook.com/CoderDojoEniwa/
+  logo: /img/dojos/coderdojo_japan.png
+  description: 北海道恵庭市にて毎月開催
+  order: -280
+  tags:
+  - Scratch
+  - Webサイト
+  - Python
 - name: 秋田 (東北)
   url: http://coderdojo.akita.red/
   logo: /img/dojos/coderdojo_japan.png
