@@ -3,6 +3,22 @@
 
 // Customized by YassLab
 
+.home-point-video {
+	position: relative;
+	margin-bottom: 30px;
+	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	padding-top: 25px;
+}
+
+.home-point-video iframe {
+	position: absolute;
+	top:  0;
+	left: 3.5%;
+	width:  95% !important;
+	height: 100% !important;
+}
+
+
 .cursor-default{
   cursor: default !important;
 }
