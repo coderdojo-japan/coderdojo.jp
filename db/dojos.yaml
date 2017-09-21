@@ -778,6 +778,15 @@
   - Webサイト
   - PHP
   - アプリ開発
+- name: 福岡 (九州)
+  logo: /img/dojos/coderdojo-fukuoka.png
+  url: https://www.facebook.com/CoderDojoFukuoka/
+  description: 福岡県福岡市で毎月開催
+  order: 440
+  tags:
+  - Scratch
+  - Webサイト
+  - JavaScript
 - name: 久留米 (九州)
   logo: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/CoderDojoKurume/
