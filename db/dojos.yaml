@@ -596,9 +596,9 @@
   - Webサイト
   - アプリ開発
 - name: 東大阪 (近畿)
-  logo: /img/dojos/coderdojo-higasi-osaka.jpg
-  url: https://www.facebook.com/CoderDojoHigashiosaka/
-  description: 大阪府東大阪荒本で隔月開催
+  logo: /img/dojos/coderdojo-higasi-osaka.png
+  url: https://www.facebook.com/CoderDojoHigashiosakaYao/
+  description: 大阪府東大阪で隔月開催
   order: 295
   tags:
   - Scratch
