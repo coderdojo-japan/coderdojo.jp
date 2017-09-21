@@ -642,6 +642,15 @@
   tags:
   - Scratch
   - ラズベリーパイ
+- name: 八尾 (近畿)
+  logo: /img/dojos/coderdojo-yao.png
+  url: https://www.facebook.com/CoderDojoHigashiosakaYao/
+  description: 大阪府八尾市で隔月開催
+  order: 317
+  tags:
+  - Scratch
+  - Webサイト
+  - Android
 - name: 堺 (近畿)
   logo: /img/dojos/coderdojo-sakai.png
   url: https://coderdojo-sakai.github.io/
