@@ -791,7 +791,7 @@
   logo: /img/dojos/coderdojo-fukuoka.png
   url: https://www.facebook.com/CoderDojoFukuoka/
   description: 福岡県福岡市で毎月開催
-  order: 440
+  order: 450
   tags:
   - Scratch
   - Webサイト
@@ -800,7 +800,7 @@
   logo: /img/dojos/coderdojo_japan.png
   url: https://www.facebook.com/CoderDojoKurume/
   description: 福岡県久留米市で毎月開催
-  order: 440
+  order: 460
   tags:
   - Scratch
   - Webサイト
@@ -809,7 +809,7 @@
   logo: https://lmlab.net/logos/coderdojo.png
   url: https://lmlab.net/coderdojo/
   description: 宮崎県西臼杵郡で毎月開催
-  order: 450
+  order: 470
   tags:
   - Scratch
   - Ruby
@@ -819,7 +819,7 @@
   logo: /img/dojos/coderdojo_japan.png
   url: http://coderdojokadena.hatenablog.jp/
   description: 沖縄県中頭郡で毎月開催
-  order: 460
+  order: 480
   tags:
   - Scratch
   - Hour of Code
@@ -828,7 +828,7 @@
   logo: /img/dojos/coderdojo_okinawa.png
   url: https://www.facebook.com/coderdojo.okinawa
   description: 沖縄県那覇市で不定期開催
-  order: 470
+  order: 490
   tags:
   - Scratch
 - name: 宮古島 (沖縄)
