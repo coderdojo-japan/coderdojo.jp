@@ -9,16 +9,15 @@
   - Arduino
   - ラズベリーパイ
   - 電子工作
-- name: 札幌@東部 (北海道)
+- name: 札幌東 (北海道)
   url: https://www.facebook.com/coderdojo.sapporo/
   logo: /img/dojos/coderdojo_japan.png
-  description: 北海道札幌市で不定期開催
+  description: 北海道札幌市で月２回開催
   order: -290
   tags:
   - Scratch
   - ラズベリーパイ
-  - ゲーム
-  - Webサイト
+  - Python
   - Unity
 - name: 恵庭 (北海道)
   url: https://www.facebook.com/CoderDojoEniwa/
