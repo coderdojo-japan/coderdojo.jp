@@ -261,6 +261,15 @@
   - Scratch
   - Webサイト
   - ゲーム
+- name: 吉祥寺 (関東)
+  logo: /img/dojos/coderdojo-kichijoji.png
+  url: https://kichijojijp.wixsite.com/coderdojo
+  description: 東京都武蔵野市で毎月開催
+  order: 5
+  tags:
+  - Scratch
+  - Studuino
+  - Java
 - name: 調布 (関東)
   logo: /img/dojos/coderdojo-chofu.jpg
   url: http://coderdojochofu.hatenablog.jp/
