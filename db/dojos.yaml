@@ -844,7 +844,7 @@
 - name: 宜野湾 (沖縄)
   logo: /img/dojos/coderdojo-ginowan.png
   url: http://www.coderdojo-ginowan.com/
-  description: 沖縄県宜野湾市で不定期に開催
+  description: 沖縄県宜野湾市で不定期開催
   order: 485
   tags:
   - Scratch
