@@ -834,22 +834,22 @@
   - Ruby
   - Python
   - ラズベリーパイ
-- name: 嘉手納 (沖縄)
-  logo: /img/dojos/coderdojo_japan.png
-  url: http://coderdojokadena.hatenablog.jp/
-  description: 沖縄県中頭郡で毎月開催
-  order: 480
-  tags:
-  - Scratch
-  - Hour of Code
-  - LEGO Mindstorms
 - name: 那覇 (沖縄)
   logo: /img/dojos/coderdojo_okinawa.png
   url: https://www.facebook.com/coderdojo.okinawa
   description: 沖縄県那覇市で不定期開催
+  order: 480
+  tags:
+  - Scratch
+- name: 嘉手納 (沖縄)
+  logo: /img/dojos/coderdojo_japan.png
+  url: http://coderdojokadena.hatenablog.jp/
+  description: 沖縄県中頭郡で毎月開催
   order: 490
   tags:
   - Scratch
+  - Hour of Code
+  - LEGO Mindstorms
 - name: 宮古島 (沖縄)
   logo: https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg
   url: http://coderdojo-miyakojima.com/
