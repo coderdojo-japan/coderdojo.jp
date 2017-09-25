@@ -39,6 +39,14 @@
   - PHP
   - Swift
   - Android
+- name: きたかみ (東北)
+  url: https://coderdojo.waraukado.jp/
+  logo: /img/dojos/coderdojo-kitakami.jpg
+  description: 岩手県北上市で不定期開催	
+  order: -240
+  tags:
+  - Scratch
+  - Webサイト
 - name: 泉 (東北)
   url: https://www.facebook.com/CoderdojoIzumi
   logo: https://graph.facebook.com/542546935853207/picture?type=large
