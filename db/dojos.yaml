@@ -609,12 +609,13 @@
 - name: 東大阪 (近畿)
   logo: /img/dojos/coderdojo-higasi-osaka.png
   url: https://www.facebook.com/CoderDojoHigashiosakaYao/
-  description: 大阪府東大阪で隔月開催
+  description: 大阪府東大阪市で隔月開催
   order: 295
   tags:
   - Scratch
   - Webサイト
   - Android
+  - 電子工作
 - name: 西宮・梅田 (近畿)
   url: http://coderdojo-nishinomiya.info/
   logo: https://graph.facebook.com/1393015987582276/picture?type=large
@@ -662,6 +663,7 @@
   - Scratch
   - Webサイト
   - Android
+  - 電子工作
 - name: 堺 (近畿)
   logo: /img/dojos/coderdojo-sakai.png
   url: https://coderdojo-sakai.github.io/
