@@ -39,6 +39,15 @@
   - PHP
   - Swift
   - Android
+- name: 滝沢 (東北)
+  url: https://www.facebook.com/CoderDojoTakizawa/
+  logo: //img/dojos/coderdojo_japan.png
+  description: 岩手県滝沢市で毎月開催
+  order: -245
+  tags:
+  - Scratch
+  - micro:bit
+  - ラズベリーパイ
 - name: きたかみ (東北)
   url: https://coderdojo.waraukado.jp/
   logo: /img/dojos/coderdojo-kitakami.jpg
