@@ -75,7 +75,7 @@ module Statistics
       end
 
       def search(keyword:)
-        @client.get('events', q: keyword, since: @default_since)
+        @client.get('events', q: keyword, since: @default_since, expand: 'group')
       end
 
       def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
