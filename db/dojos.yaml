@@ -694,7 +694,7 @@
   logo: /img/dojos/coderdojo_japan.png
   url: https://coderdojotondabayashi.github.io/main/
   description: 大阪府富田林市で隔月開催
-  order: 330
+  order: 325
   tags:
   - Scratch
   - Swift
