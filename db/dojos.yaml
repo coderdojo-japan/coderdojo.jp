@@ -700,6 +700,13 @@
   - Swift
   - Android
   - Java
+- name: せんなん (近畿)
+  logo: /img/dojos/coderdojo_japan.png
+  url: https://www.facebook.com/coderdojo.sennan.osaka.jp/
+  description: 大阪府泉南市で毎月開催
+  order: 331
+  tags:
+  - Scratch
 - name: 熊野 (近畿)
   url: https://www.facebook.com/coderdojo.kumano
   logo: https://graph.facebook.com/254235038032617/picture?type=large
