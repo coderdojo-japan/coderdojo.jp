@@ -584,9 +584,9 @@
   - Webサイト
   - C#
 - name: 大津 (近畿)
-  logo: /img/dojos/coderdojo_japan.png
-  url: https://coderdojo-otsu.doorkeeper.jp/
-  description: 滋賀県大津市で不定期開催
+  logo: /img/dojos/coderdojo_otsu.png
+  url: https://coderdojo-otsu.connpass.com
+  description: 滋賀県大津市で毎月開催
   order: 260
   tags:
   - Scratch
