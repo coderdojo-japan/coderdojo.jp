@@ -845,14 +845,16 @@
   - Webサイト
   - JavaScript
 - name: 久留米 (九州)
-  logo: /img/dojos/coderdojo_japan.png
+  logo: /img/dojos/coderdojo-kurume.png
   url: https://www.facebook.com/CoderDojoKurume/
   description: 福岡県久留米市で毎月開催
   order: 460
   tags:
   - Scratch
-  - Webサイト
+  - HTML
   - PHP
+  - LEGO
+  - Minecraft
 - name: 宮崎 (九州)
   logo: https://lmlab.net/logos/coderdojo.png
   url: https://lmlab.net/coderdojo/
