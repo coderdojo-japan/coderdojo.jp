@@ -38,7 +38,7 @@ If you successfully set up, you can see the same page as [coderdojo.jp](http://c
 
 ## Contributors
 
-Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
+Initially forked from [coderdojo-tokyo/web](https://github.com/coderdojo-tokyo/web) in 2015,   
 being developed by [YassLab](https://yasslab.jp/) team since 2016, and   
 had been migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
 
