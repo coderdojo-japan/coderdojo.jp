@@ -39,7 +39,7 @@
    - 実績: [DojoBudokai 2017 共有会](https://www.youtube.com/playlist?list=PL94GDfaSQTmIHxHVRKhEJiCe0ujAwYG5n)の実施、[DojoPaaS 開発事例](https://github.com/coderdojo-japan/dojopaas/issues/51#issuecomment-326204848)の共有 <br /><br />
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
-   - 実績: 決算書の作成、各種税金の納付、各種資料の提出、理事会の実施、理事の募集など <br /><br />
+   - 実績: 決算書の提出、各種税金の納付、各種資料の作成、理事会の実施、理事の募集など <br /><br />
 
 
 上記の内容・実績が示すとおり、CoderDojo Japan が行なっている活動のほとんどはオープンになっているため、理事にならなくても活動に協力・参画することができます。
