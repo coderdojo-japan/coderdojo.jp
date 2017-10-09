@@ -59,5 +59,7 @@ src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfulls
 
 ## 応募フォーム
 
-TODO: 応募フォームを作成する
+TODO: 応募フォームを作成する 
+応募〆切: (〆切: 10月29日 23:59)
+
 <br />
