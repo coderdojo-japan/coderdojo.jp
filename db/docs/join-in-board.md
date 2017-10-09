@@ -33,7 +33,7 @@
    - 実績: [CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp.champions/) や [Champions コミュニティ](https://www.facebook.com/groups/coderdojo.jp)の運営 <br /><br />
 - **(4) 国内外の「CoderDojo」に関する普及及び広報に関する活動**
    - 内容: 各種SNSやPodcastなどを使って、CoderDojoの活動の周知を支援します
-   - 実績: [Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/groups/coderdojo.jp/) 、[DojoCast](http://dojocast.coderdojo.jp/) による周知支援の実施 <br /><br />
+   - 実績: [Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/groups/coderdojo.jp/)、[DojoCast](http://dojocast.coderdojo.jp/) による周知支援の実施 <br /><br />
 - **(5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有**
    - 内容: CoderDojo コミュニティで得られた知見をオープンに共有します
    - 実績: [DojoBudokai 2017 共有会](https://www.youtube.com/playlist?list=PL94GDfaSQTmIHxHVRKhEJiCe0ujAwYG5n)の実施、[DojoPaaS 開発事例](https://github.com/coderdojo-japan/dojopaas/issues/51#issuecomment-326204848)の共有 <br /><br />
