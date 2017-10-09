@@ -30,7 +30,7 @@
    - 実績: [SoftBank](https://www.softbank.jp/corp/csr/next_generation/pepper/social/)、[さくらインターネット](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)、[各種スポンサー](/#sponsors)との提携 <br /><br />
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
    - 内容: CoderDojo 間および企業・行政などとの情報共有を円滑に行います
-   - 実績: [CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp.champions/) や [Champions コミュニティ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](http://dojocon.coderdojo.jp/) の後援 <br /><br />
+   - 実績: [CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp.champions/) や [Champions コミュニティ](https://www.facebook.com/groups/coderdojo.jp)の運営 <br /><br />
 - **(4) 国内外の「CoderDojo」に関する普及及び広報に関する活動**
    - 内容: 各種SNSやPodcastなどを使って、CoderDojoの活動の周知を支援します
    - 実績: [Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/groups/coderdojo.jp/) 、[DojoCast](http://dojocast.coderdojo.jp/) による周知支援の実施 <br /><br />
