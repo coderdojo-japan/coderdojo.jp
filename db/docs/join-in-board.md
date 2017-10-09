@@ -60,13 +60,18 @@ src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfulls
 ### 応募書類・結果について
 
 1. 応募内容は[プライバシーポリシー](/docs/privacy)にしたがって管理されます。理事募集以外の目的では扱いません
-2. 応募状況によっては、理事の募集期間を延期または中止することがあります
-3. 理事ではなくスタッフとして協力したい場合は、下記の問い合わせ先よりご連絡ください
+1. 応募状況によっては、理事の募集期間を延期または中止することがあります
+1. 自薦・他薦は問いません。他薦の場合、推薦する理由についてお書きください
 <br />
 
 ## 応募フォーム
 
 応募〆切: 2017年10月20日 (金曜)
-い合わせ先: `info@coderdjo.jp`
+問い合わせ先: `info@coderdjo.jp`
+
+<div class="home-point-video" style="margin-left: -25px;">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYga5Tc8yopmh_zDwRdDf1tA6r5dEc3-np8HWnSFsXa8P27w/viewform?embedded=true" width="560" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
 
 <br />
+
