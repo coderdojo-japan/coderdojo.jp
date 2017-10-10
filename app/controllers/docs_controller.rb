@@ -8,6 +8,7 @@ class DocsController < ApplicationController
     doc = Document.new(filename)
     if doc.exists?
       @content = Kramdown::Document.new(doc.content, input: 'GFM').to_html
+      @title   = doc.content.lines.first[2..-1].strip
     else
       redirect_to scrivito_path(Obj.root)
     end

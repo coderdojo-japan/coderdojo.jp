@@ -1,4 +1,4 @@
-# CoderDojo 憲章<br/>
+# CoderDojo 憲章
 <center>(<a href="charter_en">English</a>)</center>
 <br/>
 
