@@ -67,7 +67,6 @@ src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfulls
 ## 応募フォーム
 
 応募〆切: 2017年10月20日 (金曜)
-問い合わせ先: `info@coderdjo.jp`
 
 <div class="home-point-video" style="margin-left: -25px;">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYga5Tc8yopmh_zDwRdDf1tA6r5dEc3-np8HWnSFsXa8P27w/viewform?embedded=true" width="560" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
