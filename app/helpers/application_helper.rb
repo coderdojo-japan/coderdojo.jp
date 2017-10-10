@@ -10,11 +10,11 @@ module ApplicationHelper
   end
 
   def full_url(page_url)
-    base_url = "https://coderdojo.jp"
+    default_url = "https://coderdojo.jp/"
     if page_url.empty?
-      base_url
+      default_url
     else
-      base_url + page_url
+      page_url
     end
   end
 
