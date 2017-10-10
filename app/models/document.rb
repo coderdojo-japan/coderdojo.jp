@@ -29,6 +29,10 @@ class Document
     File.exists?(path)
   end
 
+  def title
+    self.content.lines.first[2..-1].strip
+  end
+
   def content
     @content ||= valid_file_name? ? File.read(path) : ''
   end
