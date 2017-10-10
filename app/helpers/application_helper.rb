@@ -9,6 +9,15 @@ module ApplicationHelper
     end
   end
 
+  def full_url(page_url)
+    base_url = "https://coderdojo.jp"
+    if page_url.empty?
+      base_url
+    else
+      base_url + page_url
+    end
+  end
+
   def meta_description(description)
     if description.empty?
       "CoderDojo は子どものためのプログラミング道場です。2011年にアイルランドで始まり、全国では#{Dojo::NUM_OF_JAPAN_DOJOS}ヶ所以上、世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WHOLE_DOJOS}ヶ所で開催されています。"
