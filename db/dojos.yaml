@@ -371,6 +371,13 @@
   order: 80
   tags:
   - Scratch
+- name: 南柏 (関東)
+  url: http://www.coderdojo-kashiwa.com/dojo/minamikashiwa/
+  logo: /img/dojos/coderdojo-minami-kashiwa.png
+  description: 千葉県柏市光ヶ丘で毎月第３土曜日に開催
+  order: 82
+  tags:
+  - Scratch
 - name: 流山 (関東)
   logo: /img/dojos/coderdojo_japan.png
   url: http://www.code-for-nagareyama.org/?cat=11
