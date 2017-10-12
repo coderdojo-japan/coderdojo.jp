@@ -51,7 +51,7 @@
 - name: きたかみ (東北)
   url: https://coderdojo.waraukado.jp/
   logo: /img/dojos/coderdojo-kitakami.jpg
-  description: 岩手県北上市で不定期開催	
+  description: 岩手県北上市で不定期開催
   order: -240
   tags:
   - Scratch
@@ -726,7 +726,7 @@
 - name: 南紀田辺 (近畿)
   url: https://coderdojo-nanki-tanabe.jimdo.com/
   logo: /img/dojos/coderdojo-nanki-tanabe.png
-  description: 和歌山県田辺市で毎月開催	
+  description: 和歌山県田辺市で毎月開催
   order: 335
   tags:
   - Scratch
@@ -905,14 +905,14 @@
   - Java
   - Swift
 - name: 嘉手納 (沖縄)
-  logo: /img/dojos/coderdojo_japan.png
+  logo: /img/dojos/coderdojo_kadena.png
   url: http://coderdojokadena.hatenablog.jp/
   description: 沖縄県中頭郡で毎月開催
   order: 490
   tags:
   - Scratch
-  - Hour of Code
   - LEGO Mindstorms
+  - ラズベリーパイ
 - name: 宮古島 (沖縄)
   logo: https://pbs.twimg.com/profile_images/793750335462309888/tFO80-u_.jpg
   url: http://coderdojo-miyakojima.com/
