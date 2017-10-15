@@ -1,5 +1,6 @@
 <% provide(:title, @doc.title) %>
-<% provide(:url,   request.url) %>
+<% provide(:url,   @url) %>
+
 <div class="container" style="line-height: 1.9em;">
 <section class="keiyaku" style="padding: 50px 0px 50px 0px;">
   <%= raw @content %>
