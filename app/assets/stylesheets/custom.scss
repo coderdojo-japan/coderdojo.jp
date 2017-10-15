@@ -342,11 +342,14 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding: 1.5em;
+    line-height: 1.7em;
+    font-size: 18px;
     background: #fff
 }
 
 .introduction > p {
     margin-bottom: .8em;
+    line-height: 1.7em;
     text-align: center
 }
 
@@ -354,7 +357,9 @@ a {
     max-width: 800px;
     margin: auto;
     padding: 0.5em 2em;
-    padding-bottom: 1.5em
+    padding-bottom: 1.5em;
+    line-height: 1.7em;
+    font-size: 18px;
 }
 
 .list > ul {
