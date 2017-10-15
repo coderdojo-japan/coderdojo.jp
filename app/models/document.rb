@@ -1,31 +1,32 @@
 class Document
-  attr_reader :id, :version
+  attr_reader :id, :filename
   DOCS_PATH = 'db/docs'
+  URL_PATH  = 'docs'
 
   class << self
     def all
       Dir.glob("#{DOCS_PATH}/*.md").map do |filename|
-        File.basename(filename, '.*')
+        Document.new(File.basename(filename, '.*'))
       end
     end
   end
 
-  def initialize(filename, version='1.0.0')
+  def initialize(filename)
     @filename = filename
-    @version  = version
+    @content  = content
+    @title    = title
   end
 
   def path
-    "#{DOCS_PATH}/#{@filename}.md"
+    "#{DOCS_PATH}/#{self.filename}.md"
   end
 
-  def valid_file_name?
-    self.class.all.include?(@filename)
+  def url
+    "#{URL_PATH}/#{self.filename}"
   end
 
   def exists?
     return false if path.include? "\u0000"
-    return false unless valid_file_name?
     File.exists?(path)
   end
 
@@ -34,6 +35,6 @@ class Document
   end
 
   def content
-    @content ||= valid_file_name? ? File.read(path) : ''
+    @content ||= exists? ? File.read(path) : ''
   end
 end
