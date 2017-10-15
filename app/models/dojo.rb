@@ -1,6 +1,6 @@
 class Dojo < ApplicationRecord
-  NUM_OF_COUNTRIES   = "69"
-  NUM_OF_WHOLE_DOJOS = "1,250"
+  NUM_OF_COUNTRIES   = "75"
+  NUM_OF_WHOLE_DOJOS = "1,400"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
   has_one :dojo_event_service
