@@ -4,13 +4,14 @@ RSpec.describe DocsController, type: :controller do
   describe "GET #index" do
     it "show @docs" do
       get :index
-      expect(assigns(:docs)).to eq Document.all
+      expect(assigns(:docs).first.title).to eq Document.all.first.title
     end
   end
   describe "GET #show" do
     it "show @content" do
-      get :show, params: { id: 'charter' }
-      doc      = Document.new('charter')
+      param    = 'charter'
+      get :show, params: { id: param }
+      doc      = Document.new(param)
       expected = Kramdown::Document.new(doc.content, input: 'GFM').to_html
       expect(assigns(:content)).to eq expected
     end
