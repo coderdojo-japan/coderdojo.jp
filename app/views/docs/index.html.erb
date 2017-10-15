@@ -1,10 +1,15 @@
-<h2>CoderDojo Japan ドキュメント集め</h2>
-<section class='keiyaku'>
-  <ul>
-    <% @docs.each do |doc| %>
-      <li><%= link_to doc, doc_path(doc) %></li>
-    <% end %>
-  </ul>
-</section>
+<% provide(:title, @title) %>
+<% provide(:url,   @url )  %>
+
+<div class="container" style="line-height: 2.2em;">
+  <section class="keiyaku" style="padding: 50px 0px 50px 0px;">
+    <h2 style="text-align: center; padding-bottom: 50px;"><%= @title %></h2>
+    <ul style="font-size: 120%">
+      <% @docs.each do |doc| %>
+	<li><%= link_to doc.title, doc.url %></li>
+      <% end %>
+    </ul>
+  </section>
+</div>
 
 <%= render 'shared/footer_page' %>
