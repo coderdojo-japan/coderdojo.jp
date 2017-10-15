@@ -13,8 +13,6 @@ class Document
 
   def initialize(filename)
     @filename = filename
-    @content  = content
-    @title    = title
   end
 
   def path
@@ -31,7 +29,7 @@ class Document
   end
 
   def title
-    self.content.lines.first[2..-1].strip
+    @title ||= exists? ? self.content.lines.first[2..-1].strip : ''
   end
 
   def content

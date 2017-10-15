@@ -5,13 +5,8 @@ class DocsController < ApplicationController
 
   def show
     filename = params[:id]
-    doc = Document.new(filename)
-    if doc.exists?
-      @content = Kramdown::Document.new(doc.content, input: 'GFM').to_html
-      @title   = doc.title
-      @url     = request.url
-    else
-      redirect_to scrivito_path(Obj.root)
-    end
+    @doc = Document.new(filename)
+    redirect_to scrivito_path(Obj.root) if not @doc.exists?
+    @content = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
   end
 end
