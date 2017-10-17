@@ -21,7 +21,8 @@ namespace :statistics do
 
     loop.with_object([from]) { |_, list|
       nm = list.last.next_month
-      nm > to ? (break list) : (list << nm)
+      raise StopIteration if nm > to
+      list << nm
     }.each { |date|
       Statistics::Aggregation.run(date: date)
     }
