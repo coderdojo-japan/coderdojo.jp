@@ -326,6 +326,13 @@
   order: 30
   tags:
   - Scratch
+- name: 松戸 (関東)
+  logo: /img/dojos/japan.png
+  url: http://code4matsudo.org/coder-dojo-matsudo/2017/10/15/283/
+  description: 千葉県松戸市で不定期開催
+  order: 35
+  tags:
+  - Scratch
 - name: 市川 (関東)
   logo: /img/dojos/ichikawa.jpg
   url: http://ichikawa.coderdojo.chiba.jp
