@@ -54,4 +54,16 @@ namespace :dojos do
 
     YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
   end
+
+  desc 'DBからyamlファイルを生成します'
+  task migrate_adding_id_to_yaml: :environment do
+    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+
+    dojos.each do |dojo|
+      d = Dojo.find_by(name: dojo['name'])
+      dojo['id'] = d.id
+    end
+
+    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+  end
 end
