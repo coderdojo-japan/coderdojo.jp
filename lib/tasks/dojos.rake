@@ -29,6 +29,7 @@ namespace :dojos do
     dojos.each do |dojo|
       d = Dojo.find_by(name: dojo['name']) || Dojo.new
 
+      d.id          = dojo['id']
       d.name        = dojo['name']
       d.email       = ''
       d.order       = dojo['order']
