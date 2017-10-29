@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
   def full_title(page_title)
-    page_title ||= @obj.display_title if @obj && !@obj.permalink.nil?
+    page_title = @obj.display_title if page_title.empty? && @obj && !@obj.permalink.nil?
     if page_title.empty?
       "CoderDojo Japan - 子どものためのプログラミング道場" # Default title
     else
