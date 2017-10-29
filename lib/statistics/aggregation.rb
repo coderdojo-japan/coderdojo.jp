@@ -20,7 +20,7 @@ module Statistics
 
           dojos.each do |dojo|
             cnps.fetch_events(params.merge(series_id: dojo.dojo_event_service.group_id)).each do |e|
-              next unless e.dig('series', 'id') == dojo.dojo_event_service.group_id
+              next unless e.dig('series', 'id').to_s == dojo.dojo_event_service.group_id
 
               EventHistory.create!(dojo_id: dojo.id,
                                    dojo_name: dojo.name,
@@ -47,7 +47,7 @@ module Statistics
 
           dojos.each do |dojo|
             drkp.fetch_events(params.merge(group_id: dojo.dojo_event_service.group_id)).each do |e|
-              next unless e['group'] == dojo.dojo_event_service.group_id
+              next unless e['group'].to_s == dojo.dojo_event_service.group_id
 
               EventHistory.create!(dojo_id: dojo.id,
                                    dojo_name: dojo.name,
