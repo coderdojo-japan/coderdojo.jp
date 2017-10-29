@@ -2,9 +2,9 @@ require 'rails_helper'
 require 'statistics'
 
 RSpec.describe Statistics::Client do
-  include_context 'Use stubs for Faraday'
-
   context 'Connpass' do
+    include_context 'Use stubs for Connpass'
+
     describe '#search' do
       subject { Statistics::Client::Connpass.new.search(keyword: 'coderdojo') }
 
@@ -32,6 +32,8 @@ RSpec.describe Statistics::Client do
   end
 
   context 'Doorkeeper' do
+    include_context 'Use stubs for Doorkeeper'
+
     describe '#search' do
       subject { Statistics::Client::Doorkeeper.new.search(keyword: 'coderdojo') }
 

@@ -2,7 +2,8 @@ require 'rails_helper'
 require 'statistics'
 
 RSpec.describe Statistics::Aggregation do
-  include_context 'Use stubs for Faraday'
+  include_context 'Use stubs for Connpass'
+  include_context 'Use stubs for Doorkeeper'
 
   before(:all) do
     Dojo.delete_all
