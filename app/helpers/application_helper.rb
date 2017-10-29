@@ -32,7 +32,6 @@ module ApplicationHelper
   end
 
   def using_scrivito?
-    # TODO: There may be smarter detection
-    USING_SCRIVITO
+    !@obj.nil?
   end
 end
