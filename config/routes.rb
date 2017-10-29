@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   resources :docs, only: [:index, :show]
