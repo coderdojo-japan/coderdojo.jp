@@ -3,8 +3,8 @@ class Dojo < ApplicationRecord
   NUM_OF_WHOLE_DOJOS = "1,400"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
-  has_one :dojo_event_service
-  has_many :event_histories
+  has_one  :dojo_event_service, dependent: :destroy
+  has_many :event_histories,    dependent: :destroy
 
   serialize :tags
   default_scope -> { order(order: :asc) }
