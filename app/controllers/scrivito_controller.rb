@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-class CmsController < ApplicationController
+class ScrivitoController < ApplicationController
   include ScrivitoHelper
   include Scrivito::ControllerActions
 
