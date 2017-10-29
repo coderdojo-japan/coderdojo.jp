@@ -6,14 +6,10 @@ RSpec.describe Statistics::Aggregation do
 
   before(:all) do
     Dojo.delete_all
-    DojoEventService.delete_all
-    EventHistory.delete_all
   end
 
   after do
     Dojo.delete_all
-    DojoEventService.delete_all
-    EventHistory.delete_all
   end
 
   describe '.run' do
