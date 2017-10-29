@@ -7,11 +7,7 @@
 	content="width=device-width, initial-scale=1,
 		 minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-  <% if @obj && !@obj.permalink.nil?  %>
-    <title><%= @obj.display_title %> - CoderDojo Japan</title>
-  <% else %>
-    <title><%= full_title(yield(:title)) %></title>
-  <% end %>
+  <title><%= full_title(yield(:title)) %></title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -20,21 +16,10 @@
 
   <meta property="fb:admins" content="715330868" />
   <meta property="fb:app_id" content="805184859580207" />
-  <% if @obj && !@obj.permalink.nil? %>
-    <meta property="og:title" content="<%= @obj.display_title %> - CoderDojo Japan">
-    <meta property="og:url"   content="https://coderdojo.jp/<%= @obj.permalink %>">
-  <% else %>
-    <meta property="og:title"       content="<%= full_title(yield(:title)) %>">
-    <meta property="og:url"         content="<%= full_url(yield(:url)) %>">
-  <% end %>
-  
-  <% if @obj && @obj.permalink == "kata" %>
-    <meta name="description"        content="<%= kata_description %>" />
-    <meta property="og:description" content="<%= kata_description %>" />
-  <% else %>
-    <meta name="description"        content="<%= meta_description(yield(:meta_description)) %>" />
-    <meta property="og:description" content="<%= meta_description(yield(:meta_description)) %>" />
-  <% end %>
+  <meta property="og:title"       content="<%= full_title(yield(:title)) %>">
+  <meta property="og:url"         content="<%= full_url(yield(:url)) %>">
+  <meta name="description"        content="<%= meta_description(yield(:meta_description)) %>" />
+  <meta property="og:description" content="<%= meta_description(yield(:meta_description)) %>" />
 
   <meta property="og:type"       content="website">
   <meta property="og:image"      content="https://coderdojo.jp/og-image.png">
