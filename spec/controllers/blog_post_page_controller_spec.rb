@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BlogPostPageController, type: :controller do
   render_views
 
-  xdescribe "GET Blog Post Page" do
+  describe "GET Blog Post Page" do
     it "normal blog post" do
       obj = Obj.find_by_permalink!("news/2016/12/12/new-backend")
       request.for_scrivito_obj(obj)
