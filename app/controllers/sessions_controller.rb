@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-class SessionsController < ApplicationController
+class SessionsController < CmsController
   before_action :logged_in_user, only: [:destroy]
 
   def create
