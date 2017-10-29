@@ -101,5 +101,30 @@ module Statistics
         events
       end
     end
+
+    class Facebook
+      def initialize
+        @client = Koala::Facebook::API.new(ENV.fetch('FACEBOOK_ACCESS_TOKEN'))
+      end
+
+      def fetch_events(group_id:, since_at: nil, until_at: nil)
+        params = {
+          fields: %i(attending_count start_time owner),
+          limit: 100,
+          since: since_at,
+          until: until_at
+        }.compact!
+
+        events = []
+
+        collection = @client.get_object("#{group_id}/events", params)
+        events.push(*collection.to_a)
+        while collection.paging['next'] do
+          events.push(*collection.next_page.to_a)
+        end
+
+        events
+      end
+    end
   end
 end
