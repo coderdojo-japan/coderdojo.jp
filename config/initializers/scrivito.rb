@@ -1,3 +1,4 @@
+USING_SCRIVITO = false
 Scrivito.configure do |config|
   #
   # Uncomment following lines in order to explicitly set the tenant and the API key.
