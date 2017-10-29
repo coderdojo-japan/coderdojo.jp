@@ -16,7 +16,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= scrivito_head_tags %>
+  <%= scrivito_head_tags if using_scrivito? %>
 
   <meta property="fb:admins" content="715330868" />
   <meta property="fb:app_id" content="805184859580207" />
@@ -80,7 +80,7 @@
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
   <%= yield %>
-  <%= scrivito_body_tags %>
+  <%= scrivito_body_tags if using_scrivito? %>
 </body>
 
 <div id="fb-root"></div>

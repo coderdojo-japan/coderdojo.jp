@@ -29,4 +29,9 @@ module ApplicationHelper
   def kata_description
     "全国の CoderDojo で活用されている資料や教材、子ども向けのプログラミングキャンプ・プログラミングコンテスト情報、CoderDojo の立ち上げ方・関わり方など、CoderDojo を中心にして色々なトピックまとめています。"
   end
+
+  def using_scrivito?
+    # TODO: There may be smarter detection
+    USING_SCRIVITO
+  end
 end
