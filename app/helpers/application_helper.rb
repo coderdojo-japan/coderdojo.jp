@@ -10,11 +10,11 @@ module ApplicationHelper
   end
 
   def full_url(page_url)
-    page_url ||= root_url + @obj.permalink if @obj && !@obj.permalink.nil?
+    page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
     if page_url.empty?
       root_url # Default URL
     else
-      page_url
+      root_url + page_url
     end
   end
 
