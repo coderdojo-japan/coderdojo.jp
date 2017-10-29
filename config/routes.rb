@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
 
   # Issue SSL Certification
-  get "/.well-known/acme-challenge/:id" => "page#letsencrypt"
-  get "/.well-known/acme-challenge/:id" => "plain_page#letsencrypt"
+  get "/.well-known/acme-challenge/:id" => "static_pages#letsencrypt"
 
   # Sessions
   get '/logout',       to: 'sessions#destroy'
