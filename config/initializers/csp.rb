@@ -5,8 +5,8 @@ SecureHeaders::Configuration.default do |config|
            *.hatena.ne.jp *.st-hatena.com
            *.slidesharecdn.com *.slideshare.net)
   config.csp = {
-    report_only: Rails.env.production?, # default: false
-    preserve_schemes: true,             # default: false.
+    report_only:      false,
+    preserve_schemes: true, # default: false
 
     default_src: src,
     script_src:  src,
