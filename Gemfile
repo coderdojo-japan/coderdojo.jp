@@ -34,6 +34,7 @@ gem 'faraday_middleware', '0.10'
 group :development do
   gem 'web-console'
   gem 'spring'
+  gem 'listen'
 end
 
 group :development, :test do
