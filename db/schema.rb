@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820090605) do
+ActiveRecord::Schema.define(version: 20171029065909) do
 
   create_table "dojo_event_services", force: :cascade do |t|
     t.integer  "dojo_id",    null: false
     t.integer  "name",       null: false
     t.string   "url"
-    t.integer  "group_id",   null: false
+    t.string   "group_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dojo_id"], name: "index_dojo_event_services_on_dojo_id"
