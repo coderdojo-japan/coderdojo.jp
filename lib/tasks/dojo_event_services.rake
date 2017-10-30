@@ -13,9 +13,9 @@ namespace :dojo_event_services do
         next
       end
 
-      dojo = Dojo.find_by(name: des['dojo_name'])
+      dojo = Dojo.find_by(id: des['dojo_id'])
       unless dojo
-        result[:skipped] << [des['dojo_name'], 'Not found record in `dojos` table']
+        result[:skipped] << [des['dojo_id'], 'Not found record in `dojos` table']
         next
       end
 
@@ -25,13 +25,13 @@ namespace :dojo_event_services do
         insert = true
       end
 
-      dojo.dojo_event_service.assign_attributes(des.except('dojo_name'))
+      dojo.dojo_event_service.assign_attributes(des.except('dojo_id'))
       if dojo.dojo_event_service.changed?
         changes = dojo.dojo_event_service.changes
         dojo.dojo_event_service.save!
-        (insert ? result[:inserted] : result[:updated]) << [des['dojo_name'], changes]
+        (insert ? result[:inserted] : result[:updated]) << [des['dojo_id'], changes]
       else
-        result[:kept] << [des['dojo_name']]
+        result[:kept] << [des['dojo_id']]
       end
     end
 
