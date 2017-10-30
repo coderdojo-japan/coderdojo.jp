@@ -147,6 +147,10 @@
   name: facebook
   group_id:
   url:
+- dojo_id: 114
+  name: google
+  group_id:
+  url:
 - dojo_id: 60
   name: google
   group_id:
@@ -167,6 +171,10 @@
   name: facebook
   group_id:
   url: https://www.facebook.com/pg/CoderDojokashiwa/events/?ref=page_internal
+- dojo_id: 112
+  name: google
+  group_id:
+  url:
 - dojo_id: 24
   name: google
   group_id:
@@ -322,6 +330,10 @@
   name: connpass
   group_id: 3612
   url: https://coderdojotondabayashi.connpass.com/
+- dojo_id: 110
+  name: connpass
+  group_id: 4516
+  url: https://coderdojo-sennan.connpass.com/
 - dojo_id: 38
   name: facebook
   group_id:
@@ -379,10 +391,18 @@
   name: none
   group_id:
   url:
+- dojo_id: 111
+  name: google
+  group_id:
+  url:
 - dojo_id: 102
   name: facebook
   group_id:
   url: https://www.facebook.com/pg/CoderDojoFukuoka/events/?ref=page_internal
+- dojo_id: 113
+  name: facebook
+  group_id:
+  url: https://www.facebook.com/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%E3%82%82%E3%82%82%E3%81%A1Coderdojo-momochi-1928416637480111/
 - dojo_id: 54
   name: connpass
   group_id: 3045
