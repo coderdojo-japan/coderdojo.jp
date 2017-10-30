@@ -13,6 +13,7 @@ RSpec.describe BlogPostPageController, type: :controller do
       expect(response).to_not render_template partial: "sitemap_sotechsha"
       expect(response).to render_template partial: "_footer", count:1
     end
+
     it "sotechsha post" do
       obj = Obj.find_by_permalink!("sotechsha/0")
       request.for_scrivito_obj(obj)
