@@ -12,6 +12,7 @@
 .keiyaku > h2 {
   counter-reset: keiyaku-paragraph;
   counter-increment: keiyaku-chapter;
+  margin-top: 1.2em;
 }
 .keiyaku > h2::before {
   //content: "\7B2C" counter(keiyaku-chapter) "\6761\FF08";

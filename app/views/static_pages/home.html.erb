@@ -18,7 +18,7 @@
     <li>Arduino, Raspberry Pi など</li>
   </ul>
   <br />
-  <p>道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢はとても大事です。</p>
+  <p>道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢はとても大切です。</p>
   <p>道場の特徴については、次のガイダンスを参考にしてください。</p>
   <div class="text-center">
     <iframe src="https://www.slideshare.net/slideshow/embed_code/key/FAXoW4pBq172mQ" width="595" height="388" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
@@ -28,26 +28,26 @@
     <ul style="margin-bottom:30px;">
       <li><a href="https://www.youtube.com/watch?v=VEcFnEYT6mQ">CoderDojoってなんかのおぅ？</a> (YouTube)</li>
       <li><a href="http://bakemono.jp/reading/blog/web/2256/">CoderDojoとは? 運営者に話を聞いてみた!</a> (バケモノ.jp)</li>
-      <li><a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場 CoderDojo をはじめてみませんか</a> (ICT教育ニュース)</li>
+      <li><a href="http://ict-enews.net/zoomin/17coderdojo/">CoderDojoをはじめてみませんか</a> (ICT教育ニュース)</li>
     </ul>
     <div class="home-point-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/gLDue2xb1j8?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
-  <p><a href='http://www.coderdojo-kashiwa.com/'>CoderDojo Kashiwa</a> が制作した動画です。<br />道場の雰囲気が伝われば幸いです ;)</p>
+  <p><a href='http://www.coderdojo-kashiwa.com/'>CoderDojo Kashiwa</a> が制作した動画です。道場の雰囲気が伝われば幸いです ;)</p>
   
   <ol style="list-style: none; margin-top: 30px;">
     <li style="display: inline-block; line-height: 11px; margin-left: -35px;">
-      <div class="fb-like" data-href="https://coderdojo.jp" data-layout="button_count"
+      <div class="fb-like" data-href="<%= full_url(yield(:url)) %>" data-layout="button_count"
 	   data-action="like" data-show-faces="true" data-share="true"></div></li>
     <li style="display: inline-block;">
       <a href="https://twitter.com/share" class="twitter-share-button"
-	 data-url="<%= @obj.binary_url %>"
+	 data-url="<%= full_url(yield(:url)) %>"
 	 data-hashtags="CoderDojo"
-	 data-text="CoderDojo Japan - 子どものためのプログラミング道場"
+	 data-text="<%= full_title(yield(:title)) %>"
 	 data-lang="ja" data-via="CoderDojoJapan" width="100">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-    <li style="display: inline-block;"><a href="https://b.hatena.ne.jp/entry/<%= @obj.binary_url %>"
+    <li style="display: inline-block;"><a href="http://b.hatena.ne.jp/entry/s/coderdojo.jp/"
 	   class="hatena-bookmark-button"
-	   data-hatena-bookmark-title="CoderDojo Japan - 子どものためのプログラミング道場"
+	   data-hatena-bookmark-title="<%= full_title(yield(:title)) %>"
 	   data-hatena-bookmark-layout="standard-balloon"
 	   data-hatena-bookmark-lang="ja"
 	   title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
@@ -184,7 +184,7 @@
    <section class='detail-introduction'>
      <h2>お問い合わせ</h2>
      <p>取材や支援などのお問い合わせについては、下記からご連絡ください 📨<br />
-       メールの場合は担当の安川まで (<i>yohei@coderdojo.jp</i>) ご連絡ください。</p>
+       メールの場合は担当の安川まで (<i>info@coderdojo.jp</i>) ご連絡ください。</p>
 
     <!-- Contact Form via Wufoo -->
     <div id="contact"></div>

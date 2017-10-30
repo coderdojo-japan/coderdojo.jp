@@ -5,15 +5,11 @@ RSpec.describe Statistics::Aggregation do
   include_context 'Use stubs for Faraday'
 
   before(:all) do
-    Dojo.delete_all
-    DojoEventService.delete_all
-    EventHistory.delete_all
+    Dojo.destroy_all
   end
 
   after do
-    Dojo.delete_all
-    DojoEventService.delete_all
-    EventHistory.delete_all
+    Dojo.destroy_all
   end
 
   describe '.run' do

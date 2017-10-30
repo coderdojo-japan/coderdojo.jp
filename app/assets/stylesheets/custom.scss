@@ -342,11 +342,14 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding: 1.5em;
+    line-height: 1.7em;
+    font-size: 17.2px;
     background: #fff
 }
 
 .introduction > p {
     margin-bottom: .8em;
+    line-height: 1.7em;
     text-align: center
 }
 
@@ -354,7 +357,9 @@ a {
     max-width: 800px;
     margin: auto;
     padding: 0.5em 2em;
-    padding-bottom: 1.5em
+    padding-bottom: 1.5em;
+    line-height: 1.7em;
+    font-size: 18px;
 }
 
 .list > ul {
@@ -404,8 +409,9 @@ a {
 
 .dojo {
     display: inline-block;
-    width: 85%;
-    margin: 10px;
+    height: 300px;
+    width: 45%;
+    margin: 5px;
     padding: 15px 0;
     background: #fff;
     position: relative;
@@ -437,7 +443,8 @@ a {
 @media only screen and (min-width:560px) {
     .dojo {
         width: 220px;
-        height: 275px
+        height: 275px;
+        margin: 10px;
     }
 }
 

@@ -19,28 +19,43 @@ Fulfill the requirements, setup by following the instructions, and send a pull r
 
 - [Ruby](http://ruby-lang.org/)
 - [Ruby on Rails](http://rubyonrails.org/)
-- [Scrivito](https://scrivito.com/)
-   - Signup and get your own keys to connect Scrivito.
-   - Or, ask [@yasulab](https://github.com/yasulab) for production keys
+- [Scrivito](https://scrivito.com/) (Option)
 
 ### Setup 
 
 1. Fork and clone this repository.
-2. Set Scrivito's secret keys to `SCRIVITO_TENANT` and `SCRIVITO_API_KEY`
-3. `$ bundle install --without production`
-4. `$ bundle exec rails db:migrate`
-5. `$ bundle exec rails dojos:update_db_by_yaml`
-6. `$ bundle exec rails test`
-7. `$ rails server`
-8. Access to [localhost:3000](http://localhost:3000).
+1. `$ bundle install --without production`
+1. `$ bundle exec rails db:migrate`
+1. `$ bundle exec rails dojos:update_db_by_yaml`
+1. `$ bundle exec rails test`
+1. `$ rails server`
+1. Access to [localhost:3000](http://localhost:3000).
 
 If you successfully set up, you can see the same page as [coderdojo.jp](http://coderdojo.jp).
+
+### Scrivito
+
+Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
+
+- `/kata`
+- `/docs/*`
+- `/news/*`
+
+CMS enables wider people to contribute to editing contents,   
+but on the other hand, this requires Scrivito API Keys for    
+engineers to join developing Scrivito-used pages like above.
+
+If interested in developing them, contact [@yasulab](https://github.com/yasulab) to
+get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
+
 
 ## Contributors
 
 Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
-replaced/developed by [YassLab](https://yasslab.jp/) team in 2016, and   
+being developed by [YassLab](https://yasslab.jp/) team since 2016, and   
 had been migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
+
+[![YassLab Logo](https://yasslab.jp/img/logo_800x200.png)](https://yasslab.jp/)
 
 ## License
 

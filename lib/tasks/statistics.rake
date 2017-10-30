@@ -2,23 +2,30 @@ require_relative '../statistics.rb'
 
 namespace :statistics do
   desc '月次のイベント履歴を集計します'
-  task :aggregation, [:yyyymm] => :environment do |tasks, args|
-    date = Time.current.prev_month.beginning_of_month
-    if args[:yyyymm].present?
-      date = %w(%Y%m %Y/%m %Y-%m).map do |fmt|
-               begin
-                 Time.zone.strptime(args[:yyyymm], fmt)
-               rescue ArgumentError
-               end
-             end.compact.first
-    end
+  task :aggregation, [:from_yyyymm, :to_yyyymm] => :environment do |tasks, args|
+    date_from_str = -> (str) {
+      d = %w(%Y%m %Y/%m %Y-%m).map { |fmt|
+        begin
+          Time.zone.strptime(str, fmt)
+        rescue ArgumentError
+        end
+      }.compact.first
+      raise ArgumentError, "Invalid format: `#{str}`" if d.nil?
+      d
+    }
 
-    raise ArgumentError, "Invalid format: #{args[:yyyymm]}" if date.nil?
+    from = (args[:from_yyyymm] ? date_from_str.call(args[:from_yyyymm]) : Time.current.prev_month).beginning_of_month
+    to   = (args[:to_yyyymm]   ? date_from_str.call(args[:to_yyyymm])   : Time.current.prev_month).end_of_month
 
+    EventHistory.where(evented_at: from..to).delete_all
 
-    EventHistory.where(evented_at: date.beginning_of_month..date.end_of_month).delete_all
-
-    Statistics::Aggregation.run(date: date)
+    loop.with_object([from]) { |_, list|
+      nm = list.last.next_month
+      raise StopIteration if nm > to
+      list << nm
+    }.each { |date|
+      Statistics::Aggregation.run(date: date)
+    }
   end
 
   desc 'キーワードからイベント情報を検索します'

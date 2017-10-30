@@ -1,5 +1,5 @@
 # CoderDojo Foundation charter for CoderDojo
-<center>(<a href="charter">日本語訳</a>)</center>
+<center>(<a href="charter">日本語訳を読む</a>)</center>
 <br/>
 
 All Dojos are required to agree with the below CoderDojo Charter. This Charter encompasses the basic ethos and core aspects of the CoderDojo movement, which all Dojos are founded on. The introduction of the Charter was announced by co-founder James Whelton to the CoderDojo Organisers Group on the 3rd of December 2013.

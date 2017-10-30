@@ -18,6 +18,7 @@ db/test
 /log/*
 !/log/.keep
 /tmp
+public/assets/*
 .DS_Store
 
 #Enviormental variable

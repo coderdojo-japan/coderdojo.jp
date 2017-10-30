@@ -1,5 +1,5 @@
-# CoderDojo 憲章<br/>
-<center>(<a href="charter_en">English</a>)</center>
+# CoderDojo 憲章
+<center>(<a href="charter_en">英語の原文を読む</a>)</center>
 <br/>
 
 すべての道場は、次の CoderDojo Charter (憲章) に同意する必要があります。 この憲章には、すべての道場の基礎となる CoderDojo の基本的理念と重要事項を網羅しています。 本憲章は2013年12月3日に、CoderDojo の共同設立者であるジェームズ・ウェルトンによって、CoderDojo グループ全体に対して公表されました。

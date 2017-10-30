@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file,
+  # see http://guides.rubyonrails.org/routing.html
+
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   resources :docs, only: [:index, :show]
+
+  # Static Pages
+  root "static_pages#home"
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
   get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
 
   # Issue SSL Certification
-  get "/.well-known/acme-challenge/:id" => "page#letsencrypt"
-  get "/.well-known/acme-challenge/:id" => "plain_page#letsencrypt"
+  get "/.well-known/acme-challenge/:id" => "static_pages#letsencrypt"
 
   # Sessions
   get '/logout',       to: 'sessions#destroy'

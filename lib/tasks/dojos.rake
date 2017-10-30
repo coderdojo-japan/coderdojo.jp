@@ -29,6 +29,7 @@ namespace :dojos do
     dojos.each do |dojo|
       d = Dojo.find_by(name: dojo['name']) || Dojo.new
 
+      d.id          = dojo['id']
       d.name        = dojo['name']
       d.email       = ''
       d.order       = dojo['order']
@@ -50,6 +51,21 @@ namespace :dojos do
     # Dojo column should start with 'name' for human-readability
     dojos.map! do |dojo|
       dojo.sort_by{|a,b| a.last}.to_h
+    end
+
+    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+  end
+
+  desc 'DBからyamlファイルを生成します'
+  task migrate_adding_id_to_yaml: :environment do
+    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+
+    dojos.map! do |dojo|
+      d = Dojo.find_by(name: dojo['name'])
+      new_dojo = {}
+      new_dojo['id'] = d.id
+      new_dojo.merge!(dojo)
+      new_dojo
     end
 
     YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))

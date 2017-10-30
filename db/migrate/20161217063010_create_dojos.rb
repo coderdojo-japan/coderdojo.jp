@@ -1,4 +1,4 @@
-class CreateDojos < ActiveRecord::Migration
+class CreateDojos < ActiveRecord::Migration[4.2]
   def change
     create_table :dojos do |t|
       t.string  :name
