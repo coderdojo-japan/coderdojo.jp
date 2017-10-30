@@ -24,7 +24,7 @@
   url: https://coderdojoktm.connpass.com
 - dojo_id: 3
   name: facebook
-  group_id:
+  group_id: 542546935853207
   url: https://www.facebook.com/pg/CoderdojoIzumi/events/?ref=page_internal
 - dojo_id: 90
   name: none
@@ -32,15 +32,15 @@
   url:
 - dojo_id: 85
   name: facebook
-  group_id:
+  group_id: 1379707208756830
   url: https://www.facebook.com/pg/coderdojonatori/events/?ref=page_internal
 - dojo_id: 4
   name: facebook
-  group_id:
+  group_id: 1215241118487800
   url: https://www.facebook.com/pg/coderdojo.tome/events/?ref=page_internal
 - dojo_id: 59
   name: facebook
-  group_id:
+  group_id: 247957532245205
   url: https://www.facebook.com/pg/coderdojoNakaniida/events/?ref=page_internal
 - dojo_id: 74
   name: owned
@@ -52,11 +52,11 @@
   url: http://cdaizuentry.peatix.com
 - dojo_id: 5
   name: facebook
-  group_id:
+  group_id: 1238071152876251
   url: https://www.facebook.com/pg/CoderDojoNiigata/events/?ref=page_internal
 - dojo_id: 6
   name: facebook
-  group_id:
+  group_id: 377006519312870
   url: https://www.facebook.com/pg/coderdojo.kanazawa/events/?ref=page_internal
 - dojo_id: 7
   name: owned
@@ -68,7 +68,7 @@
   url:
 - dojo_id: 73
   name: facebook
-  group_id:
+  group_id: 193975261081844
   url: https://www.facebook.com/pg/coderdojo.hitachinaka/events/?ref=page_internal
 - dojo_id: 65
   name: connpass
@@ -96,7 +96,7 @@
   url:
 - dojo_id: 12
   name: facebook
-  group_id:
+  group_id: 617011185103868
   url: https://www.facebook.com/pg/CoderDojoTokorozawa/events/?ref=page_internal
 - dojo_id: 13
   name: connpass
@@ -144,6 +144,7 @@
   group_id:
   url:
 - dojo_id: 20
+  # coderdojo以外にも募集しているのでそのまま集計できない
   name: facebook
   group_id:
   url:
@@ -169,7 +170,7 @@
   url:
 - dojo_id: 23
   name: facebook
-  group_id:
+  group_id: 472842399443384
   url: https://www.facebook.com/pg/CoderDojokashiwa/events/?ref=page_internal
 - dojo_id: 112
   name: google
@@ -185,7 +186,7 @@
   url:
 - dojo_id: 86
   name: facebook
-  group_id:
+  group_id: 880706025404127
   url: https://www.facebook.com/pg/coderdojofunabashi/events/?ref=page_internal
 - dojo_id: 83
   name: google
@@ -213,11 +214,11 @@
   url: https://coderdojo-fujisawa.doorkeeper.jp
 - dojo_id: 88
   name: facebook
-  group_id:
+  group_id: 124249914820641
   url: https://www.facebook.com/pg/coderdojo.kofu/events/?ref=page_internal
 - dojo_id: 87
   name: facebook
-  group_id:
+  group_id: 1634610396557264
   url: https://www.facebook.com/pg/CoderDojoAzumino/events/?ref=page_internal
 - dojo_id: 27
   name: connpass
@@ -225,7 +226,7 @@
   url: https://coderdojo-shiojiri.connpass.com/
 - dojo_id: 94
   name: facebook
-  group_id:
+  group_id: 104207190171589
   url: https://www.facebook.com/pg/CoderDojoSuwako/events/?ref=page_internal
 - dojo_id: 28
   name: kokucheese
@@ -308,7 +309,7 @@
   url: https://coderdojo-nishinomiya.doorkeeper.jp
 - dojo_id: 43
   name: facebook
-  group_id:
+  group_id: 122178467942470
   url: https://www.facebook.com/pg/CoderDojoNamba/events/?ref=page_internal
 - dojo_id: 44
   name: doorkeeper
@@ -316,7 +317,7 @@
   url: https://coderdojo-hommachi.doorkeeper.jp
 - dojo_id: 45
   name: facebook
-  group_id:
+  group_id: 281889288840369
   url: https://www.facebook.com/pg/coderdojo.nishinari.osaka/events/?ref=page_internal
 - dojo_id: 101
   name: none
@@ -336,7 +337,7 @@
   url: https://coderdojo-sennan.connpass.com/
 - dojo_id: 38
   name: facebook
-  group_id:
+  group_id: 254235038032617
   url: https://www.facebook.com/pg/coderdojo.kumano/events/?ref=page_internal
 - dojo_id: 99
   name: none
@@ -344,7 +345,7 @@
   url:
 - dojo_id: 47
   name: facebook
-  group_id:
+  group_id: 1794762964139814
   url: https://www.facebook.com/pg/coderdojo.wakayama/events/?ref=page_internal
 - dojo_id: 67
   name: connpass
@@ -397,11 +398,11 @@
   url:
 - dojo_id: 102
   name: facebook
-  group_id:
+  group_id: 495711777474589
   url: https://www.facebook.com/pg/CoderDojoFukuoka/events/?ref=page_internal
 - dojo_id: 113
   name: facebook
-  group_id:
+  group_id: 1928416637480111
   url: https://www.facebook.com/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%E3%82%82%E3%82%82%E3%81%A1Coderdojo-momochi-1928416637480111/
 - dojo_id: 54
   name: connpass
