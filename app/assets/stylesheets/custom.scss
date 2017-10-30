@@ -409,8 +409,9 @@ a {
 
 .dojo {
     display: inline-block;
-    width: 85%;
-    margin: 10px;
+    height: 300px;
+    width: 45%;
+    margin: 5px;
     padding: 15px 0;
     background: #fff;
     position: relative;
@@ -442,7 +443,8 @@ a {
 @media only screen and (min-width:560px) {
     .dojo {
         width: 220px;
-        height: 275px
+        height: 275px;
+        margin: 10px;
     }
 }
 
