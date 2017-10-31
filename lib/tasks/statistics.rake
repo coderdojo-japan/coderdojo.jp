@@ -2,20 +2,38 @@ require_relative '../statistics.rb'
 
 namespace :statistics do
   desc '月次のイベント履歴を集計します'
-  task :aggregation, [:from_yyyymm, :to_yyyymm] => :environment do |tasks, args|
+  task :aggregation, [:from, :to] => :environment do |tasks, args|
     date_from_str = -> (str) {
-      d = %w(%Y%m %Y/%m %Y-%m).map { |fmt|
+      formats = %w(%Y%m %Y/%m %Y-%m)
+      d = formats.map { |fmt|
         begin
           Time.zone.strptime(str, fmt)
         rescue ArgumentError
+          Time.zone.local(str) if str.length == 4
         end
       }.compact.first
-      raise ArgumentError, "Invalid format: `#{str}`" if d.nil?
+      raise ArgumentError, "Invalid format: `#{str}`, allow format is #{formats.push('%Y').join(' or ')}" if d.nil?
       d
     }
 
-    from = (args[:from_yyyymm] ? date_from_str.call(args[:from_yyyymm]) : Time.current.prev_month).beginning_of_month
-    to   = (args[:to_yyyymm]   ? date_from_str.call(args[:to_yyyymm])   : Time.current.prev_month).end_of_month
+    from = if args[:from]
+             if args[:from].length == 4
+               date_from_str.call(args[:from]).beginning_of_year
+             else
+               date_from_str.call(args[:from]).beginning_of_month
+             end
+           else
+             Time.current.prev_month.beginning_of_month
+           end
+    to = if args[:to]
+           if args[:to].length == 4
+             date_from_str.call(args[:to]).end_of_year
+           else
+             date_from_str.call(args[:to]).end_of_month
+           end
+         else
+           Time.current.prev_month.end_of_month
+         end
 
     EventHistory.where(evented_at: from..to).delete_all
 
