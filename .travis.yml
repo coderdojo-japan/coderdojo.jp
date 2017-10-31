@@ -20,4 +20,3 @@ script:
 env:
   global:
     - TZ='Asia/Tokyo'
-    - FACEBOOK_ACCESS_TOKEN='dummy_token'

@@ -111,8 +111,10 @@ module Statistics
     end
 
     class Facebook
+      class_attribute :access_token
+
       def initialize
-        @client = Koala::Facebook::API.new(ENV.fetch('FACEBOOK_ACCESS_TOKEN'))
+        @client = Koala::Facebook::API.new(self.access_token)
       end
 
       def fetch_events(group_id:, since_at: nil, until_at: nil)
