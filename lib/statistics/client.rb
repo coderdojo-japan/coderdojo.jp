@@ -113,7 +113,7 @@ module Statistics
           limit: 100,
           since: since_at,
           until: until_at
-        }.compact!
+        }.compact
 
         events = []
 
