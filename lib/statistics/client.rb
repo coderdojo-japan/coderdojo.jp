@@ -1,5 +1,7 @@
 module Statistics
   class Client
+    class APIRateLimitError < ::StandardError; end
+
     class_attribute :debug
     self.debug = false
 
@@ -99,6 +101,12 @@ module Statistics
         end
 
         events
+      rescue Faraday::ClientError => e
+        if e.response[:status] == 429
+          raise Client::APIRateLimitError
+        else
+          raise e
+        end
       end
     end
   end
