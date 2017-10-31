@@ -9,7 +9,7 @@ namespace :dojo_event_services do
     list.each do |des|
       unless DojoEventService.names.keys.include?(des['name'])
         event_names = DojoEventService.names.keys.map {|s| "`#{s}`" }
-        result[:skipped] << [des['dojo_name'], "Not used #{event_names.join(' or ')}"]
+        result[:skipped] << [des['dojo_id'], "Not used #{event_names.join(' or ')}"]
         next
       end
 
