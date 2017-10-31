@@ -145,7 +145,7 @@
   url:
 - dojo_id: 20
   # coderdojo以外にも募集しているのでそのまま集計できない
-  name: facebook
+  name: #facebook
   group_id:
   url:
 - dojo_id: 114
