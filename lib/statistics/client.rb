@@ -119,7 +119,7 @@ module Statistics
 
         collection = @client.get_object("#{group_id}/events", params)
         events.push(*collection.to_a)
-        while collection.paging['next'] do
+        while !collection.empty? && collection.paging['next'] do
           events.push(*collection.next_page.to_a)
         end
 
