@@ -44,15 +44,8 @@ namespace :statistics do
       raise StopIteration if nm > to
       list << nm
     }.each { |date|
-      begin
-        puts "Aggregate for #{date.strftime('%Y/%m')}"
-        Statistics::Aggregation.run(date: date)
-      rescue Statistics::Client::APIRateLimitError
-        puts 'API rate limit exceeded.'
-        puts "This task will retry in 60 seconds from now(#{Time.zone.now})."
-        sleep 60
-        retry
-      end
+      puts "Aggregate for #{date.strftime('%Y/%m')}"
+      Statistics::Aggregation.run(date: date)
     }
   end
 

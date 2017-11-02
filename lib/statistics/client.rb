@@ -1,7 +1,5 @@
 module Statistics
   class Client
-    class APIRateLimitError < ::StandardError; end
-
     class_attribute :debug
     self.debug = false
 
@@ -81,31 +79,34 @@ module Statistics
       end
 
       def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
-        params = {
-          page: 1,
-          since: since_at,
-          until: until_at
-        }
-        events = []
+        begin
+          params = {
+            page: 1,
+            since: since_at,
+            until: until_at
+          }
+          events = []
 
-        loop do
-          part = @client.get("groups/#{group_id}/events", params)
+          loop do
+            part = @client.get("groups/#{group_id}/events", params)
 
-          break if part.size.zero?
+            break if part.size.zero?
 
-          events.push(*part.map { |e| e['event'] })
+            events.push(*part.map { |e| e['event'] })
 
-          break if part.size < 25   # 25 items / 1 request
+            break if part.size < 25   # 25 items / 1 request
 
-          params[:page] += 1
-        end
+            params[:page] += 1
+          end
 
-        events
-      rescue Faraday::ClientError => e
-        if e.response[:status] == 429
-          raise Client::APIRateLimitError
-        else
-          raise e
+          events
+        rescue Faraday::ClientError => e
+          raise e unless e.response[:status] == 429
+
+          puts 'API rate limit exceeded.'
+          puts "This task will retry in 60 seconds from now(#{Time.zone.now})."
+          sleep 60
+          retry
         end
       end
     end
