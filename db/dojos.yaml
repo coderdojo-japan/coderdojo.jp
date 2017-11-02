@@ -874,6 +874,16 @@
   - Scratch
   - ラズベリーパイ
   - Webサイト
+- name: 大山 (中国)
+  logo: /img/dojos/japan.png 
+  url: https://www.facebook.com/Coderdojo.daisen/
+  description: 鳥取県西部地区を中心に毎月開催
+  order: 385
+  tags:
+  - Scratch
+  - Ruby
+  - Swift
+  - ラズベリーパイ
 - id: 81
   name: 岡山 岡南 (中国)
   logo: "/img/dojos/okayama.png"
