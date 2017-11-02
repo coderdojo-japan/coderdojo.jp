@@ -16,6 +16,10 @@ namespace :statistics do
       d
     }
 
+    notify_idobata = -> (msg) {
+      puts `curl --data-urlencode "source=#{msg}" -s #{ENV['IDOBATA_HOOK_URL']} -o /dev/null -w "idobata: %{http_code}"` if ENV.key?('IDOBATA_HOOK_URL')
+    }
+
     from = if args[:from]
              if args[:from].length == 4
                date_from_str.call(args[:from]).beginning_of_year
@@ -39,14 +43,20 @@ namespace :statistics do
 
     EventHistory.where(evented_at: from..to).delete_all
 
-    loop.with_object([from]) { |_, list|
-      nm = list.last.next_month
-      raise StopIteration if nm > to
-      list << nm
-    }.each { |date|
-      puts "Aggregate for #{date.strftime('%Y/%m')}"
-      Statistics::Aggregation.run(date: date)
-    }
+    begin
+      loop.with_object([from]) { |_, list|
+        nm = list.last.next_month
+        raise StopIteration if nm > to
+        list << nm
+      }.each { |date|
+        puts "Aggregate for #{date.strftime('%Y/%m')}"
+        Statistics::Aggregation.run(date: date)
+      }
+
+      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計を行いました")
+    rescue
+      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計でエラーが発生しました")
+    end
   end
 
   desc 'キーワードからイベント情報を検索します'
