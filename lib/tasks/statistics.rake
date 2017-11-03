@@ -54,8 +54,9 @@ namespace :statistics do
       }
 
       notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計を行いました")
-    rescue
-      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計でエラーが発生しました")
+    rescue => e
+      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計でエラーが発生しました\n#{e.message}")
+      raise e
     end
   end
 
