@@ -83,9 +83,9 @@
   group_id: 5238
   url: https://coderdojo.doorkeeper.jp
 - dojo_id: 10
-  name: owned
-  group_id:
-  url: https://coderdojo.hanare-hibari.info
+  name: facebook
+  group_id: 497400593610071
+  url: https://www.facebook.com/coderdojo.hibarigaoka/
 - dojo_id: 11
   name: doorkeeper
   group_id: 6509
