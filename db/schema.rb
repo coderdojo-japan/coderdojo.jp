@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171103042807) do
     t.integer "dojo_id", null: false
     t.integer "name", null: false
     t.string "url"
-    t.integer "group_id", null: false
+    t.string "group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dojo_id"], name: "index_dojo_event_services_on_dojo_id"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20171103042807) do
     t.integer "dojo_id", null: false
     t.string "dojo_name", null: false
     t.string "service_name", null: false
-    t.integer "service_group_id", null: false
-    t.integer "event_id", null: false
+    t.string "service_group_id", null: false
+    t.string "event_id", null: false
     t.string "event_url", null: false
     t.integer "participants", null: false
     t.datetime "evented_at", null: false

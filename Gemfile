@@ -31,6 +31,8 @@ gem 'faraday'
 # https://github.com/bundler/bundler/issues/5332
 gem 'faraday_middleware', '0.10'
 
+gem 'koala'
+
 group :development do
   gem 'web-console'
   gem 'spring'

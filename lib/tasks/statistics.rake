@@ -16,6 +16,10 @@ namespace :statistics do
       d
     }
 
+    notify_idobata = -> (msg) {
+      puts `curl --data-urlencode "source=#{msg}" -s #{ENV['IDOBATA_HOOK_URL']} -o /dev/null -w "idobata: %{http_code}"` if ENV.key?('IDOBATA_HOOK_URL')
+    }
+
     from = if args[:from]
              if args[:from].length == 4
                date_from_str.call(args[:from]).beginning_of_year
@@ -35,23 +39,24 @@ namespace :statistics do
            Time.current.prev_month.end_of_month
          end
 
+    Statistics::Client::Facebook.access_token = Koala::Facebook::OAuth.new(ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']).get_app_access_token
+
     EventHistory.where(evented_at: from..to).delete_all
 
-    loop.with_object([from]) { |_, list|
-      nm = list.last.next_month
-      raise StopIteration if nm > to
-      list << nm
-    }.each { |date|
-      begin
+    begin
+      loop.with_object([from]) { |_, list|
+        nm = list.last.next_month
+        raise StopIteration if nm > to
+        list << nm
+      }.each { |date|
         puts "Aggregate for #{date.strftime('%Y/%m')}"
         Statistics::Aggregation.run(date: date)
-      rescue Statistics::Client::APIRateLimitError
-        puts 'API rate limit exceeded.'
-        puts "This task will retry in 60 seconds from now(#{Time.zone.now})."
-        sleep 60
-        retry
-      end
-    }
+      }
+
+      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計を行いました")
+    rescue
+      notify_idobata.call("#{from.strftime('%Y/%m')}~#{to.strftime('%Y/%m')}のイベント履歴の集計でエラーが発生しました")
+    end
   end
 
   desc 'キーワードからイベント情報を検索します'

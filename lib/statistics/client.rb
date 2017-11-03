@@ -1,7 +1,5 @@
 module Statistics
   class Client
-    class APIRateLimitError < ::StandardError; end
-
     class_attribute :debug
     self.debug = false
 
@@ -81,32 +79,62 @@ module Statistics
       end
 
       def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
+        begin
+          params = {
+            page: 1,
+            since: since_at,
+            until: until_at
+          }
+          events = []
+
+          loop do
+            part = @client.get("groups/#{group_id}/events", params)
+
+            break if part.size.zero?
+
+            events.push(*part.map { |e| e['event'] })
+
+            break if part.size < 25   # 25 items / 1 request
+
+            params[:page] += 1
+          end
+
+          events
+        rescue Faraday::ClientError => e
+          raise e unless e.response[:status] == 429
+
+          puts 'API rate limit exceeded.'
+          puts "This task will retry in 60 seconds from now(#{Time.zone.now})."
+          sleep 60
+          retry
+        end
+      end
+    end
+
+    class Facebook
+      class_attribute :access_token
+
+      def initialize
+        @client = Koala::Facebook::API.new(self.access_token)
+      end
+
+      def fetch_events(group_id:, since_at: nil, until_at: nil)
         params = {
-          page: 1,
+          fields: %i(attending_count start_time owner),
+          limit: 100,
           since: since_at,
           until: until_at
-        }
+        }.compact
+
         events = []
 
-        loop do
-          part = @client.get("groups/#{group_id}/events", params)
-
-          break if part.size.zero?
-
-          events.push(*part.map { |e| e['event'] })
-
-          break if part.size < 25   # 25 items / 1 request
-
-          params[:page] += 1
+        collection = @client.get_object("#{group_id}/events", params)
+        events.push(*collection.to_a)
+        while !collection.empty? && collection.paging['next'] do
+          events.push(*collection.next_page.to_a)
         end
 
         events
-      rescue Faraday::ClientError => e
-        if e.response[:status] == 429
-          raise Client::APIRateLimitError
-        else
-          raise e
-        end
       end
     end
   end
