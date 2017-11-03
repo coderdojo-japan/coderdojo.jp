@@ -36,6 +36,7 @@ namespace :dojo_event_services do
     end
 
     # Dump result
+    result.except!(:kept, :skipped) unless ENV.key?('DEBUG')
     sorted = result.sort_by {|_, v| v.length }.reverse.to_h
     puts
     sorted.each do |k, v|
