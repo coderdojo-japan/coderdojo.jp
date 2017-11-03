@@ -3,6 +3,7 @@ class Dojo < ApplicationRecord
   NUM_OF_WHOLE_DOJOS = "1,400"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
+  belongs_to :prefecture
   has_one  :dojo_event_service, dependent: :destroy
   has_many :event_histories,    dependent: :destroy
 

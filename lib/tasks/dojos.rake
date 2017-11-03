@@ -39,6 +39,7 @@ namespace :dojos do
       d.url         = dojo['url']
       d.created_at  = dojo['createdAt'] ? Time.zone.parse(dojo['createdAt']) : Time.zone.now
       d.updated_at  = Time.zone.now
+      d.prefecture_id = dojo['prefecture_id']
 
       d.save!
     end
