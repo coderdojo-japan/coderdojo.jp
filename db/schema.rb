@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171103041252) do
     t.text "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "prefecture_id"
   end
 
   create_table "event_histories", force: :cascade do |t|
