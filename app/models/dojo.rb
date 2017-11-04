@@ -1,6 +1,7 @@
 class Dojo < ApplicationRecord
-  NUM_OF_COUNTRIES   = "75"
-  NUM_OF_WHOLE_DOJOS = "1,400"
+  NUM_OF_COUNTRIES    = "75"
+  NUM_OF_WHOLE_DOJOS  = "1,400"
+  NUM_OF_WHOLE_EVENTS = "1,555"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
   belongs_to :prefecture
