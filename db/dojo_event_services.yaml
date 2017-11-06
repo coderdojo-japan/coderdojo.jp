@@ -120,6 +120,10 @@
   group_id: 9040
   url: https://coderdojo-suginami.doorkeeper.jp
 - dojo_id: 17
+  name: facebook
+  group_id: 346407898743580
+  url: https://www.facebook.com/coderdojo.tokyo/
+- dojo_id: 17
   name: connpass
   group_id: 1862
   url: https://coderdojo-tokyo.connpass.com/
