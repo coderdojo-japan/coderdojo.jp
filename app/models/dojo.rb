@@ -28,6 +28,11 @@ class Dojo < ApplicationRecord
     return false
   end
 
+  def self.find_by_region(region)
+    prefecture_ids = Prefecture.where(region: region).pluck(:id)
+    Dojo.where(prefecture_id: prefecture_ids)
+  end
+
   private
 
   def number_of_tags
