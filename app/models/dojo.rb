@@ -5,8 +5,8 @@ class Dojo < ApplicationRecord
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
 
   belongs_to :prefecture
-  has_one  :dojo_event_service, dependent: :destroy
-  has_many :event_histories,    dependent: :destroy
+  has_many :dojo_event_services, dependent: :destroy
+  has_many :event_histories,     dependent: :destroy
 
   serialize :tags
   default_scope -> { order(order: :asc) }

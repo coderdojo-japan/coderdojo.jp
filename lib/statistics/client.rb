@@ -121,10 +121,14 @@ module Statistics
       def fetch_events(group_id:, since_at: nil, until_at: nil)
         params = {
           fields: %i(attending_count start_time owner),
-          limit: 100,
-          since: since_at,
-          until: until_at
-        }.compact
+          limit: 100
+        }.tap do |h|
+          # @note FacebookのGraph APIはPDTがタイムゾーンとなっており、
+          #       JST<->PDTのオフセット8時間を追加した時刻をパラメータとする必要がある
+          # @see https://github.com/coderdojo-japan/coderdojo.jp/pull/182#discussion_r148935458
+          h[:since] = since_at.since(8.hours).to_i if since_at
+          h[:until] = until_at.since(8.hours).to_i if until_at
+        end
 
         events = []
 
