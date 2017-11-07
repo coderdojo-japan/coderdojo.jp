@@ -155,6 +155,9 @@ GEM
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
+    rack-user_agent (0.5.2)
+      rack (>= 1.5)
+      woothee (>= 1.0.0)
     rails (5.1.4)
       actioncable (= 5.1.4)
       actionmailer (= 5.1.4)
@@ -294,6 +297,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    woothee (1.7.0)
     xpath (2.1.0)
       nokogiri (~> 1.3)
 
@@ -316,6 +320,7 @@ DEPENDENCIES
   pg
   pry-rails
   rack-host-redirect
+  rack-user_agent
   rails (= 5.1.4)
   rails-controller-testing
   rake

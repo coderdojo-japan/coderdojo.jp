@@ -33,6 +33,8 @@ gem 'faraday_middleware', '0.10'
 
 gem 'koala'
 
+gem 'rack-user_agent'
+
 group :development do
   gem 'web-console'
   gem 'spring'

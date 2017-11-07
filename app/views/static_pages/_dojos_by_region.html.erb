@@ -1,0 +1,20 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <% @regions_and_dojos.each_with_index do |(region, dojos), index| %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="<%= "heading#{index}" %>">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%= "collapse#{index}" %>">
+            <%= region %> - <%= dojos.count %>件のDojoがあります
+          </a>
+        </h4>
+      </div>
+      <div id="<%= "collapse#{index}" %>" class="panel-collapse collapse" role="tabpanel">
+        <div class="panel-body grayscale-bg">
+          <%= render partial: 'dojo', collection: dojos %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
