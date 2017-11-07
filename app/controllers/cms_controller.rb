@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-class ScrivitoController < ApplicationController
+class CmsController < ApplicationController
   include Scrivito::ControllerActions
 
   title ||= ENV['SCRIVITO_WORKSPACE'] || 'DEFAULT_WORKSPACE'

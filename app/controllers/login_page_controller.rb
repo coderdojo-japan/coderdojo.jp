@@ -1,2 +1,2 @@
-class LoginPageController < ScrivitoController
+class LoginPageController < CmsController
 end
