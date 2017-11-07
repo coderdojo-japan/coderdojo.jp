@@ -84,13 +84,9 @@
   <br />
   <h2>全国の道場</h2>
   <br />
-  <% if request.from_smartphone? %>
-    <%= render 'dojos_by_region', locals: { regions_and_dojos: @regions_and_dojos } %>
-  <% else %>
-    <ul class="loaded">
-      <%= render partial: 'dojo', collection: @regions_and_dojos.values.flatten %>
-    </ul>
-  <% end %>
+
+  <%= render 'dojos' %>
+
 </section>
 
 <section class="text-center">
