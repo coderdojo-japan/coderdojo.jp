@@ -285,6 +285,18 @@
   - Minecraft
   - CS Unplugged
   - マルチメディア
+- id: 117
+  name: 立川 (関東)
+  prefecture_id: 13
+  url: https://coderdojotachikawa.github.io/
+  logo: "/img/dojos/tachikawa.jpg"
+  description: 東京都立川市で毎月開催
+  order: -45
+  tags:
+  - Scratch
+  - Minecraft
+  - ラズベリーパイ
+  - Arduino
 - id: 14
   name: 八王子 (関東)
   prefecture_id: 13
