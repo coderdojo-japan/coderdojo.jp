@@ -375,10 +375,13 @@
   order: 10
   tags:
   - Scratch
+  - Viscuit
   - JavaScript
   - HTML
   - Ruby
   - ラズベリーパイ
+  - Unity
+  - Python
 - id: 69
   name: 西新宿 (関東)
   prefecture_id: 13
