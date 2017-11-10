@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @dojos = Dojo.all
+    @dojo_count = Dojo.count
+    @regions_and_dojos = Dojo.includes(:prefecture).group_by { |dojo| dojo.prefecture.region }
   end
 
   def letsencrypt
