@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
+  before(:each) do
+    obj = mock_obj(PlainPage)
+    allow(Obj).to receive(:root) { obj }
+  end
+
   describe "GET #create" do
     it "param match" do
       get :create, params: { email: ENV['SCRIVITO_EMAIL'],
