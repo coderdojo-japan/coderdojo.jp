@@ -6,6 +6,27 @@ RSpec.describe SessionsController, type: :controller do
     allow(Obj).to receive(:root) { obj }
   end
 
+  around(:each) do |example|
+    begin
+      @old_email = ENV['SCRIVITO_EMAIL'] if ENV.key?('SCRIVITO_EMAIL')
+      @old_password = ENV['SCRIVITO_PASSWORD'] if ENV.key?('SCRIVITO_PASSWORD')
+      ENV['SCRIVITO_EMAIL'] = 'dummy@example.com'
+      ENV['SCRIVITO_PASSWORD'] = 'dummy_password'
+      example.run
+    ensure
+      if @old_email
+        ENV['SCRIVITO_EMAIL'] = @old_email
+      else
+        ENV.delete('SCRIVITO_EMAIL')
+      end
+      if @old_password
+        ENV['SCRIVITO_PASSWORD'] = @old_password
+      else
+        ENV.delete('SCRIVITO_PASSWORD')
+      end
+    end
+  end
+
   describe "GET #create" do
     it "param match" do
       get :create, params: { email: ENV['SCRIVITO_EMAIL'],
