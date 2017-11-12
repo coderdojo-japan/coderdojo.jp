@@ -44,6 +44,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
   gem 'rake'
   gem 'travis'
   gem 'minitest-retry'
