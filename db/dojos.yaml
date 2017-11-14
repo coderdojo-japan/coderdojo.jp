@@ -862,7 +862,7 @@
 - id: 116
   name: 阿倍野 (近畿)
   prefecture_id: 27
-  logo: "/img/dojos/japan.png"
+  logo: /img/dojos/abeno.png
   url: https://www.facebook.com/CoderDojoAbeno/
   description: 大阪市阿倍野区で毎月開催
   order: 312
