@@ -862,7 +862,7 @@
 - id: 116
   name: 阿倍野 (近畿)
   prefecture_id: 27
-  logo: /img/dojos/abeno.png
+  logo: "/img/dojos/abeno.png"
   url: https://www.facebook.com/CoderDojoAbeno/
   description: 大阪市阿倍野区で毎月開催
   order: 312
@@ -967,6 +967,18 @@
   - ラズベリーパイ
   - Arduino
   - 電子工作
+- id: 119
+  name: 西神戸 (近畿)
+  prefecture_id: 28
+  logo: "/img/dojos/nishi-kobe.png"
+  url: https://www.facebook.com/CoderDojoNishiKobe/
+  description: 神戸市長田区で毎月開催
+  order: 352
+  tags:
+  - Scratch
+  - JavaScript
+  - PHP
+  - Java
 - id: 48
   name: 神戸 (近畿)
   prefecture_id: 28
