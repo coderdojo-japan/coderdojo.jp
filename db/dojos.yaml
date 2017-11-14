@@ -690,6 +690,15 @@
   - Scratch
   - Webサイト
   - ラズベリーパイ
+- id: 118
+  name: 安城 (中部)
+  prefecture_id: 23
+  logo: "/img/dojos/japan.png"
+  url: https://zen.coderdojo.com/dojos/jp/anjo-aichi-prefecture/anjo
+  description: 愛知県安城市keyportで毎月第3土曜日午前に開催
+  order: 217
+  tags:
+  - Scratch
 - id: 30
   name: 豊橋 (中部)
   prefecture_id: 23
