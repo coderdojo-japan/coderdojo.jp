@@ -1146,6 +1146,15 @@
   - PHP
   - LEGO
   - Minecraft
+- id: 120
+  name: 長崎 (九州)
+  prefecture_id: 42
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/CoderDojo%E9%95%B7%E5%B4%8E-395795824185849/
+  description: 長崎県長崎市で毎月1回開催
+  order: 462
+  tags:
+  - Scratch
 - id: 55
   name: 宮崎 (九州)
   prefecture_id: 45
