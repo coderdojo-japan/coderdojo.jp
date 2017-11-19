@@ -1,6 +1,6 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-  <% @regions_and_dojos.each_with_index do |(region, dojos), index| %>
+  <% regions_and_dojos.each_with_index do |(region, dojos), index| %>
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="<%= "heading#{index}" %>">
         <h4 class="panel-title">
