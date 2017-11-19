@@ -9,7 +9,6 @@ class Dojo < ApplicationRecord
   has_many :event_histories,     dependent: :destroy
 
   serialize :tags
-  default_scope -> { order(order: :asc) }
   before_save { self.email = self.email.downcase }
 
   validates :name,        presence: true, length: { maximum: 50 }
