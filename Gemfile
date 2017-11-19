@@ -35,6 +35,8 @@ gem 'koala'
 
 gem 'rack-user_agent'
 
+gem 'rack-attack'
+
 group :development do
   gem 'web-console'
   gem 'spring'
