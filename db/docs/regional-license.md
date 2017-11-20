@@ -4,7 +4,7 @@
 
 <div style="font-size: 80%">
 ※ In any event there is discrepancy between English and Japanese, the English Agreement shall control to the contents herein. <br/>
-※ 英語と日本語で矛盾が生じた場合は、原文のライセンス契約を優先するものとする。<br /><br />
+※ 英語と日本語で矛盾が生じた場合は、原文のライセンス契約を優先するものとする。<br><br>
 </div>
 
 以下のライセンス契約は、地域または国の全ての登録済CoderDojo慈善団体と締結されるものです。本ライセンス契約は、ある地域を代表する組織または非公認のグループと締結する基本的なMOU（覚書）として行使されることになります。
@@ -124,5 +124,5 @@
 
 <img src="/img/sign_ja.png" alt='調印サイン（日本語）'/>
 
-<br />
+<br>
 

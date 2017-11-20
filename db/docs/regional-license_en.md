@@ -125,5 +125,5 @@ This agreement and any dispute or claim arising out of or in connection with it 
 
 <img src="/img/sign_en.png" alt='Signature'/>
 
-<br />
+<br>
 

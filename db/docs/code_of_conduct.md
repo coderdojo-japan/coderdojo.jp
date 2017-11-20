@@ -1,11 +1,11 @@
 # コントリビューター行動規範
 
 <div align="right">
-代表理事　安川要平<br />
+代表理事　安川要平<br>
 最終更新日: 2017/09/03
 </div>
 
-<br />
+<br>
 
 本規範は、別段の定めがある場合を除き、一般社団法人 CoderDojo Japan (以下、当社) が [GitHub Organization](https://github.com/coderdojo-japan) から公開しているあらゆるリポジトリに適用されます。本規範の内容は更新されることがあり、本ページでの変更を持って公表とさせていただきます。本規範の変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/master/db/docs/code_of_conduct.md) よりご確認できます。
 
