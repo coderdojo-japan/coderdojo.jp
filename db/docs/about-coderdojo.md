@@ -1,5 +1,5 @@
 # 子どものためのプログラミング道場<br>『CoderDojo』について
-<center>(<a href="https://www.dropbox.com/sh/yc8nf5ptiuwfunl/AAC5dBGj5OIoIjb8hzS1oxmJa?dl=0">編集用ファイル (Pages, Word) をダウンロード</a>)</center><br>
+<center>(<a href="https://www.dropbox.com/sh/yc8nf5ptiuwfunl/AAC5dBGj5OIoIjb8hzS1oxmJa?dl=0">編集用ファイルをダウンロード</a>)</center><br>
 
 CoderDojo に興味を持って頂きありがとうございます。本資料では CoderDojo の活動内容と連携事例をご紹介しています。様々な組織との継続的な連携に際し、ご参考にして頂ければ幸いです。
 
