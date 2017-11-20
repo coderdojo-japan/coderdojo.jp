@@ -29,7 +29,7 @@ class Document
   end
 
   def title
-    @title ||= exists? ? self.content.lines.first[2..-1].strip : ''
+    @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
   end
 
   def content
