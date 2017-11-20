@@ -6,7 +6,7 @@
     <h2 style="text-align: center; padding-bottom: 50px;"><%= @title %></h2>
     <ul style="font-size: 120%">
       <% @docs.each do |doc| %>
-	<li><%= link_to doc.title.gsub('<br>', ''), doc.url %></li>
+	<li><%= link_to doc.title, doc.url %></li>
       <% end %>
     </ul>
   </section>
