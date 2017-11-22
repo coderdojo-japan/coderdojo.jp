@@ -1,9 +1,15 @@
+<% provide(:url,   @url) %>
+<% provide(:title, '統計情報') %>
+<% provide(:meta_description, '全国の CoderDojo に関する統計情報をまとめています') %>
+
+
+
 <section class="cover">
   <%= image_tag "coderdojo-stats_cover.png", class: "cursor-default" %>
 </section>
 
 <section class="dojos text-center" id="dojos">
-  <br>
+  <bpr>
   <h1>統計情報</h1>
   <h3>全国の道場</h3>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
