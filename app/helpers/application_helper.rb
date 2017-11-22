@@ -14,7 +14,7 @@ module ApplicationHelper
     if page_url.empty?
       root_url # Default URL
     else
-      root_url + page_url
+      page_url
     end
   end
 
