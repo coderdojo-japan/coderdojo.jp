@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # Static Pages
   root "static_pages#home"
+  get "/stats", to: 'static_pages#stats'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
