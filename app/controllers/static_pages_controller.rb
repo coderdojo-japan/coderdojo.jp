@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def stats
+    @url                 = request.url
     @dojo_count          = Dojo.count
     @regions_and_dojos   = Dojo.includes(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
 
