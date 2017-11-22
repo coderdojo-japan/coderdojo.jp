@@ -2,7 +2,7 @@
   <%= image_tag "coderdojo-stats_cover.png", class: "cursor-default" %>
 </section>
 
-<section class="dojos text-center grayscale-bg" id="dojos">
+<section class="dojos text-center" id="dojos">
   <br>
   <h1>統計情報</h1>
   <h2>全国の道場</h2>
@@ -36,12 +36,11 @@
 <h3>計測対象</h3>
 <%= @sum_of_dojos %> / <%= @dojo_count %> Dojos
 
-<h3>実装詳細</h3>
-<ul>
-  <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/12">https://github.com/coderdojo-japan/coderdojo.jp/issues/12</a></li>
+<h3>関連リンク</h3>
+<ul style="list-style: none; margin-left: -40px;">
+  <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/commit/b26fd9cdbf640aaa45f2a88238b13f0cbbe8a8b9">Commit: Create /stats page for Proof of Concept</a></li>
+  <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/12">各種イベント管理サービスのAPIを叩いて統計情報を集計したい #12</a></li>
+  <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/206">統計データを確認できる /stats ページを作る #206</a></li>
 </ul>
-
+<br>
 </section>
-<br>
-<br>
-
