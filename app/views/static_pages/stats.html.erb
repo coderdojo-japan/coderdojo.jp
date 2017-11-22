@@ -5,28 +5,27 @@
 <section class="dojos text-center" id="dojos">
   <br>
   <h1>統計情報</h1>
-  <h2>全国の道場</h2>
+  <h3>全国の道場</h3>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-  <% @regions_and_dojos.each_with_index do |(region, dojos), index| %>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="<%= "heading#{index}" %>">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%= "collapse#{index}" %>">
-          <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          <%= region %> - <%= dojos.count %> Dojos
-        </a>
-      </h4>
-    </div>
-    <div id="<%= "collapse#{index}" %>" class="panel-collapse collapse" role="tabpanel">
-      <div class="panel-body grayscale-bg">
-        <%= render partial: 'dojo', collection: dojos %>
+    <% @regions_and_dojos.each_with_index do |(region, dojos), index| %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="<%= "heading#{index}" %>">
+	<h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%= "collapse#{index}" %>">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <%= region %> - <%= dojos.count %> Dojos
+          </a>
+	</h4>
+      </div>
+      <div id="<%= "collapse#{index}" %>" class="panel-collapse collapse" role="tabpanel">
+	<div class="panel-body grayscale-bg">
+          <%= render partial: 'dojo', collection: dojos %>
+	</div>
       </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 
-<br>
 <h3>開催回数</h3>
 <%= @sum_of_events %> 回
 
@@ -42,5 +41,5 @@
   <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/12">各種イベント管理サービスのAPIを叩いて統計情報を集計したい #12</a></li>
   <li><a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/206">統計データを確認できる /stats ページを作る #206</a></li>
 </ul>
-<br>
 </section>
+<br>
