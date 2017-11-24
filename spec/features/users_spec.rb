@@ -6,7 +6,7 @@ RSpec.feature "Users", type: :feature do
   subject { page }
 
   describe "log in" do
-    let!(:login)     { LoginPage.instance }
+    let(:login)     { LoginPage.instance }
     let(:login_path) { login.slug + login.id }
 
     before do
