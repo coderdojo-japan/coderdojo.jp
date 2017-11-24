@@ -5,7 +5,7 @@ RSpec.describe BlogPostPageController, type: :controller do
 
   describe "GET Blog Post Page" do
     it "normal blog post" do
-      obj = Obj.find_by_permalink!("news/2016/12/12/new-backend")
+      obj = mock_obj(BlogPostPage, permalink: 'news/2016/12/12/new-backend', last_changed: Time.current)
       request.for_scrivito_obj(obj)
       get :index
       expect(assigns(:sts_posts)).to eq nil
@@ -15,7 +15,7 @@ RSpec.describe BlogPostPageController, type: :controller do
     end
 
     it "sotechsha post" do
-      obj = Obj.find_by_permalink!("sotechsha/0")
+      obj = mock_obj(BlogPostPage, permalink: 'sotechsha/0', last_changed: Time.current)
       request.for_scrivito_obj(obj)
       get :index
       sts_posts = BlogPostPage.where(:_permalink, :starts_with, 'sotechsha/').order(created: :asc)

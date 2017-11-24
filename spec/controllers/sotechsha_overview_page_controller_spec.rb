@@ -5,7 +5,7 @@ RSpec.describe SotechshaOverviewPageController, type: :controller do
 
   describe "GET #index" do
     it "set @sts_post" do
-      obj = Obj.find_by_permalink!("sotechsha")
+      obj = mock_obj(PlainPage, permalink: 'sotechsha', last_changed: Time.current)
       request.for_scrivito_obj(obj)
       get :index
       sts_posts = BlogPostPage.where(:_permalink, :starts_with, 'sotechsha/').order(created: :asc)
