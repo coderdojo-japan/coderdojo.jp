@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'SessionsController', type: :controller, scrivito: true do
+RSpec.describe SessionsController, type: :controller, scrivito: true do
   describe "GET #create" do
     it "param match" do
       get :create, params: { email: ENV['SCRIVITO_EMAIL'],
