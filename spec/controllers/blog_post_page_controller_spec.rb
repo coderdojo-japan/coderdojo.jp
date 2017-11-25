@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BlogPostPageController, type: :controller, scrivito: true do
+RSpec.describe 'BlogPostPageController', type: :controller, scrivito: true do
   render_views
 
   describe "GET Blog Post Page" do
