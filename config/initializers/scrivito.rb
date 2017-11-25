@@ -24,9 +24,7 @@ Scrivito.configure do |config|
   end
 end
 
-if Rails.env.in?(%w(production development)) ||
-    (Rails.env.test? && !ENV.key?('CI')) ||
-    (Rails.env.test? && ENV['CI'] == 'true' && ENV['SCRIVITO_TEST'] == 'true')
+if ENV.key?('SCRIVITO_TENANT') && ENV.key?('SCRIVITO_API_KEY')
   title ||= ENV['SCRIVITO_WORKSPACE'] || 'DEFAULT_WORKSPACE'
   Scrivito::Workspace.create(title: title) unless Scrivito::Workspace.find_by_title(title)
   Scrivito::Workspace.use(title)
