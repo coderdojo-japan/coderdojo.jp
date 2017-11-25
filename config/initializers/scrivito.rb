@@ -24,6 +24,10 @@ Scrivito.configure do |config|
   end
 end
 
-title ||= ENV['SCRIVITO_WORKSPACE'] || 'DEFAULT_WORKSPACE'
-Scrivito::Workspace.create(title: title) unless Scrivito::Workspace.find_by_title(title)
-Scrivito::Workspace.use(title)
+if Rails.env.in?(%w(production development)) ||
+    (Rails.env.test? && !ENV.key?('CI')) ||
+    (Rails.env.test? && ENV['CI'] == 'true' && ENV['SCRIVITO_TEST'] == 'true')
+  title ||= ENV['SCRIVITO_WORKSPACE'] || 'DEFAULT_WORKSPACE'
+  Scrivito::Workspace.create(title: title) unless Scrivito::Workspace.find_by_title(title)
+  Scrivito::Workspace.use(title)
+end
