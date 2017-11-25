@@ -18,8 +18,8 @@ cache:
   - bundler
 script:
   - bundle exec rake db:migrate --trace
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then SCRIVITO_TEST=true bundle exec rspec spec; fi'
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" = "coderdojo-japan/coderdojo.jp" ]; then SCRIVITO_TEST=true bundle exec rspec spec; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rspec spec; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" = "coderdojo-japan/coderdojo.jp" ]; then bundle exec rspec spec; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" != "coderdojo-japan/coderdojo.jp" ]; then bundle exec rspec spec --tag ~@scrivito; fi'
 env:
   global:
