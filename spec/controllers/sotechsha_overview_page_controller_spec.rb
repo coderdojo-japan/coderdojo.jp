@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SotechshaOverviewPageController, type: :controller, scrivito: true do
+RSpec.describe 'SotechshaOverviewPageController', type: :controller, scrivito: true do
   render_views
 
   describe "GET #index" do
