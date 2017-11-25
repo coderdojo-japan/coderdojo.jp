@@ -5,9 +5,8 @@ Scrivito.configure do |config|
   # If not explicitly set, the tenant and the API key are obtained from the environment variables
   # SCRIVITO_TENANT and SCRIVITO_API_KEY.
   #
-  # config.tenant = 'my-tenant-123'
-  # config.api_key = 'secret'
-  #
+  config.tenant = ENV.fetch('SCRIVITO_TENANT', 'dummy-tenant')
+  config.api_key = ENV.fetch('SCRIVITO_API_KEY', 'dummy-api-key')
 
   # Disable the default routes to allow route configuration
   config.inject_preset_routes = false
