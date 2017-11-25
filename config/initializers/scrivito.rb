@@ -23,3 +23,11 @@ Scrivito.configure do |config|
     end
   end
 end
+
+if ENV.key?('SCRIVITO_TENANT') && ENV.key?('SCRIVITO_API_KEY')
+  title ||= ENV['SCRIVITO_WORKSPACE'] || 'DEFAULT_WORKSPACE'
+  Scrivito::Workspace.create(title: title) unless Scrivito::Workspace.find_by_title(title)
+  Scrivito::Workspace.use(title)
+
+  LoginPage.create(title: 'ログイン')
+end
