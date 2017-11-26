@@ -28,12 +28,14 @@
     %h3 計測対象
     = @sum_of_dojos
     \/ #{@dojo_count} Dojos
+    %h3 計測間隔
+    毎月1日
     %h3 関連リンク
     %ul{:style => "list-style: none; margin-left: -40px;"}
       %li
-        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/commit/b26fd9cdbf640aaa45f2a88238b13f0cbbe8a8b9"} Commit: Create /stats page for Proof of Concept
-      %li
         %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/193"} 統計スクリプトの実行間隔を「毎月1日→毎週月曜日」に変更したい #193
       %li
         %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
 %br/
