@@ -18,7 +18,7 @@ namespace :dojos do
       dojo.delete 'updatedAt' # This is managed by database
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 
   desc '現在のyamlファイルを元にデータベースを更新します'
@@ -54,7 +54,7 @@ namespace :dojos do
       dojo.sort_by{|a,b| a.last}.to_h
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 
   desc 'DBからyamlファイルを生成します'
@@ -69,6 +69,6 @@ namespace :dojos do
       new_dojo
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 end

@@ -27,6 +27,10 @@ class Dojo < ApplicationRecord
     def load_attributes_from_yaml
       YAML.load_file(YAML_FILE)
     end
+
+    def dump_attributes_to_yaml(attributes)
+      YAML.dump(attributes, File.open(YAML_FILE, 'w'))
+    end
   end
 
   private
