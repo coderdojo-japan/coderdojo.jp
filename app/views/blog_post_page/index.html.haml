@@ -11,7 +11,6 @@
           = scrivito_image_tag @obj, :image, class: "img-responsive"
           = scrivito_tag :div, @obj, :body
           %hr/
-          = content_tag  :div, scrivito_value(@obj.last_changed.strftime("更新日: %Y年%m月%d日")), |
-            class: "text-muted text-right h5"                                                |
+          = content_tag :div, scrivito_value(@obj.last_changed.strftime("更新日: %Y年%m月%d日")), class: "text-muted text-right h5"
           %div{:style => "margin-left: 0px; padding-bottom: 30px;"}
           = render 'shared/sitemap_sotechsha' if @sts_posts
