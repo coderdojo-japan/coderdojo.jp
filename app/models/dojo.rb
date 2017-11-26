@@ -3,6 +3,7 @@ class Dojo < ApplicationRecord
   NUM_OF_WHOLE_DOJOS  = "1,500"
   NUM_OF_WHOLE_EVENTS = "1,555"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
+  YAML_FILE = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
   has_many :dojo_event_services, dependent: :destroy
@@ -22,11 +23,10 @@ class Dojo < ApplicationRecord
   validate  :number_of_tags
   validates :url,         presence: true
 
-  def self.valid_yaml_format?(path_to_file)
-    !!YAML.load_file(path_to_file)
-  rescue Exception => e
-    #STDERR.puts e.message
-    return false
+  class << self
+    def load_attributes_from_yaml
+      YAML.load_file(YAML_FILE)
+    end
   end
 
   private
