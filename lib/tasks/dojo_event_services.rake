@@ -31,13 +31,15 @@ namespace :dojo_event_services do
     end
 
     # Dump result
-    result[:skipped] = result[:skipped].uniq {|s| s.first }
-    result.except!(:kept, :skipped) unless ENV.key?('DEBUG')
-    sorted = result.sort_by {|_, v| v.length }.reverse.to_h
-    puts
-    sorted.each do |k, v|
-      puts "#{k.to_s.camelcase}: #{v.length}"
-      v.each {|x| puts "  #{x.join(': ')}"}
+    if !result[:inserted].empty? || !result[:updated].empty?
+      result[:skipped] = result[:skipped].uniq {|s| s.first }
+      result.except!(:kept, :skipped) unless ENV.key?('DEBUG')
+      sorted = result.sort_by {|_, v| v.length }.reverse.to_h
+      puts
+      sorted.each do |k, v|
+        puts "#{k.to_s.camelcase}: #{v.length}"
+        v.each {|x| puts "  #{x.join(': ')}"}
+      end
     end
   end
 end
