@@ -1,8 +1,6 @@
 namespace :dojo_event_services do
   desc '現在のyamlファイルを元にデータベースを更新します'
   task upsert: :environment do
-    puts 'Task as `dojo_event_services:upsert` starting...'
-
     result = { inserted: [], updated: [], kept: [], skipped: [] }
 
     list = YAML.load_file(Rails.root.join('db','dojo_event_services.yaml'))
