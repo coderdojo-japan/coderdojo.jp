@@ -12,7 +12,7 @@ class Dojo < ApplicationRecord
   serialize :tags
   before_save { self.email = self.email.downcase }
 
-  scope :default_order, -> { order(prefecture_id: :asc, id: :asc) }
+  scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
 
   validates :name,        presence: true, length: { maximum: 50 }
   validates :email,       presence: false
