@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <%= scrivito_head_tags %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="scrivito_dialog">
-  <%= scrivito_body_tags %>
-  <%= yield %>
-  <%= javascript_include_tag 'application' %>
-</body>
-</html>
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = scrivito_head_tags
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  %body.scrivito_dialog
+    = scrivito_body_tags
+    = yield
+    = javascript_include_tag 'application'
