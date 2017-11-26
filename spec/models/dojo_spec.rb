@@ -56,21 +56,20 @@ RSpec.describe Dojo, :type => :model do
     it { should_not be_valid }
   end
 
-  describe 'yaml format validator' do
-    let(:valid_yaml) {      Rails.root.join('spec', 'data',   'valid_format_of.yaml') }
-    let(:invalid_yaml) {    Rails.root.join('spec', 'data', 'invalid_format_of.yaml') }
-    let(:production_yaml) { Rails.root.join('db','dojos.yaml')}
-
-    it 'should return true when valid yaml format' do
-      expect(Dojo.valid_yaml_format? valid_yaml).to be true
+  describe 'validate yaml format' do
+    it 'should not raise Psych::SyntaxError' do
+      expect{ Dojo.load_attributes_from_yaml }.not_to raise_error(Psych::SyntaxError)
     end
 
-    it 'should return false when invalid yaml format' do
-      expect(Dojo.valid_yaml_format? invalid_yaml).to be false
-    end
+    it 'should raise Psych::SyntaxError' do
+      orig_yaml = Dojo::YAML_FILE
+      Dojo.send(:remove_const, :YAML_FILE)
+      Dojo::YAML_FILE = Rails.root.join('spec', 'data', 'invalid_format_of.yaml')
 
-    it 'should always return true for production yaml file' do
-      expect(Dojo.valid_yaml_format? production_yaml).to be true
+      expect{ Dojo.load_attributes_from_yaml }.to raise_error(Psych::SyntaxError)
+
+      Dojo.send(:remove_const, :YAML_FILE)
+      Dojo::YAML_FILE = orig_yaml
     end
   end
 end
