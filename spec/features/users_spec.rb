@@ -2,7 +2,7 @@
 require 'rails_helper'
 include Scrivito::ControllerHelper
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature "Users", type: :feature, scrivito: true do
   subject { page }
 
   describe "log in" do
