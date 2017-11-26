@@ -16,6 +16,7 @@ gem "bootstrap-sass"
 gem 'sass-rails'
 gem 'uglifier'
 gem 'font-awesome-rails'
+gem 'haml-rails'
 
 # For redirection
 gem 'rack-host-redirect'

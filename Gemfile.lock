@@ -75,6 +75,7 @@ GEM
     debug_inspector (0.0.3)
     diff-lcs (1.3)
     erubi (1.7.0)
+    erubis (2.7.0)
     ethon (0.11.0)
       ffi (>= 1.3.0)
     execjs (2.7.0)
@@ -94,7 +95,21 @@ GEM
       net-http-pipeline
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
+    haml-rails (1.0.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 4.0.6, < 6.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
     highline (1.7.8)
+    html2haml (2.2.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     hyp_diff (0.0.5)
       diff-lcs (~> 1.2, >= 1.2.5)
       nokogiri (~> 1.6, >= 1.6.5)
@@ -224,6 +239,8 @@ GEM
       rspec-core (~> 3.3)
     rspec-support (3.7.0)
     ruby_dep (1.5.0)
+    ruby_parser (3.10.1)
+      sexp_processor (~> 4.9)
     rubyzip (1.2.1)
     sass (3.5.3)
       sass-listen (~> 4.0.0)
@@ -273,6 +290,7 @@ GEM
     selenium-webdriver (3.6.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    sexp_processor (4.10.0)
     simple_grid_rails (0.1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -284,6 +302,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+    temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -327,6 +346,7 @@ DEPENDENCIES
   faraday
   faraday_middleware (= 0.10)
   font-awesome-rails
+  haml-rails
   jbuilder
   jquery-rails
   koala

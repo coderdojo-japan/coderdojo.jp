@@ -1,0 +1,12 @@
+#accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+  - regions_and_dojos.each_with_index do |(region, dojos), index|
+    .panel.panel-default
+      .panel-heading{:id => "heading#{index}", :role => "tab"}
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "##{"collapse#{index}"}", :role => "button"}
+            %i.fa.fa-chevron-right{"aria-hidden" => "true"}
+            = region
+            \- #{dojos.count} Dojos
+      .panel-collapse.collapse{:id => "collapse#{index}", :role => "tabpanel"}
+        .panel-body.grayscale-bg
+          = render partial: 'dojo', collection: dojos

@@ -1,0 +1,39 @@
+- provide(:url,   @url)
+- provide(:title, '統計情報')
+- provide(:meta_description, '全国の CoderDojo に関する統計情報をまとめています')
+%section.cover
+  = image_tag "coderdojo-stats_cover.png", class: "cursor-default"
+%section#dojos.dojos.text-center
+  %bpr
+    %h1 統計情報
+    %h3 全国の道場
+    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+      - @regions_and_dojos.each_with_index do |(region, dojos), index|
+        .panel.panel-default
+          .panel-heading{:id => "heading#{index}", :role => "tab"}
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "##{"collapse#{index}"}", :role => "button"}
+                %i.fa.fa-chevron-right{"aria-hidden" => "true"}
+                = region
+                \- #{dojos.count} Dojos
+          .panel-collapse.collapse{:id => "collapse#{index}", :role => "tabpanel"}
+            .panel-body.grayscale-bg
+              = render partial: 'dojo', collection: dojos
+    %h3 開催回数
+    = @sum_of_events
+    回
+    %h3 参加者数 (延べ)
+    = @sum_of_participants = EventHistory.sum(:participants)
+    人
+    %h3 計測対象
+    = @sum_of_dojos
+    \/ #{@dojo_count} Dojos
+    %h3 関連リンク
+    %ul{:style => "list-style: none; margin-left: -40px;"}
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/commit/b26fd9cdbf640aaa45f2a88238b13f0cbbe8a8b9"} Commit: Create /stats page for Proof of Concept
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
+%br/
