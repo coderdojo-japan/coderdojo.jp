@@ -5,7 +5,7 @@ class SessionsController < CmsController
     if valid_credentials?(params[:email], params[:password])
       session[:user] = params[:email]
       # Editing Kata (wiki) is the most-often reason to login
-      redirect_back_or '/scrivito/kata'
+      redirect_to '/kata'
       # If other reason(s) comes up, switch to the code below
       #redirect_back_or scrivito_path(Obj.root)
     else
