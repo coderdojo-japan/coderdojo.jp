@@ -4,7 +4,9 @@ class SessionsController < CmsController
   def create
     if valid_credentials?(params[:email], params[:password])
       session[:user] = params[:email]
-      redirect_back_or scrivito_path(Obj.root)
+      #redirect_back_or scrivito_path(Obj.root)
+      # Editing Kata (wiki) is the most-often reason to login
+      redirect_back_or '/scrivito/kata'
     else
       flash[:alert] = "メールアドレスとパスワードの組み合わせが間違っています ><💦 "
       redirect_to scrivito_path(LoginPage.instance)
