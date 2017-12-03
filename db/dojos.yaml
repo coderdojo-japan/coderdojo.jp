@@ -693,7 +693,7 @@
 - id: 118
   name: 安城 (中部)
   prefecture_id: 23
-  logo: "/img/dojos/japan.png"
+  logo: "/img/dojos/anjo.png"
   url: https://sites.google.com/coderdojo.com/anjo/
   description: 愛知県安城市keyportで毎月第3土曜日午前に開催
   order: 217
