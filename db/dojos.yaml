@@ -1046,9 +1046,9 @@
   tags:
   - Scratch
 - id: 52
-  name: 広島 (中国)
+  name: 紙屋町 (中国)
   prefecture_id: 34
-  logo: "/img/dojos/hiroshima.png"
+  logo: "/img/dojos/hiroshima.jpg"
   url: https://www.facebook.com/coderdojo.hiroshima/
   description: 広島県広島市で毎月開催
   order: 410
