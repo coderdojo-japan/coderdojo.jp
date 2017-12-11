@@ -37,7 +37,7 @@ namespace :dojos do
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
       d.url         = dojo['url']
-      d.created_at  = dojo['createdAt'] ? Time.zone.parse(dojo['createdAt']) : Time.zone.now
+      d.created_at  = d.new_record? ? Time.zone.now : d.created_at
       d.updated_at  = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
 
