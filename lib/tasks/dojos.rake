@@ -24,7 +24,7 @@ namespace :dojos do
   desc '現在のyamlファイルを元にデータベースを更新します'
   task update_db_by_yaml: :environment do
     dojos = Dojo.load_attributes_from_yaml
-    dojos.sort_by{ |hash| hash['order'].to_s }
+    dojos.sort_by{ |hash| hash['order'] }
 
     dojos.each do |dojo|
       d = Dojo.find_by(name: dojo['name']) || Dojo.new
@@ -32,7 +32,7 @@ namespace :dojos do
       d.id          = dojo['id']
       d.name        = dojo['name']
       d.email       = ''
-      d.order       = dojo['order'].to_s
+      d.order       = dojo['order']
       d.description = dojo['description']
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
