@@ -372,6 +372,17 @@
   - Webサイト
   - PHP
   - Ruby
+- id: 121
+  order: '131016'
+  name: 御茶ノ水 (関東)
+  prefecture_id: 13
+  logo: "/img/dojos/ochanomizu.jpg"
+  url: https://www.facebook.com/CoderDojoOchanomizuTam/
+  description: 東京都千代田区で毎月開催
+  tags:
+  - Scratch
+  - Viscuit
+  - Webサイト
 - id: 97
   order: '131016'
   name: 秋葉原 (関東)
