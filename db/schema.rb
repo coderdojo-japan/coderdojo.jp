@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103042807) do
+ActiveRecord::Schema.define(version: 20171211111544) do
 
   create_table "dojo_event_services", force: :cascade do |t|
     t.integer "dojo_id", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20171103042807) do
   create_table "dojos", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "order", default: 1
+    t.string "order", default: "000000"
     t.string "description"
     t.string "logo", default: "/logo.png"
     t.string "url", default: "#"
