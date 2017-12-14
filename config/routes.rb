@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
+  get "/docs/code_of_conduct", to: redirect('/docs/code-of-conduct')
   resources :docs, only: [:index, :show]
 
   # Static Pages
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
   get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
-  get "/docs/code_of_conduct",            to: redirect('/docs/code-of-conduct')
 
   # Issue SSL Certification
   get "/.well-known/acme-challenge/:id" => "static_pages#letsencrypt"
