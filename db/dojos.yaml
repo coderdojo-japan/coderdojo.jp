@@ -1157,6 +1157,19 @@
   - PHP
   - LEGO
   - Minecraft
+- id: 122
+  order: '413411'
+  name: 基山 (九州)
+  prefecture_id: 41
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/groups/CoderDojo.Kiyama/about/
+  description: 佐賀県三養基郡基山町で月1回程度開催
+  tags:
+  - Scratch
+  - Web
+  - プチコン
+  - ラズベリーパイ
+  - Minecraft
 - id: 120
   order: '422011'
   name: 長崎 (九州)
