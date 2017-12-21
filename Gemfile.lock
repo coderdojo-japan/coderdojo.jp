@@ -334,7 +334,7 @@ GEM
     woothee (1.7.0)
     xpath (2.1.0)
       nokogiri (~> 1.3)
-    yard (0.9.9)
+    yard (0.9.12)
 
 PLATFORMS
   ruby
