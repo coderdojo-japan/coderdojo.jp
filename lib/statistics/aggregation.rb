@@ -1,24 +1,42 @@
 module Statistics
   class Aggregation
     class << self
-      def run(date:)
-        cnps_dojos = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :connpass }).to_a
-        drkp_dojos = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :doorkeeper }).to_a
-        fsbk_dojos = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :facebook }).to_a
+      def run(date:, weekly:)
+        cnps_dojos, drkp_dojos, fsbk_dojos = fetch_dojos
 
-        Connpass.run(cnps_dojos, date)
-        Doorkeeper.run(drkp_dojos, date)
-        Facebook.run(fsbk_dojos, date)
+        Connpass.run(cnps_dojos, date, weekly)
+        Doorkeeper.run(drkp_dojos, date, weekly)
+        Facebook.run(fsbk_dojos, date, weekly)
+      end
+
+      def fetch_dojos
+        [
+          Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :connpass }).to_a,
+          Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :doorkeeper }).to_a,
+          Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: :facebook }).to_a
+        ]
       end
     end
 
     class Connpass
       class << self
-        def run(dojos, date)
+        def run(dojos, date, weekly)
           cnps = Client::Connpass.new
-          params = {
-            yyyymm: "#{date.year}#{date.month}"
-          }
+          params = if weekly
+                     week_days = loop.with_object([date]) { |_, list|
+                       nd = list.last.next_day
+                       raise StopIteration if nd > date.end_of_week
+                       list << nd
+                     }.map { |date| date.strftime('%Y%m%d') }
+
+                     {
+                       yyyymmdd: week_days.join(',')
+                     }
+                   else
+                     {
+                       yyyymm: "#{date.year}#{date.month}"
+                     }
+                   end
 
           dojos.each do |dojo|
             dojo.dojo_event_services.each do |dojo_event_service|
@@ -42,12 +60,19 @@ module Statistics
 
     class Doorkeeper
       class << self
-        def run(dojos, date)
+        def run(dojos, date, weekly)
           drkp = Client::Doorkeeper.new
-          params = {
-            since_at: date.beginning_of_month,
-            until_at: date.end_of_month
-          }
+          params = if weekly
+                     {
+                       since_at: date.beginning_of_week,
+                       until_at: date.end_of_week
+                     }
+                   else
+                     {
+                       since_at: date.beginning_of_month,
+                       until_at: date.end_of_month
+                     }
+                   end
 
           dojos.each do |dojo|
             dojo.dojo_event_services.each do |dojo_event_service|
@@ -71,12 +96,19 @@ module Statistics
 
     class Facebook
       class << self
-        def run(dojos, date)
+        def run(dojos, date, weekly)
           fsbk = Client::Facebook.new
-          params = {
-            since_at: date.beginning_of_month,
-            until_at: date.end_of_month
-          }
+          params = if weekly
+                     {
+                       since_at: date.beginning_of_week,
+                       until_at: date.end_of_week
+                     }
+                   else
+                     {
+                       since_at: date.beginning_of_month,
+                       until_at: date.end_of_month
+                     }
+                   end
 
           dojos.each do |dojo|
             dojo.dojo_event_services.each do |dojo_event_service|
