@@ -18,6 +18,10 @@ class StaticPagesController < ApplicationController
     @sum_of_dojos        = DojoEventService.count('DISTINCT dojo_id') +
       4    # TODO: 同上。上記の道場数を静的に足しています
     @sum_of_participants = EventHistory.sum(:participants)
+
+    # 2017年1月1日〜12月31日までの集計結果
+    @2017_events       = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).count
+    @2017_participants = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).sum(:participants)
   end
 
   def letsencrypt
