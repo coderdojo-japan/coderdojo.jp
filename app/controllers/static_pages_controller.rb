@@ -20,8 +20,8 @@ class StaticPagesController < ApplicationController
     @sum_of_participants = EventHistory.sum(:participants)
 
     # 2017年1月1日〜12月31日までの集計結果
-    @2017_events       = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).count
-    @2017_participants = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).sum(:participants)
+    @events_2017       = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).count
+    @participants_2017 = EventHistory.where('evented_at > ?', Time.zone.local(2017).beginning_of_year).sum(:participants)
   end
 
   def letsencrypt
