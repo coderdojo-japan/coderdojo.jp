@@ -113,7 +113,7 @@
   order: '052019'
   name: 秋田 (東北)
   prefecture_id: 5
-  url: http://coderdojo.akita.red/
+  url: https://coder-dojo-akita.doorkeeper.jp/
   logo: "/img/dojos/japan.png"
   description: 秋田県秋田市で毎月1~2回開催
   tags:
