@@ -27,9 +27,8 @@ namespace :dojos do
     dojos.sort_by{ |hash| hash['order'] }
 
     dojos.each do |dojo|
-      d = Dojo.find_by(name: dojo['name']) || Dojo.new
+      d = Dojo.find_or_initialize_by(id: dojo['id'])
 
-      d.id          = dojo['id']
       d.name        = dojo['name']
       d.email       = ''
       d.order       = dojo['order']
