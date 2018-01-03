@@ -94,7 +94,7 @@ module Statistics
           puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
 
           @dojos.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.run(list, date, true)
+            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
           end
         end
 
@@ -131,7 +131,7 @@ module Statistics
           puts "Aggregate for #{date_format(date)}"
 
           @dojos.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.run(list, date, false)
+            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
           end
         end
 
