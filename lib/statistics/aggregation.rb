@@ -5,7 +5,6 @@ module Statistics
       @from = aggregation_from(args[:from])
       @to = aggregation_to(args[:to])
       @dojos = fetch_dojos
-      Statistics::Providers::Facebook.access_token = Koala::Facebook::OAuth.new(ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']).get_app_access_token
     end
 
     def run
