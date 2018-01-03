@@ -4,7 +4,7 @@ namespace :statistics do
   desc '年次/月次/週次のイベント履歴を集計します'
   task :aggregation, [:from, :to] => :environment do |tasks, args|
     date_from_str = -> (str) {
-      formats = %w(%Y%m %Y/%m %Y-%m)
+      formats = %w(%Y%m%d %Y/%m/%d %Y-%m-%d %Y%m %Y/%m %Y-%m)
       d = formats.map { |fmt|
         begin
           Time.zone.strptime(str, fmt)
