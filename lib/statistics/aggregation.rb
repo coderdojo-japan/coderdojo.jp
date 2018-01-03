@@ -21,7 +21,7 @@ module Statistics
     class Connpass
       class << self
         def run(dojos, date, weekly)
-          cnps = Client::Connpass.new
+          cnps = Providers::Connpass.new
           params = if weekly
                      week_days = loop.with_object([date]) { |_, list|
                        nd = list.last.next_day
