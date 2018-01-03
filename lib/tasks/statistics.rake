@@ -72,7 +72,7 @@ namespace :statistics do
            Time.current.prev_week.end_of_week
          end
 
-    Statistics::Client::Facebook.access_token = Koala::Facebook::OAuth.new(ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']).get_app_access_token
+    Statistics::Providers::Facebook.access_token = Koala::Facebook::OAuth.new(ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']).get_app_access_token
 
     EventHistory.where(evented_at: from..to).delete_all
 

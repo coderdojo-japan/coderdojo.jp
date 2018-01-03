@@ -97,7 +97,7 @@ module Statistics
     class Facebook
       class << self
         def run(dojos, date, weekly)
-          fsbk = Client::Facebook.new
+          fsbk = Providers::Facebook.new
           params = if weekly
                      {
                        since_at: date.beginning_of_week,
