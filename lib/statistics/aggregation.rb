@@ -61,7 +61,7 @@ module Statistics
     class Doorkeeper
       class << self
         def run(dojos, date, weekly)
-          drkp = Client::Doorkeeper.new
+          drkp = Providers::Doorkeeper.new
           params = if weekly
                      {
                        since_at: date.beginning_of_week,

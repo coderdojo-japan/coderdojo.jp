@@ -4,3 +4,4 @@ module Statistics
 end
 
 require_relative 'providers/connpass'
+require_relative 'providers/doorkeeper'
