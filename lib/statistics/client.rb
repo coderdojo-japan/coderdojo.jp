@@ -36,13 +36,14 @@ module Statistics
         @client.get('event/', { keyword: keyword, count: 100 })
       end
 
-      def fetch_events(series_id:, yyyymm: nil)
+      def fetch_events(series_id:, yyyymm: nil, yyyymmdd: nil)
         params = {
           series_id: series_id,
           start: 1,
           count: 100
         }
         params[:ym] = yyyymm if yyyymm
+        params[:ymd] = yyyymmdd if yyyymmdd
         events = []
 
         loop do

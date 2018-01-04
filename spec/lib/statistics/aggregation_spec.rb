@@ -24,7 +24,7 @@ RSpec.describe Statistics::Aggregation do
       DojoEventService.create(dojo_id: d3.id, name: :facebook, group_id: 123451234512345)
     end
 
-    subject { Statistics::Aggregation.run(date: Time.current) }
+    subject { Statistics::Aggregation.run(date: Time.current, weekly: false) }
 
     it do
       expect{ subject }.to change{EventHistory.count}.from(0).to(3)
