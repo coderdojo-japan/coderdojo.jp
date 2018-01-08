@@ -21,11 +21,11 @@ class StaticPagesController < ApplicationController
 
     # 2012年1月1日〜2017年12月31日までの集計結果
     @dojos, @events, @participants = {}, {}, {}
-    @range = (2012..2017)
+    @range = 2012..2017
     @range.each do |year|
       @dojos[year] =
         Dojo.where(created_at:
-                     Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).count
+                     Time.zone.local(2012).beginning_of_year..Time.zone.local(year).end_of_year).count
       @events[year] =
         EventHistory.where(evented_at:
                      Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).count
