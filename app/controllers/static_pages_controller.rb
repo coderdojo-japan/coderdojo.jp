@@ -20,8 +20,8 @@ class StaticPagesController < ApplicationController
     @range = 2012..2017
     @range.each do |year|
       @dojos[year] =
-        Dojo.where(created_at:
-                     Time.zone.local(2012).beginning_of_year..Time.zone.local(year).end_of_year).count
+        Dojo.where(created_at: Time.zone.local(2012).beginning_of_year..Time.zone.local(year)
+               .end_of_year).select{|d| d.dojo_event_services.any?}.count
       @events[year] =
         EventHistory.where(evented_at:
                      Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).count
