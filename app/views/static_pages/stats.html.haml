@@ -22,8 +22,9 @@
     %h3 開催回数
     = @sum_of_events
     回
-    %h3 参加者数 (延べ)
-    = @sum_of_participants = EventHistory.sum(:participants)
+    %h3 参加者数
+    延べ
+    = @sum_of_participants
     人
     %h3 計測対象
     = @sum_of_dojos
