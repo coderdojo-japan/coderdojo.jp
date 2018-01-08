@@ -1,11 +1,14 @@
 - provide(:url,   @url)
 - provide(:title, '統計情報')
-- provide(:meta_description, '全国の CoderDojo に関する統計情報をまとめています')
+- provide(:meta_description, '全国の CoderDojo の統計情報をまとめています。')
 %section.cover
   = image_tag "coderdojo-stats_cover.png", class: "cursor-default"
 %section#dojos.dojos.text-center
   %bpr
     %h1 統計情報
+    %p 本ページでは全国の CoderDojo の統計情報をまとめています。
+    CoderDojo の活動状況を把握する際などにご活用ください。
+
     %h3 全国の道場
     #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
       - @regions_and_dojos.each_with_index do |(region, dojos), index|
