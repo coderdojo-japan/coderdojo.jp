@@ -23,7 +23,7 @@ class StaticPagesController < ApplicationController
         Dojo
           .distinct
           .joins(:dojo_event_services)
-          .where(created_at: Time.zone.local(2012).beginning_of_year..Time.zone.local(year).end_of_year)
+          .where(created_at: Time.zone.local(@range.first).beginning_of_year..Time.zone.local(year).end_of_year)
           .count
       @events[year] =
         EventHistory.where(evented_at:
