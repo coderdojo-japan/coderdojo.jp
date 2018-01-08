@@ -2,7 +2,7 @@
 <center>(<a href="/docs/brand-guidelines-en">原文を読む</a>)</center>
 <br>
 
-本ページでは CoderDojo の名称を書くときの注意点や、CoderDojo のロゴを利用する際の注意点についてまとめています。
+本ページでは CoderDojo の名称を書くときの注意点や、CoderDojo のロゴを利用する際の注意点についてまとめています。ロゴやチラシの画像データは [CoderDojo Materials](http://kata.coderdojo.com/wiki/Materials) からダウンロードできます。
 
 ## 文中で利用する場合:
 
