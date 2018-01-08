@@ -30,6 +30,29 @@
     \/ #{@dojo_count} Dojos
     %h3 計測間隔
     毎週月曜日
+
+    %h3 各統計の推移
+    %div{align: 'center'}
+      %table
+        %thead
+          %tr
+            %th
+            - @range.each do |year|
+              %td{style: 'padding: 0 5px; font-weight: bold;'} #{year}年
+        %tbody{align: 'center'}
+          %tr
+            %td 新規道場数
+            - @range.each do |year|
+              %td #{@dojos[year]}
+          %tr
+            %td 開催回数
+            - @range.each do |year|
+              %td #{@events[year]}
+          %tr
+            %td 参加者数
+            - @range.each do |year|
+              %td #{@participants[year]}
+
     %h3 関連リンク
     %ul{:style => "list-style: none; margin-left: -40px;"}
       %li

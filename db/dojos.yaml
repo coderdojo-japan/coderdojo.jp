@@ -1,5 +1,6 @@
 ---
 - id: 64
+  created_at: '2016-09-26'
   order: '011002'
   name: 札幌 (北海道)
   prefecture_id: 1
@@ -12,6 +13,7 @@
   - ラズベリーパイ
   - 電子工作
 - id: 104
+  created_at: '2016-09-26'
   order: '011002'
   name: 札幌東 (北海道)
   prefecture_id: 1
@@ -24,6 +26,7 @@
   - Python
   - Unity
 - id: 100
+  created_at: '2017-09-20'
   order: '012319'
   name: 恵庭 (北海道)
   prefecture_id: 1
@@ -35,6 +38,7 @@
   - Webサイト
   - Python
 - id: 109
+  created_at: '2017-09-25'
   order: '032166'
   name: 滝沢 (東北)
   prefecture_id: 3
@@ -46,6 +50,7 @@
   - micro:bit
   - ラズベリーパイ
 - id: 107
+  created_at: '2017-06-20'
   order: '032069'
   name: きたかみ (東北)
   prefecture_id: 3
@@ -56,6 +61,7 @@
   - Scratch
   - Webサイト
 - id: 3
+  created_at: '2014-01-23'
   order: '041009'
   name: 泉 (東北)
   prefecture_id: 4
@@ -65,6 +71,7 @@
   tags:
   - Scratch
 - id: 90
+  created_at: '2017-07-01'
   order: '041009'
   name: 愛子 (東北)
   prefecture_id: 4
@@ -76,6 +83,7 @@
   - Webサイト
   - ゲーム
 - id: 85
+  created_at: '2017-03-27'
   order: '042072'
   name: 名取 (東北)
   prefecture_id: 4
@@ -87,6 +95,7 @@
   - Webサイト
   - ゲーム
 - id: 4
+  created_at: '2016-04-25'
   order: '042129'
   name: 登米 (東北)
   prefecture_id: 4
@@ -98,6 +107,7 @@
   - 3Dプリンタ
   - 3DCAD
 - id: 59
+  created_at: '2016-10-06'
   order: '044458'
   name: 中新田 (東北)
   prefecture_id: 4
@@ -110,6 +120,7 @@
   - Minecraft
   - Arduino
 - id: 75
+  created_at: '2017-04-03'
   order: '052019'
   name: 秋田 (東北)
   prefecture_id: 5
@@ -123,6 +134,7 @@
   - Swift
   - Android
 - id: 74
+  created_at: '2017-03-28'
   order: '062014'
   name: 山形 (東北)
   prefecture_id: 6
@@ -136,6 +148,7 @@
   - ロボット
   - AI
 - id: 79
+  created_at: '2017-03-29'
   order: '072028'
   name: 会津 (東北)
   prefecture_id: 7
@@ -149,6 +162,7 @@
   - Java
   - Webサイト
 - id: 73
+  created_at: '2017-03-28'
   order: '082210'
   name: ひたちなか (関東)
   prefecture_id: 8
@@ -158,6 +172,7 @@
   tags:
   - Scratch
 - id: 65
+  created_at: '2017-01-03'
   order: '082015'
   name: 水戸 (関東)
   prefecture_id: 8
@@ -167,6 +182,7 @@
   tags:
   - Scratch
 - id: 8
+  created_at: '2016-07-12'
   order: '082244'
   name: 守谷 (関東)
   prefecture_id: 8
@@ -178,6 +194,7 @@
   - IoT
   - 電子工作
 - id: 89
+  created_at: '2017-06-21'
   order: '092142'
   name: さくら (関東)
   prefecture_id: 9
@@ -191,6 +208,7 @@
   - PHP
   - CSS
 - id: 7
+  created_at: '2016-10-17'
   order: '102016'
   name: 前橋 (関東)
   prefecture_id: 10
@@ -203,6 +221,7 @@
   - ラズベリーパイ
   - ゲーム
 - id: 9
+  created_at: '2014-05-26'
   order: '111007'
   name: さいたま (関東)
   prefecture_id: 11
@@ -214,6 +233,7 @@
   - Webサイト
   - アプリ
 - id: 12
+  created_at: '2015-12-01'
   order: '112089'
   name: 所沢 (関東)
   prefecture_id: 11
@@ -223,6 +243,7 @@
   tags:
   - Scratch
 - id: 77
+  created_at: '2017-03-14'
   order: '112089'
   name: 小手指 (関東)
   prefecture_id: 11
@@ -232,6 +253,7 @@
   tags:
   - Scratch
 - id: 11
+  created_at: '2015-05-13'
   order: '112097'
   name: 飯能 (関東)
   prefecture_id: 11
@@ -241,6 +263,7 @@
   tags:
   - Scratch
 - id: 10
+  created_at: '2012-07-02'
   order: '112305'
   name: ひばりヶ丘 (関東)
   prefecture_id: 11
@@ -253,6 +276,7 @@
   - 8x9Craft
   - Unity
 - id: 22
+  created_at: '2013-07-30'
   order: '121002'
   name: 千葉 (関東)
   prefecture_id: 12
@@ -266,6 +290,7 @@
   - Ruby
   - Minecraft
 - id: 25
+  created_at: '2016-04-27'
   order: '121002'
   name: 若葉 (関東)
   prefecture_id: 12
@@ -275,6 +300,7 @@
   tags:
   - Scratch
 - id: 60
+  created_at: '2016-12-15'
   order: '122033'
   name: 市川 (関東)
   prefecture_id: 12
@@ -287,6 +313,7 @@
   - Python
   - WordPress
 - id: 82
+  created_at: '2017-03-28'
   order: '122033'
   name: 市川真間 (関東)
   prefecture_id: 12
@@ -296,6 +323,7 @@
   tags:
   - Scratch
 - id: 86
+  created_at: '2017-05-16'
   order: '122041'
   name: 船橋＠凛童舎 (関東)
   prefecture_id: 12
@@ -305,6 +333,7 @@
   tags:
   - Scratch
 - id: 83
+  created_at: '2017-04-27'
   order: '122068'
   name: 木更津 (関東)
   prefecture_id: 12
@@ -316,6 +345,7 @@
   - Webサイト
   - Java
 - id: 114
+  created_at: '2017-09-06'
   order: '122076'
   name: 松戸 (関東)
   prefecture_id: 12
@@ -325,6 +355,7 @@
   tags:
   - Scratch
 - id: 20
+  created_at: '2016-11-08'
   order: '122084'
   name: 野田 (関東)
   prefecture_id: 12
@@ -334,6 +365,7 @@
   tags:
   - Scratch
 - id: 23
+  created_at: '2014-09-22'
   order: '122173'
   name: 柏 (関東)
   prefecture_id: 12
@@ -343,6 +375,7 @@
   tags:
   - Scratch
 - id: 112
+  created_at: '2017-09-26'
   order: '122173'
   name: 南柏 (関東)
   prefecture_id: 12
@@ -352,6 +385,7 @@
   tags:
   - Scratch
 - id: 24
+  created_at: '2016-04-27'
   order: '122203'
   name: 流山 (関東)
   prefecture_id: 12
@@ -361,6 +395,7 @@
   tags:
   - Scratch
 - id: 21
+  created_at: '2016-11-08'
   order: '122271'
   name: 浦安 (関東)
   prefecture_id: 12
@@ -373,6 +408,7 @@
   - PHP
   - Ruby
 - id: 121
+  created_at: '2017-11-28'
   order: '131016'
   name: 御茶ノ水 (関東)
   prefecture_id: 13
@@ -384,6 +420,7 @@
   - Viscuit
   - Webサイト
 - id: 97
+  created_at: '2017-08-16'
   order: '131016'
   name: 秋葉原 (関東)
   prefecture_id: 13
@@ -393,6 +430,7 @@
   tags:
   - Scratch
 - id: 58
+  created_at: '2017-09-26'
   order: '131041'
   name: 高田馬場 (関東)
   prefecture_id: 13
@@ -404,6 +442,7 @@
   - ラズベリーパイ
   - Ruby
 - id: 69
+  created_at: '2017-01-23'
   order: '131041'
   name: 西新宿 (関東)
   prefecture_id: 13
@@ -413,6 +452,7 @@
   tags:
   - Scratch
 - id: 17
+  created_at: '2012-03-12'
   order: '131121'
   name: 下北沢 (関東)
   prefecture_id: 13
@@ -424,6 +464,7 @@
   - Webサイト
   - ゲーム
 - id: 19
+  created_at: '2016-09-27'
   order: '131130'
   name: 渋谷 (関東)
   prefecture_id: 13
@@ -433,6 +474,7 @@
   tags:
   - Scratch
 - id: 15
+  created_at: '2016-07-20'
   order: '131148'
   name: 中野 (関東)
   prefecture_id: 13
@@ -445,6 +487,7 @@
   - JavaScript
   - Arduino
 - id: 16
+  created_at: '2016-09-09'
   order: '131156'
   name: すぎなみ (関東)
   prefecture_id: 13
@@ -458,6 +501,7 @@
   - JavaScript
   - Processing
 - id: 14
+  created_at: '2015-06-22'
   order: '132012'
   name: 八王子 (関東)
   prefecture_id: 13
@@ -469,6 +513,7 @@
   - Webサイト
   - PHP
 - id: 117
+  created_at: '2017-11-18'
   order: '132021'
   name: 立川 (関東)
   prefecture_id: 13
@@ -481,6 +526,7 @@
   - ラズベリーパイ
   - Arduino
 - id: 105
+  created_at: '2017-09-06'
   order: '132039'
   name: 吉祥寺 (関東)
   prefecture_id: 13
@@ -492,6 +538,7 @@
   - Studuino
   - Java
 - id: 18
+  created_at: '2016-09-05'
   order: '132080'
   name: 調布 (関東)
   prefecture_id: 13
@@ -505,6 +552,7 @@
   - Ruby
   - ラズベリーパイ
 - id: 13
+  created_at: '2014-05-21'
   order: '132110'
   name: 小平 (関東)
   prefecture_id: 13
@@ -517,6 +565,7 @@
   - CS Unplugged
   - マルチメディア
 - id: 68
+  created_at: '2017-01-09'
   order: '141003'
   name: 新羽 (関東)
   prefecture_id: 14
@@ -526,6 +575,7 @@
   tags:
   - Scratch
 - id: 76
+  created_at: '2017-04-03'
   order: '141003'
   name: 長津田 (関東)
   prefecture_id: 14
@@ -537,6 +587,7 @@
   - Minecraft
   - Hour of Code
 - id: 70
+  created_at: '2017-01-30'
   order: '141003'
   name: 横浜 (関東)
   prefecture_id: 14
@@ -546,6 +597,7 @@
   tags:
   - Scratch
 - id: 26
+  created_at: '2016-12-14'
   order: '142051'
   name: 藤沢 (関東)
   prefecture_id: 14
@@ -557,6 +609,7 @@
   - Viscuit
   - Webサイト
 - id: 91
+  created_at: '2017-06-26'
   order: '142158'
   name: 海老名 (関東)
   prefecture_id: 14
@@ -566,6 +619,7 @@
   tags:
   - Scratch
 - id: 5
+  created_at: '2015-09-16'
   order: '151009'
   name: 新潟 (中部)
   prefecture_id: 15
@@ -577,6 +631,7 @@
   - Minecraft
   - Arduino
 - id: 6
+  created_at: '2016-11-24'
   order: '172014'
   name: 金沢 (中部)
   prefecture_id: 17
@@ -587,6 +642,7 @@
   - JavaScript
   - HackforPlay
 - id: 28
+  created_at: '2013-08-14'
   order: '182010'
   name: 福井 (中部)
   prefecture_id: 18
@@ -597,6 +653,7 @@
   - Scratch
   - Webサイト
 - id: 88
+  created_at: '2017-05-29'
   order: '192015'
   name: 甲府 (中部)
   prefecture_id: 19
@@ -609,6 +666,7 @@
   - ラズベリーパイ
   - LEGO Mindstorms
 - id: 94
+  created_at: '2017-02-20'
   order: '202061'
   name: 諏訪湖 (中部)
   prefecture_id: 20
@@ -620,6 +678,7 @@
   - ラズベリーパイ
   - Arduino
 - id: 27
+  created_at: '2012-11-08'
   order: '202151'
   name: 塩尻 (中部)
   prefecture_id: 20
@@ -630,6 +689,7 @@
   - Scratch
   - Ruby
 - id: 87
+  created_at: '2017-05-11'
   order: '202207'
   name: 安曇野 (中部)
   prefecture_id: 20
@@ -642,6 +702,7 @@
   - ラズベリーパイ
   - Arduino
 - id: 96
+  created_at: '2017-09-26'
   order: '212211'
   name: 海津 (中部)
   prefecture_id: 21
@@ -651,6 +712,7 @@
   tags:
   - Scratch
 - id: 98
+  created_at: '2016-02-25'
   order: '221309'
   name: 浜松 (中部)
   prefecture_id: 22
@@ -662,6 +724,7 @@
   - Webサイト
   - Ruby
 - id: 31
+  created_at: '2014-10-20'
   order: '231002'
   name: 名古屋 (中部)
   prefecture_id: 23
@@ -671,6 +734,7 @@
   tags:
   - Scratch
 - id: 32
+  created_at: '2014-12-08'
   order: '231002'
   name: 天白 (中部)
   prefecture_id: 23
@@ -682,6 +746,7 @@
   - Webサイト
   - 電子工作
 - id: 30
+  created_at: '2016-06-03'
   order: '232017'
   name: 豊橋 (中部)
   prefecture_id: 23
@@ -693,6 +758,7 @@
   - アプリ開発
   - ラズベリーパイ
 - id: 118
+  created_at: '2017-11-13'
   order: '232122'
   name: 安城 (中部)
   prefecture_id: 23
@@ -702,6 +768,7 @@
   tags:
   - Scratch
 - id: 84
+  created_at: '2017-05-16'
   order: '232211'
   name: 新城 (中部)
   prefecture_id: 23
@@ -713,6 +780,7 @@
   - Webサイト
   - ラズベリーパイ
 - id: 71
+  created_at: '2017-02-17'
   order: '232289'
   name: 尾張 (中部)
   prefecture_id: 23
@@ -722,6 +790,7 @@
   tags:
   - Scratch
 - id: 33
+  created_at: '2016-08-12'
   order: '234249'
   name: 大治 (中部)
   prefecture_id: 23
@@ -731,6 +800,7 @@
   tags:
   - Scratch
 - id: 62
+  created_at: '2016-12-22'
   order: '242039'
   name: 伊勢 (近畿)
   prefecture_id: 24
@@ -742,6 +812,7 @@
   - LEGO
   - LabVIEW
 - id: 37
+  created_at: '2015-09-16'
   order: '252018'
   name: 大津 (近畿)
   prefecture_id: 25
@@ -751,6 +822,7 @@
   tags:
   - Scratch
 - id: 39
+  created_at: '2016-03-01'
   order: '261009'
   name: 京都伏見 (近畿)
   prefecture_id: 26
@@ -763,6 +835,7 @@
   - Java
   - JavaScript
 - id: 34
+  created_at: '2014-10-14'
   order: '261009'
   name: 長岡京 (近畿)
   prefecture_id: 26
@@ -772,6 +845,7 @@
   tags:
   - Scratch
 - id: 42
+  created_at: '2014-02-11'
   order: '271004'
   name: 西宮・梅田 (近畿)
   prefecture_id: 27
@@ -783,6 +857,7 @@
   - Webサイト
   - 電子工作
 - id: 43
+  created_at: '2016-09-27'
   order: '271004'
   name: なんば (近畿)
   prefecture_id: 27
@@ -796,6 +871,7 @@
   - Ruby
   - Java
 - id: 44
+  created_at: '2016-08-15'
   order: '271004'
   name: 本町 (近畿)
   prefecture_id: 27
@@ -808,6 +884,7 @@
   - mruby
   - 電子工作
 - id: 116
+  created_at: '2017-11-02'
   order: '271004'
   name: 阿倍野 (近畿)
   prefecture_id: 27
@@ -819,6 +896,7 @@
   - 電子工作
   - Minecraft
 - id: 45
+  created_at: '2016-07-13'
   order: '271004'
   name: 西成 (近畿)
   prefecture_id: 27
@@ -829,6 +907,7 @@
   - Scratch
   - ラズベリーパイ
 - id: 46
+  created_at: '2016-03-22'
   order: '271403'
   name: 堺 (近畿)
   prefecture_id: 27
@@ -840,6 +919,7 @@
   - PHP
   - Java
 - id: 66
+  created_at: '2017-01-04'
   order: '272078'
   name: 高槻 (近畿)
   prefecture_id: 27
@@ -849,6 +929,7 @@
   tags:
   - Scratch
 - id: 40
+  created_at: '2016-05-18'
   order: '272108'
   name: 枚方 (近畿)
   prefecture_id: 27
@@ -860,6 +941,7 @@
   - Webサイト
   - アプリ開発
 - id: 108
+  created_at: '2017-09-06'
   order: '272205'
   name: みのお (近畿)
   prefecture_id: 27
@@ -869,6 +951,7 @@
   tags:
   - Scratch
 - id: 41
+  created_at: '2016-09-01'
   order: '272272'
   name: 東大阪 (近畿)
   prefecture_id: 27
@@ -881,6 +964,7 @@
   - Android
   - 電子工作
 - id: 101
+  created_at: '2017-08-03'
   order: '272124'
   name: 八尾 (近畿)
   prefecture_id: 27
@@ -893,6 +977,7 @@
   - Android
   - 電子工作
 - id: 72
+  created_at: '2017-02-19'
   order: '272141'
   name: 富田林 (近畿)
   prefecture_id: 27
@@ -905,6 +990,7 @@
   - Android
   - Java
 - id: 110
+  created_at: '2017-05-26'
   order: '272281'
   name: せんなん (近畿)
   prefecture_id: 27
@@ -914,6 +1000,7 @@
   tags:
   - Scratch
 - id: 67
+  created_at: '2016-09-12'
   order: '281000'
   name: 北神戸 (近畿)
   prefecture_id: 28
@@ -926,6 +1013,7 @@
   - Arduino
   - 電子工作
 - id: 119
+  created_at: '2017-11-08'
   order: '281000'
   name: 西神戸 (近畿)
   prefecture_id: 28
@@ -938,6 +1026,7 @@
   - PHP
   - Java
 - id: 48
+  created_at: '2016-09-28'
   order: '281000'
   name: 神戸 (近畿)
   prefecture_id: 28
@@ -948,6 +1037,7 @@
   - Scratch
   - JavaScript
 - id: 50
+  created_at: '2016-03-22'
   order: '282014'
   name: 姫路 (近畿)
   prefecture_id: 28
@@ -959,6 +1049,7 @@
   - ラズベリーパイ
   - Webサイト
 - id: 49
+  created_at: '2016-04-04'
   order: '282031'
   name: 明石 (近畿)
   prefecture_id: 28
@@ -970,6 +1061,7 @@
   - Webサイト
   - Arduino
 - id: 35
+  created_at: '2014-10-26'
   order: '292010'
   name: 奈良 (近畿)
   prefecture_id: 29
@@ -981,6 +1073,7 @@
   - Webサイト
   - C#
 - id: 36
+  created_at: '2016-04-25'
   order: '292095'
   name: 生駒 (近畿)
   prefecture_id: 29
@@ -992,6 +1085,7 @@
   - Webサイト
   - C#
 - id: 47
+  created_at: '2016-11-01'
   order: '302015'
   name: 和歌山 (近畿)
   prefecture_id: 30
@@ -1001,6 +1095,7 @@
   tags:
   - Scratch
 - id: 99
+  created_at: '2017-09-06'
   order: '302066'
   name: 南紀田辺 (近畿)
   prefecture_id: 30
@@ -1012,6 +1107,7 @@
   - ScratchJr
   - ラズベリーパイ
 - id: 38
+  created_at: '2012-11-08'
   order: '302074'
   name: 熊野 (近畿)
   prefecture_id: 30
@@ -1023,6 +1119,7 @@
   - Webサイト
   - アプリ
 - id: 115
+  created_at: '2017-08-16'
   order: '313866'
   name: 大山 (中国)
   prefecture_id: 31
@@ -1035,6 +1132,7 @@
   - Swift
   - ラズベリーパイ
 - id: 78
+  created_at: '2017-03-10'
   order: '325058'
   name: 吉賀 (中国)
   prefecture_id: 32
@@ -1047,6 +1145,7 @@
   - PHP
   - Ruby
 - id: 81
+  created_at: '2017-03-20'
   order: '331007'
   name: 岡山 岡南 (中国)
   prefecture_id: 33
@@ -1060,6 +1159,7 @@
   - Android
   - JavaScript
 - id: 52
+  created_at: '2016-05-04'
   order: '341002'
   name: 紙屋町 (中国)
   prefecture_id: 34
@@ -1071,6 +1171,7 @@
   - Webサイト
   - PHP
 - id: 53
+  created_at: '2016-09-29'
   order: '341002'
   name: 五日市 (中国)
   prefecture_id: 34
@@ -1082,6 +1183,7 @@
   - enchant.js
   - Unity
 - id: 51
+  created_at: '2016-06-01'
   order: '342076'
   name: 福山 (中国)
   prefecture_id: 34
@@ -1091,6 +1193,7 @@
   tags:
   - Scratch
 - id: 92
+  created_at: '2017-06-19'
   order: '352101'
   name: 光 (中国)
   prefecture_id: 35
@@ -1103,6 +1206,7 @@
   - PHP
   - アプリ開発
 - id: 103
+  created_at: '2017-10-02'
   order: '362018'
   name: 徳島 (四国)
   prefecture_id: 36
@@ -1116,6 +1220,7 @@
   - PHP
   - Python
 - id: 111
+  created_at: '2017-09-26'
   order: '362085'
   name: 三好 (四国)
   prefecture_id: 36
@@ -1125,6 +1230,7 @@
   tags:
   - Minecraft
 - id: 102
+  created_at: '2017-09-18'
   order: '401307'
   name: 福岡 (九州)
   prefecture_id: 40
@@ -1136,6 +1242,7 @@
   - Webサイト
   - JavaScript
 - id: 113
+  created_at: '2017-10-06'
   order: '401307'
   name: ももち (九州)
   prefecture_id: 40
@@ -1145,6 +1252,7 @@
   tags:
   - Scratch
 - id: 54
+  created_at: '2016-10-06'
   order: '402036'
   name: 久留米 (九州)
   prefecture_id: 40
@@ -1158,6 +1266,7 @@
   - LEGO
   - Minecraft
 - id: 122
+  created_at: '2017-12-15'
   order: '413411'
   name: 基山 (九州)
   prefecture_id: 41
@@ -1171,6 +1280,7 @@
   - ラズベリーパイ
   - Minecraft
 - id: 120
+  created_at: '2017-11-14'
   order: '422011'
   name: 長崎 (九州)
   prefecture_id: 42
@@ -1180,6 +1290,7 @@
   tags:
   - Scratch
 - id: 55
+  created_at: '2016-09-15'
   order: '454419'
   name: 宮崎 (九州)
   prefecture_id: 45
@@ -1192,6 +1303,7 @@
   - Python
   - ラズベリーパイ
 - id: 61
+  created_at: '2012-07-09'
   order: '472018'
   name: 那覇 (沖縄)
   prefecture_id: 47
@@ -1201,6 +1313,7 @@
   tags:
   - Scratch
 - id: 106
+  created_at: '2017-09-20'
   order: '472051'
   name: 宜野湾 (沖縄)
   prefecture_id: 47
@@ -1214,6 +1327,7 @@
   - Java
   - Swift
 - id: 56
+  created_at: '2016-11-02'
   order: '472140'
   name: 宮古島 (沖縄)
   prefecture_id: 47
@@ -1224,6 +1338,7 @@
   - Scratch
   - Webサイト
 - id: 57
+  created_at: '2016-12-19'
   order: '473251'
   name: 嘉手納 (沖縄)
   prefecture_id: 47
