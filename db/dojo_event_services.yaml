@@ -296,9 +296,9 @@
   group_id: 3325
   url: https://coderdojo-takatsuki.connpass.com
 - dojo_id: 108
-  name: none
-  group_id:
-  url:
+  name: connpass
+  group_id: 4559
+  url: https://coderdojo-minoh.connpass.com/
 - dojo_id: 40
   name: connpass
   group_id: 2248
