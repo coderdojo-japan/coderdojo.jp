@@ -14,9 +14,9 @@ namespace :statistics do
     require 'pp'
 
     puts 'Searching Connpass'
-    pp Statistics::Client::Connpass.new.search(keyword: args[:keyword])
+    pp Statistics::Providers::Connpass.new.search(keyword: args[:keyword])
 
     puts 'Searching Doorkeeper'
-    pp Statistics::Client::Doorkeeper.new.search(keyword: args[:keyword])
+    pp Statistics::Providers::Doorkeeper.new.search(keyword: args[:keyword])
   end
 end
