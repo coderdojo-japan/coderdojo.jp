@@ -436,3 +436,7 @@
   name: connpass
   group_id: 4692
   url: https://coderdojo-tachikawa.connpass.com/
+- dojo_id: 116
+  name: doorkeeper
+  group_id: 9482
+  url: https://coderdojo-abeno.doorkeeper.jp/
