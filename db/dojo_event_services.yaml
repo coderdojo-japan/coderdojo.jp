@@ -324,9 +324,9 @@
   group_id: 281889288840369
   url: https://www.facebook.com/pg/coderdojo.nishinari.osaka/events/?ref=page_internal
 - dojo_id: 101
-  name: none
-  group_id:
-  url:
+  name: connpass
+  group_id: 2777
+  url: https://coderdojo-higashiosaka.connpass.com/
 - dojo_id: 46
   name: connpass
   group_id: 2620
