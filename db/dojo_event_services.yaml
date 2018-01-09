@@ -432,3 +432,7 @@
   name: none
   group_id:
   url:
+- dojo_id: 117
+  name: connpass
+  group_id: 4692
+  url: https://coderdojo-tachikawa.connpass.com/
