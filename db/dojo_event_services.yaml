@@ -397,9 +397,9 @@
   group_id:
   url:
 - dojo_id: 111
-  name: google
-  group_id:
-  url:
+  name: facebook
+  group_id: 1507281716025249
+  url: https://www.facebook.com/pg/coderdojomiyoshi/events/?ref=page_internal
 - dojo_id: 102
   name: facebook
   group_id: 495711777474589
