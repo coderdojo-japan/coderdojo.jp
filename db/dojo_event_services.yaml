@@ -157,9 +157,9 @@
   group_id:
   url:
 - dojo_id: 60
-  name: google
-  group_id:
-  url:
+  name: connpass
+  group_id: 3461
+  url: https://coderdojo-ichikawa.connpass.com/
 - dojo_id: 82
   name: connpass
   group_id: 3835
