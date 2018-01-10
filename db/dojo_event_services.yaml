@@ -323,10 +323,11 @@
   name: facebook
   group_id: 281889288840369
   url: https://www.facebook.com/pg/coderdojo.nishinari.osaka/events/?ref=page_internal
-- dojo_id: 101
-  name: connpass
-  group_id: 2777
-  url: https://coderdojo-higashiosaka.connpass.com/
+# 東大阪 (近畿) と合同開催のため八尾の集計は不要
+#- dojo_id: 101
+#  name: connpass
+#  group_id: 2777
+#  url: https://coderdojo-higashiosaka.connpass.com/
 - dojo_id: 46
   name: connpass
   group_id: 2620
