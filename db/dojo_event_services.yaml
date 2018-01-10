@@ -157,9 +157,9 @@
   group_id:
   url:
 - dojo_id: 60
-  name: google
-  group_id:
-  url:
+  name: connpass
+  group_id: 3461
+  url: https://coderdojo-ichikawa.connpass.com/
 - dojo_id: 82
   name: connpass
   group_id: 3835
@@ -185,9 +185,9 @@
   group_id:
   url:
 - dojo_id: 25
-  name: google
-  group_id:
-  url:
+  name: facebook
+  group_id: 238346276578113
+  url: https://www.facebook.com/pg/coderdojowakaba/events/?ref=page_internal
 - dojo_id: 86
   name: facebook
   group_id: 880706025404127
@@ -296,9 +296,9 @@
   group_id: 3325
   url: https://coderdojo-takatsuki.connpass.com
 - dojo_id: 108
-  name: none
-  group_id:
-  url:
+  name: connpass
+  group_id: 4559
+  url: https://coderdojo-minoh.connpass.com/
 - dojo_id: 40
   name: connpass
   group_id: 2248
@@ -324,9 +324,9 @@
   group_id: 281889288840369
   url: https://www.facebook.com/pg/coderdojo.nishinari.osaka/events/?ref=page_internal
 - dojo_id: 101
-  name: none
-  group_id:
-  url:
+  name: connpass
+  group_id: 2777
+  url: https://coderdojo-higashiosaka.connpass.com/
 - dojo_id: 46
   name: connpass
   group_id: 2620
@@ -397,9 +397,9 @@
   group_id:
   url:
 - dojo_id: 111
-  name: google
-  group_id:
-  url:
+  name: facebook
+  group_id: 1507281716025249
+  url: https://www.facebook.com/pg/coderdojomiyoshi/events/?ref=page_internal
 - dojo_id: 102
   name: facebook
   group_id: 495711777474589
@@ -432,3 +432,19 @@
   name: none
   group_id:
   url:
+- dojo_id: 117
+  name: connpass
+  group_id: 4692
+  url: https://coderdojo-tachikawa.connpass.com/
+- dojo_id: 116
+  name: doorkeeper
+  group_id: 9482
+  url: https://coderdojo-abeno.doorkeeper.jp/
+- dojo_id: 118
+  name: doorkeeper
+  group_id: 9496
+  url: https://coderdojo-anjo.doorkeeper.jp/
+- dojo_id: 121
+  name: doorkeeper
+  group_id: 9491
+  url: https://coderdojo-ochanomizu.doorkeeper.jp/
