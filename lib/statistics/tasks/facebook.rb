@@ -1,6 +1,10 @@
 module Statistics
   module Tasks
     class Facebook
+      def self.delete_event_histories(period)
+        EventHistory.for(:facebook).within(period).delete_all
+      end
+
       def initialize(dojos, date, weekly)
         @client = Providers::Facebook.new
         @dojos = dojos

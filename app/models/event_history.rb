@@ -8,4 +8,7 @@ class EventHistory < ApplicationRecord
   validates :event_url, presence: true, uniqueness: true, allow_nil: true
   validates :participants, presence: true
   validates :evented_at, presence: true
+
+  scope :for, ->(service) { where(service_name: service) }
+  scope :within, ->(period) { where(evented_at: period) }
 end

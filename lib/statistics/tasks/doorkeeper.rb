@@ -1,6 +1,10 @@
 module Statistics
   module Tasks
     class Doorkeeper
+      def self.delete_event_histories(period)
+        EventHistory.for(:doorkeeper).within(period).delete_all
+      end
+
       def initialize(dojos, date, weekly)
         @client = Providers::Doorkeeper.new
         @dojos = dojos

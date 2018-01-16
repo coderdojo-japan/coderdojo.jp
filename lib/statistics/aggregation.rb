@@ -8,8 +8,6 @@ module Statistics
     end
 
     def run
-      delete_event_histories
-
       "Statistics::Aggregation::#{@mode.camelize}".constantize.new(@dojos, @from, @to).run
     end
 
@@ -70,10 +68,6 @@ module Statistics
       d
     end
 
-    def delete_event_histories
-      EventHistory.where(evented_at: @from..@to).delete_all
-    end
-
     def fetch_dojos
       DojoEventService.names.keys.each.with_object({}) do |name, hash|
         hash[name] = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name }).to_a
@@ -90,6 +84,7 @@ module Statistics
 
       def run
         with_notifying do
+          delete_event_histories
           execute
         end
       end
@@ -101,6 +96,12 @@ module Statistics
         Notifier.notify_success(date_format(@from), date_format(@to))
       rescue => e
         Notifier.notify_failure(date_format(@from), date_format(@to), e)
+      end
+
+      def delete_event_histories
+        @dojos.keys.each do |kind|
+          "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(@from..@to)
+        end
       end
 
       def execute
