@@ -80,7 +80,7 @@ module Statistics
       end
     end
 
-    class Weekly
+    class Base
       def initialize(dojos, from, to)
         @dojos = dojos
         @list = build_list(from, to)
@@ -89,6 +89,37 @@ module Statistics
       end
 
       def run
+        with_notifying do
+          execute
+        end
+      end
+
+      private
+
+      def with_notifying
+        yield
+        Notifier.notify_success(date_format(@from), date_format(@to))
+      rescue => e
+        Notifier.notify_failure(date_format(@from), date_format(@to), e)
+      end
+
+      def execute
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+
+      def build_list(_from, _to)
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+
+      def date_format(_date)
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+    end
+
+    class Weekly < Base
+      private
+
+      def execute
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
 
@@ -96,13 +127,7 @@ module Statistics
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
           end
         end
-
-        Notifier.notify_success(date_format(@from), date_format(@to))
-      rescue => e
-        Notifier.notify_failure(date_format(@from), date_format(@to), e)
       end
-
-      private
 
       def build_list(from, to)
         loop.with_object([from]) do |_, list|
@@ -117,15 +142,10 @@ module Statistics
       end
     end
 
-    class Monthly
-      def initialize(dojos, from, to)
-        @dojos = dojos
-        @list = build_list(from, to)
-        @from = from
-        @to = to
-      end
+    class Monthly < Base
+      private
 
-      def run
+      def execute
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}"
 
@@ -133,13 +153,7 @@ module Statistics
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
           end
         end
-
-        Notifier.notify_success(date_format(@from), date_format(@to))
-      rescue => e
-        Notifier.notify_failure(date_format(@from), date_format(@to), e)
       end
-
-      private
 
       def build_list(from, to)
         loop.with_object([from]) do |_, list|
