@@ -11,23 +11,21 @@ module Statistics
       end
 
       def run
-        @dojos.each do |dojo|
-          dojo.dojo_event_services.each do |dojo_event_service|
-            @client.fetch_events.each do |e|
-              next unless dojo.id == e['dojo_id'].to_i
+        dojos_hash = @dojos.index_by(&:id)
+        @client.fetch_events.each do |e|
+          dojo = dojos_hash[e['dojo_id'].to_i]
+          next unless dojo
 
-              evented_at = Time.zone.parse(e['evented_at'])
-              event_id = "#{dojo.id}_#{evented_at.to_i}"
+          evented_at = Time.zone.parse(e['evented_at'])
+          event_id = "#{dojo.id}_#{evented_at.to_i}"
 
-              EventHistory.create!(dojo_id: dojo.id,
-                                   dojo_name: dojo.name,
-                                   service_name: dojo_event_service.name,
-                                   event_id: event_id,
-                                   event_url: "https://dummy.url/#{event_id}",
-                                   participants: e['participants'],
-                                   evented_at: evented_at)
-            end
-          end
+          EventHistory.create!(dojo_id: dojo.id,
+                               dojo_name: dojo.name,
+                               service_name: self.class.name.demodulize.underscore,
+                               event_id: event_id,
+                               event_url: "https://dummy.url/#{event_id}",
+                               participants: e['participants'],
+                               evented_at: evented_at)
         end
       end
     end
