@@ -13,7 +13,7 @@ module Statistics
 
       def run
         @dojos.each do |dojo|
-          dojo.dojo_event_services.each do |dojo_event_service|
+          dojo.dojo_event_services.for(:doorkeeper).each do |dojo_event_service|
             @client.fetch_events(@params.merge(group_id: dojo_event_service.group_id)).each do |e|
               next unless e['group'].to_s == dojo_event_service.group_id
 

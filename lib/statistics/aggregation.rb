@@ -176,7 +176,7 @@ module Statistics
         end
 
         def notify_failure(from, to, exception)
-          notify("#{from}~#{to}のイベント履歴の集計でエラーが発生しました\n#{exception.message}")
+          notify("#{from}~#{to}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
@@ -191,6 +191,7 @@ module Statistics
         end
 
         def notify(msg)
+          $stdout.puts msg
           puts `curl --data-urlencode "source=#{msg}" -s #{idobata_hook_url} -o /dev/null -w "idobata: %{http_code}"` if notifierable?
         end
       end

@@ -4,7 +4,8 @@ Thanks for their great works! 😆
 ## Ruby Gems
 
 We use so many gems including dependencies.   
-See `Gemfile` or `Gemfile.lock` for details.
+See [Gemfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/Gemfile) or
+[Gemfile.lock](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/Gemfile.lock) for details.
 
 ## Services
 
