@@ -1,6 +1,10 @@
 module Statistics
   module Tasks
     class Connpass
+      def self.delete_event_histories(period)
+        EventHistory.for(:connpass).within(period).delete_all
+      end
+
       def initialize(dojos, date, weekly)
         @client = Providers::Connpass.new
         @dojos = dojos

@@ -8,8 +8,6 @@ module Statistics
     end
 
     def run
-      delete_event_histories
-
       "Statistics::Aggregation::#{@mode.camelize}".constantize.new(@dojos, @from, @to).run
     end
 
@@ -70,17 +68,13 @@ module Statistics
       d
     end
 
-    def delete_event_histories
-      EventHistory.where(evented_at: @from..@to).delete_all
-    end
-
     def fetch_dojos
       DojoEventService.names.keys.each.with_object({}) do |name, hash|
         hash[name] = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name }).to_a
       end
     end
 
-    class Weekly
+    class Base
       def initialize(dojos, from, to)
         @dojos = dojos
         @list = build_list(from, to)
@@ -89,6 +83,44 @@ module Statistics
       end
 
       def run
+        with_notifying do
+          delete_event_histories
+          execute
+        end
+      end
+
+      private
+
+      def with_notifying
+        yield
+        Notifier.notify_success(date_format(@from), date_format(@to))
+      rescue => e
+        Notifier.notify_failure(date_format(@from), date_format(@to), e)
+      end
+
+      def delete_event_histories
+        @dojos.keys.each do |kind|
+          "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(@from..@to)
+        end
+      end
+
+      def execute
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+
+      def build_list(_from, _to)
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+
+      def date_format(_date)
+        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+    end
+
+    class Weekly < Base
+      private
+
+      def execute
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
 
@@ -96,13 +128,7 @@ module Statistics
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
           end
         end
-
-        Notifier.notify_success(date_format(@from), date_format(@to))
-      rescue => e
-        Notifier.notify_failure(date_format(@from), date_format(@to), e)
       end
-
-      private
 
       def build_list(from, to)
         loop.with_object([from]) do |_, list|
@@ -117,15 +143,10 @@ module Statistics
       end
     end
 
-    class Monthly
-      def initialize(dojos, from, to)
-        @dojos = dojos
-        @list = build_list(from, to)
-        @from = from
-        @to = to
-      end
+    class Monthly < Base
+      private
 
-      def run
+      def execute
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}"
 
@@ -133,13 +154,7 @@ module Statistics
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
           end
         end
-
-        Notifier.notify_success(date_format(@from), date_format(@to))
-      rescue => e
-        Notifier.notify_failure(date_format(@from), date_format(@to), e)
       end
-
-      private
 
       def build_list(from, to)
         loop.with_object([from]) do |_, list|
