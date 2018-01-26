@@ -1012,6 +1012,19 @@
   description: 大阪府泉南市で毎月開催
   tags:
   - Scratch
+- id: 124
+  created_at: '2018-01-26'
+  order: '281018'
+  name: 灘 (近畿)
+  prefecture_id: 28
+  logo: https://coderdojo-nada.github.io/img/coderdojo_nada_logo96x96.png
+  url: https://coderdojo-nada.github.io/
+  description: 神戸市東灘区で毎月開催
+  tags:
+  - JavaScript
+  - Python
+  - C
+  - Java
 - id: 119
   created_at: '2017-11-08'
   order: '281069'
