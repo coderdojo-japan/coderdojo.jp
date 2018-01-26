@@ -1012,22 +1012,9 @@
   description: 大阪府泉南市で毎月開催
   tags:
   - Scratch
-- id: 67
-  created_at: '2016-09-12'
-  order: '281000'
-  name: 北神戸 (近畿)
-  prefecture_id: 28
-  logo: "/img/dojos/kitakobe.png"
-  url: https://www.facebook.com/KitakobeDojo/
-  description: 神戸市北区で毎月開催
-  tags:
-  - Scratch
-  - ラズベリーパイ
-  - Arduino
-  - 電子工作
 - id: 119
   created_at: '2017-11-08'
-  order: '281000'
+  order: '281069'
   name: 西神戸 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/nishi-kobe.png"
@@ -1038,9 +1025,22 @@
   - JavaScript
   - PHP
   - Java
+- id: 67
+  created_at: '2016-09-12'
+  order: '281093'
+  name: 北神戸 (近畿)
+  prefecture_id: 28
+  logo: "/img/dojos/kitakobe.png"
+  url: https://www.facebook.com/KitakobeDojo/
+  description: 神戸市北区で毎月開催
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - Arduino
+  - 電子工作
 - id: 48
   created_at: '2016-09-28'
-  order: '281000'
+  order: '281107'
   name: 神戸 (近畿)
   prefecture_id: 28
   logo: https://static.wixstatic.com/media/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png/v1/fill/w_68,h_70,al_c,usm_0.66_1.00_0.01/3b0a7d_f95cda9cea5a459aa5eca813de611f0a~mv2.png
