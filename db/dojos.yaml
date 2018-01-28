@@ -730,12 +730,12 @@
   name: 浜松 (中部)
   prefecture_id: 22
   logo: https://pbs.twimg.com/profile_images/679526979456991234/3ycBOGYG.png
-  url: http://www.coderdojo-hamamatsu.org/
+  url: http://coderdojo-hamamatsu.org/
   description: 静岡県浜松市で毎月開催
   tags:
   - Scratch
   - Webサイト
-  - Ruby
+  - Minecraft
 - id: 31
   created_at: '2014-10-20'
   order: '231002'
