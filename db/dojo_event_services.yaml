@@ -119,6 +119,10 @@
   name: doorkeeper
   group_id: 9040
   url: https://coderdojo-suginami.doorkeeper.jp
+- dojo_id: 123
+  name: connpass
+  group_id: 4985
+  url: https://coderdojo-ikebukuro.connpass.com/
 - dojo_id: 17
   name: facebook
   group_id: 346407898743580
