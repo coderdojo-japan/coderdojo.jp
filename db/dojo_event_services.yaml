@@ -176,6 +176,10 @@
   name: facebook
   group_id: 472842399443384
   url: https://www.facebook.com/pg/CoderDojokashiwa/events/?ref=page_internal
+- dojo_id: 125
+  name: facebook
+  group_id: 231578703997335
+  url: https://www.facebook.com/pg/CoderDojoKashiwaShounan/events/?ref=page_internal
 - dojo_id: 112
   name: google
   group_id:

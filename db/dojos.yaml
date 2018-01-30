@@ -374,6 +374,16 @@
   description: 千葉県柏市で毎月3回開催
   tags:
   - Scratch
+- id: 125
+  created_at: '2018-01-27'
+  order: '122173'
+  name: 柏昭南 (関東)
+  prefecture_id: 12
+  url: https://www.facebook.com/CoderDojoKashiwaShounan/
+  logo: "/img/dojos/kashiwa-shounan.jpg"
+  description: 千葉県柏市沼南地域で毎月第2土曜開催
+  tags:
+  - Scratch
 - id: 112
   created_at: '2017-09-26'
   order: '122173'
