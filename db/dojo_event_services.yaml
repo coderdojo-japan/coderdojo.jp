@@ -364,6 +364,10 @@
   name: connpass
   group_id: 2932
   url: https://kitakobedojo.connpass.com/
+#- dojo_id: 124
+#  name: connpass
+#  group_id: # TODO: イベントが１つ以上ないと発行されない?
+#  url: https://coderdojo-nada.connpass.com/
 - dojo_id: 48
   name: google
   group_id:
