@@ -216,10 +216,10 @@
   name: connpass
   group_id: 3470
   url: https://coderdojo-yokohama.connpass.com
-- dojo_id: 126
-  name: facebook
-  group_id: 2061206850822081
-  url: https://www.facebook.com/pg/CoderDojo.Tobe/events/?ref=page_internal
+#- dojo_id: 126
+#  name: connpass
+#  group_id: # TODO: connpass の series id ができたら追加する
+#  url: https://coderdojo-tobe.connpass.com/
 - dojo_id: 91
   name: connpass
   group_id: 4153
