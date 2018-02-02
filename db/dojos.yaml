@@ -587,9 +587,19 @@
   - Minecraft
   - CS Unplugged
   - マルチメディア
+- id: 70
+  created_at: '2017-01-30'
+  order: '141020'
+  name: 横浜 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-yokohama.connpass.com/
+  description: 横浜市神奈川区で毎月開催
+  tags:
+  - Scratch
 - id: 126
   created_at: '2018-02-02'
-  order: '141003'
+  order: '141038'
   name: 戸部 (関東)
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
@@ -599,7 +609,7 @@
   - Scratch
 - id: 68
   created_at: '2017-01-09'
-  order: '141003'
+  order: '141097'
   name: 新羽 (関東)
   prefecture_id: 14
   logo: "/img/dojos/nippa.png"
@@ -609,7 +619,7 @@
   - Scratch
 - id: 76
   created_at: '2017-04-03'
-  order: '141003'
+  order: '141135'
   name: 長津田 (関東)
   prefecture_id: 14
   logo: "/img/dojos/nagatsuta.png"
@@ -619,16 +629,6 @@
   - Scratch
   - Minecraft
   - Hour of Code
-- id: 70
-  created_at: '2017-01-30'
-  order: '141003'
-  name: 横浜 (関東)
-  prefecture_id: 14
-  logo: "/img/dojos/japan.png"
-  url: https://coderdojo-yokohama.connpass.com/
-  description: 神奈川県横浜市で毎月開催
-  tags:
-  - Scratch
 - id: 26
   created_at: '2016-12-14'
   order: '142051'
