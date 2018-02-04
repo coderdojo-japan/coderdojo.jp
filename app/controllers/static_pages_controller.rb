@@ -32,6 +32,8 @@ class StaticPagesController < ApplicationController
         EventHistory.where(evented_at:
                      Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).sum(:participants)
     end
+
+    @annual_dojos_chart = HighChartsBuilder.build_annual_dojos
   end
 
   def letsencrypt
