@@ -33,6 +33,7 @@ session = GoogleDrive::Session.from_config(conf)
 ss = session.spreadsheet_by_key(SPREAD_SHEET_KEY)
 ws = ss.worksheets.find { |s| s.title == WORK_SHEET_NAME }
 
+# A:通番, C:日付, G:時間, K:合計参加者
 res = ws.rows.each.with_object([]) do |row, arr|
   serial_number = Integer(row[col_index('A')]) rescue nil
   next unless serial_number
