@@ -36,11 +36,17 @@
             .post-heading
               %h1 CoderDojo Kata
               %h2.subheading 道場情報まとめ
-    / Post Content
-    %article
-      .container
+            
+    / Post Content        
+    %article 
+      .container 
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.fontsize-bigger
+            / Navigator
+            %p{:style => "margin-top: -35px; padding-bottom: 20px;"}
+              %a{:href => "/"}トップ
+              → Kata
+            / Scrivito contents
             = scrivito_tag :div, @obj, :body
             %hr/
             %p{:align => "right", :style => "color: grey; padding-bottom: 50px;"}
