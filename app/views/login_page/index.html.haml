@@ -1,3 +1,6 @@
+%body
+  %header.intro-header{:style => "padding-top: 300px; background-image: url('cover.png')"}
+
 = scrivito_tag :h1,  @obj, :title
 = scrivito_tag :div, @obj, :body
 = form_tag session_path, role: 'form' do
