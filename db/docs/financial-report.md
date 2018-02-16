@@ -1,4 +1,4 @@
-# 一般社団法人 CoderDojo Japan<br>決算報告書
+# 一般社団法人 CoderDojo Japan <br>決算報告書
 <br>
 
 一般社団法人 CoderDojo Japan の各期の決算報告書を本ページにまとめております。
