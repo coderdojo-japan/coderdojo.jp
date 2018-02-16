@@ -16,6 +16,7 @@ gem "bootstrap-sass"
 gem 'sass-rails'
 gem 'uglifier'
 gem 'font-awesome-rails'
+gem 'haml-rails'
 
 # For redirection
 gem 'rack-host-redirect'
@@ -31,6 +32,14 @@ gem 'faraday'
 # https://github.com/bundler/bundler/issues/5332
 gem 'faraday_middleware', '0.10'
 
+gem 'koala'
+
+gem 'rack-user_agent'
+
+gem 'rack-attack'
+
+gem 'google_drive'
+
 group :development do
   gem 'web-console'
   gem 'spring'
@@ -40,6 +49,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
   gem 'rake'
   gem 'travis'
   gem 'minitest-retry'

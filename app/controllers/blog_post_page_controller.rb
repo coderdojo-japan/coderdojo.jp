@@ -1,4 +1,4 @@
-class BlogPostPageController < ScrivitoController
+class BlogPostPageController < CmsController
 
   def index
     if @obj.permalink.to_s.include?("sotechsha/")

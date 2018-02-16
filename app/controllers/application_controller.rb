@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
+  before_action :set_request_variant
+
   private
 
     def store_location
@@ -16,4 +18,7 @@ class ApplicationController < ActionController::Base
       %w(login_page sessions).include? self.controller_name
     end
 
+  def set_request_variant
+    request.variant = request.device_variant
+  end
 end

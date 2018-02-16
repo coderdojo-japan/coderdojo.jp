@@ -1,7 +1,7 @@
-class PlainPageController < ScrivitoController
+class PlainPageController < CmsController
   #skip_before_action :verify_authenticity_token, only: [:index]
 
   def index
-    @dojos = Dojo.all
+    @dojos = Dojo.default_order.all
   end
 end

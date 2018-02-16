@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'rails_helper'
 
-RSpec.feature "Sotechsha", type: :feature, retry: 3  do
+RSpec.feature "Sotechsha", type: :feature, scrivito: true, retry: 3  do
 
   describe "GET /sotechsha/num" do
     scenario "Quizzes should be permalink" do
@@ -16,7 +16,7 @@ RSpec.feature "Sotechsha", type: :feature, retry: 3  do
   describe "GET /sotechsha" do
     scenario "SoTechSha link should be rendered" do
       visit "/sotechsha"
-      expect(page).to have_selector "a[href]", count: 24
+      expect(page).to have_selector "a[href]"
       # topimg,snsbtn
       expect(page).to have_selector "img", count: 2
     end

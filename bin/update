@@ -20,6 +20,11 @@ chdir APP_ROOT do
 
   puts "\n== Updating database =="
   system! 'bin/rails db:migrate'
+  system! 'bin/rails db:seed'
+
+  puts "\n== Upserting application data =="
+  system! 'bin/rails dojos:update_db_by_yaml'
+  system! 'bin/rails dojo_event_services:upsert'
 
   puts "\n== Removing old logs and tempfiles =="
   system! 'bin/rails log:clear tmp:clear'

@@ -18,18 +18,17 @@ namespace :dojos do
       dojo.delete 'updatedAt' # This is managed by database
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 
   desc '現在のyamlファイルを元にデータベースを更新します'
   task update_db_by_yaml: :environment do
-    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+    dojos = Dojo.load_attributes_from_yaml
     dojos.sort_by{ |hash| hash['order'] }
 
     dojos.each do |dojo|
-      d = Dojo.find_by(name: dojo['name']) || Dojo.new
+      d = Dojo.find_or_initialize_by(id: dojo['id'])
 
-      d.id          = dojo['id']
       d.name        = dojo['name']
       d.email       = ''
       d.order       = dojo['order']
@@ -37,8 +36,9 @@ namespace :dojos do
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
       d.url         = dojo['url']
-      d.created_at  = dojo['createdAt'] ? Time.zone.parse(dojo['createdAt']) : Time.zone.now
+      d.created_at  = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at  = Time.zone.now
+      d.prefecture_id = dojo['prefecture_id']
 
       d.save!
     end
@@ -46,19 +46,19 @@ namespace :dojos do
 
   desc '現在のyamlファイルのカラムをソートします'
   task sort_yaml: :environment do
-    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+    dojos = Dojo.load_attributes_from_yaml
 
     # Dojo column should start with 'name' for human-readability
     dojos.map! do |dojo|
       dojo.sort_by{|a,b| a.last}.to_h
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 
   desc 'DBからyamlファイルを生成します'
   task migrate_adding_id_to_yaml: :environment do
-    dojos = YAML.load_file(Rails.root.join('db','dojos.yaml'))
+    dojos = Dojo.load_attributes_from_yaml
 
     dojos.map! do |dojo|
       d = Dojo.find_by(name: dojo['name'])
@@ -68,6 +68,6 @@ namespace :dojos do
       new_dojo
     end
 
-    YAML.dump(dojos, File.open(Rails.root.join('db', 'dojos.yaml'), 'w'))
+    Dojo.dump_attributes_to_yaml(dojos)
   end
 end

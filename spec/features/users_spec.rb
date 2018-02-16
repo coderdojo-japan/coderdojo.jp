@@ -2,11 +2,11 @@
 require 'rails_helper'
 include Scrivito::ControllerHelper
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature "Users", type: :feature, scrivito: true do
   subject { page }
 
   describe "log in" do
-    let!(:login)     { LoginPage.instance }
+    let(:login)     { LoginPage.instance }
     let(:login_path) { login.slug + login.id }
 
     before do

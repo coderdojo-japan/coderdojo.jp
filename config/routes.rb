@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
+  get "/docs/code_of_conduct", to: redirect('/docs/code-of-conduct')
   resources :docs, only: [:index, :show]
 
   # Static Pages
   root "static_pages#home"
+  get "/stats", to: 'static_pages#stats'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')

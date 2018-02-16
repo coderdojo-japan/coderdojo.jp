@@ -1,14 +1,17 @@
 class Dojo < ApplicationRecord
-  NUM_OF_COUNTRIES   = "75"
-  NUM_OF_WHOLE_DOJOS = "1,400"
+  NUM_OF_COUNTRIES    = "85"
+  NUM_OF_WHOLE_DOJOS  = "1,600"
   NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
+  YAML_FILE = Rails.root.join('db', 'dojos.yaml')
 
-  has_one  :dojo_event_service, dependent: :destroy
-  has_many :event_histories,    dependent: :destroy
+  belongs_to :prefecture
+  has_many :dojo_event_services, dependent: :destroy
+  has_many :event_histories,     dependent: :destroy
 
   serialize :tags
-  default_scope -> { order(order: :asc) }
   before_save { self.email = self.email.downcase }
+
+  scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
 
   validates :name,        presence: true, length: { maximum: 50 }
   validates :email,       presence: false
@@ -19,11 +22,14 @@ class Dojo < ApplicationRecord
   validate  :number_of_tags
   validates :url,         presence: true
 
-  def self.valid_yaml_format?(path_to_file)
-    !!YAML.load_file(path_to_file)
-  rescue Exception => e
-    #STDERR.puts e.message
-    return false
+  class << self
+    def load_attributes_from_yaml
+      YAML.load_file(YAML_FILE)
+    end
+
+    def dump_attributes_to_yaml(attributes)
+      YAML.dump(attributes, File.open(YAML_FILE, 'w'))
+    end
   end
 
   private

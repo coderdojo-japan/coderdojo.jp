@@ -22,7 +22,7 @@
 }
 .keiyaku > p {
   counter-increment: keiyaku-paragraph;
-  text-indent: 1em;
+  text-indent: 0em;
   padding-left: 1em;
   line-height: 1.7em;
 }
@@ -30,8 +30,8 @@
 .keiyaku > h2 + p,
 .keiyaku > hr + p,
 .keiyaku > p:first-of-type {
-  text-indent: 0;
-  padding-left: 0;
+  text-indent:  0em;
+  padding-left: 1em;
 }
 .keiyaku > p::before {
   //content: counter(keiyaku-paragraph) " ";

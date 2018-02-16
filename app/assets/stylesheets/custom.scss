@@ -72,8 +72,8 @@ h2{
     margin: 0 !important;
 }
 
-// Sponsor section
-.sponsors_logo {
+// Partner section
+.partners_logo {
   ul{
     padding-left: 0px;
   }
@@ -260,7 +260,8 @@ a {
 }
 
 .title, body > footer a:hover {
-    color: #fff
+    color: #fff;
+    text-decoration: none
 }
 
 .title{
@@ -477,4 +478,8 @@ a {
 .loaded{
   width: 90%;
   display: inline-block
+}
+
+#accordion a:hover {
+  text-decoration: none;
 }

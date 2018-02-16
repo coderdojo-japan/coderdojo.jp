@@ -1,8 +1,8 @@
 # プライバシーポリシー
 
 <div align="right">
-一般社団法人 CoderDojo Japan<br />
-代表理事 安川要平<br />
+一般社団法人 CoderDojo Japan<br>
+代表理事 安川要平<br>
 最終更新日: 2017/10/09
 </div>
 

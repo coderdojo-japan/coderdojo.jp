@@ -1,0 +1,18 @@
+%body
+  %header.intro-header{:style => "padding-top: 300px; background-image: url('cover.png')"}
+
+%h1{:style => "text-align: center; margin-top: -30px; padding-bottom: 20px;"} ログイン
+= scrivito_tag :div, @obj, :body
+= form_tag session_path, role: 'form' do
+  .form-group
+    = label_tag      :email, 'メールアドレス'
+    = text_field_tag :email, '', class: 'form-control', placeholder: ''
+  .form-group
+    = label_tag          :password, 'パスワード'
+    = password_field_tag :password, '', class: 'form-control', placeholder: ''
+  %button.btn.btn-default{:type => "submit"} ログイン
+- if Rails.env.development?
+  %hr/
+  = scrivito_tag_list :ul, @obj, :toclist do |list, child|
+    = list.tag :li do
+      = link_to child.display_title, scrivito_path(child)

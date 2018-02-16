@@ -24,12 +24,7 @@ Fulfill the requirements, setup by following the instructions, and send a pull r
 ### Setup 
 
 1. Fork and clone this repository.
-1. `$ bundle install --without production`
-1. `$ bundle exec rails db:migrate`
-1. `$ bundle exec rails dojos:update_db_by_yaml`
-1. `$ bundle exec rails dojo_event_services:upsert`
-1. `$ bundle exec rails test`
-1. `$ rails server`
+1. `$ bin/setup`
 1. Access to [localhost:3000](http://localhost:3000).
 
 If you successfully set up, you can see the same page as [coderdojo.jp](http://coderdojo.jp).

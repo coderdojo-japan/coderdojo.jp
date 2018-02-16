@@ -1,0 +1,72 @@
+- provide(:url,   @url)
+- provide(:title, '統計情報')
+- provide(:meta_description, '全国の CoderDojo の統計情報をまとめています。')
+%section.cover
+  = image_tag "coderdojo-stats_cover.png", class: "cursor-default"
+%section#dojos.dojos.text-center
+  %bpr
+    %h1 統計情報
+    %p 本ページでは全国の CoderDojo の統計情報をまとめています。
+    CoderDojo の活動状況を把握する際などにご活用ください。
+
+    %h3 全国の道場
+    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+      - @regions_and_dojos.each_with_index do |(region, dojos), index|
+        .panel.panel-default
+          .panel-heading{:id => "heading#{index}", :role => "tab"}
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "##{"collapse#{index}"}", :role => "button"}
+                %i.fa.fa-chevron-right{"aria-hidden" => "true"}
+                = region
+                \- #{dojos.count} Dojos
+          .panel-collapse.collapse{:id => "collapse#{index}", :role => "tabpanel"}
+            .panel-body.grayscale-bg
+              = render partial: 'dojo', collection: dojos
+    %h3 開催回数
+    = @sum_of_events
+    回
+    %h3 参加者数
+    延べ
+    = @sum_of_participants
+    人
+    %h3 集計対象
+    = @sum_of_dojos
+    \/ #{@dojo_count} Dojos
+    %h3 集計間隔
+    毎週月曜日 午前10時頃
+
+    %h3 これまでの推移
+    %div{align: 'center'}
+      (集計対象のみ)
+      %table{style: 'margin-top: 4px;'}
+        %thead
+          %tr
+            %th
+            - @range.each do |year|
+              %td{style: 'padding: 0 5px; font-weight: bold;'} #{year}年
+            %td{style: 'padding: 0 5px; font-weight: bold;'} 合計
+        %tbody{style: 'text-align: center;'}
+          %tr
+            %td 道場数
+            - @range.each do |year|
+              %td= @dojos[year]
+          %tr
+            %td 開催回数
+            - @range.each do |year|
+              %td= @events[year]
+            %td= @events.values.inject(:+)
+          %tr
+            %td 参加者数
+            - @range.each do |year|
+              %td= @participants[year]
+            %td= @participants.values.inject(:+)
+
+    %h3 関連リンク
+    %ul{:style => "list-style: none; margin-left: -40px;"}
+      %li
+        %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本の CoderDojo (zen登録済) - Google Spreadsheet
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
+%br/
