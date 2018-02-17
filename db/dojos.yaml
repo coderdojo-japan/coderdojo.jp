@@ -1196,14 +1196,14 @@
   name: 岡山 岡南 (中国)
   prefecture_id: 33
   logo: "/img/dojos/okayama.png"
-  url: http://coderdojo-konan.media-interesting.info/
-  description: 岡山県岡山市南区で毎月第二土曜日に開催
+  url: https://coderdojo-konan.jp/
+  description: 岡山県岡山市南区で毎月開催
   tags:
   - Scratch
   - Unity
   - C#
-  - Android
-  - JavaScript
+  - Webアプリ開発
+  - Java
 - id: 52
   created_at: '2016-05-04'
   order: '341002'
