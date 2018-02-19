@@ -663,6 +663,20 @@
   - Scratch
   - Minecraft
   - Arduino
+- id: 127
+  created_at: '2018-02-17'
+  order: '152064'
+  name: 新発田 (中部)
+  prefecture_id: 15
+  logo: "/img/dojos/japan.png"
+  url: http://tinkerkids.jp/coderdojo.html
+  description: 新潟県新発田市で毎月開催
+  tags:
+  - Scratch
+  - アーテックロボ
+  - ラズベリーパイ
+  - Python
+  - JavaScript
 - id: 6
   created_at: '2016-11-24'
   order: '172014'
