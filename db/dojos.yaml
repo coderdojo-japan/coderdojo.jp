@@ -1144,6 +1144,16 @@
   - Scratch
   - Webサイト
   - C#
+- id: 128
+  created_at: '2018-02-18'
+  order: '293431'
+  name: 三郷 (近畿)
+  prefecture_id: 29
+  logo: "/img/dojos/sango.png"
+  url: http://www.kokuchpro.com/group/CoderDojo35/
+  description: 奈良県三郷町で毎月開催
+  tags:
+  - Scratch
 - id: 47
   created_at: '2016-11-01'
   order: '302015'
