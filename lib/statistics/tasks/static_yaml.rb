@@ -17,7 +17,7 @@ module Statistics
           next unless dojo
 
           evented_at = Time.zone.parse(e['evented_at'])
-          event_id = "#{dojo.id}_#{evented_at.to_i}"
+          event_id = "#{SecureRandom.uuid}"
 
           EventHistory.create!(dojo_id: dojo.id,
                                dojo_name: dojo.name,
