@@ -69,14 +69,22 @@ module Statistics
     end
 
     def fetch_dojos
-      DojoEventService.names.keys.each.with_object({}) do |name, hash|
+      {
+        externals: find_dojos_by(DojoEventService::EXTERNAL_SERVICES),
+        internals: find_dojos_by(DojoEventService::INTERNAL_SERVICES)
+      }
+    end
+
+    def find_dojos_by(services)
+      services.each.with_object({}) do |name, hash|
         hash[name] = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name }).to_a
       end
     end
 
     class Base
       def initialize(dojos, from, to)
-        @dojos = dojos
+        @externals = dojos[:externals]
+        @internals = dojos[:internals]
         @list = build_list(from, to)
         @from = from
         @to = to
@@ -86,6 +94,7 @@ module Statistics
         with_notifying do
           delete_event_histories
           execute
+          execute_once
         end
       end
 
@@ -99,13 +108,19 @@ module Statistics
       end
 
       def delete_event_histories
-        @dojos.keys.each do |kind|
+        (@externals.keys + @internals.keys).each do |kind|
           "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(@from..@to)
         end
       end
 
       def execute
         raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+      end
+
+      def execute_once
+        @internals.each do |kind, list|
+          "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, nil, nil).run
+        end
       end
 
       def build_list(_from, _to)
@@ -124,7 +139,7 @@ module Statistics
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
 
-          @dojos.each do |kind, list|
+          @externals.each do |kind, list|
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
           end
         end
@@ -150,7 +165,7 @@ module Statistics
         @list.each do |date|
           puts "Aggregate for #{date_format(date)}"
 
-          @dojos.each do |kind, list|
+          @externals.each do |kind, list|
             "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
           end
         end

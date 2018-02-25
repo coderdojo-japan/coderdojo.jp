@@ -1,6 +1,9 @@
 class DojoEventService < ApplicationRecord
+  EXTERNAL_SERVICES = %i( connpass doorkeeper facebook )
+  INTERNAL_SERVICES = %i( static_yaml )
+
   belongs_to :dojo
-  enum name: %i( connpass doorkeeper facebook static_yaml )
+  enum name: EXTERNAL_SERVICES + INTERNAL_SERVICES
 
   validates :name, presence: true
 
