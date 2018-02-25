@@ -21,7 +21,7 @@ CoderDojo の特徴は、オープンソースソフトウェアの文化に根�
 
 - A. 継続的に活動をするため、CoderDojo Japan への<b>定期的なご支援</b>をお願いしています
 - B. CoderDojo Japan のパートナーとして、弊団体のウェブサイトで御社ロゴを掲載します
-- C. CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (それぞれ年1回まで、事前審査あり)
+- C. CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
     [https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/ )
   - 例2: CoderDojo Japan の Podcast に CASE Shinjuku と出演
