@@ -5,7 +5,7 @@ class ChangeOrderToInteger < ActiveRecord::Migration[5.1]
   end
 
   if connection.adapter_name == 'PostgreSQL'
-    def up
+    def down
       change_column :dojos, :order, 'integer USING CAST(order AS integer)', default: 1
     end
   else
