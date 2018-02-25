@@ -99,10 +99,9 @@
   group_id: 617011185103868
   url: https://www.facebook.com/pg/CoderDojoTokorozawa/events/?ref=page_internal
 - dojo_id: 13
-  name: connpass
-  group_id: 2396
-  # https://coderdojokodaira-ninja.connpass.com/event/ もあるが2017/06~のみ
-  url: https://coderdojo-kodaira.connpass.com/
+  name: static_yaml
+  group_id:
+  url:
 - dojo_id: 14
   name: peatix
   group_id:
