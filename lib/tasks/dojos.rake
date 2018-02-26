@@ -31,7 +31,7 @@ namespace :dojos do
 
       d.name        = dojo['name']
       d.email       = ''
-      d.order       = dojo['order']
+      d.order       = set_order( dojo['order'] ?  dojo['order']: dojo['name'])
       d.description = dojo['description']
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
@@ -42,6 +42,23 @@ namespace :dojos do
 
       d.save!
     end
+  end
+
+  # search order number for google spred sheets
+  # '現在のyamlファイルからorderの値を生成します'
+  def set_order(name)
+
+    return name if  name =~ /^[0-9]+$/
+
+    conf = File.expand_path(ENV['SET_JSON'])
+    session = GoogleDrive:: Session.from_config(conf)
+    spred_sheet = session.spreadsheet_by_key(ENV['SPREAD_SHEET_KEY']).worksheets[0]
+
+    sheet_order = 0
+    sheet_city = 2
+
+    return spred_sheet.rows.find{ |row| row[sheet_city] == name}[sheet_order]
+
   end
 
   desc '現在のyamlファイルのカラムをソートします'
