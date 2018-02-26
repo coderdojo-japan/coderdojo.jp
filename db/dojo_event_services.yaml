@@ -464,3 +464,7 @@
   name: doorkeeper
   group_id: 9491
   url: https://coderdojo-ochanomizu.doorkeeper.jp/
+- dojo_id: 131
+  name: facebook
+  group_id: 209274086317393
+  url: https://www.facebook.com/CoderDojoTottori/
