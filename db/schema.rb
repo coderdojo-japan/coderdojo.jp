@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20180117164209) do
 
-  create_table "dojo_event_services", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "dojo_event_services", id: :serial, force: :cascade do |t|
     t.integer "dojo_id", null: false
     t.integer "name", null: false
     t.string "url"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.index ["dojo_id"], name: "index_dojo_event_services_on_dojo_id"
   end
 
-  create_table "dojos", force: :cascade do |t|
+  create_table "dojos", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "order", default: "000000"
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.integer "prefecture_id"
   end
 
-  create_table "event_histories", force: :cascade do |t|
+  create_table "event_histories", id: :serial, force: :cascade do |t|
     t.integer "dojo_id", null: false
     t.string "dojo_name", null: false
     t.string "service_name", null: false
@@ -58,4 +61,6 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.index ["region"], name: "index_prefectures_on_region"
   end
 
+  add_foreign_key "dojo_event_services", "dojos"
+  add_foreign_key "event_histories", "dojos"
 end

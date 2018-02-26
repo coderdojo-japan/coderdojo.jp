@@ -3,6 +3,8 @@ ruby '2.4.2'
 
 gem 'rails', '5.1.4'
 
+gem 'pg'
+
 gem 'scrivito'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
@@ -47,7 +49,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
@@ -64,8 +65,4 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-end
-
-group :production do
-  gem 'pg'
 end

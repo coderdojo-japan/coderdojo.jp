@@ -16,6 +16,8 @@ deploy:
       - "bundle exec rails dojo_event_services:upsert"
 cache:
   - bundler
+before_script:
+  - psql -c 'create database coderdojo_jp_test;' -U postgres
 script:
   - bundle exec rake db:migrate --trace
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rspec spec; fi
@@ -24,3 +26,5 @@ script:
 env:
   global:
     - TZ='Asia/Tokyo'
+addons:
+  postgresql: "9.4"
