@@ -19,13 +19,13 @@ namespace :dojos do
       dojo.delete 'updatedAt' # This is managed by database
     end
 
+
     Dojo.dump_attributes_to_yaml(dojos)
   end
 
   desc '現在のyamlファイルを元にデータベースを更新します'
   task update_db_by_yaml: :environment do
     dojos = Dojo.load_attributes_from_yaml
-    dojos.sort_by{ |hash| hash['order'] }
 
     dojos.each do |dojo|
       d = Dojo.find_or_initialize_by(id: dojo['id'])
