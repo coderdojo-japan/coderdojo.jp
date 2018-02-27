@@ -3,6 +3,7 @@
 
 require 'json'
 require 'yaml'
+require 'csv'
 
 namespace :dojos do
   desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
@@ -24,14 +25,13 @@ namespace :dojos do
   desc '現在のyamlファイルを元にデータベースを更新します'
   task update_db_by_yaml: :environment do
     dojos = Dojo.load_attributes_from_yaml
-    dojos.sort_by{ |hash| hash['order'] }
 
     dojos.each do |dojo|
       d = Dojo.find_or_initialize_by(id: dojo['id'])
 
       d.name        = dojo['name']
       d.email       = ''
-      d.order       = dojo['order']
+      d.order       = dojo['order'] || search_order_number(dojo['name'])
       d.description = dojo['description']
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
@@ -41,6 +41,19 @@ namespace :dojos do
       d.prefecture_id = dojo['prefecture_id']
 
       d.save!
+    end
+  end
+
+  # search order number for google spred sheets
+  # 'yamlファイルのnameからorderの値を生成します'
+  def search_order_number(pre_city)
+
+    if /(?<city>.+)\s\(.+\)/ =~ pre_city
+      table = CSV.table(Rails.root.join('db','city_code.csv'))
+      row = table.find{ |r| r[:city].to_s.start_with?(city)}
+      row ? row[:order] : raise("Not found order by #{pre_city}")
+    else
+      raise("It is not valid data for #{pre_city}")
     end
   end
 
