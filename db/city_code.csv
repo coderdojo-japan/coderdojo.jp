@@ -1,4 +1,4 @@
-order,prefecture,municipality,kana_prefecture,kana_municipality
+order,prefecture,city,kana_prefecture,kana_municipality
 010006,北海道,,ホッカイドウ,
 011002,北海道,札幌市,ホッカイドウ,サッポロシ
 012025,北海道,函館市,ホッカイドウ,ハコダテシ

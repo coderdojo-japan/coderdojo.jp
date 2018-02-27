@@ -47,16 +47,16 @@ namespace :dojos do
 
   # search order number for google spred sheets
   # 'yamlファイルのnameからorderの値を生成します'
-  def set_order(pre_municipality)
+  def set_order(pre_city)
 
-    return pre_municipality if  pre_municipality =~ /^[0-9]+$/
+    return pre_city if  pre_city =~ /^[0-9]+$/
 
-    if /(?<city>.+)\s\(.+\)/ =~ pre_municipality
-      table = CSV.table(Rails.root.join('db','local_public_organization.csv'))
-      row = table.find{ |r| r[:municipality].to_s.start_with?(city)}
-      row ? row[:order] : raise("Can't searched order by #{pre_municipality}")
+    if /(?<city>.+)\s\(.+\)/ =~ pre_city
+      table = CSV.table(Rails.root.join('db','city_code.csv'))
+      row = table.find{ |r| r[:city].to_s.start_with?(city)}
+      row ? row[:order] : raise("Can't searched order by #{pre_city}")
     else
-      raise("It is not valid data for #{pre_municipality}")
+      raise("It is not valid data for #{pre_city}")
     end
   end
 
