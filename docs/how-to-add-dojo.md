@@ -38,9 +38,9 @@
 
 
 - ここまで記述した後に `be rails dojos:update_db_by_yaml` を実行しdbに新規Dojoを反映する
--  その後　`be rails dojos:migrate_adding_id_to_yaml` 　を実行し,yamlにidが動的に付けられた事を確認する
+- その後　`be rails dojos:migrate_adding_id_to_yaml` 　を実行し、yamlにidが動的に付けられた事を確認する
 
-### 関連issue
+### 関連Issue
 
 - https://github.com/coderdojo-japan/coderdojo.jp/issues/219
 
@@ -59,10 +59,19 @@
 | yaml      |    内容    |
 |:-----------------|:------------------:|
 | `dojo_id` | 該当するDojoのid |
-| `name` | 設定するイベント管理サービスの名前 (connpass,facebook, doorkeeper) |
+| `name` | 設定するイベント管理サービスの名前 (connpass, facebook, doorkeeper) |
 | `group_id` | イベント管理ページのid | 
 | `url` | イベント管理ページのURL |
 
-- `group_id` についてはFaceBookの場合 [lookup-id](https://lookup-id.com/#) で確認できる
+- `group_id` についてはFacebookの場合 [lookup-id](https://lookup-id.com/#) で確認できる
 
-- 本番環境についてはTravise.ciがよしなにやってくれる。
+## 本番環境への反映方法
+
+dojos.yaml の更新をGitHubにpushすると、次の手順で本番環境に反映される。
+
+1. GitHub の更新を Travis CI が検知する
+1. Travis CI で各種テストが実行される
+   - １つ以上のテストが失敗すると本番環境には反映されない
+1. すべてのテストが成功すると、本番環境へのデプロイが始まります
+
+したがって、Pull Request の時点でCIがパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) へ反映されるようになります。
