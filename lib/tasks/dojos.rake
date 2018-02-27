@@ -19,7 +19,6 @@ namespace :dojos do
       dojo.delete 'updatedAt' # This is managed by database
     end
 
-
     Dojo.dump_attributes_to_yaml(dojos)
   end
 
@@ -32,7 +31,7 @@ namespace :dojos do
 
       d.name        = dojo['name']
       d.email       = ''
-      d.order       = set_order( dojo['order'] ?  dojo['order']: dojo['name'])
+      d.order       = dojo['order'] || search_order_number(dojo['name'])
       d.description = dojo['description']
       d.logo        = dojo['logo']
       d.tags        = dojo['tags']
@@ -47,14 +46,12 @@ namespace :dojos do
 
   # search order number for google spred sheets
   # 'yamlファイルのnameからorderの値を生成します'
-  def set_order(pre_city)
-
-    return pre_city if  pre_city =~ /^[0-9]+$/
+  def search_order_number(pre_city)
 
     if /(?<city>.+)\s\(.+\)/ =~ pre_city
       table = CSV.table(Rails.root.join('db','city_code.csv'))
       row = table.find{ |r| r[:city].to_s.start_with?(city)}
-      row ? row[:order] : raise("Can't searched order by #{pre_city}")
+      row ? row[:order] : raise("Not found order by #{pre_city}")
     else
       raise("It is not valid data for #{pre_city}")
     end
