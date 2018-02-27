@@ -3,6 +3,7 @@
 
 require 'json'
 require 'yaml'
+require 'csv'
 
 namespace :dojos do
   desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
@@ -45,20 +46,18 @@ namespace :dojos do
   end
 
   # search order number for google spred sheets
-  # '現在のyamlファイルからorderの値を生成します'
-  def set_order(name)
+  # 'yamlファイルのnameからorderの値を生成します'
+  def set_order(pre_municipality)
 
-    return name if  name =~ /^[0-9]+$/
+    return pre_municipality if  pre_municipality =~ /^[0-9]+$/
 
-    conf = File.expand_path(ENV['SET_JSON'])
-    session = GoogleDrive:: Session.from_config(conf)
-    spred_sheet = session.spreadsheet_by_key(ENV['SPREAD_SHEET_KEY']).worksheets[0]
-
-    sheet_order = 0
-    sheet_city = 2
-
-    return spred_sheet.rows.find{ |row| row[sheet_city] == name}[sheet_order]
-
+    if /(?<city>.+)\s\(.+\)/ =~ pre_municipality
+      table = CSV.table(Rails.root.join('db','local_public_organization.csv'))
+      row = table.find{ |r| r[:municipality].to_s.start_with?(city)}
+      row ? row[:order] : raise("Can't searched order by #{pre_municipality}")
+    else
+      raise("It is not valid data for #{pre_municipality}")
+    end
   end
 
   desc '現在のyamlファイルのカラムをソートします'
