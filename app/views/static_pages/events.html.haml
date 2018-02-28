@@ -1,0 +1,19 @@
+- provide(:url,   @url)
+- provide(:title, 'イベント情報')
+- provide(:meta_description, '近日開催される CoderDojo の情報をまとめています。')
+%section.cover
+  = image_tag "coderdojo-stats_cover.png", class: "cursor-default"
+%section#dojos.dojos.text-center
+  %bpr
+    %h1 イベント情報
+    %p 本ページでは近日開催される CoderDojo の情報をまとめています。
+    CoderDojo の活動状況を把握する際などにご活用ください。
+
+
+    %h3 関連リンク
+    %ul{:style => "list-style: none; margin-left: -40px;"}
+      %li
+        %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本の CoderDojo (zen登録済) - Google Spreadsheet
+      %li
+        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/258"} 直近の CoderDojo 開催情報を表示したい issue 258
+%br/
