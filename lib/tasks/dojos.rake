@@ -51,7 +51,11 @@ namespace :dojos do
     if /(?<city>.+)\s\(.+\)/ =~ pre_city
       table = CSV.table(Rails.root.join('db','city_code.csv'))
       row = table.find{ |r| r[:city].to_s.start_with?(city)}
-      row ? row[:order] : raise("Not found order by #{pre_city}")
+      row ? row[:order] : raise("Failed to detect city code by #{pre_city}
+order値の自動設定ができませんでした。お手数ですが下記URLを参考に該当する全国地方公共団体コードをorder値にご入力ください。
+http://www.soumu.go.jp/denshijiti/code.html
+
+")
     else
       raise("It is not valid data for #{pre_city}")
     end
