@@ -75,8 +75,8 @@ namespace :dojos do
 
     dojos.map! do |dojo|
       d = Dojo.find_by(name: dojo['name'])
-      new_dojo = {}
-      new_dojo['id'] = d.id
+      new_dojo          = {}
+      new_dojo['id']    = d.id
       new_dojo['order'] = d.order
       new_dojo.merge!(dojo)
       new_dojo
