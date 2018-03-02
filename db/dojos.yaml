@@ -1,7 +1,7 @@
 ---
 - id: 64
-  created_at: '2016-09-26'
   order: '011002'
+  created_at: '2016-09-26'
   name: 札幌 (北海道)
   prefecture_id: 1
   url: http://www.coderdojo-sapporo.jp/
@@ -13,8 +13,8 @@
   - ラズベリーパイ
   - 電子工作
 - id: 104
-  created_at: '2016-09-26'
   order: '011002'
+  created_at: '2016-09-26'
   name: 札幌東 (北海道)
   prefecture_id: 1
   url: https://coderdojo-sapporo-east.blogspot.jp/
@@ -26,8 +26,8 @@
   - Python
   - Unity
 - id: 100
-  created_at: '2017-09-20'
   order: '012319'
+  created_at: '2017-09-20'
   name: 恵庭 (北海道)
   prefecture_id: 1
   url: https://www.facebook.com/CoderDojoEniwa/
@@ -38,8 +38,8 @@
   - Webサイト
   - Python
 - id: 109
-  created_at: '2017-09-25'
   order: '032166'
+  created_at: '2017-09-25'
   name: 滝沢 (東北)
   prefecture_id: 3
   url: https://www.facebook.com/CoderDojoTakizawa/
@@ -50,8 +50,8 @@
   - micro:bit
   - ラズベリーパイ
 - id: 107
-  created_at: '2017-06-20'
   order: '032069'
+  created_at: '2017-06-20'
   name: きたかみ (東北)
   prefecture_id: 3
   url: https://coderdojo.waraukado.jp/
@@ -61,8 +61,8 @@
   - Scratch
   - Webサイト
 - id: 3
-  created_at: '2014-01-23'
   order: '041009'
+  created_at: '2014-01-23'
   name: 泉 (東北)
   prefecture_id: 4
   url: https://www.facebook.com/CoderdojoIzumi
@@ -71,8 +71,8 @@
   tags:
   - Scratch
 - id: 90
-  created_at: '2017-07-01'
   order: '041009'
+  created_at: '2017-07-01'
   name: 愛子 (東北)
   prefecture_id: 4
   url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
@@ -83,8 +83,8 @@
   - Webサイト
   - ゲーム
 - id: 85
-  created_at: '2017-03-27'
   order: '042072'
+  created_at: '2017-03-27'
   name: 名取 (東北)
   prefecture_id: 4
   url: https://www.facebook.com/CoderDojo-Natori-1379707208756830
@@ -95,8 +95,8 @@
   - Webサイト
   - ゲーム
 - id: 4
-  created_at: '2016-04-25'
   order: '042129'
+  created_at: '2016-04-25'
   name: 登米 (東北)
   prefecture_id: 4
   logo: "/img/dojos/japan.png"
@@ -107,8 +107,8 @@
   - 3Dプリンタ
   - 3DCAD
 - id: 59
-  created_at: '2016-10-06'
   order: '044458'
+  created_at: '2016-10-06'
   name: 中新田 (東北)
   prefecture_id: 4
   logo: "/img/dojos/nakaniida.png"
@@ -120,8 +120,8 @@
   - Minecraft
   - Arduino
 - id: 75
-  created_at: '2017-04-03'
   order: '052019'
+  created_at: '2017-04-03'
   name: 秋田 (東北)
   prefecture_id: 5
   url: https://coderdojo.akita.work/
@@ -134,8 +134,8 @@
   - Swift
   - Android
 - id: 74
-  created_at: '2017-03-28'
   order: '062014'
+  created_at: '2017-03-28'
   name: 山形 (東北)
   prefecture_id: 6
   logo: "/img/dojos/yamagata.png"
@@ -148,8 +148,8 @@
   - ロボット
   - AI
 - id: 79
-  created_at: '2017-03-29'
   order: '072028'
+  created_at: '2017-03-29'
   name: 会津 (東北)
   prefecture_id: 7
   logo: "/img/dojos/aizu.png"
@@ -162,8 +162,8 @@
   - Java
   - Webサイト
 - id: 73
-  created_at: '2017-03-28'
   order: '082210'
+  created_at: '2017-03-28'
   name: ひたちなか (関東)
   prefecture_id: 8
   logo: "/img/dojos/hitachinaka.png"
@@ -173,8 +173,8 @@
   - Scratch
   - IslayTouch
 - id: 65
-  created_at: '2017-01-03'
   order: '082015'
+  created_at: '2017-01-03'
   name: 水戸 (関東)
   prefecture_id: 8
   logo: "/img/dojos/mito.png"
@@ -184,8 +184,8 @@
   - Scratch
   - IslayTouch
 - id: 8
-  created_at: '2016-07-12'
   order: '082244'
+  created_at: '2016-07-12'
   name: 守谷 (関東)
   prefecture_id: 8
   logo: "/img/dojos/moriya.jpg"
@@ -196,8 +196,8 @@
   - IoT
   - 電子工作
 - id: 89
-  created_at: '2017-06-21'
   order: '092142'
+  created_at: '2017-06-21'
   name: さくら (関東)
   prefecture_id: 9
   logo: "/img/dojos/sakura.png"
@@ -210,8 +210,8 @@
   - PHP
   - CSS
 - id: 7
-  created_at: '2016-10-17'
   order: '102016'
+  created_at: '2016-10-17'
   name: 前橋 (関東)
   prefecture_id: 10
   logo: "/img/dojos/maebashi.png"
@@ -223,8 +223,8 @@
   - ラズベリーパイ
   - ゲーム
 - id: 9
-  created_at: '2014-05-26'
   order: '111007'
+  created_at: '2014-05-26'
   name: さいたま (関東)
   prefecture_id: 11
   url: http://coderdojo-saitama.com/
@@ -235,8 +235,8 @@
   - Webサイト
   - アプリ
 - id: 12
-  created_at: '2015-12-01'
   order: '112089'
+  created_at: '2015-12-01'
   name: 所沢 (関東)
   prefecture_id: 11
   url: https://www.facebook.com/CoderDojoTokorozawa/
@@ -245,8 +245,8 @@
   tags:
   - Scratch
 - id: 77
-  created_at: '2017-03-14'
   order: '112089'
+  created_at: '2017-03-14'
   name: 小手指 (関東)
   prefecture_id: 11
   url: https://coderdojokotesashi.github.io/
@@ -255,8 +255,8 @@
   tags:
   - Scratch
 - id: 11
-  created_at: '2015-05-13'
   order: '112097'
+  created_at: '2015-05-13'
   name: 飯能 (関東)
   prefecture_id: 11
   url: https://www.facebook.com/CoderDojoHanno
@@ -265,8 +265,8 @@
   tags:
   - Scratch
 - id: 10
-  created_at: '2012-07-02'
   order: '112305'
+  created_at: '2012-07-02'
   name: ひばりヶ丘 (関東)
   prefecture_id: 11
   url: http://coderdojo.hanare-hibari.info/
@@ -278,8 +278,8 @@
   - 8x9Craft
   - Unity
 - id: 22
-  created_at: '2013-07-30'
   order: '121002'
+  created_at: '2013-07-30'
   name: 千葉 (関東)
   prefecture_id: 12
   logo: "/img/dojos/chiba.png"
@@ -292,8 +292,8 @@
   - Ruby
   - Minecraft
 - id: 25
-  created_at: '2016-04-27'
   order: '121002'
+  created_at: '2016-04-27'
   name: 若葉 (関東)
   prefecture_id: 12
   logo: "/img/dojos/wakaba.png"
@@ -302,8 +302,8 @@
   tags:
   - Scratch
 - id: 60
-  created_at: '2016-12-15'
   order: '122033'
+  created_at: '2016-12-15'
   name: 市川 (関東)
   prefecture_id: 12
   logo: "/img/dojos/ichikawa.jpg"
@@ -315,8 +315,8 @@
   - Python
   - WordPress
 - id: 82
-  created_at: '2017-03-28'
   order: '122033'
+  created_at: '2017-03-28'
   name: 市川真間 (関東)
   prefecture_id: 12
   logo: "/img/dojos/ichikawa-mama.jpg"
@@ -325,8 +325,8 @@
   tags:
   - Scratch
 - id: 86
-  created_at: '2017-05-16'
   order: '122041'
+  created_at: '2017-05-16'
   name: 船橋＠凛童舎 (関東)
   prefecture_id: 12
   logo: "/img/dojos/funabashi.jpg"
@@ -335,8 +335,8 @@
   tags:
   - Scratch
 - id: 83
-  created_at: '2017-04-27'
   order: '122068'
+  created_at: '2017-04-27'
   name: 木更津 (関東)
   prefecture_id: 12
   logo: "/img/dojos/kisarazu.png"
@@ -347,8 +347,8 @@
   - Webサイト
   - Java
 - id: 114
-  created_at: '2017-09-06'
   order: '122076'
+  created_at: '2017-09-06'
   name: 松戸 (関東)
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
@@ -357,8 +357,8 @@
   tags:
   - Scratch
 - id: 20
-  created_at: '2016-11-08'
   order: '122084'
+  created_at: '2016-11-08'
   name: 野田 (関東)
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
@@ -367,8 +367,8 @@
   tags:
   - Scratch
 - id: 23
-  created_at: '2014-09-22'
   order: '122173'
+  created_at: '2014-09-22'
   name: 柏 (関東)
   prefecture_id: 12
   url: http://www.coderdojo-kashiwa.com/
@@ -377,8 +377,8 @@
   tags:
   - Scratch
 - id: 125
-  created_at: '2018-01-27'
   order: '122173'
+  created_at: '2018-01-27'
   name: 柏沼南 (関東)
   prefecture_id: 12
   url: https://www.facebook.com/CoderDojoKashiwaShounan/
@@ -387,8 +387,8 @@
   tags:
   - Scratch
 - id: 112
-  created_at: '2017-09-26'
   order: '122173'
+  created_at: '2017-09-26'
   name: 南柏 (関東)
   prefecture_id: 12
   url: http://www.coderdojo-kashiwa.com/dojo/minamikashiwa/
@@ -397,8 +397,8 @@
   tags:
   - Scratch
 - id: 24
-  created_at: '2016-04-27'
   order: '122203'
+  created_at: '2016-04-27'
   name: 流山 (関東)
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
@@ -407,8 +407,8 @@
   tags:
   - Scratch
 - id: 21
-  created_at: '2016-11-08'
   order: '122271'
+  created_at: '2016-11-08'
   name: 浦安 (関東)
   prefecture_id: 12
   logo: "/img/dojos/urayasu.png"
@@ -420,8 +420,8 @@
   - PHP
   - Ruby
 - id: 121
-  created_at: '2017-11-28'
   order: '131016'
+  created_at: '2017-11-28'
   name: 御茶ノ水 (関東)
   prefecture_id: 13
   logo: "/img/dojos/ochanomizu.jpg"
@@ -432,8 +432,8 @@
   - Viscuit
   - Webサイト
 - id: 97
-  created_at: '2017-08-16'
   order: '131016'
+  created_at: '2017-08-16'
   name: 秋葉原 (関東)
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
@@ -442,8 +442,8 @@
   tags:
   - Scratch
 - id: 58
-  created_at: '2017-09-26'
   order: '131041'
+  created_at: '2017-09-26'
   name: 高田馬場 (関東)
   prefecture_id: 13
   logo: "/img/dojos/takadanobaba.jpg"
@@ -454,8 +454,8 @@
   - ラズベリーパイ
   - Ruby
 - id: 69
-  created_at: '2017-01-23'
   order: '131041'
+  created_at: '2017-01-23'
   name: 西新宿 (関東)
   prefecture_id: 13
   logo: "/img/dojos/nishishinjuku.png"
@@ -464,8 +464,8 @@
   tags:
   - Scratch
 - id: 17
-  created_at: '2012-03-12'
   order: '131121'
+  created_at: '2012-03-12'
   name: 下北沢 (関東)
   prefecture_id: 13
   url: https://coderdojo-tokyo.connpass.com/
@@ -476,8 +476,8 @@
   - Webサイト
   - ゲーム
 - id: 19
-  created_at: '2016-09-27'
   order: '131130'
+  created_at: '2016-09-27'
   name: 渋谷 (関東)
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
@@ -486,8 +486,8 @@
   tags:
   - Scratch
 - id: 15
-  created_at: '2016-07-20'
   order: '131148'
+  created_at: '2016-07-20'
   name: 中野 (関東)
   prefecture_id: 13
   logo: "/img/dojos/nakano.png"
@@ -499,8 +499,8 @@
   - JavaScript
   - Arduino
 - id: 16
-  created_at: '2016-09-09'
   order: '131156'
+  created_at: '2016-09-09'
   name: すぎなみ (関東)
   prefecture_id: 13
   logo: "/img/dojos/suginami.png"
@@ -513,8 +513,8 @@
   - JavaScript
   - Processing
 - id: 123
-  created_at: '2018-01-25'
   order: '131164'
+  created_at: '2018-01-25'
   name: 池袋 (関東)
   prefecture_id: 13
   logo: "/img/dojos/ikebukuro.jpeg"
@@ -526,8 +526,8 @@
   - Webサイト
   - Java
 - id: 130
-  created_at: '2018-02-21'
   order: '131172'
+  created_at: '2018-02-21'
   name: 赤羽 (関東)
   prefecture_id: 13
   logo: "/img/dojos/akabane.png"
@@ -536,8 +536,8 @@
   tags:
   - Scratch
 - id: 14
-  created_at: '2015-06-22'
   order: '132012'
+  created_at: '2015-06-22'
   name: 八王子 (関東)
   prefecture_id: 13
   url: http://coderdojo.code4hachioji.org/
@@ -548,8 +548,8 @@
   - Webサイト
   - PHP
 - id: 117
-  created_at: '2017-11-18'
   order: '132021'
+  created_at: '2017-11-18'
   name: 立川 (関東)
   prefecture_id: 13
   url: https://coderdojotachikawa.github.io/
@@ -561,8 +561,8 @@
   - ラズベリーパイ
   - Arduino
 - id: 105
-  created_at: '2017-09-06'
   order: '132039'
+  created_at: '2017-09-06'
   name: 吉祥寺 (関東)
   prefecture_id: 13
   logo: "/img/dojos/kichijoji.png"
@@ -573,8 +573,8 @@
   - Studuino
   - Java
 - id: 18
-  created_at: '2016-09-05'
   order: '132080'
+  created_at: '2016-09-05'
   name: 調布 (関東)
   prefecture_id: 13
   logo: "/img/dojos/chofu.jpg"
@@ -587,8 +587,8 @@
   - Ruby
   - ラズベリーパイ
 - id: 13
-  created_at: '2014-05-21'
   order: '132110'
+  created_at: '2014-05-21'
   name: 小平 (関東)
   prefecture_id: 13
   url: http://coderdojo-kodaira.github.io/
@@ -600,8 +600,8 @@
   - CS Unplugged
   - マルチメディア
 - id: 70
-  created_at: '2017-01-30'
   order: '141020'
+  created_at: '2017-01-30'
   name: 横浜 (関東)
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
@@ -610,8 +610,8 @@
   tags:
   - Scratch
 - id: 126
-  created_at: '2018-02-02'
   order: '141038'
+  created_at: '2018-02-02'
   name: 戸部 (関東)
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
@@ -620,8 +620,8 @@
   tags:
   - Scratch
 - id: 68
-  created_at: '2017-01-09'
   order: '141097'
+  created_at: '2017-01-09'
   name: 新羽 (関東)
   prefecture_id: 14
   logo: "/img/dojos/nippa.png"
@@ -630,8 +630,8 @@
   tags:
   - Scratch
 - id: 76
-  created_at: '2017-04-03'
   order: '141135'
+  created_at: '2017-04-03'
   name: 長津田 (関東)
   prefecture_id: 14
   logo: "/img/dojos/nagatsuta.png"
@@ -642,8 +642,8 @@
   - Minecraft
   - Hour of Code
 - id: 26
-  created_at: '2016-12-14'
   order: '142051'
+  created_at: '2016-12-14'
   name: 藤沢 (関東)
   prefecture_id: 14
   logo: "/img/dojos/fujisawa.png"
@@ -654,8 +654,8 @@
   - Viscuit
   - Webサイト
 - id: 91
-  created_at: '2017-06-26'
   order: '142158'
+  created_at: '2017-06-26'
   name: 海老名 (関東)
   prefecture_id: 14
   logo: "/img/dojos/ebina.png"
@@ -664,8 +664,8 @@
   tags:
   - Scratch
 - id: 5
-  created_at: '2015-09-16'
   order: '151009'
+  created_at: '2015-09-16'
   name: 新潟 (中部)
   prefecture_id: 15
   logo: "/img/dojos/japan.png"
@@ -676,8 +676,8 @@
   - Minecraft
   - Arduino
 - id: 127
-  created_at: '2018-02-17'
   order: '152064'
+  created_at: '2018-02-17'
   name: 新発田 (中部)
   prefecture_id: 15
   logo: "/img/dojos/japan.png"
@@ -690,8 +690,8 @@
   - Python
   - JavaScript
 - id: 6
-  created_at: '2016-11-24'
   order: '172014'
+  created_at: '2016-11-24'
   name: 金沢 (中部)
   prefecture_id: 17
   logo: "/img/dojos/japan.png"
@@ -701,8 +701,8 @@
   - JavaScript
   - HackforPlay
 - id: 28
-  created_at: '2013-08-14'
   order: '182010'
+  created_at: '2013-08-14'
   name: 福井 (中部)
   prefecture_id: 18
   url: http://coderdojo.cowbell.jp/
@@ -712,8 +712,8 @@
   - Scratch
   - Webサイト
 - id: 88
-  created_at: '2017-05-29'
   order: '192015'
+  created_at: '2017-05-29'
   name: 甲府 (中部)
   prefecture_id: 19
   url: https://www.facebook.com/coderdojo.kofu/
@@ -725,8 +725,8 @@
   - ラズベリーパイ
   - LEGO Mindstorms
 - id: 94
-  created_at: '2017-02-20'
   order: '202061'
+  created_at: '2017-02-20'
   name: 諏訪湖 (中部)
   prefecture_id: 20
   url: https://www.facebook.com/CoderDojo%E8%AB%8F%E8%A8%AA%E6%B9%96-104207190171589/
@@ -737,8 +737,8 @@
   - ラズベリーパイ
   - Arduino
 - id: 27
-  created_at: '2012-11-08'
   order: '202151'
+  created_at: '2012-11-08'
   name: 塩尻 (中部)
   prefecture_id: 20
   url: http://coderdojo.shiojiri-osslabo.com/
@@ -748,8 +748,8 @@
   - Scratch
   - Ruby
 - id: 87
-  created_at: '2017-05-11'
   order: '202207'
+  created_at: '2017-05-11'
   name: 安曇野 (中部)
   prefecture_id: 20
   url: https://www.facebook.com/CoderDojoAzumino/
@@ -761,8 +761,8 @@
   - ラズベリーパイ
   - Arduino
 - id: 96
-  created_at: '2017-09-26'
   order: '212211'
+  created_at: '2017-09-26'
   name: 海津 (中部)
   prefecture_id: 21
   logo: "/img/dojos/japan.png"
@@ -771,8 +771,8 @@
   tags:
   - Scratch
 - id: 98
-  created_at: '2016-02-25'
   order: '221309'
+  created_at: '2016-02-25'
   name: 浜松 (中部)
   prefecture_id: 22
   logo: "/img/dojos/hamamatsu.png"
@@ -783,8 +783,8 @@
   - Webサイト
   - Minecraft
 - id: 129
-  created_at: '2018-02-18'
   order: '222038'
+  created_at: '2018-02-18'
   name: 三島・沼津 (中部)
   prefecture_id: 22
   logo: "/img/dojos/mishima-numazu.png"
@@ -795,8 +795,8 @@
   - Webサイト
   - Minecraft
 - id: 31
-  created_at: '2014-10-20'
   order: '231002'
+  created_at: '2014-10-20'
   name: 名古屋 (中部)
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
@@ -805,8 +805,8 @@
   tags:
   - Scratch
 - id: 32
-  created_at: '2014-12-08'
   order: '231002'
+  created_at: '2014-12-08'
   name: 天白 (中部)
   prefecture_id: 23
   logo: "/img/dojos/tempaku.png"
@@ -817,8 +817,8 @@
   - Webサイト
   - 電子工作
 - id: 30
-  created_at: '2016-06-03'
   order: '232017'
+  created_at: '2016-06-03'
   name: 豊橋 (中部)
   prefecture_id: 23
   logo: "/img/dojos/toyohashi.png"
@@ -829,8 +829,8 @@
   - アプリ開発
   - ラズベリーパイ
 - id: 118
-  created_at: '2017-11-13'
   order: '232122'
+  created_at: '2017-11-13'
   name: 安城 (中部)
   prefecture_id: 23
   logo: "/img/dojos/anjo.png"
@@ -839,8 +839,8 @@
   tags:
   - Scratch
 - id: 84
-  created_at: '2017-05-16'
   order: '232211'
+  created_at: '2017-05-16'
   name: 新城 (中部)
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
@@ -851,8 +851,8 @@
   - Webサイト
   - ラズベリーパイ
 - id: 71
-  created_at: '2017-02-17'
   order: '232289'
+  created_at: '2017-02-17'
   name: 尾張 (中部)
   prefecture_id: 23
   logo: "/img/dojos/owari.svg"
@@ -861,8 +861,8 @@
   tags:
   - Scratch
 - id: 33
-  created_at: '2016-08-12'
   order: '234249'
+  created_at: '2016-08-12'
   name: 大治 (中部)
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
@@ -871,8 +871,8 @@
   tags:
   - Scratch
 - id: 62
-  created_at: '2016-12-22'
   order: '242039'
+  created_at: '2016-12-22'
   name: 伊勢 (近畿)
   prefecture_id: 24
   logo: "/img/dojos/ise.png"
@@ -883,8 +883,8 @@
   - LEGO
   - LabVIEW
 - id: 37
-  created_at: '2015-09-16'
   order: '252018'
+  created_at: '2015-09-16'
   name: 大津 (近畿)
   prefecture_id: 25
   logo: "/img/dojos/otsu.png"
@@ -893,8 +893,8 @@
   tags:
   - Scratch
 - id: 39
-  created_at: '2016-03-01'
   order: '261009'
+  created_at: '2016-03-01'
   name: 京都伏見 (近畿)
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
@@ -906,8 +906,8 @@
   - Java
   - JavaScript
 - id: 34
-  created_at: '2014-10-14'
   order: '261009'
+  created_at: '2014-10-14'
   name: 長岡京 (近畿)
   prefecture_id: 26
   url: https://coderdojo-nagaokakyo.doorkeeper.jp/
@@ -916,8 +916,8 @@
   tags:
   - Scratch
 - id: 42
-  created_at: '2014-02-11'
   order: '271004'
+  created_at: '2014-02-11'
   name: 西宮・梅田 (近畿)
   prefecture_id: 27
   url: http://coderdojo-nishinomiya.info/
@@ -928,8 +928,8 @@
   - Webサイト
   - 電子工作
 - id: 43
-  created_at: '2016-09-27'
   order: '271004'
+  created_at: '2016-09-27'
   name: なんば (近畿)
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
@@ -942,8 +942,8 @@
   - Ruby
   - Java
 - id: 44
-  created_at: '2016-08-15'
   order: '271004'
+  created_at: '2016-08-15'
   name: 本町 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/hommachi.png"
@@ -955,8 +955,8 @@
   - mruby
   - 電子工作
 - id: 116
-  created_at: '2017-11-02'
   order: '271004'
+  created_at: '2017-11-02'
   name: 阿倍野 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/abeno.png"
@@ -967,8 +967,8 @@
   - 電子工作
   - Minecraft
 - id: 45
-  created_at: '2016-07-13'
   order: '271004'
+  created_at: '2016-07-13'
   name: 西成 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/nishinari.jpg"
@@ -978,8 +978,8 @@
   - Scratch
   - ラズベリーパイ
 - id: 46
-  created_at: '2016-03-22'
   order: '271403'
+  created_at: '2016-03-22'
   name: 堺 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/sakai.png"
@@ -990,8 +990,8 @@
   - PHP
   - Java
 - id: 66
-  created_at: '2017-01-04'
   order: '272078'
+  created_at: '2017-01-04'
   name: 高槻 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/takatsuki.png"
@@ -1000,8 +1000,8 @@
   tags:
   - Scratch
 - id: 40
-  created_at: '2016-05-18'
   order: '272108'
+  created_at: '2016-05-18'
   name: 枚方 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/hirakata.png"
@@ -1012,8 +1012,8 @@
   - Webサイト
   - アプリ開発
 - id: 108
-  created_at: '2017-09-06'
   order: '272205'
+  created_at: '2017-09-06'
   name: みのお (近畿)
   prefecture_id: 27
   logo: "/img/dojos/minoh.png"
@@ -1022,8 +1022,8 @@
   tags:
   - Scratch
 - id: 41
-  created_at: '2016-09-01'
   order: '272272'
+  created_at: '2016-09-01'
   name: 東大阪 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/higasi-osaka.png"
@@ -1035,8 +1035,8 @@
   - Android
   - 電子工作
 - id: 101
-  created_at: '2017-08-03'
   order: '272124'
+  created_at: '2017-08-03'
   name: 八尾 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/yao.png"
@@ -1048,8 +1048,8 @@
   - Android
   - 電子工作
 - id: 72
-  created_at: '2017-02-19'
   order: '272141'
+  created_at: '2017-02-19'
   name: 富田林 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
@@ -1061,8 +1061,8 @@
   - Android
   - Java
 - id: 110
-  created_at: '2017-05-26'
   order: '272281'
+  created_at: '2017-05-26'
   name: せんなん (近畿)
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
@@ -1071,8 +1071,8 @@
   tags:
   - Scratch
 - id: 124
-  created_at: '2018-01-26'
   order: '281018'
+  created_at: '2018-01-26'
   name: 灘 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/nada.png"
@@ -1084,8 +1084,8 @@
   - C
   - Java
 - id: 119
-  created_at: '2017-11-08'
   order: '281069'
+  created_at: '2017-11-08'
   name: 西神戸 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/nishi-kobe.png"
@@ -1097,8 +1097,8 @@
   - PHP
   - Java
 - id: 67
-  created_at: '2016-09-12'
   order: '281093'
+  created_at: '2016-09-12'
   name: 北神戸 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/kitakobe.png"
@@ -1110,8 +1110,8 @@
   - Arduino
   - 電子工作
 - id: 48
-  created_at: '2016-09-28'
   order: '281107'
+  created_at: '2016-09-28'
   name: 神戸 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/kobe.png"
@@ -1121,8 +1121,8 @@
   - Scratch
   - JavaScript
 - id: 50
-  created_at: '2016-03-22'
   order: '282014'
+  created_at: '2016-03-22'
   name: 姫路 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/himeji.png"
@@ -1133,8 +1133,8 @@
   - ラズベリーパイ
   - Webサイト
 - id: 49
-  created_at: '2016-04-04'
   order: '282031'
+  created_at: '2016-04-04'
   name: 明石 (近畿)
   prefecture_id: 28
   logo: "/img/dojos/akashi.png"
@@ -1145,8 +1145,8 @@
   - Webサイト
   - Arduino
 - id: 35
-  created_at: '2014-10-26'
   order: '292010'
+  created_at: '2014-10-26'
   name: 奈良 (近畿)
   prefecture_id: 29
   url: http://coderdojo-nara-ikoma.github.io/
@@ -1157,8 +1157,8 @@
   - Webサイト
   - C#
 - id: 36
-  created_at: '2016-04-25'
   order: '292095'
+  created_at: '2016-04-25'
   name: 生駒 (近畿)
   prefecture_id: 29
   logo: "/img/dojos/ikoma.png"
@@ -1169,8 +1169,8 @@
   - Webサイト
   - C#
 - id: 128
-  created_at: '2018-02-18'
   order: '293431'
+  created_at: '2018-02-18'
   name: 三郷 (近畿)
   prefecture_id: 29
   logo: "/img/dojos/sango.png"
@@ -1179,8 +1179,8 @@
   tags:
   - Scratch
 - id: 47
-  created_at: '2016-11-01'
   order: '302015'
+  created_at: '2016-11-01'
   name: 和歌山 (近畿)
   prefecture_id: 30
   logo: "/img/dojos/wakayama.png"
@@ -1189,8 +1189,8 @@
   tags:
   - Scratch
 - id: 99
-  created_at: '2017-09-06'
   order: '302066'
+  created_at: '2017-09-06'
   name: 南紀田辺 (近畿)
   prefecture_id: 30
   url: https://coderdojo-nanki-tanabe.jimdo.com/
@@ -1201,8 +1201,8 @@
   - ScratchJr
   - ラズベリーパイ
 - id: 38
-  created_at: '2012-11-08'
   order: '302074'
+  created_at: '2012-11-08'
   name: 熊野 (近畿)
   prefecture_id: 30
   url: https://www.facebook.com/coderdojo.kumano
@@ -1213,8 +1213,8 @@
   - Webサイト
   - アプリ
 - id: 115
-  created_at: '2017-08-16'
   order: '313866'
+  created_at: '2017-08-16'
   name: 大山 (中国)
   prefecture_id: 31
   logo: "/img/dojos/japan.png"
@@ -1226,8 +1226,8 @@
   - Swift
   - ラズベリーパイ
 - id: 131
-  created_at: '2018-02-22'
   order: '312011'
+  created_at: '2018-02-22'
   name: 鳥取 (中国)
   prefecture_id: 31
   logo: "/img/dojos/tottori.png"
@@ -1237,8 +1237,8 @@
   - Scratch
   - Ruby
 - id: 78
-  created_at: '2017-03-10'
   order: '325058'
+  created_at: '2017-03-10'
   name: 吉賀 (中国)
   prefecture_id: 32
   logo: "/img/dojos/yoshika.png"
@@ -1250,8 +1250,8 @@
   - PHP
   - Ruby
 - id: 81
-  created_at: '2017-03-20'
   order: '331007'
+  created_at: '2017-03-20'
   name: 岡山 岡南 (中国)
   prefecture_id: 33
   logo: "/img/dojos/okayama.png"
@@ -1264,8 +1264,8 @@
   - Webアプリ開発
   - Java
 - id: 52
-  created_at: '2016-05-04'
   order: '341002'
+  created_at: '2016-05-04'
   name: 紙屋町 (中国)
   prefecture_id: 34
   logo: "/img/dojos/hiroshima.jpg"
@@ -1276,8 +1276,8 @@
   - Webサイト
   - PHP
 - id: 53
-  created_at: '2016-09-29'
   order: '341002'
+  created_at: '2016-09-29'
   name: 五日市 (中国)
   prefecture_id: 34
   logo: "/img/dojos/itsukaichi.png"
@@ -1288,8 +1288,8 @@
   - enchant.js
   - Unity
 - id: 51
-  created_at: '2016-06-01'
   order: '342076'
+  created_at: '2016-06-01'
   name: 福山 (中国)
   prefecture_id: 34
   logo: "/img/dojos/fukuyama.png"
@@ -1298,8 +1298,8 @@
   tags:
   - Scratch
 - id: 92
-  created_at: '2017-06-19'
   order: '352101'
+  created_at: '2017-06-19'
   name: 光 (中国)
   prefecture_id: 35
   logo: "/img/dojos/hikari.png"
@@ -1311,8 +1311,8 @@
   - PHP
   - アプリ開発
 - id: 103
-  created_at: '2017-10-02'
   order: '362018'
+  created_at: '2017-10-02'
   name: 徳島 (四国)
   prefecture_id: 36
   logo: "/img/dojos/tokushima.png"
@@ -1325,8 +1325,8 @@
   - PHP
   - Python
 - id: 111
-  created_at: '2017-09-26'
   order: '362085'
+  created_at: '2017-09-26'
   name: 三好 (四国)
   prefecture_id: 36
   logo: "/img/dojos/miyoshi.png"
@@ -1335,8 +1335,8 @@
   tags:
   - Minecraft
 - id: 102
-  created_at: '2017-09-18'
   order: '401307'
+  created_at: '2017-09-18'
   name: 福岡 (九州)
   prefecture_id: 40
   logo: "/img/dojos/fukuoka.png"
@@ -1347,8 +1347,8 @@
   - Webサイト
   - JavaScript
 - id: 113
-  created_at: '2017-10-06'
   order: '401307'
+  created_at: '2017-10-06'
   name: ももち (九州)
   prefecture_id: 40
   logo: "/img/dojos/momochi.png"
@@ -1357,8 +1357,8 @@
   tags:
   - Scratch
 - id: 54
-  created_at: '2016-10-06'
   order: '402036'
+  created_at: '2016-10-06'
   name: 久留米 (九州)
   prefecture_id: 40
   logo: "/img/dojos/kurume.png"
@@ -1371,8 +1371,8 @@
   - LEGO
   - Minecraft
 - id: 122
-  created_at: '2017-12-15'
   order: '413411'
+  created_at: '2017-12-15'
   name: 基山 (九州)
   prefecture_id: 41
   logo: "/img/dojos/japan.png"
@@ -1385,8 +1385,8 @@
   - ラズベリーパイ
   - Minecraft
 - id: 120
-  created_at: '2017-11-14'
   order: '422011'
+  created_at: '2017-11-14'
   name: 長崎 (九州)
   prefecture_id: 42
   logo: "/img/dojos/japan.png"
@@ -1395,8 +1395,8 @@
   tags:
   - Scratch
 - id: 55
-  created_at: '2016-09-15'
   order: '454419'
+  created_at: '2016-09-15'
   name: 宮崎 (九州)
   prefecture_id: 45
   logo: "/img/dojos/miyazaki.png"
@@ -1408,8 +1408,8 @@
   - Python
   - ラズベリーパイ
 - id: 61
-  created_at: '2012-07-09'
   order: '472018'
+  created_at: '2012-07-09'
   name: 那覇 (沖縄)
   prefecture_id: 47
   logo: "/img/dojos/okinawa.png"
@@ -1418,8 +1418,8 @@
   tags:
   - Scratch
 - id: 106
-  created_at: '2017-09-20'
   order: '472051'
+  created_at: '2017-09-20'
   name: 宜野湾 (沖縄)
   prefecture_id: 47
   logo: "/img/dojos/ginowan.png"
@@ -1432,8 +1432,8 @@
   - Java
   - Swift
 - id: 56
-  created_at: '2016-11-02'
   order: '472140'
+  created_at: '2016-11-02'
   name: 宮古島 (沖縄)
   prefecture_id: 47
   logo: "/img/dojos/miyakojima.jpg"
@@ -1443,8 +1443,8 @@
   - Scratch
   - Webサイト
 - id: 57
-  created_at: '2016-12-19'
   order: '473251'
+  created_at: '2016-12-19'
   name: 嘉手納 (沖縄)
   prefecture_id: 47
   logo: "/img/dojos/kadena.png"
