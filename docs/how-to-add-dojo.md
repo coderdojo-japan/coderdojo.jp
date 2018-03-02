@@ -1,6 +1,6 @@
 # 新規Dojoの追加方法
 
-新規Dojoから申請が来た場合の手順書( 2018/02/26現在)
+新規Dojoから申請が来た場合の手順書( 2018/02/28現在)
 
 ## Dojo DBの追加手順
 
@@ -11,7 +11,6 @@
 
 ```yaml
 - created_at: '2016-12-19'
-  order: '473251'
   name: 嘉手納 (沖縄)
   prefecture_id: 47
   logo: "/img/dojos/kadena.png"
@@ -28,13 +27,21 @@
 | Dojoカラム      |    フォーム    |
 |:-----------------|:------------------:|
 | `created_at` |  タイムスタンプ  |
-|  `order`  | [全国地方公共団体コード] (https://docs.google.com/spreadsheets/d/1b2XZxifpP8GSASvP9sPq1BYwsCH6Y_FHSkol_nfaGxw/edit#gid=1813423171) |
+|  `order` [^1] | [全国地方公共団体コード](https://docs.google.com/spreadsheets/d/1b2XZxifpP8GSASvP9sPq1BYwsCH6Y_FHSkol_nfaGxw/edit#gid=1813423171) |
 |`name` | 正式名称 |
 | `prefecture_id` | `db/seeds.rb` の該当番号 |
 |`logo`  | `public/` のDojo画像パス |
 | `url`  |  イベントの管理ページ (個別イベントURLではない) |
 | `description`  |フォーム `Dojoの開催場所と開催頻度について教えてください` |
 |`tags`  | フォーム `Dojo で対応可能な技術を教えてください (最大5つまで)`|
+
+
+### `order` の値について
+
+[^1]: `order`の値はDojoの名称が公共団体名になっている場合は省略可能です。
+- `order`の値はDojoの名称が公共団体名になっている場合は省略可能です。
+- Dojo名が市町村以外の名称になっている場合のみ入力をする必要があります。
+    - ex. 嘉手納は嘉手納市がある為省略可能
 
 
 - ここまで記述した後に `be rails dojos:update_db_by_yaml` を実行しdbに新規Dojoを反映する
