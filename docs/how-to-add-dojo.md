@@ -27,7 +27,7 @@
 | Dojoカラム      |    フォーム    |
 |:-----------------|:------------------:|
 | `created_at` |  タイムスタンプ  |
-|  `order` [^1] | [全国地方公共団体コード](https://docs.google.com/spreadsheets/d/1b2XZxifpP8GSASvP9sPq1BYwsCH6Y_FHSkol_nfaGxw/edit#gid=1813423171) |
+|  `order` (*1) | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) |
 |`name` | 正式名称 |
 | `prefecture_id` | `db/seeds.rb` の該当番号 |
 |`logo`  | `public/` のDojo画像パス |
@@ -35,17 +35,19 @@
 | `description`  |フォーム `Dojoの開催場所と開催頻度について教えてください` |
 |`tags`  | フォーム `Dojo で対応可能な技術を教えてください (最大5つまで)`|
 
+`id`, `created_at`, `updated_at` はRailsがデフォルトで提供するカラムです。詳細はRailsガイドの[Active Recordの基礎](https://railsguides.jp/active_record_basics.html#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB)をご参照ください。
 
-### `order` の値について
+### *1 `order` の値について
 
-[^1]: `order`の値はDojoの名称が公共団体名になっている場合は省略可能です。
-- `order`の値はDojoの名称が公共団体名になっている場合は省略可能です。
-- Dojo名が市町村以外の名称になっている場合のみ入力をする必要があります。
-    - ex. 嘉手納は嘉手納市がある為省略可能
+- `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)を値を入力します
+- `order` の値は、Dojoの名称が公共団体名になっている場合に省略可能です ([#228](https://github.com/coderdojo-japan/coderdojo.jp/issues/228))
+- Dojo名が市町村以外の名称になっている場合のみ入力をする必要があります
+    - 例: `CoderDojo 嘉手納` は `嘉手納` 市がある為、自動的に紐付け可能 (省略可能)
 
+yaml ファイルに各項目を追記したら、`$ bundle exec rails dojos:update_db_by_yaml` を実行してDBに新規Dojo情報を反映します。その後 `$ bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します。
 
-- ここまで記述した後に `be rails dojos:update_db_by_yaml` を実行しdbに新規Dojoを反映する
-- その後　`be rails dojos:migrate_adding_id_to_yaml` 　を実行し、yamlにidが動的に付けられた事を確認する
+yamlファイルにidおよびorderが動的に更新されたことを確認できたら `Add CoderDojo [Dojo名]` でコミットをします。
+
 
 ### 関連Issue
 
