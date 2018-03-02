@@ -37,17 +37,18 @@
 
 `id`, `created_at`, `updated_at` はRailsがデフォルトで提供するカラムです。詳細はRailsガイドの[Active Recordの基礎](https://railsguides.jp/active_record_basics.html#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB)をご参照ください。
 
-### *1 `order` の値について
+### (*1) `order` の値について
 
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)を値を入力します
 - `order` の値は、Dojoの名称が公共団体名になっている場合に省略可能です ([#228](https://github.com/coderdojo-japan/coderdojo.jp/issues/228))
 - Dojo名が市町村以外の名称になっている場合のみ入力をする必要があります
-    - 例: `CoderDojo 嘉手納` は `嘉手納` 市がある為、自動的に紐付け可能 (省略可能)
+    - 例: `CoderDojo 嘉手納` は `嘉手納` 市がある為、自動的に紐付けできます (省略可能)
 
 yaml ファイルに各項目を追記したら、`$ bundle exec rails dojos:update_db_by_yaml` を実行してDBに新規Dojo情報を反映します。その後 `$ bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します。
 
 yamlファイルにidおよびorderが動的に更新されたことを確認できたら `Add CoderDojo [Dojo名]` でコミットをします。
 
+コミットおよびPRの例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
 ### 関連Issue
 
