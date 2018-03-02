@@ -34,13 +34,14 @@ https://coderdojo.jp/docs にあるドキュメントの編集方法も同様で
 
 [Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。背景や使用例については次のスライドをご参照ください。
 
-CoderDojo を支える Rails CMS の活用事例 - Speaker Deck
+CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
 編集方法については下記の手順書をご参考にしてください。
 
-記事の編集手順書 - Google Drive
-https://docs.google.com/document/d/1Va1tImybdArVHAoLgqv035OXeUd0P8MB98hCiUyG5z4/edit?usp=sharing
+記事の編集手順書 - Google Drive   
+http://bit.ly/coderdojo-kata-edit
+
 
 編集用のユーザーアカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までお問い合わせください。
 
