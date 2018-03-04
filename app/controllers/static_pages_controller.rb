@@ -35,6 +35,7 @@ class StaticPagesController < ApplicationController
 
     @annual_dojos_chart = HighChartsBuilder.build_annual_dojos
     @annual_event_histories_chart = HighChartsBuilder.build_annual_event_histories
+    @annual_participants_chart = HighChartsBuilder.build_annual_participants
   end
 
   def letsencrypt

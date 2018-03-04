@@ -62,6 +62,7 @@
             %td= @participants.values.inject(:+)
       = high_chart("annual_dojos", @annual_dojos_chart)
       = high_chart("annual_event_histories", @annual_event_histories_chart)
+      = high_chart("annual_participants", @annual_participants_chart)
 
     %h3 関連リンク
     %ul{:style => "list-style: none; margin-left: -40px;"}
