@@ -18,6 +18,24 @@ class HighChartsBuilder
       end
     end
 
+    def build_annual_event_histories
+      source = EventHistory.where('evented_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', evented_at)").count
+      data = annual_chart_data_from(source)
+
+      LazyHighCharts::HighChart.new('graph') do |f|
+        f.title(text: '開催回数の推移')
+        f.xAxis(categories: data[:years])
+        f.series(type: 'column', name: '開催回数', yAxis: 0, data: data[:increase_nums])
+        f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
+        f.yAxis [
+          { title: { text: '開催回数' } },
+          { title: { text: '累積合計' }, opposite: true }
+        ]
+        f.chart(width: 600)
+        f.colors(["#8085e9", "#f7a35c"])
+      end
+    end
+
     private
 
     def annual_chart_data_from(source)
