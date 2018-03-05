@@ -1,5 +1,4 @@
-module Statistics
-  module Providers
+module Providers
     class Connpass
       ENDPOINT = 'https://connpass.com/api/v1'.freeze
 
@@ -38,5 +37,4 @@ module Statistics
         events
       end
     end
-  end
 end

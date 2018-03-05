@@ -1,5 +1,4 @@
-module Statistics
-  module Providers
+module Providers
     class Facebook
       class_attribute :access_token
 
@@ -30,5 +29,4 @@ module Statistics
         events
       end
     end
-  end
 end

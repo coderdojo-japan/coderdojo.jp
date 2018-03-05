@@ -1,7 +1,4 @@
-module Statistics
-  module Providers
-  end
-end
+module Providers ;end
 
 require_relative 'providers/connpass'
 require_relative 'providers/doorkeeper'
