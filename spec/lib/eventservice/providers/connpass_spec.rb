@@ -1,7 +1,7 @@
 require 'rails_helper'
-require 'providers'
+require 'eventservice'
 
-RSpec.describe Providers::Connpass do
+RSpec.describe EventService::Providers::Connpass do
   include_context 'Use stubs for Connpass'
 
   describe '#search' do
