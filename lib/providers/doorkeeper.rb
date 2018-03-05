@@ -1,5 +1,4 @@
-module Statistics
-  module Providers
+module Providers
     class Doorkeeper
       ENDPOINT = 'https://api.doorkeeper.jp'.freeze
 
@@ -47,5 +46,4 @@ module Statistics
         end
       end
     end
-  end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
-require 'statistics'
+require 'providers'
 
-RSpec.describe Statistics::Providers::Connpass do
+RSpec.describe Providers::Connpass do
   include_context 'Use stubs for Connpass'
 
   describe '#search' do

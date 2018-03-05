@@ -1,7 +1,7 @@
 require 'rails_helper'
-require 'statistics'
+require 'providers'
 
-RSpec.describe Statistics::Providers::Facebook do
+RSpec.describe Providers::Facebook do
   include_context 'Use stubs for Facebook'
 
   describe '#fetch_events' do

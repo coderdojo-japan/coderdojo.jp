@@ -34,6 +34,15 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def events
+    @url                 = request.url
+    @regions_and_dojos   = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
+    @events = Dojo.where(evented_at:
+                      Time.zone.now..Time.zone.now.end_of_year)
+    #@hoge = Statistics::Aggregation.new(from: Time.current.strftime('%Y'),to:Time.current.strftime('%Y')).run
+  end
+
+
   def letsencrypt
     if params[:id] == ENV['LETSENCRYPT_REQUEST']
       render text: ENV['LETSENCRYPT_RESPONSE']
