@@ -1,4 +1,7 @@
-module Providers ;end
+module EventService
+  module Providers
+  end
+end
 
 require_relative 'providers/connpass'
 require_relative 'providers/doorkeeper'

@@ -1,3 +1,4 @@
+module EventService
 module Providers
     class Connpass
       ENDPOINT = 'https://connpass.com/api/v1'.freeze
@@ -37,4 +38,5 @@ module Providers
         events
       end
     end
+end
 end

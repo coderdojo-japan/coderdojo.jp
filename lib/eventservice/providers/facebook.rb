@@ -1,3 +1,4 @@
+module EventService
 module Providers
     class Facebook
       class_attribute :access_token
@@ -29,4 +30,5 @@ module Providers
         events
       end
     end
+end
 end

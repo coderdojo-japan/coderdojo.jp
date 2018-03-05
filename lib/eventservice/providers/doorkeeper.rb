@@ -1,3 +1,4 @@
+module EventService
 module Providers
     class Doorkeeper
       ENDPOINT = 'https://api.doorkeeper.jp'.freeze
@@ -46,4 +47,5 @@ module Providers
         end
       end
     end
+end
 end
