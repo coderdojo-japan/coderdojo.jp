@@ -6,7 +6,7 @@ module Statistics
       end
 
       def initialize(dojos, date, weekly)
-        @client = Providers::Connpass.new
+        @client = EventService::Providers::Connpass.new
         @dojos = dojos
         @params = build_params(date, weekly)
       end

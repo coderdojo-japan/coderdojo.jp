@@ -6,7 +6,7 @@ module Statistics
       end
 
       def initialize(dojos, date, weekly)
-        @client = Providers::Doorkeeper.new
+        @client = EventService::Providers::Doorkeeper.new
         @dojos = dojos
         @params = build_params(date, weekly)
       end
