@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117164209) do
+ActiveRecord::Schema.define(version: 20180306024000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,19 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.string "region"
     t.index ["name"], name: "index_prefectures_on_name", unique: true
     t.index ["region"], name: "index_prefectures_on_region"
+  end
+
+  create_table "recently_events", force: :cascade do |t|
+    t.integer "dojo_id", null: false
+    t.string "dojo_name", null: false
+    t.string "service_name", null: false
+    t.string "service_group_id"
+    t.string "event_id", null: false
+    t.string "event_url", null: false
+    t.datetime "event_at", null: false
+    t.index ["dojo_id"], name: "index_recently_events_on_dojo_id"
+    t.index ["event_at", "dojo_id"], name: "index_recently_events_on_event_at_and_dojo_id"
+    t.index ["event_at"], name: "index_recently_events_on_event_at"
   end
 
   add_foreign_key "dojo_event_services", "dojos"
