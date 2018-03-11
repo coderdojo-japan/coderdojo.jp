@@ -14,7 +14,7 @@ class HighChartsBuilder
           { title: { text: '累積合計' }, opposite: true }
         ]
         f.chart(width: 600)
-        f.colors(["#8085e9", "#f7a35c"])
+        f.colors(["#A0D3B5", "#505D6B"])
       end
     end
 
@@ -32,7 +32,7 @@ class HighChartsBuilder
           { title: { text: '累積合計' }, opposite: true }
         ]
         f.chart(width: 600)
-        f.colors(["#8085e9", "#f7a35c"])
+        f.colors(["#F4C34F", "#BD2561"])
       end
     end
 
@@ -50,7 +50,7 @@ class HighChartsBuilder
           { title: { text: '累積合計' }, opposite: true }
         ]
         f.chart(width: 600)
-        f.colors(["#8085e9", "#f7a35c"])
+        f.colors(["#EF685E", "#35637D"])
       end
     end
 
