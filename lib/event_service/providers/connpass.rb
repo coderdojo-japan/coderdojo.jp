@@ -4,7 +4,7 @@ module EventService
         ENDPOINT = 'https://connpass.com/api/v1'.freeze
 
         def initialize
-          @client = Statistics::Client.new(ENDPOINT)
+          @client = EventService::Client.new(ENDPOINT)
         end
 
         def search(keyword:)

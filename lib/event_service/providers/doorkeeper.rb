@@ -4,7 +4,7 @@ module EventService
         ENDPOINT = 'https://api.doorkeeper.jp'.freeze
 
         def initialize
-          @client = Statistics::Client.new(ENDPOINT) do |c|
+          @client = EventService::Client.new(ENDPOINT) do |c|
             c.authorization(:Bearer, ENV.fetch('DOORKEEPER_API_TOKEN'))
           end
           @default_since = Time.zone.parse('2010-07-01')
