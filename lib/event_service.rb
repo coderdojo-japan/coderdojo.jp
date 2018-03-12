@@ -1,3 +1,3 @@
 module EventService; end
 
-require_relative 'eventservice/providers'
+require_relative 'event_service/providers'

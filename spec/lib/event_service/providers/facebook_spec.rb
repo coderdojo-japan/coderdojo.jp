@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'eventservice'
+require 'event_service'
 
 RSpec.describe EventService::Providers::Facebook do
   include_context 'Use stubs for Facebook'
