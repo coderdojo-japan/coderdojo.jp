@@ -6,7 +6,7 @@ module Statistics
       end
 
       def initialize(dojos, _date, _weekly)
-        @client = Providers::StaticYaml.new
+        @client = EventService::Providers::StaticYaml.new
         @dojos = dojos
       end
 

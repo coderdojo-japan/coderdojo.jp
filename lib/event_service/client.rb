@@ -1,4 +1,4 @@
-module Statistics
+module EventService
   class Client
     class_attribute :debug
     self.debug = false

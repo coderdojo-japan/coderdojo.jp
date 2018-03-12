@@ -1,7 +1,7 @@
 require 'rails_helper'
-require 'statistics'
+require 'event_service'
 
-RSpec.describe Statistics::Providers::Doorkeeper do
+RSpec.describe EventService::Providers::Doorkeeper do
   include_context 'Use stubs for Doorkeeper'
 
   describe '#search' do

@@ -1,4 +1,4 @@
-module Statistics
+module EventService
   module Providers
   end
 end
