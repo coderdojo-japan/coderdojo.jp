@@ -14,7 +14,7 @@ RSpec.shared_context 'Use stub connection of Faraday' do
   end
 
   before do
-    allow_any_instance_of(Statistics::Client).to receive(:connection_for).and_return(stub_connection)
+    allow_any_instance_of(EventService::Client).to receive(:connection_for).and_return(stub_connection)
   end
 end
 
