@@ -42,6 +42,8 @@ gem 'rack-attack'
 
 gem 'google_drive'
 
+gem 'lazy_high_charts'
+
 group :development do
   gem 'web-console'
   gem 'spring'
