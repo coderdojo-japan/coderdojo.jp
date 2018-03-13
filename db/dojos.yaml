@@ -1034,6 +1034,17 @@
   - Scratch
   - Webサイト
   - アプリ開発
+- id: 135
+  order: '272183'
+  created_at: '2018-03-13'
+  name: 大東 (近畿)
+  prefecture_id: 27
+  logo: "/img/dojos/daito.png"
+  url: http://coderdojodaito.strikingly.com/
+  description: 大阪府大東市で毎月第一土曜日に開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 108
   order: '272205'
   created_at: '2017-09-06'
