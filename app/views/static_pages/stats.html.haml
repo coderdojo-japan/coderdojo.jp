@@ -6,25 +6,18 @@
 %section#dojos.dojos.text-center
   %bpr
     %h1 統計情報
-    %p 本ページでは全国の CoderDojo の統計情報をまとめています。
+    %div 本ページでは全国の CoderDojo の統計情報をまとめています。
     CoderDojo の活動状況を把握する際などにご活用ください。
-
-    %h3 開催回数
-    = @sum_of_events
-    回
-    %h3 参加者数
-    延べ
-    = @sum_of_participants
-    人
-    %h3 集計対象
-    = @sum_of_dojos
-    \/ #{@dojo_count} Dojos
-    %h3 集計間隔
-    毎週月曜日 午前10時頃
-
-    %h3 これまでの推移
+    %br
+    %h3 推移グラフ  
     %div{align: 'center'}
-      (集計対象のみ)
+      = high_chart("annual_dojos",           @annual_dojos_chart)
+      = high_chart("annual_event_histories", @annual_event_histories_chart)
+      = high_chart("annual_participants",    @annual_participants_chart)
+
+    %h3 推移テーブル
+    %div{align: 'center'}
+      %i *集計対象のみ
       %table{style: 'margin-top: 4px;'}
         %thead
           %tr
@@ -47,9 +40,41 @@
             - @range.each do |year|
               %td= @participants[year]
             %td= @participants.values.inject(:+)
-      = high_chart("annual_dojos", @annual_dojos_chart)
-      = high_chart("annual_event_histories", @annual_event_histories_chart)
-      = high_chart("annual_participants", @annual_participants_chart)
+      
+    %div{style: 'margin-top: 20px;'}
+      %b 集計について
+      %br
+      毎週月曜日の午前10時頃に集計をしています。
+      %br
+      集計対象としている Dojo 数は次のとおりです。
+    %div{style: 'margin-top: 5px;'}
+    %b= @sum_of_dojos
+    %b / #{@dojo_count} Dojos
+
+
+    %h3 最新データ
+    2018年のデータも含めた最新の統計情報は次のとおりです。  
+    %div{align: 'center'}
+      %table{style: 'margin-top: 4px;'}
+        %thead
+          %tr
+            %th
+            %td{style: 'padding: 0 10px; font-weight: bold;'} 道場数
+            %td{style: 'padding: 0 10px; font-weight: bold;'} 開催回数
+            %td{style: 'padding: 0 10px; font-weight: bold;'} 参加者数
+        %tbody{style: 'text-align: center;'}
+          %tr
+            %td
+            %td= @dojo_count
+            %td= @sum_of_events
+            %td= @sum_of_participants
+
+    %h3 備考
+    %ul{style: 'list-style: none;'}
+      %li 参加者数はユニーク数ではなく、延べ数で計算
+      %li API で自動的に集計できる Dojo が集計の対象
+      %li 最新の開発状況は末尾の「関連リンク」を参照
+            
     %h3 全国の道場
     #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
       - @regions_and_dojos.each_with_index do |(region, dojos), index|
