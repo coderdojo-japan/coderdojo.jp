@@ -1,14 +1,16 @@
 <!-- Begin MailChimp Signup Form -->
 
-<style type="text/css">
-    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}<br />    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br /></style>
-<div id="mc_embed_signup"><form id="mc-embedded-subscribe-form" class="validate" action="https://coderdojo.us17.list-manage.com/subscribe/post?u=39a5824e42ab56ec44bb4e84e&amp;id=097dfa6a14" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-<div id="mc_embed_signup_scroll">
+:css
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}<br />    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 
-<input id="mce-EMAIL" class="email" name="EMAIL" required="" type="email" value="" placeholder="メールアドレス" />
-<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1" name="b_39a5824e42ab56ec44bb4e84e_097dfa6a14" type="text" value="" /></div>
-<div class="clear"><input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="購読" /></div>
-</div>
-</form></div>
+%div#mc_embed_signup
+  %form{:id => "mc-embedded-subscribe-form", :class=> "validate", :action =>"https://coderdojo.us17.list-manage.com/subscribe/post?u=39a5824e42ab56ec44bb4e84e&amp;id=097dfa6a14", :method =>"post", :name =>"mc-embedded-subscribe-form" ,:novalidate=>"" ,:target=>"_blank"}
+    %div#mc_embed_signup_scroll
+      %input{ :id => "mce-EMAIL", :type => "email", :name=> "EMAIL", :class => "email", :placeholder => "メールアドレス"}
+        %div{ :style=> "position: absolute; left: -5000px;" , :aria-hidden => "true"}
+          %input { :tabindex=>"-1" :name=>"b_39a5824e42ab56ec44bb4e84e_097dfa6a14" ,:type=>"text" ,:value=>""}
+        %div{ :style=>"position: absolute; left: -5000px;" , :aria-hidden=>"true"}
+          %input{ :tabindex=>"-1", :name=>"b_39a5824e42ab56ec44bb4e84e_097dfa6a14" ,:type=>"text" ,:value=>""}
+        %div.cler
+          %input{:id=>"mc-embedded-subscribe" ,:class=>"button", :name=>"subscribe", :type=>"submit", :value=>"購読"}
 <!--End mc_embed_signup-->
