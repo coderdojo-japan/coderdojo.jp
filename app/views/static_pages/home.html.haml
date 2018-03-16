@@ -72,6 +72,7 @@
   <p>5月7日に埼玉県所沢市で<b><a href='https://peraichi.com/landing_pages/view/decadojo'>でかドージョー</a></b>が開催されます! ぜひご参加ください ;)</p>
   </ol>
   </section>
+
 %section#events.detail-introduction.text-center
 %section#dojos.dojos.text-center.grayscale-bg
   %br/
@@ -119,8 +120,16 @@
     %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
     %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
     %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -40px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
+
+#news.text-center.grayscale-bg
+  %section.detail-introduction
+    %br
+    %h2 ニュースレター購読
+    %br
+    %p
+      = render partial: 'shared/newsletter'
   
-.text-center.grayscale-bg
+.text-center
   %section.detail-introduction
     %h2 お問い合わせ
     %p
