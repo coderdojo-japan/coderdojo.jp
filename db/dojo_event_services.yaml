@@ -464,6 +464,10 @@
   name: doorkeeper
   group_id: 9491
   url: https://coderdojo-ochanomizu.doorkeeper.jp/
+#- dojo_id: 130
+#  name: connpass
+#  group_id: [TODO] connpass の series id ができたら追加する
+#  url: https://connpass.com/user/coderdojo-akabane/
 - dojo_id: 131
   name: facebook
   group_id: 209274086317393
