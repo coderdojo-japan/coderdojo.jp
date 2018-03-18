@@ -1404,6 +1404,20 @@
   description: 福岡市早良区百道で毎月開催
   tags:
   - Scratch
+- id: 136
+  order: '401307'
+  created_at: '2018-03-19'
+  name: 香椎 (九州)
+  prefecture_id: 40
+  logo: "/img/dojos/kashii.png"
+  url: https://coderdojo-kashii.connpass.com/
+  description: 福岡市東区で毎月１回不定期に開催
+  tags:
+  - Viscuit
+  - Minecraft
+  - Scratch
+  - ScratchJr
+  - Ozobot
 - id: 54
   order: '402036'
   created_at: '2016-10-06'
