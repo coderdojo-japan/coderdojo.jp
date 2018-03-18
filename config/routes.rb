@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file,
   # see http://guides.rubyonrails.org/routing.html
 
+  root "home#show"
+
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   get "/docs/code_of_conduct", to: redirect('/docs/code-of-conduct')
   resources :docs, only: [:index, :show]
 
   # Static Pages
-  root "static_pages#home"
   get "/stats", to: 'static_pages#stats'
 
   # Redirects

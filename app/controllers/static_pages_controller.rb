@@ -1,9 +1,4 @@
 class StaticPagesController < ApplicationController
-  def home
-    @dojo_count        = Dojo.count
-    @regions_and_dojos = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
-  end
-
   def stats
     @url                 = request.url
     @dojo_count          = Dojo.count
