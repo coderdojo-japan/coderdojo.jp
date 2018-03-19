@@ -1,10 +1,5 @@
-class StaticPagesController < ApplicationController
-  def home
-    @dojo_count        = Dojo.count
-    @regions_and_dojos = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
-  end
-
-  def stats
+class StatsController < ApplicationController
+  def show
     @url                 = request.url
     @dojo_count          = Dojo.count
     @regions_and_dojos   = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
@@ -36,13 +31,5 @@ class StaticPagesController < ApplicationController
     @annual_dojos_chart = HighChartsBuilder.build_annual_dojos
     @annual_event_histories_chart = HighChartsBuilder.build_annual_event_histories
     @annual_participants_chart = HighChartsBuilder.build_annual_participants
-  end
-
-  def letsencrypt
-    if params[:id] == ENV['LETSENCRYPT_REQUEST']
-      render text: ENV['LETSENCRYPT_RESPONSE']
-    else
-      render text: 'Failed.'
-    end
   end
 end
