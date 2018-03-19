@@ -20,7 +20,7 @@ class Document
   end
 
   def url
-    "#{URL_PATH}/#{self.filename}"
+    "/#{URL_PATH}/#{self.filename}"
   end
 
   def exists?
