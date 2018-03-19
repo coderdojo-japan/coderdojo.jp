@@ -2,7 +2,7 @@
   %i.cd.cd-logo
   %h1 CoderDojo Japan
   %p 子どものためのプログラミング道場
-  %br/
+  %br
 %section.cover
   = image_tag "coderdojo-japan_cover.jpg", class: "cursor-default"
 %section.introduction.text-center.list
@@ -16,7 +16,7 @@
     %li HTML, CSS, JavaScript
     %li PHP, Python, Ruby, Unity
     %li Arduino, Raspberry Pi など
-  %br/
+  %br
   %p 道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢はとても大切です。
   %p 道場の特徴については、次のガイダンスを参考にしてください。
   .text-center
@@ -75,9 +75,9 @@
 
 %section#events.detail-introduction.text-center
 %section#dojos.dojos.text-center.grayscale-bg
-  %br/
+  %br
   %h2 全国の道場
-  %br/
+  %br
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 %section.text-center
   %h2.text-center
@@ -87,7 +87,9 @@
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 .text-center.grayscale-bg
   %section.detail-introduction.list
+    %br
     %h2 もっと詳しく知りたい
+    %br
     %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
     %ul
       %li
@@ -96,7 +98,7 @@
         %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} CoderDojo Japan (Facebook)
       %li
         %a{:href => "https://coderdojo.com/"} CoderDojo (英語)
-    %br/
+    %br
     %p 本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。
     %p
       「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には
@@ -104,6 +106,7 @@
       を参照してみてください。
     = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', class: 'cursor-pointer', style: 'margin-bottom: 15px;'), '/kata'
 %section#partners.detail-introduction.partners_logo.text-center
+  %br
   %h2 パートナー
   :javascript
     $(function () {
@@ -131,10 +134,12 @@
   
 .text-center
   %section.detail-introduction
+    %br
     %h2 お問い合わせ
+    %br
     %p
       取材や支援などのお問い合わせについては下記からご連絡ください 📨
-      %br/
+      %br
       メールの場合は
       %i info@coderdojo.jp
       \ までお問い合わせください。
