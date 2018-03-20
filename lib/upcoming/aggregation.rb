@@ -78,31 +78,6 @@ module Upcoming
       end
     end
 
-    class Weekly < Base
-      private
-
-      def execute
-        @list.each do |date|
-          puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
-
-          @externals.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
-          end
-        end
-      end
-
-      def build_list(from, to)
-        loop.with_object([from]) do |_, list|
-          nw = list.last.next_week
-          raise StopIteration if nw > to
-          list << nw
-        end
-      end
-
-      def date_format(date)
-        date.strftime('%Y/%m/%d')
-      end
-    end
 
     class Monthly < Base
       private
