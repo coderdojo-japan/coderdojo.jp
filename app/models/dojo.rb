@@ -30,6 +30,10 @@ class Dojo < ApplicationRecord
     def dump_attributes_to_yaml(attributes)
       YAML.dump(attributes, File.open(YAML_FILE, 'w'))
     end
+
+    def group_by_region
+      eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
+    end
   end
 
   private
