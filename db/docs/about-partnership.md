@@ -55,3 +55,10 @@ A. CoderDojo Japan Champions という非公開グループがあります。現
 
 CoderDojo Japan Champions - Facebook Group (非公開)
 [https://www.facebook.com/groups/coderdojo.jp.champions/](https://www.facebook.com/groups/coderdojo.jp.champions/)
+
+### Q. パートナーシップの期間はどのように決まりますか?
+
+A. モノやサービスなどの支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
+
+パートナーシップの存続期間について - CoderDojo Japan   
+[https://coderdojo.jp/docs/term-of-partnership](https://coderdojo.jp/docs/term-of-partnership)
