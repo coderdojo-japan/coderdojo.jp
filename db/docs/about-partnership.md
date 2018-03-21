@@ -1,6 +1,6 @@
 # パートナーシップのご案内
 <br>
-本パートナーシップにご興味を持って頂きありがとうございます。一般社団法人 CoderDojo Japan 代表理事の安川 要平です。本資料では CoderDojo の活動状況をご紹介させて頂きながら、貴社が行われている事業に継続的にご協力していけないかをご提案させて頂いております。
+本パートナーシップにご興味を持って頂きありがとうございます。本ページでは CoderDojo の活動状況をご紹介させて頂きながら、貴社が行われている事業に継続的にご協力していけないかをご提案させて頂いております。
 
 ## CoderDojo とは?
 
@@ -32,13 +32,11 @@ CoderDojo の特徴は、オープンソースソフトウェアの文化に根�
 <br>
 なお、上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。例: [https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
 
-本パートナーシップにご興味ありましたら、下記の連絡先 (安川) までお気軽にご連絡ください。
+本パートナーシップにご興味ありましたら、下記の連絡先までお気軽にご連絡ください。
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
-yohei@coderdojo.jp<br>
-https://coderdojo.jp/
+連絡先: info@coderdojo.jp
 </div>
 
 ## よくある質問と回答
@@ -55,3 +53,10 @@ A. CoderDojo Japan Champions という非公開グループがあります。現
 
 CoderDojo Japan Champions - Facebook Group (非公開)
 [https://www.facebook.com/groups/coderdojo.jp.champions/](https://www.facebook.com/groups/coderdojo.jp.champions/)
+
+### Q. パートナーシップの期間はどのように決まりますか?
+
+A. モノやサービスなどの支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
+
+パートナーシップの存続期間について - CoderDojo Japan   
+[https://coderdojo.jp/docs/term-of-partnership](https://coderdojo.jp/docs/term-of-partnership)

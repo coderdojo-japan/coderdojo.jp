@@ -20,7 +20,7 @@ class Document
   end
 
   def url
-    "#{URL_PATH}/#{self.filename}"
+    "/#{URL_PATH}/#{self.filename}"
   end
 
   def exists?
@@ -30,6 +30,10 @@ class Document
 
   def title
     @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
+  end
+
+  def description
+    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
   end
 
   def content

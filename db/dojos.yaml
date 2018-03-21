@@ -337,13 +337,15 @@
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
-  name: 船橋＠凛童舎 (関東)
+  name: 船橋(関東)
   prefecture_id: 12
   logo: "/img/dojos/funabashi.jpg"
-  url: https://www.facebook.com/coderdojofunabashi/
+  url: http://funabashi.coderdojo.chiba.jp/
   description: 千葉県船橋市で毎月開催
   tags:
   - Scratch
+  - micro:bit
+  - LEGO Mindstorms
 - id: 83
   order: '122068'
   created_at: '2017-04-27'
@@ -1404,6 +1406,20 @@
   description: 福岡市早良区百道で毎月開催
   tags:
   - Scratch
+- id: 136
+  order: '401307'
+  created_at: '2018-03-19'
+  name: 香椎 (九州)
+  prefecture_id: 40
+  logo: "/img/dojos/kashii.png"
+  url: https://coderdojo-kashii.connpass.com/
+  description: 福岡市東区で毎月１回不定期に開催
+  tags:
+  - Viscuit
+  - Minecraft
+  - Scratch
+  - ScratchJr
+  - Ozobot
 - id: 54
   order: '402036'
   created_at: '2016-10-06'

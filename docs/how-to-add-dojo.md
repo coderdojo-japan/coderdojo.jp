@@ -56,7 +56,11 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
 
 ## 集計対象の追加
 
-- 集計対象は `db/dojo_event_services.yaml` で管理をしている為ここに追記をする
+現在CoderDojoでは開催日、及び参加人数などを集計しています。
+集計は手作業でなく、イベントページのAPIを利用し自動化して行っております。
+その為、新規Dojoを追加した場合こちらの集計対象にも追加をお願いしています
+
+- 集計対象は `db/dojo_event_services.yaml` で管理をしている為ここに追記をお願いします
 
 ```yaml
 - dojo_id: 131
@@ -73,7 +77,15 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
 | `group_id` | イベント管理ページのid | 
 | `url` | イベント管理ページのURL |
 
-- `group_id` についてはFacebookの場合 [lookup-id](https://lookup-id.com/#) で確認できる
+### `group_id` の各種イベントページサービスの取得方法
+
+- Facebook
+    - [lookup-id](https://lookup-id.com/#) で確認できます
+- connpass
+    - 個人アカウントでの登録の場合は取得出来ません
+        - [イベント例](https://connpass.com/event/80411/) , [API画面](https://connpass.com/api/v1/event/?event_id=80411)
+    - 組織アカウントでの場合は `Series` -> `id` で確認できます
+        - [イベント例](https://coderdojo-kashii.connpass.com/event/77590/) , [API画面](https://connpass.com/api/v1/event/?event_id=77590)
 
 ## 本番環境への反映方法
 
@@ -85,3 +97,4 @@ dojos.yaml の更新をGitHubにpushすると、次の手順で本番環境に�
 1. すべてのテストが成功すると、本番環境へのデプロイが始まります
 
 したがって、Pull Request の時点でCIがパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) へ反映されるようになります。
+

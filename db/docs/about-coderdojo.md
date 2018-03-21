@@ -40,6 +40,5 @@ CoderDojo Kashiwa と柏市教育委員会の連携について更に詳しく�
 <br>
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-代表理事　安川 要平<br>
-<i>yohei@coderdojo.jp</i>
+連絡先: info@coderdojo.jp
 </div>

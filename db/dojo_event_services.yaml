@@ -472,3 +472,7 @@
   name: facebook
   group_id: 209274086317393
   url: https://www.facebook.com/CoderDojoTottori/
+- dojo_id: 136
+  name: connpass
+  group_id: 5069
+  url: https://coderdojo-kashii.connpass.com/
