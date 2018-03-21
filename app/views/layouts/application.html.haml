@@ -14,22 +14,22 @@
     %meta{:content => "805184859580207", :property => "fb:app_id"}/
     %meta{:content => "#{full_title(yield(:title))}", :property => "og:title"}/
     %meta{:content => "#{full_url(yield(:url))}", :property => "og:url"}/
-    %meta{:content => "#{meta_description(yield(:meta_description))}", :name => "description"}/
-    %meta{:content => "#{meta_description(yield(:meta_description))}", :property => "og:description"}/
-    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "#{full_description(yield(:desc))}", :name => "description"}/
+    %meta{:content => "#{full_description(yield(:desc))}", :property => "og:description"}/
+    %meta{:content => "website",                           :property => "og:type"}/
     %meta{:content => "https://coderdojo.jp/og-image.png", :property => "og:image"}/
-    %meta{:content => "image/png", :property => "og:image:type"}/
+    %meta{:content => "image/png",       :property => "og:image:type"}/
     %meta{:content => "CoderDojo Japan", :property => "og:site_name"}/
-    %meta{:content => "summary", :name => "twitter:card"}/
+    %meta{:content => "summary",         :name => "twitter:card"}/
     %meta{:content => "@CoderDojoJapan", :name => "twitter:site"}/
-    %meta{:content => "#{full_title(yield(:title))}", :name => "twitter:title"}/
-    %meta{:content => "#{meta_description(yield(:meta_description))}", :name => "twitter:description"}/
+    %meta{:content => "#{full_title(yield(:title))}",      :name => "twitter:title"}/
+    %meta{:content => "#{full_description(yield(:desc))}", :name => "twitter:description"}/
     %meta{:content => "https://coderdojo.jp/og-image.png", :name => "twitter:image"}/
     %meta{:content => "#{full_url(yield(:url))}", :name => "twitter:url"}/
-    %link{:href => "/img/apple-icon-57x57.png", :rel => "apple-touch-icon", :sizes => "57x57"}/
-    %link{:href => "/img/apple-icon-60x60.png", :rel => "apple-touch-icon", :sizes => "60x60"}/
-    %link{:href => "/img/apple-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
-    %link{:href => "/img/apple-icon-76x76.png", :rel => "apple-touch-icon", :sizes => "76x76"}/
+    %link{:href => "/img/apple-icon-57x57.png",   :rel => "apple-touch-icon", :sizes => "57x57"}/
+    %link{:href => "/img/apple-icon-60x60.png",   :rel => "apple-touch-icon", :sizes => "60x60"}/
+    %link{:href => "/img/apple-icon-72x72.png",   :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "/img/apple-icon-76x76.png",   :rel => "apple-touch-icon", :sizes => "76x76"}/
     %link{:href => "/img/apple-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
     %link{:href => "/img/apple-icon-120x120.png", :rel => "apple-touch-icon", :sizes => "120x120"}/
     %link{:href => "/img/apple-icon-144x144.png", :rel => "apple-touch-icon", :sizes => "144x144"}/
@@ -41,9 +41,9 @@
     %link{:href => "/img/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}/
     %link{:href => "/manifest.json", :rel => "manifest"}/
     %link{:color => "#1373ce", :href => "/img/safari-pinned-tab.svg", :rel => "mask-icon"}/
-    %meta{:content => "#ffffff", :name => "msapplication-TileColor"}/
+    %meta{:content => "#ffffff",                  :name => "msapplication-TileColor"}/
     %meta{:content => "/img/ms-icon-144x144.png", :name => "msapplication-TileImage"}/
-    %meta{:content => "#ffffff", :name => "theme-color"}/
+    %meta{:content => "#ffffff",                  :name => "theme-color"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Fjalla+One", :rel => "stylesheet", :type => "text/css"}/
     / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     / WARNING: Respond.js doesn't work if you view the page via file://
