@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   get "/docs/code_of_conduct", to: redirect('/docs/code-of-conduct')
   resources :docs, only: [:index, :show]
 
+  resources :spaces, only: %(index)
+
   # Static Pages
   root "static_pages#home"
   get "/stats",  to: 'static_pages#stats'
-  get "/spaces", to: 'static_pages#spaces'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')

@@ -38,11 +38,6 @@ class StaticPagesController < ApplicationController
     @annual_participants_chart = HighChartsBuilder.build_annual_participants
   end
 
-  def spaces
-    @dojo_count        = Dojo.count
-    @regions_and_dojos = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
-  end
-
   def letsencrypt
     if params[:id] == ENV['LETSENCRYPT_REQUEST']
       render text: ENV['LETSENCRYPT_RESPONSE']
