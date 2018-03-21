@@ -2,7 +2,7 @@ class StatsController < ApplicationController
   def show
     @url                 = request.url
     @dojo_count          = Dojo.count
-    @regions_and_dojos   = Dojo.eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
+    @regions_and_dojos   = Dojo.group_by_region
 
     # TODO: 次の静的なDojoの開催数もデータベース上で集計できるようにする
     # https://github.com/coderdojo-japan/coderdojo.jp/issues/190
