@@ -32,6 +32,10 @@ class Document
     @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
   end
 
+  def description
+    @description ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
+  end
+
   def content
     @content ||= exists? ? File.read(path) : ''
   end
