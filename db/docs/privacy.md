@@ -51,6 +51,6 @@
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
+連絡先: info@coderdojo.jp<br>
 最終更新日: 2017/10/09
 </div>

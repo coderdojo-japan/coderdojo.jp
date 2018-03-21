@@ -45,9 +45,7 @@ CoderDojo Japan としては、**いつパートナーシップ関係が成立/�
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
-yohei@coderdojo.jp<br>
-https://coderdojo.jp/
+連絡先: info@coderdojo.jp
 </div>
 
 

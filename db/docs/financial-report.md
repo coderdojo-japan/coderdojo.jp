@@ -1,9 +1,7 @@
 # 一般社団法人 CoderDojo Japan <br>決算報告書
 <br>
 
-一般社団法人 CoderDojo Japan の各期の決算報告書を本ページにまとめております。
-
-CoderDojo コミュニティに参画・提携・支援する際などにご参考にして頂ければ幸いです。
+一般社団法人 CoderDojo Japan の各期の決算報告書を本ページにまとめております。CoderDojo コミュニティに参画・提携・支援する際などにご参考にして頂ければ幸いです。
 
 ## 決算報告書
 
@@ -19,6 +17,5 @@ CoderDojo コミュニティに参画・提携・支援する際などにご参�
 <br>
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-代表理事　安川 要平<br>
-<i>yohei@coderdojo.jp</i>
+連絡先: info@coderdojo.jp
 </div>
