@@ -1,12 +1,5 @@
 # 理事の募集について
-
-<div align="right">
-一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
-</div>
-
-## はじめに
-
+<br>
 一般社団法人 CoderDojo Japan では次の事業を行なっておりますが、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、これらの事業に理事として参加していただける方を募集します。
 
 - (1) 日本国内の「CoderDojo」の設立及び運営の支援
@@ -45,6 +38,11 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 
 活動に参加する上で、必ずしも理事となる必要はありませんが、理事として責任を持って日本全国および世界中の CoderDojo の活動を支えていきたいという場合は、ぜひご応募していただけると幸いです。
 
+<div align="right">
+一般社団法人 CoderDojo Japan<br>
+代表理事 安川要平<br>
+</div>
+
 
 ## 応募・参加について
 
@@ -71,4 +69,3 @@ src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfulls
 </div>
 
 <br>
-
