@@ -48,6 +48,10 @@ group :development do
   gem 'web-console'
   gem 'spring'
   gem 'listen'
+  gem 'rack-mini-profiler', require: false
+  gem 'flamegraph', require: false
+  gem 'stackprof', require: false
+  gem 'memory_profiler', require: false
 end
 
 group :development, :test do
