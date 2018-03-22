@@ -1,4 +1,4 @@
-module Statistics
+module Upcoming
   module Tasks
     class Facebook
       def self.delete_event_histories(period)

@@ -2,7 +2,7 @@ module Upcoming
   module Tasks
     class Connpass
       def self.delete_event_histories(period)
-        EventHistory.for(:connpass).within(period).delete_all
+        UpcomingEvent.for(:connpass).within(period).delete_all
       end
 
       def initialize(dojos, date, weekly)

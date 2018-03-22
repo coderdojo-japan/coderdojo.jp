@@ -1,8 +1,8 @@
-module Statistics
+module Upcoming
   module Tasks
     class Doorkeeper
       def self.delete_event_histories(period)
-        EventHistory.for(:doorkeeper).within(period).delete_all
+        UpcomingEvent.for(:doorkeeper).within(period).delete_all
       end
 
       def initialize(dojos, date, weekly)
@@ -17,14 +17,10 @@ module Statistics
             @client.fetch_events(@params.merge(group_id: dojo_event_service.group_id)).each do |e|
               next unless e['group'].to_s == dojo_event_service.group_id
 
-              EventHistory.create!(dojo_id: dojo.id,
-                                   dojo_name: dojo.name,
-                                   service_name: dojo_event_service.name,
-                                   service_group_id: dojo_event_service.group_id,
+              UpcomingEvent.create!(dojo_event_service_id: e['id'],
                                    event_id: e['id'],
                                    event_url: e['public_url'],
-                                   participants: e['participants'],
-                                   evented_at: Time.zone.parse(e['starts_at']))
+                                   event_at: Time.zone.parse(e['starts_at']))
             end
           end
         end
