@@ -1,5 +1,5 @@
 #top.title.text-center
-  = render partial: 'shared/home_narbar'
+  = render partial: 'shared/home_navbar'
   %br%br%br
   %i.cd.cd-logo
   %h1 CoderDojo Japan
@@ -75,105 +75,111 @@
   </ol>
   </section>
 
-%section#events.detail-introduction.text-center
-%section#dojos.dojos.text-center.grayscale-bg
-  %br
-  %h2 全国の道場
-  %br
-  = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
-%section.text-center
-  %br
-  %h2.text-center
-    %a{:href => "https://twitter.com/search?q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20OR%20%22Coder%20Dojo%22%20OR%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E9%81%93%E5%A0%B4%20lang%3Aja"} 最近の話題
-  %br
-  %a.twitter-timeline{"data-chrome" => "noheader nofooter noborders", "data-dnt" => "true", "data-partner" => "tweetdeck", "data-tweet-limit" => "5", "data-widget-id" => "838640822396465153", :href => "https://twitter.com/search?q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20OR%20%22Coder%20Dojo%22%20lang%3Aja"} CoderDojoに関するつぶやき
-  :javascript
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-.text-center.grayscale-bg
-  %section.detail-introduction.list
+#dojos
+  %section#events.detail-introduction.text-center
+  %section#dojos.dojos.text-center.grayscale-bg
     %br
-    %h2 もっと詳しく知りたい
+    %h2 全国の道場
     %br
-    %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
-    %ul
-      %li
-        %a{:href => "/kata"} CoderDojo Kata (Wiki)
-      %li
-        %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} CoderDojo Japan (Facebook)
-      %li
-        %a{:href => "https://coderdojo.com/"} CoderDojo (英語)
+    = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
+#upcoming_topic
+  %section.text-center
     %br
-    %p 本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。
-    %p
-      「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には
-      %a{:href => "/kata"} CoderDojo Kata
-      を参照してみてください。
-    = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', class: 'cursor-pointer', style: 'margin-bottom: 15px;'), '/kata'
-%section#partners.detail-introduction.partners_logo.text-center
-  %br
-  %h2 パートナー
-  :javascript
-    $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-    })
-  %ul
-    %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), 'https://case-shinjuku.com/'
-    %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'http://www.osscafe.net/'
-    %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
-    %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発およびサーバー代の支援'), 'https://yasslab.jp/'
-    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: -10px; margin-bottom: 140px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://jr.mitou.org/'
-    %li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: -10px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
-    %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'メール・Newsサーバー代の支援'), 'https://ht79.info/'
-    %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
-    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
-    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -50px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
-
-#news.text-center.grayscale-bg
-  %section.detail-introduction
+    %h2.text-center
+      %a{:href => "https://twitter.com/search?q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20OR%20%22Coder%20Dojo%22%20OR%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E9%81%93%E5%A0%B4%20lang%3Aja"} 最近の話題
     %br
-    %h2 ニュースレター購読
-    %br
-    %p
-      = render partial: 'shared/newsletter'
-  
-.text-center
-  %section.detail-introduction
-    %br
-    %h2 お問い合わせ
-    %br
-    %p
-      取材や支援などのお問い合わせについては下記からご連絡ください 📨
-      %br
-      メールの場合は
-      %i info@coderdojo.jp
-      \ までお問い合わせください。
-    / Contact Form via Wufoo
-    #contact
-    #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
-      %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
-      \.
-    #wuf-adv{:style => "font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"}
-      HTML Forms powered by
-      = succeed "." do
-        %a{:href => "https://www.wufoo.com"} Wufoo
+    %a.twitter-timeline{"data-chrome" => "noheader nofooter noborders", "data-dnt" => "true", "data-partner" => "tweetdeck", "data-tweet-limit" => "5", "data-widget-id" => "838640822396465153", :href => "https://twitter.com/search?q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20OR%20%22Coder%20Dojo%22%20lang%3Aja"} CoderDojoに関するつぶやき
     :javascript
-      var qkjthoy0qpuvg9;(function(d, t) {
-      var s = d.createElement(t), options = {
-        'userName':'yasslab',
-        'formHash':'qkjthoy0qpuvg9',
-        'autoResize':true,
-        'height':'497',
-        'async':true,
-        'host':'wufoo.com',
-        'header':'show',
-        'ssl':true
-      };
-      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-        try {
-          qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
-        } catch (e) {}
-      };
-      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-      })(document, 'script');
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+#detail
+  .text-center.grayscale-bg
+    %section.detail-introduction.list
+      %br
+      %h2 もっと詳しく知りたい
+      %br
+      %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
+      %ul
+        %li
+          %a{:href => "/kata"} CoderDojo Kata (Wiki)
+        %li
+          %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} CoderDojo Japan (Facebook)
+        %li
+          %a{:href => "https://coderdojo.com/"} CoderDojo (英語)
+      %br
+      %p 本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。
+      %p
+        「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には
+        %a{:href => "/kata"} CoderDojo Kata
+        を参照してみてください。
+      = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', class: 'cursor-pointer', style: 'margin-bottom: 15px;'), '/kata'
+#partner
+  %section#partners.detail-introduction.partners_logo.text-center
+    %br
+    %h2 パートナー
+    :javascript
+      $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+      })
+    %ul
+      %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), 'https://case-shinjuku.com/'
+      %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'http://www.osscafe.net/'
+      %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
+      %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発およびサーバー代の支援'), 'https://yasslab.jp/'
+      %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: -10px; margin-bottom: 140px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://jr.mitou.org/'
+      %li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: -10px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
+      %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'メール・Newsサーバー代の支援'), 'https://ht79.info/'
+      %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
+      %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
+      %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -50px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
+
+#newsletter
+  #news.text-center.grayscale-bg
+    %section.detail-introduction
+      %br
+      %h2 ニュースレター購読
+      %br
+      %p
+        = render partial: 'shared/newsletter'
+
+#inquiry
+  .text-center
+    %section.detail-introduction
+      %br
+      %h2 お問い合わせ
+      %br
+      %p
+        取材や支援などのお問い合わせについては下記からご連絡ください 📨
+        %br
+        メールの場合は
+        %i info@coderdojo.jp
+        \ までお問い合わせください。
+      / Contact Form via Wufoo
+      #contact
+      #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
+        %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
+        \.
+      #wuf-adv{:style => "font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"}
+        HTML Forms powered by
+        = succeed "." do
+          %a{:href => "https://www.wufoo.com"} Wufoo
+      :javascript
+        var qkjthoy0qpuvg9;(function(d, t) {
+        var s = d.createElement(t), options = {
+          'userName':'yasslab',
+          'formHash':'qkjthoy0qpuvg9',
+          'autoResize':true,
+          'height':'497',
+          'async':true,
+          'host':'wufoo.com',
+          'header':'show',
+          'ssl':true
+        };
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+          try {
+            qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');
