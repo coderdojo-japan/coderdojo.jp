@@ -108,11 +108,11 @@ module Upcoming
     class Notifier
       class << self
         def notify_success(from, to)
-          notify("#{from}~#{to}のイベント履歴の集計を行いました")
+          notify("#{from}~#{to}のイベント登録を行いました")
         end
 
         def notify_failure(from, to, exception)
-          notify("#{from}~#{to}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+          notify("#{from}~#{to}のイベント登録でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
