@@ -1,11 +1,27 @@
-%nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
-  .container-fluid
+:css
+  .navbar-custom.is-fixed .nav li a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+  }
+
+  .navbar-custom .nav li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+%nav.navbar.navbar-default.navbar-custom.navbar-fixed-top.off-canvas-nav-dark.off-canvas-nav{:style => "background-color: #2977c7;"}
+  .container-fluid{:class => "responsive-nav-contents"}
     .navbar-header.page-scroll
       %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
         目次
         %i.fa.fa-bars
-      %a.navbar-brand{:href => "#top"} CoderDojoJapan
+      %a.navbar-brand{:href => "#top" , :style => "color: #ffffff;"} CoderDojoJapan
       / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
