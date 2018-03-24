@@ -10,4 +10,15 @@ class EventHistory < ApplicationRecord
 
   scope :for, ->(service) { where(service_name: service) }
   scope :within, ->(period) { where(evented_at: period) }
+
+  class << self
+    def annual_count(period)
+      Hash[
+        where(evented_at: period)
+          .group('year')
+          .order('year ASC')
+          .pluck("to_char(evented_at, 'yyyy') AS year, COUNT(id)")
+      ]
+    end
+  end
 end
