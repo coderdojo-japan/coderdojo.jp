@@ -20,5 +20,14 @@ class EventHistory < ApplicationRecord
           .pluck("to_char(evented_at, 'yyyy') AS year, COUNT(id)")
       ]
     end
+
+    def annual_sum_of_participants(period)
+      Hash[
+        where(evented_at: period)
+          .group('year')
+          .order('year ASC')
+          .pluck("to_char(evented_at, 'yyyy') AS year, SUM(participants)")
+      ]
+    end
   end
 end
