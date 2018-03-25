@@ -12,6 +12,7 @@
     %br
     %h3 推移グラフ  
     %div{align: 'center'}
+      = high_chart_globals(@high_charts_globals)
       = high_chart("annual_dojos",           @annual_dojos_chart)
       = high_chart("annual_event_histories", @annual_event_histories_chart)
       = high_chart("annual_participants",    @annual_participants_chart)
