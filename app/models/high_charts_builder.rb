@@ -56,7 +56,7 @@ class HighChartsBuilder
     def annual_chart_data_from(source)
       years = source.map(&:first)
       increase_nums = source.map(&:last)
-      cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].inject(:+) }
+      cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].sum }
 
       {
         years: years,
