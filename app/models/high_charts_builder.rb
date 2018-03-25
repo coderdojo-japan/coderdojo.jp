@@ -1,7 +1,6 @@
 class HighChartsBuilder
   class << self
-    def build_annual_dojos
-      source = Dojo.where('created_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', created_at)").count
+    def build_annual_dojos(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
@@ -18,8 +17,7 @@ class HighChartsBuilder
       end
     end
 
-    def build_annual_event_histories
-      source = EventHistory.where('evented_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', evented_at)").count
+    def build_annual_event_histories(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
@@ -36,8 +34,7 @@ class HighChartsBuilder
       end
     end
 
-    def build_annual_participants
-      source = EventHistory.where('evented_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', evented_at)").sum(:participants)
+    def build_annual_participants(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
@@ -57,9 +54,8 @@ class HighChartsBuilder
     private
 
     def annual_chart_data_from(source)
-      sorted_list = source.each.with_object({}) {|(k, v), h| h[k.year] = v }.sort
-      years = sorted_list.map(&:first)
-      increase_nums = sorted_list.map(&:last)
+      years = source.map(&:first)
+      increase_nums = source.map(&:last)
       cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].inject(:+) }
 
       {

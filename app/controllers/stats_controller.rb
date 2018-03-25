@@ -17,8 +17,8 @@ class StatsController < ApplicationController
     @events = stat.annual_count_of_event_histories
     @participants = stat.annual_sum_of_participants
 
-    @annual_dojos_chart = HighChartsBuilder.build_annual_dojos
-    @annual_event_histories_chart = HighChartsBuilder.build_annual_event_histories
-    @annual_participants_chart = HighChartsBuilder.build_annual_participants
+    @annual_dojos_chart = stat.annual_dojos_chart
+    @annual_event_histories_chart = stat.annual_event_histories_chart
+    @annual_participants_chart = stat.annual_participants_chart
   end
 end
