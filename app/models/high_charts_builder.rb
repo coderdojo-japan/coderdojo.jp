@@ -1,5 +1,11 @@
 class HighChartsBuilder
   class << self
+    def global_options
+      LazyHighCharts::HighChartGlobals.new do |f|
+        f.lang(thousandsSep: ',')
+      end
+    end
+
     def build_annual_dojos(source)
       data = annual_chart_data_from(source)
 
