@@ -44,6 +44,15 @@ class Dojo < ApplicationRecord
           .pluck("to_char(dojos.created_at, 'yyyy') AS year, COUNT(DISTINCT dojos.id)")
       ]
     end
+
+    def annual_count(period)
+      Hash[
+        where(created_at: period)
+          .group('year')
+          .order('year ASC')
+          .pluck("to_char(created_at, 'yyyy') AS year, COUNT(id)")
+      ]
+    end
   end
 
   private
