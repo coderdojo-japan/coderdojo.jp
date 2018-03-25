@@ -34,11 +34,8 @@ module Statistics
 
       def build_params(date, weekly)
         if weekly
-          week_days = loop.with_object([date]) { |_, list|
-            nd = list.last.next_day
-            raise StopIteration if nd > date.end_of_week
-            list << nd
-          }.map { |date| date.strftime('%Y%m%d') }
+          week_days = DateTimeUtil.every_day_array(date, date.end_of_week)
+                                  .map { |date| date.strftime('%Y%m%d') }
 
           {
             yyyymmdd: week_days.join(',')
