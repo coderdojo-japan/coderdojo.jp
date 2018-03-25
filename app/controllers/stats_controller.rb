@@ -11,25 +11,14 @@ class StatsController < ApplicationController
     @sum_of_participants = EventHistory.sum(:participants)
 
     # 2012年1月1日〜2017年12月31日までの集計結果
-    @dojos, @events, @participants = {}, {}, {}
-    @range = 2012..2017
-    @range.each do |year|
-      @dojos[year] =
-        Dojo
-          .distinct
-          .joins(:dojo_event_services)
-          .where(created_at: Time.zone.local(@range.first).beginning_of_year..Time.zone.local(year).end_of_year)
-          .count
-      @events[year] =
-        EventHistory.where(evented_at:
-                     Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).count
-      @participants[year] =
-        EventHistory.where(evented_at:
-                     Time.zone.local(year).beginning_of_year..Time.zone.local(year).end_of_year).sum(:participants)
-    end
+    period = Time.zone.local(2012).beginning_of_year..Time.zone.local(2017).end_of_year
+    stat = Stat.new(period)
+    @dojos = stat.annual_sum_total_of_aggregatable_dojo
+    @events = stat.annual_count_of_event_histories
+    @participants = stat.annual_sum_of_participants
 
-    @annual_dojos_chart = HighChartsBuilder.build_annual_dojos
-    @annual_event_histories_chart = HighChartsBuilder.build_annual_event_histories
-    @annual_participants_chart = HighChartsBuilder.build_annual_participants
+    @annual_dojos_chart = stat.annual_dojos_chart
+    @annual_event_histories_chart = stat.annual_event_histories_chart
+    @annual_participants_chart = stat.annual_participants_chart
   end
 end

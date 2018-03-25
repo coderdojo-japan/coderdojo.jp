@@ -34,6 +34,25 @@ class Dojo < ApplicationRecord
     def group_by_region
       eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
     end
+
+    def aggregatable_annual_count(period)
+      Hash[
+        joins(:dojo_event_services)
+          .where(created_at: period)
+          .group('year')
+          .order('year ASC')
+          .pluck("to_char(dojos.created_at, 'yyyy') AS year, COUNT(DISTINCT dojos.id)")
+      ]
+    end
+
+    def annual_count(period)
+      Hash[
+        where(created_at: period)
+          .group('year')
+          .order('year ASC')
+          .pluck("to_char(created_at, 'yyyy') AS year, COUNT(id)")
+      ]
+    end
   end
 
   private
