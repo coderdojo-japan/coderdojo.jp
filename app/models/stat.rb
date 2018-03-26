@@ -48,10 +48,6 @@ class Stat
   end
 
   def years_from(period)
-    loop.with_object([period.first]) do |_, list|
-      ny = list.last.next_year
-      raise StopIteration if ny > period.last
-      list << ny
-    end
+    DateTimeUtil.every_year_array(period.first, period.last)
   end
 end
