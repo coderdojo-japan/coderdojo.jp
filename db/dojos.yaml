@@ -664,6 +664,20 @@
   - Scratch
   - Minecraft
   - Hour of Code
+- id: 138
+  order: '142042'
+  created_at: '2018-03-25'
+  name: 鎌倉 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://zen.coderdojo.com/dojos/jp/kamakura-kanagawa-prefecture/kamakura
+  description: 神奈川県鎌倉市で不定期開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
+  - Python
+  - Machine Learning
 - id: 26
   order: '142051'
   created_at: '2016-12-14'
