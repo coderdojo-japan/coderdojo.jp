@@ -480,3 +480,7 @@
 #  name: connpass
 #  group_id: 
 #  url: https://coderdojo-hodogaya.connpass.com/
+#- dojo_id: 140
+#  name: connpass
+#  group_id: # TODO
+#  url: https://coderdojo-atsugi.connpass.com/

@@ -710,6 +710,16 @@
   description: 神奈川県海老名市で不定期開催
   tags:
   - Scratch
+- id: 140
+  order: '142123'
+  created_at: '2018-03-29'
+  name: 厚木 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-atsugi.connpass.com/
+  description: 神奈川県厚木市で不定期開催
+  tags:
+  - Scratch
 - id: 5
   order: '151009'
   created_at: '2015-09-16'
