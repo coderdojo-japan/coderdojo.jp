@@ -16,6 +16,10 @@ deploy:
       - "bundle exec rails dojo_event_services:upsert"
 cache:
   - bundler
+# TODO:before_installは次のissueが解決したら削除
+# cf. https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
+before_install:
+  - gem install bundler
 before_script:
   - psql -c 'create database coderdojo_jp_test;' -U postgres
 script:
