@@ -8,35 +8,41 @@ CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場�
 
 CoderDojo の特徴は、オープンソースソフトウェアの文化に根付いた非営利のコミュニティである点です。例えば PHP や Perl, Python, Ruby といったそれぞれのコミュニティが横断的に関わっており、中にはOSSの第一線で活躍される方々にもご協力していただいております。現在はさらに、エンジニアやデザイナーだけでなく、各地域の保護者や学生、研究者や経営者などにも広がりを見せています。
 
-CoderDojo には統一されたカリキュラムがありません。代わりに子どもの作りたいものの後押しをします。例えばアドバイスを求められたときにメンターが相談に乗ったり、子ども同士で作った作品を見せ合ったりなど、自発的に学んだり学び合うスタイルを推奨しています。これは受動的に何かを教わることよりも、作りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo では、子ども達が自身の興味・関心を追究する「広場」のような場所となっています。
+CoderDojo には統一されたカリキュラムがありません。代わりに、子どもの作りたいモノの後押しをします。例えばアドバイスを求められたときにメンターが相談に乗ったり、子ども同士で作った作品を見せ合ったりなど、自発的に学んだり参加者同士で学び合うスタイルを推奨しています。これは受動的に何かを教わることよりも、作りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する「広場」のような場所となっています。
 
 <img src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
 <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 
 ## パートナーシップのご提案
 
-現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子どもたちも表出してきています。もし貴社が上記のようなコミュニティ活動を支援することで得られるものがあれば、CoderDojo コミュニティと継続的に協力しあえる関係が築けるかもしれません。
+現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子どもたちも表出してきています。もし貴社が CoderDojo のコミュニティ活動を支援することで得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
 
 弊社団がイメージしている支援・提携の内容は、次のとおりです。
 
-- A. 継続的に活動をするため、CoderDojo Japan への<b>定期的なご支援</b>をお願いしています
-- B. CoderDojo Japan のパートナーとして、弊団体のウェブサイトで御社ロゴを掲載します
-- C. CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
+- `A:` 継続的に活動をするため、CoderDojo Japan への<b>定期的なご支援</b>をお願いしています
+  - 例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan を
+さくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
+- `B:` CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
     [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
   - 例2: CoderDojo Japan の Podcast に CASE Shinjuku と出演
     [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/)
+- `C:` CoderDojo Japan のパートナーとして、弊団体のウェブサイトで御社ロゴを掲載します
 
 <img src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
 <center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
 <br>
-上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。例: [https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
+
+
+上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。
 
 本パートナーシップにご興味ありましたら、下記の連絡先までお気軽にご連絡ください。
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-連絡先: info@coderdojo.jp
+代表理事 安川 要平<br>
+info@coderdojo.jp
+
 </div>
 
 ## よくある質問と回答
@@ -62,7 +68,7 @@ A. CoderDojo コミュニティから望まれている内容で、かつ、全�
 
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
 
-A. CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で投稿することが可能です。(上記の C. に該当)
+A. CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で投稿することが可能です。(上記の `B` に該当)
 
 CoderDojo Japan Champions - Facebook Group (非公開)
 [https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
