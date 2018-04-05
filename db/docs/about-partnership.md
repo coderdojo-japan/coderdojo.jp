@@ -23,7 +23,7 @@ CoderDojo には統一されたカリキュラムがありません。代わり�
 - B. CoderDojo Japan のパートナーとして、弊団体のウェブサイトで御社ロゴを掲載します
 - C. CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
-    [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか？](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
+    [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
   - 例2: CoderDojo Japan の Podcast に CASE Shinjuku と出演
     [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/)
 
