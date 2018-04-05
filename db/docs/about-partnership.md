@@ -53,13 +53,13 @@ info@coderdojo.jp
 ## よくある質問と回答
 
 ### Q. 道場数の推移や開催回数の推移などの統計情報はありますか?
-A. はい、あります。CoderDojo Japan が把握している統計情報のデータについては下記ページから公開しております。ご参考になれば幸いです。
+A. はい、あります。下記ページより CoderDojo Japan が把握している統計情報を公開しています。ご参考になれば幸いです。
 
 統計情報 - CoderDojo Japan
 [https://coderdojo.jp/stats](https://coderdojo.jp/stats)
 
 ### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか?
-A. はい、一般社団法人 CoderDojo Japan の決算書も下記から公開しています。こちらもご参考になれば ;)
+A. はい、一般社団法人 CoderDojo Japan の決算書も公開しています。こちらもご参考になれば ;)
 
 決算報告書 - CoderDojo Japan
 [https://coderdojo.jp/docs/financial-report](https://coderdojo.jp/docs/financial-report)
