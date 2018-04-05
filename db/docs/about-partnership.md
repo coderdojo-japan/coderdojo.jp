@@ -18,7 +18,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに、子�
 現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子どもたちも表出してきています。
 
 <a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
-<center>図: CoderDojo の参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
+<center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
 
 もし貴社が CoderDojo のコミュニティ活動を支援することで得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
 
@@ -38,9 +38,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに、子�
 <br>
 
 
-上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。
-
-本パートナーシップにご興味ありましたら、下記の連絡先までお気軽にご連絡ください。
+上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。本パートナーシップにご興味ありましたら、下記の連絡先までお気軽にご連絡ください。
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
@@ -72,7 +70,7 @@ A. CoderDojo コミュニティから望まれている内容で、かつ、全�
 
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
 
-A. CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で投稿することが可能です。(上記の `B` に該当)
+A. CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で投稿することが可能です。(上記 `B` に該当)
 
 CoderDojo Japan Champions - Facebook Group (非公開)
 [https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
