@@ -25,8 +25,7 @@ CoderDojo には統一されたカリキュラムがありません。代わり�
 弊社団がイメージしている支援・提携の内容は、次のとおりです。
 
 - `A:` 継続的に活動をするため、CoderDojo Japan への<b>定期的なご支援</b>をお願いしています
-  - 例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan を
-さくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
+  - 例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
 - `B:` CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
     [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
