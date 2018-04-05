@@ -57,14 +57,15 @@ A. はい、一般社団法人 CoderDojo Japan の決算書も下記から公開
 
 A. CoderDojo コミュニティから望まれている内容で、かつ、全国の CoderDojo に対して一律にご提供できる場合に、物資・サービスによるパートナーシップを検討させていただいております。
 
-例: さくらインターネットが「さくらのクラウド」を無料提供 [https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
+例: さくらインターネットが「さくらのクラウド」を無料提供
+[https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
 
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
 
 A. CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で投稿することが可能です。(上記の C. に該当)
 
 CoderDojo Japan Champions - Facebook Group (非公開)
-[https://www.facebook.com/groups/coderdojo.jp.champions/](https://www.facebook.com/groups/coderdojo.jp.champions/)
+[https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
 
 ### Q. パートナーシップの期間はどのように決まりますか?
 
