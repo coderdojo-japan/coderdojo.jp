@@ -41,6 +41,18 @@ CoderDojo の特徴は、オープンソースソフトウェアの文化に根�
 
 ## よくある質問と回答
 
+### Q. 開催回数や参加者数、道場数の推移などの統計情報はありますか?
+A. はい、あります。CoderDojo Japan が把握している統計情報のデータについては下記ページから公開しております。ご参考になれば幸いです。
+
+統計情報 - CoderDojo Japan
+[https://coderdojo.jp/stats](https://coderdojo.jp/stats)
+
+### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか?
+A. はい、一般社団法人 CoderDojo Japan の決算書も下記から公開しています。こちらもご参考になれば ;)
+
+決算報告書 - CoderDojo Japan
+[https://coderdojo.jp/docs/financial-report](https://coderdojo.jp/docs/financial-report)
+
 ### Q. 物資/サービスによる支援を検討しています。条件はありますか?
 
 A. CoderDojo コミュニティから望まれている内容で、かつ、全国の CoderDojo に対して一律にご提供できる場合に、物資・サービスによるパートナーシップを検討させていただいております。
