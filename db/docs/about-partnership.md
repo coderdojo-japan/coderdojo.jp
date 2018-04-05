@@ -15,7 +15,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに、子�
 
 ## パートナーシップのご提案
 
-現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子どもたちも表出してきています。
+現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
 
 <a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
 <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
@@ -29,16 +29,18 @@ CoderDojo には統一されたカリキュラムがなく、代わりに、子�
 - `B:` CoderDojo Japan のパートナーとして、CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
     [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
-  - 例2: CoderDojo Japan の Podcast に CASE Shinjuku と出演
+  - 例2: CoderDojo Japan の Podcast で CASE Shinjuku と出演
     [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/)
-- `C:` CoderDojo Japan のパートナーとして、弊団体のウェブサイトで御社ロゴを掲載します
+- `C:` CoderDojo Japan のパートナーとして、公式Webサイトに御社ロゴを掲載します
 
 <img src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
 <center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
 <br>
 
 
-上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。本パートナーシップにご興味ありましたら、下記の連絡先までお気軽にご連絡ください。
+上記は提携案の１つです。資金的な支援に限らず、物資またはサービスによる定期的な支援を検討することも可能です。
+
+いかがでしょうか? もし本パートナーシップにご興味ありましたら、お気軽にご連絡していただけると嬉しいです。
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
