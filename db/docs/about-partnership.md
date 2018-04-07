@@ -13,19 +13,23 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 <img src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
 <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 
-## パートナーシップのご提案
+## 提携のご提案と具体例
 
-現在は全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
+全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
 
 <a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
 <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
+
+<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
+<center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">詳細</a>)</center><br>
 
 もし貴社が CoderDojo コミュニティを支援することで何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
 
 CoderDojo Japan が描いているパートナーシップの内容とその具体例は次のとおりです。
 
-- `A:` CoderDojo Japan への単発の支援ではなく、<b>定期的なご支援</b>をお願いしています
-  - 定期的な支援が始まった時点からパートナーとしてご紹介し、支援が終わった時点からパートナー関係を解消しています
+- `A:` CoderDojo Japan への単発の支援ではなく、<b>定期的なご支援</b>であると嬉しいです
+  - 定期的な支援が始まった時点からパートナーとしてご紹介し、支援が終わった時点でパートナー関係を解消としております
+  - 資金的なご支援の場合、月額３万円または年額３０万円からお願いしております
   - 例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
 - `B:` CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知・投稿 (パートナー: 未踏社団)
