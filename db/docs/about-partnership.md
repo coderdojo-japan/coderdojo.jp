@@ -21,9 +21,9 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
 
 <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
-<center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">詳細</a>)</center><br>
+<center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">引用元</a>)</center><br>
 
-もし貴社が CoderDojo コミュニティを支援することで何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
+もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
 
 CoderDojo Japan が描いているパートナーシップの内容とその具体例は次のとおりです。
 
@@ -84,7 +84,7 @@ CoderDojo Japan Champions - Facebook Group (非公開)
 
 ### Q. パートナーシップの期間はどのように決まりますか?
 
-A. モノやサービスなどの支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
+A. 資金や物資、サービスなどによる支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
 
 パートナーシップの存続期間について - CoderDojo Japan   
 [https://coderdojo.jp/docs/term-of-partnership](https://coderdojo.jp/docs/term-of-partnership)
