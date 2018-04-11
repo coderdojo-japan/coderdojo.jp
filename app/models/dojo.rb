@@ -1,12 +1,12 @@
 class Dojo < ApplicationRecord
   NUM_OF_COUNTRIES    = "85"
   NUM_OF_WHOLE_DOJOS  = "1,600"
-  NUM_OF_JAPAN_DOJOS = Dojo.count.to_s
-  YAML_FILE = Rails.root.join('db', 'dojos.yaml')
+  NUM_OF_JAPAN_DOJOS  = Dojo.count.to_s
+  YAML_FILE           = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
-  has_many :dojo_event_services, dependent: :destroy
-  has_many :event_histories,     dependent: :destroy
+  has_many   :dojo_event_services, dependent: :destroy
+  has_many   :event_histories,     dependent: :destroy
 
   serialize :tags
   before_save { self.email = self.email.downcase }

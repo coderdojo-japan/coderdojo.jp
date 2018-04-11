@@ -30,7 +30,7 @@ class HighChartsBuilder
         f.title(text: '開催回数の推移')
         f.xAxis(categories: data[:years])
         f.series(type: 'column', name: '開催回数', yAxis: 0, data: data[:increase_nums])
-        f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
+        f.series(type: 'line',   name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
           { title: { text: '開催回数' } },
           { title: { text: '累積合計' }, opposite: true }
@@ -47,7 +47,7 @@ class HighChartsBuilder
         f.title(text: '参加者数の推移')
         f.xAxis(categories: data[:years])
         f.series(type: 'column', name: '参加者数', yAxis: 0, data: data[:increase_nums])
-        f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
+        f.series(type: 'line',   name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
           { title: { text: '参加者数' } },
           { title: { text: '累積合計' }, opposite: true }
@@ -60,8 +60,8 @@ class HighChartsBuilder
     private
 
     def annual_chart_data_from(source)
-      years = source.map(&:first)
-      increase_nums = source.map(&:last)
+      years           = source.map(&:first)
+      increase_nums   = source.map(&:last)
       cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].sum }
 
       {
