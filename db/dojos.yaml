@@ -1370,16 +1370,6 @@
   - Scratch
   - Webサイト
   - PHP
-- id: 141
-  order: '342025'
-  created_at: '2018-04-11'
-  name: 呉 (広島)
-  prefecture_id: 34
-  logo: "/img/dojos/kure.jpg"
-  url: https://www.facebook.com/CoderDojoKURE/
-  description: 広島県呉市で毎月開催
-  tags:
-  - Webサイト
 - id: 53
   order: '341002'
   created_at: '2016-09-29'
@@ -1392,6 +1382,17 @@
   - Scratch
   - enchant.js
   - Unity
+- id: 141
+  order: '342025'
+  created_at: '2018-04-11'
+  name: 呉 (広島)
+  prefecture_id: 34
+  logo: "/img/dojos/kure.jpg"
+  url: https://www.facebook.com/CoderDojoKURE/
+  description: 広島県呉市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 51
   order: '342076'
   created_at: '2016-06-01'
