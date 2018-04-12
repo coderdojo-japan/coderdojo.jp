@@ -1376,8 +1376,8 @@
   name: 呉 (広島)
   prefecture_id: 34
   logo: "/img/dojos/kure.jpg"
-  url: https://www.facebook.com/CoderDojo%E5%91%89-206840799906741/
-  description: 呉市で毎月１回開催
+  url: https://www.facebook.com/CoderDojoKURE/
+  description: 広島県呉市で毎月開催
   tags:
   - Webサイト
 - id: 53
