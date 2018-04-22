@@ -1450,6 +1450,17 @@
   description: 徳島県三好市で毎月第二週に開催
   tags:
   - Minecraft
+- id: 144
+  order: '401005'
+  created_at: '2018-04-22'
+  name: 北九州 (九州)
+  prefecture_id: 40
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/coderdojokitakyushu/
+  description: 福岡県北九州市で１〜２ヶ月に１回開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 102
   order: '401307'
   created_at: '2017-09-18'
