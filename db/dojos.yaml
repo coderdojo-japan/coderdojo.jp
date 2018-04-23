@@ -940,6 +940,17 @@
   description: 愛知県岩倉市で毎月開催
   tags:
   - Scratch
+- id: 145
+  order: '232301'
+  created_at: '2018-04-22'
+  name: 日進 (中部)
+  prefecture_id: 23
+  logo: "/img/dojos/nisshin.png"
+  url: https://coderdojo-nisshin.connpass.com/
+  description: 愛知県日進市で毎月２回開催
+  tags:
+  - Scratch
+  - 電子工作
 - id: 33
   order: '234249'
   created_at: '2016-08-12'
