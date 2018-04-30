@@ -415,6 +415,7 @@ DEPENDENCIES
   rack-user_agent
   rails (= 5.1.4)
   rails-controller-testing
+  rails-html-sanitizer (~> 1.0)
   rake
   rspec-rails (~> 3.5)
   rspec-retry
