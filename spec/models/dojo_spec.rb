@@ -58,7 +58,7 @@ RSpec.describe Dojo, :type => :model do
 
   describe 'validate yaml format' do
     it 'should not raise Psych::SyntaxError' do
-      expect{ Dojo.load_attributes_from_yaml }.not_to raise_error(Psych::SyntaxError)
+      expect{ Dojo.load_attributes_from_yaml }.not_to raise_error
     end
 
     it 'should raise Psych::SyntaxError' do
