@@ -1,19 +1,19 @@
 language: ruby
 dependencies:
   cache_directories:
-    - 'public/assets'
-    - 'tmp/cache/assets'
+    - public/assets
+    - tmp/cache/assets
 deploy:
   provider: heroku
   api_key:
-    secure: ch+AytdMVQEE2Zn09zXCqkCMPGKRnUnuRDonT9W7IRTJIeI081b5MPH7B9XL6ukl0Rt7b+KJ/YuIFvm/uvt+nvoWaPuz6AeS/ppGQLeaZ4i3mPa/w33zJFs+3Oo9afDVAolrkJh3fdScjsOKxXFwt0mVSLLf3mrcbPxAF//xm4RdXjANbNKCUqZtpMNRzhGX6+ek8JjC3Z1043cjoPNUTLLVhXRk21za6eW2/dZ560ZB7CPPVrqgAGYur8CkHOr4RtWdy41B0bAJT6COVD0XgM4z+PCLzOXYQJRf8wGbV9vwi5GXSG4l2RnPSCvYMnWWUdAV3MgfIaW664qj8IZqOUjmolqHolKeg+8pI1OqYiDDSh/OtNQFkaPsX/TzU4EWbW74a/gYpLaoMaWf95bOytFFd0XZ9bF6ZZE5ZoggjSU48bFXq/mELjcM2RBe+YtgciQU3iv4C01nfQM1y8x/tKa2Tym8I5MP4psuEvy64DGEw4IKMaTMuZn6hJT3Si9FjL1+mg3OTO/CYxrSQM2EX5ai1n0iEhEOeG9H8EhKeBEjrNtGM0VaS684QClKgPawsyGdo6zk57sGVdo5UMi456NoyWVkMZlFtWUsrvnTOaLHfRhd+jSMEWqsdP5V+KbeRq60Pb1pSS3nV8dJtg+Sqtl+MC0yjbAi2h9BREmaPH4=
+    secure: kDHyp44GIPT9sGSQD3mOS+rrbSx2xHKYrQUXJ1cfZLpYgA8Dj1BrgZJy75wBaep4YTCdoAcddgKMNAVB6IRe5Re7QVprJWObYqUXzDL+YhoG0RfYXB412yHNvYYJC1hZCfwrfxhMLm8gHkFt9JkiBlxFfiei+2wta9b499oK1E/wdBe7cmTbcSnXRHKnHM6UwVD6LA83jB6/HdowfVYFVksx/e3JpFqJgLwYhF3UqDwXaBl7NNhl57mZUU7WDFqwxS6YZMGRjvmIOS1UrNZV8mliG3CZJ+FnJ8B3coUtnJoVgPJGyxMLHy1hyN0+NzJiG8RZ/lNjFlTHV5C2AlfZ/EgpNZew0f86EwZUf7YjkrtZmWJOhLFrjE23RLDawIJZB2tNN5Snn7wR+xOCNsQ/JDnw/cmvkuKmCKPvwRPLpwt51bm8pecH37cr95e5drbNWz05CPLHhzb4WKstpjGORvrUnj1VVKaVZFfpsqvj6ah/bDWjLk2XLm9G5fXuKrYUr471sVfW/Nlig/rfTfSdwEVnzkV/ejPPzHuoausnVMqfoU4qCNH4v6qaEqkJaQYOAQgZqviRoFoJzLAue3ZYSx+jPMBqSXjkb6zLKkS+sRNM9mLz65T29QxtkwxKMK1JHOBQq4Tr1NjBaSjIYsA52fW0hKmRH4uo7oQxrA4i8W4=
   app:
     master: coderdojo-japan
   run:
-      - "bundle exec rails db:migrate"
-      - "bundle exec rails db:seed"
-      - "bundle exec rails dojos:update_db_by_yaml"
-      - "bundle exec rails dojo_event_services:upsert"
+    - bundle exec rails db:migrate
+    - bundle exec rails db:seed
+    - bundle exec rails dojos:update_db_by_yaml
+    - bundle exec rails dojo_event_services:upsert
 cache:
   - bundler
 # TODO:before_installは次のissueが解決したら削除
@@ -31,4 +31,4 @@ env:
   global:
     - TZ='Asia/Tokyo'
 addons:
-  postgresql: "9.4"
+  postgresql: '9.4'
