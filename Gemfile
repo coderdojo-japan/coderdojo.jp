@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 gem 'rails', '5.1.4'
-
 gem 'pg'
+gem 'dumper'
 
 gem 'scrivito', '~> 1.13.0'
 gem 'scrivito_section_widgets'
