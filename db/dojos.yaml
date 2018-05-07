@@ -624,7 +624,7 @@
   name: 小平 (関東)
   prefecture_id: 13
   url: http://coderdojo-kodaira.github.io/
-  logo: "/img/dojos/kodaira.jpg"
+  logo: "/img/dojos/kodaira.png"
   description: 東京都小平市で隔週開催
   tags:
   - Scratch
