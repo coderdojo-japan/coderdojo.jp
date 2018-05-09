@@ -862,6 +862,19 @@
   description: 岐阜県海津市で毎月2回開催
   tags:
   - Scratch
+- id: 148
+  order: '221007'
+  created_at: '2016-02-25'
+  name: 静岡 (中部)
+  prefecture_id: 22
+  logo: "/img/dojos/shizuoka.png"
+  url: https://coderdojo-shizuoka.connpass.com/
+  description: 静岡県静岡市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
+  - ラズベリーパイ
 - id: 98
   order: '221309'
   created_at: '2016-02-25'
