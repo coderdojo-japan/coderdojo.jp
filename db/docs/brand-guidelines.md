@@ -4,7 +4,7 @@
 
 本ページでは CoderDojo の名称を書くときの注意点や、CoderDojo のロゴを利用する際の注意点についてまとめています。
 
-ロゴやチラシの画像データは [CoderDojo Materials](http://kata.coderdojo.com/wiki/Materials) からダウンロードできます。配色やフォントなどのスタイルガイドについては [CoderDojo Style Guide](http://dojo.soy/style) (英語) を参照してください。
+ロゴやチラシの画像データは [CoderDojo Materials](http://kata.coderdojo.com/wiki/Materials) からダウンロードできます。配色やフォントなどのスタイルガイドについては [CoderDojo Style Guide](http://dojo.soy/style) (英語) を参照してください。CoderDojo Japan のロゴデータは[コチラ](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/public/materials)にあります。
 
 ## 文中で利用する場合:
 
