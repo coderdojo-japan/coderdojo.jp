@@ -466,7 +466,7 @@
   url: https://coderdojo-ochanomizu.doorkeeper.jp/
 #- dojo_id: 130
 #  name: connpass
-#  group_id: [TODO] connpass の series id ができたら追加する
+#  group_id: # TODO: connpass の series id ができたら追加する
 #  url: https://connpass.com/user/coderdojo-akabane/
 - dojo_id: 131
   name: facebook
@@ -478,11 +478,11 @@
   url: https://coderdojo-kashii.connpass.com/
 #- dojo_id: 137
 #  name: connpass
-#  group_id: 
+#  group_id: # TODO: connpass の series id ができたら追加する
 #  url: https://coderdojo-hodogaya.connpass.com/
 #- dojo_id: 140
 #  name: connpass
-#  group_id: # TODO
+#  group_id: # TODO: connpass の series id ができたら追加する
 #  url: https://coderdojo-atsugi.connpass.com/
 - dojo_id: 141
   name: facebook
