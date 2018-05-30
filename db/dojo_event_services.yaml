@@ -488,3 +488,7 @@
   name: facebook
   group_id: 206840799906741
   url: https://www.facebook.com/CoderDojoKURE/
+#- dojo_id: 149
+#  name: connpass
+#  group_id: # TODO: connpass の series id ができたら追加する
+#  url: https://coderdojo-shirakawa.connpass.com/
