@@ -215,10 +215,10 @@
   name: connpass
   group_id: 3470
   url: https://coderdojo-yokohama.connpass.com
-#- dojo_id: 126
-#  name: connpass
-#  group_id: # TODO: connpass の series id ができたら追加する
-#  url: https://coderdojo-tobe.connpass.com/
+- dojo_id: 126
+  name: connpass
+  group_id: 5072
+  url: https://coderdojo-tobe.connpass.com/
 - dojo_id: 91
   name: connpass
   group_id: 4153
@@ -367,10 +367,10 @@
   name: connpass
   group_id: 2932
   url: https://kitakobedojo.connpass.com/
-#- dojo_id: 124
-#  name: connpass
-#  group_id: # TODO: イベントが１つ以上ないと発行されない?
-#  url: https://coderdojo-nada.connpass.com/
+- dojo_id: 124
+  name: connpass
+  group_id: 5067
+  url: https://coderdojo-nada.connpass.com/
 - dojo_id: 48
   name: google
   group_id:
@@ -464,10 +464,10 @@
   name: doorkeeper
   group_id: 9491
   url: https://coderdojo-ochanomizu.doorkeeper.jp/
-#- dojo_id: 130
-#  name: connpass
-#  group_id: # TODO: connpass の series id ができたら追加する
-#  url: https://connpass.com/user/coderdojo-akabane/
+- dojo_id: 130
+  name: connpass
+  group_id: 5599
+  url: https://connpass.com/user/coderdojo-akabane/
 - dojo_id: 131
   name: facebook
   group_id: 209274086317393
@@ -476,14 +476,14 @@
   name: connpass
   group_id: 5069
   url: https://coderdojo-kashii.connpass.com/
-#- dojo_id: 137
-#  name: connpass
-#  group_id: # TODO: connpass の series id ができたら追加する
-#  url: https://coderdojo-hodogaya.connpass.com/
-#- dojo_id: 140
-#  name: connpass
-#  group_id: # TODO: connpass の series id ができたら追加する
-#  url: https://coderdojo-atsugi.connpass.com/
+- dojo_id: 137
+  name: connpass
+  group_id: 5362
+  url: https://coderdojo-hodogaya.connpass.com/
+- dojo_id: 140
+  name: connpass
+  group_id: 5371
+  url: https://coderdojo-atsugi.connpass.com/
 - dojo_id: 141
   name: facebook
   group_id: 206840799906741
