@@ -1,7 +1,6 @@
 class Dojo < ApplicationRecord
   NUM_OF_COUNTRIES    = "85"
   NUM_OF_WHOLE_DOJOS  = "1,600"
-  NUM_OF_JAPAN_DOJOS  = Dojo.count.to_s
   YAML_FILE           = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
@@ -12,6 +11,7 @@ class Dojo < ApplicationRecord
   before_save { self.email = self.email.downcase }
 
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
+  scope :active, -> { where(is_active: true) }
 
   validates :name,        presence: true, length: { maximum: 50 }
   validates :email,       presence: false
@@ -33,6 +33,10 @@ class Dojo < ApplicationRecord
 
     def group_by_region
       eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
+    end
+
+    def group_by_region_on_active
+      active.group_by_region
     end
 
     def aggregatable_annual_count(period)

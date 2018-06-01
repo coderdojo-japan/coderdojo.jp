@@ -20,6 +20,7 @@ RSpec.describe Dojo, :type => :model do
   it { should respond_to(:tags) }
 
   it { should be_valid }
+  it { expect(Dojo.new.is_active?).to be(true) }
 
   describe "when name is not present" do
     before { @dojo.name = " " }
