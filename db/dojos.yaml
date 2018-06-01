@@ -181,6 +181,17 @@
   - Python
   - Java
   - Webサイト
+- id: 149
+  order: '072052'
+  created_at: '2018-05-29'
+  name: 白河 (東北)
+  prefecture_id: 7
+  logo: "/img/dojos/shirakawa.png"
+  url: http://coderdojoshirakawa.strikingly.com/
+  description: 福島県白河市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 134
   order: '082201'
   created_at: '2017-03-28'

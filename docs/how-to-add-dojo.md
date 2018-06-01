@@ -82,10 +82,18 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
 - Facebook
     - [lookup-id](https://lookup-id.com/#) で確認できます
 - connpass
-    - 個人アカウントでの登録の場合は取得出来ません
-        - [イベント例](https://connpass.com/event/80411/) , [API画面](https://connpass.com/api/v1/event/?event_id=80411)
-    - 組織アカウントでの場合は `Series` -> `id` で確認できます
+    - 組織アカウントの場合は `Series` 経由で確認できます
         - [イベント例](https://coderdojo-kashii.connpass.com/event/77590/) , [API画面](https://connpass.com/api/v1/event/?event_id=77590)
+	- 個人アカウントの場合は `event_id` 経由で確認できます
+	   1. connpass のイベントページをブラウザで表示 (Ex. https://coderdojo-tobe.connpass.com/)
+	   2. イベントのページを表示 (どのイベントでもいいです)
+	   3. url を見て event のIDを確認 (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
+	   4. 以下のコマンドで上記の event ID を指定すると `group_id` が得られる
+	   
+	   ```
+	   $ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
+	   5072
+	   ```
 
 ## 本番環境への反映方法
 
