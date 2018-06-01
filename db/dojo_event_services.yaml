@@ -492,3 +492,7 @@
 #  name: connpass
 #  group_id: # TODO: connpass の series id ができたら追加する
 #  url: https://coderdojo-shirakawa.connpass.com/
+- dojo_id: 150
+  name: connpass
+  group_id: 5751
+  url: https://cd-kurashiki.connpass.com/
