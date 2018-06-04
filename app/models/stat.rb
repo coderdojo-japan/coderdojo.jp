@@ -6,8 +6,9 @@ class Stat
   def annual_sum_total_of_aggregatable_dojo
     return @annual_sum_total_of_aggregatable_dojo if defined?(@annual_sum_total_of_aggregatable_dojo)
 
-    hash = Dojo.aggregatable_annual_count(@period)
-    @annual_sum_total_of_aggregatable_dojo = year_hash_template.merge!(hash).each.with_object({}) {|(k, v), h| h[k] = (h.values.last || 0) + v }
+    @annual_sum_total_of_aggregatable_dojo = year_hash_template.merge!(dojo_annual_count).each.with_object({}) do |(k, v), h|
+      h[k] = (h.values.last || 0) + v
+    end
   end
 
   def annual_count_of_event_histories
@@ -25,7 +26,7 @@ class Stat
   end
 
   def annual_dojos_chart
-    HighChartsBuilder.build_annual_dojos(Dojo.annual_count(@period))
+    HighChartsBuilder.build_annual_dojos(dojo_annual_count)
   end
 
   def annual_event_histories_chart
@@ -37,6 +38,10 @@ class Stat
   end
 
   private
+
+  def dojo_annual_count
+    Dojo.annual_count(@period)
+  end
 
   def year_hash_template
     initialized_year_hash.dup
