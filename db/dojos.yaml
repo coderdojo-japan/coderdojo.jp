@@ -295,6 +295,7 @@
   description: 埼玉県所沢市小手指にて毎月開催
   tags:
   - Scratch
+  is_active: false
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
