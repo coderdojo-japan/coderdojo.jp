@@ -1,7 +1,7 @@
 class StatsController < ApplicationController
   def show
     @url                 = request.url
-    @dojo_count          = Dojo.count
+    @dojo_count          = Dojo.active.count
     @regions_and_dojos   = Dojo.group_by_region_on_active
 
     # TODO: 次の静的なDojoの開催数もデータベース上で集計できるようにする
