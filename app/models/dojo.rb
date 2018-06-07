@@ -31,6 +31,10 @@ class Dojo < ApplicationRecord
       YAML.dump(attributes, File.open(YAML_FILE, 'w'))
     end
 
+    def active_dojos_count
+      active.count
+    end
+
     def group_by_region
       eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.region }
     end
