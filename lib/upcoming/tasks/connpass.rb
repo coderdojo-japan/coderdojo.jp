@@ -1,14 +1,14 @@
 module Upcoming
   module Tasks
     class Connpass
-      def self.delete_event_histories(period)
-        UpcomingEvent.for(:connpass).within(period).delete_all
+      def self.delete_upcoming_event
+        UpcomingEvent.for(:connpass).delete_all
       end
 
-      def initialize(dojos, date, weekly)
+      def initialize(dojos, date)
         @client = EventService::Providers::Connpass.new
         @dojos = dojos
-        @params = build_params(date, weekly)
+        @params = build_params(date)
       end
 
       def run
@@ -28,22 +28,8 @@ module Upcoming
 
       private
 
-      def build_params(date, weekly)
-        if weekly
-          week_days = loop.with_object([date]) { |_, list|
-            nd = list.last.next_day
-            raise StopIteration if nd > date.end_of_week
-            list << nd
-          }.map { |date| date.strftime('%Y%m%d') }
-
-          {
-            yyyymmdd: week_days.join(',')
-          }
-        else
-          {
-            yyyymm: "#{date.year}#{date.month}"
-          }
-        end
+      def build_params(date)
+        { yyyymm: "#{date.year}#{date.month}" }
       end
     end
   end

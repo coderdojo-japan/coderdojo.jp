@@ -1,11 +1,11 @@
-module Statistics
+module Upcoming
   module Tasks
     class StaticYaml
-      def self.delete_event_histories(_period)
+      def self.delete_upcoming_event
         EventHistory.for(:static_yaml).delete_all
       end
 
-      def initialize(dojos, _date, _weekly)
+      def initialize(dojos, _date)
         @client = EventService::Providers::StaticYaml.new
         @dojos = dojos
       end
@@ -19,7 +19,7 @@ module Statistics
           evented_at = Time.zone.parse(e['evented_at'])
           event_id = "#{SecureRandom.uuid}"
 
-          EventHistory.create!(dojo_id: dojo.id,
+          UpcomingEvent.create!(dojo_id: dojo.id,
                                dojo_name: dojo.name,
                                service_name: self.class.name.demodulize.underscore,
                                event_id: event_id,

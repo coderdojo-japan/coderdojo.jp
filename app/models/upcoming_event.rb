@@ -6,4 +6,6 @@ class UpcomingEvent < ApplicationRecord
   validates :event_url,presence: true
 
   validates :event_at,presence: true
+
+  scope :for, ->(service) { where(service_name: service) }
 end

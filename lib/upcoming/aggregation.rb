@@ -2,16 +2,15 @@ module Upcoming
   class Aggregation
     def initialize(args)
       @from = TimeWithZone.beginning_of_week
-      @to = TimeWithZone.end_of_month
+      @to = TimeWithZone.next_month
       @dojos = fetch_dojos
     end
 
     def run
-      "Upcoming::Aggregation::#{@mode.camelize}".constantize.new(@dojos, @from, @to).run
+      Upcoming::Aggregation::Monthly.new(@dojos, @from, @to).run
     end
 
     private
-
 
     def fetch_dojos
       {
@@ -37,7 +36,7 @@ module Upcoming
 
       def run
         with_notifying do
-          delete_event_histories
+          delete_upcoming_event
           execute
           execute_once
         end
@@ -52,10 +51,9 @@ module Upcoming
         Notifier.notify_failure(date_format(@from), date_format(@to), e)
       end
 
-      ## TODO: modofy methods
-      def delete_event_histories
+      def delete_upcoming_event
         (@externals.keys + @internals.keys).each do |kind|
-          "Upcoming::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(@from..@to)
+          "Upcoming::Tasks::#{kind.to_s.camelize}".constantize.delete_upcoming_event
         end
       end
 
@@ -65,7 +63,7 @@ module Upcoming
 
       def execute_once
         @internals.each do |kind, list|
-          "Upcoming::Tasks::#{kind.to_s.camelize}".constantize.new(list, nil, nil).run
+          "Upcoming::Tasks::#{kind.to_s.camelize}".constantize.new(list, nil).run
         end
       end
 
@@ -78,7 +76,6 @@ module Upcoming
       end
     end
 
-
     class Monthly < Base
       private
 
@@ -87,7 +84,7 @@ module Upcoming
           puts "Aggregate for #{date_format(date)}"
 
           @externals.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
+            "Upcoming::Tasks::#{kind.to_s.camelize}".constantize.new(list, date).run
           end
         end
       end

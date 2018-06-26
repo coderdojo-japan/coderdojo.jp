@@ -1,14 +1,14 @@
 module Upcoming
   module Tasks
     class Doorkeeper
-      def self.delete_event_histories(period)
-        UpcomingEvent.for(:doorkeeper).within(period).delete_all
+      def self.delete_upcoming_event
+        UpcomingEvent.for(:doorkeeper).delete_all
       end
 
-      def initialize(dojos, date, weekly)
+      def initialize(dojos, date)
         @client = EventService::Providers::Doorkeeper.new
         @dojos = dojos
-        @params = build_params(date, weekly)
+        @params = build_params(date)
       end
 
       def run
@@ -28,18 +28,11 @@ module Upcoming
 
       private
 
-      def build_params(date, weekly)
-        if weekly
-          {
-            since_at: date.beginning_of_week,
-            until_at: date.end_of_week
-          }
-        else
-          {
-            since_at: date.beginning_of_month,
-            until_at: date.end_of_month
-          }
-        end
+      def build_params(date)
+        {
+          since_at: date.beginning_of_month,
+          until_at: date.end_of_month
+        }
       end
     end
   end
