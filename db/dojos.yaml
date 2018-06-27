@@ -32,7 +32,7 @@
   prefecture_id: 1
   url: https://www.facebook.com/CoderDojoEniwa/
   logo: "/img/dojos/japan.png"
-  description: 北海道恵庭市にて毎月開催
+  description: 北海道恵庭市で毎月開催
   tags:
   - Scratch
   - Webサイト
@@ -292,7 +292,7 @@
   prefecture_id: 11
   url: https://coderdojokotesashi.github.io/
   logo: "/img/dojos/kotesashi.png"
-  description: 埼玉県所沢市小手指にて毎月開催
+  description: 埼玉県所沢市小手指で毎月開催
   tags:
   - Scratch
   is_active: false
@@ -537,7 +537,7 @@
   prefecture_id: 13
   logo: "/img/dojos/nakano.png"
   url: https://www.facebook.com/coderdojonakano/
-  description: 東京都中野区にて毎月開催
+  description: 東京都中野区で毎月開催
   tags:
   - Scratch
   - HTML/CSS
@@ -564,7 +564,7 @@
   prefecture_id: 13
   logo: "/img/dojos/ikebukuro.jpeg"
   url: https://coderdojo-ikebukuro.connpass.com/
-  description: 東京都豊島区にて毎月開催
+  description: 東京都豊島区で毎月開催
   tags:
   - Scratch
   - ゲーム
@@ -577,7 +577,7 @@
   prefecture_id: 13
   logo: "/img/dojos/akabane.png"
   url: https://www.facebook.com/CoderDojoAkabane/
-  description: 東京都北区にて不定期開催
+  description: 東京都北区で不定期開催
   tags:
   - Scratch
 - id: 14
@@ -651,7 +651,7 @@
   prefecture_id: 13
   url: https://www.facebook.com/CoderDojo-Inagi-%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4-%E7%A8%B2%E5%9F%8E-229498697605724/
   logo: "/img/dojos/japan.png"
-  description: 東京都稲城市若葉台にて毎月開催
+  description: 東京都稲城市若葉台で毎月開催
   tags:
   - Scratch
   - Webサイト
