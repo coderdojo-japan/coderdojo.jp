@@ -496,3 +496,7 @@
   name: connpass
   group_id: 5751
   url: https://cd-kurashiki.connpass.com/
+- dojo_id: 153
+  name: doorkeeper
+  group_id: 9608
+  url: https://63a4ffa19c713218e96b7e2037.doorkeeper.jp/
