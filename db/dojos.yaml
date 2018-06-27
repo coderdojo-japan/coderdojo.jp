@@ -1437,7 +1437,7 @@
   created_at: '2018-05-29'
   name: 倉敷 (岡山)
   prefecture_id: 33
-  logo: "/img/dojos/kurashiki.jpg"  # TODO: 画像サイズを調整する必要あり
+  logo: "/img/dojos/kurashiki.jpg"
   url: https://cd-kurashiki.connpass.com
   description: 岡山県倉敷市で毎月開催
   tags:
