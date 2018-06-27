@@ -500,3 +500,7 @@
   name: doorkeeper
   group_id: 9608
   url: https://63a4ffa19c713218e96b7e2037.doorkeeper.jp/
+- dojo_id: 154
+  name: connpass
+  group_id: 5910
+  url: https://coderdojo-kamoi.connpass.com/
