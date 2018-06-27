@@ -1051,7 +1051,7 @@
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
   url: http://cdkf.ninja/
-  description: 京都市伏見区の小学校内で隔月開催(現在、当該小学校在籍生徒に限定しています)
+  description: 京都市伏見区の小学校内で隔月開催 (現在当該小学校在籍児童に限定)
   tags:
   - Scratch
   - WEBサイト
