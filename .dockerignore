@@ -1,0 +1,16 @@
+.bundle
+.dockerignore
+.env
+.git
+.gitignore
+db/*.sqlite3
+db/*.sqlite3-journal
+docker-compose*
+Dockerfile*
+LICENSE
+log
+node_modules
+README.md
+tmp
+vendor/assets
+vendor/bundle

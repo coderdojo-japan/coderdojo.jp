@@ -62,6 +62,21 @@ http://bit.ly/coderdojo-kata-edit
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
+#### Dockerを利用したセットアップ方法
+
+Dockerを利用する場合は上記ツールをインストールする必要はありません。
+
+その代わり、Dockerをインストールする必要があります。
+
+- [Docker](https://www.docker.com/community-edition)
+
+1. 本リポジトリを fork 後、clone します
+1. `.env.sample` をコピーして `.env` にリネームします
+1. ターミナルから `$ docker-compose up` を実行します
+1. ターミナルから `$ docker-compose exec rails bin/setup` を実行します
+1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
+1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
+
 #### Development with Scrivito
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:

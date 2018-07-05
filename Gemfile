@@ -68,6 +68,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
+
+  gem 'dotenv-rails'
 end
 
 group :test do
