@@ -343,6 +343,16 @@
   description: 千葉市若葉区みつわ台で毎月開催
   tags:
   - Scratch
+- id: 151
+  order: '121002'
+  created_at: '2018-04-24'
+  name: 若葉若松 (関東)
+  prefecture_id: 12
+  logo: "/img/dojos/wakaba-wakamatsu.png"
+  url: "https://coderdojo-wakaba-wakamatsu.github.io/"
+  description: 千葉市若葉区若松で毎月開催
+  tags:
+  - Scratch
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
@@ -464,6 +474,16 @@
   - Webサイト
   - PHP
   - Ruby
+- id: 152
+  order: '122301'
+  created_at: '2018-06-30'
+  name: 八街 (関東)
+  prefecture_id: 12
+  logo: "/img/dojos/yachimata.png"
+  url: "https://peraichi.com/landing_pages/view/coderdojoyachimata"
+  description: 千葉市若葉区若松で毎月開催
+  tags:
+  - Scratch
 - id: 121
   order: '131016'
   created_at: '2017-11-28'
