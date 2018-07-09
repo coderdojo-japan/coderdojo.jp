@@ -349,7 +349,7 @@
   name: 若葉若松 (関東)
   prefecture_id: 12
   logo: "/img/dojos/wakaba-wakamatsu.png"
-  url: "https://coderdojo-wakaba-wakamatsu.github.io/"
+  url: https://coderdojo-wakaba-wakamatsu.github.io/
   description: 千葉市若葉区若松で毎月開催
   tags:
   - Scratch
@@ -480,7 +480,7 @@
   name: やちまた (関東)
   prefecture_id: 12
   logo: "/img/dojos/yachimata.png"
-  url: "https://peraichi.com/landing_pages/view/coderdojoyachimata"
+  url: https://peraichi.com/landing_pages/view/coderdojoyachimata
   description: 千葉県八街市で毎月開催
   tags:
   - Scratch
