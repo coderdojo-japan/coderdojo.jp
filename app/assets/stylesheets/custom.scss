@@ -3,6 +3,21 @@
 
 // Customized by YassLab
 
+.home-point-slides {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0 20px 0;
+  padding-bottom: 50%;
+  padding-top: 65px;
+}
+.home-point-slides iframe {
+  width:  100%;
+  height: 100%;
+  position: absolute;
+  top:  0;
+  left: 0;
+}
+
 .home-point-video {
 	position: relative;
 	margin-bottom: 30px;
