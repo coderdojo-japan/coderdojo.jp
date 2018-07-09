@@ -1,6 +1,6 @@
 class Dojo < ApplicationRecord
   NUM_OF_COUNTRIES    = "92"
-  NUM_OF_WHOLE_DOJOS  = "1,500"
+  NUM_OF_WHOLE_DOJOS  = "1,800"
   YAML_FILE           = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
