@@ -1690,6 +1690,16 @@
   - Mindstorm
   - Java
   - Swift
+- id: 155
+  order: '472131'
+  created_at: '2018-07-07'
+  name: うるま (沖縄)
+  prefecture_id: 47
+  logo: "/img/dojos/uruma.png"
+  url: https://coderdojo-uruma.hatenablog.com/
+  description: 沖縄県うるま市で月2回 (第２、第４土曜日)
+  tags:
+  - Scratch
 - id: 56
   order: '472140'
   created_at: '2016-11-02'
