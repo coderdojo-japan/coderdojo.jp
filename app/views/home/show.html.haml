@@ -18,12 +18,14 @@
     %li Arduino, Raspberry Pi など
   %br
   %p 道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢はとても大切です。
-  %p 道場の特徴については、次のガイダンスを参考にしてください。
+  %p#welcome
+    道場の特徴については、次のガイダンスを参考にしてください。
   .text-center
-    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "388", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://www.slideshare.net/slideshow/embed_code/key/FAXoW4pBq172mQ", :style => "border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;", :width => "595"}
+    .home-point-slides
+      %iframe{:allowfullscreen => "true", :mozallowfullscreen => "true", :webkitallowfullscreen => "true", :frameborder => "0", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&loop=false", :width => "595", :height => "350"}
     %div{:style => "margin-bottom:5px; color: grey;"}
       スライドが見えない場合は
-      %a{:href => "https://www.slideshare.net/togazo/coderdojo-introduction-jp", :target => "_blank", :title => "CoderDojoガイダンス（最新版）"}<>
+      %a{:href => "https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/pub?start=false&loop=false", :target => "_blank", :title => "CoderDojoガイダンス（最新版）"}<>
         コチラ
   %p{:style => "margin-top:10px;"} さらに詳しい様子については、次の記事や動画をご参照ください。
   %ul{:style => "margin-bottom:30px;"}
@@ -60,20 +62,19 @@
                 po.src = 'https://apis.google.com/js/plusone.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
         	})();
-/
-  <section class='detail-introduction text-center' id="events">
-  <h2>直近のイベント</h2>
-  <ol style="list-style: none; margin-left: -0px; margin-top: 30px;" class="bxslider">
-  <li>
-  <haml_loud> link_to image_tag(&quot;decadojo_cover.png&quot;, alt: &#39;Upcoming Events&#39;,
-  class: &#39;cursor-pointer&#39;, style: &#39;margin-bottom: 15px;&#39;),
-  \&#39;https://peraichi.com/landing_pages/view/decadojo&#39; </haml_loud>
-  </li>
-  <p>5月7日に埼玉県所沢市で<b><a href='https://peraichi.com/landing_pages/view/decadojo'>でかドージョー</a></b>が開催されます! ぜひご参加ください ;)</p>
-  </ol>
-  </section>
 
-%section#events.detail-introduction.text-center
+/
+  %section#events.detail-introduction.text-center
+  %h2 直近のイベント
+  %ol.bxslider{:style => "list-style: none; margin-left: -40px; margin-top: 30px;"}
+    %li
+      = link_to image_tag("decadojo_cover.png", alt: "DecaDojo", class: "cursor-pointer", style: "margin-bottom: 15px;"), "https://coderdojo-tachikawa.connpass.com/event/81311/"
+
+  %p
+    4月7日 (土) に
+    %a{:href => "https://coderdojo-tachikawa.connpass.com/event/81311/"} でかドージョー in 多摩地域
+    が開催されます! ぜひご参加ください ;)
+
 %section#dojos.dojos.text-center.grayscale-bg
   %br
   %h2 全国の道場
@@ -119,12 +120,12 @@
     %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'http://www.osscafe.net/'
     %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
     %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発およびサーバー代の支援'), 'https://yasslab.jp/'
-    %li= link_to image_tag('logos/mitou-foundation.png', alt: 'Mitou Foundation', style: 'margin-top: 20px; margin-bottom: 140px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'http://www.mitou.org/'
-    %li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: 0px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
+    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: -10px; margin-bottom: 140px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://jr.mitou.org/'
+    %li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: -10px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
     %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'メール・Newsサーバー代の支援'), 'https://ht79.info/'
     %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
-    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
-    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -40px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
+    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
+    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -50px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
 
 #news.text-center.grayscale-bg
   %section.detail-introduction
@@ -149,11 +150,6 @@
     #contact
     #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
       %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
-      \.
-    #wuf-adv{:style => "font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"}
-      HTML Forms powered by
-      = succeed "." do
-        %a{:href => "https://www.wufoo.com"} Wufoo
     :javascript
       var qkjthoy0qpuvg9;(function(d, t) {
       var s = d.createElement(t), options = {

@@ -146,11 +146,7 @@ module Statistics
       end
 
       def build_list(from, to)
-        loop.with_object([from]) do |_, list|
-          nw = list.last.next_week
-          raise StopIteration if nw > to
-          list << nw
-        end
+        DateTimeUtil.every_week_array(from, to)
       end
 
       def date_format(date)
@@ -172,11 +168,7 @@ module Statistics
       end
 
       def build_list(from, to)
-        loop.with_object([from]) do |_, list|
-          nm = list.last.next_month
-          raise StopIteration if nm > to
-          list << nm
-        end
+        DateTimeUtil.every_month_array(from, to)
       end
 
       def date_format(date)

@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.4.2'
+ruby '2.5.1'
 
 gem 'rails', '5.1.4'
-
 gem 'pg'
+gem 'dumper'
 
 gem 'scrivito', '~> 1.13.0'
 gem 'scrivito_section_widgets'
@@ -19,6 +19,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'font-awesome-rails'
 gem 'haml-rails'
+gem 'rails-html-sanitizer', '~> 1.0.4'
 
 # For redirection
 gem 'rack-host-redirect'
@@ -48,6 +49,10 @@ group :development do
   gem 'web-console'
   gem 'spring'
   gem 'listen'
+  gem 'rack-mini-profiler', require: false
+  gem 'flamegraph', require: false
+  gem 'stackprof', require: false
+  gem 'memory_profiler', require: false
 end
 
 group :development, :test do
@@ -63,6 +68,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
+
+  gem 'dotenv-rails'
 end
 
 group :test do

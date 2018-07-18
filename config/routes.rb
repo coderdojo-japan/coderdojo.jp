@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   get "/docs/code_of_conduct", to: redirect('/docs/code-of-conduct')
-  resources :docs, only: [:index, :show]
-
-  resources :spaces, only: %(index)
-
-  resource :stats, only: %i(show)
+  get "/docs/charter",    to: redirect('/charter')
+  get "/docs/charter_en", to: redirect('/charter_en')
+  get "/charter"    => "docs#show", id: 'charter'
+  get "/charter_en" => "docs#show", id: 'charter_en'
+  resources :docs,   only: %i(index show)
+  resources :spaces, only: %i(index)
+  resources :stats,  only: %i(show)
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')

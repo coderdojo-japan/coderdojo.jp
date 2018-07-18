@@ -1,7 +1,12 @@
 class HighChartsBuilder
   class << self
-    def build_annual_dojos
-      source = Dojo.where('created_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', created_at)").count
+    def global_options
+      LazyHighCharts::HighChartGlobals.new do |f|
+        f.lang(thousandsSep: ',')
+      end
+    end
+
+    def build_annual_dojos(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
@@ -18,15 +23,14 @@ class HighChartsBuilder
       end
     end
 
-    def build_annual_event_histories
-      source = EventHistory.where('evented_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', evented_at)").count
+    def build_annual_event_histories(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
         f.title(text: '開催回数の推移')
         f.xAxis(categories: data[:years])
         f.series(type: 'column', name: '開催回数', yAxis: 0, data: data[:increase_nums])
-        f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
+        f.series(type: 'line',   name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
           { title: { text: '開催回数' } },
           { title: { text: '累積合計' }, opposite: true }
@@ -36,15 +40,14 @@ class HighChartsBuilder
       end
     end
 
-    def build_annual_participants
-      source = EventHistory.where('evented_at < ?', Time.current.beginning_of_year).group("DATE_TRUNC('year', evented_at)").sum(:participants)
+    def build_annual_participants(source)
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
         f.title(text: '参加者数の推移')
         f.xAxis(categories: data[:years])
         f.series(type: 'column', name: '参加者数', yAxis: 0, data: data[:increase_nums])
-        f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
+        f.series(type: 'line',   name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
           { title: { text: '参加者数' } },
           { title: { text: '累積合計' }, opposite: true }
@@ -57,10 +60,9 @@ class HighChartsBuilder
     private
 
     def annual_chart_data_from(source)
-      sorted_list = source.each.with_object({}) {|(k, v), h| h[k.year] = v }.sort
-      years = sorted_list.map(&:first)
-      increase_nums = sorted_list.map(&:last)
-      cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].inject(:+) }
+      years           = source.map(&:first)
+      increase_nums   = source.map(&:last)
+      cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].sum }
 
       {
         years: years,

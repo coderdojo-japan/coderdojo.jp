@@ -38,6 +38,7 @@ namespace :dojos do
       d.created_at  = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at  = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
+      d.is_active   = dojo['is_active'].nil? ? true : dojo['is_active']
 
       d.save!
     end

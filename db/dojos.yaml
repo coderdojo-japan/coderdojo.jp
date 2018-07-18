@@ -32,11 +32,21 @@
   prefecture_id: 1
   url: https://www.facebook.com/CoderDojoEniwa/
   logo: "/img/dojos/japan.png"
-  description: 北海道恵庭市にて毎月開催
+  description: 北海道恵庭市で毎月開催
   tags:
   - Scratch
   - Webサイト
   - Python
+- id: 143
+  order: '032107'
+  created_at: '2018-04-21'
+  name: 陸前高田 (東北)
+  prefecture_id: 3
+  url: https://www.facebook.com/CoderDojo%E9%99%B8%E5%89%8D%E9%AB%98%E7%94%B0-1983701135226932/
+  logo: "/img/dojos/rikuzentakata.png"
+  description: 岩手県陸前高田市で毎月開催
+  tags:
+  - Scratch
 - id: 109
   order: '032166'
   created_at: '2017-09-25'
@@ -133,6 +143,16 @@
   - PHP
   - Swift
   - Android
+- id: 139
+  order: '052035'
+  created_at: '2018-03-27'
+  name: 増田 (東北)
+  prefecture_id: 5
+  url: https://sites.google.com/view/coderdojo-masuda/home
+  logo: "/img/dojos/masuda.png"
+  description: 秋田県横手市増田で毎月開催
+  tags:
+  - Scratch
 - id: 74
   order: '062014'
   created_at: '2017-03-28'
@@ -161,6 +181,28 @@
   - Python
   - Java
   - Webサイト
+- id: 149
+  order: '072052'
+  created_at: '2018-05-29'
+  name: 白河 (東北)
+  prefecture_id: 7
+  logo: "/img/dojos/shirakawa.png"
+  url: http://coderdojoshirakawa.strikingly.com/
+  description: 福島県白河市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+- id: 156
+  order: '082040'
+  created_at: '2018-07-09'
+  name: 古河 (関東)
+  prefecture_id: 8
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/coderdojokoga/
+  description: 茨城県古河市で毎月開催
+  tags:
+  - Scratch
+  - ラズベリーパイ
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
@@ -261,9 +303,10 @@
   prefecture_id: 11
   url: https://coderdojokotesashi.github.io/
   logo: "/img/dojos/kotesashi.png"
-  description: 埼玉県所沢市小手指にて毎月開催
+  description: 埼玉県所沢市小手指で毎月開催
   tags:
   - Scratch
+  is_active: false
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
@@ -304,11 +347,21 @@
 - id: 25
   order: '121002'
   created_at: '2016-04-27'
-  name: 若葉 (関東)
+  name: 若葉みつわ台 (関東)
   prefecture_id: 12
-  logo: "/img/dojos/wakaba.png"
+  logo: "/img/dojos/wakaba-mitsuwadai.png"
   url: http://wakaba.coderdojo.chiba.jp/
-  description: 千葉市若葉区で毎月開催
+  description: 千葉市若葉区みつわ台で毎月開催
+  tags:
+  - Scratch
+- id: 151
+  order: '121002'
+  created_at: '2018-04-24'
+  name: 若葉若松 (関東)
+  prefecture_id: 12
+  logo: "/img/dojos/wakaba-wakamatsu.png"
+  url: https://coderdojo-wakaba-wakamatsu.github.io/
+  description: 千葉市若葉区若松で毎月開催
   tags:
   - Scratch
 - id: 60
@@ -378,6 +431,7 @@
   description: 千葉県野田市で不定期開催
   tags:
   - Scratch
+  is_active: false
 - id: 23
   order: '122173'
   created_at: '2014-09-22'
@@ -431,6 +485,16 @@
   - Webサイト
   - PHP
   - Ruby
+- id: 152
+  order: '122301'
+  created_at: '2018-06-30'
+  name: やちまた (関東)
+  prefecture_id: 12
+  logo: "/img/dojos/yachimata.png"
+  url: https://peraichi.com/landing_pages/view/coderdojoyachimata
+  description: 千葉県八街市で毎月開催
+  tags:
+  - Scratch
 - id: 121
   order: '131016'
   created_at: '2017-11-28'
@@ -504,7 +568,7 @@
   prefecture_id: 13
   logo: "/img/dojos/nakano.png"
   url: https://www.facebook.com/coderdojonakano/
-  description: 東京都中野区にて毎月開催
+  description: 東京都中野区で毎月開催
   tags:
   - Scratch
   - HTML/CSS
@@ -531,7 +595,7 @@
   prefecture_id: 13
   logo: "/img/dojos/ikebukuro.jpeg"
   url: https://coderdojo-ikebukuro.connpass.com/
-  description: 東京都豊島区にて毎月開催
+  description: 東京都豊島区で毎月開催
   tags:
   - Scratch
   - ゲーム
@@ -544,7 +608,7 @@
   prefecture_id: 13
   logo: "/img/dojos/akabane.png"
   url: https://www.facebook.com/CoderDojoAkabane/
-  description: 東京都北区にて不定期開催
+  description: 東京都北区で不定期開催
   tags:
   - Scratch
 - id: 14
@@ -604,13 +668,35 @@
   name: 小平 (関東)
   prefecture_id: 13
   url: http://coderdojo-kodaira.github.io/
-  logo: "/img/dojos/kodaira.jpg"
+  logo: "/img/dojos/kodaira.png"
   description: 東京都小平市で隔週開催
   tags:
   - Scratch
   - Minecraft
   - CS Unplugged
   - マルチメディア
+- id: 147
+  order: '132250'
+  created_at: '2018-05-06'
+  name: 稲城 (関東)
+  prefecture_id: 13
+  url: https://www.facebook.com/CoderDojo-Inagi-%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4-%E7%A8%B2%E5%9F%8E-229498697605724/
+  logo: "/img/dojos/japan.png"
+  description: 東京都稲城市若葉台で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
+- id: 153
+  order: '132241'
+  created_at: '2018-05-30'
+  name: 多摩センター (関東)
+  prefecture_id: 13
+  url: https://coderdojo-tamacent.wixsite.com/main
+  logo: "/img/dojos/tama-center.png"
+  description: 東京都多摩市で毎月開催
+  tags:
+  - Scratch
 - id: 70
   order: '141020'
   created_at: '2017-01-30'
@@ -631,6 +717,17 @@
   description: 横浜市西区で毎月開催
   tags:
   - Scratch
+- id: 137
+  order: '141062'
+  created_at: '2018-03-24'
+  name: 保土ヶ谷 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-hodogaya.connpass.com/
+  description: 横浜市保土ヶ谷区で不定期開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 68
   order: '141097'
   created_at: '2017-01-09'
@@ -653,6 +750,33 @@
   - Scratch
   - Minecraft
   - Hour of Code
+- id: 154
+  order: '141135'
+  created_at: '2017-04-03'
+  name: 鴨居 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/kamoi.png"
+  url: https://coderdojo-kamoi.connpass.com/
+  description: 神奈川県横浜市緑区東本郷で毎月開催
+  tags:
+  - Scratch
+  - Scratch Jr.
+  - プログラミングゼミ
+  - Webサイト
+- id: 138
+  order: '142042'
+  created_at: '2018-03-25'
+  name: 鎌倉 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-kamakura.github.io/
+  description: 神奈川県鎌倉市で不定期開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
+  - Python
+  - Machine Learning
 - id: 26
   order: '142051'
   created_at: '2016-12-14'
@@ -673,6 +797,16 @@
   logo: "/img/dojos/ebina.png"
   url: https://coderdojo-ebina.connpass.com/
   description: 神奈川県海老名市で不定期開催
+  tags:
+  - Scratch
+- id: 140
+  order: '142123'
+  created_at: '2018-03-29'
+  name: 厚木 (関東)
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-atsugi.connpass.com/
+  description: 神奈川県厚木市で不定期開催
   tags:
   - Scratch
 - id: 5
@@ -795,6 +929,19 @@
   description: 岐阜県海津市で毎月2回開催
   tags:
   - Scratch
+- id: 148
+  order: '221007'
+  created_at: '2016-02-25'
+  name: 静岡 (中部)
+  prefecture_id: 22
+  logo: "/img/dojos/shizuoka.png"
+  url: https://coderdojo-shizuoka.org/
+  description: 静岡県静岡市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
+  - ラズベリーパイ
 - id: 98
   order: '221309'
   created_at: '2016-02-25'
@@ -825,7 +972,7 @@
   name: 名古屋 (中部)
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
-  url: http://coderdojonagoya.hatenablog.com/
+  url: http://coderdojo-nagoya.hateblo.jp/
   description: 名古屋市中区で毎月開催
   tags:
   - Scratch
@@ -885,6 +1032,17 @@
   description: 愛知県岩倉市で毎月開催
   tags:
   - Scratch
+- id: 145
+  order: '232301'
+  created_at: '2018-04-22'
+  name: 日進 (中部)
+  prefecture_id: 23
+  logo: "/img/dojos/nisshin.png"
+  url: https://coderdojo-nisshin.connpass.com/
+  description: 愛知県日進市で毎月２回開催
+  tags:
+  - Scratch
+  - 電子工作
 - id: 33
   order: '234249'
   created_at: '2016-08-12'
@@ -923,8 +1081,8 @@
   name: 京都伏見 (近畿)
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
-  url: http://coderdojo-kyoto-fushimi.peatix.com/view
-  description: 京都市伏見区墨染で隔月開催
+  url: http://cdkf.ninja/
+  description: 京都市伏見区の小学校内で隔月開催 (現在当該小学校在籍児童に限定)
   tags:
   - Scratch
   - WEBサイト
@@ -1002,6 +1160,7 @@
   tags:
   - Scratch
   - ラズベリーパイ
+  is_active: false
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
@@ -1180,6 +1339,20 @@
   - Scratch
   - Webサイト
   - Arduino
+- id: 146
+  order: '282057'
+  created_at: '2018-04-24'
+  name: 淡路島 (近畿)
+  prefecture_id: 28
+  logo: "/img/dojos/awajishima.png"
+  url: http://coderdojo-awajishima.info/
+  description: 兵庫県洲本市で毎月開催
+  tags:
+  - Scrach
+  - Webサイト
+  - PHP
+  - ラズベリーパイ
+  - Python
 - id: 35
   order: '292010'
   created_at: '2014-10-26'
@@ -1313,6 +1486,17 @@
   - PHP
   - Arduino
   - 電子工作
+- id: 150
+  order: '332020'
+  created_at: '2018-05-29'
+  name: 倉敷 (中国)
+  prefecture_id: 33
+  logo: "/img/dojos/kurashiki.jpg"
+  url: https://cd-kurashiki.connpass.com
+  description: 岡山県倉敷市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
 - id: 52
   order: '341002'
   created_at: '2016-05-04'
@@ -1337,13 +1521,24 @@
   - Scratch
   - enchant.js
   - Unity
+- id: 141
+  order: '342025'
+  created_at: '2018-04-11'
+  name: 呉 (中国)
+  prefecture_id: 34
+  logo: "/img/dojos/kure.jpg"
+  url: https://www.facebook.com/CoderDojoKURE/
+  description: 広島県呉市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 51
   order: '342076'
   created_at: '2016-06-01'
   name: 福山 (中国)
   prefecture_id: 34
   logo: "/img/dojos/fukuyama.png"
-  url: http://fukuyama100.com/coderdojo/
+  url: https://www.facebook.com/CoderDojo.Fukuyama
   description: 広島県福山市で不定期開催
   tags:
   - Scratch
@@ -1384,6 +1579,17 @@
   description: 徳島県三好市で毎月第二週に開催
   tags:
   - Minecraft
+- id: 144
+  order: '401005'
+  created_at: '2018-04-22'
+  name: 北九州 (九州)
+  prefecture_id: 40
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/coderdojokitakyushu/
+  description: 福岡県北九州市で１〜２ヶ月に１回開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 102
   order: '401307'
   created_at: '2017-09-18'
@@ -1495,6 +1701,16 @@
   - Mindstorm
   - Java
   - Swift
+- id: 155
+  order: '472131'
+  created_at: '2018-07-07'
+  name: うるま (沖縄)
+  prefecture_id: 47
+  logo: "/img/dojos/uruma.png"
+  url: https://coderdojo-uruma.hatenablog.com/
+  description: 沖縄県うるま市で月2回 (第２、第４土曜日)
+  tags:
+  - Scratch
 - id: 56
   order: '472140'
   created_at: '2016-11-02'

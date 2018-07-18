@@ -1,21 +1,25 @@
 language: ruby
 dependencies:
   cache_directories:
-    - 'public/assets'
-    - 'tmp/cache/assets'
+    - public/assets
+    - tmp/cache/assets
 deploy:
   provider: heroku
   api_key:
-    secure: ch+AytdMVQEE2Zn09zXCqkCMPGKRnUnuRDonT9W7IRTJIeI081b5MPH7B9XL6ukl0Rt7b+KJ/YuIFvm/uvt+nvoWaPuz6AeS/ppGQLeaZ4i3mPa/w33zJFs+3Oo9afDVAolrkJh3fdScjsOKxXFwt0mVSLLf3mrcbPxAF//xm4RdXjANbNKCUqZtpMNRzhGX6+ek8JjC3Z1043cjoPNUTLLVhXRk21za6eW2/dZ560ZB7CPPVrqgAGYur8CkHOr4RtWdy41B0bAJT6COVD0XgM4z+PCLzOXYQJRf8wGbV9vwi5GXSG4l2RnPSCvYMnWWUdAV3MgfIaW664qj8IZqOUjmolqHolKeg+8pI1OqYiDDSh/OtNQFkaPsX/TzU4EWbW74a/gYpLaoMaWf95bOytFFd0XZ9bF6ZZE5ZoggjSU48bFXq/mELjcM2RBe+YtgciQU3iv4C01nfQM1y8x/tKa2Tym8I5MP4psuEvy64DGEw4IKMaTMuZn6hJT3Si9FjL1+mg3OTO/CYxrSQM2EX5ai1n0iEhEOeG9H8EhKeBEjrNtGM0VaS684QClKgPawsyGdo6zk57sGVdo5UMi456NoyWVkMZlFtWUsrvnTOaLHfRhd+jSMEWqsdP5V+KbeRq60Pb1pSS3nV8dJtg+Sqtl+MC0yjbAi2h9BREmaPH4=
+    secure: "cS9iv40zUNNFcj/RKbf263znWtzQfDd1/tn7TmhT2gCIfbySPGxUF0vBo+AeHvYErlrsv7j+OwRYl9OUQAiPHtxpUgyS0ocU+0h3h09t5vYNmu2RTuUMIOXksefc1qwBMjdkW+qa0ti9y/ynywLZIkL4cgTE20RtIWlpQbCvzP4yNwIicD8hPhMqlEPRnzapy+uGSdyBzgQmgL3ECNKIhthQ6Gr9LpBBd1nk2eg1aCfYeRXyu7WduN4JPNO7jgQO9YkVOwCGi9UruYowrKs6CQGNjGLxDLWhXTIYkL2zJuG/gOlmpwd5BmckGG2bfBN27/C07+xGONiBp2wlOkdSRKavNNk4P/kQm0qBJ1nzFsaXPyDROARNNIMM1d0lFTnjrmgiIA/qgrUhyXDatgWefoHuuyX+pI7nfJymnS1rGws+LTZ8D22J7dJkAOfuXwHHzXlVDa1TSyHlLryvSaMM4E2+cnfyDoI7D5DINxZdvjbfpE00COkjAd3JHNNirmWvK+qLkksFRQJUKplNUWwRWPCXIboLYkoRlGZjwrSGvy58Jc7GTP6FlDrq2ZaGF1HoyjfPBJZe0HNziAhyDfHv4isIRMfANmvzxCOUGtz93YkpAQUECtqle6JkfpZZ+UzZJjf2k9HHfS5ZPzXjGkMg3XStWQZYoYb4t2+yRWJFPTw="
   app:
     master: coderdojo-japan
   run:
-      - "bundle exec rails db:migrate"
-      - "bundle exec rails db:seed"
-      - "bundle exec rails dojos:update_db_by_yaml"
-      - "bundle exec rails dojo_event_services:upsert"
+    - bundle exec rails db:migrate
+    - bundle exec rails db:seed
+    - bundle exec rails dojos:update_db_by_yaml
+    - bundle exec rails dojo_event_services:upsert
 cache:
   - bundler
+# TODO:before_installは次のissueが解決したら削除
+# cf. https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
+before_install:
+  - gem install bundler
 before_script:
   - psql -c 'create database coderdojo_jp_test;' -U postgres
 script:
@@ -27,4 +31,4 @@ env:
   global:
     - TZ='Asia/Tokyo'
 addons:
-  postgresql: "9.4"
+  postgresql: '9.4'
