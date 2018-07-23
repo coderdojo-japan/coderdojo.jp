@@ -2,7 +2,7 @@ module Upcoming
   module Tasks
     class StaticYaml
       def self.delete_upcoming_event
-        EventHistory.for(:static_yaml).delete_all
+        UpcomingEvent.for(:static_yaml).delete_all
       end
 
       def initialize(dojos, _date)
@@ -16,16 +16,16 @@ module Upcoming
           dojo = dojos_hash[e['dojo_id'].to_i]
           next unless dojo
 
-          evented_at = Time.zone.parse(e['evented_at'])
-          event_id = "#{SecureRandom.uuid}"
+          dojo.dojo_event_services.for(:static_yaml).each do |dojo_event_service|
+            evented_at = Time.zone.parse(e['evented_at'])
+            event_id = "#{SecureRandom.uuid}"
 
-          UpcomingEvent.create!(dojo_id: dojo.id,
-                               dojo_name: dojo.name,
-                               service_name: self.class.name.demodulize.underscore,
-                               event_id: event_id,
-                               event_url: "https://dummy.url/#{event_id}",
-                               participants: e['participants'],
-                               evented_at: evented_at)
+            UpcomingEvent.create!(dojo_event_service: dojo_event_service,
+                                  event_id: event_id,
+                                  event_url: "https://dummy.url/#{event_id}",
+                                  event_at: evented_at)
+
+          end
         end
       end
     end

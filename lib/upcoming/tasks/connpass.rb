@@ -17,7 +17,7 @@ module Upcoming
             @client.fetch_events(@params.merge(series_id: dojo_event_service.group_id)).each do |e|
               next unless e.dig('series', 'id').to_s == dojo_event_service.group_id
 
-              UpcomingEvent.create!(dojo_event_service_id: e['id'],
+              UpcomingEvent.create!(dojo_event_service: dojo_event_service,
                                    event_id: e['event_id'],
                                    event_url: e['event_url'],
                                    event_at: Time.zone.parse(e['started_at']))

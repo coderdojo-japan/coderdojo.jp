@@ -48,6 +48,7 @@ group :development do
   gem 'web-console'
   gem 'spring'
   gem 'listen'
+  gem 'dotenv-rails'
 end
 
 group :development, :test do

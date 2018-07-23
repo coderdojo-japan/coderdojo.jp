@@ -1,0 +1,24 @@
+2018-06-26 17:30:30.851 JST [91625] LOG:  listening on IPv6 address "::1", port 5432
+2018-06-26 17:30:30.851 JST [91625] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-06-26 17:30:30.852 JST [91625] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-06-26 17:30:30.978 JST [91626] LOG:  database system was shut down at 2018-06-13 16:41:22 JST
+2018-06-26 17:30:30.998 JST [91625] LOG:  database system is ready to accept connections
+2018-06-26 17:30:53.572 JST [91837] ERROR:  column upcoming_events.service_name does not exist at character 37
+2018-06-26 17:30:53.572 JST [91837] STATEMENT:  DELETE FROM "upcoming_events" WHERE "upcoming_events"."service_name" = $1
+2018-06-26 17:31:34.879 JST [92027] ERROR:  database "coderdojo_jp_development" already exists
+2018-06-26 17:31:34.879 JST [92027] STATEMENT:  CREATE DATABASE "coderdojo_jp_development" ENCODING = 'unicode'
+2018-06-26 17:31:34.890 JST [92028] ERROR:  database "coderdojo_jp_test" already exists
+2018-06-26 17:31:34.890 JST [92028] STATEMENT:  CREATE DATABASE "coderdojo_jp_test" ENCODING = 'unicode'
+2018-06-26 17:32:08.025 JST [92199] ERROR:  column upcoming_events.service_name does not exist at character 37
+2018-06-26 17:32:08.025 JST [92199] STATEMENT:  DELETE FROM "upcoming_events" WHERE "upcoming_events"."service_name" = $1
+2018-06-28 14:54:47.903 JST [91625] LOG:  received smart shutdown request
+2018-06-28 14:54:47.906 JST [91625] LOG:  worker process: logical replication launcher (PID 91632) exited with exit code 1
+2018-06-28 14:54:47.906 JST [91627] LOG:  shutting down
+2018-06-28 14:54:47.925 JST [91625] LOG:  database system is shut down
+2018-07-23 21:50:52.263 JST [90475] LOG:  listening on IPv6 address "::1", port 5432
+2018-07-23 21:50:52.265 JST [90475] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-07-23 21:50:52.269 JST [90475] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-07-23 21:50:52.400 JST [90476] LOG:  database system was shut down at 2018-07-23 16:48:21 JST
+2018-07-23 21:50:52.419 JST [90475] LOG:  database system is ready to accept connections
+2018-07-23 21:51:02.976 JST [90575] ERROR:  column upcoming_events.service_name does not exist at character 37
+2018-07-23 21:51:02.976 JST [90575] STATEMENT:  DELETE FROM "upcoming_events" WHERE "upcoming_events"."service_name" = $1

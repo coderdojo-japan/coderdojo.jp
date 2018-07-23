@@ -1,8 +1,8 @@
 module Upcoming
   class Aggregation
     def initialize(args)
-      @from = TimeWithZone.beginning_of_week
-      @to = TimeWithZone.next_month
+      @from = Time.current.beginning_of_week
+      @to = Time.current.next_month
       @dojos = fetch_dojos
     end
 
