@@ -1,8 +1,8 @@
 language: ruby
 dependencies:
   cache_directories:
-    - public/assets
-    - tmp/cache/assets
+  - public/assets
+  - tmp/cache/assets
 deploy:
   provider: heroku
   api_key:
@@ -10,25 +10,26 @@ deploy:
   app:
     master: coderdojo-japan
   run:
-    - bundle exec rails db:migrate
-    - bundle exec rails db:seed
-    - bundle exec rails dojos:update_db_by_yaml
-    - bundle exec rails dojo_event_services:upsert
+  - bundle exec rails db:migrate
+  - bundle exec rails db:seed
+  - bundle exec rails dojos:update_db_by_yaml
+  - bundle exec rails dojo_event_services:upsert
 cache:
-  - bundler
-# TODO:before_installは次のissueが解決したら削除
-# cf. https://github.com/travis-ci/travis-ci/issues/9333#issuecomment-373042916
+- bundler
 before_install:
-  - gem install bundler
+- gem install bundler
 before_script:
-  - psql -c 'create database coderdojo_jp_test;' -U postgres
+- psql -c 'create database coderdojo_jp_test;' -U postgres
 script:
-  - bundle exec rake db:migrate --trace
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rspec spec; fi
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" = "coderdojo-japan/coderdojo.jp" ]; then bundle exec rspec spec; fi
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" != "coderdojo-japan/coderdojo.jp" ]; then bundle exec rspec spec --tag ~@scrivito; fi
+- bundle exec rake db:migrate --trace
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rspec spec; fi
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" = "coderdojo-japan/coderdojo.jp"
+  ]; then bundle exec rspec spec; fi
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" != "coderdojo-japan/coderdojo.jp"
+  ]; then bundle exec rspec spec --tag ~@scrivito; fi
 env:
   global:
-    - TZ='Asia/Tokyo'
+  - TZ='Asia/Tokyo'
+  - secure: k17tvLJp+21oVTUOEHZmpWSr2jtOq0KIRVRRPbrSqxZfOId3/n3U84gO8YfNk48lhJcFOSRjOWH4e2LWVNSyTh06f1Qbs1qMj7cKHPcO2EIrKLJIZ6eryXi1TkK7hwq2Qy3VrVTHG3pHvbxj0qZGr5V6e8qR+6V3852gAQmeLBvzoQXX2tWhebEUxoN8N/lJDmFUv6gDKVITHnJK2ZJDKLjVwbKjwpCZ6QvWOJqyRRxU/OH4yUh/YGE/h2BjgaqBNwbuwFiwsUJrEFClghC3kOGdEy1nH6K1PbnDSXQoUIGwUE6YIHe/FPXhrFiiWwAnGmWy8B+EWU3guuHakKMfRCTMk39uVvBIMkEK/u1bE0kipEVPNFF9pVFnMBeN0tNiHllZhYzW44SQV43yivOqQ009BlUjdXcG49iTszX8cm3I9HxqW4AcyIl/zvcNqyfC87OFTlsthnJxBHjI7ZfdbLVsRCypdmRUvgqW2hj04xFkzG1OZBKBcxFKRJaUZKw8EqAApQvc8R91cGY3HsXuidcqKbHUHJoJXGGiDB/tK1S3QFIrABOyKiBoL1K9UDnkIpGo2PaBgCgbzYAE4JeOM3u4eV9SauQ+noVonmziZDejM0oIXNdL6h0gLJgNP/RYeBsTpwUtIrCWvXJAl9octYm7UWJy0ntL9KNDqyeX+aY=
 addons:
   postgresql: '9.4'
