@@ -1212,10 +1212,11 @@
   name: みのお (近畿)
   prefecture_id: 27
   logo: "/img/dojos/minoh.png"
-  url: https://www.facebook.com/CoderDojo-Minoh-%E7%AE%95%E9%9D%A2-114262042605720/
-  description: 大阪府箕面市で不定期に開催
+  url: http://www.coderdojo-minoh.org/
+  description: 大阪府箕面市で毎月開催
   tags:
   - Scratch
+  - JavaScript
 - id: 41
   order: '272272'
   created_at: '2016-09-01'
