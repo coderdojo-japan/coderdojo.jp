@@ -1388,6 +1388,18 @@
   description: 奈良県三郷町で毎月開催
   tags:
   - Scratch
+- id: 169
+  order: '293636'
+  created_at: '2018-07-31'
+  name: 明日香 (近畿)
+  prefecture_id: 29
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-asuka.github.io/
+  description: 奈良県明日香村で毎月１回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - micro:bit
 - id: 47
   order: '302015'
   created_at: '2016-11-01'
