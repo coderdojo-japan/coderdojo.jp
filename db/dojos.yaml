@@ -1400,6 +1400,18 @@
   - Scratch
   - Webサイト
   - micro:bit
+- id: 177
+  order: '293636'
+  created_at: '2018-07-31'
+  name: 田原本 (近畿)
+  prefecture_id: 29
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-tawaramoto.github.io/
+  description: 奈良県田原本町で毎月1回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - micro:bit
 - id: 47
   order: '302015'
   created_at: '2016-11-01'
