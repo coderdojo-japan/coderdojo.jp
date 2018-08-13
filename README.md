@@ -103,8 +103,8 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 ## Contributors
 
 Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
-being developed by [YassLab Inc.](https://yasslab.jp/) since 2016, and   
-had been migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
+being developed by [@YassLab](https://github.com/yasslab) team since 2016, and   
+had been migrated to [@coderdojo-japan](http://github.com/coderdojo-japan) organization in 2017.
 
 [![YassLab Logo](https://yasslab.jp/img/logo_800x200.jpg)](https://yasslab.jp/)
 
