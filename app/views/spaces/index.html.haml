@@ -1,0 +1,86 @@
+%section.cover
+  = image_tag "coderdojo-spaces_cover.png", class: "cursor-default"
+
+%section.introduction.text-center.list
+  %h1
+    %b CoderDojo Spaces
+  %br
+  %p 「CoderDojo を運営してます!」という方々と、「CoderDojo 向けに場所提供してもいいよ!」という企業をマッチングするためのページです。
+  %p 以下は CoderDojo 向けにスペースを提供していただける方々のリストになります。もし興味ある企業がありましたら、それぞれに記載されている連絡先にコンタクトしてみてください ;)
+
+%section#events.detail-introduction.text-center
+%section#dojos.dojos.text-center.grayscale-bg
+  %br/
+  %h2 スペース提供企業まとめ
+  %br/
+  %ul.loaded
+    %li.dojo
+      %header
+        %a{:href => "http://www.csaj.jp/"}
+          %span.dojo-picture{:style => "background-image: url('/img/spaces/csaj.png');"}
+          %span.dojo-name CSAJ
+      %ul.tags
+        %li 東京都
+        %li 港区
+        %li 赤坂
+      %p CoderDojo 向けにCSAJ会議室を提供
+    %li.dojo
+      %header
+        %a{:href => "http://bridd.info/"}
+          %span.dojo-picture{:style => "background-image: url('/img/spaces/bridd.png');"}
+          %span.dojo-name SPACE BRiDD
+      %ul.tags
+        %li 東京都
+        %li 神田
+        %li 大手町
+      %p BRIDD大手町、オフィス・コワーキングスペース
+    %li.dojo
+      %header
+        %a{:href => "http://www.kobe.coop.or.jp/"}
+          %span.dojo-picture{:style => "background-image: url('/img/spaces/coop-kobe.png');"}
+          %span.dojo-name コープこうべ
+      %ul.tags
+        %li 兵庫県
+        %li 西宮市
+        %li 芦屋市
+        %li 神戸市
+      %p 現在小さく実験的に実施中。まずは上記のエリアが対象。
+
+.text-center
+  %section.detail-introduction
+    %h2 お問い合わせ
+    %p
+      スペースを提供していただける企業を募集しております!
+      %br
+      もし興味がありましたら下記フォームよりご連絡ください 📨
+
+    / Contact Form via Wufoo
+    #contact
+    #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
+      %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
+      \.
+    #wuf-adv{:style => "font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"}
+      HTML Forms powered by
+      = succeed "." do
+        %a{:href => "https://www.wufoo.com"} Wufoo
+    :javascript
+      var qkjthoy0qpuvg9;(function(d, t) {
+      var s = d.createElement(t), options = {
+        'userName':'yasslab',
+        'formHash':'qkjthoy0qpuvg9',
+        'autoResize':true,
+        'height':'497',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'show',
+        'ssl':true
+      };
+      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+      s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try {
+          qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
+        } catch (e) {}
+      };
+      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+      })(document, 'script');

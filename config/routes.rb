@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get "/docs/charter_en", to: redirect('/charter_en')
   get "/charter"    => "docs#show", id: 'charter'
   get "/charter_en" => "docs#show", id: 'charter_en'
-  resources :docs, only: [:index, :show]
-  resource :stats, only: %i(show)
+  resources :docs,   only: %i(index show)
+  resources :spaces, only: %i(index)
+  resources :stats,  only: %i(show)
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
