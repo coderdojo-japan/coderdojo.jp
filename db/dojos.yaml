@@ -1593,6 +1593,7 @@
   description: 広島県福山市で不定期開催
   tags:
   - Scratch
+  is_active: false
 - id: 92
   order: '352101'
   created_at: '2017-06-19'
