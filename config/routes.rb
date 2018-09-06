@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   get "/charter_en" => "docs#show", id: 'charter_en'
   resources :docs,   only: %i(index show)
   resources :spaces, only: %i(index)
-  resources :stats,  only: %i(show)
+
+  get "/stats"      => "stats#show"
+  # TODO: Need to investigate why the following code calls Scrivito.
+  #       Hotfix with the code above that works correctly.
+  #resources :stats,  only: %i(show)
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
