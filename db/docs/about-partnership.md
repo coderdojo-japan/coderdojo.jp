@@ -76,6 +76,9 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 
 例: さくらインターネットが「さくらのクラウド」を無料提供
 [https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
+
+例: YassLab 株式会社によるWeb開発支援の事例紹介 (スライド資料)
+[https://speakerdeck.com/yasulab/growing-up-together-with-community](https://speakerdeck.com/yasulab/growing-up-together-with-community)
 <br>
 
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
