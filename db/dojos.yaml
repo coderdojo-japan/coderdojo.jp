@@ -565,6 +565,20 @@
   description: 東京都新宿区で毎月開催
   tags:
   - Scratch
+- id: 173
+  order: '131091'
+  created_at: '2018-09-26'
+  name: 品川御殿山 (関東)
+  prefecture_id: 13
+  url: https://www.roundtable.co.jp/~tomio/blog/i01coach/?page_id=2532
+  logo: "/img/dojos/shinagawa-gotenyama.png"
+  description: 東京都品川区で不定期に開催
+  tags:
+  - Scratch
+  - Webサイト
+  - ラズベリーパイ
+  - ロボット
+  - 映像制作
 - id: 17
   order: '131121'
   created_at: '2012-03-12'
