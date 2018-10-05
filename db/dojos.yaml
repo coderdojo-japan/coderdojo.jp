@@ -933,6 +933,20 @@
   - Scratch
   - Webサイト
   - グラフィックデザイン
+- id: 175
+  order: '202029'
+  created_at: '2018-10-05'
+  name: 松本 (中部)
+  prefecture_id: 20
+  url: https://pro.form-mailer.jp/lp/2a6ae9f9153606
+  logo: "/img/dojos/matsumoto.jpg"
+  description: 長野県松本市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - C++
+  - Python
+  - 人工知能
 - id: 94
   order: '202061'
   created_at: '2017-02-20'
