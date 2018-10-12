@@ -68,7 +68,7 @@ info@coderdojo.jp
 はい、一般社団法人 CoderDojo Japan の決算書も公開しています。こちらもご参考になれば ;)
 
 決算報告書 - CoderDojo Japan
-[https://coderdojo.jp/docs/financial-report](https://coderdojo.jp/docs/financial-report)
+[https://coderdojo.jp/financial-report](https://coderdojo.jp/financial-report)
 <br>
 
 ### Q. 物資/サービスによる支援を検討しています。条件はありますか?
