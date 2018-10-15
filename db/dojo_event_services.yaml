@@ -504,3 +504,27 @@
   name: connpass
   group_id: 5910
   url: https://coderdojo-kamoi.connpass.com/
+- dojo_id: 156
+  name: connpass
+  group_id: 5748
+  url: https://coderdojokoga.connpass.com/
+- dojo_id: 178
+  name: connpass
+  group_id: 6175
+  url: https://coderdojokumamoto.connpass.com/
+- dojo_id: 165
+  name: doorkeeper
+  group_id: 9790
+  url: https://coderdojo-kitakata.doorkeeper.jp/
+- dojo_id: 172
+  name: facebook
+  group_id: 542546935853207
+  url: https://www.facebook.com/pg/coderdojo.fukuoka.kurume.suwano/events/
+- dojo_id: 173
+  name: connpass
+  group_id: 640
+  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
+- dojo_id: 174
+  name: connpass
+  group_id: 6562
+  url: https://coderdojo-mitaka.connpass.com/
