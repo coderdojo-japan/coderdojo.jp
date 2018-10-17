@@ -80,20 +80,18 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
 ### `group_id` の各種イベントページサービスの取得方法
 
 - Facebook
-    - [lookup-id](https://lookup-id.com/#) で確認できます
+    1. [lookup-id](https://lookup-id.com/#) にいきます
+	2. 当該 Facebook ページのURLを入力すると `group_id` が確認できます
 - connpass
-    - 組織アカウントの場合は `Series` 経由で確認できます
-        - [イベント例](https://coderdojo-kashii.connpass.com/event/77590/) , [API画面](https://connpass.com/api/v1/event/?event_id=77590)
-	- 個人アカウントの場合は `event_id` 経由で確認できます
-	   1. connpass のイベントページをブラウザで表示 (Ex. https://coderdojo-tobe.connpass.com/)
-	   2. イベントのページを表示 (どのイベントでもいいです)
-	   3. url を見て event のIDを確認 (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
-	   4. 以下のコマンドで上記の event ID を指定すると `group_id` が得られる
-	   
-	   ```
-	   $ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
-	   5072
-	   ```
+	1. connpass のイベントページをブラウザで表示 (Ex. https://coderdojo-tobe.connpass.com/)
+	2. イベントのページを表示 (どのイベントでもいいです)
+	3. url を見て event のIDを確認 (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
+	4. 以下のコマンドで上記の event ID を指定すると `group_id` (Series ID) が得られる
+	
+	```
+	$ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
+	  5072
+	```
 
 ## 本番環境への反映方法
 
