@@ -532,3 +532,7 @@
 #  name: connpass
 #  group_id: # TODO: Add group_id if any event opens from the URL below
 #  url: https://coderdojo-kohokunt.connpass.com/
+- dojo_id: 181
+  name: connpass
+  group_id: 6141
+  url: https://coderdojo-inagawa.connpass.com/
