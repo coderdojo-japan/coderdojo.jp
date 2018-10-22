@@ -1088,6 +1088,18 @@
   - Scratch
   - アプリ開発
   - ラズベリーパイ
+- id: 182
+  order: '232041'
+  created_at: '2018-10-21'
+  name: 瀬戸 (中部)
+  prefecture_id: 23
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-seto.github.io/
+  description: 愛知県瀬戸市で毎月２回開催
+  tags:
+  - Scratch
+  - Ruby
+  - Swift
 - id: 118
   order: '232122'
   created_at: '2017-11-13'
