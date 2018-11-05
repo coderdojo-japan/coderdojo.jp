@@ -544,3 +544,7 @@
   name: facebook
   group_id: 1318246998318371
   url: https://www.facebook.com/pg/CoderDojoHakata/events/
+- dojo_id: 184
+  name: connpass
+  group_id: 6773
+  url: https://coderdojo-azamino.connpass.com/
