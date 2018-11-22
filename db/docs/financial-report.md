@@ -5,7 +5,9 @@
 
 ## 決算報告書
 
-- [第1期 決算報告書 (2016年08月18日〜2017年07月31日)](https://drive.google.com/drive/folders/1z1Awp6zbh0D5jdmppljbnpR5DwWZdJ0N?usp=sharing)
+- [決算書まとめ - Google Drive](https://drive.google.com/drive/folders/1z1Awp6zbh0D5jdmppljbnpR5DwWZdJ0N?usp=sharing) （下記の資料が含まれています）
+  - 第1期 決算報告書 (2016年08月18日〜2017年07月31日)
+  - 第2期 決算報告書 (2017年08月01日〜2018年07月31日)
 
 ## 関連リンク
 
