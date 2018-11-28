@@ -81,6 +81,22 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 [https://speakerdeck.com/yasulab/growing-up-together-with-community](https://speakerdeck.com/yasulab/growing-up-together-with-community)
 <br>
 
+### Q. 他のパートナーシップの事例を教えてくれませんか?
+
+上記の他にも、次のようなパートナーシップがあります。こちらもご参考になれば幸いでうs。
+
+例: プログラミング学習のProgate、CoderDojo Japanと提携
+[https://prtimes.jp/main/html/rd/p/000000045.000015015.html](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
+
+例: 株式会社Cygamesと一般社団法人 CoderDojo Japan、PC寄贈に関するパートナーシップを締結。全国160ヶ所の道場を対象にPCを寄贈
+[https://prtimes.jp/main/html/rd/p/000000474.000005593.html](https://prtimes.jp/main/html/rd/p/000000474.000005593.html)
+
+例: フェイスブックジャパンがCoderDojoのコミュニティ運営をサポート
+[https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/](https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/)
+
+<br>
+
+
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
 CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で周知することが可能です。(上記 `B` に該当)
 
