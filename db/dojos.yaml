@@ -1903,7 +1903,8 @@
   - Mindstorm
   - Java
   - Swift
-- order: '472093'
+- id: 186
+  order: '472093'
   created_at: '2018-12-02'
   name: 名護 (沖縄)
   prefecture_id: 47
