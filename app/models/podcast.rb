@@ -1,7 +1,7 @@
-class Document
+class Podcast
   attr_reader :id, :filename
-  DIR_PATH = 'db/docs'
-  URL_PATH = 'docs'
+  DIR_PATH  = 'db/podcasts'
+  URL_PATH  = 'podcasts'
 
   class << self
     def all
