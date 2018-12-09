@@ -6,7 +6,7 @@ class Podcast
   class << self
     def all
       Dir.glob("#{DIR_PATH}/*.md").map do |filename|
-        Document.new(File.basename(filename, '.*'))
+        self.new(File.basename(filename, '.*'))
       end
     end
   end
