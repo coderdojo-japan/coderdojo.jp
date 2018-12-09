@@ -3,7 +3,7 @@ class PodcastsController < ApplicationController
     @title = 'DojoCast'
     @desc  = 'Highlight people around CoderDojo communities by Podcast 📻✨'
     @episodes  = Podcast.all
-    @url   = request.url
+    @url       = request.url
   end
 
   def show
