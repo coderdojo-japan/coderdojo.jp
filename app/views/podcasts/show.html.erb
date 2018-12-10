@@ -1,0 +1,9 @@
+<% provide(:title, @episode.title) %>
+<% provide(:desc,  @episode.description) %>
+<% provide(:url,   @url) %>
+
+<div class="container" style="line-height: 1.9em;">
+  <section class="keiyaku" style="padding: 50px 0px 100px 0px;">
+    <%= raw @content %>
+  </section>
+</div>
