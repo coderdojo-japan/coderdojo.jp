@@ -2,8 +2,56 @@
 <% provide(:desc,  @episode.description) %>
 <% provide(:url,   @url) %>
 
+<!--{% include header.html %}-->
+
 <div class="container" style="line-height: 1.9em;">
   <section class="keiyaku" style="padding: 50px 0px 100px 0px;">
+    <section class="main-content players" id="player2-container">
+      <div class="players" id="player2-container">
+	<div class="media-wrapper">
+	  <audio id="player2" preload="none" controls style="max-width:100%;">
+	    <source src="1.mp3" type="audio/mp3" />
+	  </audio>
+	</div>
+	<div style="text-align: right; ">収録日: {{ page.date }}</div>
+      </div>
+    </section>
+    <br />
+ 
     <%= raw @content %>
   </section>
 </div>
+
+<div style="visibility:hidden">
+  <label><select name="sources">
+      <option value="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3">MP3</option>
+    </select>
+  </label>
+  <br>
+  <div class="player-info">
+    <div id="player2-rendername">
+      <p><strong>DL</strong>: <span class="src"><a href="001.mp3" target="_blank"></a></span></p>
+      <p><strong>Renderer</strong>: <span class="renderer"></span></p>
+      <p class="error"></p>
+    </div>
+  </div>
+  
+  <form action="#" method="get">
+    <label>Language <select name="lang">
+        <option value="en" selected>English (en)</option>
+        <option value="ja">Japanese (ja)</option>
+      </select>
+    </label><br />
+    <label>Stretching<select name="stretching">
+        <option value="auto" selected>Auto (default)</option>
+        <option value="responsive">Responsive</option>
+        <option value="fill" selected>Fill</option>
+          <option value="none" selected>None (original dimensions)</option>
+      </select>
+    </label>
+  </form>
+</div>
+
+<script src="/build/mediaelementplayer.js"></script>
+<script src="/build/lang/ja.js"></script>
+<script src="/assets/demo.js"></script>
