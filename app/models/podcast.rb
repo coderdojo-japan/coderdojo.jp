@@ -1,6 +1,6 @@
 class Podcast
   attr_reader :id, :filename
-  DIR_PATH  = 'db/podcasts'
+  DIR_PATH  = 'public/podcasts'
   URL_PATH  = 'podcasts'
 
   class << self
