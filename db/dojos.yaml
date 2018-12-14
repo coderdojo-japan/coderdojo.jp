@@ -1741,6 +1741,20 @@
   description: 徳島県三好市で毎月第二週に開催
   tags:
   - Minecraft
+- id: 188
+  order: '363421'
+  created_at: '2018-12-13'
+  name: 神山 (四国)
+  prefecture_id: 36
+  logo: "/img/dojos/kamiyama.png"
+  url: https://www.facebook.com/CDKamiyama/
+  description: 徳島県神山町で毎月開催
+  tags:
+  - Scratch
+  - HTML5
+  - Ruby
+  - Python
+  - Drone
 - id: 144
   order: '401005'
   created_at: '2018-04-22'
