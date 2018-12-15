@@ -7,9 +7,10 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    @episode = Podcast.new(params[:id])
+    @episode  = Podcast.new(params[:id])
     redirect_to root_url unless @episode.exists?
-    @content = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
-    @url     = request.url
+    @filename = @episode.filename
+    @content  = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
+    @url      = request.url
   end
 end
