@@ -23,9 +23,9 @@ class Podcast
     "/#{URL_PATH}/#{self.filename}"
   end
 
-  def exists?
+  def exists?(offset: 0)
     return false if path.include? "\u0000"
-    File.exists?(path)
+    File.exists?("#{DIR_PATH}/#{self.filename.to_i + offset}.md")
   end
 
   def title

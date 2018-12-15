@@ -2,8 +2,8 @@ class PodcastsController < ApplicationController
   def index
     @title = 'DojoCast'
     @desc  = 'Highlight people around CoderDojo communities by Podcast 📻✨'
-    @episodes  = Podcast.all
-    @url       = request.url
+    @episodes = Podcast.all
+    @url      = request.url
   end
 
   def show

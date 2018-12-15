@@ -3,6 +3,33 @@
 <% provide(:url,   @url) %>
 
 <img alt="DojoCast Cover Photo" src="/img/dojocast-cover.jpg" />
+
+<style type="text/css">
+  .prev { display: table-cell; font-color: white; text-align: left;   }
+  .toc  { display: table-cell; font-color: white; text-align: center; }
+  .next { display: table-cell; font-color: white; text-align: right;  }
+  .nav a:link, a:visited { color: white; }
+</style>
+
+<div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
+  <p class="nav prev">
+    <% if @episode.exists?(offset: -1) %>
+      <a href="/podcasts/<%= @filename.to_i - 1 %>">&larr; prev</a>
+    <% else %>
+      <a href="/podcasts">&larr; 目次へ</a>
+    <% end %>
+  </p>
+  <p class="nav toc" >
+    <a href="/podcasts/">目次へ戻る</a></p>
+  <p class="nav next">
+    <% if @episode.exists?(offset: +1) %>
+      <a href="/podcasts/<%= @filename.to_i + 1 %>">next &rarr;</a>
+    <% else %>
+      <a href="/podcasts">目次へ &rarr;</a>
+    <% end %>
+  </p>
+</div>
+
 <div class="container" style="line-height: 1.9em;">
   <section class="keiyaku" style="padding: 50px 0px 100px 0px;">
     <section class="main-content players" id="player2-container">
