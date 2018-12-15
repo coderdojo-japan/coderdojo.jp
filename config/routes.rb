@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/financial-report" => "docs#show", id: 'financial-report'
-  resources :docs,   only: %i(index show)
-  resources :spaces, only: %i(index)
+  resources :docs,     only: %i(index show)
+  resources :podcasts, only: %i(index show)
+  resources :spaces,   only: %i(index)
 
   get "/stats"      => "stats#show"
   # TODO: Need to investigate why the following code calls Scrivito.

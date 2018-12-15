@@ -1,12 +1,12 @@
 class Document
   attr_reader :id, :filename
-  DOCS_PATH = 'db/docs'
-  URL_PATH  = 'docs'
+  DIR_PATH = 'db/docs'
+  URL_PATH = 'docs'
 
   class << self
     def all
-      Dir.glob("#{DOCS_PATH}/*.md").map do |filename|
-        Document.new(File.basename(filename, '.*'))
+      Dir.glob("#{DIR_PATH}/*.md").sort.map do |filename|
+        self.new(File.basename(filename, '.*'))
       end
     end
   end
@@ -16,7 +16,7 @@ class Document
   end
 
   def path
-    "#{DOCS_PATH}/#{self.filename}.md"
+    "#{DIR_PATH}/#{self.filename}.md"
   end
 
   def url
