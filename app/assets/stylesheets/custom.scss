@@ -33,14 +33,6 @@
 	height: 100% !important;
 }
 
-
-.cursor-default{
-  cursor: default !important;
-}
-.cursor-pointer{
-  cursor: pointer !important;
-}
-
 .headline{
   color: white;
   background: #2275CA;
@@ -58,8 +50,11 @@ div #README{
 
 img{
   width:100%;
-  &:hover {
-    cursor: default;
+}
+a > img {
+  width: 100%;
+  &:hover{
+    cursor: pointer;
   }
 }
 
@@ -235,7 +230,7 @@ body {
 }
 
 a {
-    color: #2e9ad9
+  color: #2e9ad9;
 }
 
 .under-construction {
