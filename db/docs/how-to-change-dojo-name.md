@@ -33,7 +33,8 @@ CoderDojo の名称が変更した例の1つに [CoderDojo 紙屋町](https://ww
 
 というメッセージと共に、CoderDojo 広島から CoderDojo 紙屋町に名称が変更されました。
 
-参考: [CoderDojo紙屋町に名称変更しました！](https://www.coderdojo-hiroshima.com/%E8%AA%AC%E6%98%8E%E4%BC%9A/coderdojo%E7%B4%99%E5%B1%8B%E7%94%BA%E3%81%AB%E5%90%8D%E7%A7%B0%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81)
+参考: CoderDojo紙屋町に名称変更しました！ − CoderDojo紙屋町   
+[https://www.coderdojo-hiroshima.com/説明会/CoderDojo紙屋町に名称変更しました！](https://www.coderdojo-hiroshima.com/%E8%AA%AC%E6%98%8E%E4%BC%9A/coderdojo%E7%B4%99%E5%B1%8B%E7%94%BA%E3%81%AB%E5%90%8D%E7%A7%B0%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81)
 
 上記は１つの事例ではありますが、皆さんが Dojo 名の変更を検討する際のご参考になれば幸いです ;)
 
