@@ -2,7 +2,7 @@ class PodcastsController < ApplicationController
   def index
     @title = 'DojoCast'
     @desc  = 'Highlight people around CoderDojo communities by Podcast 📻✨'
-    @episodes = Podcast.all
+    @episodes = Podcast.all.sort_by{|episode| episode.filename.rjust(3, '0')}
     @url      = request.url
   end
 
