@@ -547,10 +547,10 @@
 - id: 97
   order: '131016'
   created_at: '2017-08-16'
-  name: 秋葉原 (関東)
+  name: 末広町 (関東)
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/coderdojoakihabara/
+  url: https://www.facebook.com/coderdojosuehirocho/
   description: 東京都千代田区で毎月開催
   tags:
   - Scratch
