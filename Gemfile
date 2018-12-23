@@ -5,7 +5,7 @@ gem 'rails', '5.1.6'
 gem 'pg'
 gem 'dumper'
 
-gem 'scrivito', '~> 1.13.0'
+gem 'scrivito', '~> 1.14.0'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 

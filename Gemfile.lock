@@ -303,20 +303,20 @@ GEM
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
-    scrivito (1.13.0)
-      scrivito_content_browser (= 1.13.0)
-      scrivito_editors (= 1.13.0)
-      scrivito_sdk (= 1.13.0)
-      scrivito_ui (= 1.13.0)
-    scrivito_content_browser (1.13.0)
+    scrivito (1.14.0)
+      scrivito_content_browser (= 1.14.0)
+      scrivito_editors (= 1.14.0)
+      scrivito_sdk (= 1.14.0)
+      scrivito_ui (= 1.14.0)
+    scrivito_content_browser (1.14.0)
       railties
-      scrivito_sdk (= 1.13.0)
-    scrivito_editors (1.13.0)
+      scrivito_sdk (= 1.14.0)
+    scrivito_editors (1.14.0)
       jquery-ui-rails (>= 5.0.0, < 7.0.0)
       railties
-      scrivito_content_browser (= 1.13.0)
-      scrivito_sdk (= 1.13.0)
-    scrivito_sdk (1.13.0)
+      scrivito_content_browser (= 1.14.0)
+      scrivito_sdk (= 1.14.0)
+    scrivito_sdk (1.14.0)
       addressable (~> 2.3)
       connection_pool (~> 2.2)
       diff-lcs (~> 1.2)
@@ -334,7 +334,7 @@ GEM
       scrivito
     scrivito_teaser_widget (0.1.2)
       scrivito
-    scrivito_ui (1.13.0)
+    scrivito_ui (1.14.0)
       railties
     secure_headers (6.0.0)
     selenium-webdriver (3.141.0)
@@ -429,7 +429,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   rspec-retry
   sass-rails
-  scrivito (~> 1.13.0)
+  scrivito (~> 1.14.0)
   scrivito_section_widgets
   scrivito_teaser_widget
   secure_headers
