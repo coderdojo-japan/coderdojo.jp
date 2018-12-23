@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-gem 'rails', '5.1.6'
+gem 'rails', '~> 5.1.6'
 gem 'pg'
 gem 'dumper'
 
-gem 'scrivito', '~> 1.13.0'
+gem 'scrivito', '~> 1.15.0'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 
@@ -31,18 +31,10 @@ gem 'secure_headers'
 gem 'kramdown'
 
 gem 'faraday'
-# TODO: Delete this if the following issue is fixed
-# https://github.com/bundler/bundler/issues/5332
-gem 'faraday_middleware', '0.10'
-
 gem 'koala'
-
 gem 'rack-user_agent'
-
 gem 'rack-attack'
-
 gem 'google_drive'
-
 gem 'lazy_high_charts'
 
 group :development do
