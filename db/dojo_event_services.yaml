@@ -552,15 +552,21 @@
   name: doorkeeper
   group_id: 9906
   url: https://coderdojo-gotanda.doorkeeper.jp/
-# CoderDojo Nago
-#- dojo_id: 186
+#- dojo_id: 186 # CoderDojo Nago
 #  name: facebook
 #  group_id: 
 #  url: 
-# CoderDojo 神山
-#- dojo_id: 188
+#- dojo_id: 188 # CoderDojo 神山
 #  name: 
 #  group_id: 
 #  url: 
+#- dojo_id: 190 # CoderDojo 溝口
+#  name: connpass
+#  group_id: 
+#  url: https://coderdojo-mizonokuchi.connpass.com/
+#- dojo_id: 190 # CoderDojo 溝口
+#  name: connpass
+#  group_id: 
+#  url: https://coderdojo-mizonokuchi.connpass.com/
 
 
