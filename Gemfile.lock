@@ -205,7 +205,7 @@ GEM
     pry-byebug (3.6.0)
       byebug (~> 10.0)
       pry (~> 0.10)
-    pry-doc (0.13.5)
+    pry-doc (1.0.0)
       pry (~> 0.11)
       yard (~> 0.9.11)
     pry-rails (0.3.8)
