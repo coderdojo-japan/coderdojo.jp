@@ -1864,6 +1864,19 @@
   - Webサイト
   - Python
   - LEGO Mindstorms
+- id: 191
+  order: '402214'
+  created_at: '2019-01-04'
+  name: 太宰府 (九州)
+  prefecture_id: 40
+  logo: "/img/dojos/dazaifu.png"
+  url: https://www.facebook.com/pg/CoderDojoDazaifu/
+  description: 福岡県太宰府市で毎月開催
+  tags:
+  - Scratch
+  - Hour of Code
+  - Webサイト
+  - micro:bit
 - id: 122
   order: '413411'
   created_at: '2017-12-15'
