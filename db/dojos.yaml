@@ -1725,6 +1725,20 @@
   tags:
   - Scratch
   is_active: false
+- id: 192
+  order: '352021'
+  created_at: '2019-01-14'
+  name: 宇部 (中国)
+  prefecture_id: 35
+  logo: "/img/dojos/ube.png"
+  url: https://coderdojo-ube.com/
+  description: 山口県宇部市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
+  - Webサイト
+  - アプリ開発
+  - グラフィックデザイン
 - id: 92
   order: '352101'
   created_at: '2017-06-19'
