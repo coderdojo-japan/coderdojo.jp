@@ -1545,6 +1545,7 @@
   description: 奈良県三郷町で毎月開催
   tags:
   - Scratch
+  is_active: false
 - id: 169
   order: '293636'
   created_at: '2018-07-31'
