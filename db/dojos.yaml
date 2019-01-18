@@ -1736,6 +1736,18 @@
   tags:
   - Scratch
   is_active: false
+- id: 194
+  order: '341002'
+  created_at: '2018-06-10'
+  name: 三次市 (中国)
+  prefecture_id: 34
+  logo: "/img/dojos/miyoshi-34.png"
+  url: https://dojo-miyoshi.com
+  description: 広島県三次市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Python 
 - id: 192
   order: '352021'
   created_at: '2019-01-14'
