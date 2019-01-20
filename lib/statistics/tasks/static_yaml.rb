@@ -5,7 +5,7 @@ module Statistics
         EventHistory.for(:static_yaml).delete_all
       end
 
-      def initialize(dojos, _date, _weekly)
+      def initialize(dojos, _date)
         @client = EventService::Providers::StaticYaml.new
         @dojos = dojos
       end

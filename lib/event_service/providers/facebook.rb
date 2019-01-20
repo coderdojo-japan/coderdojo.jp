@@ -2,11 +2,13 @@ module EventService
   module Providers
       class Facebook
         class_attribute :access_token
+        # NOTE: 指定は since, untill パラメータ指定、未指定時直近二週間
 
         def initialize
           @client = Koala::Facebook::API.new(self.access_token)
         end
 
+        # NOTE: since_at, until_at は DateTime で指定
         def fetch_events(group_id:, since_at: nil, until_at: nil)
           params = {
             fields: %i(attending_count start_time owner),
