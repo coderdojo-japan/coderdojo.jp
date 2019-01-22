@@ -10,8 +10,8 @@ class StatsController < ApplicationController
     @sum_of_dojos        = DojoEventService.count('DISTINCT dojo_id')
     @sum_of_participants = EventHistory.sum(:participants)
 
-    # 2012年1月1日〜2017年12月31日までの集計結果
-    period = Time.zone.local(2012).beginning_of_year..Time.zone.local(2017).end_of_year
+    # 2012年1月1日〜2018年12月31日までの集計結果
+    period = Time.zone.local(2012).beginning_of_year..Time.zone.local(2018).end_of_year
     stat   = Stat.new(period)
     @dojos        = stat.annual_sum_total_of_aggregatable_dojo
     @events       = stat.annual_count_of_event_histories
