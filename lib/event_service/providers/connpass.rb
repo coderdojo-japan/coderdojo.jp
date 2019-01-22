@@ -30,7 +30,7 @@ module EventService
           param_period_patern = [{}] if param_period_patern.blank?
 
           events = []
-          
+
           param_period_patern.each do |param_period|
             loop do
               part = @client.get('event/', params.merge(param_period))

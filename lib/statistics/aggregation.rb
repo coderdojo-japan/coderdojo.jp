@@ -38,7 +38,7 @@ module Statistics
                 when 8,10 then date_from(to)
                 end
 
-      [from_date, to_date]
+      [from_date, [to_date, Time.zone.yesterday].min]
     end
 
     def date_from(str)
