@@ -1274,11 +1274,11 @@
 - id: 44
   order: '271004'
   created_at: '2016-08-15'
-  name: 本町 (近畿)
+  name: 大阪狭山・本町 (近畿)
   prefecture_id: 27
   logo: "/img/dojos/hommachi.png"
   url: https://coderdojo-hommachi.doorkeeper.jp/
-  description: 大阪府大阪市で隔月開催
+  description: 大阪狭山と本町で隔月開催
   tags:
   - Scratch
   - Ruby
