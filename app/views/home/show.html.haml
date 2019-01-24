@@ -79,7 +79,7 @@
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
-    %h2 もっと詳しく知りたい
+    %h2#next-step もっと詳しく知りたい
     %br
     %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
     %ul
@@ -92,9 +92,10 @@
     %br
     %p Kata では学習や運営に役立つ資料を、Facebook では全国の活動を知ることができます。海外の雰囲気は CoderDojo Foundation から公開しています。
     %p
-      「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には
-      %a{:href => "/kata"} CoderDojo Kata
-      を参照してみてください。
+      「地元で道場を立ち上げてみたい」「道場向けの各種支援を知りたい」といった場合は、
+      %a{:href => "/kata#startup"}<>
+        Kata の立ち上げる
+      を読んでみてください。
     = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', style: 'margin-bottom: 15px;'), '/kata'
 %section#partners.detail-introduction.partners_logo.text-center
   %br
