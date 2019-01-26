@@ -2,7 +2,7 @@
 - id: 64
   order: '011002'
   created_at: '2016-09-26'
-  name: 札幌 (北海道)
+  name: 札幌
   prefecture_id: 1
   url: http://www.coderdojo-sapporo.jp/
   logo: "/img/dojos/sapporo.jpg"
@@ -15,7 +15,7 @@
 - id: 104
   order: '011002'
   created_at: '2016-09-26'
-  name: 札幌東 (北海道)
+  name: 札幌東
   prefecture_id: 1
   url: https://coderdojo-sapporo-east.blogspot.jp/
   logo: "/img/dojos/japan.png"
@@ -28,7 +28,7 @@
 - id: 100
   order: '012319'
   created_at: '2017-09-20'
-  name: 恵庭 (北海道)
+  name: 恵庭
   prefecture_id: 1
   url: https://www.facebook.com/CoderDojoEniwa/
   logo: "/img/dojos/japan.png"
@@ -40,7 +40,7 @@
 - id: 143
   order: '032107'
   created_at: '2018-04-21'
-  name: 陸前高田 (東北)
+  name: 陸前高田
   prefecture_id: 3
   url: https://www.facebook.com/CoderDojo%E9%99%B8%E5%89%8D%E9%AB%98%E7%94%B0-1983701135226932/
   logo: "/img/dojos/rikuzentakata.png"
@@ -50,7 +50,7 @@
 - id: 109
   order: '032166'
   created_at: '2017-09-25'
-  name: 滝沢 (東北)
+  name: 滝沢
   prefecture_id: 3
   url: https://www.facebook.com/CoderDojoTakizawa/
   logo: "/img/dojos/japan.png"
@@ -62,7 +62,7 @@
 - id: 107
   order: '032069'
   created_at: '2017-06-20'
-  name: きたかみ (東北)
+  name: きたかみ
   prefecture_id: 3
   url: https://coderdojo.waraukado.jp/
   logo: "/img/dojos/kitakami.jpg"
@@ -73,7 +73,7 @@
 - id: 3
   order: '041009'
   created_at: '2014-01-23'
-  name: 泉 (東北)
+  name: 泉
   prefecture_id: 4
   url: https://www.facebook.com/CoderdojoIzumi
   logo: "/img/dojos/izumi.png"
@@ -83,7 +83,7 @@
 - id: 90
   order: '041009'
   created_at: '2017-07-01'
-  name: 愛子 (東北)
+  name: 愛子
   prefecture_id: 4
   url: https://www.facebook.com/CoderDojo-Ayashi-277617015979351/
   logo: "/img/dojos/japan.png"
@@ -95,7 +95,7 @@
 - id: 85
   order: '042072'
   created_at: '2017-03-27'
-  name: 名取 (東北)
+  name: 名取
   prefecture_id: 4
   url: https://www.facebook.com/CoderDojo-Natori-1379707208756830
   logo: "/img/dojos/natori.png"
@@ -107,7 +107,7 @@
 - id: 4
   order: '042129'
   created_at: '2016-04-25'
-  name: 登米 (東北)
+  name: 登米
   prefecture_id: 4
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojo.tome
@@ -119,7 +119,7 @@
 - id: 59
   order: '044458'
   created_at: '2016-10-06'
-  name: 中新田 (東北)
+  name: 中新田
   prefecture_id: 4
   logo: "/img/dojos/nakaniida.png"
   url: https://www.facebook.com/coderdojoNakaniida/
@@ -132,7 +132,7 @@
 - id: 75
   order: '052019'
   created_at: '2017-04-03'
-  name: 秋田 (東北)
+  name: 秋田
   prefecture_id: 5
   url: https://coderdojo.akita.work/
   logo: "/img/dojos/japan.png"
@@ -146,7 +146,7 @@
 - id: 139
   order: '052035'
   created_at: '2018-03-27'
-  name: 増田 (東北)
+  name: 増田
   prefecture_id: 5
   url: https://sites.google.com/view/coderdojo-masuda/home
   logo: "/img/dojos/masuda.png"
@@ -156,7 +156,7 @@
 - id: 74
   order: '062014'
   created_at: '2017-03-28'
-  name: 山形 (東北)
+  name: 山形
   prefecture_id: 6
   logo: "/img/dojos/yamagata.png"
   url: https://zen.coderdojo.com/dojo/jp/ri4-ben3-shan1-xing2-xian4-shan1-xing2-shi4/yamagata
@@ -170,7 +170,7 @@
 - id: 79
   order: '072028'
   created_at: '2017-03-29'
-  name: 会津 (東北)
+  name: 会津
   prefecture_id: 7
   logo: "/img/dojos/aizu.png"
   url: http://coderdojoaizu.strikingly.com/
@@ -184,7 +184,7 @@
 - id: 165
   order: '072087'
   created_at: '2018-08-13'
-  name: 喜多方 (東北)
+  name: 喜多方
   prefecture_id: 7
   logo: "/img/dojos/japan.png"
   url: http://www.coderdojo-kitakata.com/
@@ -198,7 +198,7 @@
 - id: 149
   order: '072052'
   created_at: '2018-05-29'
-  name: 白河 (東北)
+  name: 白河
   prefecture_id: 7
   logo: "/img/dojos/shirakawa.png"
   url: http://coderdojoshirakawa.strikingly.com/
@@ -209,7 +209,7 @@
 - id: 156
   order: '082040'
   created_at: '2018-07-09'
-  name: 古河 (関東)
+  name: 古河
   prefecture_id: 8
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojokoga/
@@ -220,7 +220,7 @@
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
-  name: つくば (関東)
+  name: つくば
   prefecture_id: 8
   logo: "/img/dojos/tsukuba.png"
   url: https://coderdojotsukuba.web.fc2.com/
@@ -230,7 +230,7 @@
 - id: 73
   order: '082210'
   created_at: '2017-03-28'
-  name: ひたちなか (関東)
+  name: ひたちなか
   prefecture_id: 8
   logo: "/img/dojos/hitachinaka.png"
   url: https://www.facebook.com/coderdojo.hitachinaka/
@@ -241,7 +241,7 @@
 - id: 65
   order: '082015'
   created_at: '2017-01-03'
-  name: 水戸 (関東)
+  name: 水戸
   prefecture_id: 8
   logo: "/img/dojos/mito.png"
   url: http://coderdojo-mito.com/
@@ -252,7 +252,7 @@
 - id: 176
   order: '082023'
   created_at: '2018-10-08'
-  name: 日立 (関東)
+  name: 日立
   prefecture_id: 8
   logo: "/img/dojos/japan.png"
   url: https://coderdojohitachi.amebaownd.com/
@@ -263,7 +263,7 @@
 - id: 8
   order: '082244'
   created_at: '2016-07-12'
-  name: 守谷 (関東)
+  name: 守谷
   prefecture_id: 8
   logo: "/img/dojos/moriya.jpg"
   url: http://coderdojo-moriya.com/
@@ -275,7 +275,7 @@
 - id: 89
   order: '092142'
   created_at: '2017-06-21'
-  name: さくら (関東)
+  name: さくら
   prefecture_id: 9
   logo: "/img/dojos/sakura.png"
   url: https://coderdojo-sakura.github.io/
@@ -289,7 +289,7 @@
 - id: 7
   order: '102016'
   created_at: '2016-10-17'
-  name: 前橋 (関東)
+  name: 前橋
   prefecture_id: 10
   logo: "/img/dojos/maebashi.png"
   url: https://vtmacs003b.github.io/maebashi.jp/
@@ -302,7 +302,7 @@
 - id: 180
   order: '102075'
   created_at: '2018-08-08'
-  name: 館林 (関東)
+  name: 館林
   prefecture_id: 10
   logo: "/img/dojos/tatebayashi.png"
   url: http://coderdojo-tatebayashi.net/
@@ -314,7 +314,7 @@
 - id: 9
   order: '111007'
   created_at: '2014-05-26'
-  name: さいたま (関東)
+  name: さいたま
   prefecture_id: 11
   url: http://coderdojo-saitama.com/
   logo: "/img/dojos/coderdojo.png"
@@ -326,7 +326,7 @@
 - id: 12
   order: '112089'
   created_at: '2015-12-01'
-  name: 所沢 (関東)
+  name: 所沢
   prefecture_id: 11
   url: https://www.facebook.com/CoderDojoTokorozawa/
   logo: "/img/dojos/tokorozawa.png"
@@ -336,7 +336,7 @@
 - id: 77
   order: '112089'
   created_at: '2017-03-14'
-  name: 小手指 (関東)
+  name: 小手指
   prefecture_id: 11
   url: https://coderdojokotesashi.github.io/
   logo: "/img/dojos/kotesashi.png"
@@ -347,7 +347,7 @@
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
-  name: 飯能 (関東)
+  name: 飯能
   prefecture_id: 11
   url: https://www.facebook.com/CoderDojoHanno
   logo: "/img/dojos/hanno.png"
@@ -357,7 +357,7 @@
 - id: 10
   order: '112305'
   created_at: '2012-07-02'
-  name: ひばりヶ丘 (関東)
+  name: ひばりヶ丘
   prefecture_id: 11
   url: http://coderdojo.hanare-hibari.info/
   logo: "/img/dojos/hibarigaoka.jpg"
@@ -370,7 +370,7 @@
 - id: 22
   order: '121002'
   created_at: '2013-07-30'
-  name: 千葉 (関東)
+  name: 千葉
   prefecture_id: 12
   logo: "/img/dojos/chiba.png"
   url: http://chiba.coderdojo.chiba.jp/
@@ -384,7 +384,7 @@
 - id: 25
   order: '121002'
   created_at: '2016-04-27'
-  name: 若葉みつわ台 (関東)
+  name: 若葉みつわ台
   prefecture_id: 12
   logo: "/img/dojos/wakaba-mitsuwadai.png"
   url: http://wakaba.coderdojo.chiba.jp/
@@ -394,7 +394,7 @@
 - id: 151
   order: '121002'
   created_at: '2018-04-24'
-  name: 若葉若松 (関東)
+  name: 若葉若松
   prefecture_id: 12
   logo: "/img/dojos/wakaba-wakamatsu.png"
   url: https://coderdojo-wakaba-wakamatsu.github.io/
@@ -404,7 +404,7 @@
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
-  name: 市川 (関東)
+  name: 市川
   prefecture_id: 12
   logo: "/img/dojos/ichikawa.jpg"
   url: http://ichikawa.coderdojo.chiba.jp
@@ -417,7 +417,7 @@
 - id: 82
   order: '122033'
   created_at: '2017-03-28'
-  name: 市川真間 (関東)
+  name: 市川真間
   prefecture_id: 12
   logo: "/img/dojos/ichikawa-mama.jpg"
   url: http://beyondbb.jp/CDmama/index.html
@@ -427,7 +427,7 @@
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
-  name: 船橋(関東)
+  name: 船橋
   prefecture_id: 12
   logo: "/img/dojos/funabashi.jpg"
   url: http://funabashi.coderdojo.chiba.jp/
@@ -439,7 +439,7 @@
 - id: 83
   order: '122068'
   created_at: '2017-04-27'
-  name: 木更津 (関東)
+  name: 木更津
   prefecture_id: 12
   logo: "/img/dojos/kisarazu.png"
   url: https://coderdojo-kisarazu.github.io/
@@ -451,7 +451,7 @@
 - id: 114
   order: '122076'
   created_at: '2017-09-06'
-  name: 松戸 (関東)
+  name: 松戸
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
   url: http://code4matsudo.org/coder-dojo-matsudo/2017/10/15/283/
@@ -461,7 +461,7 @@
 - id: 20
   order: '122084'
   created_at: '2016-11-08'
-  name: 野田 (関東)
+  name: 野田
   prefecture_id: 12
   logo: "/img/dojos/noda.jpg"
   url: https://www.facebook.com/coderdojonoda/
@@ -472,7 +472,7 @@
 - id: 23
   order: '122173'
   created_at: '2014-09-22'
-  name: 柏 (関東)
+  name: 柏
   prefecture_id: 12
   url: http://www.coderdojo-kashiwa.com/
   logo: "/img/dojos/coderdojo.png"
@@ -482,7 +482,7 @@
 - id: 125
   order: '122173'
   created_at: '2018-01-27'
-  name: 柏沼南 (関東)
+  name: 柏沼南
   prefecture_id: 12
   url: https://www.facebook.com/CoderDojoKashiwaShounan/
   logo: "/img/dojos/kashiwa-shounan.jpg"
@@ -492,7 +492,7 @@
 - id: 112
   order: '122173'
   created_at: '2017-09-26'
-  name: 南柏 (関東)
+  name: 南柏
   prefecture_id: 12
   url: http://www.coderdojo-kashiwa.com/dojo/minamikashiwa/
   logo: "/img/dojos/minami-kashiwa.png"
@@ -502,7 +502,7 @@
 - id: 24
   order: '122203'
   created_at: '2016-04-27'
-  name: 流山 (関東)
+  name: 流山
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
   url: http://www.code-for-nagareyama.org/?cat=11
@@ -512,7 +512,7 @@
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
-  name: 浦安 (関東)
+  name: 浦安
   prefecture_id: 12
   logo: "/img/dojos/urayasu.png"
   url: http://urayasu.coderdojo.chiba.jp/
@@ -525,7 +525,7 @@
 - id: 152
   order: '122301'
   created_at: '2018-06-30'
-  name: やちまた (関東)
+  name: やちまた
   prefecture_id: 12
   logo: "/img/dojos/yachimata.png"
   url: https://peraichi.com/landing_pages/view/coderdojoyachimata
@@ -535,7 +535,7 @@
 - id: 121
   order: '131016'
   created_at: '2017-11-28'
-  name: 御茶ノ水 (関東)
+  name: 御茶ノ水
   prefecture_id: 13
   logo: "/img/dojos/ochanomizu.jpg"
   url: https://www.facebook.com/CoderDojoOchanomizuTam/
@@ -547,7 +547,7 @@
 - id: 97
   order: '131016'
   created_at: '2017-08-16'
-  name: 末広町 (関東)
+  name: 末広町
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojosuehirocho/
@@ -557,7 +557,7 @@
 - id: 58
   order: '131041'
   created_at: '2017-09-26'
-  name: 高田馬場 (関東)
+  name: 高田馬場
   prefecture_id: 13
   logo: "/img/dojos/takadanobaba.jpg"
   url: http://coderdojo-tdbb.com/
@@ -569,7 +569,7 @@
 - id: 69
   order: '131041'
   created_at: '2017-01-23'
-  name: 西新宿 (関東)
+  name: 西新宿
   prefecture_id: 13
   logo: "/img/dojos/nishishinjuku.png"
   url: https://coderdojo-nishishinjuku.connpass.com/
@@ -579,7 +579,7 @@
 - id: 173
   order: '131091'
   created_at: '2018-09-26'
-  name: 品川御殿山 (関東)
+  name: 品川御殿山
   prefecture_id: 13
   url: https://www.roundtable.co.jp/~tomio/blog/i01coach/?page_id=2532
   logo: "/img/dojos/shinagawa-gotenyama.png"
@@ -593,7 +593,7 @@
 - id: 185
   order: '131091'
   created_at: '2018-11-20'
-  name: 五反田 (関東)
+  name: 五反田
   prefecture_id: 13
   url: https://www.facebook.com/groups/295361057723820/
   logo: "/img/dojos/japan.png"
@@ -607,7 +607,7 @@
 - id: 17
   order: '131121'
   created_at: '2012-03-12'
-  name: 下北沢 (関東)
+  name: 下北沢
   prefecture_id: 13
   url: https://coderdojo-tokyo.connpass.com/
   logo: "/img/dojos/shimokitazawa.jpg"
@@ -619,7 +619,7 @@
 - id: 19
   order: '131130'
   created_at: '2016-09-27'
-  name: 渋谷 (関東)
+  name: 渋谷
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/groups/coderdojo.shibuya/
@@ -629,7 +629,7 @@
 - id: 15
   order: '131148'
   created_at: '2016-07-20'
-  name: 中野 (関東)
+  name: 中野
   prefecture_id: 13
   logo: "/img/dojos/nakano.png"
   url: https://www.facebook.com/coderdojonakano/
@@ -642,7 +642,7 @@
 - id: 16
   order: '131156'
   created_at: '2016-09-09'
-  name: すぎなみ (関東)
+  name: すぎなみ
   prefecture_id: 13
   logo: "/img/dojos/suginami.png"
   url: https://coderdojo-suginami.github.io/
@@ -656,7 +656,7 @@
 - id: 123
   order: '131164'
   created_at: '2018-01-25'
-  name: 池袋 (関東)
+  name: 池袋
   prefecture_id: 13
   logo: "/img/dojos/ikebukuro.jpeg"
   url: https://coderdojo-ikebukuro.connpass.com/
@@ -669,7 +669,7 @@
 - id: 130
   order: '131172'
   created_at: '2018-02-21'
-  name: 赤羽 (関東)
+  name: 赤羽
   prefecture_id: 13
   logo: "/img/dojos/akabane.png"
   url: https://www.facebook.com/CoderDojoAkabane/
@@ -679,7 +679,7 @@
 - id: 14
   order: '132012'
   created_at: '2015-06-22'
-  name: 八王子 (関東)
+  name: 八王子
   prefecture_id: 13
   url: http://coderdojo.code4hachioji.org/
   logo: "/img/dojos/hachioji.jpg"
@@ -691,7 +691,7 @@
 - id: 117
   order: '132021'
   created_at: '2017-11-18'
-  name: 立川 (関東)
+  name: 立川
   prefecture_id: 13
   url: https://coderdojotachikawa.github.io/
   logo: "/img/dojos/tachikawa.jpg"
@@ -704,7 +704,7 @@
 - id: 105
   order: '132039'
   created_at: '2017-09-06'
-  name: 吉祥寺 (関東)
+  name: 吉祥寺
   prefecture_id: 13
   logo: "/img/dojos/kichijoji.png"
   url: https://kichijojijp.wixsite.com/coderdojo
@@ -716,7 +716,7 @@
 - id: 174
   order: '132047'
   created_at: '2018-10-05'
-  name: 三鷹 (関東)
+  name: 三鷹
   prefecture_id: 13
   logo: "/img/dojos/japan.png"
   url: https://rbn.tokyo/
@@ -726,7 +726,7 @@
 - id: 18
   order: '132080'
   created_at: '2016-09-05'
-  name: 調布 (関東)
+  name: 調布
   prefecture_id: 13
   logo: "/img/dojos/chofu.jpg"
   url: http://coderdojochofu.hatenablog.jp/
@@ -740,7 +740,7 @@
 - id: 189
   order: '132098'
   created_at: '2018-12-21'
-  name: まちだ (関東)
+  name: まちだ
   prefecture_id: 13
   logo: "/img/dojos/machida.png"
   url: https://coderdojo-machida.connpass.com/
@@ -751,7 +751,7 @@
 - id: 13
   order: '132110'
   created_at: '2014-05-21'
-  name: 小平 (関東)
+  name: 小平
   prefecture_id: 13
   url: http://coderdojo-kodaira.github.io/
   logo: "/img/dojos/kodaira.png"
@@ -764,7 +764,7 @@
 - id: 147
   order: '132250'
   created_at: '2018-05-06'
-  name: 稲城 (関東)
+  name: 稲城
   prefecture_id: 13
   url: https://www.facebook.com/CoderDojo-Inagi-%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4-%E7%A8%B2%E5%9F%8E-229498697605724/
   logo: "/img/dojos/japan.png"
@@ -776,7 +776,7 @@
 - id: 153
   order: '132241'
   created_at: '2018-05-30'
-  name: 多摩センター (関東)
+  name: 多摩センター
   prefecture_id: 13
   url: https://coderdojo-tamacent.wixsite.com/main
   logo: "/img/dojos/tama-center.png"
@@ -786,7 +786,7 @@
 - id: 70
   order: '141020'
   created_at: '2017-01-30'
-  name: 横浜 (関東)
+  name: 横浜
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-yokohama.connpass.com/
@@ -796,7 +796,7 @@
 - id: 126
   order: '141038'
   created_at: '2018-02-02'
-  name: 戸部 (関東)
+  name: 戸部
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-tobe.amebaownd.com/
@@ -806,7 +806,7 @@
 - id: 137
   order: '141062'
   created_at: '2018-03-24'
-  name: 保土ヶ谷 (関東)
+  name: 保土ヶ谷
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-hodogaya.connpass.com/
@@ -817,7 +817,7 @@
 - id: 68
   order: '141097'
   created_at: '2017-01-09'
-  name: 新羽 (関東)
+  name: 新羽
   prefecture_id: 14
   logo: "/img/dojos/nippa.png"
   url: https://coderdojo-nippa.connpass.com/
@@ -827,7 +827,7 @@
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
-  name: 長津田 (関東)
+  name: 長津田
   prefecture_id: 14
   logo: "/img/dojos/nagatsuta.png"
   url: https://coderdojo-nagatsuta.github.io/
@@ -839,7 +839,7 @@
 - id: 154
   order: '141135'
   created_at: '2017-04-03'
-  name: 鴨居 (関東)
+  name: 鴨居
   prefecture_id: 14
   logo: "/img/dojos/kamoi.png"
   url: https://coderdojo-kamoi.connpass.com/
@@ -852,7 +852,7 @@
 - id: 184
   order: '141178'
   created_at: '2018-11-05'
-  name: あざみ野 (関東)
+  name: あざみ野
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-azamino.connpass.com/
@@ -864,7 +864,7 @@
 - id: 179
   order: '141186'
   created_at: '2018-08-15'
-  name: 港北NT (関東)
+  name: 港北NT
   prefecture_id: 14
   logo: "/img/dojos/kohoku-nt.png"
   url: https://coderdojo-kohokunt.connpass.com/
@@ -877,7 +877,7 @@
 - id: 190
   order: '141305'
   created_at: '2018-12-27'
-  name: 溝口 (関東)
+  name: 溝口
   prefecture_id: 14
   logo: "/img/dojos/mizonokuchi.png"
   url: https://coderdojo-mizonokuchi.connpass.com/
@@ -887,7 +887,7 @@
 - id: 138
   order: '142042'
   created_at: '2018-03-25'
-  name: 鎌倉 (関東)
+  name: 鎌倉
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-kamakura.github.io/
@@ -901,7 +901,7 @@
 - id: 26
   order: '142051'
   created_at: '2016-12-14'
-  name: 藤沢 (関東)
+  name: 藤沢
   prefecture_id: 14
   logo: "/img/dojos/fujisawa.png"
   url: http://coderdojofujisawa.hatenablog.com/
@@ -913,7 +913,7 @@
 - id: 91
   order: '142158'
   created_at: '2017-06-26'
-  name: 海老名 (関東)
+  name: 海老名
   prefecture_id: 14
   logo: "/img/dojos/ebina.png"
   url: https://coderdojo-ebina.connpass.com/
@@ -923,7 +923,7 @@
 - id: 140
   order: '142123'
   created_at: '2018-03-29'
-  name: 厚木 (関東)
+  name: 厚木
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-atsugi.connpass.com/
@@ -933,7 +933,7 @@
 - id: 5
   order: '151009'
   created_at: '2015-09-16'
-  name: 新潟 (中部)
+  name: 新潟
   prefecture_id: 15
   logo: "/img/dojos/japan.png"
   url: http://coderdojo.niigata.jp/
@@ -945,7 +945,7 @@
 - id: 127
   order: '152064'
   created_at: '2018-02-17'
-  name: 新発田 (中部)
+  name: 新発田
   prefecture_id: 15
   logo: "/img/dojos/japan.png"
   url: http://tinkerkids.jp/coderdojo.html
@@ -959,7 +959,7 @@
 - id: 6
   order: '172014'
   created_at: '2016-11-24'
-  name: 金沢 (中部)
+  name: 金沢
   prefecture_id: 17
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojo.kanazawa/
@@ -970,7 +970,7 @@
 - id: 28
   order: '182010'
   created_at: '2013-08-14'
-  name: 福井 (中部)
+  name: 福井
   prefecture_id: 18
   url: http://coderdojo.cowbell.jp/
   logo: "/img/dojos/coderdojo.png"
@@ -981,7 +981,7 @@
 - id: 88
   order: '192015'
   created_at: '2017-05-29'
-  name: 甲府 (中部)
+  name: 甲府
   prefecture_id: 19
   url: https://www.facebook.com/coderdojo.kofu/
   logo: "/img/dojos/kofu.png"
@@ -994,7 +994,7 @@
 - id: 133
   order: '192104'
   created_at: '2018-03-02'
-  name: 甲斐竜王 (中部)
+  name: 甲斐竜王
   prefecture_id: 19
   url: https://www.facebook.com/CoderDojo%E7%94%B2%E6%96%90%E7%AB%9C%E7%8E%8B-181532029243337/
   logo: "/img/dojos/kairyuo.png"
@@ -1007,7 +1007,7 @@
 - id: 175
   order: '202029'
   created_at: '2018-10-05'
-  name: 松本 (中部)
+  name: 松本
   prefecture_id: 20
   url: https://pro.form-mailer.jp/lp/2a6ae9f9153606
   logo: "/img/dojos/matsumoto.png"
@@ -1021,7 +1021,7 @@
 - id: 94
   order: '202061'
   created_at: '2017-02-20'
-  name: 諏訪湖 (中部)
+  name: 諏訪湖
   prefecture_id: 20
   url: https://www.facebook.com/CoderDojo%E8%AB%8F%E8%A8%AA%E6%B9%96-104207190171589/
   logo: "/img/dojos/suwako.jpg"
@@ -1033,7 +1033,7 @@
 - id: 27
   order: '202151'
   created_at: '2012-11-08'
-  name: 塩尻 (中部)
+  name: 塩尻
   prefecture_id: 20
   url: http://coderdojo.shiojiri-osslabo.com/
   logo: "/img/dojos/shiojiri.png"
@@ -1044,7 +1044,7 @@
 - id: 87
   order: '202207'
   created_at: '2017-05-11'
-  name: 安曇野 (中部)
+  name: 安曇野
   prefecture_id: 20
   url: https://www.facebook.com/CoderDojoAzumino/
   logo: "/img/dojos/azumino.png"
@@ -1057,7 +1057,7 @@
 - id: 96
   order: '212211'
   created_at: '2017-09-26'
-  name: 海津 (中部)
+  name: 海津
   prefecture_id: 21
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-kaizu.jimdo.com/
@@ -1067,7 +1067,7 @@
 - id: 148
   order: '221007'
   created_at: '2016-02-25'
-  name: 静岡 (中部)
+  name: 静岡
   prefecture_id: 22
   logo: "/img/dojos/shizuoka.png"
   url: https://coderdojo-shizuoka.org/
@@ -1080,7 +1080,7 @@
 - id: 98
   order: '221309'
   created_at: '2016-02-25'
-  name: 浜松 (中部)
+  name: 浜松
   prefecture_id: 22
   logo: "/img/dojos/hamamatsu.png"
   url: http://coderdojo-hamamatsu.org/
@@ -1092,7 +1092,7 @@
 - id: 129
   order: '222038'
   created_at: '2018-02-18'
-  name: 三島・沼津 (中部)
+  name: 三島・沼津
   prefecture_id: 22
   logo: "/img/dojos/mishima-numazu.png"
   url: http://coderdojo-mn.moo.jp/
@@ -1104,7 +1104,7 @@
 - id: 31
   order: '231002'
   created_at: '2014-10-20'
-  name: 名古屋 (中部)
+  name: 名古屋
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: http://coderdojo-nagoya.hateblo.jp/
@@ -1114,7 +1114,7 @@
 - id: 32
   order: '231002'
   created_at: '2014-12-08'
-  name: 天白 (中部)
+  name: 天白
   prefecture_id: 23
   logo: "/img/dojos/tempaku.png"
   url: http://coderdojo-tempaku.hatenablog.com/
@@ -1126,7 +1126,7 @@
 - id: 30
   order: '232017'
   created_at: '2016-06-03'
-  name: 豊橋 (中部)
+  name: 豊橋
   prefecture_id: 23
   logo: "/img/dojos/toyohashi.png"
   url: https://www.facebook.com/coderdojo.toyohashi/
@@ -1138,7 +1138,7 @@
 - id: 182
   order: '232041'
   created_at: '2018-10-21'
-  name: 瀬戸 (中部)
+  name: 瀬戸
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-seto.github.io/
@@ -1150,7 +1150,7 @@
 - id: 118
   order: '232122'
   created_at: '2017-11-13'
-  name: 安城 (中部)
+  name: 安城
   prefecture_id: 23
   logo: "/img/dojos/anjo.png"
   url: https://sites.google.com/coderdojo.com/anjo/
@@ -1160,7 +1160,7 @@
 - id: 84
   order: '232211'
   created_at: '2017-05-16'
-  name: 新城 (中部)
+  name: 新城
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojo-Shinshiro-842752475889001/
@@ -1172,7 +1172,7 @@
 - id: 71
   order: '232289'
   created_at: '2017-02-17'
-  name: 尾張 (中部)
+  name: 尾張
   prefecture_id: 23
   logo: "/img/dojos/owari.svg"
   url: https://coderdojoowari.org/
@@ -1182,7 +1182,7 @@
 - id: 145
   order: '232301'
   created_at: '2018-04-22'
-  name: 日進 (中部)
+  name: 日進
   prefecture_id: 23
   logo: "/img/dojos/nisshin.png"
   url: https://coderdojo-nisshin.connpass.com/
@@ -1193,7 +1193,7 @@
 - id: 33
   order: '234249'
   created_at: '2016-08-12'
-  name: 大治 (中部)
+  name: 大治
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: http://coderdojo-oharu.connpass.com/
@@ -1203,7 +1203,7 @@
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
-  name: 伊勢 (近畿)
+  name: 伊勢
   prefecture_id: 24
   logo: "/img/dojos/ise.png"
   url: https://coderdojo-ise.jimdo.com/
@@ -1215,7 +1215,7 @@
 - id: 37
   order: '252018'
   created_at: '2015-09-16'
-  name: 大津 (近畿)
+  name: 大津
   prefecture_id: 25
   logo: "/img/dojos/otsu.png"
   url: https://coderdojo-otsu.connpass.com
@@ -1225,7 +1225,7 @@
 - id: 39
   order: '261009'
   created_at: '2016-03-01'
-  name: 京都伏見 (近畿)
+  name: 京都伏見
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
   url: http://cdkf.ninja/
@@ -1238,7 +1238,7 @@
 - id: 34
   order: '261009'
   created_at: '2014-10-14'
-  name: 長岡京 (近畿)
+  name: 長岡京
   prefecture_id: 26
   url: https://coderdojo-nagaokakyo.doorkeeper.jp/
   logo: "/img/dojos/nagaokakyo.png"
@@ -1248,7 +1248,7 @@
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
-  name: 西宮・梅田 (近畿)
+  name: 西宮・梅田
   prefecture_id: 27
   url: http://coderdojo-nishinomiya.info/
   logo: "/img/dojos/nishinomiya.png"
@@ -1260,7 +1260,7 @@
 - id: 43
   order: '271004'
   created_at: '2016-09-27'
-  name: なんば (近畿)
+  name: なんば
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
   url: https://zen.coderdojo.com/dojo/jp/osaka-osaka-prefecture/namba-osaka
@@ -1274,7 +1274,7 @@
 - id: 44
   order: '271004'
   created_at: '2016-08-15'
-  name: 大阪狭山・本町 (近畿)
+  name: 大阪狭山・本町
   prefecture_id: 27
   logo: "/img/dojos/hommachi.png"
   url: https://coderdojo-hommachi.doorkeeper.jp/
@@ -1287,7 +1287,7 @@
 - id: 116
   order: '271004'
   created_at: '2017-11-02'
-  name: 阿倍野 (近畿)
+  name: 阿倍野
   prefecture_id: 27
   logo: "/img/dojos/abeno.png"
   url: https://www.facebook.com/CoderDojoAbeno/
@@ -1299,7 +1299,7 @@
 - id: 45
   order: '271004'
   created_at: '2016-07-13'
-  name: 西成 (近畿)
+  name: 西成
   prefecture_id: 27
   logo: "/img/dojos/nishinari.jpg"
   url: https://www.facebook.com/coderdojo.nishinari.osaka/
@@ -1311,7 +1311,7 @@
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
-  name: 堺 (近畿)
+  name: 堺
   prefecture_id: 27
   logo: "/img/dojos/sakai.png"
   url: https://coderdojo-sakai.github.io/
@@ -1323,7 +1323,7 @@
 - id: 193
   order: '272035'
   created_at: '2019-01-16'
-  name: とよなか (近畿)
+  name: とよなか
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/ToyonakaDojo
@@ -1333,7 +1333,7 @@
 - id: 66
   order: '272078'
   created_at: '2017-01-04'
-  name: 高槻 (近畿)
+  name: 高槻
   prefecture_id: 27
   logo: "/img/dojos/takatsuki.png"
   url: https://www.facebook.com/coderdojotakatsuki/
@@ -1343,7 +1343,7 @@
 - id: 40
   order: '272108'
   created_at: '2016-05-18'
-  name: 枚方 (近畿)
+  name: 枚方
   prefecture_id: 27
   logo: "/img/dojos/hirakata.png"
   url: http://coderdojo-hirakata.org
@@ -1355,7 +1355,7 @@
 - id: 135
   order: '272183'
   created_at: '2018-03-13'
-  name: 大東 (近畿)
+  name: 大東
   prefecture_id: 27
   logo: "/img/dojos/daito.png"
   url: http://coderdojodaito.strikingly.com/
@@ -1366,7 +1366,7 @@
 - id: 108
   order: '272205'
   created_at: '2017-09-06'
-  name: みのお (近畿)
+  name: みのお
   prefecture_id: 27
   logo: "/img/dojos/minoh.png"
   url: http://www.coderdojo-minoh.org/
@@ -1377,7 +1377,7 @@
 - id: 41
   order: '272272'
   created_at: '2016-09-01'
-  name: 東大阪 (近畿)
+  name: 東大阪
   prefecture_id: 27
   logo: "/img/dojos/higasi-osaka.png"
   url: https://www.facebook.com/CoderDojoHigashiosakaYao/
@@ -1390,7 +1390,7 @@
 - id: 101
   order: '272124'
   created_at: '2017-08-03'
-  name: 八尾 (近畿)
+  name: 八尾
   prefecture_id: 27
   logo: "/img/dojos/yao.png"
   url: https://www.facebook.com/CoderDojoHigashiosakaYao/
@@ -1403,7 +1403,7 @@
 - id: 72
   order: '272141'
   created_at: '2017-02-19'
-  name: 富田林 (近畿)
+  name: 富田林
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
   url: https://coderdojotondabayashi.github.io/main/
@@ -1416,7 +1416,7 @@
 - id: 110
   order: '272281'
   created_at: '2017-05-26'
-  name: せんなん (近畿)
+  name: せんなん
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojo.sennan.osaka.jp/
@@ -1426,7 +1426,7 @@
 - id: 124
   order: '281018'
   created_at: '2018-01-26'
-  name: 灘 (近畿)
+  name: 灘
   prefecture_id: 28
   logo: "/img/dojos/nada.png"
   url: https://coderdojo-nada.github.io/
@@ -1439,7 +1439,7 @@
 - id: 119
   order: '281069'
   created_at: '2017-11-08'
-  name: 西神戸 (近畿)
+  name: 西神戸
   prefecture_id: 28
   logo: "/img/dojos/nishi-kobe.png"
   url: https://www.facebook.com/CoderDojoNishiKobe/
@@ -1452,7 +1452,7 @@
 - id: 67
   order: '281093'
   created_at: '2016-09-12'
-  name: 北神戸 (近畿)
+  name: 北神戸
   prefecture_id: 28
   logo: "/img/dojos/kitakobe.png"
   url: https://www.facebook.com/KitakobeDojo/
@@ -1465,7 +1465,7 @@
 - id: 48
   order: '281107'
   created_at: '2016-09-28'
-  name: 神戸 (近畿)
+  name: 神戸
   prefecture_id: 28
   logo: "/img/dojos/kobe.png"
   url: http://coderdojokobe.wixsite.com/home/
@@ -1476,7 +1476,7 @@
 - id: 50
   order: '282014'
   created_at: '2016-03-22'
-  name: 姫路 (近畿)
+  name: 姫路
   prefecture_id: 28
   logo: "/img/dojos/himeji.png"
   url: https://himejicoderdojo.doorkeeper.jp/
@@ -1488,7 +1488,7 @@
 - id: 49
   order: '282031'
   created_at: '2016-04-04'
-  name: 明石 (近畿)
+  name: 明石
   prefecture_id: 28
   logo: "/img/dojos/akashi.png"
   url: https://www.facebook.com/CoderDojo-%E6%98%8E%E7%9F%B3-139582193048936/
@@ -1500,7 +1500,7 @@
 - id: 146
   order: '282057'
   created_at: '2018-04-24'
-  name: 淡路島 (近畿)
+  name: 淡路島
   prefecture_id: 28
   logo: "/img/dojos/awajishima.png"
   url: http://coderdojo-awajishima.info/
@@ -1514,7 +1514,7 @@
 - id: 181
   order: '283011'
   created_at: '2018-10-18'
-  name: 猪名川 (近畿)
+  name: 猪名川
   prefecture_id: 28
   logo: "/img/dojos/inagawa.png"
   url: https://www.facebook.com/coderdojoinagawa/
@@ -1524,7 +1524,7 @@
 - id: 35
   order: '292010'
   created_at: '2014-10-26'
-  name: 奈良 (近畿)
+  name: 奈良
   prefecture_id: 29
   url: http://coderdojo-nara-ikoma.github.io/
   logo: "/img/dojos/nara.png"
@@ -1536,7 +1536,7 @@
 - id: 36
   order: '292095'
   created_at: '2016-04-25'
-  name: 生駒 (近畿)
+  name: 生駒
   prefecture_id: 29
   logo: "/img/dojos/ikoma.png"
   url: http://coderdojo-nara-ikoma.github.io/
@@ -1548,7 +1548,7 @@
 - id: 128
   order: '293431'
   created_at: '2018-02-18'
-  name: 三郷 (近畿)
+  name: 三郷
   prefecture_id: 29
   logo: "/img/dojos/sango.png"
   url: http://www.kokuchpro.com/group/CoderDojo35/
@@ -1559,7 +1559,7 @@
 - id: 169
   order: '293636'
   created_at: '2018-07-31'
-  name: 明日香 (近畿)
+  name: 明日香
   prefecture_id: 29
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-asuka.github.io/
@@ -1571,7 +1571,7 @@
 - id: 177
   order: '293636'
   created_at: '2018-07-31'
-  name: 田原本 (近畿)
+  name: 田原本
   prefecture_id: 29
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-tawaramoto.github.io/
@@ -1583,7 +1583,7 @@
 - id: 47
   order: '302015'
   created_at: '2016-11-01'
-  name: 和歌山 (近畿)
+  name: 和歌山
   prefecture_id: 30
   logo: "/img/dojos/wakayama.png"
   url: https://www.facebook.com/coderdojo.wakayama/
@@ -1593,7 +1593,7 @@
 - id: 99
   order: '302066'
   created_at: '2017-09-06'
-  name: 南紀田辺 (近畿)
+  name: 南紀田辺
   prefecture_id: 30
   url: https://coderdojo-nanki-tanabe.jimdo.com/
   logo: "/img/dojos/nanki-tanabe.png"
@@ -1605,7 +1605,7 @@
 - id: 38
   order: '302074'
   created_at: '2012-11-08'
-  name: 熊野 (近畿)
+  name: 熊野
   prefecture_id: 30
   url: https://www.facebook.com/coderdojo.kumano
   logo: "/img/dojos/kumano.png"
@@ -1617,7 +1617,7 @@
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
-  name: 大山 (中国)
+  name: 大山
   prefecture_id: 31
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/Coderdojo.daisen/
@@ -1630,7 +1630,7 @@
 - id: 131
   order: '312011'
   created_at: '2018-02-22'
-  name: 鳥取 (中国)
+  name: 鳥取
   prefecture_id: 31
   logo: "/img/dojos/tottori.png"
   url: https://www.facebook.com/CoderDojoTottori/
@@ -1641,7 +1641,7 @@
 - id: 78
   order: '325058'
   created_at: '2017-03-10'
-  name: 吉賀 (中国)
+  name: 吉賀
   prefecture_id: 32
   logo: "/img/dojos/yoshika.png"
   url: http://www.coderdojo-yoshika.com/
@@ -1654,7 +1654,7 @@
 - id: 81
   order: '331007'
   created_at: '2017-03-20'
-  name: 岡山 岡南 (中国)
+  name: 岡山 岡南
   prefecture_id: 33
   logo: "/img/dojos/okayama.png"
   url: https://coderdojo-konan.jp/
@@ -1668,7 +1668,7 @@
 - id: 132
   order: '332038'
   created_at: '2018-02-28'
-  name: 津山 (中国)
+  name: 津山
   prefecture_id: 33
   logo: "/img/dojos/tuyama.png"
   url: https://www.facebook.com/CoderDojoTsuyama/
@@ -1682,7 +1682,7 @@
 - id: 150
   order: '332020'
   created_at: '2018-05-29'
-  name: 倉敷 (中国)
+  name: 倉敷
   prefecture_id: 33
   logo: "/img/dojos/kurashiki.jpg"
   url: https://cd-kurashiki.connpass.com
@@ -1693,7 +1693,7 @@
 - id: 52
   order: '341002'
   created_at: '2016-05-04'
-  name: 紙屋町 (中国)
+  name: 紙屋町
   prefecture_id: 34
   logo: "/img/dojos/hiroshima.jpg"
   url: https://www.facebook.com/coderdojo.kamiyacho/
@@ -1705,7 +1705,7 @@
 - id: 53
   order: '341002'
   created_at: '2016-09-29'
-  name: 五日市 (中国)
+  name: 五日市
   prefecture_id: 34
   logo: "/img/dojos/itsukaichi.png"
   url: https://www.facebook.com/coderdojo.itsukaichi
@@ -1718,7 +1718,7 @@
 - id: 141
   order: '342025'
   created_at: '2018-04-11'
-  name: 呉 (中国)
+  name: 呉
   prefecture_id: 34
   logo: "/img/dojos/kure.jpg"
   url: https://www.facebook.com/CoderDojoKURE/
@@ -1729,7 +1729,7 @@
 - id: 51
   order: '342076'
   created_at: '2016-06-01'
-  name: 福山 (中国)
+  name: 福山
   prefecture_id: 34
   logo: "/img/dojos/fukuyama.png"
   url: https://www.facebook.com/CoderDojo.Fukuyama
@@ -1740,7 +1740,7 @@
 - id: 194
   order: '342092'
   created_at: '2019-01-18'
-  name: 三次 (中国)
+  name: 三次
   prefecture_id: 34
   logo: "/img/dojos/miyoshi-hiroshima.png"
   url: https://dojo-miyoshi.com/
@@ -1752,7 +1752,7 @@
 - id: 192
   order: '352021'
   created_at: '2019-01-14'
-  name: 宇部 (中国)
+  name: 宇部
   prefecture_id: 35
   logo: "/img/dojos/ube.png"
   url: https://coderdojo-ube.com/
@@ -1766,7 +1766,7 @@
 - id: 92
   order: '352101'
   created_at: '2017-06-19'
-  name: 光 (中国)
+  name: 光
   prefecture_id: 35
   logo: "/img/dojos/hikari.png"
   url: http://coderdojo-hikari.com/
@@ -1779,7 +1779,7 @@
 - id: 103
   order: '362018'
   created_at: '2017-10-02'
-  name: 徳島 (四国)
+  name: 徳島
   prefecture_id: 36
   logo: "/img/dojos/tokushima.png"
   url: https://www.facebook.com/CDTokushima/
@@ -1793,7 +1793,7 @@
 - id: 111
   order: '362085'
   created_at: '2017-09-26'
-  name: 三好 (四国)
+  name: 三好
   prefecture_id: 36
   logo: "/img/dojos/miyoshi.png"
   url: https://www.facebook.com/groups/105010163561072/
@@ -1803,7 +1803,7 @@
 - id: 188
   order: '363421'
   created_at: '2018-12-13'
-  name: 神山 (四国)
+  name: 神山
   prefecture_id: 36
   logo: "/img/dojos/kamiyama.png"
   url: https://www.facebook.com/CDKamiyama/
@@ -1817,7 +1817,7 @@
 - id: 144
   order: '401005'
   created_at: '2018-04-22'
-  name: 北九州 (九州)
+  name: 北九州
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojokitakyushu/
@@ -1828,7 +1828,7 @@
 - id: 102
   order: '401307'
   created_at: '2017-09-18'
-  name: 福岡 (九州)
+  name: 福岡
   prefecture_id: 40
   logo: "/img/dojos/fukuoka.png"
   url: https://www.facebook.com/CoderDojoFukuoka/
@@ -1840,7 +1840,7 @@
 - id: 183
   order: '401323'
   created_at: '2018-11-03'
-  name: 博多 (九州)
+  name: 博多
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojoHakata/
@@ -1853,7 +1853,7 @@
 - id: 113
   order: '401307'
   created_at: '2017-10-06'
-  name: ももち (九州)
+  name: ももち
   prefecture_id: 40
   logo: "/img/dojos/momochi.png"
   url: https://www.facebook.com/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%E3%82%82%E3%82%82%E3%81%A1Coderdojo-momochi-1928416637480111/
@@ -1863,7 +1863,7 @@
 - id: 136
   order: '401307'
   created_at: '2018-03-19'
-  name: 香椎 (九州)
+  name: 香椎
   prefecture_id: 40
   logo: "/img/dojos/kashii.png"
   url: https://coderdojo-kashii.connpass.com/
@@ -1877,7 +1877,7 @@
 - id: 54
   order: '402036'
   created_at: '2016-10-06'
-  name: 久留米 (九州)
+  name: 久留米
   prefecture_id: 40
   logo: "/img/dojos/kurume.png"
   url: https://www.facebook.com/CoderDojoKurume/
@@ -1891,7 +1891,7 @@
 - id: 172
   order: '402036'
   created_at: '2018-08-25'
-  name: 諏訪野＠ギャランドゥ (九州)
+  name: 諏訪野＠ギャランドゥ
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojo.fukuoka.kurume.suwano/
@@ -1905,7 +1905,7 @@
 - id: 191
   order: '402214'
   created_at: '2019-01-04'
-  name: 太宰府 (九州)
+  name: 太宰府
   prefecture_id: 40
   logo: "/img/dojos/dazaifu.png"
   url: https://www.facebook.com/CoderDojoDazaifu/
@@ -1918,7 +1918,7 @@
 - id: 122
   order: '413411'
   created_at: '2017-12-15'
-  name: 基山 (九州)
+  name: 基山
   prefecture_id: 41
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/groups/CoderDojo.Kiyama/about/
@@ -1932,7 +1932,7 @@
 - id: 120
   order: '422011'
   created_at: '2017-11-14'
-  name: 長崎 (九州)
+  name: 長崎
   prefecture_id: 42
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojo%E9%95%B7%E5%B4%8E-395795824185849/
@@ -1942,7 +1942,7 @@
 - id: 178
   order: '431001'
   created_at: '2018-08-05'
-  name: 熊本 (九州)
+  name: 熊本
   prefecture_id: 43
   logo: "/img/dojos/kumamoto.jpg"
   url: https://coderdojokumamoto.com/
@@ -1955,7 +1955,7 @@
 - id: 55
   order: '454419'
   created_at: '2016-09-15'
-  name: 宮崎 (九州)
+  name: 宮崎
   prefecture_id: 45
   logo: "/img/dojos/miyazaki.png"
   url: https://lmlab.net/coderdojo/
@@ -1968,7 +1968,7 @@
 - id: 187
   order: '462012'
   created_at: '2018-12-09'
-  name: 鹿児島 (九州)
+  name: 鹿児島
   prefecture_id: 46
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojoKagoshima/
@@ -1982,7 +1982,7 @@
 - id: 61
   order: '472018'
   created_at: '2012-07-09'
-  name: 那覇 (沖縄)
+  name: 那覇
   prefecture_id: 47
   logo: "/img/dojos/okinawa.png"
   url: https://www.facebook.com/coderdojo.okinawa
@@ -1992,7 +1992,7 @@
 - id: 106
   order: '472051'
   created_at: '2017-09-20'
-  name: 宜野湾 (沖縄)
+  name: 宜野湾
   prefecture_id: 47
   logo: "/img/dojos/ginowan.png"
   url: http://www.coderdojo-ginowan.com/
@@ -2006,7 +2006,7 @@
 - id: 186
   order: '472093'
   created_at: '2018-12-02'
-  name: 名護 (沖縄)
+  name: 名護
   prefecture_id: 47
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojo.Nago/
@@ -2016,7 +2016,7 @@
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
-  name: うるま (沖縄)
+  name: うるま
   prefecture_id: 47
   logo: "/img/dojos/uruma.png"
   url: https://coderdojo-uruma.hatenablog.com/
@@ -2026,7 +2026,7 @@
 - id: 56
   order: '472140'
   created_at: '2016-11-02'
-  name: 宮古島 (沖縄)
+  name: 宮古島
   prefecture_id: 47
   logo: "/img/dojos/miyakojima.jpg"
   url: http://coderdojo-miyakojima.com/
@@ -2037,7 +2037,7 @@
 - id: 57
   order: '473251'
   created_at: '2016-12-19'
-  name: 嘉手納 (沖縄)
+  name: 嘉手納
   prefecture_id: 47
   logo: "/img/dojos/kadena.png"
   url: http://coderdojokadena.hatenablog.jp/
