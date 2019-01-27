@@ -672,8 +672,8 @@
   name: 赤羽
   prefecture_id: 13
   logo: "/img/dojos/akabane.png"
-  url: https://www.facebook.com/CoderDojoAkabane/
-  description: 東京都北区で不定期開催
+  url: https://coderdojo-akabane.com/
+  description: 東京都北区で毎月開催
   tags:
   - Scratch
 - id: 14
