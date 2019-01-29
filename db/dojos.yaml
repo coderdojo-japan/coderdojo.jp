@@ -1657,14 +1657,14 @@
   name: 岡山 岡南
   prefecture_id: 33
   logo: "/img/dojos/okayama.png"
-  url: https://coderdojo-konan.jp/
+  url: https://new-beta.coderdojo-konan.jp/
   description: 岡山県岡山市南区で毎月開催
   tags:
   - Scratch
   - Unity
+  - Python
   - C#
   - Webアプリ開発
-  - Java
 - id: 132
   order: '332038'
   created_at: '2018-02-28'
