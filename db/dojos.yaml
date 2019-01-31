@@ -92,6 +92,7 @@
   - Scratch
   - Webサイト
   - ゲーム
+  is_active: false
 - id: 85
   order: '042072'
   created_at: '2017-03-27'
