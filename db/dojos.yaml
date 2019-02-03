@@ -30,9 +30,9 @@
   created_at: '2017-09-20'
   name: 恵庭
   prefecture_id: 1
-  url: https://www.facebook.com/CoderDojoEniwa/
-  logo: "/img/dojos/japan.png"
-  description: 北海道恵庭市で毎月開催
+  url: https://coderdojo-eniwa.fathercomputer.com/
+  logo: "/img/dojos/eniwa.jpg"
+  description: 北海道恵庭市で月2回開催
   tags:
   - Scratch
   - Webサイト
