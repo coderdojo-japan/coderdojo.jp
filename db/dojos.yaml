@@ -873,6 +873,8 @@
   description: 愛知県岩倉市で毎月開催
   tags:
   - Scratch
+  - micro:bit
+  - Webサイト
 - id: 33
   order: '234249'
   created_at: '2016-08-12'
