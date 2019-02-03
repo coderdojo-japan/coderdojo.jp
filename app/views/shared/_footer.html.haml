@@ -2,9 +2,13 @@
   %h2{:style => "line-height: 30px;"}
     %a.footer-link{:href => "/"} ホーム
     |
-    %a.footer-link{:href => "/kata"} Kata (Wiki)
+    %a.footer-link{:href => "/kata"} Kata
     |
-    %a.footer-link{:href => "/docs/charter"} 憲章
+    %a.footer-link{:href => "http://news.coderdojo.jp/"} News
+    |
+    %a.footer-link{:href => "/docs"} 資料集
+    |
+    %a.footer-link{:href => "/charter"} 憲章
     |
     %a.footer-link{:href => "/docs/teikan"} 定款
     |
@@ -14,23 +18,25 @@
     |
     %a.footer-link{:href => "/docs/privacy"} Privacy
     |
-    %a.footer-link{:href => "http://dojocast.coderdojo.jp/"} Podcast
+    %a.footer-link{:href => "/podcasts"} Podcast
   %h2
+    %a{:href => "http://news.coderdojo.jp/"}
+      %i.fa.fa-newspaper-o.fa-3x.fa-fw{"aria-hidden" => "true", :title => "News"}
     %a{:href => "https://github.com/coderdojo-japan"}
-      %i.fa.fa-github.fa-3x.fa-fw{"aria-hidden" => "true"}
+      %i.fa.fa-github.fa-3x.fa-fw{"aria-hidden" => "true", :title => "GitHub"}
     %a{:href => "https://www.facebook.com/coderdojo.jp/"}
-      %i.fa.fa-facebook.fa-3x.fa-fw{"aria-hidden" => "true"}
+      %i.fa.fa-facebook.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Facebook"}
     %a{:href => "https://twitter.com/CoderDojoJapan"}
-      %i.fa.fa-twitter.fa-3x.fa-fw{"aria-hidden" => "true"}
+      %i.fa.fa-twitter.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Twitter"}
     %a{:href => "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"}
-      %i.fa.fa-youtube.fa-3x.fa-fw{"aria-hidden" => "true"}
-    %a{:href => "http://dojocast.coderdojo.jp/"}
-      %i.fa.fa-podcast.fa-3x.fa-fw{"aria-hidden" => "true"}
+      %i.fa.fa-youtube.fa-3x.fa-fw{"aria-hidden" => "true", :title => "YouTube"}
+    %a{:href => "/podcasts"}
+      %i.fa.fa-podcast.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Podcast"}
   %p
     本サイトのソースコードは
     %a.footer-link{:href => "https://github.com/coderdojo-japan/coderdojo.jp"} GitHub
     上で公開されています。
   %p
-    Copyright © 2012-2017 一般社団法人 CoderDojo Japan
+    Copyright © 2012-2018 一般社団法人 CoderDojo Japan
     %br/
     東京都新宿区高田馬場1-28-10 三慶ビル4F CASE Shinjuku

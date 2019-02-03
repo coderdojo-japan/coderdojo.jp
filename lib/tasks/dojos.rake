@@ -28,7 +28,6 @@ namespace :dojos do
 
     dojos.each do |dojo|
       d = Dojo.find_or_initialize_by(id: dojo['id'])
-
       d.name        = dojo['name']
       d.email       = ''
       d.order       = dojo['order'] || search_order_number(dojo['name'])
@@ -39,6 +38,7 @@ namespace :dojos do
       d.created_at  = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at  = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
+      d.is_active   = dojo['is_active'].nil? ? true : dojo['is_active']
 
       d.save!
     end
@@ -49,7 +49,7 @@ namespace :dojos do
   def search_order_number(pre_city)
 
     if /(?<city>.+)\s\(.+\)/ =~ pre_city
-      table = CSV.table(Rails.root.join('db','city_code.csv'))
+      table = CSV.table(Rails.root.join('db','city_code.csv'), {:converters => nil})
       row = table.find{ |r| r[:city].to_s.start_with?(city)}
       row ? row[:order] : raise("Failed to detect city code by #{pre_city}
 order値の自動設定ができませんでした。お手数ですが下記URLを参考に該当する全国地方公共団体コードをorder値にご入力ください。

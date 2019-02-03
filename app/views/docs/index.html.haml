@@ -1,8 +1,10 @@
 - provide(:title, @title)
+- provide(:desc,  @desc)
 - provide(:url,   @url )
 .container{:style => "line-height: 2.2em;"}
   %section.keiyaku{:style => "padding: 50px 0px 50px 0px;"}
-    %h2{:style => "text-align: center; padding-bottom: 50px;"}= @title
+    %h2{:style => "text-align: center;"}= @title
+    %p{ :style => "text-align: center; padding-bottom: 50px;"}= @desc
     %ul{:style => "font-size: 120%"}
       - @docs.each do |doc|
         %li= link_to doc.title, doc.url

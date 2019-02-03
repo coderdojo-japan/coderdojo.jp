@@ -6,7 +6,7 @@ module Statistics
       end
 
       def initialize(dojos, date, weekly)
-        @client = Providers::Facebook.new
+        @client = EventService::Providers::Facebook.new
         @dojos = dojos
         @params = build_params(date, weekly)
       end

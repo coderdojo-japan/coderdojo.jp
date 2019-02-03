@@ -1,6 +1,7 @@
 class DocsController < ApplicationController
   def index
     @title = 'CoderDojo Japan ドキュメント集'
+    @desc  = 'CoderDojo に関する公式情報を本ページでまとめています。'
     @docs  = Document.all
     @url   = request.url
   end

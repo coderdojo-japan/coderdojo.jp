@@ -1,0 +1,19 @@
+%ol{:style => "list-style: none; margin-top: 30px;"}
+  %li{:style => "display: inline-block; line-height: 11px; margin-left: -35px;"}
+    .fb-like{"data-action" => "like", "data-href" => "#{full_url(yield(:url))}", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
+  %li{:style => "display: inline-block;"}
+    %a.twitter-share-button{"data-hashtags" => "CoderDojo", "data-lang" => "ja", "data-text" => "#{full_title(yield(:title))}", "data-url" => "#{full_url(yield(:url))}", "data-via" => "CoderDojoJapan", :href => "https://twitter.com/share", :width => "100"} Tweet
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  %li{:style => "display: inline-block;"}
+    %a.hatena-bookmark-button{"data-hatena-bookmark-lang" => "ja", "data-hatena-bookmark-layout" => "standard-balloon", "data-hatena-bookmark-title" => "#{full_title(yield(:title))}", :href => "#{full_url(yield(:url))}", :title => "このエントリーをはてなブックマークに追加"}
+      %img{:alt => "このエントリーをはてなブックマークに追加", :height => "20", :src => "https://b.st-hatena.com/images/entry-button/button-only@2x.png", :style => "border: none;", :width => "20"}/
+    %script{:async => "async", :charset => "utf-8", :src => "https://b.st-hatena.com/js/bookmark_button.js", :type => "text/javascript"}
+  %li{:style => "display: inline-block;"}
+    .g-plusone{"data-lang" => "ja", "data-size" => "medium"}
+    :javascript
+      (function() {
+              var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/plusone.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();

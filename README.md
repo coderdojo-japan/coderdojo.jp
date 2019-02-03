@@ -62,6 +62,21 @@ http://bit.ly/coderdojo-kata-edit
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
+#### Dockerを利用したセットアップ方法
+
+Dockerを利用する場合は上記ツールをインストールする必要はありません。
+
+その代わり、Dockerをインストールする必要があります。
+
+- [Docker](https://www.docker.com/community-edition)
+
+1. 本リポジトリを fork 後、clone します
+1. `.env.sample` をコピーして `.env` にリネームします
+1. ターミナルから `$ docker-compose up` を実行します
+1. ターミナルから `$ docker-compose exec rails bin/setup` を実行します
+1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
+1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
+
 #### Development with Scrivito
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
@@ -79,19 +94,22 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 
 ### 他、開発に関する資料
 
-開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/docs) や下記サイトにまとめてあります。必要に応じて適宜ご参照ください。
+開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
+- [DojoCast を Jekyll から Rails に移行しました](https://yasslab.jp/ja/posts/migrate-dojocast-from-jekyll-to-rails)
+- [開発目線で見る最近の CoderDojo Japan 2018](https://yasslab.jp/ja/posts/coderdojo-japan-2018)
 - [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/docs/how-to-add-dojo.md)
 - [CoderDojo Japan の各種機能と実装について【2017年版】 - Qiita](https://qiita.com/yasulab/items/1d12e6b295c0a9e577f1)
+- [CoderDojo を支える Rails CMS の活用事例 - Speaker Deck](https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo)
 - [CoderDojo Japan のバックエンドを更新しました (2016年)](https://coderdojo.jp/news/2016/12/12/new-backend)
 
 ## Contributors
 
 Initially designed by [@cognitom](https://github.com/cognitom) in 2015,   
-being developed by [YassLab](https://yasslab.jp/) team since 2016, and   
-had been migrated to [CoderDojo Japan](http://github.com/coderdojo-japan) organization in 2017.
+being developed by [@YassLab](https://github.com/yasslab) team since 2016, and   
+had been migrated to [@coderdojo-japan](http://github.com/coderdojo-japan) organization in 2017.
 
-[![YassLab Logo](https://yasslab.jp/img/logo_800x200.png)](https://yasslab.jp/)
+[![YassLab Logo](https://yasslab.jp/img/logo_800x200.jpg)](https://yasslab.jp/)
 
 ## License
 

@@ -1,9 +1,0 @@
-%li.dojo
-  %header
-    %a{:href => "#{dojo.url}"}
-      %span.dojo-picture{:style => "background-image: url(#{dojo.logo});"}
-      %span.dojo-name= dojo.name
-  %ul.tags
-    - dojo.tags.each do |tag|
-      %li= tag
-  %p= dojo.description

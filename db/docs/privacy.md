@@ -1,13 +1,5 @@
 # プライバシーポリシー
-
-<div align="right">
-一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
-最終更新日: 2017/10/09
-</div>
-
-## はじめに
-
+<br>
 一般社団法人 CoderDojo Japan (以下、当社) では、利用者の個人情報をお預かりしています。当社は、利用者が安心して本サイトおよび当社にお問い合わせできるよう、個人情報に関する法令を尊守し、適切に個人情報の取り扱いを致します。
 
 ## 個人情報の収集
@@ -56,3 +48,9 @@
 ## プライバシーポリシーの変更
 
 収集する個人情報の変更、利用目的の変更、またはその他プライバシーポリシーの変更を行う際は、当ページでの変更を持って公表とさせていただきます。プライバシーポリシーの変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/master/db/docs/privacy.md) よりご確認することができます。
+
+<div align="right">
+一般社団法人 CoderDojo Japan<br>
+連絡先: info@coderdojo.jp<br>
+最終更新日: 2017/10/09
+</div>

@@ -20,6 +20,7 @@ RSpec.describe Dojo, :type => :model do
   it { should respond_to(:tags) }
 
   it { should be_valid }
+  it { expect(Dojo.new.is_active?).to be(true) }
 
   describe "when name is not present" do
     before { @dojo.name = " " }
@@ -58,7 +59,7 @@ RSpec.describe Dojo, :type => :model do
 
   describe 'validate yaml format' do
     it 'should not raise Psych::SyntaxError' do
-      expect{ Dojo.load_attributes_from_yaml }.not_to raise_error(Psych::SyntaxError)
+      expect{ Dojo.load_attributes_from_yaml }.not_to raise_error
     end
 
     it 'should raise Psych::SyntaxError' do

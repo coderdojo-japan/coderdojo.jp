@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117164209) do
+ActiveRecord::Schema.define(version: 20180604070534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "prefecture_id"
+    t.boolean "is_active", default: true, null: false
   end
 
   create_table "event_histories", id: :serial, force: :cascade do |t|
@@ -59,6 +60,15 @@ ActiveRecord::Schema.define(version: 20180117164209) do
     t.string "region"
     t.index ["name"], name: "index_prefectures_on_name", unique: true
     t.index ["region"], name: "index_prefectures_on_region"
+  end
+
+  create_table "upcoming_events", force: :cascade do |t|
+    t.integer "dojo_event_service_id", null: false
+    t.string "event_id", null: false
+    t.string "event_url", null: false
+    t.datetime "event_at", null: false
+    t.index ["dojo_event_service_id"], name: "index_upcoming_events_on_dojo_event_service_id"
+    t.index ["event_at"], name: "index_upcoming_events_on_event_at"
   end
 
   add_foreign_key "dojo_event_services", "dojos"
