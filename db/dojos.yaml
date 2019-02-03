@@ -993,6 +993,20 @@
   - Hour of Code
   - ラズベリーパイ
   - LEGO Mindstorms
+- id: 195
+  order: 192074
+  created_at: '2019-02-03'
+  name: 韮崎
+  prefecture_id: 19
+  url: https://www.facebook.com/CoderDojo.Nirasaki
+  logo: "/img/dojos/nirasaki.png"
+  description: 山梨県韮崎市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - ロボット
+  - Python
+  - Processing
 - id: 133
   order: '192104'
   created_at: '2018-03-02'
