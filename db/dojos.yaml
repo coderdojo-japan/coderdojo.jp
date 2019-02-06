@@ -912,6 +912,7 @@
   - Scratch
   - Viscuit
   - Webサイト
+  is_active: false
 - id: 91
   order: '142158'
   created_at: '2017-06-26'
