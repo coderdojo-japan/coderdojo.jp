@@ -37,6 +37,17 @@
   - Scratch
   - Webサイト
   - Python
+- id: 201
+  order: '032026'
+  created_at: '2019-02-14'
+  name: 宮古
+  prefecture_id: 3
+  url: https://kokucheese.com/event/index/556037/
+  logo: "/img/dojos/japan.png"
+  description: 岩手県宮古市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 143
   order: '032107'
   created_at: '2018-04-21'
