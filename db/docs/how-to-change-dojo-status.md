@@ -13,9 +13,7 @@
 cf. [立ち上げる - CoderDojo Kata](https://coderdojo.jp/kata#startup)
 
 
-## Dojo の現在の状態をアクティブにする
-
-CoderDojo では、Dojo を継続的に続けられなくなったとき、その Dojo を休止させることができます。
+## Dojo の現在の状態を『アクティブ』にする
 
 1. [CoderDojo Zen](https://zen.coderdojo.com/) にログインする
 2. [私のDojo](https://zen.coderdojo.com/dashboard/my-dojos) ページに移動する
