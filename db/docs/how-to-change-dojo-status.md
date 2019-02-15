@@ -10,8 +10,7 @@
 
 地図上に道場が表示されない場合は、まだ承認されていないか、もしくは Dojo の現在の状態が『非アクティブ』になっている可能性が高いです。まだ承認されていない場合は、CoderDojo Kata の『[立ち上げる](https://coderdojo.jp/kata#startup)』をご参照ください ;)
 
-cf. [立ち上げる - CoderDojo Kata](https://coderdojo.jp/kata#startup)
-
+　
 
 ## Dojo の現在の状態を『アクティブ』にする
 
@@ -21,9 +20,9 @@ cf. [立ち上げる - CoderDojo Kata](https://coderdojo.jp/kata#startup)
 4. 「現在の状態」を「アクティブ」に変更し、更新する
 5. 『[参加するDojoを探す](https://zen.coderdojo.com/find)』機能で、道場が表示されることを確認する
 
-以上で Dojo の現在の状態を「アクティブ」に変更することができます。もし Dojo の継続的な活動が難しくなった場合は、上記と同じ手順で「現在の状態」を「非アクティブ」に変更してください。
+以上で Dojo の現在の状態を「アクティブ」に変更することができます。もし Dojo の継続的な活動が難しくなった場合は、[CoderDojo の運営が難しくなったときのガイドライン](https://coderdojo.jp/docs/how-to-suspend-your-dojo) を参照してください ;)
 
-cf. [CoderDojo の運営が難しくなったときのガイドライン](https://coderdojo.jp/docs/how-to-suspend-your-dojo) 
+　
 
 皆さんの道場運営のご参考になれば嬉しいです! (＞人＜ )✨
 
