@@ -1172,7 +1172,7 @@
   name: 三島・沼津
   prefecture_id: 22
   logo: "/img/dojos/mishima-numazu.png"
-  url: http://coderdojo-mn.moo.jp/
+  url: https://coderdojo-mn.org/
   description: 国立沼津高専で隔月開催
   tags:
   - Scratch
