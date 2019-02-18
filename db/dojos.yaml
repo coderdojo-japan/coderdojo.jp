@@ -1431,6 +1431,17 @@
   - Scratch
   - Webサイト
   - アプリ開発
+- id: 202
+  order: '272175'
+  created_at: '2019-02-18'
+  name: 松原
+  prefecture_id: 27
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/coderdojomatsubara/
+  description: 大阪府松原市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
 - id: 135
   order: '272183'
   created_at: '2018-03-13'
