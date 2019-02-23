@@ -250,6 +250,17 @@
   tags:
   - Scratch
   - IslayTouch
+- id: 203
+  order: '082210'
+  created_at: '2019-02-23'
+  name: 六ツ野
+  prefecture_id: 8
+  logo: "/img/dojos/mutsuno.png"
+  url: https://www.facebook.com/CoderDojo.Mutsuno/
+  description: 茨城県ひたちなか市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 65
   order: '082015'
   created_at: '2017-01-03'
