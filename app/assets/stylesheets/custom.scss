@@ -3,6 +3,23 @@
 
 // Customized by YassLab
 
+/*改行位置の調整*/
+  .ignore-pc{
+        display:none;
+  }
+  .ignore-sp{
+        display:inline;
+  }
+
+@media screen and (max-width: 640px) {
+  .ignore-pc{
+        display:inline;
+  }
+  .ignore-sp{
+        display:none;
+  }
+}
+
 .home-point-slides {
   position: relative;
   overflow: hidden;

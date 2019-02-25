@@ -65,7 +65,9 @@
     お近くの道場を探してみましょう！
     %a{:href => "https://zen.coderdojo.com/find"}<>
       地図から探す
-    こともできます ;)
+    こともできます。
+    %br.ignore-sp<>
+    参加方法は各道場のWebサイトに記載されています ;)
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 %section#timeline.text-center
   %br
@@ -77,7 +79,7 @@
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
-    %h2 もっと詳しく知りたい
+    %h2#next-step もっと詳しく知りたい
     %br
     %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
     %ul
@@ -86,13 +88,14 @@
       %li
         %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} CoderDojo Japan (Facebook)
       %li
-        %a{:href => "https://coderdojo.com/"} CoderDojo (英語)
+        %a{:href => "https://coderdojo.com/"} CoderDojo Foundation (海外)
     %br
-    %p 本家サイトである CoderDojo (英語) では世界中の活動の様子が見れます。また、Facebook の CoderDojo Japan では日本全国の活動の様子を知ることができます。
+    %p Kata では学習や運営に役立つ資料を、Facebook では全国の活動を知ることができます。海外の雰囲気は CoderDojo Foundation から公開しています。
     %p
-      「これまでの成り立ちを知りたい」「地元で道場を立ち上げてみたい」といった場合には
-      %a{:href => "/kata"} CoderDojo Kata
-      を参照してみてください。
+      「地元で道場を立ち上げてみたい」「道場向けの各種支援を知りたい」といった場合は、
+      %a{:href => "/kata#startup"}<>
+        Kata の立ち上げる
+      を読んでみてください。
     = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', style: 'margin-bottom: 15px;'), '/kata'
 %section#partners.detail-introduction.partners_logo.text-center
   %br
@@ -102,21 +105,31 @@
     $('[data-toggle="tooltip"]').tooltip();
     })
   %ul
-    %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), 'https://case-shinjuku.com/'
-    %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'https://osscafe.business.site/'
-    %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
-    %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発およびサーバー代の支援'), 'https://yasslab.jp/'
-    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: -10px; margin-bottom: 140px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://jr.mitou.org/'
-    %li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: -10px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
-    %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin-top: -30px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'メール・Newsサーバー代の支援'), 'https://ht79.info/'
-    %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
-    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: -40px; margin-bottom: 150px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
-    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', style: 'margin-top: -50px; margin-bottom: 130px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
-    %li= link_to image_tag('logos/facebook.png', alt: 'Facebook Japan', style: 'margin-top: -70px; margin-bottom: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Facebookページの運用支援'), 'http://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/'
-    %li= link_to image_tag('logos/progate.png', alt: 'Progate', style: 'margin-top: -70px; margin-bottom: 0px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://prog-8.com/'
-    %li= link_to image_tag('logos/cygames.png', alt: 'Cygames', style: 'margin-top: -70px; margin-bottom: 0px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'PC寄贈に関する支援'), 'http://www.cygames.co.jp/'
-    %p{:style => "margin-top: -10px;"}
-      法人向けパートナーシップの詳細は
+    %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', style: 'margin-bottom: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), 'https://case-shinjuku.com/'
+    %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab', style: 'margin-top: 20px; margin-bottom: 20px', height: '95px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発およびサーバー代の支援'), 'https://yasslab.jp/'
+    
+    %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
+    %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'https://osscafe.business.site/'
+    
+    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://jr.mitou.org/'
+    %li= link_to image_tag('logos/cygames.png', alt: 'Cygames', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'PC寄贈に関する支援'), 'http://www.cygames.co.jp/'
+    
+    %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'メール・Newsサーバー代の支援'), 'https://ht79.info/'
+    %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://esa.io/'
+    
+    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/'
+    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', height: '100px', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
+    
+    %li= link_to image_tag('logos/facebook.png', alt: 'Facebook Japan', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Facebookページの運用支援'), 'http://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/'
+    %li= link_to image_tag('logos/progate.png', alt: 'Progate', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://prog-8.com/'
+
+    %li= link_to image_tag('logos/code-for-everyone.png', alt: 'みんなのコード', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '学校との連携支援'), 'https://code.or.jp/'
+    /%li= link_to image_tag('logos/magikcraft.png', alt: 'magiccraft', style: 'margin-top: -10px; margin-bottom: 135px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（Minecraft）の提供'), 'https://www.magikcraft.io/'
+    
+    %p{:style => "margin-top: 50px;"}
+      法人向けパートナーシップの
+      %br.ignore-pc<>
+      詳細は
       %a{:href => "/docs/about-partnership"}<>
         コチラ
       から
