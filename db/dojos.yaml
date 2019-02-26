@@ -797,6 +797,20 @@
   - Scratch
   - Webサイト
   - PHP
+- id: 204
+  order: '132233'
+  created_at: '2019-02-26'
+  name: 武蔵村山
+  prefecture_id: 13
+  url: https://sites.google.com/view/coderdojomusamura/
+  logo: "/img/dojos/musamura.jpg"
+  description: 武蔵村山市立第八小学校で月１回
+  tags:
+  - Scratch
+  - Hour of Code
+  - micro:bit
+  - Minecraft
+  - DICE CODE
 - id: 153
   order: '132241'
   created_at: '2018-05-30'
