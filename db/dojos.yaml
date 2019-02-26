@@ -804,7 +804,7 @@
   prefecture_id: 13
   url: https://sites.google.com/view/coderdojomusamura/
   logo: "/img/dojos/musamura.jpg"
-  description: 武蔵村山市立第八小学校で月１回
+  description: 武蔵村山市立第八小学校で毎月開催 (Private)
   tags:
   - Scratch
   - Hour of Code
@@ -1333,7 +1333,7 @@
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
   url: http://cdkf.ninja/
-  description: 京都市伏見区の小学校内で隔月開催 (現在当該小学校在籍児童に限定)
+  description: 京都市伏見区の小学校内で隔月開催 (Private)
   tags:
   - Scratch
   - WEBサイト
