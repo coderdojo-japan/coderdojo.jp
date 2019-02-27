@@ -1304,6 +1304,7 @@
   description: 愛知県大治町海部郡で毎月開催
   tags:
   - Scratch
+  is_active: false
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
