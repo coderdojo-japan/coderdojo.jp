@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/docs/charter_en",       to: redirect('/charter_en')
   get "/docs/financial-report", to: redirect('/financial-report')
   get "/login",                 to: redirect('/login-8717e64efaf19d7d')
+  get "/podcasts/feed"    => "podcasts#feed"
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/financial-report" => "docs#show", id: 'financial-report'

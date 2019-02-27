@@ -14,4 +14,12 @@ class PodcastsController < ApplicationController
     @content  = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
     @url      = request.url
   end
+
+  def feed
+    @episodes   = Podcast.all.sort_by{|episode| episode.filename.rjust(3, '0')}
+    @domainname = request.base_url
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+  end
 end
