@@ -30,7 +30,7 @@ CoderDojo Japan が描いているパートナーシップの内容とその具�
 - `A:` CoderDojo Japan への単発の提供ではなく、<b>継続的な提供</b>であると嬉しいです
   - 継続的な提供が始まった時点からパートナーとしてご紹介し、支援が終わった時点でパートナーシップを解消します
   - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
-  - 物資やサービスの継続的な提供もご相談可能です
+  - 製品やサービスの継続的な提供もご相談可能です
     例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
 - `B:` CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知 (パートナー: 未踏社団)
@@ -71,8 +71,8 @@ info@coderdojo.jp
 [https://coderdojo.jp/financial-report](https://coderdojo.jp/financial-report)
 <br>
 
-### Q. 物資/サービスによる支援を検討しています。条件はありますか?
-CoderDojo コミュニティから望まれている内容で、かつ、全国の CoderDojo に対して一律にご提供できる場合に、物資・サービスによるパートナーシップを検討させていただいております。
+### Q. 製品・サービスによる支援を検討しています。条件はありますか?
+CoderDojo コミュニティから望まれている内容で、かつ、全国の CoderDojo に対して一律にご提供できる場合に、製品・サービスによるパートナーシップを検討させていただいております。
 
 例: さくらインターネットが「さくらのクラウド」を無料提供
 [https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)
@@ -81,19 +81,31 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 [https://speakerdeck.com/yasulab/growing-up-together-with-community](https://speakerdeck.com/yasulab/growing-up-together-with-community)
 <br>
 
-### Q. 他のパートナーシップの事例を教えてくれませんか?
-
-上記の他にも、次のようなパートナーシップがあります。こちらもご参考になれば幸いでうs。
-
-例: プログラミング学習のProgate、CoderDojo Japanと提携
-[https://prtimes.jp/main/html/rd/p/000000045.000015015.html](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
+### Q. 製品の支援を検討していますが、すべての道場への発送は厳しいです。何か良い方法はありますか?
+はい、CoderDojo 向けに一律に応募する機会を提供し、応募があった中から一定の道場に提供するという方法があります。下記の例をご参考にしていただけると幸いです。
 
 例: 株式会社Cygamesと一般社団法人 CoderDojo Japan、PC寄贈に関するパートナーシップを締結。全国160ヶ所の道場を対象にPCを寄贈
 [https://prtimes.jp/main/html/rd/p/000000474.000005593.html](https://prtimes.jp/main/html/rd/p/000000474.000005593.html)
 
+例: Salesforce から CoderDojo コミュニティへ、179 台のモニターを寄贈 (※)
+[https://www.facebook.com/coderdojo.jp/posts/788200171391137](https://www.facebook.com/coderdojo.jp/posts/788200171391137)
+
+※ Salesforce の例は[単発の提供](#term-of-partnership)であったため、パートナーシップを締結した訳ではありません。
+
+<br>
+
+### Q. 他のパートナーシップの事例を教えてくれませんか?
+
+上記の他にも、次のようなパートナーシップがあります。こちらもご参考になれば幸いです。
+
+例: プログラミング学習のProgate、CoderDojo Japanと提携
+[https://prtimes.jp/main/html/rd/p/000000045.000015015.html](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
+
 例: フェイスブックジャパンがCoderDojoのコミュニティ運営をサポート
 [https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/](https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/)
 
+例: CoderDojo Japanとみんなのコード、 プログラミング教育に関するパートナーシップを締結
+[https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/](https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/)
 <br>
 
 
@@ -102,10 +114,12 @@ CoderDojo Japan Champions という非公開グループがあります。現在
 
 CoderDojo Japan Champions - Facebook Group (非公開)
 [https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
+
+<div id="term-of-partnership"></div>
 <br>
 
 ### Q. パートナーシップの期間はどのように決まりますか?
-資金や物資、サービスなどによる支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
+資金や製品、サービスなどによる支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
 
 パートナーシップの存続期間について - CoderDojo Japan   
 [https://coderdojo.jp/docs/term-of-partnership](https://coderdojo.jp/docs/term-of-partnership)
