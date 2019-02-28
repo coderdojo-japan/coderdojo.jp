@@ -14,17 +14,23 @@ module Statistics
       def run
         @dojos.each do |dojo|
           dojo.dojo_event_services.for(:facebook).each do |dojo_event_service|
-            @client.fetch_events(@params.merge(group_id: dojo_event_service.group_id)).each do |e|
-              next unless e.dig('owner', 'id') == dojo_event_service.group_id
-        
+            @client.fetch_events(@params.merge(dojo_id: dojo.id)).each do |e|
+              if e['event_id']
+                event_id = e['event_id']
+                event_url = "https://www.facebook.com/events/#{event_id}"
+              else
+                event_id = "#{SecureRandom.uuid}"
+                event_url = "https://dummy.url/#{event_id}"
+              end
+
               EventHistory.create!(dojo_id: dojo.id,
                                    dojo_name: dojo.name,
                                    service_name: dojo_event_service.name,
                                    service_group_id: dojo_event_service.group_id,
-                                   event_id: e['id'],
-                                   event_url: "https://www.facebook.com/events/#{e['id']}",
-                                   participants: e['attending_count'],
-                                   evented_at: Time.zone.parse(e['start_time']))
+                                   event_id: event_id,
+                                   event_url: event_url,
+                                   participants: e['participants'],
+                                   evented_at: Time.zone.parse(e['evented_at']))
             end
           end
         end
