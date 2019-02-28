@@ -1435,6 +1435,19 @@
   description: 大阪府豊中市で毎月開催
   tags:
   - Scratch
+- id: 206
+  order: '272051'
+  created_at: '2019-02-28'
+  name: 吹田
+  prefecture_id: 27
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-suita.doorkeeper.jp/
+  description: 大阪府吹田市で不定期に開催
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - Ruby
+  - Webサイト
 - id: 66
   order: '272078'
   created_at: '2017-01-04'
