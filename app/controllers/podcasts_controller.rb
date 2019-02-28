@@ -16,8 +16,9 @@ class PodcastsController < ApplicationController
   end
 
   def feed
-    @episodes   = Podcast.all.sort_by{|episode| episode.filename.rjust(3, '0')}
+    @episodes   = Podcast.all.sort_by{|episode| episode.published_at}
     @domainname = request.base_url
+    @author     = "一般社団法人 CoderDojo Japan"
     respond_to do |format|
       format.rss { render :layout => false }
     end

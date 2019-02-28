@@ -36,6 +36,10 @@ class Podcast
     @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
   end
 
+  def published_at
+    @pubDate ||= exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : ''
+  end
+
   def content
     @content ||= exists? ? File.read(path) : ''
   end
