@@ -52,10 +52,13 @@ CoderDojo Japan が描いているパートナーシップの内容とその具�
 一般社団法人 CoderDojo Japan<br>
 代表理事 安川 要平<br>
 info@coderdojo.jp
-
 </div>
 
+<br>
+
 ## よくある質問と回答
+
+<br>
 
 ### Q. 道場数の推移や開催回数の推移などの統計情報はありますか?
 はい、あります。下記ページより CoderDojo Japan が把握している統計情報を公開しています。
