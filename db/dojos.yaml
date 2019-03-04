@@ -1430,8 +1430,8 @@
   created_at: '2019-01-16'
   name: とよなか
   prefecture_id: 27
-  logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/ToyonakaDojo
+  logo: "/img/dojos/toyonaka.png"
+  url: http://coderdojo-toyonaka.org
   description: 大阪府豊中市で毎月開催
   tags:
   - Scratch
