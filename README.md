@@ -10,16 +10,19 @@
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
 
-1. Dojo 情報やドキュメントの修正 (ブラウザのみ)
-2. [CoderDojo Kata](https://coderdojo.jp/kata) の執筆・編集 (ブラウザ + ユーザー登録)
-3. 新機能の開発やデザインの改善 (各種ツールのセットアップ)
+1. Dojo 情報やドキュメントなどの修正
+   - 必要なもの: ブラウザ + GitHub アカウント
+2. [CoderDojo Kata](https://coderdojo.jp/kata) の執筆・編集
+   - 必要なもの: ブラウザ + coderdojo.jp アカウント
+3. 新機能の開発やデザインの改善
+   - 必要なもの: 各種開発環境のセットアップ (開発者向け)
 
 新機能の開発やデザインの改善には開発環境が必要ですが、ちょっとした文言の追記・修正であればブラウザだけで参加できるようになっているのが特徴です ✨📝💨 
 それぞれの参加方法は次のとおりです。
 
-### 1. Dojo 情報やドキュメントの修正
+### 1. Dojo 情報の更新
 
-Dojo 情報は以下の手順で簡単に修正できます。
+Dojo 情報は次の手順で簡単に更新できます。
 
 1. [db/dojos.yaml](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/db/dojos.yaml) を開く
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
