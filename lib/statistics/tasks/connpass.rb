@@ -5,10 +5,10 @@ module Statistics
         EventHistory.for(:connpass).within(period).delete_all
       end
 
-      def initialize(dojos, date, weekly)
+      def initialize(dojos, period)
         @client = EventService::Providers::Connpass.new
         @dojos = dojos
-        @params = build_params(date, weekly)
+        @params = build_params(period)
       end
 
       def run
@@ -16,7 +16,7 @@ module Statistics
           dojo.dojo_event_services.for(:connpass).each do |dojo_event_service|
             @client.fetch_events(@params.merge(series_id: dojo_event_service.group_id)).each do |e|
               next unless e.dig('series', 'id').to_s == dojo_event_service.group_id
-
+        
               EventHistory.create!(dojo_id: dojo.id,
                                    dojo_name: dojo.name,
                                    service_name: dojo_event_service.name,
@@ -32,19 +32,28 @@ module Statistics
 
       private
 
-      def build_params(date, weekly)
-        if weekly
-          week_days = DateTimeUtil.every_day_array(date, date.end_of_week)
-                                  .map { |date| date.strftime('%Y%m%d') }
+      def build_params(period)
+        yyyymmdd = []
+        yyyymm = []
 
-          {
-            yyyymmdd: week_days.join(',')
-          }
-        else
-          {
-            yyyymm: "#{date.year}#{date.month}"
-          }
+        st_date = period.first
+        ed_date = period.last
+
+        date = period.first
+        while date <= ed_date
+          if date.day == 1 && date.end_of_month <= ed_date
+            yyyymm << date.strftime('%Y%m')
+            date += 1.month
+          else
+            yyyymmdd << date.strftime('%Y%m%d')
+            date += 1.day
+          end
         end
+
+        {
+          yyyymmdd: yyyymmdd,
+          yyyymm: yyyymm
+        }
       end
     end
   end

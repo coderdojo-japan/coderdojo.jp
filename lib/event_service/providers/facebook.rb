@@ -1,34 +1,35 @@
 module EventService
   module Providers
-      class Facebook
-        class_attribute :access_token
+    class Facebook
+      YAML_FILE = Rails.root.join('db', 'facebook_event_histories.yaml')
 
-        def initialize
-          @client = Koala::Facebook::API.new(self.access_token)
-        end
+      def fetch_events(dojo_id: nil, since_at: nil, until_at: nil)
+        dojo_ids = dojo_id if dojo_id.is_a?(Array)
+        dojo_ids ||= [dojo_id] if dojo_id
 
-        def fetch_events(group_id:, since_at: nil, until_at: nil)
-          params = {
-            fields: %i(attending_count start_time owner),
-            limit: 100
-          }.tap do |h|
-            # @note FacebookのGraph APIはPDTがタイムゾーンとなっており、
-            #       JST<->PDTのオフセット8時間を追加した時刻をパラメータとする必要がある
-            # @see https://github.com/coderdojo-japan/coderdojo.jp/pull/182#discussion_r148935458
-            h[:since] = since_at.since(8.hours).to_i if since_at
-            h[:until] = until_at.since(8.hours).to_i if until_at
+        events = YAML.load_file(YAML_FILE) || []
+        return events if dojo_ids.blank? && since_at.nil? && until_at.nil?
+
+        results = []
+        events.group_by { |d| d['dojo_id'] }.each do |dojo_id, values|
+          next if dojo_ids.present? && !dojo_ids.include?(dojo_id)
+          if since_at.nil? && until_at.nil?
+            results += values
+            next
           end
-
-          events = []
-
-          collection = @client.get_object("#{group_id}/events", params)
-          events.push(*collection.to_a)
-          while !collection.empty? && collection.paging['next'] do
-            events.push(*collection.next_page.to_a)
+          term = if since_at && until_at
+                   (since_at..until_at)
+                 elsif since_at
+                   (since_at..)
+                 else
+                   ('2000/01/01 00:00'.in_time_zone..until_at)
+                 end
+          values.each do |v|
+            results << v if term.cover?(v['evented_at'].in_time_zone)
           end
-
-          events
         end
+        results
       end
+    end
   end
 end

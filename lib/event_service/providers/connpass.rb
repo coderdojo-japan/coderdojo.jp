@@ -2,6 +2,7 @@ module EventService
   module Providers
       class Connpass
         ENDPOINT = 'https://connpass.com/api/v1'.freeze
+        # NOTE: 期間は ym or ymd パラメータで指定(複数指定可能)、未指定時全期間が対象
 
         def initialize
           @client = EventService::Client.new(ENDPOINT)
@@ -11,28 +12,39 @@ module EventService
           @client.get('event/', { keyword: keyword, count: 100 })
         end
 
+        # NOTE: yyyymm, yyyymmdd は文字列を要素とする配列(Array[String])で指定
         def fetch_events(series_id:, yyyymm: nil, yyyymmdd: nil)
           params = {
             series_id: series_id,
             start: 1,
             count: 100
           }
-          params[:ym] = yyyymm if yyyymm
-          params[:ymd] = yyyymmdd if yyyymmdd
+
+          param_period_patern = []
+          if yyyymm
+            yyyymm.each_slice(12) { |d| param_period_patern << { ym: d.join(',') } }
+          end
+          if yyyymmdd
+            yyyymmdd.each_slice(10) { |d| param_period_patern << { ymd: d.join(',') } }
+          end
+          param_period_patern = [{}] if param_period_patern.blank?
+
           events = []
 
-          loop do
-            part = @client.get('event/', params)
+          param_period_patern.each do |param_period|
+            loop do
+              part = @client.get('event/', params.merge(param_period))
 
-            break if part['results_returned'].zero?
+              break if part['results_returned'].zero?
 
-            events.push(*part.fetch('events'))
+              events.push(*part.fetch('events'))
 
-            break if part.size < params[:count]
+              break if part.size < params[:count]
 
-            break if params[:start] + params[:count] > part['results_available']
+              break if params[:start] + params[:count] > part['results_available']
 
-            params[:start] += params[:count]
+              params[:start] += params[:count]
+            end
           end
 
           events

@@ -5,7 +5,7 @@ module Statistics
         EventHistory.for(:static_yaml).delete_all
       end
 
-      def initialize(dojos, _date, _weekly)
+      def initialize(dojos, _date)
         @client = EventService::Providers::StaticYaml.new
         @dojos = dojos
       end
@@ -16,7 +16,6 @@ module Statistics
           dojo = dojos_hash[e['dojo_id'].to_i]
           next unless dojo
 
-          evented_at = Time.zone.parse(e['evented_at'])
           event_id = "#{SecureRandom.uuid}"
 
           EventHistory.create!(dojo_id: dojo.id,
@@ -25,7 +24,7 @@ module Statistics
                                event_id: event_id,
                                event_url: "https://dummy.url/#{event_id}",
                                participants: e['participants'],
-                               evented_at: evented_at)
+                               evented_at: Time.zone.parse(e['evented_at']))
         end
       end
     end

@@ -401,6 +401,7 @@ DEPENDENCIES
   dotenv-rails
   dumper
   faraday
+  faraday_middleware
   flamegraph
   font-awesome-rails
   google_drive

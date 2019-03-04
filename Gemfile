@@ -31,6 +31,8 @@ gem 'secure_headers'
 gem 'kramdown'
 
 gem 'faraday'
+gem 'faraday_middleware'
+
 gem 'koala'
 gem 'rack-user_agent'
 gem 'rack-attack'

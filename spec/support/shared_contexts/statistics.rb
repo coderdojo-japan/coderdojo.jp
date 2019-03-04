@@ -41,24 +41,3 @@ RSpec.shared_context 'Use stubs for Doorkeeper' do
     ]
   end
 end
-
-RSpec.shared_context 'Use stubs for Facebook' do
-  let(:facebook_response) do
-    resp = OpenStruct.new(data: {
-      "data" => [
-        {"attending_count"=>1, "start_time"=>"2017-10-29T13:00:00+0900", "owner"=>{"name"=>"CoderDojo ひばりヶ丘", "id"=>"123451234512345"}, "id"=>"125500978166443"}
-      ],
-      "paging" => {
-        "cursors" => {
-          "before" => "QVFIUjVOd2tKSmZA6S01fR0NFNWN2aFJlc01JUnpqRW5aMFFkeHdBS3NTcUt1b3JfazUzM3FtVGhCYlN6bE1OS1lxZAzQ0YjVSNWRRVWRfd182SXh3LUN6VXZAB",
-          "after" => "QVFIUmZA1cEk5QlV0VFc2Ri1BT3JEOWl3M1gzemRZAZAkpkaFdjNTEwUDdtaERLdFpwYV9CejVuX3hLV2kyVm5Gem9KSTAzTGg0dUd4SjNLXzBlSTZAJMVAtdmln"
-        }
-      }
-    })
-    Koala::Facebook::API::GraphCollection.new(resp, nil)
-  end
-
-  before do
-    allow_any_instance_of(Koala::Facebook::API).to receive(:get_object).and_return(facebook_response)
-  end
-end

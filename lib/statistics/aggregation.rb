@@ -1,69 +1,57 @@
 module Statistics
   class Aggregation
     def initialize(args)
-      @mode = detect_mode(args[:from])
-      @from = aggregation_from(args[:from])
-      @to = aggregation_to(args[:to])
-      @dojos = fetch_dojos
+      @from, @to = aggregation_period(args[:from], args[:to])
+      dojos = fetch_dojos
+      @externals = dojos[:externals]
+      @internals = dojos[:internals]
     end
 
     def run
-      "Statistics::Aggregation::#{@mode.camelize}".constantize.new(@dojos, @from, @to).run
+      puts "Aggregate for #{@from}~#{@to}"
+      with_notifying do
+        delete_event_histories
+        execute
+        execute_once
+      end
     end
 
     private
 
-    def detect_mode(from)
-      if from
-        if from.length == 4 || from.length == 6
-          'monthly'
-        else
-          'weekly'
-        end
-      else
-        'weekly'
+    def aggregation_period(from, to)
+      return ['2012-01-01'.to_date, Time.zone.yesterday] if from == '-' && to == '-'
+      if from.nil? && to.nil?
+        return [Time.zone.today.prev_week.beginning_of_week, Time.zone.today.prev_week.end_of_week]
       end
-    end
 
-    def aggregation_from(from)
-      if from
-        if from.length == 4
-          date_from(from).beginning_of_year
-        elsif from.length == 6
-          date_from(from).beginning_of_month
-        else
-          date_from(from).beginning_of_week
-        end
-      else
-        Time.current.prev_week.beginning_of_week
-      end
-    end
+      from ||= to
+      from_date = case from&.length
+                  when 4    then date_from(from).beginning_of_year
+                  when 6,7  then date_from(from).beginning_of_month
+                  when 8,10 then date_from(from)
+                  end
 
-    def aggregation_to(to)
-      if to
-        if to.length == 4
-          date_from(to).end_of_year
-        elsif to.length == 6
-          date_from(to).end_of_month
-        else
-          date_from(to).end_of_week
-        end
-      else
-        Time.current.prev_week.end_of_week
-      end
+      to ||= from
+      to_date = case to&.length
+                when 4    then date_from(to).end_of_year
+                when 6,7  then date_from(to).end_of_month
+                when 8,10 then date_from(to)
+                end
+
+      [from_date, [to_date, Time.zone.yesterday].min]
     end
 
     def date_from(str)
-      formats = %w(%Y%m%d %Y/%m/%d %Y-%m-%d %Y%m %Y/%m %Y-%m)
+      formats = %w(%Y%m%d %Y/%m/%d %Y-%m-%d %Y%m %Y/%m %Y-%m %Y)
       d = formats.map { |fmt|
         begin
-          Time.zone.strptime(str, fmt)
-        rescue ArgumentError
-          Time.zone.local(str) if str.length == 4
+          Date.strptime(str, fmt)
+        rescue
+          nil
         end
       }.compact.first
 
-      raise ArgumentError, "Invalid format: `#{str}`, allow format is #{formats.push('%Y').join(' or ')}" if d.nil?
+      raise ArgumentError, "Invalid format: `#{str}`, allow format is #{formats.join(' or ')}" if d.nil?
 
       d
     end
@@ -81,99 +69,37 @@ module Statistics
       end
     end
 
-    class Base
-      def initialize(dojos, from, to)
-        @externals = dojos[:externals]
-        @internals = dojos[:internals]
-        @list = build_list(from, to)
-        @from = from
-        @to = to
-      end
+    def with_notifying
+      yield
+      Notifier.notify_success(date_format(@from), date_format(@to))
+    rescue => e
+      Notifier.notify_failure(date_format(@from), date_format(@to), e)
+    end
 
-      def run
-        with_notifying do
-          delete_event_histories
-          execute
-          execute_once
-        end
-      end
-
-      private
-
-      def with_notifying
-        yield
-        Notifier.notify_success(date_format(@from), date_format(@to))
-      rescue => e
-        Notifier.notify_failure(date_format(@from), date_format(@to), e)
-      end
-
-      def delete_event_histories
-        (@externals.keys + @internals.keys).each do |kind|
-          "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(@from..@to)
-        end
-      end
-
-      def execute
-        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
-      end
-
-      def execute_once
-        @internals.each do |kind, list|
-          "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, nil, nil).run
-        end
-      end
-
-      def build_list(_from, _to)
-        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
-      end
-
-      def date_format(_date)
-        raise NotImplementedError.new("You must implement #{self.class}##{__method__}")
+    def delete_event_histories
+      target_period = @from.beginning_of_day..@to.end_of_day
+      (@externals.keys + @internals.keys).each do |kind|
+        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period)
       end
     end
 
-    class Weekly < Base
-      private
-
-      def execute
-        @list.each do |date|
-          puts "Aggregate for #{date_format(date)}~#{date_format(date.end_of_week)}"
-
-          @externals.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, true).run
-          end
-        end
-      end
-
-      def build_list(from, to)
-        DateTimeUtil.every_week_array(from, to)
-      end
-
-      def date_format(date)
-        date.strftime('%Y/%m/%d')
+    def execute
+      target_period = @from..@to
+      @externals.each do |kind, list|
+        puts "Aggregate of #{kind}"
+        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, target_period).run
       end
     end
 
-    class Monthly < Base
-      private
-
-      def execute
-        @list.each do |date|
-          puts "Aggregate for #{date_format(date)}"
-
-          @externals.each do |kind, list|
-            "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, date, false).run
-          end
-        end
+    def execute_once
+      @internals.each do |kind, list|
+        puts "Aggregate of #{kind}"
+        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, nil).run
       end
+    end
 
-      def build_list(from, to)
-        DateTimeUtil.every_month_array(from, to)
-      end
-
-      def date_format(date)
-        date.strftime('%Y/%m')
-      end
+    def date_format(date)
+      date.strftime('%Y/%m/%d')
     end
 
     class Notifier
