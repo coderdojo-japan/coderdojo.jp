@@ -9,7 +9,7 @@ namespace :dojos do
   desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
   task generate_yaml: :environment do
     dojos = JSON.parse(File.read(Rails.root.join('db', 'parse_backup.json')))['results']
-    dojos.sort_by!{ |hash| hash['order'] }
+    dojos.sort_by! { |hash| hash['order'] }
 
     # Tweak dojo info if needed
     dojos.each do |dojo|
@@ -28,17 +28,18 @@ namespace :dojos do
 
     dojos.each do |dojo|
       d = Dojo.find_or_initialize_by(id: dojo['id'])
-      d.name        = dojo['name']
-      d.email       = ''
-      d.order       = dojo['order'] || search_order_number(dojo['name'])
-      d.description = dojo['description']
-      d.logo        = dojo['logo']
-      d.tags        = dojo['tags']
-      d.url         = dojo['url']
-      d.created_at  = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
-      d.updated_at  = Time.zone.now
+      d.name          = dojo['name']
+      d.email         = ''
+      d.order         = dojo['order'] || search_order_number(dojo['name'])
+      d.description   = dojo['description']
+      d.logo          = dojo['logo']
+      d.tags          = dojo['tags']
+      d.url           = dojo['url']
+      d.created_at    = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
+      d.updated_at    = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
-      d.is_active   = dojo['is_active'].nil? ? true : dojo['is_active']
+      d.is_active     = dojo['is_active'].nil? ? true : dojo['is_active']
+      d.is_private    = dojo['is_private'].nil? ? false : dojo['is_private']
 
       d.save!
     end
@@ -49,8 +50,8 @@ namespace :dojos do
   def search_order_number(pre_city)
 
     if /(?<city>.+)\s\(.+\)/ =~ pre_city
-      table = CSV.table(Rails.root.join('db','city_code.csv'), {:converters => nil})
-      row = table.find{ |r| r[:city].to_s.start_with?(city)}
+      table = CSV.table(Rails.root.join('db','city_code.csv'), { :converters => nil })
+      row = table.find { |r| r[:city].to_s.start_with?(city) }
       row ? row[:order] : raise("Failed to detect city code by #{pre_city}
 order値の自動設定ができませんでした。お手数ですが下記URLを参考に該当する全国地方公共団体コードをorder値にご入力ください。
 http://www.soumu.go.jp/denshijiti/code.html
@@ -67,7 +68,7 @@ http://www.soumu.go.jp/denshijiti/code.html
 
     # Dojo column should start with 'name' for human-readability
     dojos.map! do |dojo|
-      dojo.sort_by{|a,b| a.last}.to_h
+      dojo.sort_by { |a,b| a.last }.to_h
     end
 
     Dojo.dump_attributes_to_yaml(dojos)
