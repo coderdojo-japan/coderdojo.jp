@@ -104,5 +104,43 @@ RSpec.describe Statistics::Aggregation do
         expect{ sa.send(:date_from, 'abc') }.to raise_error(ArgumentError)
       end
     end
+
+    context 'fetch_dojos(provider)' do
+      it '指定なし' do
+        dojos = sa.send(:fetch_dojos, nil)
+        expect(dojos[:externals].keys).to eq(DojoEventService::EXTERNAL_SERVICES)
+        expect(dojos[:internals].keys).to eq(DojoEventService::INTERNAL_SERVICES)
+      end
+
+      it 'connpass' do
+        dojos = sa.send(:fetch_dojos, 'connpass')
+        expect(dojos[:externals].keys).to eq(['connpass'])
+        expect(dojos[:internals].keys).to eq([])
+      end
+
+      it 'doorkeeper' do
+        dojos = sa.send(:fetch_dojos, 'doorkeeper')
+        expect(dojos[:externals].keys).to eq(['doorkeeper'])
+        expect(dojos[:internals].keys).to eq([])
+      end
+
+      it 'facebook' do
+        dojos = sa.send(:fetch_dojos, 'facebook')
+        expect(dojos[:externals].keys).to eq(['facebook'])
+        expect(dojos[:internals].keys).to eq([])
+      end
+
+      it 'static_yaml' do
+        dojos = sa.send(:fetch_dojos, 'static_yaml')
+        expect(dojos[:externals].keys).to eq([])
+        expect(dojos[:internals].keys).to eq(['static_yaml'])
+      end
+
+      it 'other' do
+        dojos = sa.send(:fetch_dojos, 'abc')
+        expect(dojos[:externals].keys).to eq([])
+        expect(dojos[:internals].keys).to eq([])
+      end
+    end
   end
 end

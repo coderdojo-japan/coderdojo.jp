@@ -2,7 +2,7 @@ module Statistics
   class Aggregation
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
-      dojos = fetch_dojos
+      dojos = fetch_dojos(args[:provider])
       @externals = dojos[:externals]
       @internals = dojos[:internals]
     end
@@ -56,12 +56,27 @@ module Statistics
       d
     end
 
-    def fetch_dojos
+    def fetch_dojos(provider)
+      if provider.blank?
+        # 全プロバイダ対象
+        external_services = DojoEventService::EXTERNAL_SERVICES
+        internal_services = DojoEventService::INTERNAL_SERVICES
+      else
+        external_services = []
+        internal_services = []
+        case provider
+        when 'connpass', 'doorkeeper', 'facebook'
+          external_services = [provider]
+        when 'static_yaml'
+          internal_services = [provider]
+        end
+      end
+
       {
-        externals: find_dojos_by(DojoEventService::EXTERNAL_SERVICES),
-        internals: find_dojos_by(DojoEventService::INTERNAL_SERVICES)
+        externals: find_dojos_by(external_services),
+        internals: find_dojos_by(internal_services)
       }
-    end
+  end
 
     def find_dojos_by(services)
       services.each.with_object({}) do |name, hash|
