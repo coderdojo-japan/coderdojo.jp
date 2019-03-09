@@ -5,6 +5,7 @@
 }
 .keiyaku > h1 {
   text-align: center;
+  line-height: 1.5em;
 }
 .keiyaku > h1:first-child {
   margin-top: 0;
