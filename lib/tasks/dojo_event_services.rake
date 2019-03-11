@@ -16,8 +16,10 @@ namespace :dojo_event_services do
         result[:skipped] << [des['dojo_id'], 'Not found record in `dojos` table']
         next
       end
-
+      # 比較対象は URL を除く dojo_id, name, group_id
+      url = des.delete('url')
       dojo_event_service = dojo.dojo_event_services.find_or_initialize_by(des)
+      dojo.dojo_event_services.where(des).where.not(id: dojo_event_service.id).destroy_all
       if dojo_event_service.changed?
         changes = dojo_event_service.changes
         new_record = dojo_event_service.new_record?
