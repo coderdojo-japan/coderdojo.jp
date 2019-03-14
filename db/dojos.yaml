@@ -2160,6 +2160,20 @@
   - Mindstorm
   - Java
   - Swift
+- id: 209
+  order: '472077'
+  created_at: '2019-03-15'
+  name: 石垣
+  prefecture_id: 47
+  logo: "/img/dojos/ishigaki.png"
+  url: https://zen.coderdojo.com/dojos/jp/chong1-sheng2-xian4-shi2-yuan2-shi4-deng1-ye3-cheng2/ishigaki
+  description: 沖縄県石垣市で毎月開催 (Private)
+  tags:
+  - LEGO Mindstorms
+  - Minecraft
+  - 動画制作
+  - 電子工作
+  - DTM
 - id: 205
   order: '472085'
   created_at: '2019-02-28'
