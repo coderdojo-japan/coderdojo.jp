@@ -1043,6 +1043,7 @@
   tags:
   - Scratch
   - Webサイト
+  is_active: false
 - id: 88
   order: '192015'
   created_at: '2017-05-29'
