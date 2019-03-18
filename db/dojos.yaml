@@ -1758,6 +1758,7 @@
   - Scratch
   - Webサイト
   - アプリ
+  is_active: false
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
