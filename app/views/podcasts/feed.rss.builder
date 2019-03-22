@@ -23,7 +23,8 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
         xml.guid({:isPermaLink => "false"}, @domainname + episode.url)
         xml.itunes :explicit, "clean"
         xml.pubDate episode.published_at.rfc2822
-        xml.enclosure({:url => @domainname + episode.url + ".mp3", :type => "audio/mpeg"})
+        xml.enclosure({:url => @domainname + episode.url + ".mp3", :length => episode.filesize, :type => "audio/mpeg"})
+        xml.itunes :duration, episode.duration
       end
     end
   end

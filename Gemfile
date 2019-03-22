@@ -37,6 +37,9 @@ gem 'rack-attack'
 gem 'google_drive'
 gem 'lazy_high_charts'
 
+# For RSS feed
+gem 'ruby-mp3info', :require => 'mp3info'
+
 group :development do
   gem 'web-console'
   gem 'spring'
