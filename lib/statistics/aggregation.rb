@@ -2,7 +2,8 @@ module Statistics
   class Aggregation
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
-      dojos = fetch_dojos(args[:provider])
+      @provider = args[:provider]
+      dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
       @internals = dojos[:internals]
     end
@@ -86,9 +87,9 @@ module Statistics
 
     def with_notifying
       yield
-      Notifier.notify_success(date_format(@from), date_format(@to))
+      Notifier.notify_success(date_format(@from), date_format(@to), @provider)
     rescue => e
-      Notifier.notify_failure(date_format(@from), date_format(@to), e)
+      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, e)
     end
 
     def delete_event_histories
@@ -119,15 +120,19 @@ module Statistics
 
     class Notifier
       class << self
-        def notify_success(from, to)
-          notify("#{from}~#{to}のイベント履歴の集計を行いました")
+        def notify_success(from, to, provider)
+          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計を行いました")
         end
 
-        def notify_failure(from, to, exception)
-          notify("#{from}~#{to}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+        def notify_failure(from, to, provider, exception)
+          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
+
+        def provider_info(provider)
+          provider ? "(#{provider})" : nil
+        end
 
         def idobata_hook_url
           return @idobata_hook_url if defined?(@idobata_hook_url)

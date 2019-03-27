@@ -6,8 +6,22 @@
 
 <div class="container" style="line-height: 2.2em;">
   <section class="keiyaku" style="padding: 50px 0px 0px 0px;">
-    <h1 style="text-align: center;"><%= @title %></h2>
-    <p style="text-align: center; padding-bottom: 50px;"><%= @desc %></p>
+    <h1 style="text-align: center;"><%= @title %></h1>
+    <p style="text-align: center; padding-bottom: 100px;"><%= @desc %></p>
+
+    <h3 id="live" style="text-align: center; padding-bottom: 10px;">🎙 次回ライブ配信: <br class="ignore-pc"><%= @next_live_date %></h3>
+    <iframe src="https://mixlr.com/users/6058871/embed"
+     width="100%" height="180px" scrolling="no"
+     frameborder="no" marginheight="0" marginwidth="0"></iframe>
+    
+    <p style="text-align: center; padding-top: 10px; padding-bottom: 100px;">
+      <a href="https://twitter.com/intent/tweet?button_hashtag=DojoCast"
+       class="twitter-hashtag-button" data-size="large" data-lang="ja"
+       data-text="" data-show-count="false">#DojoCast でツイートする</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p>
+    
+    <h3 id="episodes" style="text-align: center; padding-bottom: 10px;">📻 これまでの収録</h3>
     <ul style="font-size: 120%">
       <% @episodes.each do |episode| %>
         <li><%= link_to episode.title, episode.url %></li>
@@ -15,6 +29,6 @@
     </ul>
   </section>
   <section class="introduction text-center list" style="margin-bottom: 30px;">
-    <%= render 'shared/sns' %>
+    <%= render 'shared/social_buttons' %>
   </section>
 </div>
