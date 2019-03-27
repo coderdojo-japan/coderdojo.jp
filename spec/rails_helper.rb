@@ -62,4 +62,6 @@ RSpec.configure do |config|
       example.skip
     end
   end
+
+  config.include FactoryBot::Syntax::Methods
 end
