@@ -22,6 +22,7 @@ before_script:
 - psql -c 'create database coderdojo_jp_test;' -U postgres
 script:
 - bundle exec rake db:migrate --trace
+- bundle exec rake db:seed --trace
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rspec spec; fi
 - if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_PULL_REQUEST_SLUG" = "coderdojo-japan/coderdojo.jp"
   ]; then bundle exec rspec spec; fi
