@@ -2,6 +2,7 @@ namespace :dojo_event_services do
   desc '現在のyamlファイルを元にデータベースを更新します'
   task upsert: :environment do
     result = { inserted: [], updated: [], deleted: [], kept: [], skipped: [] }
+    reserved_ids = []
 
     list = YAML.load_file(Rails.root.join('db','dojo_event_services.yaml'))
     list.each do |des|
@@ -19,13 +20,6 @@ namespace :dojo_event_services do
       # 比較対象は URL を除く dojo_id, name, group_id
       url = des.delete('url')
       dojo_event_service = dojo.dojo_event_services.find_or_initialize_by(des)
-      overlapped = dojo.dojo_event_services.where(des).where.not(id: dojo_event_service.id)
-      if overlapped.present?
-        overlapped.each do |d|
-          result[:deleted] << ["#{d.dojo_id}:#{d.id}"]
-        end
-        overlapped.destroy_all
-      end
       dojo_event_service.url = url
       if dojo_event_service.changed?
         changes = dojo_event_service.changes
@@ -35,6 +29,12 @@ namespace :dojo_event_services do
       else
         result[:kept] << ["#{des['dojo_id']}:#{dojo_event_service.id}"]
       end
+      reserved_ids << dojo_event_service.id
+    end
+
+    DojoEventService.where.not(id: reserved_ids).find_each do |d|
+      result[:deleted] << ["#{d.dojo_id}:#{d.id}"]
+      d.destroy
     end
 
     # Dump result
