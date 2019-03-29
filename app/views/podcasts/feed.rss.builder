@@ -11,7 +11,19 @@ xml.rss :version => "2.0",
     xml.copyright   @copyright
     xml.language    "ja"
 
+    xml.atom :link, :href => "http://dojocast.superfeedr.com/",
+                    :rel  => "hub"
+    xml.atom :link, :href => "https://coderdojo.jp/podcasts.rss",
+                    :rel  => "self",
+                    :type => "application/rss+xml"
+    xml.media :thumbnail, :url => "https://coderdojo.jp/img/logo.png"
+    xml.media :keywords, "programming,education,opensource,community,coderdojo,software,development"
+    xml.media :category, "Technology", :scheme => "http://www.itunes.com/dtds/podcast-1.0.dtd"
+
     xml.itunes :author,   @author
+    xml.itunes :keywords, "programming,education,opensource,community,coderdojo,software,development"
+    xml.itunes :subtitle, @description
+    xml.itunes :summary,  "CoderDojo コミュニティに関わる方々をハイライトする教育系ポッドキャストです。"
     xml.itunes :image,    :href => @art_work_url
     xml.itunes :explicit, "clean"
     xml.itunes :owner do
