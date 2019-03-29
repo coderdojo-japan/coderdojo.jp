@@ -1,8 +1,9 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0",
-        "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast-1.0.dtd",
         "xmlns:atom"   => "http://www.w3.org/2005/Atom",
-        "xmlns:media"  => "http://search.yahoo.com/mrss/" do
+        "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",
+        "xmlns:media"  => "http://search.yahoo.com/mrss/",
+        "xmlns:dc"     => "http://purl.org/dc/elements/1.1/" do
   xml.channel do
     xml.title       @title
     xml.description @description
