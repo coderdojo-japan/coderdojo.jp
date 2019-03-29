@@ -15,4 +15,15 @@ class PodcastsController < ApplicationController
     @content  = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
     @url      = request.url
   end
+
+  def feed
+    @episodes     = Podcast.all.sort_by{|episode| episode.published_at}
+    @base_url     = request.base_url
+    @author       = "一般社団法人 CoderDojo Japan"
+    @art_work_url = "https://coderdojo.jp/podcasts/cover.jpg"
+    @current_year = Time.current.year
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+  end
 end
