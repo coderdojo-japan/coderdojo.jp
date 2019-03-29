@@ -47,7 +47,7 @@ class Podcast
   end
 
   def description
-    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
+    @desc  ||= exists? ? self.content.lines.fourth : ''
   end
 
   def published_at
