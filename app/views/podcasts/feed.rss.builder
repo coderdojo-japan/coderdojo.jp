@@ -1,12 +1,12 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast-1.0.dtd" do
   xml.channel do
-    xml.title       full_title ""
-    xml.description full_description ""
+    xml.title       @title
+    xml.description @description
     xml.link        root_url
     xml.image       @art_work_url
     xml.author      @author
-    xml.copyright   "Copyright © 2012-#{@current_year} #{@author}"
+    xml.copyright   @copyright
     xml.language    "ja"
     xml.itunes :category, :text => "Technology" do
       xml.itunes :category, :text => "Software How-To"
