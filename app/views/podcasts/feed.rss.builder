@@ -4,6 +4,7 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
     xml.title       full_title ""
     xml.description full_description ""
     xml.link        root_url
+    xml.image       @art_work_url
     xml.author      @author
     xml.copyright   "Copyright © 2012-#{@current_year} #{@author}"
     xml.language    "ja"
