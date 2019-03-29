@@ -11,7 +11,7 @@ xml.rss :version => "2.0",
     xml.copyright   @copyright
     xml.language    "ja"
 
-    xml.atom :link, :href => "http://dojocast.superfeedr.com/",
+    xml.atom :link, :href => "https://dojocast.superfeedr.com/",
                     :rel  => "hub"
     xml.atom :link, :href => "https://coderdojo.jp/podcasts.rss",
                     :rel  => "self",
