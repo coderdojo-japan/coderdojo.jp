@@ -16,7 +16,7 @@ xml.rss :version => "2.0",
     xml.atom :link, :href => "https://coderdojo.jp/podcasts.rss",
                     :rel  => "self",
                     :type => "application/rss+xml"
-    xml.media :thumbnail, :url => "https://coderdojo.jp/img/logo.png"
+    xml.media :thumbnail, :url => @art_work_url
     xml.media :keywords, "programming,education,opensource,community,coderdojo,software,development"
     xml.media :category, "Technology", :scheme => "http://www.itunes.com/dtds/podcast-1.0.dtd"
 
