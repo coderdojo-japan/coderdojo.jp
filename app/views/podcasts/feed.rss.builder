@@ -4,26 +4,36 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
     xml.title       @title
     xml.description @description
     xml.link        root_url
-    xml.image       @art_work_url
-    xml.author      @author
     xml.copyright   @copyright
     xml.language    "ja"
-    xml.itunes :category, :text => "Technology" do
-      xml.itunes :category, :text => "Software How-To"
-      xml.itunes :category, :text => "Podcasting"
-    end
-    xml.itunes :type,     "serial"
+
+    xml.itunes :author,   :text => @author
+    xml.itunes :image,    @art_work_url
+    xml.itunes :type,     "episodic"
     xml.itunes :explicit, "clean"
+    xml.itunes :owner,    :text => @author do
+      xml.itunes :name,  :text => "Yohei Yasukawa"
+      xml.itunes :email, :text => "yohei@coderdojo.jp"
+    end
+    xml.itunes :category, :text => "Education" do
+      xml.itunes :category, :text => "Educational Technology"
+    end
+    xml.itunes :category, :text => "Government &amp; Organizations" do
+      xml.itunes :category, :text => "Non-Profit"
+    end
 
     @episodes.each do |episode|
+      description = Kramdown::Document.new(episode.description, input: 'GFM').to_html
       xml.item do
         xml.title        episode.title
         xml.author       @author
-	xml.description  CGI.escapeHTML(Kramdown::Document.new(episode.description, input: 'GFM').to_html)
+	xml.itunes       :image,   @art_work_url
+	xml.content      :encoded, :text => description
+	xml.description  CGI.escapeHTML(description)
         xml.link         "#{@base_url}#{episode.url}"
         xml.guid({:isPermaLink => "false"}, "#{@base_url}#{episode.url}")
         xml.itunes       :explicit, "clean"
-        xml.published_at episode.published_at.rfc2822
+        xml.pubDate       episode.published_at.rfc2822
         xml.enclosure({
 	  :url    => "#{@base_url}#{episode.url}.mp3",
 	  :length => episode.filesize,
