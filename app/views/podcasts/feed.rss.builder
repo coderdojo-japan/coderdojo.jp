@@ -7,13 +7,13 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
     xml.copyright   @copyright
     xml.language    "ja"
 
-    xml.itunes :author,   :text => @author
+    xml.itunes :author,   @author
     xml.itunes :image,    @art_work_url
     xml.itunes :type,     "episodic"
     xml.itunes :explicit, "clean"
-    xml.itunes :owner,    :text => @author do
-      xml.itunes :name,  :text => "Yohei Yasukawa"
-      xml.itunes :email, :text => "yohei@coderdojo.jp"
+    xml.itunes :owner do
+      xml.itunes :name,  "Yohei Yasukawa"
+      xml.itunes :email, "yohei@coderdojo.jp"
     end
     xml.itunes :category, :text => "Education" do
       xml.itunes :category, :text => "Educational Technology"
@@ -28,7 +28,7 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
         xml.title        episode.title
         xml.author       @author
 	xml.itunes       :image,   @art_work_url
-	xml.content      :encoded, :text => description
+	xml.content      :encoded, description
 	xml.description  description
         xml.link         "#{@base_url}#{episode.url}"
         xml.guid({:isPermaLink => "false"}, "#{@base_url}#{episode.url}")
