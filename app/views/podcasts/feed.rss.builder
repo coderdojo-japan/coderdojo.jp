@@ -13,25 +13,17 @@ xml.rss :version => "2.0",
 
     xml.itunes :author,   @author
     xml.itunes :image,    :href => @art_work_url
-    xml.itunes :type,     "episodic"
     xml.itunes :explicit, "clean"
     xml.itunes :owner do
       xml.itunes :name,  "Yohei Yasukawa"
       xml.itunes :email, "yohei@coderdojo.jp"
     end
-    xml.itunes :category, :text => "Education" do
-      xml.itunes :category, :text => "Educational Technology"
-    end
-    xml.itunes :category, :text => "Government &amp; Organizations" do
-      xml.itunes :category, :text => "Non-Profit"
-    end
+    xml.itunes :category, :text => "Education"
 
     @episodes.each do |episode|
       description = ActionView::Base.full_sanitizer.sanitize(Kramdown::Document.new(episode.description, input: 'GFM').to_html).strip
       xml.item do
         xml.title        episode.title
-        xml.author       @author
-	xml.content      :encoded, description
 	xml.description  description
         xml.link         "#{@base_url}#{episode.url}"
         xml.guid({:isPermaLink => "false"}, "#{@base_url}#{episode.url}")
