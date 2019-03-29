@@ -25,7 +25,7 @@ xml.rss :version => "2.0",
     xml.itunes :subtitle, @description
     xml.itunes :summary,  "CoderDojo コミュニティに関わる方々をハイライトする教育系ポッドキャストです。"
     xml.itunes :image,    :href => @art_work_url
-    xml.itunes :explicit, "clean"
+    xml.itunes :explicit, "no"
     xml.itunes :owner do
       xml.itunes :name,  "Yohei Yasukawa"
       xml.itunes :email, "yohei@coderdojo.jp"
