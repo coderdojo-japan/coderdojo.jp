@@ -28,8 +28,8 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
         xml.title        episode.title
         xml.author       @author
 	xml.itunes       :image,   @art_work_url
-	xml.content      :encoded, :text => description
-	xml.description  CGI.escapeHTML(description)
+	xml.content      :encoded, :text => CGI.escapeHTML(description)
+	xml.description  ActionView::Base.full_sanitizer.sanitize(description)
         xml.link         "#{@base_url}#{episode.url}"
         xml.guid({:isPermaLink => "false"}, "#{@base_url}#{episode.url}")
         xml.itunes       :explicit, "clean"
