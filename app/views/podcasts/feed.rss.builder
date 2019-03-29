@@ -19,7 +19,7 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
       xml.item do
         xml.title        episode.title
         xml.author       @author
-        xml.description  episode.description
+	xml.description  CGI.escapeHTML(episode.description)
         xml.link         "#{@base_url}#{episode.url}"
         xml.guid({:isPermaLink => "false"}, "#{@base_url}#{episode.url}")
         xml.itunes       :explicit, "clean"

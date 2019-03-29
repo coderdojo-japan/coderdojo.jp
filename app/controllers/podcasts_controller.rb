@@ -11,11 +11,11 @@ class PodcastsController < ApplicationController
     @author       = "一般社団法人 CoderDojo Japan"
     @copyright    = "Copyright © 2012-#{Time.current.year} #{@author}"
     @base_url     = request.base_url
+
     respond_to do |format|
       format.html
       format.rss  { render "feed", :layout => false }
     end
-
   end
 
   def show
