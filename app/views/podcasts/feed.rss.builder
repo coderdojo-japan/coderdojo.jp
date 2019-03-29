@@ -1,5 +1,8 @@
 xml.instruct! :xml, :version => "1.0"
-xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast-1.0.dtd" do
+xml.rss :version => "2.0",
+        "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast-1.0.dtd",
+        "xmlns:atom"   => "http://www.w3.org/2005/Atom",
+        "xmlns:media"  => "http://search.yahoo.com/mrss/" do
   xml.channel do
     xml.title       @title
     xml.description @description
@@ -8,7 +11,7 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
     xml.language    "ja"
 
     xml.itunes :author,   @author
-    xml.itunes :image,    @art_work_url
+    xml.itunes :image,    :href => @art_work_url
     xml.itunes :type,     "episodic"
     xml.itunes :explicit, "clean"
     xml.itunes :owner do
@@ -27,7 +30,6 @@ xml.rss :version => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/Podcast
       xml.item do
         xml.title        episode.title
         xml.author       @author
-	xml.itunes       :image,   @art_work_url
 	xml.content      :encoded, description
 	xml.description  description
         xml.link         "#{@base_url}#{episode.url}"
