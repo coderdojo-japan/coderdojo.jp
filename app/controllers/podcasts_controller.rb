@@ -1,9 +1,9 @@
 class PodcastsController < ApplicationController
   def index
-    @title = 'DojoCast'
-    @desc  = 'Highlight people around CoderDojo communities by Podcast 📻✨'
-    @episodes = Podcast.all.sort_by{|episode| episode.published_at }
-    @url      = request.url
+    @title          = 'DojoCast'
+    @description    = 'Highlight people around CoderDojo communities by Podcast 📻✨'
+    @episodes       = Podcast.all.sort_by{|episode| episode.published_at }
+    @url            = request.url
     @next_live_date = ENV['NEXT_LIVE_DATE'] || '未定'
 
     # For .rss format
