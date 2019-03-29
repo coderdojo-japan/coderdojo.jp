@@ -51,7 +51,7 @@ class Podcast
   end
 
   def published_at
-    @pubDate ||= exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : ''
+    @published_at ||= exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : ''
   end
 
   def content

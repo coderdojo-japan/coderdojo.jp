@@ -16,9 +16,10 @@ class PodcastsController < ApplicationController
   end
 
   def feed
-    @episodes   = Podcast.all.sort_by{|episode| episode.published_at}
-    @domainname = request.base_url
-    @author     = "一般社団法人 CoderDojo Japan"
+    @episodes     = Podcast.all.sort_by{|episode| episode.published_at}
+    @base_url     = request.base_url
+    @author       = "一般社団法人 CoderDojo Japan"
+    @current_year = Time.current.year
     respond_to do |format|
       format.rss { render :layout => false }
     end
