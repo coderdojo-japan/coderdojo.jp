@@ -56,7 +56,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     / at the end of the HEAD
-    %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"}/
+    - if is_kata?
+      %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
 
   %body
     - flash.each do |message_type, message|
@@ -65,15 +66,16 @@
     = scrivito_body_tags if using_scrivito?
     = render 'shared/footer'
     / at the end of the BODY
-    %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
-            :type => "text/javascript"}
-    :javascript
-      docsearch({
-        apiKey: '315da3c406c3fa374a0696590f4821a3',
-        indexName: 'coderdojo',
-        inputSelector: '#searchbox',
-        debug: false // Set debug to true if you want to inspect the dropdown
-      });
+    - if is_kata?
+      %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
+              :type => "text/javascript"}
+      :javascript
+        docsearch({
+          apiKey: '315da3c406c3fa374a0696590f4821a3',
+          indexName: 'coderdojo',
+          inputSelector: '#searchbox',
+          debug: false // Set debug to true if you want to inspect the dropdown
+        });
 
   #fb-root
   :javascript

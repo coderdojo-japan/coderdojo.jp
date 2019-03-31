@@ -34,4 +34,8 @@ module ApplicationHelper
   def using_scrivito?
     !@obj.nil?
   end
+
+  def is_kata?
+    request.path.starts_with? "/kata"
+  end
 end
