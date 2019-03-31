@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.0'
+ruby '2.6.2'
 
 gem 'rails', '~> 5.1.6'
 gem 'pg'
@@ -39,6 +39,9 @@ gem 'rack-attack'
 gem 'google_drive'
 gem 'lazy_high_charts'
 
+# For RSS feed
+gem 'ruby-mp3info', :require => 'mp3info'
+
 group :development do
   gem 'web-console'
   gem 'spring'
@@ -62,6 +65,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'rspec-rails', '~> 3.5'
+  gem 'factory_bot_rails'
 
   gem 'dotenv-rails'
 end

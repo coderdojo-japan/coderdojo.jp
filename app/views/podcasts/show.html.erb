@@ -20,7 +20,7 @@
     <% end %>
   </p>
   <p class="nav toc" >
-    <a href="/podcasts/">目次へ戻る</a></p>
+    <a href="/podcasts">目次へ戻る</a></p>
   <p class="nav next">
     <% if @episode.exists?(offset: +1) %>
       <a href="/podcasts/<%= @filename.to_i + 1 %>">next &rarr;</a>
@@ -40,7 +40,9 @@
 	  </audio>
 	</div>
       </div>
-      <div style="text-align: right; margin-bottom: -25px;"><a href="/podcasts/<%= @filename %>.mp3">Download mp3</a></div>
+      <div style="text-align: right; margin-bottom: -25px;">
+	<a href="/podcasts/<%= @filename %>.mp3">Download mp3</a>
+      </div>
     </section>
     <br />
  
@@ -48,7 +50,7 @@
   </section>
 
   <section class="introduction text-center list">
-    <%= render 'shared/sns' %>
+    <%= render 'shared/social_buttons' %>
   </section>
 </div>
 

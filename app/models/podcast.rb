@@ -28,12 +28,30 @@ class Podcast
     File.exists?("#{DIR_PATH}/#{self.filename.to_i + offset}.md")
   end
 
+  def filesize
+    @size ||= File.size("#{DIR_PATH}/#{self.filename}.mp3")
+  end
+
+  def duration
+    return @duration if @duration
+
+    path = "#{DIR_PATH}/#{self.filename}.mp3"
+    open_opts = { :encoding => 'utf-8' }
+    Mp3Info.open(path, open_opts) do |mp3info|
+      @duration = Time.at(mp3info.length).utc.strftime('%H:%M:%S')
+    end
+  end
+
   def title
     @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
   end
 
   def description
-    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
+    @desc  ||= exists? ? self.content.lines.fourth : ''
+  end
+
+  def published_at
+    @published_at ||= exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : ''
   end
 
   def content

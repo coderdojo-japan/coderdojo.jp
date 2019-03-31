@@ -2,7 +2,8 @@ module Statistics
   class Aggregation
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
-      dojos = fetch_dojos
+      @provider = args[:provider]
+      dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
       @internals = dojos[:internals]
     end
@@ -56,12 +57,27 @@ module Statistics
       d
     end
 
-    def fetch_dojos
+    def fetch_dojos(provider)
+      if provider.blank?
+        # 全プロバイダ対象
+        external_services = DojoEventService::EXTERNAL_SERVICES
+        internal_services = DojoEventService::INTERNAL_SERVICES
+      else
+        external_services = []
+        internal_services = []
+        case provider
+        when 'connpass', 'doorkeeper', 'facebook'
+          external_services = [provider]
+        when 'static_yaml'
+          internal_services = [provider]
+        end
+      end
+
       {
-        externals: find_dojos_by(DojoEventService::EXTERNAL_SERVICES),
-        internals: find_dojos_by(DojoEventService::INTERNAL_SERVICES)
+        externals: find_dojos_by(external_services),
+        internals: find_dojos_by(internal_services)
       }
-    end
+  end
 
     def find_dojos_by(services)
       services.each.with_object({}) do |name, hash|
@@ -71,9 +87,9 @@ module Statistics
 
     def with_notifying
       yield
-      Notifier.notify_success(date_format(@from), date_format(@to))
+      Notifier.notify_success(date_format(@from), date_format(@to), @provider)
     rescue => e
-      Notifier.notify_failure(date_format(@from), date_format(@to), e)
+      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, e)
     end
 
     def delete_event_histories
@@ -104,15 +120,19 @@ module Statistics
 
     class Notifier
       class << self
-        def notify_success(from, to)
-          notify("#{from}~#{to}のイベント履歴の集計を行いました")
+        def notify_success(from, to, provider)
+          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計を行いました")
         end
 
-        def notify_failure(from, to, exception)
-          notify("#{from}~#{to}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+        def notify_failure(from, to, provider, exception)
+          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
+
+        def provider_info(provider)
+          provider ? "(#{provider})" : nil
+        end
 
         def idobata_hook_url
           return @idobata_hook_url if defined?(@idobata_hook_url)

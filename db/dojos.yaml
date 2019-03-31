@@ -424,6 +424,16 @@
   description: 千葉市若葉区若松で毎月開催
   tags:
   - Scratch
+- id: 159
+  order: '121003'
+  created_at: '2018-12-02'
+  name: 土気
+  prefecture_id: 12
+  logo: "/img/dojos/japan.png"
+  url: https://zen.coderdojo.com/dojos/jp/chiba-chiba-prefecture/tu3-qi4
+  description: 千葉県千葉市緑区で毎月開催
+  tags:
+  - Scratch
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
@@ -553,6 +563,26 @@
   logo: "/img/dojos/yachimata.png"
   url: https://peraichi.com/landing_pages/view/coderdojoyachimata
   description: 千葉県八街市で毎月開催
+  tags:
+  - Scratch
+- id: 157
+  order: '122302'
+  created_at: '2018-11-25'
+  name: 酒々井
+  prefecture_id: 12
+  logo: "/img/dojos/shisui.png"
+  url: https://home.omegane-pr.com/coderdojo/
+  description: 千葉県印旛郡酒々井町で毎月開催
+  tags:
+  - Scratch
+- id: 158
+  order: '122303'
+  created_at: '2018-11-17'
+  name: 成田
+  prefecture_id: 12
+  logo: "/img/dojos/narita.png"
+  url: https://coderdojo.narita-area.com/
+  description: 千葉県成田市で毎月開催
   tags:
   - Scratch
 - id: 121
@@ -862,6 +892,20 @@
   description: 横浜市港北区の新羽町で不定期開催
   tags:
   - Scratch
+- id: 208
+  order: '141097'
+  created_at: '2019-03-08'
+  name: 小机
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-kozukue.connpass.com/
+  description: 横浜市港北区の小机町で毎月開催
+  tags:
+  - ScratchJr
+  - Scratch
+  - micro:bit
+  - HackforPlay
+  - Unity
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
@@ -884,7 +928,7 @@
   description: 横浜市緑区東本郷で毎月開催
   tags:
   - Scratch
-  - Scratch Jr.
+  - ScratchJr
   - プログラミングゼミ
   - Webサイト
 - id: 184
@@ -909,7 +953,7 @@
   description: 横浜市都筑区の港北ニュータウンで毎月開催
   tags:
   - Scratch
-  - Scratch Jr.
+  - ScratchJr
   - micro:bit
   - 人工知能
 - id: 190
@@ -1029,6 +1073,7 @@
   tags:
   - Scratch
   - Webサイト
+  is_active: false
 - id: 88
   order: '192015'
   created_at: '2017-05-29'
@@ -1743,6 +1788,7 @@
   - Scratch
   - Webサイト
   - アプリ
+  is_active: false
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
@@ -2146,6 +2192,20 @@
   - Mindstorm
   - Java
   - Swift
+- id: 209
+  order: '472077'
+  created_at: '2019-03-15'
+  name: 石垣
+  prefecture_id: 47
+  logo: "/img/dojos/ishigaki.png"
+  url: https://www.facebook.com/CoderDojo.Ishigaki/
+  description: 沖縄県石垣市で毎月開催 (Private)
+  tags:
+  - LEGO Mindstorms
+  - Minecraft
+  - 動画制作
+  - 電子工作
+  - DTM
 - id: 205
   order: '472085'
   created_at: '2019-02-28'
