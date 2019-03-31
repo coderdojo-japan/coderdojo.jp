@@ -11,9 +11,9 @@ RSpec.describe SotechshaOverviewPageController, type: :controller, scrivito: tru
       sts_posts = BlogPostPage.where(:_permalink, :starts_with, 'sotechsha/').order(created: :asc)
       expect(assigns(:sts_posts).to_a).to eq sts_posts.to_a
       expect(response).to render_template "sotechsha_overview_page/index"
-      expect(response).to render_template partial: "_sitemap_sotechsha",   count: 1
-      expect(response).to render_template partial: "_footer",              count: 1
-      expect(response).to render_template partial: "_social_buttons_book", count: 1
+      expect(response).to render_template partial: "_sitemap_sotechsha", count: 1
+      expect(response).to render_template partial: "_footer",            count: 1
+      expect(response).to render_template partial: "_social_buttons",    count: 1
     end
   end
 end
