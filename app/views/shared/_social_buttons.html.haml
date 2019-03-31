@@ -1,6 +1,6 @@
 %ol{:style => "list-style: none; margin-top: 30px;"}
   %li{:style => "display: inline-block; line-height: 11px; margin-left: -35px;"}
-    .fb-like{"data-action" => "like", "data-href" => "#{full_url(yield(@url))}", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
+    %div.fb-like{"data-action" => "like", "data-href" => "#{full_url(yield(@url))}", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "true"}
   %li{:style => "display: inline-block;"}
     %a.twitter-share-button{"data-hashtags" => "CoderDojo", "data-lang" => "ja", "data-text" => "#{full_title(yield(@title))}", "data-url" => "#{full_url(yield(@url))}", "data-via" => "CoderDojoJapan", href: "https://twitter.com/share", width: "100"} Tweet
     :javascript
@@ -10,5 +10,5 @@
       %img{alt: "このエントリーをはてなブックマークに追加", height: "20", src: "https://b.st-hatena.com/images/entry-button/button-only@2x.png", style: "border: none;", width: "20"}/
     %script{async: "async", charset: "utf-8", src: "https://b.st-hatena.com/js/bookmark_button.js", type: "text/javascript"}
   %li{style: "display: none;"}
-    .line-it-button{"data-lang" => "ja", "data-type" => "line", "data-url" => "#{full_url(yield(@url))}" }
+    %div.line-it-button{"data-lang" => "ja", "data-type" => "line", "data-url" => "#{full_url(yield(@url))}" }
     %script{src: "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js", async: "async", defer: "defer"}
