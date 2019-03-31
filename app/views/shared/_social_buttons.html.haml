@@ -9,3 +9,6 @@
     %a.hatena-bookmark-button{"data-hatena-bookmark-lang" => "ja", "data-hatena-bookmark-layout" => "basic", "data-hatena-bookmark-title" => "#{full_title(yield(:title))}", :href => "#{full_url(yield(:url))}", :title => "このエントリーをはてなブックマークに追加"}
       %img{:alt => "このエントリーをはてなブックマークに追加", :height => "20", :src => "https://b.st-hatena.com/images/entry-button/button-only@2x.png", :style => "border: none;", :width => "20"}/
     %script{:async => "async", :charset => "utf-8", :src => "https://b.st-hatena.com/js/bookmark_button.js", :type => "text/javascript"}
+  %li{:style => "display: none;"}
+    .line-it-button{"data-lang" => "ja", "data-type" => "line", "data-url" => "#{full_url(yield(:url))}" }
+    %script{ src: "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js", async: "async", defer: "defer"}
