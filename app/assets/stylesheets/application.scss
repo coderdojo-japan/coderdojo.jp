@@ -13,5 +13,8 @@
  *= require_self
  *= require_tree .
  *= require scrivito_section_widgets
- *= require font-awesome
  */
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ 
