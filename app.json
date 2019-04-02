@@ -12,10 +12,10 @@
   "description": "Settings for Heroku Review Apps",
   "env": {
     "BASIC_AUTH_NAME": {
-      "generator": "secret"
+      "required": true
     },
     "BASIC_AUTH_PASSWORD": {
-      "generator": "secret"
+      "required": true
     },
     "DOORKEEPER_API_TOKEN": {
       "required": true
