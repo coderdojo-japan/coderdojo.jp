@@ -8,26 +8,26 @@
     %meta{:content => "rfZAU6VfAqDrPGPHca_W7UZQqHrczs4pH_CiLw9M_zY", :name => "google-site-verification"}/
 
     %title= full_title(yield(:title))
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = scrivito_head_tags if using_scrivito?
-    %meta{:content => "715330868", :property => "fb:admins"}/
-    %meta{:content => "805184859580207", :property => "fb:app_id"}/
-    %meta{:content => "#{full_title(yield(:title))}", :property => "og:title"}/
-    %meta{:content => "#{full_url(yield(:url))}", :property => "og:url"}/
-    %meta{:content => "#{full_description(yield(:desc))}", :name => "description"}/
-    %meta{:content => "#{full_description(yield(:desc))}", :property => "og:description"}/
+    %meta{:content => "715330868",                    :property => "fb:admins"}/
+    %meta{:content => "805184859580207",              :property => "fb:app_id"}/
+    %meta{:content => "#{full_title(yield(@title))}", :property => "og:title"}/
+    %meta{:content => "#{full_url(yield(@url))}",     :property => "og:url"}/
+    %meta{:content => "#{full_description(yield(@desc))}", :name => "description"}/
+    %meta{:content => "#{full_description(yield(@desc))}", :property => "og:description"}/
     %meta{:content => "website",                           :property => "og:type"}/
     %meta{:content => "https://coderdojo.jp/og-image.png", :property => "og:image"}/
     %meta{:content => "image/png",       :property => "og:image:type"}/
     %meta{:content => "CoderDojo Japan", :property => "og:site_name"}/
     %meta{:content => "summary",         :name => "twitter:card"}/
     %meta{:content => "@CoderDojoJapan", :name => "twitter:site"}/
-    %meta{:content => "#{full_title(yield(:title))}",      :name => "twitter:title"}/
-    %meta{:content => "#{full_description(yield(:desc))}", :name => "twitter:description"}/
+    %meta{:content => "#{full_title(yield(@title))}",      :name => "twitter:title"}/
+    %meta{:content => "#{full_description(yield(@desc))}", :name => "twitter:description"}/
     %meta{:content => "https://coderdojo.jp/og-image.png", :name => "twitter:image"}/
-    %meta{:content => "#{full_url(yield(:url))}", :name => "twitter:url"}/
+    %meta{:content => "#{full_url(yield(@url))}", :name => "twitter:url"}/
     %link{:href => "/img/apple-icon-57x57.png",   :rel => "apple-touch-icon", :sizes => "57x57"}/
     %link{:href => "/img/apple-icon-60x60.png",   :rel => "apple-touch-icon", :sizes => "60x60"}/
     %link{:href => "/img/apple-icon-72x72.png",   :rel => "apple-touch-icon", :sizes => "72x72"}/
@@ -41,7 +41,7 @@
     %link{:href => "/img/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
     %link{:href => "/img/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
     %link{:href => "/img/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}/
-    %link{:href => "/manifest.json", :rel => "manifest"}/
+    %link{:href => "/manifest.json",         :rel => "manifest"}/
     %link{:color => "#1373ce", :href => "/img/safari-pinned-tab.svg", :rel => "mask-icon"}/
     %meta{:content => "#ffffff",                  :name => "msapplication-TileColor"}/
     %meta{:content => "/img/ms-icon-144x144.png", :name => "msapplication-TileImage"}/
