@@ -1,0 +1,83 @@
+{
+  "addons": [
+    "logentries",
+    "heroku-postgresql",
+    "scheduler"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "description": "Settings for Heroku Review Apps",
+  "env": {
+    "BASIC_AUTH_NAME": {
+      "generator": "secret"
+    },
+    "BASIC_AUTH_PASSWORD": {
+      "generator": "secret"
+    },
+    "DOORKEEPER_API_TOKEN": {
+      "required": true
+    },
+    "DUMPER_APP_KEY": {
+      "required": true
+    },
+    "FACEBOOK_APP_ID": {
+      "required": true
+    },
+    "FACEBOOK_APP_SECRET": {
+      "required": true
+    },
+    "IDOBATA_HOOK_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "LETSENCRYPT_REQUEST": {
+      "required": true
+    },
+    "LETSENCRYPT_RESPONSE": {
+      "required": true
+    },
+    "NEXT_LIVE_DATE": {
+      "required": true
+    },
+    "RACK_ENV": "staging",
+    "RAILS_ENV": "staging",
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SCRIVITO_API_KEY": {
+      "required": true
+    },
+    "SCRIVITO_EMAIL": {
+      "required": true
+    },
+    "SCRIVITO_PASSWORD": {
+      "required": true
+    },
+    "SCRIVITO_TENANT": {
+      "required": true
+    },
+    "SCRIVITO_WORKSPACE": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "TZ": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "coderdojo.jp",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
