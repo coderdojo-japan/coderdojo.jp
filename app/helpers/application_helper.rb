@@ -12,9 +12,10 @@ module ApplicationHelper
   def full_url(page_url)
     page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
     if page_url.empty?
-      # Default URL
-      "https://coderdojo.jp#{request.path}"
+      # URLs rendered via Rails
+      request.url
     else
+      # URLs rendered via Scrivito
       page_url
     end
   end
