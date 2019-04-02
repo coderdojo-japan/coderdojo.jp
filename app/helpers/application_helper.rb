@@ -12,7 +12,8 @@ module ApplicationHelper
   def full_url(page_url)
     page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
     if page_url.empty?
-      root_url # Default URL
+      # Default URL
+      "https://coderdojo.jp#{request.path}"
     else
       page_url
     end
