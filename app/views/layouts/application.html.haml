@@ -8,14 +8,14 @@
     %meta{:content => "rfZAU6VfAqDrPGPHca_W7UZQqHrczs4pH_CiLw9M_zY", :name => "google-site-verification"}/
 
     %title= full_title(yield(:title))
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = scrivito_head_tags if using_scrivito?
-    %meta{:content => "715330868", :property => "fb:admins"}/
-    %meta{:content => "805184859580207", :property => "fb:app_id"}/
+    %meta{:content => "715330868",                    :property => "fb:admins"}/
+    %meta{:content => "805184859580207",              :property => "fb:app_id"}/
     %meta{:content => "#{full_title(yield(:title))}", :property => "og:title"}/
-    %meta{:content => "#{full_url(yield(:url))}", :property => "og:url"}/
+    %meta{:content => "#{full_url(yield(:url))}",     :property => "og:url"}/
     %meta{:content => "#{full_description(yield(:desc))}", :name => "description"}/
     %meta{:content => "#{full_description(yield(:desc))}", :property => "og:description"}/
     %meta{:content => "website",                           :property => "og:type"}/
@@ -41,7 +41,7 @@
     %link{:href => "/img/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
     %link{:href => "/img/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
     %link{:href => "/img/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}/
-    %link{:href => "/manifest.json", :rel => "manifest"}/
+    %link{:href => "/manifest.json",         :rel => "manifest"}/
     %link{:color => "#1373ce", :href => "/img/safari-pinned-tab.svg", :rel => "mask-icon"}/
     %meta{:content => "#ffffff",                  :name => "msapplication-TileColor"}/
     %meta{:content => "/img/ms-icon-144x144.png", :name => "msapplication-TileImage"}/
@@ -56,7 +56,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     / at the end of the HEAD
-    %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"}/
+    - if is_kata?
+      %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
 
   %body
     - flash.each do |message_type, message|
@@ -65,15 +66,16 @@
     = scrivito_body_tags if using_scrivito?
     = render 'shared/footer'
     / at the end of the BODY
-    %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
-            :type => "text/javascript"}
-    :javascript
-      docsearch({
-        apiKey: '315da3c406c3fa374a0696590f4821a3',
-        indexName: 'coderdojo',
-        inputSelector: '#searchbox',
-        debug: false // Set debug to true if you want to inspect the dropdown
-      });
+    - if is_kata?
+      %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
+              :type => "text/javascript"}
+      :javascript
+        docsearch({
+          apiKey: '315da3c406c3fa374a0696590f4821a3',
+          indexName: 'coderdojo',
+          inputSelector: '#searchbox',
+          debug: false // Set debug to true if you want to inspect the dropdown
+        });
 
   #fb-root
   :javascript

@@ -12,8 +12,10 @@ module ApplicationHelper
   def full_url(page_url)
     page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
     if page_url.empty?
-      root_url # Default URL
+      # URLs rendered via Rails
+      request.url
     else
+      # URLs rendered via Scrivito
       page_url
     end
   end
@@ -33,5 +35,9 @@ module ApplicationHelper
 
   def using_scrivito?
     !@obj.nil?
+  end
+
+  def is_kata?
+    request.path.starts_with? "/kata"
   end
 end
