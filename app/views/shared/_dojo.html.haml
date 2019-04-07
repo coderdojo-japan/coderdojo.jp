@@ -1,9 +1,12 @@
 %li.dojo
   %header
     %a{:href => "#{dojo.url}"}
-      %span.dojo-picture{:style => "background-image: url(#{dojo.logo});"}
-      %span.dojo-name{ class: [dojo.is_private ? "private" : nil] }= "#{dojo.name} (#{dojo.prefecture.name})"
+      %span.dojo-picture{style: "background-image: url(#{dojo.logo});"}
+      %span.dojo-name= "#{dojo.name} (#{dojo.prefecture.name})"
   %ul.tags
     - dojo.tags.each do |tag|
       %li= tag
-  %p= dojo.description
+  %p
+    = dojo.description
+    - if dojo.is_private
+      %a.dojo-private{href: '/docs/private-dojo'} Private

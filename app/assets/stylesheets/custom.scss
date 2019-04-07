@@ -284,7 +284,6 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    color: #fff;
     font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
 }
 
@@ -511,27 +510,17 @@ a {
     display: block;
     margin: .5em 0;
 }
-.private:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f540";
-    font-weight: 900;
-    margin-right: 5px;
-}
-.private:hover {
-    position: relative;
-}
-.private:hover:after {
-    position: absolute;
-    content: 'PRIVATE';
-    transition-delay: 500ms;
-    top: -30px;
-    left: 30px;
-    padding: 4px;
-    background-color: #444;
+
+.dojo-private {
+    font-size: 80%;
     color: #fff;
-    border-radius: 5px;
-    font-size: 8px;
-    padding: 5px;
+    border-radius: .3em;
+    padding: .4em;
+    margin: .2em;
+    background: #22C9C9;
+}
+.dojo-private:hover {
+    text-decoration: none
 }
 
 
