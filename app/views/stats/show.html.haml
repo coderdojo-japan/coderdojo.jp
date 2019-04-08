@@ -5,98 +5,97 @@
 %section.cover{style: 'padding-top:40px; background-color: white;'}
   = image_tag "stats_cover.png"
 %section#dojos.dojos.text-center
-  %bpr
-    %h1 統計情報
-    %div 本ページでは全国の CoderDojo の統計情報をまとめています。
-    CoderDojo の活動状況を把握する際などにご活用ください。
+  %h1 統計情報
+  %div 本ページでは全国の CoderDojo の統計情報をまとめています。
+  CoderDojo の活動状況を把握する際などにご活用ください。
+
+  %h3{style: "margin-top: 60px;"} 📊 推移グラフ
+  %div{align: 'center'}
+    = high_chart_globals(@high_charts_globals)
     %br
-    %h3 推移グラフ  
-    %div{align: 'center'}
-      = high_chart_globals(@high_charts_globals)
-      = high_chart("annual_dojos",           @annual_dojos_chart)
-      = high_chart("annual_event_histories", @annual_event_histories_chart)
-      = high_chart("annual_participants",    @annual_participants_chart)
+    = high_chart("annual_dojos",           @annual_dojos_chart)
+    %br
+    = high_chart("annual_event_histories", @annual_event_histories_chart)
+    %br
+    = high_chart("annual_participants",    @annual_participants_chart)
 
-    %h3 推移テーブル
-    %div{align: 'center'}
-      %i *集計対象のみ
-      %table{style: 'margin-top: 4px;'}
-        %thead
-          %tr
-            %th
-            - @dojos.keys.each do |year|
-              %td{style: 'padding: 0 5px; font-weight: bold;'} #{year}年
-            %td{style: 'padding: 0 5px; font-weight: bold;'} 合計
-        %tbody{style: 'text-align: center;'}
-          %tr
-            %td 道場数
-            - @dojos.each_value do |num|
-              %td= num
-          %tr
-            %td 開催回数
-            - @events.each_value do |num|
-              %td= num
-            %td= @events.values.sum
-          %tr
-            %td 参加者数
-            - @participants.each_value do |num|
-              %td= num
-            %td= @participants.values.sum
-      
-    %div{style: 'margin-top: 20px;'}
-      %b 集計について
-      %br
-      毎週月曜日の午前10時頃に集計をしています。
-      %br
-      集計対象としている Dojo 数は次のとおりです。
-    %div{style: 'margin-top: 5px;'}
-    %b= @sum_of_dojos
-    %b / #{@dojo_count} Dojos
+  %h3{style: "margin-top: 60px;"} 📝 推移テーブル
+  %div{align: 'center'}
+    %i *集計対象のみ
+    %table{style: 'margin-top: 4px;'}
+      %thead
+        %tr
+          %th
+          - @dojos.keys.each do |year|
+            %td{style: 'padding: 0 5px; font-weight: bold;'} #{year}年
+          %td{style: 'padding: 0 5px; font-weight: bold;'} 合計
+      %tbody{style: 'text-align: center;'}
+        %tr
+          %td 道場数
+          - @dojos.each_value do |num|
+            %td= num
+        %tr
+          %td 開催回数
+          - @events.each_value do |num|
+            %td= num
+          %td= @events.values.sum
+        %tr
+          %td 参加者数
+          - @participants.each_value do |num|
+            %td= num
+          %td= @participants.values.sum
 
+  %div{style: 'margin-top: 30px;'}
+    ※毎週月曜日の午前10時頃に集計をしています。
+    %br
+    　 集計対象としている Dojo 数は次のとおりです。
+  %div{style: 'margin-top: 10px;'}
+  %b= @sum_of_dojos
+  %b / #{@dojo_count} Dojos
 
-    %h3 最新データ
-    2019年のデータも含めた最新の統計情報は次のとおりです。
-    %div{align: 'center'}
-      %table{style: 'margin-top: 4px;'}
-        %thead
-          %tr
-            %th
-            %td{style: 'padding: 0 10px; font-weight: bold;'} 全国の道場数
-            %td{style: 'padding: 0 10px; font-weight: bold;'} 累計開催回数
-            %td{style: 'padding: 0 10px; font-weight: bold;'} 累計参加者数
-        %tbody{style: 'text-align: center;'}
-          %tr
-            %td
-            %td= @dojo_count
-            %td= @sum_of_events
-            %td= @sum_of_participants
+  %h3{style: "margin-top: 60px;"} 🆕 最新データ
+  2019年のデータも含めた最新の統計情報は次のとおりです。
+  %div{style: "margin-top: 20px;", align: 'center' }
+    %table{style: 'margin-top: 4px;'}
+      %thead
+        %tr
+          %th
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 全国の道場数
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計開催回数
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計参加者数
+      %tbody{style: 'text-align: center;'}
+        %tr
+          %td
+          %td= @dojo_count
+          %td= @sum_of_events
+          %td= @sum_of_participants
 
-    %h3 備考
-    %ul{style: 'list-style: none;'}
-      %li 参加者数はユニーク数ではなく延べ数です
-      %li APIで自動的に集計できるDojoが集計対象
-      %li 最新の開発状況は末尾の関連リンクを参照
-            
-    %h3 全国の道場
-    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
-      - @regions_and_dojos.each_with_index do |(region, dojos), index|
-        .panel.panel-default
-          .panel-heading{:id => "heading#{index}", :role => "tab"}
-            %h4.panel-title
-              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "##{"collapse#{index}"}", :role => "button"}
-                %i.fa.fa-chevron-right{"aria-hidden" => "true"}
-                = region
-                \- #{dojos.count} Dojos
-          .panel-collapse.collapse{:id => "collapse#{index}", :role => "tabpanel"}
-            .panel-body.grayscale-bg
-              = render partial: 'shared/dojo', collection: dojos
+  %h3{style: "margin-top: 60px;"} ✅ 備考
+  %ul{style: 'list-style: none; margin-left: -10px;'}
+    %li 参加者数はユニーク数ではなく延べ数です
+    %li APIで自動的に集計できるDojoが集計対象
+    %li 最新の開発状況は末尾の関連リンクを参照
 
-    %h3 関連リンク
-    %ul{:style => "list-style: none; margin-left: -40px;"}
-      %li
-        %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本のCoderDojo (zen&Japan) - Google Spreadsheet
-      %li
-        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
-      %li
-        %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
+  %h3{style: "margin-top: 60px;"} ☯️ 全国の道場
+  #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+    - @regions_and_dojos.each_with_index do |(region, dojos), index|
+      .panel.panel-default
+        .panel-heading{:id => "heading#{index}", :role => "tab"}
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "##{"collapse#{index}"}", :role => "button"}
+              %i.fa.fa-chevron-right{"aria-hidden" => "true"}
+              = region
+              \- #{dojos.count} Dojos
+        .panel-collapse.collapse{:id => "collapse#{index}", :role => "tabpanel"}
+          .panel-body.grayscale-bg
+            = render partial: 'shared/dojo', collection: dojos
+
+  %h3{style: "margin-top: 60px;"} 📚 関連リンク
+  %ul{:style => "list-style: none; margin-left: -40px; margin-bottom: 40px;"}
+    %li
+      %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本のCoderDojo (zen&Japan) - Google Spreadsheet
+    %li
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
+    %li
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
 %br/
