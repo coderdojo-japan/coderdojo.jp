@@ -15,7 +15,7 @@ class HighChartsBuilder
         f.series(type: 'column', name: '増加数', yAxis: 0, data: data[:increase_nums])
         f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
-          { title: { text: '増加数' }},
+          { title: { text: '増加数' } },
           { title: { text: '累積合計' }, opposite: true }
         ]
         f.chart(width: 600)
