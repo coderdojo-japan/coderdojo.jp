@@ -1730,6 +1730,18 @@
   tags:
   - Scratch
   is_active: false
+- id: 169
+  order: '293636'
+  created_at: '2018-07-31'
+  name: 明日香
+  prefecture_id: 29
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-asuka.github.io/
+  description: 奈良県明日香村で毎月１回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - micro:bit
 - id: 177
   order: '293636'
   created_at: '2018-07-31'
