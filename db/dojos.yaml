@@ -834,13 +834,14 @@
   prefecture_id: 13
   url: https://sites.google.com/view/coderdojomusamura/
   logo: "/img/dojos/musamura.jpg"
-  description: 武蔵村山市立第八小学校で毎月開催 (Private)
+  description: 武蔵村山市立第八小学校で毎月開催
   tags:
   - Scratch
   - Hour of Code
   - micro:bit
   - Minecraft
   - DICE CODE
+  is_private: true
 - id: 153
   order: '132241'
   created_at: '2018-05-30'
@@ -1379,12 +1380,13 @@
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
   url: http://cdkf.ninja/
-  description: 京都市伏見区の小学校内で隔月開催 (Private)
+  description: 京都市伏見区の小学校内で隔月開催
   tags:
   - Scratch
   - WEBサイト
   - Java
   - JavaScript
+  is_private: true
 - id: 34
   order: '261009'
   created_at: '2014-10-14'
@@ -2199,13 +2201,14 @@
   prefecture_id: 47
   logo: "/img/dojos/ishigaki.png"
   url: https://www.facebook.com/CoderDojo.Ishigaki/
-  description: 沖縄県石垣市で毎月開催 (Private)
+  description: 沖縄県石垣市で毎月開催
   tags:
   - LEGO Mindstorms
   - Minecraft
   - 動画制作
   - 電子工作
   - DTM
+  is_private: true
 - id: 205
   order: '472085'
   created_at: '2019-02-28'

@@ -1,11 +1,11 @@
 # 新規Dojoの追加方法
 
-新規Dojoから申請が来た場合の手順書( 2018/02/28現在)
+新規Dojoから申請が来た場合の手順書(2018/04/XX現在)
 
 ## Dojo DBの追加手順
 
 + [CoderDojoJapanの申請フォーム](http://goo.gl/forms/UfY69hsA99) に来ている新規Dojoを確認する
-    + 申請結果には個人情報が含まれるため、一般公開されていません :secret: 
+    + 申請結果には個人情報が含まれるため、一般公開されていません :secret:
 + `db/dojos.yaml` 以下に次のようなtemplateで追記する
     + 追記場所は都道府県で順で追加することが好ましい
 
@@ -20,20 +20,24 @@
   - Scratch
   - LEGO Mindstorms
   - ラズベリーパイ
+  is_active: true
+  is_private: false
 ```
 
 フォームとカラムの対応については以下の通りです
 
-| Dojoカラム      |    フォーム    |
-|:-----------------|:------------------:|
-| `created_at` |  タイムスタンプ  |
-|  `order` (*1) | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) |
-|`name` | 正式名称 |
+| Dojoカラム | フォーム |
+|:---|:---|
+| `created_at` | タイムスタンプ |
+| `order` (*1) | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) |
+| `name` | 正式名称 |
 | `prefecture_id` | `db/seeds.rb` の該当番号 |
-|`logo`  | `public/` のDojo画像パス |
-| `url`  |  イベントの管理ページ (個別イベントURLではない) |
-| `description`  |フォーム `Dojoの開催場所と開催頻度について教えてください` |
-|`tags`  | フォーム `Dojo で対応可能な技術を教えてください (最大5つまで)`|
+| `logo` | `public/` のDojo画像パス |
+| `url` | イベントの管理ページ (個別イベントURLではない) |
+| `description` | フォーム `Dojoの開催場所と開催頻度について教えてください` |
+| `tags` | フォーム `Dojoで対応可能な技術を教えてください (最大5つまで)` |
+| `is_active` | [省略可] アクティブ/非アクティブ (省略時、アクティブ) |
+| `is_private` | [省略可] パブリック/プライベート (省略時、パブリック) |
 
 `id`, `created_at`, `updated_at` はRailsがデフォルトで提供するカラムです。詳細はRailsガイドの[Active Recordの基礎](https://railsguides.jp/active_record_basics.html#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB)をご参照ください。
 
@@ -69,29 +73,28 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
   url: https://www.facebook.com/CoderDojoTottori/
 ```
 
-
-| yaml      |    内容    |
-|:-----------------|:------------------:|
-| `dojo_id` | 該当するDojoのid |
+|yaml|内容|
+|:---|:---|
+| `dojo_id` | 該当する Dojo の id |
 | `name` | 設定するイベント管理サービスの名前 (connpass, facebook, doorkeeper) |
-| `group_id` | イベント管理ページのid | 
-| `url` | イベント管理ページのURL |
+| `group_id` | イベント管理ページの id |
+| `url` | イベント管理ページの URL |
 
 ### `group_id` の各種イベントページサービスの取得方法
 
 - Facebook
-    1. [lookup-id](https://lookup-id.com/#) にいきます
-	2. 当該 Facebook ページのURLを入力すると `group_id` が確認できます
+  1. [lookup-id](https://lookup-id.com/#) にいきます
+  2. 当該 Facebook ページのURLを入力すると `group_id` が確認できます
 - connpass
-	1. connpass のイベントページをブラウザで表示 (Ex. https://coderdojo-tobe.connpass.com/)
-	2. イベントのページを表示 (どのイベントでもいいです)
-	3. url を見て event のIDを確認 (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
-	4. 以下のコマンドで上記の event ID を指定すると `group_id` (Series ID) が得られる
-	
-	```
-	$ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
-	  5072
-	```
+  1. connpass のイベントページをブラウザで表示 (Ex. https://coderdojo-tobe.connpass.com/)
+  2. イベントのページを表示 (どのイベントでもいいです)
+  3. url を見て event のIDを確認 (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
+  4. 以下のコマンドで上記の event ID を指定すると `group_id` (Series ID) が得られる
+  
+  ```
+  $ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
+    5072
+  ```
 
 ## 本番環境への反映方法
 
@@ -99,8 +102,7 @@ dojos.yaml の更新をGitHubにpushすると、次の手順で本番環境に�
 
 1. GitHub の更新を Travis CI が検知する
 1. Travis CI で各種テストが実行される
-   - １つ以上のテストが失敗すると本番環境には反映されない
+  - １つ以上のテストが失敗すると本番環境には反映されない
 1. すべてのテストが成功すると、本番環境へのデプロイが始まります
 
 したがって、Pull Request の時点でCIがパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) へ反映されるようになります。
-

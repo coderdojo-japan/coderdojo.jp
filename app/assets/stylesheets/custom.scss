@@ -284,7 +284,6 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    color: #f;
     font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
 }
 
@@ -509,8 +508,21 @@ a {
 
 .dojo-name {
     display: block;
-    margin: .5em 0
+    margin: .5em 0;
 }
+
+.dojo-private {
+    font-size: 80%;
+    color: #fff;
+    border-radius: .3em;
+    padding: .4em;
+    margin: .2em;
+    background: #22C9C9;
+}
+.dojo-private:hover {
+    text-decoration: none
+}
+
 
 @media only screen and (min-width:560px) {
     .dojo {
