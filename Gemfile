@@ -17,7 +17,7 @@ gem 'simple_grid_rails'
 gem "bootstrap-sass"
 gem 'sass-rails'
 gem 'uglifier'
-gem 'font-awesome-sass', '~> 5.8.1'
+gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'rails-html-sanitizer', '~> 1.0.4'
 
