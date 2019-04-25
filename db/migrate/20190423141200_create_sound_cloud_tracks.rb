@@ -5,7 +5,7 @@ class CreateSoundCloudTracks < ActiveRecord::Migration[5.1]
       t.string   :title,                 null: false
       t.text     :description
       t.integer  :original_content_size, null: false
-      t.integer  :duration,              null: false
+      t.string   :duration,              null: false
       t.string   :tag_list
       t.string   :download_url,          null: false
       t.string   :permalink_url,         null: false
@@ -13,5 +13,6 @@ class CreateSoundCloudTracks < ActiveRecord::Migration[5.1]
 
       t.timestamps null: false
     end
+    add_index :sound_cloud_tracks, :track_id, unique: true
   end
 end
