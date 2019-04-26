@@ -1830,6 +1830,7 @@
   - Webサイト
   - PHP
   - Ruby
+  is_active: false
 - id: 81
   order: '331007'
   created_at: '2017-03-20'
