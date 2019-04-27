@@ -484,7 +484,7 @@
   tags:
   - Scratch
   - micro:bit
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 83
   order: '122068'
   created_at: '2017-04-27'
@@ -1108,7 +1108,7 @@
   - Scratch
   - micro:bit
   - ラズベリーパイ
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 195
   order: 192074
   created_at: '2019-02-03'
@@ -1272,7 +1272,7 @@
   - Scratch
   - Viscuit
   - micro:bit
-  - LEGO Mindstorms
+  - Mindstorms
   - IAIミニロボ
 - id: 31
   order: '231002'
@@ -1855,7 +1855,7 @@
   - Scratch
   - Ruby
   - Hour of Code
-  - LEGO Mindstorms
+  - Mindstorms
   - CodeyRocky
 - id: 78
   order: '325058'
@@ -2106,7 +2106,7 @@
   - micro:bit
   - Webサイト
   - PHP
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 172
   order: '402036'
   created_at: '2018-08-25'
@@ -2120,7 +2120,7 @@
   - Medibang
   - Webサイト
   - Python
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 207
   order: '402036'
   created_at: '2019-03-05'
@@ -2244,7 +2244,7 @@
   url: https://www.facebook.com/CoderDojo.Ishigaki/
   description: 沖縄県石垣市で毎月開催
   tags:
-  - LEGO Mindstorms
+  - Mindstorms
   - Minecraft
   - 動画制作
   - 電子工作
@@ -2327,5 +2327,5 @@
   description: 沖縄県中頭郡で毎月開催
   tags:
   - Scratch
-  - LEGO Mindstorms
+  - Mindstorms
   - ラズベリーパイ
