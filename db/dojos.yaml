@@ -707,7 +707,7 @@
   description: 東京都中野区で毎月開催
   tags:
   - Scratch
-  - HTML/CSS
+  - Webサイト
   - JavaScript
   - Arduino
 - id: 16
@@ -721,7 +721,7 @@
   tags:
   - Scratch
   - Ruby
-  - HTML
+  - Webサイト
   - JavaScript
   - Processing
 - id: 123
@@ -806,7 +806,7 @@
   tags:
   - Scratch
   - JavaScript
-  - HTML
+  - Webサイト
   - Ruby
   - ラズベリーパイ
 - id: 189
@@ -2028,7 +2028,7 @@
   description: 徳島県神山町で毎月開催
   tags:
   - Scratch
-  - HTML5
+  - Webサイト
   - Ruby
   - Python
   - Drone
@@ -2068,7 +2068,7 @@
   - Scratch
   - Viscuit
   - ラズベリーパイ
-  - HTML
+  - Webサイト
 - id: 113
   order: '401307'
   created_at: '2017-10-06'
