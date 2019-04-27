@@ -233,6 +233,7 @@
   tags:
   - Scratch
   - ラズベリーパイ
+  - micro:bit
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
@@ -312,7 +313,7 @@
   - ラズベリーパイ
   - Java
   - PHP
-  - CSS
+  - Webサイト
 - id: 7
   order: '102016'
   created_at: '2016-10-17'
@@ -381,6 +382,9 @@
   description: 埼玉県飯能市で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - JavaScript
+  - micro:bit
 - id: 10
   order: '112305'
   created_at: '2012-07-02'
@@ -392,6 +396,7 @@
   tags:
   - Scratch
   - ラズベリーパイ
+  - micro:bit
   - 8x9Craft
   - Unity
 - id: 22
@@ -418,6 +423,10 @@
   description: 千葉市若葉区みつわ台で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - 3Dモデリング
+  - 映像制作
+  - MESH
 - id: 151
   order: '121002'
   created_at: '2018-04-24'
@@ -438,6 +447,7 @@
   description: 千葉県千葉市緑区で毎月開催
   tags:
   - Scratch
+  - Viscuit
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
@@ -448,9 +458,8 @@
   description: 千葉県市川市で毎月開催
   tags:
   - Scratch
-  - Webサイト
+  - micro:bit
   - Python
-  - WordPress
 - id: 82
   order: '122033'
   created_at: '2017-03-28'
@@ -461,6 +470,9 @@
   description: 千葉県JR市川駅近辺で毎月2回開催
   tags:
   - Scratch
+  - micro:bit
+  - Python
+  - MESH
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
@@ -546,6 +558,7 @@
   description: 千葉県流山市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
@@ -579,6 +592,7 @@
   description: 千葉県印旛郡酒々井町で毎月開催
   tags:
   - Scratch
+  - 映像制作
 - id: 158
   order: '122303'
   created_at: '2018-11-17'
@@ -600,7 +614,7 @@
   tags:
   - Scratch
   - Viscuit
-  - Webサイト
+  - micro:bit
 - id: 97
   order: '131016'
   created_at: '2017-08-16'
@@ -657,8 +671,7 @@
   description: 品川区五反田freeeオフィスで毎月第３土曜開催
   tags:
   - Scratch
-  - ラズベリーパイ
-  - Micro:Bit
+  - micro:bit
   - Music Blocks
   - Swift
 - id: 17
@@ -769,6 +782,7 @@
   description: 東京都武蔵野市で毎月開催
   tags:
   - Scratch
+  - micro:bit
   - Studuino
   - Java
 - id: 174
@@ -829,8 +843,7 @@
   description: 東京都稲城市若葉台で毎月開催
   tags:
   - Scratch
-  - Webサイト
-  - PHP
+  - micro:bit
 - id: 204
   order: '132233'
   created_at: '2019-02-26'
@@ -856,6 +869,7 @@
   description: 東京都多摩市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 70
   order: '141020'
   created_at: '2017-01-30'
@@ -876,6 +890,9 @@
   description: 横浜市西区で毎月開催
   tags:
   - Scratch
+  - Viscuit
+  - embot
+  - Hour of Code
 - id: 137
   order: '141062'
   created_at: '2018-03-24'
@@ -906,11 +923,11 @@
   url: https://coderdojo-kozukue.connpass.com/
   description: 横浜市港北区の小机町で毎月開催
   tags:
-  - ScratchJr
   - Scratch
+  - ScratchJr
   - micro:bit
+  - Hour of Code
   - HackforPlay
-  - Unity
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
@@ -933,7 +950,8 @@
   description: 横浜市緑区東本郷で毎月開催
   tags:
   - Scratch
-  - ScratchJr
+  - Viscuit
+  - micro:bit
   - プログラミングゼミ
   - Webサイト
 - id: 184
@@ -946,7 +964,6 @@
   description: 横浜市青葉区で毎月開催
   tags:
   - Scratch
-  - Hour of Code
   - micro:bit
 - id: 179
   order: '141186'
@@ -960,7 +977,7 @@
   - Scratch
   - ScratchJr
   - micro:bit
-  - 人工知能
+  - プログラミングゼミ
 - id: 190
   order: '141305'
   created_at: '2018-12-27'
