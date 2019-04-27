@@ -2211,8 +2211,8 @@
   - Minecraft
   - mBot
 - id: 61
-  is_active: false
   order: '472018'
+  is_active: false
   created_at: '2012-07-09'
   name: 那覇
   prefecture_id: 47
