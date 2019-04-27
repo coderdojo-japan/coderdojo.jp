@@ -98,6 +98,7 @@
   - Scratch
 - id: 90
   order: '041009'
+  is_active: false
   created_at: '2017-07-01'
   name: 愛子
   prefecture_id: 4
@@ -108,7 +109,6 @@
   - Scratch
   - Webサイト
   - ゲーム
-  is_active: false
 - id: 85
   order: '042072'
   created_at: '2017-03-27'
@@ -363,6 +363,7 @@
   - Scratch
 - id: 77
   order: '112089'
+  is_active: false
   created_at: '2017-03-14'
   name: 小手指
   prefecture_id: 11
@@ -371,7 +372,6 @@
   description: 埼玉県所沢市小手指で毎月開催
   tags:
   - Scratch
-  is_active: false
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
@@ -498,6 +498,7 @@
   - Scratch
 - id: 20
   order: '122084'
+  is_active: false
   created_at: '2016-11-08'
   name: 野田
   prefecture_id: 12
@@ -506,7 +507,6 @@
   description: 千葉県野田市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 23
   order: '122173'
   created_at: '2014-09-22'
@@ -676,6 +676,7 @@
   - ゲーム
 - id: 19
   order: '131130'
+  is_active: false
   created_at: '2016-09-27'
   name: 渋谷
   prefecture_id: 13
@@ -684,7 +685,6 @@
   description: 東京都渋谷区で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 15
   order: '131148'
   created_at: '2016-07-20'
@@ -988,6 +988,7 @@
   - Machine Learning
 - id: 26
   order: '142051'
+  is_active: false
   created_at: '2016-12-14'
   name: 藤沢
   prefecture_id: 14
@@ -998,7 +999,6 @@
   - Scratch
   - Viscuit
   - Webサイト
-  is_active: false
 - id: 199
   order: '142077'
   created_at: '2019-02-06'
@@ -1070,6 +1070,7 @@
   - HackforPlay
 - id: 28
   order: '182010'
+  is_active: false
   created_at: '2013-08-14'
   name: 福井
   prefecture_id: 18
@@ -1079,7 +1080,6 @@
   tags:
   - Scratch
   - Webサイト
-  is_active: false
 - id: 88
   order: '192015'
   created_at: '2017-05-29'
@@ -1348,6 +1348,7 @@
   - 電子工作
 - id: 33
   order: '234249'
+  is_active: false
   created_at: '2016-08-12'
   name: 大治
   prefecture_id: 23
@@ -1356,7 +1357,6 @@
   description: 愛知県大治町海部郡で毎月開催
   tags:
   - Scratch
-  is_active: false
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
@@ -1456,6 +1456,7 @@
   - Minecraft
 - id: 45
   order: '271004'
+  is_active: false
   created_at: '2016-07-13'
   name: 西成
   prefecture_id: 27
@@ -1465,7 +1466,6 @@
   tags:
   - Scratch
   - ラズベリーパイ
-  is_active: false
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
@@ -1729,6 +1729,7 @@
   - C#
 - id: 128
   order: '293431'
+  is_active: false
   created_at: '2018-02-18'
   name: 三郷
   prefecture_id: 29
@@ -1737,9 +1738,9 @@
   description: 奈良県三郷町で毎月開催
   tags:
   - Scratch
-  is_active: false
 - id: 169
   order: '293636'
+  is_active: false
   created_at: '2018-07-31'
   name: 明日香
   prefecture_id: 29
@@ -1750,7 +1751,6 @@
   - Scratch
   - Webサイト
   - micro:bit
-  is_active: false
 - id: 177
   order: '293636'
   created_at: '2018-07-31'
@@ -1787,6 +1787,7 @@
   - ラズベリーパイ
 - id: 38
   order: '302074'
+  is_active: false
   created_at: '2012-11-08'
   name: 熊野
   prefecture_id: 30
@@ -1797,7 +1798,6 @@
   - Scratch
   - Webサイト
   - アプリ
-  is_active: false
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
@@ -1824,6 +1824,7 @@
   - Ruby
 - id: 78
   order: '325058'
+  is_active: false
   created_at: '2017-03-10'
   name: 吉賀
   prefecture_id: 32
@@ -1835,7 +1836,6 @@
   - Webサイト
   - PHP
   - Ruby
-  is_active: false
 - id: 81
   order: '331007'
   created_at: '2017-03-20'
@@ -1889,6 +1889,7 @@
   - PHP
 - id: 53
   order: '341002'
+  is_active: false
   created_at: '2016-09-29'
   name: 五日市
   prefecture_id: 34
@@ -1899,7 +1900,6 @@
   - Scratch
   - enchant.js
   - Unity
-  is_active: false
 - id: 141
   order: '342025'
   created_at: '2018-04-11'
@@ -1913,6 +1913,7 @@
   - Webサイト
 - id: 51
   order: '342076'
+  is_active: false
   created_at: '2016-06-01'
   name: 福山
   prefecture_id: 34
@@ -1921,7 +1922,6 @@
   description: 広島県福山市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 194
   order: '342092'
   created_at: '2019-01-18'
@@ -2179,6 +2179,7 @@
   - micro:bit
 - id: 61
   order: '472018'
+  is_active: false
   created_at: '2012-07-09'
   name: 那覇
   prefecture_id: 47
@@ -2187,7 +2188,6 @@
   description: 沖縄県那覇市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 106
   order: '472051'
   created_at: '2017-09-20'
