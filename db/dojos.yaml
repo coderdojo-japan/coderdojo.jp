@@ -9,6 +9,7 @@
   description: 北海道札幌市で月２回開催
   tags:
   - Scratch
+  - micro:bit
   - Arduino
   - ラズベリーパイ
   - 電子工作
@@ -22,6 +23,7 @@
   description: 北海道札幌市で月２回開催
   tags:
   - Scratch
+  - micro:bit
   - ラズベリーパイ
   - Python
   - Unity
@@ -35,8 +37,9 @@
   description: 北海道恵庭市で月2回開催
   tags:
   - Scratch
-  - Webサイト
-  - Python
+  - Progate
+  - Minecraft
+  - 電子工作
 - id: 201
   order: '032026'
   created_at: '2019-02-14'
@@ -58,6 +61,7 @@
   description: 岩手県陸前高田市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 109
   order: '032166'
   created_at: '2017-09-25'
@@ -81,6 +85,7 @@
   tags:
   - Scratch
   - Webサイト
+  - micro:bit
 - id: 3
   order: '041009'
   created_at: '2014-01-23'
