@@ -132,7 +132,9 @@
   tags:
   - Scratch
   - 3Dプリンタ
-  - 3DCAD
+  - 3D CAD
+  - Pepper
+  - micro:bit
 - id: 59
   order: '044458'
   created_at: '2016-10-06'
@@ -143,9 +145,6 @@
   description: 宮城県加美町中新田で不定期開催
   tags:
   - Scratch
-  - Webサイト
-  - Minecraft
-  - Arduino
 - id: 75
   order: '052019'
   created_at: '2017-04-03'
@@ -156,10 +155,10 @@
   description: 秋田県秋田市で毎月1~2回開催
   tags:
   - Scratch
+  - Minecraft
   - Webサイト
-  - PHP
-  - Swift
-  - Android
+  - 電子工作
+  - 3Dプリンタ
 - id: 139
   order: '052035'
   created_at: '2018-03-27'
@@ -170,6 +169,7 @@
   description: 秋田県横手市増田で毎月開催
   tags:
   - Scratch
+  - Minecraft
 - id: 74
   order: '062014'
   created_at: '2017-03-28'
@@ -180,7 +180,6 @@
   description: 山形県山形市で毎月開催
   tags:
   - Scratch
-  - ラズベリーパイ
   - センサー
   - ロボット
   - AI
@@ -194,10 +193,10 @@
   description: 会津若松市内で毎月第３土曜に開催
   tags:
   - Scratch
+  - micro:bit
   - ラズベリーパイ
-  - Python
-  - Java
-  - Webサイト
+  - ロボット工作
+  - 電子工作
 - id: 165
   order: '072087'
   created_at: '2018-08-13'
