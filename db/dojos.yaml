@@ -111,6 +111,7 @@
   - ゲーム
 - id: 85
   order: '042072'
+  is_active: false
   created_at: '2017-03-27'
   name: 名取
   prefecture_id: 4
@@ -1334,6 +1335,7 @@
   - micro:bit
 - id: 84
   order: '232211'
+  is_active: false
   created_at: '2017-05-16'
   name: 新城
   prefecture_id: 23
@@ -1442,6 +1444,7 @@
   - 電子工作
 - id: 43
   order: '271004'
+  is_active: false
   created_at: '2016-09-27'
   name: なんば
   prefecture_id: 27
@@ -1660,6 +1663,7 @@
   - Java
 - id: 67
   order: '281093'
+  is_active: false
   created_at: '2016-09-12'
   name: 北神戸
   prefecture_id: 28
