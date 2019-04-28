@@ -16,7 +16,8 @@ threads threads_count, threads_count
 # Use the `preload_app!` method when specifying a `workers` number.
 # This directive tells Puma to first boot the application and load code
 # before forking the application. This takes advantage of Copy On Write
-# process behavior so workers use less memory.
+# process behavior so workers use less memory. If you use this option you
+# need to make sure to reconnect any threads in the `on_worker_boot` block.
 preload_app!
 
 # Use the rackup command to tell Puma how to start your rack app.
@@ -30,9 +31,23 @@ port        ENV.fetch("PORT") { 3000 }
 # Specifies the `environment` that Puma will run in.
 environment ENV.fetch("RAILS_ENV") { "development" }
 
+# If you are preloading your application and using Active Record, it's
+# recommended that you close any connections to the database before workers
+# are forked to prevent connection leakage.
+#
+# before_fork do
+#   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
+# end
+
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
 
+# The code in the `on_worker_boot` will be called if you are using
+# clustered mode by specifying a number of `workers`. After each worker	port
+# process is booted, this block will be run. If you are using the `preload_app!`
+# option, you will want to use this block to reconnect to any threads
+# or connections that may have been created at application boot, as Ruby
+# cannot share connections between processes.
 on_worker_boot do
   # Worker specific setup for Rails 4.1+
   # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
