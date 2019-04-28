@@ -39,11 +39,8 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 #   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
 # end
 
-# Allow puma to be restarted by `rails restart` command.
-plugin :tmp_restart
-
 # The code in the `on_worker_boot` will be called if you are using
-# clustered mode by specifying a number of `workers`. After each worker	port
+# clustered mode by specifying a number of `workers`. After each worker
 # process is booted, this block will be run. If you are using the `preload_app!`
 # option, you will want to use this block to reconnect to any threads
 # or connections that may have been created at application boot, as Ruby
@@ -53,3 +50,6 @@ on_worker_boot do
   # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
   ActiveRecord::Base.establish_connection
 end
+
+# Allow puma to be restarted by `rails restart` command.
+plugin :tmp_restart
