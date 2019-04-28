@@ -17,7 +17,7 @@ namespace :sound_cloud_tracks do
           tag_list:              d[:tag_list],
           download_url:          d[:download_url],
           permalink_url:         d[:permalink_url],
-          uploaded_at:           d[:created_at].in_time_zone
+          uploaded_at:           d[:created_at]
         )
       end
     end
