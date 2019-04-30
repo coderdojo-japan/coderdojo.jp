@@ -118,7 +118,7 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
   - cf. [Contributors - coderdojo-japan/coderdojo.jp - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors)
 - **2016-now:** [coderdojo.jp](https://coderdojo.jp/) is sustainably maintained and developed by [YassLab Inc.](https://yasslab.jp/)
   - CoderDojo Japan has been incorporated and approves [@YassLab](https://github.com/YassLab) team as one of official partners for [tons of works](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors).
-  - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval of CDJ board members.
+  - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval of CDJ board members. See [#References](#他開発に関する資料) for their continuous efforts on development.
   [![YassLab Logo](https://yasslab.jp/img/logos/800x200.jpg)](https://yasslab.jp/)
 
 
