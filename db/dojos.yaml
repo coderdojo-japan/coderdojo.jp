@@ -1288,6 +1288,20 @@
   description: 名古屋市中区で毎月開催
   tags:
   - Scratch
+- id: 2
+  order: '231088'
+  created_at: '2019-04-30'
+  name: 瑞穂
+  prefecture_id: 23
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-mizuho.connpass.com/
+  description: 名古屋市瑞穂区で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - viscuit
+  - Minecraft
+  - テキストプログラミング
 - id: 32
   order: '231002'
   created_at: '2014-12-08'
