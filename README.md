@@ -113,13 +113,13 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 - **2014:** coderdojo.jp was launched as ['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors)
 - **2015:** coderdojo.jp was migrated to Parse as ['web'](https://github.com/coderdojo-japan/web/graphs/contributors)
 - **2016:** [Parse shutdown](https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo?slide=26). [@yasulab](https://github.com/yasulab) migrated ['coderdojo.jp'](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors) from Parse to Ruby on Rails
-  - Thanks [@cognitom](https://github.com/cognitom) for helpsn in design.
+  - Thanks [@cognitom](https://github.com/cognitom) for helps in design.
   - Thanks [@YassLab](https://github.com/YassLab) team for helps in development.
   - cf. [Contributors - coderdojo-japan/coderdojo.jp - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors)
-- **2016-now:** coderdojo.jp is sustainably maintained and developed by [YassLab Inc.](https://yasslab.jp/)
+- **2016-now:** [coderdojo.jp](https://coderdojo.jp/) is sustainably maintained and developed by [YassLab Inc.](https://yasslab.jp/)
   - CoderDojo Japan has been incorporated and approves [@YassLab](https://github.com/YassLab) team as one of official partners for [tons of works](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors).
   - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval of CDJ board members.
-  - [![YassLab Logo](https://yasslab.jp/img/logos/800x200.jpg)](https://yasslab.jp/)
+  [![YassLab Logo](https://yasslab.jp/img/logos/800x200.jpg)](https://yasslab.jp/)
 
 
 ## License
