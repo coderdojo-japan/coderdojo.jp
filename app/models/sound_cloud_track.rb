@@ -1,5 +1,6 @@
 class SoundCloudTrack < ApplicationRecord
   DIR_PATH  = 'public/podcasts'
+  URL_PATH  = 'podcasts'
 
   validates :track_id,              presence: false, uniqueness: true
   validates :title,                 presence: false
@@ -20,9 +21,13 @@ class SoundCloudTrack < ApplicationRecord
     "#{DIR_PATH}/#{self.id}.md"
   end
 
-  def exists?
+  def url
+    "/#{URL_PATH}/#{self.id}"
+  end
+
+  def exists?(offset: 0)
     return false if path.include?("\u0000")
-    File.exists?(path)
+    File.exists?("#{DIR_PATH}/#{self.id + offset}.md")
   end
 
   def published_at

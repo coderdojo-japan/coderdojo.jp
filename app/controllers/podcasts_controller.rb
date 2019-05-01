@@ -2,7 +2,7 @@ class PodcastsController < ApplicationController
   def index
     @title          = 'DojoCast'
     @description    = 'Highlight people around CoderDojo communities by Podcast.'
-    @episodes       = Podcast.all.sort_by{|episode| episode.published_at }
+    @episodes       = SoundCloudTrack.all.sort_by{ |episode| episode.published_at }
     @url            = request.url
     @next_live_date = ENV['NEXT_LIVE_DATE'] || '未定'
 
@@ -14,17 +14,16 @@ class PodcastsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.rss  { render "feed", :layout => false }
+      format.rss  { render 'feed', :layout => false }
     end
   end
 
   def show
-    @episode  = Podcast.new(params[:id])
+    @episode = SoundCloudTrack.find_by(id: params[:id])
     redirect_to root_url unless @episode.exists?
-    @title    = "#DojoCast " + @episode.title
-    @filename = @episode.filename
-    @content  = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
-    @url      = request.url
-  end
 
+    @title   = "#DojoCast " + @episode.title
+    @content = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
+    @url     = request.url
+  end
 end

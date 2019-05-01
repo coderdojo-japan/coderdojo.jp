@@ -14,7 +14,7 @@
 <div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
   <p class="nav prev">
     <% if @episode.exists?(offset: -1) %>
-      <a href="/podcasts/<%= @filename.to_i - 1 %>">&larr; prev</a>
+      <a href="/podcasts/<%= @episode.id - 1 %>">&larr; prev</a>
     <% else %>
       <a href="/podcasts">&larr; 目次へ</a>
     <% end %>
@@ -23,7 +23,7 @@
     <a href="/podcasts">目次へ戻る</a></p>
   <p class="nav next">
     <% if @episode.exists?(offset: +1) %>
-      <a href="/podcasts/<%= @filename.to_i + 1 %>">next &rarr;</a>
+      <a href="/podcasts/<%= @episode.id + 1 %>">next &rarr;</a>
     <% else %>
       <a href="/podcasts">目次へ &rarr;</a>
     <% end %>
@@ -32,20 +32,11 @@
 
 <div class="container" style="line-height: 1.9em; margin-bottom: -100px;">
   <section class="keiyaku" style="padding: 50px 0px 0px 0px;">
-    <section class="main-content players" id="player2-container">
-      <div class="players" id="player2-container">
-	<div class="media-wrapper">
-	  <audio id="player2" preload="none" controls style="max-width:100%;">
-	    <source src="<%= @filename %>.mp3" type="audio/mp3" />
-	  </audio>
-	</div>
-      </div>
-      <div style="text-align: right; margin-bottom: -25px;">
-	<a href="/podcasts/<%= @filename %>.mp3">Download mp3</a>
-      </div>
-    </section>
+    <iframe width="100%" height="120" scrolling="no" frameborder="yes"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<%= @episode.track_id %>&auto_play=false&buying=false&sharing=false&download=true&show_artwork=false&show_playcount=false&show_user=false">
+    </iframe>
     <br />
- 
+
     <%= raw @content %>
   </section>
 
@@ -54,33 +45,6 @@
   </section>
 </div>
 
-<div style="visibility:hidden">
-  <div class="player-info">
-    <div id="player2-rendername">
-      <p><strong>DL</strong>: <span class="src"><a href="<%= @filename %>.mp3" target="_blank"></a></span></p>
-      <p><strong>Renderer</strong>: <span class="renderer"></span></p>
-      <p class="error"></p>
-    </div>
-  </div>
-  
-  <form action="#" method="get">
-    <label>Language <select name="lang">
-        <option value="en" selected>English (en)</option>
-        <option value="ja">Japanese (ja)</option>
-      </select>
-    </label><br />
-    <label>Stretching<select name="stretching">
-        <option value="auto" selected>Auto (default)</option>
-        <option value="responsive">Responsive</option>
-        <option value="fill" selected>Fill</option>
-        <option value="none" selected>None (original dimensions)</option>
-      </select>
-    </label>
-  </form>
-</div>
-
 <%= render 'shared/introduce_podcast_apps' %>
 
-<script src="/build/mediaelementplayer.js"></script>
-<script src="/build/lang/ja.js"></script>
-<script src="/build/demo.js"></script>
+<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
