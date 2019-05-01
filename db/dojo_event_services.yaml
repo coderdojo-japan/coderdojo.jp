@@ -255,6 +255,10 @@
   name: connpass
   group_id: 2532
   url: https://coderdojo-nagoya.connpass.com
+- dojo_id: 2
+  name: connpass
+  group_id: 6681
+  url: https://coderdojo-mizuho.connpass.com
 - dojo_id: 32
   name: connpass
   group_id: 2546

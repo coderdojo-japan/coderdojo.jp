@@ -46,6 +46,8 @@
     },
     "RACK_ENV": "staging",
     "RAILS_ENV": "staging",
+    // "RACK_ENV":  { "required": true },
+    // "RAILS_ENV": { "required": true },
     "RAILS_SERVE_STATIC_FILES": {
       "required": true
     },

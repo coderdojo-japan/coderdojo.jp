@@ -9,6 +9,7 @@
   description: 北海道札幌市で月２回開催
   tags:
   - Scratch
+  - micro:bit
   - Arduino
   - ラズベリーパイ
   - 電子工作
@@ -22,6 +23,7 @@
   description: 北海道札幌市で月２回開催
   tags:
   - Scratch
+  - micro:bit
   - ラズベリーパイ
   - Python
   - Unity
@@ -35,8 +37,9 @@
   description: 北海道恵庭市で月2回開催
   tags:
   - Scratch
-  - Webサイト
-  - Python
+  - Progate
+  - Minecraft
+  - 電子工作
 - id: 201
   order: '032026'
   created_at: '2019-02-14'
@@ -58,6 +61,7 @@
   description: 岩手県陸前高田市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 109
   order: '032166'
   created_at: '2017-09-25'
@@ -81,6 +85,7 @@
   tags:
   - Scratch
   - Webサイト
+  - micro:bit
 - id: 3
   order: '041009'
   created_at: '2014-01-23'
@@ -93,6 +98,7 @@
   - Scratch
 - id: 90
   order: '041009'
+  is_active: false
   created_at: '2017-07-01'
   name: 愛子
   prefecture_id: 4
@@ -103,9 +109,9 @@
   - Scratch
   - Webサイト
   - ゲーム
-  is_active: false
 - id: 85
   order: '042072'
+  is_active: false
   created_at: '2017-03-27'
   name: 名取
   prefecture_id: 4
@@ -127,7 +133,9 @@
   tags:
   - Scratch
   - 3Dプリンタ
-  - 3DCAD
+  - 3D CAD
+  - Pepper
+  - micro:bit
 - id: 59
   order: '044458'
   created_at: '2016-10-06'
@@ -138,9 +146,6 @@
   description: 宮城県加美町中新田で不定期開催
   tags:
   - Scratch
-  - Webサイト
-  - Minecraft
-  - Arduino
 - id: 75
   order: '052019'
   created_at: '2017-04-03'
@@ -151,10 +156,10 @@
   description: 秋田県秋田市で毎月1~2回開催
   tags:
   - Scratch
+  - Minecraft
   - Webサイト
-  - PHP
-  - Swift
-  - Android
+  - 電子工作
+  - 3Dプリンタ
 - id: 139
   order: '052035'
   created_at: '2018-03-27'
@@ -165,6 +170,7 @@
   description: 秋田県横手市増田で毎月開催
   tags:
   - Scratch
+  - Minecraft
 - id: 74
   order: '062014'
   created_at: '2017-03-28'
@@ -175,7 +181,6 @@
   description: 山形県山形市で毎月開催
   tags:
   - Scratch
-  - ラズベリーパイ
   - センサー
   - ロボット
   - AI
@@ -189,10 +194,10 @@
   description: 会津若松市内で毎月第３土曜に開催
   tags:
   - Scratch
+  - micro:bit
   - ラズベリーパイ
-  - Python
-  - Java
-  - Webサイト
+  - ロボット工作
+  - 電子工作
 - id: 165
   order: '072087'
   created_at: '2018-08-13'
@@ -229,6 +234,7 @@
   tags:
   - Scratch
   - ラズベリーパイ
+  - micro:bit
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
@@ -308,7 +314,7 @@
   - ラズベリーパイ
   - Java
   - PHP
-  - CSS
+  - Webサイト
 - id: 7
   order: '102016'
   created_at: '2016-10-17'
@@ -324,6 +330,7 @@
   - ゲーム
 - id: 180
   order: '102075'
+  is_active: false
   created_at: '2018-08-08'
   name: 館林
   prefecture_id: 10
@@ -358,6 +365,7 @@
   - Scratch
 - id: 77
   order: '112089'
+  is_active: false
   created_at: '2017-03-14'
   name: 小手指
   prefecture_id: 11
@@ -366,7 +374,6 @@
   description: 埼玉県所沢市小手指で毎月開催
   tags:
   - Scratch
-  is_active: false
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
@@ -377,6 +384,9 @@
   description: 埼玉県飯能市で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - JavaScript
+  - micro:bit
 - id: 10
   order: '112305'
   created_at: '2012-07-02'
@@ -388,6 +398,7 @@
   tags:
   - Scratch
   - ラズベリーパイ
+  - micro:bit
   - 8x9Craft
   - Unity
 - id: 22
@@ -414,6 +425,10 @@
   description: 千葉市若葉区みつわ台で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - 3Dモデリング
+  - 映像制作
+  - MESH
 - id: 151
   order: '121002'
   created_at: '2018-04-24'
@@ -434,6 +449,7 @@
   description: 千葉県千葉市緑区で毎月開催
   tags:
   - Scratch
+  - Viscuit
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
@@ -444,9 +460,8 @@
   description: 千葉県市川市で毎月開催
   tags:
   - Scratch
-  - Webサイト
+  - micro:bit
   - Python
-  - WordPress
 - id: 82
   order: '122033'
   created_at: '2017-03-28'
@@ -457,6 +472,9 @@
   description: 千葉県JR市川駅近辺で毎月2回開催
   tags:
   - Scratch
+  - micro:bit
+  - Python
+  - MESH
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
@@ -468,9 +486,10 @@
   tags:
   - Scratch
   - micro:bit
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 83
   order: '122068'
+  is_active: false
   created_at: '2017-04-27'
   name: 木更津
   prefecture_id: 12
@@ -493,6 +512,7 @@
   - Scratch
 - id: 20
   order: '122084'
+  is_active: false
   created_at: '2016-11-08'
   name: 野田
   prefecture_id: 12
@@ -501,7 +521,6 @@
   description: 千葉県野田市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 23
   order: '122173'
   created_at: '2014-09-22'
@@ -542,6 +561,7 @@
   description: 千葉県流山市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
@@ -575,6 +595,7 @@
   description: 千葉県印旛郡酒々井町で毎月開催
   tags:
   - Scratch
+  - 映像制作
 - id: 158
   order: '122303'
   created_at: '2018-11-17'
@@ -596,7 +617,7 @@
   tags:
   - Scratch
   - Viscuit
-  - Webサイト
+  - micro:bit
 - id: 97
   order: '131016'
   created_at: '2017-08-16'
@@ -653,8 +674,7 @@
   description: 品川区五反田freeeオフィスで毎月第３土曜開催
   tags:
   - Scratch
-  - ラズベリーパイ
-  - Micro:Bit
+  - micro:bit
   - Music Blocks
   - Swift
 - id: 17
@@ -671,6 +691,7 @@
   - ゲーム
 - id: 19
   order: '131130'
+  is_active: false
   created_at: '2016-09-27'
   name: 渋谷
   prefecture_id: 13
@@ -679,7 +700,6 @@
   description: 東京都渋谷区で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 15
   order: '131148'
   created_at: '2016-07-20'
@@ -690,7 +710,7 @@
   description: 東京都中野区で毎月開催
   tags:
   - Scratch
-  - HTML/CSS
+  - Webサイト
   - JavaScript
   - Arduino
 - id: 16
@@ -704,7 +724,7 @@
   tags:
   - Scratch
   - Ruby
-  - HTML
+  - Webサイト
   - JavaScript
   - Processing
 - id: 123
@@ -765,6 +785,7 @@
   description: 東京都武蔵野市で毎月開催
   tags:
   - Scratch
+  - micro:bit
   - Studuino
   - Java
 - id: 174
@@ -788,7 +809,7 @@
   tags:
   - Scratch
   - JavaScript
-  - HTML
+  - Webサイト
   - Ruby
   - ラズベリーパイ
 - id: 189
@@ -825,8 +846,7 @@
   description: 東京都稲城市若葉台で毎月開催
   tags:
   - Scratch
-  - Webサイト
-  - PHP
+  - micro:bit
 - id: 204
   order: '132233'
   created_at: '2019-02-26'
@@ -852,6 +872,7 @@
   description: 東京都多摩市で毎月開催
   tags:
   - Scratch
+  - micro:bit
 - id: 70
   order: '141020'
   created_at: '2017-01-30'
@@ -872,6 +893,9 @@
   description: 横浜市西区で毎月開催
   tags:
   - Scratch
+  - Viscuit
+  - embot
+  - Hour of Code
 - id: 137
   order: '141062'
   created_at: '2018-03-24'
@@ -902,11 +926,11 @@
   url: https://coderdojo-kozukue.connpass.com/
   description: 横浜市港北区の小机町で毎月開催
   tags:
-  - ScratchJr
   - Scratch
+  - ScratchJr
   - micro:bit
+  - Hour of Code
   - HackforPlay
-  - Unity
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
@@ -929,7 +953,8 @@
   description: 横浜市緑区東本郷で毎月開催
   tags:
   - Scratch
-  - ScratchJr
+  - Viscuit
+  - micro:bit
   - プログラミングゼミ
   - Webサイト
 - id: 184
@@ -942,7 +967,6 @@
   description: 横浜市青葉区で毎月開催
   tags:
   - Scratch
-  - Hour of Code
   - micro:bit
 - id: 179
   order: '141186'
@@ -956,7 +980,7 @@
   - Scratch
   - ScratchJr
   - micro:bit
-  - 人工知能
+  - プログラミングゼミ
 - id: 190
   order: '141305'
   created_at: '2018-12-27'
@@ -969,6 +993,7 @@
   - Scratch
 - id: 138
   order: '142042'
+  is_active: false
   created_at: '2018-03-25'
   name: 鎌倉
   prefecture_id: 14
@@ -983,6 +1008,7 @@
   - Machine Learning
 - id: 26
   order: '142051'
+  is_active: false
   created_at: '2016-12-14'
   name: 藤沢
   prefecture_id: 14
@@ -993,7 +1019,6 @@
   - Scratch
   - Viscuit
   - Webサイト
-  is_active: false
 - id: 199
   order: '142077'
   created_at: '2019-02-06'
@@ -1065,6 +1090,7 @@
   - HackforPlay
 - id: 28
   order: '182010'
+  is_active: false
   created_at: '2013-08-14'
   name: 福井
   prefecture_id: 18
@@ -1074,7 +1100,6 @@
   tags:
   - Scratch
   - Webサイト
-  is_active: false
 - id: 88
   order: '192015'
   created_at: '2017-05-29'
@@ -1085,9 +1110,9 @@
   description: 山梨県甲府市で毎月開催
   tags:
   - Scratch
-  - Hour of Code
+  - micro:bit
   - ラズベリーパイ
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 195
   order: 192074
   created_at: '2019-02-03'
@@ -1139,10 +1164,10 @@
   description: 長野県松本市で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - Viscuit
   - micro:bit
-  - C++
-  - Python
-  - 人工知能
+  - LEGO WeDo
 - id: 94
   order: '202061'
   created_at: '2017-02-20'
@@ -1153,8 +1178,10 @@
   description: 長野県諏訪地方で毎月開催
   tags:
   - Scratch
-  - ラズベリーパイ
-  - Arduino
+  - Webサイト
+  - Viscuit
+  - micro:bit
+  - LEGO WeDo
 - id: 27
   order: '202151'
   created_at: '2012-11-08'
@@ -1176,9 +1203,10 @@
   description: 長野県安曇野市で毎月開催
   tags:
   - Scratch
+  - Webサイト
+  - Viscuit
+  - micro:bit
   - LEGO WeDo
-  - ラズベリーパイ
-  - Arduino
 - id: 96
   order: '212211'
   created_at: '2017-09-26'
@@ -1200,7 +1228,6 @@
   tags:
   - Scratch
   - Webサイト
-  - PHP
   - micro:bit
 - id: 197
   order: 212041
@@ -1223,7 +1250,7 @@
   tags:
   - Scratch
   - Webサイト
-  - PHP
+  - micro:bit
   - ラズベリーパイ
 - id: 98
   order: '221309'
@@ -1247,8 +1274,10 @@
   description: 国立沼津高専で隔月開催
   tags:
   - Scratch
-  - Webサイト
-  - Minecraft
+  - Viscuit
+  - micro:bit
+  - Mindstorms
+  - IAIミニロボ
 - id: 31
   order: '231002'
   created_at: '2014-10-20'
@@ -1259,6 +1288,20 @@
   description: 名古屋市中区で毎月開催
   tags:
   - Scratch
+- id: 2
+  order: '231088'
+  created_at: '2019-04-30'
+  name: 瑞穂
+  prefecture_id: 23
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-mizuho.connpass.com/
+  description: 名古屋市瑞穂区で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - viscuit
+  - Minecraft
+  - テキストプログラミング
 - id: 32
   order: '231002'
   created_at: '2014-12-08'
@@ -1293,6 +1336,7 @@
   description: 愛知県瀬戸市で毎月２回開催
   tags:
   - Scratch
+  - Webサイト
   - Ruby
   - Swift
 - id: 118
@@ -1305,8 +1349,10 @@
   description: 愛知県安城市keyportで毎月第3土曜日午前に開催
   tags:
   - Scratch
+  - micro:bit
 - id: 84
   order: '232211'
+  is_active: false
   created_at: '2017-05-16'
   name: 新城
   prefecture_id: 23
@@ -1340,9 +1386,11 @@
   description: 愛知県日進市で毎月２回開催
   tags:
   - Scratch
+  - micro:bit
   - 電子工作
 - id: 33
   order: '234249'
+  is_active: false
   created_at: '2016-08-12'
   name: 大治
   prefecture_id: 23
@@ -1351,7 +1399,6 @@
   description: 愛知県大治町海部郡で毎月開催
   tags:
   - Scratch
-  is_active: false
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
@@ -1362,6 +1409,7 @@
   description: 三重県伊勢市で不定期に開催
   tags:
   - Scratch
+  - micro:bit
   - LEGO
   - LabVIEW
 - id: 37
@@ -1398,6 +1446,7 @@
   description: 京都府長岡京市で毎月開催
   tags:
   - Scratch
+  - 8x9Craft
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
@@ -1412,6 +1461,7 @@
   - 電子工作
 - id: 43
   order: '271004'
+  is_active: false
   created_at: '2016-09-27'
   name: なんば
   prefecture_id: 27
@@ -1451,6 +1501,7 @@
   - Minecraft
 - id: 45
   order: '271004'
+  is_active: false
   created_at: '2016-07-13'
   name: 西成
   prefecture_id: 27
@@ -1460,7 +1511,6 @@
   tags:
   - Scratch
   - ラズベリーパイ
-  is_active: false
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
@@ -1528,7 +1578,10 @@
   description: 大阪府松原市で毎月開催
   tags:
   - Scratch
-  - Minecraft
+  - Java
+  - JavaScript
+  - Webサイト
+  - Python
 - id: 135
   order: '272183'
   created_at: '2018-03-13'
@@ -1540,6 +1593,7 @@
   tags:
   - Scratch
   - micro:bit
+  - ラズベリーパイ
 - id: 108
   order: '272205'
   created_at: '2017-09-06'
@@ -1563,7 +1617,6 @@
   - Scratch
   - Webサイト
   - Android
-  - 電子工作
 - id: 101
   order: '272124'
   created_at: '2017-08-03'
@@ -1576,7 +1629,6 @@
   - Scratch
   - Webサイト
   - Android
-  - 電子工作
 - id: 72
   order: '272141'
   created_at: '2017-02-19'
@@ -1589,7 +1641,6 @@
   - Scratch
   - Swift
   - Android
-  - Java
 - id: 110
   order: '272281'
   created_at: '2017-05-26'
@@ -1609,10 +1660,11 @@
   url: https://coderdojo-nada.github.io/
   description: 神戸市東灘区で毎月開催
   tags:
-  - JavaScript
   - Python
-  - C
-  - Java
+  - JavaScript
+  - Processing
+  - Webサイト
+  - ラズベリーパイ
 - id: 119
   order: '281069'
   created_at: '2017-11-08'
@@ -1628,6 +1680,7 @@
   - Java
 - id: 67
   order: '281093'
+  is_active: false
   created_at: '2016-09-12'
   name: 北神戸
   prefecture_id: 28
@@ -1683,10 +1736,10 @@
   url: http://coderdojo-awajishima.info/
   description: 兵庫県洲本市で毎月開催
   tags:
-  - Scrach
+  - Scratch
+  - micro:bit
   - Webサイト
-  - PHP
-  - ラズベリーパイ
+  - 電子工作
   - Python
 - id: 181
   order: '283011'
@@ -1698,18 +1751,6 @@
   description: 兵庫県猪名川町で毎月開催
   tags:
   - Scrach
-- id: 35
-  order: '292010'
-  created_at: '2014-10-26'
-  name: 奈良
-  prefecture_id: 29
-  url: http://coderdojo-nara-ikoma.github.io/
-  logo: "/img/dojos/nara.png"
-  description: 奈良県奈良市で毎月開催
-  tags:
-  - Scratch
-  - Webサイト
-  - C#
 - id: 36
   order: '292095'
   created_at: '2016-04-25'
@@ -1720,10 +1761,12 @@
   description: 奈良県生駒市で毎月開催
   tags:
   - Scratch
+  - micro:bit
+  - JavaScript
   - Webサイト
-  - C#
 - id: 128
   order: '293431'
+  is_active: false
   created_at: '2018-02-18'
   name: 三郷
   prefecture_id: 29
@@ -1732,32 +1775,6 @@
   description: 奈良県三郷町で毎月開催
   tags:
   - Scratch
-  is_active: false
-- id: 169
-  order: '293636'
-  created_at: '2018-07-31'
-  name: 明日香
-  prefecture_id: 29
-  logo: "/img/dojos/japan.png"
-  url: https://coderdojo-asuka.github.io/
-  description: 奈良県明日香村で毎月１回開催
-  tags:
-  - Scratch
-  - Webサイト
-  - micro:bit
-  is_active: false
-- id: 177
-  order: '293636'
-  created_at: '2018-07-31'
-  name: 田原本
-  prefecture_id: 29
-  logo: "/img/dojos/japan.png"
-  url: https://coderdojo-tawaramoto.github.io/
-  description: 奈良県田原本町で毎月1回開催
-  tags:
-  - Scratch
-  - Webサイト
-  - micro:bit
 - id: 47
   order: '302015'
   created_at: '2016-11-01'
@@ -1782,6 +1799,7 @@
   - ラズベリーパイ
 - id: 38
   order: '302074'
+  is_active: false
   created_at: '2012-11-08'
   name: 熊野
   prefecture_id: 30
@@ -1792,7 +1810,6 @@
   - Scratch
   - Webサイト
   - アプリ
-  is_active: false
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
@@ -1817,8 +1834,12 @@
   tags:
   - Scratch
   - Ruby
+  - Hour of Code
+  - Mindstorms
+  - CodeyRocky
 - id: 78
   order: '325058'
+  is_active: false
   created_at: '2017-03-10'
   name: 吉賀
   prefecture_id: 32
@@ -1827,9 +1848,8 @@
   description: 島根県鹿足郡吉賀町で不定期開催
   tags:
   - Scratch
-  - Webサイト
-  - PHP
   - Ruby
+  - Hour of Code
 - id: 81
   order: '331007'
   created_at: '2017-03-20'
@@ -1854,8 +1874,8 @@
   description: 岡山県津山市で毎月開催
   tags:
   - Scratch
-  - C
-  - PHP
+  - Viscuit
+  - micro:bit
   - Arduino
   - 電子工作
 - id: 150
@@ -1879,10 +1899,11 @@
   description: 広島県広島市で毎月開催
   tags:
   - Scratch
-  - Webサイト
-  - PHP
+  - micro:bit
+  - Unity
 - id: 53
   order: '341002'
+  is_active: false
   created_at: '2016-09-29'
   name: 五日市
   prefecture_id: 34
@@ -1891,9 +1912,7 @@
   description: 広島県広島市で毎月開催
   tags:
   - Scratch
-  - enchant.js
-  - Unity
-  is_active: false
+  - micro:bit
 - id: 141
   order: '342025'
   created_at: '2018-04-11'
@@ -1904,9 +1923,10 @@
   description: 広島県呉市で毎月開催
   tags:
   - Scratch
-  - Webサイト
+  - micro:bit
 - id: 51
   order: '342076'
+  is_active: false
   created_at: '2016-06-01'
   name: 福山
   prefecture_id: 34
@@ -1915,7 +1935,6 @@
   description: 広島県福山市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 194
   order: '342092'
   created_at: '2019-01-18'
@@ -1926,8 +1945,7 @@
   description: 広島県三次市で毎月開催
   tags:
   - Scratch
-  - Webサイト
-  - Python
+  - micro:bit
 - id: 192
   order: '352021'
   created_at: '2019-01-14'
@@ -1952,9 +1970,10 @@
   description: 山口県光市で毎月開催
   tags:
   - Scratch
+  - micro:bit
+  - Unity
+  - Java
   - Webサイト
-  - PHP
-  - アプリ開発
 - id: 103
   order: '362018'
   created_at: '2017-10-02'
@@ -1989,7 +2008,7 @@
   description: 徳島県神山町で毎月開催
   tags:
   - Scratch
-  - HTML5
+  - Webサイト
   - Ruby
   - Python
   - Drone
@@ -2014,6 +2033,7 @@
   description: 福岡市中央区天神で毎月開催
   tags:
   - Scratch
+  - micro:bit
   - Webサイト
   - JavaScript
 - id: 183
@@ -2028,7 +2048,7 @@
   - Scratch
   - Viscuit
   - ラズベリーパイ
-  - HTML
+  - Webサイト
 - id: 113
   order: '401307'
   created_at: '2017-10-06'
@@ -2063,10 +2083,10 @@
   description: 福岡県久留米市で毎月開催
   tags:
   - Scratch
-  - HTML
+  - micro:bit
+  - Webサイト
   - PHP
-  - LEGO
-  - Minecraft
+  - Mindstorms
 - id: 172
   order: '402036'
   created_at: '2018-08-25'
@@ -2080,7 +2100,7 @@
   - Medibang
   - Webサイト
   - Python
-  - LEGO Mindstorms
+  - Mindstorms
 - id: 207
   order: '402036'
   created_at: '2019-03-05'
@@ -2091,9 +2111,10 @@
   description: 福岡県久留米市日吉校区コミュニティセンターで隔月開催
   tags:
   - Scratch
-  - Minecraft
   - Viscuit
   - micro:bit
+  - Minecraft
+  - Hour of Code
 - id: 191
   order: '402214'
   created_at: '2019-01-04'
@@ -2123,6 +2144,7 @@
   - Minecraft
 - id: 120
   order: '422011'
+  is_active: false
   created_at: '2017-11-14'
   name: 長崎
   prefecture_id: 42
@@ -2141,8 +2163,8 @@
   description: 熊本県熊本市で毎月開催
   tags:
   - Scratch
+  - micro:bit
   - Webサイト
-  - PHP
   - Python
 - id: 55
   order: '454419'
@@ -2154,8 +2176,7 @@
   description: 宮崎県西臼杵郡で毎月開催
   tags:
   - Scratch
-  - Ruby
-  - Python
+  - IchigoJam
   - ラズベリーパイ
 - id: 187
   order: '462012'
@@ -2167,12 +2188,12 @@
   description: 鹿児島県鹿児島市で隔月開催
   tags:
   - Scratch
-  - Python
-  - PHP
-  - Viscuit
   - micro:bit
+  - Minecraft
+  - mBot
 - id: 61
   order: '472018'
+  is_active: false
   created_at: '2012-07-09'
   name: 那覇
   prefecture_id: 47
@@ -2181,7 +2202,6 @@
   description: 沖縄県那覇市で不定期開催
   tags:
   - Scratch
-  is_active: false
 - id: 106
   order: '472051'
   created_at: '2017-09-20'
@@ -2192,10 +2212,10 @@
   description: 沖縄県宜野湾市で毎週開催
   tags:
   - Scratch
+  - Progate
+  - Mindstorms
+  - Minecraft
   - C-Style
-  - Mindstorm
-  - Java
-  - Swift
 - id: 209
   order: '472077'
   created_at: '2019-03-15'
@@ -2205,7 +2225,7 @@
   url: https://www.facebook.com/CoderDojo.Ishigaki/
   description: 沖縄県石垣市で毎月開催
   tags:
-  - LEGO Mindstorms
+  - Mindstorms
   - Minecraft
   - 動画制作
   - 電子工作
@@ -2221,10 +2241,10 @@
   description: 沖縄県浦添市てだこホールで隔週開催
   tags:
   - Scratch
+  - Progate
+  - Minecraft
+  - Mindstorms
   - C-Style
-  - Mindstorm
-  - Java
-  - Swift
 - id: 198
   order: '472115'
   created_at: '2019-02-03'
@@ -2235,7 +2255,7 @@
   description: 沖縄県沖縄市で毎月開催
   tags:
   - Scratch
-  - Webサイト
+  - Progate
   - PHP
   - Python
   - Ruby
@@ -2249,6 +2269,10 @@
   description: 沖縄県名護市で不定期開催
   tags:
   - Scratch
+  - micro:bit
+  - Minecraft
+  - Webサイト
+  - アプリ開発
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
@@ -2259,6 +2283,8 @@
   description: 沖縄県うるま市で毎月第２・第４土曜に開催
   tags:
   - Scratch
+  - micro:bit
+  - Minecraft
 - id: 56
   order: '472140'
   created_at: '2016-11-02'
@@ -2269,7 +2295,9 @@
   description: 沖縄県宮古島市で不定期開催
   tags:
   - Scratch
+  - micro:bit
   - Webサイト
+  - Python
 - id: 57
   order: '473251'
   created_at: '2016-12-19'
@@ -2280,5 +2308,5 @@
   description: 沖縄県中頭郡で毎月開催
   tags:
   - Scratch
-  - LEGO Mindstorms
+  - Mindstorms
   - ラズベリーパイ
