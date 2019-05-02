@@ -16,6 +16,7 @@ namespace :sound_cloud_tracks do
           duration:              Time.at(d[:duration]/1000).utc.strftime('%H:%M:%S'),
           tag_list:              d[:tag_list],
           download_url:          d[:download_url],
+          permalink:             d[:permalink],
           permalink_url:         d[:permalink_url],
           uploaded_at:           d[:created_at]
         )

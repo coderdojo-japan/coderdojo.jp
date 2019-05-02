@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20190423141200) do
     t.string "duration", null: false
     t.string "tag_list"
     t.string "download_url", null: false
+    t.string "permalink", null: false
     t.string "permalink_url", null: false
     t.datetime "uploaded_at", null: false
     t.datetime "created_at", null: false

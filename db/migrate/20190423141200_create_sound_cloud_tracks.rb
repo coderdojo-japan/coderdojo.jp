@@ -8,6 +8,7 @@ class CreateSoundCloudTracks < ActiveRecord::Migration[5.1]
       t.string   :duration,              null: false
       t.string   :tag_list
       t.string   :download_url,          null: false
+      t.string   :permalink,             null: false
       t.string   :permalink_url,         null: false
       t.datetime :uploaded_at,           null: false
 

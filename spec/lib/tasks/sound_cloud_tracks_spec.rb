@@ -19,9 +19,9 @@ RSpec.describe 'sound_cloud_tracks' do
 
   describe 'sound_cloud_tracks:upsert' do
     before :each do
-      @sct_1 = create(:sound_cloud_track, track_id: 111001, title: 'podcast 001', duration: '00:16:40')
-      @sct_2 = create(:sound_cloud_track, track_id: 111002, title: 'podcast 002', duration: '00:33:20')
-      @sct_3 = create(:sound_cloud_track, track_id: 111003, title: 'podcast 003', duration: '00:50:00')
+      @sct_1 = create(:sound_cloud_track, track_id: 111001, title: 'podcast 001', duration: '00:16:40', permalink: 'podcast-001')
+      @sct_2 = create(:sound_cloud_track, track_id: 111002, title: 'podcast 002', duration: '00:33:20', permalink: 'podcast-002')
+      @sct_3 = create(:sound_cloud_track, track_id: 111003, title: 'podcast 003', duration: '00:50:00', permalink: 'podcast-003')
     end
 
     let(:task) { 'sound_cloud_tracks:upsert' }
@@ -45,7 +45,7 @@ RSpec.describe 'sound_cloud_tracks' do
             'license'               => 'cc-by-nc-sa',
             'user_id'               => 123456789,
             'permalink'             => 'podcast-001',
-            'permalink_url'         => 'https://soundcloud.com/railsdm/podcast-001' }
+            'permalink_url'         => 'https://soundcloud.com/coderdojojp/podcast-001' }
         ]
       )
 
@@ -70,7 +70,8 @@ RSpec.describe 'sound_cloud_tracks' do
       expect(new_records.first.duration).to eq(Time.at(5189815/1000).utc.strftime('%H:%M:%S'))
       expect(new_records.first.tag_list).to eq('coderdojo')
       expect(new_records.first.download_url).to eq('https://api.soundcloud.com/tracks/123456001/download')
-      expect(new_records.first.permalink_url).to eq('https://soundcloud.com/railsdm/podcast-001')
+      expect(new_records.first.permalink).to eq('podcast-001')
+      expect(new_records.first.permalink_url).to eq('https://soundcloud.com/coderdojojp/podcast-001')
     end
 
     it '単純更新' do
@@ -91,8 +92,8 @@ RSpec.describe 'sound_cloud_tracks' do
             'attachments_uri'       => 'https://api.soundcloud.com/tracks/123456001/attachments',
             'license'               => 'cc-by-nc-sa',
             'user_id'               => 123456789,
-            'permalink'             => 'podcast-001',
-            'permalink_url'         => 'https://soundcloud.com/railsdm/podcast-001' }
+            'permalink'             => 'podcast-002',
+            'permalink_url'         => 'https://soundcloud.com/coderdojojp/podcast-002' }
         ]
       )
 
@@ -121,6 +122,7 @@ RSpec.describe 'sound_cloud_tracks' do
             'duration'              => calc_duration(@sct_2.duration),
             'tag_list'              => @sct_2.tag_list,
             'download_url'          => @sct_2.download_url,
+            'permalink'             => @sct_2.permalink,
             'permalink_url'         => @sct_2.permalink_url },
           { 'id'                    => 123456001,
             'created_at'            => '2019/01/23 01:00:00 +0000',
@@ -130,7 +132,8 @@ RSpec.describe 'sound_cloud_tracks' do
             'duration'              => 5189815,
             'tag_list'              => 'coderdojo',
             'download_url'          => 'https://api.soundcloud.com/tracks/123456001/download',
-            'permalink_url'         => 'https://soundcloud.com/railsdm/podcast-001' },
+            'permalink'             => 'podcast-004',
+            'permalink_url'         => 'https://soundcloud.com/coderdojojp/podcast-004' },
           { 'id'                    => @sct_1.track_id,
             'created_at'            => @sct_1.uploaded_at.to_s,
             'description'           => @sct_1.description,
@@ -139,6 +142,7 @@ RSpec.describe 'sound_cloud_tracks' do
             'duration'              => calc_duration(@sct_1.duration),
             'tag_list'              => @sct_1.tag_list,
             'download_url'          => @sct_1.download_url,
+            'permalink'             => @sct_1.permalink,
             'permalink_url'         => @sct_1.permalink_url },
           { 'id'                    => @sct_3.track_id,
             'created_at'            => @sct_3.uploaded_at.to_s,
@@ -148,6 +152,7 @@ RSpec.describe 'sound_cloud_tracks' do
             'duration'              => calc_duration(@sct_3.duration),
             'tag_list'              => @sct_3.tag_list,
             'download_url'          => @sct_3.download_url,
+            'permalink'             => @sct_3.permalink,
             'permalink_url'         => @sct_3.permalink_url }
           ]
       )

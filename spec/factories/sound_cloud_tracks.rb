@@ -7,6 +7,7 @@ FactoryBot.define do
     duration              { 0 }
     tag_list              { 'coderdojo' }
     download_url          { 'http://aaa.bbb/123/download' }
+    permalink             { 'title' }
     permalink_url         { 'http://aaa.bbb/title' }
     uploaded_at           { '2019/01/01 09:00:00'.in_time_zone }
   end
