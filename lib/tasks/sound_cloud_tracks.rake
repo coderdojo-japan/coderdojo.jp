@@ -1,14 +1,28 @@
 namespace :sound_cloud_tracks do
   desc 'SoundCloud から podcast データ情報を取得し登録'
   task upsert: :environment do
-    client = SoundCloud.new(client_id: ENV['SOUND_CLOUD_CLIENT_ID'])
-    tracks = client.get("/users/#{ENV['SOUND_CLOUD_CODERDOJO_USER_ID']}/tracks").map(&:deep_symbolize_keys!)
+    logger = ActiveSupport::Logger.new('log/sound_cloud_tracks.log')
+    console = ActiveSupport::Logger.new(STDOUT)
+    logger.extend ActiveSupport::Logger.broadcast(console)
 
-    return true if tracks.length.zero?
+    logger.info('==== START sound_cloud_tracks:upsert ====')
+
+    client = SoundCloud.new(client_id: ENV['SOUND_CLOUD_CLIENT_ID'])
+    tracks = client.get("/users/#{ENV['SOUND_CLOUD_CODERDOJO_USER_ID']}/tracks", limit: 100).map(&:deep_symbolize_keys)
+
+    if tracks.length.zero?
+      logger.info('no track')
+      logger.info('==== END sound_cloud_tracks:upsert ====')
+      return true
+    end
 
     SoundCloudTrack.transaction do
-      tracks.each do |d|
-        track = SoundCloudTrack.find_or_initialize_by(track_id: d[:id])
+      tracks.sort_by { |d| d[:id] }.each do |d|
+        track = SoundCloudTrack.find_by(track_id: d[:id])
+        unless track
+          is_new = true
+          track = SoundCloudTrack.new(track_id: d[:id])
+        end
         track.update!(
           title:                 d[:title],
           description:           d[:description],
@@ -20,8 +34,10 @@ namespace :sound_cloud_tracks do
           permalink_url:         d[:permalink_url],
           uploaded_at:           d[:created_at]
         )
+        logger.info("added [#{track.id}] #{track.title}") if is_new
       end
     end
+    logger.info('==== END sound_cloud_tracks:upsert ====')
     true
   end
 end
