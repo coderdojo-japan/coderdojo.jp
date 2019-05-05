@@ -991,6 +991,19 @@
   description: 神奈川県川崎市で毎月開催
   tags:
   - Scratch
+- id: 210
+  order: '141305'
+  created_at: '2019-05-05'
+  name: 久地
+  prefecture_id: 14
+  logo: "/img/dojos/kuji.png"
+  url: https://www.facebook.com/coderdojokuji/
+  description: 神奈川県川崎市高津区で毎月開催
+  tags:
+  - Scratch
+  - micro:but
+  - mBot
+  - Minecraft
 - id: 138
   order: '142042'
   is_active: false

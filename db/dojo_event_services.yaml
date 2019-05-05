@@ -572,5 +572,9 @@
 #  name: connpass
 #  group_id: 
 #  url: https://coderdojo-mizonokuchi.connpass.com/
+- dojo_id: 210 # CoderDojo 久地
+  name: facebook
+  group_id: 261243731229399
+  url: https://www.facebook.com/pg/coderdojokuji/events/
 
 
