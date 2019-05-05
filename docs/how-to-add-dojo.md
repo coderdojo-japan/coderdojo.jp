@@ -48,7 +48,13 @@
 - Dojo名が市町村以外の名称になっている場合のみ入力をする必要があります
     - 例: `CoderDojo 嘉手納` は `嘉手納` 市がある為、自動的に紐付けできます (省略可能)
 
-yaml ファイルに各項目を追記したら、`$ bundle exec rails dojos:update_db_by_yaml` を実行してDBに新規Dojo情報を反映します。その後 `$ bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します。
+yamlファイルに各項目を追記したら、`$ bundle exec rails dojos:update_db_by_yaml` を実行してDBに新規Dojo情報を反映します。その後 `$ bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します。
+
+実行後、upsert される ID の値を確認してください。ID は現在ある ID 群の中で『最大値+1以上』である必要があります。もし `id: 1` や `id: 3` という値がupsertされていた場合は、`rails console` 上で次のコマンドを実行し、[PostgreSQLの自動採番のシーケンスをリセット](https://github.com/coderdojo-japan/coderdojo.jp/commit/06dce309ac40df13b866d0d5809a652f224fdb7c#r33355507)してください。
+
+```ruby
+ActiveRecord::Base.connection.execute("SELECT setval('dojos_id_seq', coalesce((SELECT MAX(id)+1 FROM dojos), 1), false)")
+```
 
 yamlファイルにidおよびorderが動的に更新されたことを確認できたら `Add CoderDojo [Dojo名]` でコミットをします。
 
