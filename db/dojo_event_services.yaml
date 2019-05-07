@@ -293,11 +293,6 @@
   name: doorkeeper
   group_id: 4052
   url: https://coderdojo-nagaokakyo.doorkeeper.jp
-- dojo_id: 35
-  # 生駒 (近畿)と合同
-  name: connpass
-  group_id: 2617
-  url: https://coderdojo-nara-ikoma.connpass.com
 - dojo_id: 37
   name: connpass
   group_id: 2822
