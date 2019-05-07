@@ -1,18 +1,18 @@
-namespace :sound_cloud_tracks do
+namespace :soundcloud_tracks do
   desc 'SoundCloud から podcast データ情報を取得し登録'
   task upsert: :environment do
-    logger = ActiveSupport::Logger.new('log/sound_cloud_tracks.log')
+    logger = ActiveSupport::Logger.new('log/soundcloud_tracks.log')
     console = ActiveSupport::Logger.new(STDOUT)
     logger.extend ActiveSupport::Logger.broadcast(console)
 
-    logger.info('==== START sound_cloud_tracks:upsert ====')
+    logger.info('==== START soundcloud_tracks:upsert ====')
 
-    client = SoundCloud.new(client_id: ENV['SOUND_CLOUD_CLIENT_ID'])
-    tracks = client.get("/users/#{ENV['SOUND_CLOUD_CODERDOJO_USER_ID']}/tracks", limit: 100).map(&:deep_symbolize_keys)
+    client = SoundCloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
+    tracks = client.get("/users/#{ENV['SOUNDCLOUD_USER_ID']}/tracks", limit: 100).map(&:deep_symbolize_keys)
 
     if tracks.length.zero?
       logger.info('no track')
-      logger.info('==== END sound_cloud_tracks:upsert ====')
+      logger.info('==== END soundcloud_tracks:upsert ====')
       return true
     end
 
@@ -37,7 +37,7 @@ namespace :sound_cloud_tracks do
         logger.info("added [#{track.id}] #{track.title}") if is_new
       end
     end
-    logger.info('==== END sound_cloud_tracks:upsert ====')
+    logger.info('==== END soundcloud_tracks:upsert ====')
     true
   end
 end

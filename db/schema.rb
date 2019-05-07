@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20190423141200) do
     t.index ["region"], name: "index_prefectures_on_region"
   end
 
-  create_table "sound_cloud_tracks", force: :cascade do |t|
+  create_table "soundcloud_tracks", force: :cascade do |t|
     t.integer "track_id", null: false
     t.string "title", null: false
     t.text "description"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20190423141200) do
     t.datetime "uploaded_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["track_id"], name: "index_sound_cloud_tracks_on_track_id", unique: true
+    t.index ["track_id"], name: "index_soundcloud_tracks_on_track_id", unique: true
   end
 
   create_table "upcoming_events", force: :cascade do |t|

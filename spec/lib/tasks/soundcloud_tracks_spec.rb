@@ -1,11 +1,11 @@
 require 'rails_helper'
 require 'rake'
 
-RSpec.describe 'sound_cloud_tracks' do
+RSpec.describe 'soundcloud_tracks' do
   before(:all) do
     @rake = Rake::Application.new
     Rake.application = @rake
-    Rake.application.rake_require 'tasks/sound_cloud_tracks'
+    Rake.application.rake_require 'tasks/soundcloud_tracks'
     Rake::Task.define_task(:environment)
   end
 
@@ -17,14 +17,14 @@ RSpec.describe 'sound_cloud_tracks' do
     (duration.to_time.to_i - Time.zone.today.to_time.to_i) * 1000
   end
 
-  describe 'sound_cloud_tracks:upsert' do
+  describe 'soundcloud_tracks:upsert' do
     before :each do
-      @sct_1 = create(:sound_cloud_track, track_id: 111001, title: 'podcast 001', duration: '00:16:40', permalink: 'podcast-001')
-      @sct_2 = create(:sound_cloud_track, track_id: 111002, title: 'podcast 002', duration: '00:33:20', permalink: 'podcast-002')
-      @sct_3 = create(:sound_cloud_track, track_id: 111003, title: 'podcast 003', duration: '00:50:00', permalink: 'podcast-003')
+      @sct_1 = create(:soundcloud_track, track_id: 111001, title: 'podcast 001', duration: '00:16:40', permalink: 'podcast-001')
+      @sct_2 = create(:soundcloud_track, track_id: 111002, title: 'podcast 002', duration: '00:33:20', permalink: 'podcast-002')
+      @sct_3 = create(:soundcloud_track, track_id: 111003, title: 'podcast 003', duration: '00:50:00', permalink: 'podcast-003')
     end
 
-    let(:task) { 'sound_cloud_tracks:upsert' }
+    let(:task) { 'soundcloud_tracks:upsert' }
 
     it '単純追加' do
       allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(

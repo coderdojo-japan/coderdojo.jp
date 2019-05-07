@@ -1,6 +1,6 @@
 class CreateSoundCloudTracks < ActiveRecord::Migration[5.1]
   def change
-    create_table :sound_cloud_tracks do |t|
+    create_table :soundcloud_tracks do |t|
       t.integer  :track_id,              null: false
       t.string   :title,                 null: false
       t.text     :description
@@ -14,6 +14,6 @@ class CreateSoundCloudTracks < ActiveRecord::Migration[5.1]
 
       t.timestamps null: false
     end
-    add_index :sound_cloud_tracks, :track_id, unique: true
+    add_index :soundcloud_tracks, :track_id, unique: true
   end
 end

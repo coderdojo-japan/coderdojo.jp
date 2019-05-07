@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :sound_cloud_track do
+  factory :soundcloud_track, class: SoundCloudTrack do
     track_id              { 123 }
     title                 { 'title' }
     description           { 'description' }

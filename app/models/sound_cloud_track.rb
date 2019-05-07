@@ -1,4 +1,6 @@
 class SoundCloudTrack < ApplicationRecord
+  self.table_name = 'soundcloud_tracks'
+
   DIR_PATH  = 'public/podcasts'
   URL_PATH  = 'podcasts'
 
