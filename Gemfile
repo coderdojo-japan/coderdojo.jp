@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.6.2'
 
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.0'
 gem 'puma'
 gem 'pg'
 gem 'dumper'
+gem 'bootsnap'
 
-gem 'scrivito', '~> 1.15.0'
+gem 'scrivito', '~> 1.16.0'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 
