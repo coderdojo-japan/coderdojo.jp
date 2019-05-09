@@ -30,7 +30,7 @@ class SoundCloudTrack < ApplicationRecord
   end
 
   def published_at
-    exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : ''
+    exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : nil
   end
 
   def content
