@@ -30,3 +30,7 @@ footerで利用しているWufooのフォームの成形用のcss
 .wufoo .buttons {
     text-align: center;
 }
+
+.wufoo li.section.scrollText{
+  margin:7px;
+}
