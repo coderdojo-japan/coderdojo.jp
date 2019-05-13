@@ -103,6 +103,36 @@
   padding-bottom: 30px;
 }
 
+.kata{
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  a.button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    -ms-transform: translate(-40%, -50%);
+    background-color: RoyalBlue;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 11px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.9;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.95;
+    }
+  }
+}
+
+
 div #README{
   margin-top: -75px;
 }

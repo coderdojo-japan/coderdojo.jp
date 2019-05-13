@@ -3,8 +3,10 @@
   %h1 CoderDojo Japan
   %p 子どものためのプログラミング道場
   %br
+
 %section.cover
   = image_tag "coderdojo-japan_cover.jpg"
+
 %section.introduction.text-center.list
   %p
     CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では#{Dojo::NUM_OF_COUNTRIES}カ国・#{Dojo::NUM_OF_WHOLE_DOJOS}の道場、日本では全国に
@@ -27,7 +29,7 @@
       スライドが見えない場合は
       %a{:href => "https://docs.google.com/presentation/d/13t5P1gojsde_gvcvDnPsfHYIqsS-knqWGDxyh3eG8SU/edit#slide=id.p", :target => "_blank", :title => "CoderDojo ガイダンス <一般・ボランティア向け資料>"}<>
         コチラ
-  %p{:style => "margin-top:10px;"} さらに詳しい様子については、次の記事や動画をご参照ください。
+  %p{:style => "margin-top: 60px;"} さらに詳しい様子については、次の記事や動画をご参照ください。
   %ul{:style => "margin-bottom:30px;"}
     %li
       %a{:href => "http://bakemono.jp/reading/blog/web/2256/"} CoderDojoとは? 運営者に話を聞いてみた!
@@ -44,6 +46,7 @@
     %a{:href => "http://www.coderdojo-kashiwa.com/"} CoderDojo Kashiwa
     が制作した動画です。道場の雰囲気が伝われば幸いです ;)
   = render partial: 'shared/social_buttons'
+  %br
 
 /
   %section#events.detail-introduction.text-center
@@ -59,7 +62,7 @@
 
 %section#dojos.dojos.text-center.grayscale-bg
   %br
-  %h2{:style => "color: dimgray;"} 🗾 日本各地の道場 ☯️
+  %h2{:style => "color: dimgray;"} 🗾 日本各地の道場
   %br
   %p
     近くの道場を探してみましょう！
@@ -71,15 +74,15 @@
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 %section#timeline.text-center
   %br
-  %h2.text-center
-  %a{:href => "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", :target => "_blank"} 最近の CoderDojo
+  %h3.text-center
+    %a{:href => "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", :target => "_blank"} 🐣 最近の CoderDojo
   %br
   %a.twitter-timeline{:href => "https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw", :data-lang => "ja", "data-chrome" => "noheader nofooter noborders", "data-dnt" => "true", "data-width" => "500", "data-tweet-limit" => "5"} @CoderDojoJapan アカウントのタイムライン
   %script{:async => "", :await => "", :src => "https://platform.twitter.com/widgets.js", :charset => "utf-8"}
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
-    %h2#next-step もっと詳しく知りたい
+    %h2#kata{:style => "color: dimgray;"} 📚 もっと詳しく知りたい
     %br
     %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
     %ul
@@ -96,50 +99,57 @@
       %a{:href => "/kata#startup"}<>
         Kata の立ち上げる
       を読んでみてください。
-    = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', style: 'margin-bottom: 15px;'), '/kata'
+    %div.kata
+      = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', style: 'margin-bottom: 15px;'), '/kata'
+      %a.button{:href => '/kata'} Kata を読む
+      
 
 = render partial: 'shared/partners'  
 
-#news.text-center.grayscale-bg
-  %section.detail-introduction
+
+%section#news.detail-introduction.text-center.grayscale-bg
+  %br
+  %h2{:style => "color: dimgray;"} 📰 ニュースレター購読
+  %br
+  = render partial: 'shared/newsletter'
+  %br
+  %br
+
+%section#contact.detail-introduction.text-center
+  %br
+  %h2{:style => "color: dimgray;"} 📮 お問い合わせ
+  %br
+  %p
+    取材や支援などのお問い合わせについては下記からご連絡ください 📨
     %br
-    %h2 ニュースレター購読
-    %br
-    = render partial: 'shared/newsletter'
-  
-.text-center
-  %section.detail-introduction
-    %br
-    %h2 お問い合わせ
-    %br
-    %p
-      取材や支援などのお問い合わせについては下記からご連絡ください 📨
-      %br
-      メールの場合は
-      %i info@coderdojo.jp
-      \ までお問い合わせください。
-    / Contact Form via Wufoo
-    #contact
-    #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
-      %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
-    :javascript
-      var qkjthoy0qpuvg9;(function(d, t) {
-      var s = d.createElement(t), options = {
-        'userName':'yasslab',
-        'formHash':'qkjthoy0qpuvg9',
-        'autoResize':true,
-        'height':'497',
-        'async':true,
-        'host':'wufoo.com',
-        'header':'show',
-        'ssl':true
-      };
-      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-        try {
-          qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
-        } catch (e) {}
-      };
-      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-      })(document, 'script');
+    メールの場合は
+    %i info@coderdojo.jp
+    \ までお問い合わせください。
+  / Contact Form via Wufoo
+  #contact
+  #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
+    %a{:href => "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
+  :javascript
+    var qkjthoy0qpuvg9;(function(d, t) {
+    var s = d.createElement(t), options = {
+      'userName':'yasslab',
+      'formHash':'qkjthoy0qpuvg9',
+      'autoResize':true,
+      'height':'497',
+      'async':true,
+      'host':'wufoo.com',
+      'header':'show',
+      'ssl':true
+    };
+    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+    s.onload = s.onreadystatechange = function() {
+      var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+      try {
+        qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
+      } catch (e) {}
+    };
+    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+    })(document, 'script');
+
+%br  
+%br

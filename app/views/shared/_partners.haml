@@ -1,6 +1,6 @@
 %section#partners.detail-introduction.partners_logo.text-center
   %br
-  %h2 パートナー
+  %h2{:style => "color: dimgray;"} 🤝 パートナー法人
   :javascript
     $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -30,10 +30,10 @@
     %li= link_to image_tag('logos/algolia.png', alt: 'Algolia', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '検索エンジン DocSearch の提供'), 'https://www.algolia.com/'
     %li= link_to image_tag('logos/makeblock.png', alt: 'Makeblock', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '無線付きシングルボードの提供'), 'https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/'
 
-    %p{:style => "margin-top: 50px;"}
+    %p{:style => "margin: 50px 0px;"}
       法人向けパートナーシップの
       %br.ignore-pc<>
       詳細は
       %a{:href => "/docs/about-partnership"}<>
-        コチラ
+        %b コチラ
       から
