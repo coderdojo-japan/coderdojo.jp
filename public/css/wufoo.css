@@ -39,7 +39,7 @@ footerで利用しているWufooのフォームの成形用のcss
   margin: 7px;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 480px){
   .wufoo li.section.scrollText{
     margin: 2px;
   }
