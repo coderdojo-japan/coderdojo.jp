@@ -8,10 +8,12 @@
   = image_tag "coderdojo-japan_cover.jpg"
 
 %section.introduction.text-center.list
+  %br
   %p
-    CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では#{Dojo::NUM_OF_COUNTRIES}カ国・#{Dojo::NUM_OF_WHOLE_DOJOS}の道場、日本では全国に
+    CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では#{Dojo::NUM_OF_COUNTRIES}カ国・#{Dojo::NUM_OF_WHOLE_DOJOS}の道場、日本には
     %b>= @dojo_count
     以上の道場があります。
+  %br
   %p CoderDojo で学べる内容は道場ごとに異なります。例えば、次の内容を学べる道場があります。
   %ul
     %li Scratch, Hour of Code
@@ -19,7 +21,8 @@
     %li PHP, Python, Ruby, Unity
     %li Arduino, Raspberry Pi など
   %br
-  %p 道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢はとても大切です。
+  %p 道場ごとに内容も規模も異なりますが、どの道場でも主体的に学ぶ姿勢が大切です。
+  %br
   %p#welcome
     道場の特徴については、次のガイダンスを参考にしてください。
   .text-center
@@ -82,9 +85,9 @@
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
-    %h2#kata{:style => "color: dimgray;"} 📚 もっと詳しく知りたい
+    %h2#kata{:style => "color: dimgray;"} 📚 もっと詳しく知る
     %br
-    %p 下記ウェブサイトから、CoderDojo の詳細や最新の情報にアクセスできます。
+    %p 下記サイトから CoderDojo の詳細や最新情報にアクセスできます。
     %ul
       %li
         %a{:href => "/kata"} CoderDojo Kata (Wiki)
@@ -94,6 +97,7 @@
         %a{:href => "https://coderdojo.com/"} CoderDojo Foundation (海外)
     %br
     %p Kata では学習や運営に役立つ資料を、Facebook では全国の活動を知ることができます。海外の雰囲気は CoderDojo Foundation から公開しています。
+    %br
     %p
       「地元で道場を立ち上げてみたい」「道場向けの各種支援を知りたい」といった場合は、
       %a{:href => "/kata#startup"}<>
@@ -102,7 +106,7 @@
     %div.kata
       = link_to image_tag("coderdojo-kata_cover.png", alt: 'CoderDojo Kata', style: 'margin-bottom: 15px;'), '/kata'
       %a.button{:href => '/kata'} Kata を読む
-      
+    %br
 
 = render partial: 'shared/partners'  
 
@@ -125,6 +129,8 @@
     メールの場合は
     %i info@coderdojo.jp
     \ までお問い合わせください。
+    %br
+    %br
   / Contact Form via Wufoo
   #contact
   #wufoo-qkjthoy0qpuvg9{:style => "margin-top: -10px"}
@@ -151,5 +157,5 @@
     var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
     })(document, 'script');
 
-%br  
+%br
 %br
