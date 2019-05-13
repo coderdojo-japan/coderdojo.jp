@@ -121,9 +121,9 @@
     font-size: 16px;
     font-weight: bold;
     padding: 7px 11px;
-    @media screen and (max-width: 640px) {
-      font-size: 10px;
-      padding: 5px 5px;
+    @media screen and (max-width: 480px) {
+      font-size: 9px;
+      padding: 0px 5px;
     }
     border: none;
     cursor: pointer;
