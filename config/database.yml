@@ -82,5 +82,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  database: coderdojo_jp_staging
+
 production:
   url: <%= ENV['DATABASE_URL'] %>

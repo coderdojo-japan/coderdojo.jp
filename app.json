@@ -80,6 +80,7 @@
   },
   "name": "coderdojo.jp",
   "scripts": {
+      "postdeploy": "bundle exec rails db:setup && bundle exec rails dojos:update_db_by_yaml && bundle exec rails dojo_event_services:upsert"
   },
   "stack": "heroku-18"
 }

@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  http_basic_authenticate_with name: ENV['BASIC_AUTH_NAME'],
+                           password: ENV['BASIC_AUTH_PASSWORD'] if Rails.env.staging?
+
   before_action :store_location , unless: :login_page_access?
 
   # Prevent CSRF attacks by raising an exception.
