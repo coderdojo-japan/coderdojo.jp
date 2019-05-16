@@ -17,20 +17,20 @@ class SoundCloudTrack < ApplicationRecord
 
   # instance methods
   def path
-    "#{DIR_PATH}/#{self.id}.md"
+    "#{DIR_PATH}/#{id}.md"
   end
 
   def url
-    "/#{URL_PATH}/#{self.id}"
+    "/#{URL_PATH}/#{id}"
   end
 
   def exists?(offset: 0)
     return false if path.include?("\u0000")
-    File.exists?("#{DIR_PATH}/#{self.id + offset}.md")
+    File.exists?("#{DIR_PATH}/#{id + offset}.md")
   end
 
   def published_at
-    exists? ? Time.parse(self.content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : nil
+    exists? ? Time.parse(content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : nil
   end
 
   def content

@@ -8,14 +8,14 @@ DojoCast に新しい Podcast を追加する方法 (2019/05/01現在)
 
 ### (2) SoundCloud に (1) で準備した mp3 を Upload する
 
-使用するアカウントは CoderDojoJapan (仮)
+使用するアカウントは CoderDojo Japan
 
 ### (3) CoderDojo 側の soundcloud_tracks T に SoundCloud のトラックデータを取り込む
 
 以下の rake タスクを実行し、SoundCloud に登録した CoderDojoJapan のトラックデータを CoderDojo の DB に取り込む。
 
 ```
-rake soundcloud_track:upsert
+rake soundcloud_tracks:upsert
 ```
 
 実行結果として、追加した soundcloud_track レコードの ID を表示する。
