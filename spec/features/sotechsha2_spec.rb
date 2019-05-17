@@ -5,7 +5,7 @@ RSpec.feature "Sotechsha2", type: :feature, scrivito: true, retry: 3  do
 
   describe "GET /sotechsha2/num" do
     scenario "Quizzes should be permalink" do
-      (1..2).each do |num|
+      (0..6).each do |num|
         visit "/sotechsha2/#{num}"
         ch = num.to_s.tr("0-9", "０-９").gsub("０", "序")
         expect(page).to have_selector "h1", text: "#{ch}章課題"

@@ -25,8 +25,8 @@ RSpec.describe BlogPostPageController, type: :controller, scrivito: true do
       expect(response).to render_template partial: "_footer", count: 1
      end
 
-     it "sotechsha post" do
-       obj = Obj.find_by_permalink!("sotechsha2/1")
+     it "sotechsha2 post" do
+       obj = Obj.find_by_permalink!("sotechsha2/0")
        request.for_scrivito_obj(obj)
        get :index
        sts_posts = BlogPostPage.where(:_permalink, :starts_with, 'sotechsha2/').order(created: :asc)
