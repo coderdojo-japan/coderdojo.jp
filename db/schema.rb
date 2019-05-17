@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190305145900) do
+ActiveRecord::Schema.define(version: 20190423141200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,22 @@ ActiveRecord::Schema.define(version: 20190305145900) do
     t.string "region"
     t.index ["name"], name: "index_prefectures_on_name", unique: true
     t.index ["region"], name: "index_prefectures_on_region"
+  end
+
+  create_table "soundcloud_tracks", force: :cascade do |t|
+    t.integer "track_id", null: false
+    t.string "title", null: false
+    t.text "description"
+    t.integer "original_content_size", null: false
+    t.string "duration", null: false
+    t.string "tag_list"
+    t.string "download_url", null: false
+    t.string "permalink", null: false
+    t.string "permalink_url", null: false
+    t.datetime "uploaded_at", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["track_id"], name: "index_soundcloud_tracks_on_track_id", unique: true
   end
 
   create_table "upcoming_events", force: :cascade do |t|
