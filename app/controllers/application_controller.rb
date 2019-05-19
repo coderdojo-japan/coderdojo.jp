@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
 
   before_action :set_request_variant
 
+  rescue_from ActiveRecord::RecordNotFound, with: :render_404
+  rescue_from ActionController::RoutingError, with: :render_404
+  rescue_from Exception, with: :render_500
+
   private
 
     def store_location
@@ -23,5 +27,13 @@ class ApplicationController < ActionController::Base
 
   def set_request_variant
     request.variant = request.device_variant
+  end
+
+  def render_404
+    render template: 'errors/404', status: 404, layout: 'application', content_type: 'text/html'
+  end
+
+  def render_500
+    render template: 'errors/500', status: 500, layout: 'application', content_type: 'text/html'
   end
 end
