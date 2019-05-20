@@ -44,7 +44,6 @@ class ApplicationController < ActionController::Base
   end
 
   def render_500(e)
-    binding.pry
     render template: 'errors/500', status: 500,
                                    layout: 'application',
                              content_type: 'text/html'

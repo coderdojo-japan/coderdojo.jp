@@ -75,6 +75,7 @@
     %br.ignore-sp<>
     参加方法は各道場のWebサイトに記載されています ☯️🏃💨
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
+
 %section#timeline.text-center
   %br
   %h3.text-center
@@ -82,6 +83,7 @@
   %br
   %a.twitter-timeline{:href => "https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw", :data-lang => "ja", "data-chrome" => "noheader nofooter noborders", "data-dnt" => "true", "data-width" => "500", "data-tweet-limit" => "5"} @CoderDojoJapan アカウントのタイムライン
   %script{:async => "", :await => "", :src => "https://platform.twitter.com/widgets.js", :charset => "utf-8"}
+
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
