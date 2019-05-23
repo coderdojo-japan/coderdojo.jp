@@ -12,7 +12,7 @@ DojoCast に新しい Podcast を追加する方法 (2019/05/01現在)
    - 次の Rake タスクを実行し、SoundCloud に登録した CoderDojo Japan のトラックデータを CoderDojo の DB に取り込む。無事に取り込めると、追加した soundcloud_track レコード ID が表示されます
 
    ```
-   $ rake soundcloud_tracks:upsert
+   $ bundle exec rake soundcloud_tracks:upsert
    ```
 
 4. **`soundcloud_tracks` のレコード ID を使って、`x.md` を作成して配置する**
