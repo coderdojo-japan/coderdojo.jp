@@ -16,16 +16,16 @@
     <% if @episode.exists?(offset: -1) %>
       <a href="/podcasts/<%= @episode.id - 1 %>">&larr; prev</a>
     <% else %>
-      <a href="/podcasts">&larr; 目次へ</a>
+      <a href="/podcasts">&larr; Top</a>
     <% end %>
   </p>
   <p class="nav toc" >
-    <a href="/podcasts">目次へ戻る</a></p>
+    <a href="/podcasts">🎙 DojoCast</a></p>
   <p class="nav next">
     <% if @episode.exists?(offset: +1) %>
       <a href="/podcasts/<%= @episode.id + 1 %>">next &rarr;</a>
     <% else %>
-      <a href="/podcasts">目次へ &rarr;</a>
+      <a href="/podcasts">Top &rarr;</a>
     <% end %>
   </p>
 </div>
