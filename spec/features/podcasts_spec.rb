@@ -29,7 +29,7 @@ RSpec.feature 'Podcasts', type: :feature do
       allow(SoundCloudTrack).to receive(:find_by).with(id: @soundcloud_track.id.to_s) { @soundcloud_track }
 
       visit  "/podcasts/#{@soundcloud_track.id}"
-      target = '🎙 DojoCast'
+      target = 'DojoCast'
       expect(page).to have_http_status(:success)
       expect(page).to have_link target, href: '/podcasts'
       click_link target
