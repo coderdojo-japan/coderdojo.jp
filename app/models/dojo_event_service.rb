@@ -3,6 +3,7 @@ class DojoEventService < ApplicationRecord
   INTERNAL_SERVICES = %i( static_yaml )
 
   belongs_to :dojo
+
   enum name: EXTERNAL_SERVICES + INTERNAL_SERVICES
 
   validates :name, presence: true

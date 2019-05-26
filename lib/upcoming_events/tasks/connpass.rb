@@ -1,0 +1,55 @@
+module UpcomingEvents
+  module Tasks
+    class Connpass
+      def initialize(dojos, period)
+        @client = EventService::Providers::Connpass.new
+        @dojos = dojos
+        @params = build_params(period)
+      end
+
+      def run
+        @dojos.each do |dojo|
+          dojo.dojo_event_services.for(:connpass).each do |dojo_event_service|
+            @client.fetch_events(@params.merge(series_id: dojo_event_service.group_id)).each do |e|
+              next unless e.dig('series', 'id').to_s == dojo_event_service.group_id
+
+              record = UpcomingEvent.find_or_initialize_by(dojo_id: dojo.id,
+                                                           service_name: dojo_event_service.name,
+                                                           event_id: e['event_id'])
+              record.update!(dojo_name: dojo.name,
+                             event_url: e['event_url'],
+                             event_at: Time.zone.parse(e['started_at']),
+                             participants: e['accepted'])
+            end
+          end
+        end
+      end
+
+      private
+
+      def build_params(period)
+        yyyymmdd = []
+        yyyymm = []
+
+        st_date = period.first
+        ed_date = period.last
+
+        date = period.first
+        while date <= ed_date
+          if date.day == 1 && date.end_of_month <= ed_date
+            yyyymm << date.strftime('%Y%m')
+            date += 1.month
+          else
+            yyyymmdd << date.strftime('%Y%m%d')
+            date += 1.day
+          end
+        end
+
+        {
+          yyyymmdd: yyyymmdd,
+          yyyymm: yyyymm
+        }
+      end
+    end
+  end
+end

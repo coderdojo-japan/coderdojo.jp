@@ -6,6 +6,7 @@ class Dojo < ApplicationRecord
   belongs_to :prefecture
   has_many   :dojo_event_services, dependent: :destroy
   has_many   :event_histories,     dependent: :destroy
+  has_many   :upcoming_events,     dependent: :destroy
 
   serialize :tags
   before_save { self.email = self.email.downcase }
