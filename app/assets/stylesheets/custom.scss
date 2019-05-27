@@ -3,6 +3,11 @@
 
 // Customized by YassLab team
 
+/* DojoCast Cover Photo */
+.dojocast-cover {
+  border-radius: 0px;
+}
+
 /* DocSearch by Algolia */
 .search {
   padding-top:    17px;
@@ -493,7 +498,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: -3%
+    margin-top: -3%;
+    border-radius: 0px;
 }
 
 .dojos > ul {
