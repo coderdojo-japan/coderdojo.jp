@@ -30,9 +30,9 @@ module UpcomingEvents
         internal_services = []
         case provider
         when 'connpass', 'doorkeeper', 'facebook'
-          external_services = [provider]
+          external_services = [provider.to_sym]
         when 'static_yaml'
-          internal_services = [provider]
+          internal_services = [provider.to_sym]
         end
       end
 
@@ -62,7 +62,7 @@ module UpcomingEvents
     def execute
       target_period = @from..@to
       @externals.each do |kind, list|
-        if kind == :facebook
+        unless [:connpass, :doorkeeper].include?(kind)
           puts "Aggregate of #{kind} --> skip"
           next
         end
