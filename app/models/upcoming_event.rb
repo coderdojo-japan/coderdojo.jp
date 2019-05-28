@@ -1,5 +1,5 @@
 class UpcomingEvent < ApplicationRecord
-  belongs_to :dojo
+  belongs_to :dojo_event_service
 
   validates :dojo_name,    presence: true
   validates :service_name, presence: true, uniqueness: { scope: :event_id  }

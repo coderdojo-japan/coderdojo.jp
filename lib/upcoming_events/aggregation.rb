@@ -4,10 +4,8 @@ module UpcomingEvents
       @from = Time.zone.today
       @to = @from + 2.months
       @provider = args[:provider]
-      dojos = fetch_dojos(@provider)
       # NOTE: 対象は一旦収集可能な connpass, doorkeeper のみにする
-      @externals = dojos[:externals]
-      # @internals = dojos[:internals]
+      @externals = fetch_dojos(@provider)
     end
 
     def run
@@ -21,25 +19,15 @@ module UpcomingEvents
     private
 
     def fetch_dojos(provider)
-      if provider.blank?
-        # 全プロバイダ対象
-        external_services = DojoEventService::EXTERNAL_SERVICES
-        internal_services = DojoEventService::INTERNAL_SERVICES
-      else
-        external_services = []
-        internal_services = []
-        case provider
-        when 'connpass', 'doorkeeper', 'facebook'
-          external_services = [provider.to_sym]
-        when 'static_yaml'
-          internal_services = [provider.to_sym]
-        end
-      end
-
-      {
-        externals: find_dojos_by(external_services),
-        internals: find_dojos_by(internal_services)
-      }
+      base_providers = DojoEventService::EXTERNAL_SERVICES - [:facebook]
+      services = if provider.blank?
+                   # 全プロバイダ対象
+                   base_providers
+                 elsif base_providers.include?(provider.to_sym)
+                   [provider.to_sym]
+                 end
+      return [] unless services
+      find_dojos_by(services)
     end
 
     def find_dojos_by(services)
@@ -62,10 +50,6 @@ module UpcomingEvents
     def execute
       target_period = @from..@to
       @externals.each do |kind, list|
-        unless [:connpass, :doorkeeper].include?(kind)
-          puts "Aggregate of #{kind} --> skip"
-          next
-        end
         puts "Aggregate of #{kind}"
         "UpcomingEvents::Tasks::#{kind.to_s.camelize}".constantize.new(list, target_period).run
       end

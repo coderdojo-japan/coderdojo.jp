@@ -13,12 +13,12 @@ module UpcomingEvents
             @client.fetch_events(@params.merge(series_id: dojo_event_service.group_id)).each do |e|
               next unless e.dig('series', 'id').to_s == dojo_event_service.group_id
 
-              record = UpcomingEvent.find_or_initialize_by(dojo_id: dojo.id,
-                                                           service_name: dojo_event_service.name,
-                                                           event_id: e['event_id'])
-              record.update!(dojo_name: dojo.name,
-                             event_url: e['event_url'],
-                             event_at: Time.zone.parse(e['started_at']),
+              record = dojo_event_service.upcoming_events.find_by(event_id: e['event_id'])
+              record ||= dojo_event_service.upcoming_events.build(event_id: e['event_id'])
+              record.update!(dojo_name:    dojo.name,
+                             service_name: dojo_event_service.name,
+                             event_url:    e['event_url'],
+                             event_at:     Time.zone.parse(e['started_at']),
                              participants: e['accepted'])
             end
           end

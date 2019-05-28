@@ -2,7 +2,6 @@ require 'factory_bot'
 
 FactoryBot.define do
   factory :upcoming_event do
-    # dojo_id
     dojo_name    { 'Dojo Name' }
     service_name { :connpass }
     event_id     { '1234' }
