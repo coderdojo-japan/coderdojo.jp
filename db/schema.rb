@@ -80,10 +80,10 @@ ActiveRecord::Schema.define(version: 20190526151359) do
   end
 
   create_table "upcoming_events", force: :cascade do |t|
+    t.integer "dojo_event_service_id", null: false
     t.string "event_id", null: false
     t.string "event_url", null: false
     t.datetime "event_at", null: false
-    t.integer "dojo_event_service_id", default: 1, null: false
     t.string "dojo_name", null: false
     t.string "service_name", null: false
     t.integer "participants", null: false
