@@ -14,8 +14,7 @@ module UpcomingEvents
               next unless e['group'].to_s == dojo_event_service.group_id
 
               record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e['id'])
-              record.update!(dojo_name: dojo.name,
-                             service_name: dojo_event_service.name,
+              record.update!(service_name: dojo_event_service.name,
                              event_url: e['public_url'],
                              participants: e['participants'],
                              event_at: Time.zone.parse(e['starts_at']))

@@ -84,10 +84,10 @@ ActiveRecord::Schema.define(version: 20190526151359) do
     t.string "event_id", null: false
     t.string "event_url", null: false
     t.datetime "event_at", null: false
-    t.string "dojo_name", null: false
     t.string "service_name", null: false
     t.integer "participants", null: false
     t.index ["dojo_event_service_id"], name: "index_upcoming_events_on_dojo_event_service_id"
+    t.index ["service_name", "event_id"], name: "index_upcoming_events_on_service_name_and_event_id", unique: true
   end
 
   add_foreign_key "dojo_event_services", "dojos"
