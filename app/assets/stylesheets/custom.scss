@@ -561,9 +561,13 @@ a {
     text-decoration: none
 }
 
+.event-region {
+    font-weight: bold;
+}
+
 #event-list {
-    height: 200px;
-    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #event-list .event-date {

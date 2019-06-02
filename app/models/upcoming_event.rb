@@ -12,9 +12,18 @@ class UpcomingEvent < ApplicationRecord
   scope :until, ->(date) { where('event_at < ?', date.beginning_of_day) }
 
   class << self
-    def group_by_date
-      eager_load(dojo_event_service: { dojo: :prefecture }).since(Time.zone.today).
-        order(:event_at).map(&:catalog).group_by { |d| d[:event_date] }
+    def group_by_region_and_date
+      events_by_region = eager_load(dojo_event_service: { dojo: :prefecture }).since(Time.zone.today).
+        merge(Dojo.default_order).
+        group_by { |event| event.dojo_event_service.dojo.prefecture.region }
+
+      regions = Prefecture.pluck(:region).uniq
+      result = {}
+      regions.each do |region|
+        events = events_by_region[region]
+        result[region] = events ? events.sort_by(&:event_at).map(&:catalog).group_by { |d| d[:event_date] } : {}
+      end
+      result
     end
   end
 

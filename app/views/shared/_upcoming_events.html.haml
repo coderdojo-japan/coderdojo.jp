@@ -1,11 +1,13 @@
 %div#event-list
-  - upcoming_events.each do |date, events|
-    %p.event-date= "#{date.strftime('%Y/%m/%d')}"
-    %ul
-      - events.each do |event|
-        %li
-          %p
-            %span.event-at= "#{event[:event_at].strftime('%k:%M')}〜"
-            %a.event-url{ href: "#{event[:event_url]}" }
-              %span= event[:event_title]
-            %span= "#{event[:dojo_name]} (#{event[:dojo_prefecture_name]})"
+  - upcoming_events.each do |region, events_by_date|
+    %p.event-region= region
+    - events_by_date.each do |date, events|
+      %p.event-date= "#{date.strftime('%Y/%m/%d')}"
+      %ul
+        - events.each do |event|
+          %li
+            %p
+              %span.event-at= "#{event[:event_at].strftime('%k:%M')}〜"
+              %a.event-url{ href: "#{event[:event_url]}" }
+                %span= event[:event_title]
+              %span= "#{event[:dojo_name]} (#{event[:dojo_prefecture_name]})"
