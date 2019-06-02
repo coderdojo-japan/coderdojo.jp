@@ -51,17 +51,13 @@
   = render partial: 'shared/social_buttons'
   %br
 
-/
-  %section#events.detail-introduction.text-center
-  %h2 直近のイベント
-  %ol.bxslider{:style => "list-style: none; margin-left: -40px; margin-top: 30px;"}
-    %li
-      = link_to image_tag("decadojo_cover.png", alt: "DecaDojo", style: "margin-bottom: 15px;"), "https://coderdojo-tachikawa.connpass.com/event/81311/"
-
-  %p
-    4月7日 (土) に
-    %a{:href => "https://coderdojo-tachikawa.connpass.com/event/81311/"} でかドージョー in 多摩地域
-    が開催されます! ぜひご参加ください ;)
+%section#events.detail-introduction.text-center
+  %br
+  %h2{:style => "color: dimgray;"} もうすぐ開催のイベント
+  %br
+  %p{:style => "margin: 0 30px 40px 30px;"}
+    開催予定のイベントをチェックしましょう！
+  = render partial: 'shared/upcoming_events', locals: { upcoming_events: @upcoming_events }
 
 %section#dojos.dojos.text-center.grayscale-bg
   %br

@@ -561,6 +561,29 @@ a {
     text-decoration: none
 }
 
+#event-list {
+    height: 200px;
+    overflow: auto;
+}
+
+#event-list .event-date {
+    text-align: left;
+    margin: .5em 0;
+}
+
+#event-list ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#event-list ul li {
+    text-align: left;
+}
+
+#event-list .event-at {
+    display: inline-block;
+    width: 80px;
+}
 
 @media only screen and (min-width:560px) {
     .dojo {
