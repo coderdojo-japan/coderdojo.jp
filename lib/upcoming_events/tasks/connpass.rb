@@ -15,6 +15,7 @@ module UpcomingEvents
 
               record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e['event_id'])
               record.update!(service_name: dojo_event_service.name,
+                             event_title:  e['title'],
                              event_url:    e['event_url'],
                              event_at:     Time.zone.parse(e['started_at']),
                              participants: e['accepted'])
