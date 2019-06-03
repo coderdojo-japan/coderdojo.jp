@@ -21,6 +21,6 @@ DojoCast に新しい Podcast を追加する方法 (2019/05/01現在)
    - 問題なければ GitHub に push し、CI を通してデプロイされるのを待つ
 6. **デプロイされたら、本番環境で Rake タスクを実行する**
    - TODO: 現在はアクセス権限が必要。CI で毎回実行しても良さそう? 🤔💭
-   - `$ heroku run bundle exec rake soundcloud_tracks:upsert`  
+   - `$ heroku run bundle exec rake soundcloud_tracks:upsert`
 7. **本番環境にアクセスして新規エピソードが表示されることを確認する**
    - 上記の一連の作業が無事完了すると、**[https://coderdojo.jp/podcasts](https://coderdojo.jp/podcasts) から新規エピソードが公開されるようになります。
