@@ -26,11 +26,11 @@ RSpec.describe UpcomingEvents::Aggregation do
     end
 
     it '昨日分までは削除' do
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '1111', event_at: "#{Time.zone.today - 3.days} 13:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '2222', event_at: "#{Time.zone.today - 2.days} 14:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '3333', event_at: "#{Time.zone.today - 1.days} 15:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '4444', event_at: "#{Time.zone.today - 2.days} 10:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '5555', event_at: "#{Time.zone.today - 1.days} 11:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '1111', event_title: 'title 1111', event_at: "#{Time.zone.today - 3.days} 13:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '2222', event_title: 'title 2222', event_at: "#{Time.zone.today - 2.days} 14:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '3333', event_title: 'title 3333', event_at: "#{Time.zone.today - 1.days} 15:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '4444', event_title: 'title 4444', event_at: "#{Time.zone.today - 2.days} 10:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '5555', event_title: 'title 5555', event_at: "#{Time.zone.today - 1.days} 11:00:00".in_time_zone)
 
       expect{ UpcomingEvents::Aggregation.new({}).run }.to change{ UpcomingEvent.count }.from(5).to(3)
     end

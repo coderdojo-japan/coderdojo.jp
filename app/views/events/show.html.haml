@@ -1,0 +1,18 @@
+- provide(:title, 'イベント')
+- provide(:desc,  'もうすぐ開催のイベント情報をまとめています。')
+- provide(:url,   @url)
+
+/
+  %section.cover{style: 'padding-top:40px; background-color: white;'}
+    = image_tag "stats_cover.png"
+
+%section#events.text-center
+  %br
+  %h1 もうすぐ開催のイベント
+  %br
+  %p{:style => "margin: 0 30px 40px 30px;"}
+    💻 開催予定のイベントをチェックしましょう！
+  = render partial: 'upcoming_events', locals: { upcoming_events: @upcoming_events }
+
+%br
+%br
