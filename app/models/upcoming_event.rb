@@ -18,7 +18,7 @@ class UpcomingEvent < ApplicationRecord
         group_by { |event| event.dojo_event_service.dojo.prefecture_id }
 
       result = {}
-      Prefecture.all.each do |prefecture|
+      Prefecture.order(:id).each do |prefecture|
         events = events_by_prefecture[prefecture.id]
         next if events.blank?
         result[prefecture] = events.sort_by(&:event_at).map(&:catalog).group_by { |d| d[:event_date] }
