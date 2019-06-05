@@ -551,19 +551,63 @@
   name: doorkeeper
   group_id: 9906
   url: https://coderdojo-gotanda.doorkeeper.jp/
-#- dojo_id: 186 # CoderDojo Nago
-#  name: facebook
-#  group_id: 
-#  url: 
-#- dojo_id: 188 # CoderDojo 神山
-#  name: 
-#  group_id: 
-#  url: 
-#- dojo_id: 190 # CoderDojo 溝口
-#  name: connpass
-#  group_id: 
-#  url: https://coderdojo-mizonokuchi.connpass.com/
-- dojo_id: 210 # CoderDojo 久地
+- dojo_id: 186
+  name: facebook
+  group_id: 318691575631474
+  url: https://www.facebook.com/CoderDojo.Nago/
+- dojo_id: 187
+  name: facebook
+  group_id: 569968173442983
+  url: https://www.facebook.com/CoderDojoKagoshima/
+- dojo_id: 188
+  name: facebook
+  group_id: 760136447660371
+  url: https://www.facebook.com/CDKamiyama/
+- dojo_id: 189
+  name: connpass
+  group_id: 6999
+  url: https://coderdojo-machida.connpass.com/
+- dojo_id: 190
+  name: connpass
+  group_id: 7053
+  url: https://coderdojo-mizonokuchi.connpass.com/
+- dojo_id: 191
+  name: facebook
+  group_id: 2400985366820315
+  url: https://www.facebook.com/CoderDojoDazaifu/
+- dojo_id: 195
+  name: facebook
+  group_id: 100032127647229
+  url: https://www.facebook.com/CoderDojo.Nirasaki
+- dojo_id: 196
+  name: facebook
+  group_id: 100032055361334
+  url: https://www.facebook.com/CoderDojo.HokutoJP
+- dojo_id: 198
+  name: facebook
+  group_id: 374114993171172
+  url: https://www.facebook.com/CoderDojoKOZA
+- dojo_id: 202
+  name: facebook
+  group_id: 2109347109378340
+  url: https://www.facebook.com/coderdojomatsubara/
+- dojo_id: 203
+  name: facebook
+  group_id: 1821472277930255 
+  url: https://www.facebook.com/CoderDojo.Mutsuno/
+- dojo_id: 206
+  name: doorkeeper
+  group_id: 10019
+  url: https://coderdojo-suita.doorkeeper.jp/
+- dojo_id: 208
+  name: connpass
+  group_id: 7500
+  url: https://coderdojo-kozukue.connpass.com/
+- dojo_id: 209
+  name: facebook
+  group_id: 789235144765295
+  url: https://www.facebook.com/CoderDojo.Ishigaki/
+- dojo_id: 210
   name: facebook
   group_id: 261243731229399
   url: https://www.facebook.com/pg/coderdojokuji/events/
