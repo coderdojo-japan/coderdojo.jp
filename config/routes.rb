@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   #       Hotfix with the code above that works correctly.
   #resources :stats,  only: %i(show)
 
+  # Upcoming Events
+  get "/events"  => "events#index"
+
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
   get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
