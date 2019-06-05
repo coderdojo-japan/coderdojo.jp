@@ -1,10 +1,9 @@
-- provide(:title, 'イベント')
+- provide(:title, '開催予定イベント')
 - provide(:desc,  'もうすぐ開催のイベント情報をまとめています。')
 - provide(:url,   @url)
 
-/
-  %section.cover{style: 'padding-top:40px; background-color: white;'}
-    = image_tag "stats_cover.png"
+%section.cover
+  = image_tag "events_cover.png"
 
 %section#events.text-center
   %br
