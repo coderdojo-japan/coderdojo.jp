@@ -101,6 +101,11 @@ yamlファイルにidおよびorderが動的に更新されたことを確認で
   $ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
     5072
   ```
+  
+- Doorkeeper
+  1. connpassと同様に、Doorkeeper のイベントページの url から event ID を確認します
+  (https://coderdojo-suita.doorkeeper.jp/events/88808 の events/xxx の部分)
+  2. `$ curl https://api.doorkeeper.jp/events/event ID` を実行すると JSON が返って来るので、「group」の値を group_id とします
 
 ## 本番環境への反映方法
 
