@@ -191,10 +191,10 @@
   name: google
   group_id:
   url:
-- dojo_id: 25
-  name: facebook
-  group_id: 238346276578113
-  url: https://www.facebook.com/pg/coderdojowakaba/events/
+# - dojo_id: 25
+#   name: facebook
+#   group_id: 238346276578113
+#   url: https://www.facebook.com/pg/coderdojowakaba/events/ リンク切れ
 - dojo_id: 86
   name: facebook
   group_id: 880706025404127
