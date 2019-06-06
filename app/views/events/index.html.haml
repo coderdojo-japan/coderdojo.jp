@@ -7,14 +7,14 @@
 
 %section#events.text-center
   %br
-  %h1 📅 近日開催の道場 (β版)
+  %h1 📅 近日開催の道場
   %br
   %p{style: "margin: 0 30px 40px 0px;"}
-    ☯️開催予定のイベントをチェックしましょう! ✅
+    ☯️開催予定のイベントをチェックしましょう! 
     %br
     (Facebook イベントにも
     %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"}<> 今後対応する予定
-    です)    
+    )
   = render partial: 'upcoming_events', locals: { upcoming_events: @upcoming_events }
 
 %section#dojos.dojos.text-center
