@@ -10,11 +10,11 @@
   %h1 📅 近日開催の道場
   %br
   %p{style: "margin: 0 30px 40px 0px;"}
-    ☯️開催予定のイベントをチェックしましょう! 
+    　☯️ 開催予定のイベントをチェックしよう! 
     %br
-    (Facebook イベントにも
-    %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"}<> 今後対応する予定
-    )
+    　(Facebook イベントにも
+    %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"}<> 対応する予定
+    です)
   = render partial: 'upcoming_events', locals: { upcoming_events: @upcoming_events }
 
 %section#dojos.dojos.text-center
@@ -22,11 +22,11 @@
   %h3{style: "margin-top: 60px; font-weight: bold;"} 🛠 関連リンク
   %ul{:style => "list-style: none; margin-left: -40px; margin-bottom: 40px;"}
     %li
-      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/258"} 直近の CoderDojo 開催情報を表示したい #258
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/258"} 直近の Dojo 開催情報を表示したい #258
     %li
       %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/375"} イベント履歴収集スクリプトの改修 #375
     %li
-      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"} Facebook のイベント履歴収集を自動化したい #393
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"} Facebook Events にも対応したい #393
   %br
 
 %br
