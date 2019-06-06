@@ -1,6 +1,7 @@
 %div#event-list
   - upcoming_events.each do |prefecture, events_by_date|
-    %p.event-region= prefecture.name
+    %p.event-region{id: prefecture.name}
+      %a{href: "##{prefecture.name}", style: "color: black;"}= prefecture.name
     - events_by_date.each do |date, events|
       %p.event-date= "#{date.strftime('%Y/%m/%d')}"
       %ul

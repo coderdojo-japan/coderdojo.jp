@@ -1,5 +1,5 @@
-- provide(:title, '開催予定イベント')
-- provide(:desc,  'もうすぐ開催のイベント情報をまとめています。')
+- provide(:title, '近日開催の道場まとめ')
+- provide(:desc,  '開催される道場情報をまとめています。')
 - provide(:url,   @url)
 
 %section.cover
@@ -7,10 +7,14 @@
 
 %section#events.text-center
   %br
-  %h1 もうすぐ開催のイベント
+  %h1 📅 近日開催の道場 (β版)
   %br
-  %p{:style => "margin: 0 30px 40px 30px;"}
-    💻 開催予定のイベントをチェックしましょう！
+  %p{style: "margin: 0 30px 40px 0px;"}
+    ☯️開催予定のイベントをチェックしましょう! ✅
+    %br
+    (Facebook イベントにも
+    %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues/393"}<> 今後対応する予定
+    です)    
   = render partial: 'upcoming_events', locals: { upcoming_events: @upcoming_events }
 
 %br
