@@ -231,10 +231,15 @@
   name: facebook
   group_id: 124249914820641
   url: https://www.facebook.com/pg/coderdojo.kofu/events/
+# 〜2018/02
+# - dojo_id: 87
+#   name: facebook
+#   group_id: 1634610396557264
+#   url: https://www.facebook.com/pg/CoderDojoAzumino/events/
 - dojo_id: 87
-  name: facebook
-  group_id: 1634610396557264
-  url: https://www.facebook.com/pg/CoderDojoAzumino/events/
+  name: doorkeeper
+  group_id: 9603
+  url: https://coderdojo-azumino.doorkeeper.jp
 - dojo_id: 27
   name: connpass
   group_id: 2732
@@ -611,5 +616,3 @@
   name: facebook
   group_id: 261243731229399
   url: https://www.facebook.com/pg/coderdojokuji/events/
-
-
