@@ -3,7 +3,7 @@
     %p.event-region{id: prefecture.name}
       %a{href: "##{prefecture.name}", style: "color: black;"}= prefecture.name
     - events_by_date.each do |date, events|
-      %p.event-date= "#{date.strftime('%-m月%-d日')}"
+      %p.event-date= l(date)
       %ul
         - events.each do |event|
           %li
