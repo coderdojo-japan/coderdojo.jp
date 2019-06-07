@@ -17,5 +17,8 @@ module CoderdojoJp
 
     # Timezone
     config.time_zone = 'Asia/Tokyo'
+
+    # Default I18n locale
+    config.i18n.default_locale = :ja
   end
 end
