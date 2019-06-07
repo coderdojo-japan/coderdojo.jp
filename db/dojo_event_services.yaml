@@ -102,6 +102,10 @@
   name: static_yaml
   group_id:
   url:
+- dojo_id: 13
+  name: connpass
+  group_id: 3809
+  url: https://coderdojokodaira-ninja.connpass.com/
 - dojo_id: 14
   name: peatix
   group_id:
