@@ -2218,13 +2218,12 @@
   - mBot
 - id: 61
   order: '472018'
-  is_active: false
   created_at: '2012-07-09'
-  name: 那覇
+  name: 南風原
   prefecture_id: 47
-  logo: "/img/dojos/naha.png"
-  url: https://coderdojo-naha.doorkeeper.jp/
-  description: 沖縄県那覇市で不定期開催
+  logo: "/img/dojos/haebaru.jpg"
+  url: https://coderdojo-haebaru.doorkeeper.jp/
+  description: 沖縄県那覇市南風原で不定期開催
   tags:
   - Scratch
 - id: 106
