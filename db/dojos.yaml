@@ -1787,6 +1787,7 @@
   tags:
   - Scratch
   - micro:bit
+  - mBot / HaloCode
   - JavaScript
   - Webサイト
 - id: 36
@@ -1838,8 +1839,7 @@
   tags:
   - Scratch
   - micro:bit
-  - JavaScript
-  - Webサイト
+  - mBot / HaloCode
   - Viscuit
 - id: 47
   order: '302015'
