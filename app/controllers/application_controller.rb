@@ -12,10 +12,12 @@ class ApplicationController < ActionController::Base
   before_action :set_request_variant
 
   # NOTE: rescue_from methods are evaluated from **bottom to up**
-  rescue_from Exception,                      with: :render_500
-  rescue_from ActiveRecord::RecordNotFound,   with: :render_404
-  rescue_from ActionController::RoutingError, with: :render_404
-  rescue_from Scrivito::ResourceNotFound,     with: :render_404
+  if Rails.env.production?
+    rescue_from Exception,                      with: :render_500
+    rescue_from ActiveRecord::RecordNotFound,   with: :render_404
+    rescue_from ActionController::RoutingError, with: :render_404
+    rescue_from Scrivito::ResourceNotFound,     with: :render_404
+  end
 
   private
 
