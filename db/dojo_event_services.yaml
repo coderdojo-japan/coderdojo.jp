@@ -540,10 +540,10 @@
   name: connpass
   group_id: 6562
   url: https://coderdojo-mitaka.connpass.com/
-#- dojo_id: 179
-#  name: connpass
-#  group_id: # TODO: Add group_id if any event opens from the URL below
-#  url: https://coderdojo-kohokunt.connpass.com/
+- dojo_id: 179
+  name: connpass
+  group_id: 6645
+  url: https://coderdojo-kohokunt.connpass.com/
 - dojo_id: 181
   name: connpass
   group_id: 6141
