@@ -624,3 +624,9 @@
   name: facebook
   group_id: 261243731229399
   url: https://www.facebook.com/pg/coderdojokuji/events/
+
+# 調布@電気通信大学
+- dojo_id: 1
+  name: connpass
+  group_id: 7924
+  url: https://coderdojo-kozukue.connpass.com/
