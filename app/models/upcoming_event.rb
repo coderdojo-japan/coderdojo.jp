@@ -28,8 +28,14 @@ class UpcomingEvent < ApplicationRecord
   end
 
   def catalog
+    # NOTE: 奈良・生駒・田原本の Dojo 名は特別に加工
+    dojo_name = if dojo_event_service.name == 'connpass' && dojo_event_service.group_id == '2617'
+                  '奈良・生駒・田原本'
+                else
+                  dojo_event_service.dojo.name
+                end
     {
-      dojo_name:            dojo_event_service.dojo.name,
+      dojo_name:            dojo_name,
       dojo_prefecture_name: dojo_event_service.dojo.prefecture.name,
       event_title:          event_title,
       event_url:            event_url,
