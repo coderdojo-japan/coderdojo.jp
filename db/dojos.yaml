@@ -1917,6 +1917,19 @@
   - Hour of Code
   - Mindstorms
   - CodeyRocky
+- id: 211
+  order: '322059'
+  created_at: '2019-06-11'
+  name: 石見@Takuno
+  prefecture_id: 32
+  logo: "/img/dojos/japan.png"
+  url: https://zen.coderdojo.com/dojos/jp/ren2-mo2-ting3/iwami-takuno
+  description: 島根県大田市仁摩町で月に２回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - AR/AI
+  - ラズベリーパイ
 - id: 78
   order: '325058'
   is_active: false
