@@ -511,6 +511,10 @@
   name: connpass
   group_id: 5408
   url: https://coderdojo-nisshin.connpass.com/
+- dojo_id: 147
+  name: doorkeeper
+  group_id: 9690
+  url: https://coderdojo-inagi.doorkeeper.jp/
 #- dojo_id: 149
 #  name: connpass
 #  group_id: # TODO: connpass の series id ができたら追加する
