@@ -57,3 +57,4 @@ DB の Incremental ID の値を初期化する際のご参考になれば...!! (
 
 🤔.oO(Rakeタスク内で、冪等性を担保したまま、上記の処理を入れるともっと簡単になったりしないかな...?)
 
+cf. [dojos:update_db_by_yaml タスク内で、既存の dojos_id_seq の最大値を取得する処理を入れたい #484](https://github.com/coderdojo-japan/coderdojo.jp/issues/484)
