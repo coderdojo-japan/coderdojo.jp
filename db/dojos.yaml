@@ -2296,6 +2296,18 @@
   - micro:bit
   - Minecraft
   - mBot
+- id: 216
+  order: '472018'
+  created_at: '2019-06-15'
+  name: 那覇
+  prefecture_id: 47
+  logo: "/img/dojos/naha.png"
+  url: https://coderdojo-naha.doorkeeper.jp/
+  description: 沖縄県那覇市で毎週開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
 - id: 106
   order: '472051'
   created_at: '2017-09-20'
