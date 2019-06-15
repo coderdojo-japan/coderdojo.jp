@@ -2296,16 +2296,6 @@
   - micro:bit
   - Minecraft
   - mBot
-- id: 61
-  order: '472018'
-  created_at: '2012-07-09'
-  name: 南風原
-  prefecture_id: 47
-  logo: "/img/dojos/haebaru.jpg"
-  url: https://coderdojo-haebaru.doorkeeper.jp/
-  description: 沖縄県島尻郡南風原町で不定期開催
-  tags:
-  - Scratch
 - id: 106
   order: '472051'
   created_at: '2017-09-20'
@@ -2414,3 +2404,13 @@
   - Scratch
   - Mindstorms
   - ラズベリーパイ
+- id: 61
+  order: '473502'
+  created_at: '2012-07-09'
+  name: 南風原
+  prefecture_id: 47
+  logo: "/img/dojos/haebaru.jpg"
+  url: https://coderdojo-haebaru.doorkeeper.jp/
+  description: 沖縄県島尻郡南風原町で不定期開催
+  tags:
+  - Scratch
