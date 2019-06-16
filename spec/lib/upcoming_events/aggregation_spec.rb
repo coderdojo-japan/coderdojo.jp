@@ -25,12 +25,22 @@ RSpec.describe UpcomingEvents::Aggregation do
       expect{ UpcomingEvents::Aggregation.new(provider: 'doorkeeper').run }.to change{ UpcomingEvent.count }.from(0).to(2)
     end
 
-    it '昨日分までは削除' do
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '1111', event_title: 'title 1111', event_at: "#{Time.zone.today - 3.days} 13:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '2222', event_title: 'title 2222', event_at: "#{Time.zone.today - 2.days} 14:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '3333', event_title: 'title 3333', event_at: "#{Time.zone.today - 1.days} 15:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '4444', event_title: 'title 4444', event_at: "#{Time.zone.today - 2.days} 10:00:00".in_time_zone)
-      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '5555', event_title: 'title 5555', event_at: "#{Time.zone.today - 1.days} 11:00:00".in_time_zone)
+    it '1 ヶ月前までは削除' do
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '1111', event_title: 'title 1111',
+                              event_at: "#{Time.zone.today - 1.month - 2.day} 13:00:00".in_time_zone,
+                              event_end_at: "#{Time.zone.today - 1.month - 2.day} 15:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '2222', event_title: 'title 2222',
+                              event_at: "#{Time.zone.today - 1.month - 1.day} 14:00:00".in_time_zone,
+                              event_end_at: "#{Time.zone.today - 1.month - 1.day} 16:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es1.id, service_name: 'connpass', event_id: '3333', event_title: 'title 3333',
+                              event_at: "#{Time.zone.today - 1.month} 15:00:00".in_time_zone,
+                              event_end_at: "#{Time.zone.today - 1.month} 17:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '4444', event_title: 'title 4444',
+                              event_at: "#{Time.zone.today - 1.month - 1.day} 10:00:00".in_time_zone,
+                              event_end_at: "#{Time.zone.today - 1.month - 1.day} 12:00:00".in_time_zone)
+      create(:upcoming_event, dojo_event_service_id: @es2.id, service_name: 'doorkeeper', event_id: '5555', event_title: 'title 5555',
+                              event_at: "#{Time.zone.today - 1.month} 11:00:00".in_time_zone,
+                              event_end_at: "#{Time.zone.today - 1.month} 13:00:00".in_time_zone)
 
       expect{ UpcomingEvents::Aggregation.new({}).run }.to change{ UpcomingEvent.count }.from(5).to(3)
     end

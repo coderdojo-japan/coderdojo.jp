@@ -7,6 +7,7 @@ FactoryBot.define do
     event_title  { 'event title' }
     event_url    { 'http:/www.aaa.com/events/1224' }
     event_at     { '2019-05-01 10:00'.in_time_zone }
+    event_end_at { '2019-05-01 13:00'.in_time_zone }
     participants { 1 }
   end
 end

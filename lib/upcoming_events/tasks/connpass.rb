@@ -18,6 +18,7 @@ module UpcomingEvents
                              event_title:  e['title'],
                              event_url:    e['event_url'],
                              event_at:     Time.zone.parse(e['started_at']),
+                             event_end_at: Time.zone.parse(e['ended_at']),
                              participants: e['accepted'])
             end
           end
