@@ -657,3 +657,9 @@
   name: facebook
   group_id: 2253119258233423
   url: https://www.facebook.com/DojoPcc/
+
+# 那覇
+#- dojo_id: 216
+#  name: doorkeeper
+#  group_id: # TODO: イベントが公開されたらAPIを叩いてGroup IDを取得する
+#  url: https://coderdojo-naha.doorkeeper.jp/
