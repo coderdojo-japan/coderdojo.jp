@@ -45,6 +45,8 @@ namespace :dojos do
     end
   end
 
+  Rake::Task['dojos:update_db_by_yaml'].enhance(['postgresql:reset_pk_sequence'])
+
   # search order number for google spred sheets
   # 'yamlファイルのnameからorderの値を生成します'
   def search_order_number(pre_city)

@@ -5,6 +5,7 @@ RSpec.describe 'dojos' do
   before(:all) do
     @rake = Rake::Application.new
     Rake.application = @rake
+    Rake.application.rake_require 'tasks/postgresql'
     Rake.application.rake_require 'tasks/dojos'
     Rake::Task.define_task(:environment)
   end
