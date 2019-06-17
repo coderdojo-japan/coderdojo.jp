@@ -236,10 +236,11 @@
   group_id: 124249914820641
   url: https://www.facebook.com/pg/coderdojo.kofu/events/
 # 〜2018/02
-# - dojo_id: 87
-#   name: facebook
-#   group_id: 1634610396557264
-#   url: https://www.facebook.com/pg/CoderDojoAzumino/events/
+- dojo_id: 87
+  name: facebook
+  group_id: 1634610396557264
+  url: https://www.facebook.com/pg/CoderDojoAzumino/events/
+# 2018/03〜
 - dojo_id: 87
   name: doorkeeper
   group_id: 9603

@@ -5,3709 +5,3713 @@
 #   evented_at: 2018/01/10 13:00
 
 ---
-- dojo_id:	3
-  event_id:	282108105299062
-  participants:	3
-  evented_at:	2014/05/11 10:30
-- dojo_id:	3
-  event_id:	353745168142589
-  participants:	0
-  evented_at:	2014/12/14 10:30
-- dojo_id:	3
-  event_id:	1530374827222875
-  participants:	0
-  evented_at:	2015/01/18 10:30
-- dojo_id:	3
-  event_id:	372713003102001
-  participants:	1
-  evented_at:	2017/02/19 10:30
-- dojo_id:	3
-  event_id:	150816585583479
-  participants:	2
-  evented_at:	2018/03/18 10:30
-- dojo_id:	4
-  event_id:	1757237131215704
-  participants:	1
-  evented_at:	2016/06/11 10:00
-- dojo_id:	4
-  event_id:	119048968522740
-  participants:	0
-  evented_at:	2016/07/02 10:00
-- dojo_id:	4
-  event_id:	1746189202335808
-  participants:	0
-  evented_at:	2016/08/07 11:00
-- dojo_id:	4
-  event_id:	181486208951819
-  participants:	0
-  evented_at:	2016/09/25 10:00
-- dojo_id:	4
-  event_id:	1881321212097917
-  participants:	0
-  evented_at:	2016/12/10 10:00
-- dojo_id:	4
-  event_id:	1891691577771763
-  participants:	1
-  evented_at:	2017/05/05 10:00
-- dojo_id:	4
-  event_id:	303246250118327
-  participants:	0
-  evented_at:	2017/05/21 10:30
-- dojo_id:	4
-  event_id:	302013413581629
-  participants:	0
-  evented_at:	2017/06/25 11:00
-- dojo_id:	4
-  event_id:	241018079727395
-  participants:	0
-  evented_at:	2017/07/08 10:00
-- dojo_id:	4
-  event_id:	148473709163989
-  participants:	0
-  evented_at:	2018/02/24 09:30
-- dojo_id:	5
-  event_id:	1171099252903599
-  participants:	0
-  evented_at:	2015/12/13 14:00
-- dojo_id:	5
-  event_id:	1557926797763111
-  participants:	0
-  evented_at:	2015/12/26 14:00
-- dojo_id:	5
-  event_id:	1512221699079341
-  participants:	0
-  evented_at:	2016/01/23 14:00
-- dojo_id:	5
-  event_id:	498146990356226
-  participants:	0
-  evented_at:	2016/02/13 14:00
-- dojo_id:	5
-  event_id:	188778604828989
-  participants:	0
-  evented_at:	2016/03/12 14:00
-- dojo_id:	5
-  event_id:	820811628047941
-  participants:	0
-  evented_at:	2016/03/26 14:00
-- dojo_id:	5
-  event_id:	1692360861004252
-  participants:	0
-  evented_at:	2016/04/09 14:00
-- dojo_id:	5
-  event_id:	1533584503614881
-  participants:	0
-  evented_at:	2016/04/23 14:00
-- dojo_id:	5
-  event_id:	494974650706782
-  participants:	0
-  evented_at:	2016/05/14 14:00
-- dojo_id:	5
-  event_id:	1116700368376164
-  participants:	0
-  evented_at:	2016/06/04 14:00
-- dojo_id:	5
-  event_id:	956999747732571
-  participants:	1
-  evented_at:	2016/06/11 14:00
-- dojo_id:	5
-  event_id:	302400943435295
-  participants:	0
-  evented_at:	2016/06/25 14:00
-- dojo_id:	5
-  event_id:	1663244653999377
-  participants:	0
-  evented_at:	2016/07/02 14:00
-- dojo_id:	5
-  event_id:	258094944568424
-  participants:	1
-  evented_at:	2016/07/09 14:00
-- dojo_id:	5
-  event_id:	1766744170229980
-  participants:	0
-  evented_at:	2016/07/23 14:00
-- dojo_id:	5
-  event_id:	174092466336404
-  participants:	0
-  evented_at:	2016/08/20 14:00
-- dojo_id:	5
-  event_id:	1720386574891008
-  participants:	1
-  evented_at:	2016/09/10 14:00
-- dojo_id:	5
-  event_id:	187197261696650
-  participants:	0
-  evented_at:	2016/09/24 14:00
-- dojo_id:	5
-  event_id:	1789674837968427
-  participants:	0
-  evented_at:	2016/10/22 14:00
-- dojo_id:	5
-  event_id:	1693975974262684
-  participants:	0
-  evented_at:	2016/10/29 14:00
-- dojo_id:	5
-  event_id:	1793832934233578
-  participants:	0
-  evented_at:	2016/11/13 14:00
-- dojo_id:	5
-  event_id:	1834027256881811
-  participants:	0
-  evented_at:	2016/12/17 14:00
-- dojo_id:	5
-  event_id:	438753553182214
-  participants:	0
-  evented_at:	2017/01/14 14:00
-- dojo_id:	5
-  event_id:	539186879561574
-  participants:	0
-  evented_at:	2017/01/21 14:00
-- dojo_id:	5
-  event_id:	131958623980926
-  participants:	0
-  evented_at:	2017/01/28 14:00
-- dojo_id:	5
-  event_id:	223515651387781
-  participants:	0
-  evented_at:	2017/02/11 14:00
-- dojo_id:	5
-  event_id:	1318398228217252
-  participants:	0
-  evented_at:	2017/02/18 14:00
-- dojo_id:	5
-  event_id:	590202864504338
-  participants:	0
-  evented_at:	2017/02/25 14:00
-- dojo_id:	5
-  event_id:	270217776750031
-  participants:	0
-  evented_at:	2017/03/11 14:00
-- dojo_id:	5
-  event_id:	195896647574544
-  participants:	0
-  evented_at:	2017/03/25 14:00
-- dojo_id:	5
-  event_id:	1649016632071190
-  participants:	0
-  evented_at:	2017/04/01 14:00
-- dojo_id:	5
-  event_id:	721977007927269
-  participants:	0
-  evented_at:	2017/04/08 14:00
-- dojo_id:	5
-  event_id:	1659617667668592
-  participants:	0
-  evented_at:	2017/04/15 14:00
-- dojo_id:	5
-  event_id:	126863751190700
-  participants:	0
-  evented_at:	2017/04/22 14:00
-- dojo_id:	5
-  event_id:	1725401830821408
-  participants:	0
-  evented_at:	2017/05/13 14:00
-- dojo_id:	5
-  event_id:	1289656044482761
-  participants:	0
-  evented_at:	2017/05/20 14:15
-- dojo_id:	5
-  event_id:	129083887721883
-  participants:	0
-  evented_at:	2017/09/09 14:00
-- dojo_id:	5
-  event_id:	347524078993580
-  participants:	0
-  evented_at:	2017/10/21 14:00
-- dojo_id:	5
-  event_id:	123872501619621
-  participants:	0
-  evented_at:	2017/10/28 14:00
-- dojo_id:	5
-  event_id:	1895185627476782
-  participants:	1
-  evented_at:	2017/11/11 14:00
-- dojo_id:	5
-  event_id:	736924319833054
-  participants:	0
-  evented_at:	2017/11/18 14:00
-- dojo_id:	5
-  event_id:	1756960431277467
-  participants:	0
-  evented_at:	2017/12/02 14:00
-- dojo_id:	5
-  event_id:	151699935555574
-  participants:	0
-  evented_at:	2017/12/16 14:00
-- dojo_id:	5
-  event_id:	2005225829734235
-  participants:	0
-  evented_at:	2018/01/13 14:00
-- dojo_id:	5
-  event_id:	183250232265305
-  participants:	0
-  evented_at:	2018/01/27 14:00
-- dojo_id:	5
-  event_id:	196951614382814
-  participants:	0
-  evented_at:	2018/02/10 14:00
-- dojo_id:	6
-  event_id:	1865222010431191
-  participants:	3
-  evented_at:	2017/01/06 17:00
-- dojo_id:	6
-  event_id:	1835128183401486
-  participants:	2
-  evented_at:	2017/01/13 17:00
-- dojo_id:	6
-  event_id:	1186702064771423
-  participants:	1
-  evented_at:	2017/01/27 17:00
-- dojo_id:	6
-  event_id:	2220411321516306
-  participants:	1
-  evented_at:	2017/02/03 17:00
-- dojo_id:	6
-  event_id:	673119719541358
-  participants:	0
-  evented_at:	2017/02/10 17:00
-- dojo_id:	6
-  event_id:	1319860011370057
-  participants:	1
-  evented_at:	2017/02/17 17:00
-- dojo_id:	6
-  event_id:	1914344322171172
-  participants:	0
-  evented_at:	2017/03/03 17:00
-- dojo_id:	6
-  event_id:	328152047581745
-  participants:	0
-  evented_at:	2017/03/17 17:00
-- dojo_id:	6
-  event_id:	441119272896573
-  participants:	1
-  evented_at:	2017/04/07 17:00
-- dojo_id:	6
-  event_id:	1678767912425005
-  participants:	0
-  evented_at:	2017/04/14 17:00
-- dojo_id:	6
-  event_id:	110597989442050
-  participants:	0
-  evented_at:	2017/04/21 17:00
-- dojo_id:	6
-  event_id:	775565175953056
-  participants:	0
-  evented_at:	2017/04/28 17:00
-- dojo_id:	6
-  event_id:	256117138188618
-  participants:	1
-  evented_at:	2017/05/05 17:00
-- dojo_id:	6
-  event_id:	1671608046478458
-  participants:	0
-  evented_at:	2017/05/12 17:00
-- dojo_id:	6
-  event_id:	1793727127609957
-  participants:	1
-  evented_at:	2017/05/19 17:00
-- dojo_id:	6
-  event_id:	172587459932263
-  participants:	2
-  evented_at:	2017/05/26 17:00
-- dojo_id:	6
-  event_id:	1910196469202571
-  participants:	1
-  evented_at:	2017/06/02 17:00
-- dojo_id:	6
-  event_id:	284209385361031
-  participants:	2
-  evented_at:	2017/06/09 17:00
-- dojo_id:	6
-  event_id:	1462196830507754
-  participants:	2
-  evented_at:	2017/06/23 17:00
-- dojo_id:	6
-  event_id:	1565733450126925
-  participants:	1
-  evented_at:	2017/07/07 17:00
-- dojo_id:	6
-  event_id:	333327940436009
-  participants:	2
-  evented_at:	2017/07/14 17:00
-- dojo_id:	6
-  event_id:	321058928337957
-  participants:	2
-  evented_at:	2017/07/21 17:00
-- dojo_id:	6
-  event_id:	447929425573361
-  participants:	2
-  evented_at:	2017/07/28 17:00
-- dojo_id:	6
-  event_id:	1403226543124771
-  participants:	3
-  evented_at:	2017/08/01 17:00
-- dojo_id:	6
-  event_id:	1545984842127997
-  participants:	2
-  evented_at:	2017/08/11 17:00
-- dojo_id:	6
-  event_id:	1805113596185085
-  participants:	2
-  evented_at:	2017/08/18 17:00
-- dojo_id:	6
-  event_id:	1347827038647907
-  participants:	1
-  evented_at:	2017/08/24 17:00
-- dojo_id:	6
-  event_id:	259141664598096
-  participants:	2
-  evented_at:	2017/09/15 17:00
-- dojo_id:	6
-  event_id:	1380091808754113
-  participants:	2
-  evented_at:	2017/09/29 17:00
-- dojo_id:	6
-  event_id:	135224037117400
-  participants:	2
-  evented_at:	2017/10/13 17:00
-- dojo_id:	6
-  event_id:	179663472583153
-  participants:	2
-  evented_at:	2017/11/10 17:00
-- dojo_id:	6
-  event_id:	2202353063123589
-  participants:	1
-  evented_at:	2017/11/15 17:00
-- dojo_id:	6
-  event_id:	329777157494414
-  participants:	1
-  evented_at:	2017/11/17 17:00
-- dojo_id:	6
-  event_id:	129727111033945
-  participants:	2
-  evented_at:	2017/12/01 17:00
-- dojo_id:	6
-  event_id:	867615536743076
-  participants:	1
-  evented_at:	2017/12/08 17:00
-- dojo_id:	6
-  event_id:	1593897837298042
-  participants:	3
-  evented_at:	2017/12/22 17:00
-- dojo_id:	6
-  event_id:	1175989775864742
-  participants:	3
-  evented_at:	2018/01/05 15:30
-- dojo_id:	6
-  event_id:	167288794001704
-  participants:	2
-  evented_at:	2018/02/02 17:00
-- dojo_id:	6
-  event_id:	524960831224354
-  participants:	2
-  evented_at:	2018/02/09 17:00
-- dojo_id:	6
-  event_id:	2267404493486449
-  participants:	3
-  evented_at:	2018/02/16 17:00
-- dojo_id:	6
-  event_id:	183374182408242
-  participants:	2
-  evented_at:	2018/02/23 17:00
-- dojo_id:	6
-  event_id:	172697436685312
-  participants:	3
-  evented_at:	2018/03/16 17:00
-- dojo_id:	6
-  event_id:	171305233503888
-  participants:	1
-  evented_at:	2018/03/23 17:00
-- dojo_id:	6
-  event_id:	1786938384945904
-  participants:	2
-  evented_at:	2018/03/30 17:00
-- dojo_id:	6
-  event_id:	1761012693963604
-  participants:	3
-  evented_at:	2018/04/06 17:00
-- dojo_id:	10
-  event_id:	387222941352275
-  participants:	3
-  evented_at:	2012/11/25 13:30
-- dojo_id:	10
-  event_id:	474380795948040
-  participants:	3
-  evented_at:	2012/12/08 13:30
-- dojo_id:	10
-  event_id:	460957330612462
-  participants:	5
-  evented_at:	2012/12/23 13:30
-- dojo_id:	10
-  event_id:	547500775277674
-  participants:	1
-  evented_at:	2013/01/12 13:30
-- dojo_id:	10
-  event_id:	317327435044191
-  participants:	5
-  evented_at:	2013/01/27 13:30
-- dojo_id:	10
-  event_id:	436296756449051
-  participants:	3
-  evented_at:	2013/02/10 13:30
-- dojo_id:	10
-  event_id:	406024999479070
-  participants:	4
-  evented_at:	2013/02/24 13:30
-- dojo_id:	10
-  event_id:	495215710535984
-  participants:	5
-  evented_at:	2013/03/10 12:30
-- dojo_id:	10
-  event_id:	157475031075900
-  participants:	2
-  evented_at:	2013/03/24 11:00
-- dojo_id:	10
-  event_id:	129312803922507
-  participants:	3
-  evented_at:	2013/04/14 13:30
-- dojo_id:	10
-  event_id:	137493943105085
-  participants:	3
-  evented_at:	2013/04/28 13:30
-- dojo_id:	10
-  event_id:	519582071438308
-  participants:	2
-  evented_at:	2013/05/12 13:30
-- dojo_id:	10
-  event_id:	496149750450773
-  participants:	1
-  evented_at:	2013/05/19 10:00
-- dojo_id:	10
-  event_id:	165887810239120
-  participants:	3
-  evented_at:	2013/05/26 13:30
-- dojo_id:	10
-  event_id:	192716037550262
-  participants:	1
-  evented_at:	2013/06/09 13:30
-- dojo_id:	10
-  event_id:	388116921294157
-  participants:	3
-  evented_at:	2013/06/23 13:30
-- dojo_id:	10
-  event_id:	555957101107252
-  participants:	2
-  evented_at:	2013/07/15 13:30
-- dojo_id:	10
-  event_id:	435558176559071
-  participants:	3
-  evented_at:	2013/08/25 13:30
-- dojo_id:	10
-  event_id:	197019427135765
-  participants:	1
-  evented_at:	2013/09/08 13:30
-- dojo_id:	10
-  event_id:	523092061111703
-  participants:	1
-  evented_at:	2013/09/22 13:30
-- dojo_id:	10
-  event_id:	522773974477219
-  participants:	3
-  evented_at:	2013/10/13 10:00
-- dojo_id:	10
-  event_id:	530836623651464
-  participants:	2
-  evented_at:	2013/10/27 13:30
-- dojo_id:	10
-  event_id:	411668398962112
-  participants:	2
-  evented_at:	2013/11/10 13:30
-- dojo_id:	10
-  event_id:	178989245626134
-  participants:	3
-  evented_at:	2013/11/24 13:30
-- dojo_id:	10
-  event_id:	185088465018561
-  participants:	1
-  evented_at:	2013/12/08 13:30
-- dojo_id:	10
-  event_id:	433667180095660
-  participants:	3
-  evented_at:	2013/12/22 11:30
-- dojo_id:	10
-  event_id:	1410339189206442
-  participants:	3
-  evented_at:	2014/01/12 13:30
-- dojo_id:	10
-  event_id:	1480485965511910
-  participants:	1
-  evented_at:	2014/01/26 13:30
-- dojo_id:	10
-  event_id:	491834767593373
-  participants:	3
-  evented_at:	2014/02/09 13:30
-- dojo_id:	10
-  event_id:	510342592418431
-  participants:	3
-  evented_at:	2014/02/23 13:30
-- dojo_id:	10
-  event_id:	806550906025724
-  participants:	3
-  evented_at:	2014/03/09 13:30
-- dojo_id:	10
-  event_id:	530637247054051
-  participants:	3
-  evented_at:	2014/03/23 13:30
-- dojo_id:	10
-  event_id:	1495301040691776
-  participants:	5
-  evented_at:	2014/04/13 13:30
-- dojo_id:	10
-  event_id:	1480929242120115
-  participants:	3
-  evented_at:	2014/04/27 13:30
-- dojo_id:	10
-  event_id:	1396619187289651
-  participants:	6
-  evented_at:	2014/05/11 13:30
-- dojo_id:	10
-  event_id:	676444225755848
-  participants:	4
-  evented_at:	2014/05/25 13:30
-- dojo_id:	10
-  event_id:	301087016724069
-  participants:	3
-  evented_at:	2014/06/08 13:30
-- dojo_id:	10
-  event_id:	420831038058499
-  participants:	2
-  evented_at:	2014/06/22 13:30
-- dojo_id:	10
-  event_id:	711063425622311
-  participants:	2
-  evented_at:	2014/07/13 13:30
-- dojo_id:	10
-  event_id:	691873910847628
-  participants:	4
-  evented_at:	2014/07/27 13:30
-- dojo_id:	10
-  event_id:	323460614489498
-  participants:	1
-  evented_at:	2014/08/05 10:30
-- dojo_id:	10
-  event_id:	515923575174445
-  participants:	2
-  evented_at:	2014/08/10 13:30
-- dojo_id:	10
-  event_id:	1509266672619992
-  participants:	1
-  evented_at:	2014/08/19 10:30
-- dojo_id:	10
-  event_id:	768809653176992
-  participants:	5
-  evented_at:	2014/08/24 11:30
-- dojo_id:	10
-  event_id:	720403118031981
-  participants:	2
-  evented_at:	2014/09/14 13:30
-- dojo_id:	10
-  event_id:	324108981094224
-  participants:	2
-  evented_at:	2014/09/28 13:30
-- dojo_id:	10
-  event_id:	789495784448365
-  participants:	1
-  evented_at:	2014/10/12 13:30
-- dojo_id:	10
-  event_id:	459313990873281
-  participants:	2
-  evented_at:	2014/10/26 13:30
-- dojo_id:	10
-  event_id:	474795299329725
-  participants:	3
-  evented_at:	2014/11/09 13:30
-- dojo_id:	10
-  event_id:	1521287018127875
-  participants:	2
-  evented_at:	2014/11/23 13:30
-- dojo_id:	10
-  event_id:	556240847853978
-  participants:	2
-  evented_at:	2014/12/14 13:30
-- dojo_id:	10
-  event_id:	605029892936757
-  participants:	3
-  evented_at:	2014/12/27 13:30
-- dojo_id:	10
-  event_id:	1583332955229557
-  participants:	2
-  evented_at:	2015/01/10 13:30
-- dojo_id:	10
-  event_id:	778092195591556
-  participants:	2
-  evented_at:	2015/01/24 13:30
-- dojo_id:	10
-  event_id:	885831464802757
-  participants:	3
-  evented_at:	2015/02/08 13:30
-- dojo_id:	10
-  event_id:	845694292157043
-  participants:	3
-  evented_at:	2015/02/22 13:30
-- dojo_id:	10
-  event_id:	1378052885846552
-  participants:	1
-  evented_at:	2015/03/08 13:30
-- dojo_id:	10
-  event_id:	918355254864596
-  participants:	2
-  evented_at:	2015/03/22 13:30
-- dojo_id:	10
-  event_id:	367612376758593
-  participants:	4
-  evented_at:	2015/04/12 13:00
-- dojo_id:	10
-  event_id:	1563014733962465
-  participants:	3
-  evented_at:	2015/04/26 13:30
-- dojo_id:	10
-  event_id:	836897046347269
-  participants:	2
-  evented_at:	2015/05/10 13:30
-- dojo_id:	10
-  event_id:	1434993483473068
-  participants:	5
-  evented_at:	2015/05/24 13:30
-- dojo_id:	10
-  event_id:	1452246185086003
-  participants:	5
-  evented_at:	2015/06/14 13:30
-- dojo_id:	10
-  event_id:	1439402629700090
-  participants:	3
-  evented_at:	2015/06/28 13:30
-- dojo_id:	10
-  event_id:	132842030381939
-  participants:	3
-  evented_at:	2015/07/12 13:30
-- dojo_id:	10
-  event_id:	1621314688156385
-  participants:	5
-  evented_at:	2015/08/23 13:30
-- dojo_id:	10
-  event_id:	727539214035508
-  participants:	6
-  evented_at:	2015/09/13 13:30
-- dojo_id:	10
-  event_id:	1058221144196864
-  participants:	5
-  evented_at:	2015/09/27 13:30
-- dojo_id:	10
-  event_id:	1165767173451155
-  participants:	5
-  evented_at:	2015/10/11 13:30
-- dojo_id:	10
-  event_id:	1651046741846350
-  participants:	4
-  evented_at:	2015/10/25 13:30
-- dojo_id:	10
-  event_id:	901095119975444
-  participants:	2
-  evented_at:	2015/11/08 13:30
-- dojo_id:	10
-  event_id:	726033614163764
-  participants:	4
-  evented_at:	2015/11/22 13:30
-- dojo_id:	10
-  event_id:	1166114033417488
-  participants:	5
-  evented_at:	2015/12/13 13:30
-- dojo_id:	10
-  event_id:	1179778075384442
-  participants:	3
-  evented_at:	2015/12/27 13:30
-- dojo_id:	10
-  event_id:	649570675145409
-  participants:	5
-  evented_at:	2016/01/10 13:30
-- dojo_id:	10
-  event_id:	203657463316039
-  participants:	3
-  evented_at:	2016/01/24 13:30
-- dojo_id:	10
-  event_id:	1694605567490260
-  participants:	5
-  evented_at:	2016/02/14 13:30
-- dojo_id:	10
-  event_id:	1034418876596925
-  participants:	4
-  evented_at:	2016/02/28 13:30
-- dojo_id:	10
-  event_id:	1680289192188035
-  participants:	4
-  evented_at:	2016/03/13 13:30
-- dojo_id:	10
-  event_id:	449135715293431
-  participants:	2
-  evented_at:	2016/04/10 13:00
-- dojo_id:	10
-  event_id:	1114439031910626
-  participants:	4
-  evented_at:	2016/04/24 13:00
-- dojo_id:	10
-  event_id:	1693726570891661
-  participants:	3
-  evented_at:	2016/05/08 13:00
-- dojo_id:	10
-  event_id:	1123133621086185
-  participants:	5
-  evented_at:	2016/05/22 13:00
-- dojo_id:	10
-  event_id:	1624718334517797
-  participants:	2
-  evented_at:	2016/06/12 13:00
-- dojo_id:	10
-  event_id:	259959577694156
-  participants:	3
-  evented_at:	2016/06/26 13:00
-- dojo_id:	10
-  event_id:	267487330277960
-  participants:	3
-  evented_at:	2016/07/10 13:00
-- dojo_id:	10
-  event_id:	1219364568098505
-  participants:	2
-  evented_at:	2016/07/24 13:30
-- dojo_id:	10
-  event_id:	269219393456934
-  participants:	3
-  evented_at:	2016/08/21 13:30
-- dojo_id:	10
-  event_id:	989800641146429
-  participants:	4
-  evented_at:	2016/09/11 13:30
-- dojo_id:	10
-  event_id:	712200735595383
-  participants:	2
-  evented_at:	2016/09/25 13:30
-- dojo_id:	10
-  event_id:	247530932311141
-  participants:	4
-  evented_at:	2016/10/09 13:30
-- dojo_id:	10
-  event_id:	1659287021029300
-  participants:	2
-  evented_at:	2016/10/23 13:30
-- dojo_id:	10
-  event_id:	1786922758263203
-  participants:	2
-  evented_at:	2016/11/13 13:30
-- dojo_id:	10
-  event_id:	1236591519694303
-  participants:	2
-  evented_at:	2016/11/27 13:30
-- dojo_id:	10
-  event_id:	1190577344365720
-  participants:	2
-  evented_at:	2016/12/11 13:30
-- dojo_id:	10
-  event_id:	226004744504973
-  participants:	2
-  evented_at:	2016/12/25 13:30
-- dojo_id:	10
-  event_id:	856990271119968
-  participants:	2
-  evented_at:	2017/01/08 13:30
-- dojo_id:	10
-  event_id:	1423106601055588
-  participants:	3
-  evented_at:	2017/01/22 13:30
-- dojo_id:	10
-  event_id:	210084426063034
-  participants:	1
-  evented_at:	2017/02/12 13:30
-- dojo_id:	10
-  event_id:	683399645166218
-  participants:	3
-  evented_at:	2017/02/26 13:30
-- dojo_id:	10
-  event_id:	1913408145560248
-  participants:	2
-  evented_at:	2017/03/12 13:00
-- dojo_id:	10
-  event_id:	299907927093748
-  participants:	1
-  evented_at:	2017/03/19 13:00
-- dojo_id:	10
-  event_id:	632671366919252
-  participants:	3
-  evented_at:	2017/04/09 13:00
-- dojo_id:	10
-  event_id:	1461531937225622
-  participants:	5
-  evented_at:	2017/04/23 13:00
-- dojo_id:	10
-  event_id:	117362455487038
-  participants:	3
-  evented_at:	2017/05/14 13:00
-- dojo_id:	10
-  event_id:	116209682291968
-  participants:	2
-  evented_at:	2017/05/28 13:00
-- dojo_id:	10
-  event_id:	131082930793323
-  participants:	2
-  evented_at:	2017/06/11 13:00
-- dojo_id:	10
-  event_id:	250019768814919
-  participants:	2
-  evented_at:	2017/06/25 13:00
-- dojo_id:	10
-  event_id:	129216334331361
-  participants:	4
-  evented_at:	2017/07/09 13:00
-- dojo_id:	10
-  event_id:	1604932919580532
-  participants:	2
-  evented_at:	2017/07/23 13:00
-- dojo_id:	10
-  event_id:	1918533718388767
-  participants:	2
-  evented_at:	2017/08/06 10:30
-- dojo_id:	10
-  event_id:	1899478400376817
-  participants:	1
-  evented_at:	2017/08/20 13:00
-- dojo_id:	10
-  event_id:	114064885935789
-  participants:	3
-  evented_at:	2017/08/27 13:00
-- dojo_id:	10
-  event_id:	169676856935118
-  participants:	3
-  evented_at:	2017/09/10 13:00
-- dojo_id:	10
-  event_id:	133105093976863
-  participants:	4
-  evented_at:	2017/09/24 13:00
-- dojo_id:	10
-  event_id:	475878226129738
-  participants:	2
-  evented_at:	2017/10/08 13:00
-- dojo_id:	10
-  event_id:	118903968803859
-  participants:	2
-  evented_at:	2017/10/22 13:00
-- dojo_id:	10
-  event_id:	125500978166443
-  participants:	1
-  evented_at:	2017/10/29 13:00
-- dojo_id:	10
-  event_id:	322152118253771
-  participants:	2
-  evented_at:	2017/11/12 13:00
-- dojo_id:	10
-  event_id:	194086334486873
-  participants:	4
-  evented_at:	2017/11/26 13:00
-- dojo_id:	10
-  event_id:	153476485381376
-  participants:	2
-  evented_at:	2017/12/10 13:00
-- dojo_id:	10
-  event_id:	302142596972883
-  participants:	3
-  evented_at:	2017/12/24 11:00
-- dojo_id:	10
-  event_id:	1401338526642061
-  participants:	2
-  evented_at:	2018/01/14 13:00
-- dojo_id:	10
-  event_id:	300627327125410
-  participants:	3
-  evented_at:	2018/01/28 13:00
-- dojo_id:	10
-  event_id:	148010932661858
-  participants:	1
-  evented_at:	2018/02/11 13:00
-- dojo_id:	10
-  event_id:	407544226342971
-  participants:	1
-  evented_at:	2018/02/25 13:00
-- dojo_id:	10
-  event_id:	278816485986251
-  participants:	3
-  evented_at:	2018/03/11 13:00
-- dojo_id:	10
-  event_id:	159876244716378
-  participants:	3
-  evented_at:	2018/03/25 13:00
-- dojo_id:	10
-  event_id:	137873407049859
-  participants:	1
-  evented_at:	2018/04/08 13:00
-- dojo_id:	12
-  event_id:	1828285290731865
-  participants:	5
-  evented_at:	2016/01/24 15:00
-- dojo_id:	12
-  event_id:	537818193065271
-  participants:	1
-  evented_at:	2016/02/28 14:00
-- dojo_id:	12
-  event_id:	205725903124156
-  participants:	7
-  evented_at:	2016/04/03 14:00
-- dojo_id:	12
-  event_id:	1018023028283290
-  participants:	2
-  evented_at:	2016/05/22 14:30
-- dojo_id:	12
-  event_id:	589106227927359
-  participants:	3
-  evented_at:	2016/06/05 14:30
-- dojo_id:	12
-  event_id:	156093691461017
-  participants:	3
-  evented_at:	2016/07/03 14:30
-- dojo_id:	12
-  event_id:	1222854881107185
-  participants:	4
-  evented_at:	2016/08/07 14:30
-- dojo_id:	12
-  event_id:	1065320513578389
-  participants:	5
-  evented_at:	2016/09/04 14:30
-- dojo_id:	12
-  event_id:	253647818365241
-  participants:	4
-  evented_at:	2016/10/02 14:30
-- dojo_id:	12
-  event_id:	767406556732147
-  participants:	3
-  evented_at:	2016/11/06 14:30
-- dojo_id:	12
-  event_id:	1135408459891053
-  participants:	2
-  evented_at:	2016/12/04 14:30
-- dojo_id:	12
-  event_id:	213726759087564
-  participants:	4
-  evented_at:	2017/01/08 14:30
-- dojo_id:	12
-  event_id:	175267052956522
-  participants:	7
-  evented_at:	2017/02/05 14:30
-- dojo_id:	12
-  event_id:	1849901971938058
-  participants:	5
-  evented_at:	2017/03/05 14:30
-- dojo_id:	12
-  event_id:	1871675549739941
-  participants:	9
-  evented_at:	2017/04/02 14:30
-- dojo_id:	12
-  event_id:	629044113958443
-  participants:	15
-  evented_at:	2017/05/07 13:00
-- dojo_id:	12
-  event_id:	224127238081353
-  participants:	5
-  evented_at:	2017/06/04 14:30
-- dojo_id:	12
-  event_id:	242441312912233
-  participants:	5
-  evented_at:	2017/07/02 14:30
-- dojo_id:	12
-  event_id:	144011012848067
-  participants:	5
-  evented_at:	2017/08/06 14:30
-- dojo_id:	12
-  event_id:	129212117708698
-  participants:	3
-  evented_at:	2017/09/03 14:30
-- dojo_id:	12
-  event_id:	475617552809978
-  participants:	6
-  evented_at:	2017/10/01 14:30
-- dojo_id:	12
-  event_id:	151021858984695
-  participants:	5
-  evented_at:	2017/12/03 14:30
-- dojo_id:	12
-  event_id:	389754194798445
-  participants:	8
-  evented_at:	2018/01/07 14:30
-- dojo_id:	12
-  event_id:	562343147452561
-  participants:	14
-  evented_at:	2018/02/04 14:30
-- dojo_id:	12
-  event_id:	152129088806762
-  participants:	8
-  evented_at:	2018/03/04 14:30
-- dojo_id:	12
-  event_id:	783435361841855
-  participants:	7
-  evented_at:	2018/04/01 14:30
-- dojo_id:	17
-  event_id:	821389741243846
-  participants:	8
-  evented_at:	2012/04/09 06:00
-- dojo_id:	17
-  event_id:	885407574852901
-  participants:	9
-  evented_at:	2012/04/23 06:00
-- dojo_id:	17
-  event_id:	400821783272249
-  participants:	7
-  evented_at:	2012/05/03 15:00
-- dojo_id:	17
-  event_id:	911741208869868
-  participants:	0
-  evented_at:	2012/05/07 06:00
-- dojo_id:	17
-  event_id:	220876751361894
-  participants:	9
-  evented_at:	2012/05/13 13:30
-- dojo_id:	17
-  event_id:	451166431576211
-  participants:	5
-  evented_at:	2012/05/20 13:30
-- dojo_id:	17
-  event_id:	297106010375516
-  participants:	10
-  evented_at:	2012/06/03 13:30
-- dojo_id:	17
-  event_id:	248367788603101
-  participants:	2
-  evented_at:	2012/06/10 13:30
-- dojo_id:	17
-  event_id:	441986985820384
-  participants:	8
-  evented_at:	2012/06/17 13:30
-- dojo_id:	17
-  event_id:	401418479911133
-  participants:	4
-  evented_at:	2012/06/24 13:30
-- dojo_id:	17
-  event_id:	320675631350195
-  participants:	10
-  evented_at:	2012/07/01 13:30
-- dojo_id:	17
-  event_id:	427732400600971
-  participants:	2
-  evented_at:	2012/07/08 13:30
-- dojo_id:	17
-  event_id:	328649567217983
-  participants:	4
-  evented_at:	2012/07/15 13:30
-- dojo_id:	17
-  event_id:	388084371250309
-  participants:	5
-  evented_at:	2012/07/22 13:30
-- dojo_id:	17
-  event_id:	383029328429599
-  participants:	3
-  evented_at:	2012/07/29 13:30
-- dojo_id:	17
-  event_id:	181278075338706
-  participants:	4
-  evented_at:	2012/08/02 14:00
-- dojo_id:	17
-  event_id:	401260306596948
-  participants:	3
-  evented_at:	2012/08/05 13:30
-- dojo_id:	17
-  event_id:	387240681340077
-  participants:	0
-  evented_at:	2012/08/12 13:30
-- dojo_id:	17
-  event_id:	145264478944839
-  participants:	1
-  evented_at:	2012/08/19 13:30
-- dojo_id:	17
-  event_id:	425829517468915
-  participants:	3
-  evented_at:	2012/08/20 10:00
-- dojo_id:	17
-  event_id:	267976233315712
-  participants:	2
-  evented_at:	2012/08/23 14:00
-- dojo_id:	17
-  event_id:	339568092796015
-  participants:	2
-  evented_at:	2012/08/26 13:30
-- dojo_id:	17
-  event_id:	441919112517661
-  participants:	1
-  evented_at:	2012/09/02 13:30
-- dojo_id:	17
-  event_id:	447034412007709
-  participants:	6
-  evented_at:	2012/09/07 11:00
-- dojo_id:	17
-  event_id:	512707318755082
-  participants:	4
-  evented_at:	2012/09/09 13:30
-- dojo_id:	17
-  event_id:	499264423436200
-  participants:	1
-  evented_at:	2012/09/16 13:30
-- dojo_id:	17
-  event_id:	349312771824298
-  participants:	3
-  evented_at:	2012/09/23 13:30
-- dojo_id:	17
-  event_id:	231939576932115
-  participants:	8
-  evented_at:	2012/09/25 16:30
-- dojo_id:	17
-  event_id:	149731271835836
-  participants:	1
-  evented_at:	2012/10/07 13:30
-- dojo_id:	17
-  event_id:	505896092754165
-  participants:	1
-  evented_at:	2012/10/14 13:30
-- dojo_id:	17
-  event_id:	320914654674130
-  participants:	2
-  evented_at:	2012/10/21 13:30
-- dojo_id:	17
-  event_id:	498403780171970
-  participants:	9
-  evented_at:	2012/10/23 16:30
-- dojo_id:	17
-  event_id:	290060781098314
-  participants:	1
-  evented_at:	2012/10/28 13:30
-- dojo_id:	17
-  event_id:	518820548129508
-  participants:	0
-  evented_at:	2012/11/04 12:30
-- dojo_id:	17
-  event_id:	359455117482723
-  participants:	2
-  evented_at:	2012/11/11 13:30
-- dojo_id:	17
-  event_id:	221401197990324
-  participants:	7
-  evented_at:	2012/11/18 13:30
-- dojo_id:	17
-  event_id:	443252355731724
-  participants:	3
-  evented_at:	2012/11/25 13:30
-- dojo_id:	17
-  event_id:	195670910569432
-  participants:	2
-  evented_at:	2012/11/27 16:30
-- dojo_id:	17
-  event_id:	378852342199581
-  participants:	1
-  evented_at:	2012/12/02 13:30
-- dojo_id:	17
-  event_id:	442915859090631
-  participants:	1
-  evented_at:	2012/12/09 13:30
-- dojo_id:	17
-  event_id:	295348880581520
-  participants:	1
-  evented_at:	2012/12/16 13:30
-- dojo_id:	17
-  event_id:	202471706556197
-  participants:	8
-  evented_at:	2012/12/25 14:00
-- dojo_id:	17
-  event_id:	385147541575545
-  participants:	4
-  evented_at:	2013/01/06 13:30
-- dojo_id:	17
-  event_id:	537036279640881
-  participants:	6
-  evented_at:	2013/01/13 13:30
-- dojo_id:	17
-  event_id:	133872306775931
-  participants:	2
-  evented_at:	2013/01/20 13:30
-- dojo_id:	17
-  event_id:	198516473606175
-  participants:	6
-  evented_at:	2013/01/23 18:00
-- dojo_id:	17
-  event_id:	493685984004133
-  participants:	2
-  evented_at:	2013/01/27 13:30
-- dojo_id:	17
-  event_id:	559780477382162
-  participants:	6
-  evented_at:	2013/01/29 16:30
-- dojo_id:	17
-  event_id:	435689096504263
-  participants:	2
-  evented_at:	2013/02/03 13:30
-- dojo_id:	17
-  event_id:	228080403994856
-  participants:	2
-  evented_at:	2013/02/10 13:30
-- dojo_id:	17
-  event_id:	587805427913639
-  participants:	0
-  evented_at:	2013/02/17 13:30
-- dojo_id:	17
-  event_id:	247075835428324
-  participants:	3
-  evented_at:	2013/02/24 13:30
-- dojo_id:	17
-  event_id:	331545596946160
-  participants:	7
-  evented_at:	2013/03/03 13:30
-- dojo_id:	17
-  event_id:	572974186049013
-  participants:	3
-  evented_at:	2013/03/10 12:30
-- dojo_id:	17
-  event_id:	555074321179978
-  participants:	5
-  evented_at:	2013/03/26 16:30
-- dojo_id:	17
-  event_id:	577593432251302
-  participants:	16
-  evented_at:	2013/04/14 13:30
-- dojo_id:	17
-  event_id:	138594829658359
-  participants:	2
-  evented_at:	2013/04/28 13:30
-- dojo_id:	17
-  event_id:	549196798458706
-  participants:	2
-  evented_at:	2013/05/05 13:30
-- dojo_id:	17
-  event_id:	102729936597708
-  participants:	1
-  evented_at:	2013/05/12 13:30
-- dojo_id:	17
-  event_id:	112669068903404
-  participants:	1
-  evented_at:	2013/05/19 13:30
-- dojo_id:	17
-  event_id:	319735438154802
-  participants:	5
-  evented_at:	2013/05/26 13:30
-- dojo_id:	17
-  event_id:	158212667678867
-  participants:	6
-  evented_at:	2013/06/02 13:30
-- dojo_id:	17
-  event_id:	120849734779076
-  participants:	6
-  evented_at:	2013/06/09 13:30
-- dojo_id:	17
-  event_id:	572226119464360
-  participants:	3
-  evented_at:	2013/06/16 13:30
-- dojo_id:	17
-  event_id:	379342145511359
-  participants:	3
-  evented_at:	2013/06/23 13:30
-- dojo_id:	17
-  event_id:	375167555926357
-  participants:	2
-  evented_at:	2013/06/30 13:30
-- dojo_id:	17
-  event_id:	428461207251942
-  participants:	1
-  evented_at:	2013/07/07 13:30
-- dojo_id:	17
-  event_id:	143090652559213
-  participants:	0
-  evented_at:	2013/07/14 13:30
-- dojo_id:	17
-  event_id:	591697607520318
-  participants:	3
-  evented_at:	2013/07/21 13:30
-- dojo_id:	17
-  event_id:	284371955035831
-  participants:	1
-  evented_at:	2013/07/28 13:30
-- dojo_id:	17
-  event_id:	192452610923512
-  participants:	0
-  evented_at:	2013/08/04 13:30
-- dojo_id:	17
-  event_id:	640609509283967
-  participants:	1
-  evented_at:	2013/08/11 13:30
-- dojo_id:	17
-  event_id:	133338660209930
-  participants:	1
-  evented_at:	2013/08/18 13:30
-- dojo_id:	17
-  event_id:	563587930373885
-  participants:	1
-  evented_at:	2013/08/25 13:30
-- dojo_id:	17
-  event_id:	555700637822190
-  participants:	2
-  evented_at:	2013/09/01 13:30
-- dojo_id:	17
-  event_id:	419417618169630
-  participants:	1
-  evented_at:	2013/09/08 13:30
-- dojo_id:	17
-  event_id:	412638012180291
-  participants:	0
-  evented_at:	2013/09/15 13:30
-- dojo_id:	17
-  event_id:	162011553991884
-  participants:	1
-  evented_at:	2013/09/22 13:30
-- dojo_id:	17
-  event_id:	629197213781751
-  participants:	4
-  evented_at:	2013/09/29 13:30
-- dojo_id:	17
-  event_id:	576085072452189
-  participants:	0
-  evented_at:	2013/10/06 13:30
-- dojo_id:	17
-  event_id:	570833359643686
-  participants:	3
-  evented_at:	2013/10/13 13:30
-- dojo_id:	17
-  event_id:	661773863834631
-  participants:	2
-  evented_at:	2013/10/20 13:30
-- dojo_id:	17
-  event_id:	1423182211241581
-  participants:	0
-  evented_at:	2013/10/27 13:30
-- dojo_id:	17
-  event_id:	193007274218062
-  participants:	1
-  evented_at:	2013/11/03 13:30
-- dojo_id:	17
-  event_id:	306652776142074
-  participants:	2
-  evented_at:	2013/11/10 13:30
-- dojo_id:	17
-  event_id:	461103734005066
-  participants:	1
-  evented_at:	2013/11/17 13:30
-- dojo_id:	17
-  event_id:	532550280165455
-  participants:	2
-  evented_at:	2013/11/24 13:30
-- dojo_id:	17
-  event_id:	772584819424855
-  participants:	1
-  evented_at:	2013/12/01 13:30
-- dojo_id:	17
-  event_id:	194850810703103
-  participants:	0
-  evented_at:	2013/12/08 13:30
-- dojo_id:	17
-  event_id:	570054993066011
-  participants:	4
-  evented_at:	2013/12/15 13:30
-- dojo_id:	17
-  event_id:	262635600551489
-  participants:	5
-  evented_at:	2013/12/22 13:30
-- dojo_id:	17
-  event_id:	628967207162410
-  participants:	5
-  evented_at:	2013/12/29 13:30
-- dojo_id:	17
-  event_id:	1425394531029064
-  participants:	5
-  evented_at:	2014/01/12 13:30
-- dojo_id:	17
-  event_id:	1431713057062786
-  participants:	2
-  evented_at:	2014/01/19 13:30
-- dojo_id:	17
-  event_id:	542616715833895
-  participants:	1
-  evented_at:	2014/01/26 13:30
-- dojo_id:	17
-  event_id:	595131050560161
-  participants:	2
-  evented_at:	2014/02/02 13:30
-- dojo_id:	17
-  event_id:	642244299175865
-  participants:	1
-  evented_at:	2014/02/09 13:30
-- dojo_id:	17
-  event_id:	202028066672092
-  participants:	8
-  evented_at:	2014/02/16 13:30
-- dojo_id:	17
-  event_id:	585337804888407
-  participants:	3
-  evented_at:	2014/02/23 13:30
-- dojo_id:	17
-  event_id:	621457051235891
-  participants:	6
-  evented_at:	2014/03/02 13:30
-- dojo_id:	17
-  event_id:	210558612467367
-  participants:	1
-  evented_at:	2014/03/09 13:30
-- dojo_id:	17
-  event_id:	593491224065316
-  participants:	0
-  evented_at:	2014/03/16 13:30
-- dojo_id:	17
-  event_id:	519956148120465
-  participants:	3
-  evented_at:	2014/03/23 13:30
-- dojo_id:	17
-  event_id:	1413277898919529
-  participants:	1
-  evented_at:	2014/03/30 13:30
-- dojo_id:	17
-  event_id:	1436538903256711
-  participants:	7
-  evented_at:	2014/04/06 13:30
-- dojo_id:	17
-  event_id:	491648167602419
-  participants:	6
-  evented_at:	2014/04/13 13:30
-- dojo_id:	17
-  event_id:	1419320344992090
-  participants:	10
-  evented_at:	2014/04/27 13:30
-- dojo_id:	17
-  event_id:	1416576431939972
-  participants:	9
-  evented_at:	2014/04/27 14:30
-- dojo_id:	17
-  event_id:	264065467108315
-  participants:	4
-  evented_at:	2014/05/04 13:30
-- dojo_id:	17
-  event_id:	276953462471652
-  participants:	6
-  evented_at:	2014/05/18 13:30
-- dojo_id:	17
-  event_id:	224007091128952
-  participants:	6
-  evented_at:	2014/05/25 13:30
-- dojo_id:	17
-  event_id:	1397872763834906
-  participants:	6
-  evented_at:	2014/06/08 13:30
-- dojo_id:	17
-  event_id:	524910510969372
-  participants:	3
-  evented_at:	2014/06/15 13:30
-- dojo_id:	17
-  event_id:	544578602331721
-  participants:	1
-  evented_at:	2014/06/22 13:30
-- dojo_id:	17
-  event_id:	489739947826291
-  participants:	3
-  evented_at:	2014/06/29 13:30
-- dojo_id:	17
-  event_id:	333779863440091
-  participants:	3
-  evented_at:	2014/07/06 13:30
-- dojo_id:	17
-  event_id:	730135533711476
-  participants:	5
-  evented_at:	2014/07/13 13:30
-- dojo_id:	17
-  event_id:	1453660694892057
-  participants:	2
-  evented_at:	2014/07/20 13:30
-- dojo_id:	17
-  event_id:	333939453424137
-  participants:	2
-  evented_at:	2014/07/27 13:30
-- dojo_id:	17
-  event_id:	716115168423692
-  participants:	7
-  evented_at:	2014/08/03 13:30
-- dojo_id:	17
-  event_id:	1432437460378363
-  participants:	11
-  evented_at:	2014/08/17 13:30
-- dojo_id:	17
-  event_id:	526933090769212
-  participants:	6
-  evented_at:	2014/08/24 13:30
-- dojo_id:	17
-  event_id:	738140736231608
-  participants:	5
-  evented_at:	2014/08/31 13:30
-- dojo_id:	17
-  event_id:	299282053586888
-  participants:	4
-  evented_at:	2014/09/07 13:30
-- dojo_id:	17
-  event_id:	662108723866654
-  participants:	3
-  evented_at:	2014/09/14 13:30
-- dojo_id:	17
-  event_id:	858938277450455
-  participants:	4
-  evented_at:	2014/09/28 13:30
-- dojo_id:	17
-  event_id:	274490669414032
-  participants:	7
-  evented_at:	2014/10/05 13:30
-- dojo_id:	17
-  event_id:	1476646092611329
-  participants:	2
-  evented_at:	2014/10/12 13:30
-- dojo_id:	17
-  event_id:	1497665787153603
-  participants:	5
-  evented_at:	2014/10/19 13:30
-- dojo_id:	17
-  event_id:	565540416907291
-  participants:	5
-  evented_at:	2014/10/26 13:30
-- dojo_id:	17
-  event_id:	284035738470575
-  participants:	4
-  evented_at:	2014/11/09 13:30
-- dojo_id:	17
-  event_id:	740494432665416
-  participants:	5
-  evented_at:	2014/11/16 13:30
-- dojo_id:	17
-  event_id:	204660959724798
-  participants:	1
-  evented_at:	2014/11/23 13:30
-- dojo_id:	17
-  event_id:	878173398861095
-  participants:	6
-  evented_at:	2014/11/30 13:30
-- dojo_id:	17
-  event_id:	545481868887131
-  participants:	4
-  evented_at:	2014/12/07 13:30
-- dojo_id:	17
-  event_id:	735075753236009
-  participants:	0
-  evented_at:	2014/12/14 13:30
-- dojo_id:	17
-  event_id:	867155989982365
-  participants:	2
-  evented_at:	2014/12/21 13:30
-- dojo_id:	17
-  event_id:	666389723477512
-  participants:	4
-  evented_at:	2014/12/28 13:30
-- dojo_id:	17
-  event_id:	628868473902864
-  participants:	6
-  evented_at:	2015/01/11 13:30
-- dojo_id:	17
-  event_id:	390226287808265
-  participants:	5
-  evented_at:	2015/01/18 13:30
-- dojo_id:	17
-  event_id:	1497810437148724
-  participants:	2
-  evented_at:	2015/01/25 13:30
-- dojo_id:	17
-  event_id:	1531315700468878
-  participants:	0
-  evented_at:	2015/02/01 13:30
-- dojo_id:	17
-  event_id:	1415377058756631
-  participants:	0
-  evented_at:	2015/02/08 13:30
-- dojo_id:	17
-  event_id:	783174435084812
-  participants:	3
-  evented_at:	2015/02/15 13:30
-- dojo_id:	17
-  event_id:	508186529319341
-  participants:	3
-  evented_at:	2015/02/22 13:30
-- dojo_id:	17
-  event_id:	385701244944357
-  participants:	11
-  evented_at:	2015/03/01 17:00
-- dojo_id:	17
-  event_id:	816754921700118
-  participants:	8
-  evented_at:	2015/03/08 13:30
-- dojo_id:	17
-  event_id:	1560302130892023
-  participants:	6
-  evented_at:	2015/03/15 13:30
-- dojo_id:	17
-  event_id:	317301985060377
-  participants:	4
-  evented_at:	2015/03/22 13:30
-- dojo_id:	17
-  event_id:	1580116488923681
-  participants:	6
-  evented_at:	2015/04/05 13:30
-- dojo_id:	17
-  event_id:	425897324250375
-  participants:	8
-  evented_at:	2015/04/12 13:30
-- dojo_id:	17
-  event_id:	349654685235712
-  participants:	15
-  evented_at:	2015/04/19 13:30
-- dojo_id:	17
-  event_id:	1417816288523140
-  participants:	10
-  evented_at:	2015/04/26 13:30
-- dojo_id:	17
-  event_id:	825796870830137
-  participants:	10
-  evented_at:	2015/05/03 13:30
-- dojo_id:	17
-  event_id:	684006508411784
-  participants:	9
-  evented_at:	2015/05/10 13:30
-- dojo_id:	17
-  event_id:	1572012033053588
-  participants:	13
-  evented_at:	2015/05/17 13:30
-- dojo_id:	17
-  event_id:	643896685709833
-  participants:	14
-  evented_at:	2015/05/24 13:30
-- dojo_id:	17
-  event_id:	859775207393178
-  participants:	4
-  evented_at:	2015/05/31 13:30
-- dojo_id:	17
-  event_id:	585803384856498
-  participants:	10
-  evented_at:	2015/06/07 13:30
-- dojo_id:	17
-  event_id:	1123073927709956
-  participants:	8
-  evented_at:	2015/06/14 13:30
-- dojo_id:	17
-  event_id:	718742111569352
-  participants:	9
-  evented_at:	2015/06/21 13:30
-- dojo_id:	17
-  event_id:	1460316354267766
-  participants:	5
-  evented_at:	2015/06/28 13:30
-- dojo_id:	17
-  event_id:	1673629406190122
-  participants:	12
-  evented_at:	2015/07/12 13:30
-- dojo_id:	17
-  event_id:	105626839778857
-  participants:	8
-  evented_at:	2015/07/19 13:30
-- dojo_id:	17
-  event_id:	362604067282957
-  participants:	10
-  evented_at:	2015/07/26 13:30
-- dojo_id:	17
-  event_id:	484930081664911
-  participants:	7
-  evented_at:	2015/08/02 13:30
-- dojo_id:	17
-  event_id:	1626367347603133
-  participants:	6
-  evented_at:	2015/08/09 13:30
-- dojo_id:	17
-  event_id:	1017096114989069
-  participants:	2
-  evented_at:	2015/08/16 13:30
-- dojo_id:	17
-  event_id:	1677950339092440
-  participants:	3
-  evented_at:	2015/08/23 13:30
-- dojo_id:	17
-  event_id:	107928096222341
-  participants:	7
-  evented_at:	2015/08/30 13:30
-- dojo_id:	17
-  event_id:	579293372208774
-  participants:	1
-  evented_at:	2015/09/06 13:30
-- dojo_id:	17
-  event_id:	124279717919807
-  participants:	7
-  evented_at:	2015/09/13 13:30
-- dojo_id:	17
-  event_id:	667082323393180
-  participants:	6
-  evented_at:	2015/09/27 13:30
-- dojo_id:	17
-  event_id:	721688321298056
-  participants:	6
-  evented_at:	2015/10/04 13:30
-- dojo_id:	17
-  event_id:	888920401157680
-  participants:	2
-  evented_at:	2015/10/11 13:30
-- dojo_id:	17
-  event_id:	718191794948715
-  participants:	4
-  evented_at:	2015/10/18 13:30
-- dojo_id:	17
-  event_id:	618806391555538
-  participants:	7
-  evented_at:	2015/10/25 13:30
-- dojo_id:	17
-  event_id:	748731728565699
-  participants:	3
-  evented_at:	2015/11/01 13:30
-- dojo_id:	17
-  event_id:	1641054982831108
-  participants:	11
-  evented_at:	2015/11/08 13:30
-- dojo_id:	17
-  event_id:	517507981735680
-  participants:	4
-  evented_at:	2015/11/15 13:30
-- dojo_id:	17
-  event_id:	1078988905446437
-  participants:	7
-  evented_at:	2015/11/22 13:30
-- dojo_id:	17
-  event_id:	1663828673834251
-  participants:	4
-  evented_at:	2015/11/29 13:30
-- dojo_id:	17
-  event_id:	408049536032408
-  participants:	6
-  evented_at:	2015/12/06 13:30
-- dojo_id:	17
-  event_id:	1669434036606112
-  participants:	9
-  evented_at:	2015/12/13 13:30
-- dojo_id:	17
-  event_id:	897218663647756
-  participants:	9
-  evented_at:	2015/12/20 13:30
-- dojo_id:	17
-  event_id:	971293169612704
-  participants:	5
-  evented_at:	2016/01/10 13:30
-- dojo_id:	17
-  event_id:	969027449810413
-  participants:	11
-  evented_at:	2016/01/17 13:30
-- dojo_id:	17
-  event_id:	1505417546421759
-  participants:	12
-  evented_at:	2016/01/24 13:30
-- dojo_id:	17
-  event_id:	206018856399031
-  participants:	6
-  evented_at:	2016/01/31 13:30
-- dojo_id:	17
-  event_id:	782586355218681
-  participants:	7
-  evented_at:	2016/02/07 13:30
-- dojo_id:	17
-  event_id:	1693738917536683
-  participants:	5
-  evented_at:	2016/02/14 13:30
-- dojo_id:	17
-  event_id:	1632886776962250
-  participants:	8
-  evented_at:	2016/02/21 13:30
-- dojo_id:	17
-  event_id:	1657423141205697
-  participants:	10
-  evented_at:	2016/02/28 13:30
-- dojo_id:	17
-  event_id:	547510588751776
-  participants:	6
-  evented_at:	2016/03/06 13:30
-- dojo_id:	17
-  event_id:	768464759951657
-  participants:	4
-  evented_at:	2016/03/13 13:30
-- dojo_id:	17
-  event_id:	224057764604696
-  participants:	6
-  evented_at:	2016/03/20 13:30
-- dojo_id:	17
-  event_id:	118858135168365
-  participants:	9
-  evented_at:	2016/03/27 13:30
-- dojo_id:	23
-  event_id:	103290186540764
-  participants:	7
-  evented_at:	2013/05/05 12:30
-- dojo_id:	23
-  event_id:	516320411748461
-  participants:	3
-  evented_at:	2013/06/16 09:30
-- dojo_id:	23
-  event_id:	527464033969017
-  participants:	11
-  evented_at:	2013/07/28 09:30
-- dojo_id:	23
-  event_id:	583748445001932
-  participants:	7
-  evented_at:	2013/08/11 15:30
-- dojo_id:	23
-  event_id:	627667690587617
-  participants:	0
-  evented_at:	2013/09/28 15:30
-- dojo_id:	23
-  event_id:	208484312663268
-  participants:	4
-  evented_at:	2013/10/27 09:30
-- dojo_id:	23
-  event_id:	666815220009326
-  participants:	6
-  evented_at:	2013/11/10 13:30
-- dojo_id:	23
-  event_id:	621948531174819
-  participants:	8
-  evented_at:	2014/01/06 17:00
-- dojo_id:	23
-  event_id:	250530631773939
-  participants:	6
-  evented_at:	2014/02/09 12:30
-- dojo_id:	23
-  event_id:	654825751230969
-  participants:	12
-  evented_at:	2014/03/16 10:00
-- dojo_id:	23
-  event_id:	655251744511626
-  participants:	18
-  evented_at:	2014/04/13 10:00
-- dojo_id:	23
-  event_id:	303513319800857
-  participants:	15
-  evented_at:	2014/04/27 10:00
-- dojo_id:	23
-  event_id:	604081123022307
-  participants:	23
-  evented_at:	2014/05/11 10:00
-- dojo_id:	23
-  event_id:	751487264872351
-  participants:	10
-  evented_at:	2014/05/25 10:00
-- dojo_id:	23
-  event_id:	750301705000190
-  participants:	19
-  evented_at:	2014/06/08 10:00
-- dojo_id:	23
-  event_id:	1465360797039639
-  participants:	12
-  evented_at:	2014/06/22 00:00
-- dojo_id:	23
-  event_id:	1439226449673202
-  participants:	14
-  evented_at:	2014/07/13 10:00
-- dojo_id:	23
-  event_id:	674300869305788
-  participants:	9
-  evented_at:	2014/07/20 10:00
-- dojo_id:	23
-  event_id:	672645419488786
-  participants:	12
-  evented_at:	2014/08/10 10:00
-- dojo_id:	23
-  event_id:	524085527725347
-  participants:	11
-  evented_at:	2014/08/24 10:00
-- dojo_id:	23
-  event_id:	722412194472743
-  participants:	8
-  evented_at:	2014/09/14 10:00
-- dojo_id:	23
-  event_id:	295384703995615
-  participants:	8
-  evented_at:	2014/09/28 10:00
-- dojo_id:	23
-  event_id:	1550584305160845
-  participants:	14
-  evented_at:	2014/10/12 10:00
-- dojo_id:	23
-  event_id:	1494970717421720
-  participants:	11
-  evented_at:	2014/10/26 10:00
-- dojo_id:	23
-  event_id:	1626348754259349
-  participants:	16
-  evented_at:	2014/11/23 10:00
-- dojo_id:	23
-  event_id:	823621267696911
-  participants:	12
-  evented_at:	2014/12/14 10:00
-- dojo_id:	23
-  event_id:	566284313505914
-  participants:	13
-  evented_at:	2014/12/21 10:00
-- dojo_id:	23
-  event_id:	904786876207369
-  participants:	32
-  evented_at:	2014/12/21 13:30
-- dojo_id:	23
-  event_id:	759142180790151
-  participants:	16
-  evented_at:	2015/01/11 10:00
-- dojo_id:	23
-  event_id:	811470735559020
-  participants:	9
-  evented_at:	2015/01/25 10:00
-- dojo_id:	23
-  event_id:	1524579421165096
-  participants:	9
-  evented_at:	2015/02/08 10:00
-- dojo_id:	23
-  event_id:	724670037651540
-  participants:	10
-  evented_at:	2015/02/22 10:00
-- dojo_id:	23
-  event_id:	1567375243504018
-  participants:	13
-  evented_at:	2015/03/08 10:00
-- dojo_id:	23
-  event_id:	344265662431394
-  participants:	5
-  evented_at:	2015/03/22 10:00
-- dojo_id:	23
-  event_id:	287796171344083
-  participants:	14
-  evented_at:	2015/04/12 10:00
-- dojo_id:	23
-  event_id:	779661998796329
-  participants:	9
-  evented_at:	2015/04/26 10:00
-- dojo_id:	23
-  event_id:	1141865289172462
-  participants:	7
-  evented_at:	2015/05/10 10:00
-- dojo_id:	23
-  event_id:	1630077870541159
-  participants:	5
-  evented_at:	2015/05/24 10:00
-- dojo_id:	23
-  event_id:	1450938871874077
-  participants:	6
-  evented_at:	2015/06/07 10:00
-- dojo_id:	23
-  event_id:	466343503516354
-  participants:	25
-  evented_at:	2015/06/07 13:00
-- dojo_id:	23
-  event_id:	458278364332814
-  participants:	3
-  evented_at:	2015/06/28 10:00
-- dojo_id:	23
-  event_id:	396557873872559
-  participants:	10
-  evented_at:	2015/07/12 10:00
-- dojo_id:	23
-  event_id:	117372435274151
-  participants:	11
-  evented_at:	2015/08/09 10:00
-- dojo_id:	23
-  event_id:	702778606519638
-  participants:	7
-  evented_at:	2015/08/23 10:00
-- dojo_id:	23
-  event_id:	823187224469069
-  participants:	5
-  evented_at:	2015/09/06 10:00
-- dojo_id:	23
-  event_id:	549173035234139
-  participants:	8
-  evented_at:	2015/09/27 10:00
-- dojo_id:	23
-  event_id:	106000663089360
-  participants:	7
-  evented_at:	2015/10/11 10:00
-- dojo_id:	23
-  event_id:	558691364285029
-  participants:	5
-  evented_at:	2015/10/25 10:00
-- dojo_id:	23
-  event_id:	1517828718539435
-  participants:	4
-  evented_at:	2015/11/08 10:00
-- dojo_id:	23
-  event_id:	413036525562103
-  participants:	6
-  evented_at:	2015/11/22 10:00
-- dojo_id:	23
-  event_id:	189662614707738
-  participants:	1
-  evented_at:	2015/12/13 10:00
-- dojo_id:	23
-  event_id:	1492598894403645
-  participants:	28
-  evented_at:	2015/12/20 13:00
-- dojo_id:	23
-  event_id:	118105618560620
-  participants:	7
-  evented_at:	2016/01/10 10:00
-- dojo_id:	23
-  event_id:	916111845104425
-  participants:	16
-  evented_at:	2016/01/23 15:00
-- dojo_id:	23
-  event_id:	959032037485628
-  participants:	6
-  evented_at:	2016/01/24 10:00
-- dojo_id:	23
-  event_id:	174244442948444
-  participants:	8
-  evented_at:	2016/02/14 10:00
-- dojo_id:	23
-  event_id:	568132340016450
-  participants:	10
-  evented_at:	2016/02/28 10:00
-- dojo_id:	23
-  event_id:	465748546969668
-  participants:	3
-  evented_at:	2016/03/13 10:00
-- dojo_id:	23
-  event_id:	448813898651666
-  participants:	3
-  evented_at:	2016/03/27 10:00
-- dojo_id:	23
-  event_id:	1673659636233931
-  participants:	3
-  evented_at:	2016/04/10 10:00
-- dojo_id:	23
-  event_id:	615791388573354
-  participants:	3
-  evented_at:	2016/04/24 10:00
-- dojo_id:	23
-  event_id:	211431405907235
-  participants:	0
-  evented_at:	2016/05/08 10:00
-- dojo_id:	23
-  event_id:	1735118196731084
-  participants:	3
-  evented_at:	2016/05/22 10:00
-- dojo_id:	23
-  event_id:	1179011022137927
-  participants:	4
-  evented_at:	2016/06/12 10:00
-- dojo_id:	23
-  event_id:	1063496053717987
-  participants:	6
-  evented_at:	2016/06/26 10:00
-- dojo_id:	23
-  event_id:	1715442028709775
-  participants:	3
-  evented_at:	2016/07/10 10:00
-- dojo_id:	23
-  event_id:	626657640833777
-  participants:	2
-  evented_at:	2016/07/24 10:00
-- dojo_id:	23
-  event_id:	604464829731010
-  participants:	2
-  evented_at:	2016/08/14 10:00
-- dojo_id:	23
-  event_id:	168441176914947
-  participants:	2
-  evented_at:	2016/08/28 10:00
-- dojo_id:	23
-  event_id:	1789590407919537
-  participants:	0
-  evented_at:	2016/09/11 10:00
-- dojo_id:	23
-  event_id:	615652505283847
-  participants:	1
-  evented_at:	2016/09/25 10:00
-- dojo_id:	23
-  event_id:	168993833549292
-  participants:	10
-  evented_at:	2016/10/09 10:00
-- dojo_id:	23
-  event_id:	1287824911228182
-  participants:	3
-  evented_at:	2016/10/23 10:00
-- dojo_id:	23
-  event_id:	1144784428934172
-  participants:	0
-  evented_at:	2016/11/13 10:00
-- dojo_id:	23
-  event_id:	326500861041141
-  participants:	8
-  evented_at:	2016/11/20 13:30
-- dojo_id:	23
-  event_id:	1147695405307701
-  participants:	0
-  evented_at:	2016/11/27 10:00
-- dojo_id:	23
-  event_id:	377454425932108
-  participants:	2
-  evented_at:	2016/12/11 10:00
-- dojo_id:	23
-  event_id:	1827743084178019
-  participants:	0
-  evented_at:	2016/12/24 13:00
-- dojo_id:	23
-  event_id:	244671985966717
-  participants:	1
-  evented_at:	2017/01/08 10:00
-- dojo_id:	23
-  event_id:	197839364021817
-  participants:	2
-  evented_at:	2017/01/22 10:00
-- dojo_id:	23
-  event_id:	1838840436397544
-  participants:	2
-  evented_at:	2017/02/12 10:00
-- dojo_id:	23
-  event_id:	1795795394019899
-  participants:	1
-  evented_at:	2017/02/26 10:00
-- dojo_id:	23
-  event_id:	804355699718756
-  participants:	3
-  evented_at:	2017/03/12 10:00
-- dojo_id:	23
-  event_id:	1158923237568348
-  participants:	0
-  evented_at:	2017/03/26 10:00
-- dojo_id:	23
-  event_id:	1557080511041234
-  participants:	4
-  evented_at:	2017/04/09 10:00
-- dojo_id:	23
-  event_id:	444576759216497
-  participants:	4
-  evented_at:	2017/04/23 10:00
-- dojo_id:	23
-  event_id:	1873804766201009
-  participants:	0
-  evented_at:	2017/05/28 10:00
-- dojo_id:	23
-  event_id:	1943209299293367
-  participants:	3
-  evented_at:	2017/06/25 10:00
-- dojo_id:	23
-  event_id:	1919004731704304
-  participants:	4
-  evented_at:	2017/07/09 10:00
-- dojo_id:	23
-  event_id:	160970747808504
-  participants:	1
-  evented_at:	2017/08/13 10:00
-- dojo_id:	23
-  event_id:	524356697910009
-  participants:	2
-  evented_at:	2017/10/08 10:00
-- dojo_id:	23
-  event_id:	306430946505614
-  participants:	0
-  evented_at:	2017/10/22 10:00
-- dojo_id:	23
-  event_id:	1743156252657212
-  participants:	4
-  evented_at:	2017/11/12 10:00
-- dojo_id:	23
-  event_id:	540411676294995
-  participants:	6
-  evented_at:	2017/11/26 10:00
-- dojo_id:	23
-  event_id:	157284741548776
-  participants:	1
-  evented_at:	2017/11/26 13:00
-- dojo_id:	23
-  event_id:	300652750425708
-  participants:	5
-  evented_at:	2017/12/10 10:00
-- dojo_id:	23
-  event_id:	373393903123201
-  participants:	17
-  evented_at:	2017/12/23 13:00
-- dojo_id:	23
-  event_id:	137664376903336
-  participants:	5
-  evented_at:	2018/01/14 10:00
-- dojo_id:	23
-  event_id:	1971971993054687
-  participants:	1
-  evented_at:	2018/01/28 10:00
-- dojo_id:	23
-  event_id:	147985562676008
-  participants:	5
-  evented_at:	2018/02/11 10:00
-- dojo_id:	23
-  event_id:	153010755325828
-  participants:	4
-  evented_at:	2018/02/25 10:00
-- dojo_id:	23
-  event_id:	163000957694563
-  participants:	8
-  evented_at:	2018/03/11 10:00
-- dojo_id:	23
-  event_id:	186369815290042
-  participants:	23
-  evented_at:	2018/03/11 12:30
-- dojo_id:	23
-  event_id:	564212403962359
-  participants:	8
-  evented_at:	2018/03/25 10:00
-- dojo_id:	23
-  event_id:	158506298311799
-  participants:	3
-  evented_at:	2018/04/08 10:00
-- dojo_id:	25
-  event_id:	203892496742038
-  participants:	8
-  evented_at:	2017/02/12 10:00
-- dojo_id:	25
-  event_id:	164119730772102
-  participants:	7
-  evented_at:	2017/04/09 10:00
-- dojo_id:	25
-  event_id:	844271289071901
-  participants:	11
-  evented_at:	2017/09/10 10:00
-- dojo_id:	25
-  event_id:	486595658404510
-  participants:	0
-  evented_at:	2018/04/07 11:00
-- dojo_id:	25
-  event_id:	671547846348798
-  participants:	10
-  evented_at:	2018/04/08 10:00
-- dojo_id:	38
-  event_id:	535775739879149
-  participants:	4
-  evented_at:	2014/08/10 13:00
-- dojo_id:	38
-  event_id:	586510488208717
-  participants:	0
-  evented_at:	2016/11/13 14:30
-- dojo_id:	38
-  event_id:	389504828057168
-  participants:	0
-  evented_at:	2016/12/11 14:00
-- dojo_id:	38
-  event_id:	364798360565674
-  participants:	2
-  evented_at:	2017/02/12 14:00
-- dojo_id:	38
-  event_id:	131481260869469
-  participants:	3
-  evented_at:	2017/12/09 14:00
-- dojo_id:	43
-  event_id:	177633219045718
-  participants:	3
-  evented_at:	2012/12/23 14:00
-- dojo_id:	43
-  event_id:	469279509775286
-  participants:	5
-  evented_at:	2013/01/27 14:00
-- dojo_id:	43
-  event_id:	135019763332907
-  participants:	3
-  evented_at:	2013/02/24 14:00
-- dojo_id:	43
-  event_id:	343500612437440
-  participants:	3
-  evented_at:	2013/03/30 14:00
-- dojo_id:	43
-  event_id:	448608555223684
-  participants:	2
-  evented_at:	2013/05/19 14:00
-- dojo_id:	43
-  event_id:	676912922326008
-  participants:	2
-  evented_at:	2013/06/09 14:00
-- dojo_id:	43
-  event_id:	472240189528264
-  participants:	3
-  evented_at:	2013/07/21 14:00
-- dojo_id:	43
-  event_id:	491679127584140
-  participants:	2
-  evented_at:	2013/08/25 14:00
-- dojo_id:	43
-  event_id:	215457615287146
-  participants:	1
-  evented_at:	2013/09/22 14:00
-- dojo_id:	43
-  event_id:	144767342668362
-  participants:	2
-  evented_at:	2016/12/18 16:00
-- dojo_id:	45
-  event_id:	288508894852944
-  participants:	1
-  evented_at:	2016/09/25 13:30
-- dojo_id:	45
-  event_id:	1685452261773227
-  participants:	0
-  evented_at:	2016/10/22 13:30
-- dojo_id:	45
-  event_id:	1757649761152038
-  participants:	1
-  evented_at:	2016/11/23 12:30
-- dojo_id:	45
-  event_id:	1266577886747092
-  participants:	7
-  evented_at:	2016/12/18 13:30
-- dojo_id:	45
-  event_id:	1833316803546522
-  participants:	3
-  evented_at:	2017/01/29 13:30
-- dojo_id:	45
-  event_id:	372081606511228
-  participants:	0
-  evented_at:	2017/03/19 13:30
-- dojo_id:	45
-  event_id:	250596982069190
-  participants:	4
-  evented_at:	2017/04/23 13:30
-- dojo_id:	45
-  event_id:	275676182890630
-  participants:	4
-  evented_at:	2017/05/21 13:30
-- dojo_id:	45
-  event_id:	1362161870546257
-  participants:	3
-  evented_at:	2017/06/18 13:30
-- dojo_id:	45
-  event_id:	305753146532604
-  participants:	3
-  evented_at:	2017/07/16 13:30
-- dojo_id:	45
-  event_id:	309693049441616
-  participants:	3
-  evented_at:	2017/08/20 13:30
-- dojo_id:	45
-  event_id:	344975755959170
-  participants:	0
-  evented_at:	2017/09/23 13:30
-- dojo_id:	47
-  event_id:	1585047484854819
-  participants:	5
-  evented_at:	2016/11/27 13:00
-- dojo_id:	47
-  event_id:	1137605509668840
-  participants:	10
-  evented_at:	2016/12/18 13:30
-- dojo_id:	47
-  event_id:	166021170546595
-  participants:	5
-  evented_at:	2017/01/15 13:30
-- dojo_id:	47
-  event_id:	232499540542401
-  participants:	5
-  evented_at:	2017/02/12 13:30
-- dojo_id:	47
-  event_id:	1761517970842435
-  participants:	1
-  evented_at:	2017/03/12 14:30
-- dojo_id:	59
-  event_id:	1227574413955261
-  participants:	0
-  evented_at:	2016/12/23 09:30
-- dojo_id:	73
-  event_id:	1431569290484157
-  participants:	5
-  evented_at:	2017/03/26 13:30
-- dojo_id:	73
-  event_id:	1493911183974901
-  participants:	9
-  evented_at:	2017/04/30 13:30
-- dojo_id:	73
-  event_id:	1709884792645026
-  participants:	4
-  evented_at:	2017/06/11 13:30
-- dojo_id:	73
-  event_id:	137255470190639
-  participants:	7
-  evented_at:	2017/07/16 13:30
-- dojo_id:	73
-  event_id:	106920550048700
-  participants:	4
-  evented_at:	2017/09/10 13:15
-- dojo_id:	73
-  event_id:	1510323622415864
-  participants:	5
-  evented_at:	2017/10/01 13:15
-- dojo_id:	73
-  event_id:	142819799676689
-  participants:	6
-  evented_at:	2017/11/26 13:30
-- dojo_id:	73
-  event_id:	310152299475301
-  participants:	4
-  evented_at:	2018/01/14 13:30
-- dojo_id:	73
-  event_id:	1743561269015700
-  participants:	8
-  evented_at:	2018/02/18 13:30
-- dojo_id:	73
-  event_id:	169038793900038
-  participants:	8
-  evented_at:	2018/03/25 13:30
-- dojo_id:	73
-  event_id:	675550939464493
-  participants:	9
-  evented_at:	2018/04/08 13:30
-- dojo_id:	85
-  event_id:	1348587111864468
-  participants:	0
-  evented_at:	2017/05/27 14:00
-- dojo_id:	85
-  event_id:	679665385492159
-  participants:	0
-  evented_at:	2017/06/24 14:00
-- dojo_id:	85
-  event_id:	271946486606546
-  participants:	1
-  evented_at:	2017/07/22 14:00
-- dojo_id:	85
-  event_id:	475607026144055
-  participants:	2
-  evented_at:	2017/08/27 14:00
-- dojo_id:	86
-  event_id:	1436557109720751
-  participants:	5
-  evented_at:	2017/06/18 13:00
-- dojo_id:	86
-  event_id:	1885619925095540
-  participants:	7
-  evented_at:	2017/07/30 13:00
-- dojo_id:	86
-  event_id:	804582973043733
-  participants:	10
-  evented_at:	2017/08/20 13:00
-- dojo_id:	86
-  event_id:	1484174534939256
-  participants:	10
-  evented_at:	2017/09/24 13:00
-- dojo_id:	86
-  event_id:	154909391757821
-  participants:	4
-  evented_at:	2017/10/22 13:00
-- dojo_id:	86
-  event_id:	115800412443483
-  participants:	5
-  evented_at:	2017/11/19 13:00
-- dojo_id:	86
-  event_id:	167853970479855
-  participants:	0
-  evented_at:	2017/12/10 10:00
-- dojo_id:	86
-  event_id:	167960517125221
-  participants:	6
-  evented_at:	2017/12/17 13:00
-- dojo_id:	86
-  event_id:	329086557559176
-  participants:	7
-  evented_at:	2017/12/17 17:00
-- dojo_id:	86
-  event_id:	1889976764665415
-  participants:	6
-  evented_at:	2018/01/21 13:00
-- dojo_id:	86
-  event_id:	999044140234275
-  participants:	6
-  evented_at:	2018/02/18 13:00
-- dojo_id:	86
-  event_id:	1916360855343342
-  participants:	4
-  evented_at:	2018/03/18 13:00
-- dojo_id:	87
-  event_id:	435934736782336
-  participants:	6
-  evented_at:	2017/06/10 19:00
-- dojo_id:	87
-  event_id:	1959651524247858
-  participants:	6
-  evented_at:	2017/06/17 10:00
-- dojo_id:	87
-  event_id:	1696069237363858
-  participants:	4
-  evented_at:	2017/07/01 19:00
-- dojo_id:	87
-  event_id:	473150346354909
-  participants:	10
-  evented_at:	2017/07/15 10:00
-- dojo_id:	87
-  event_id:	1831203920542181
-  participants:	5
-  evented_at:	2017/08/05 09:00
-- dojo_id:	87
-  event_id:	1939390369684135
-  participants:	5
-  evented_at:	2017/08/11 09:00
-- dojo_id:	87
-  event_id:	802291489945607
-  participants:	3
-  evented_at:	2017/09/09 09:00
-- dojo_id:	87
-  event_id:	1008059672667286
-  participants:	5
-  evented_at:	2017/10/21 14:00
-- dojo_id:	87
-  event_id:	1485285231556017
-  participants:	4
-  evented_at:	2017/11/18 14:00
-- dojo_id:	87
-  event_id:	111045026343051
-  participants:	8
-  evented_at:	2017/12/16 14:00
-- dojo_id:	87
-  event_id:	702580896604255
-  participants:	6
-  evented_at:	2018/01/20 14:00
-- dojo_id:	87
-  event_id:	796550170536635
-  participants:	6
-  evented_at:	2018/02/17 14:00
-- dojo_id:	87
-  event_id:	715404458848668
-  participants:	6
-  evented_at:	2018/03/17 14:00
-- dojo_id:	88
-  event_id:	1372320219469831
-  participants:	0
-  evented_at:	2017/07/23 11:20
-- dojo_id:	88
-  event_id:	1924777571134708
-  participants:	0
-  evented_at:	2017/08/20 10:20
-- dojo_id:	94
-  event_id:	1391919444222938
-  participants:	3
-  evented_at:	2017/07/14 19:00
-- dojo_id:	94
-  event_id:	462703774110402
-  participants:	4
-  evented_at:	2017/07/28 20:00
-- dojo_id:	94
-  event_id:	144385232790021
-  participants:	5
-  evented_at:	2017/08/19 10:00
-- dojo_id:	94
-  event_id:	263257480845669
-  participants:	5
-  evented_at:	2017/09/10 16:00
-- dojo_id:	94
-  event_id:	745342032335381
-  participants:	2
-  evented_at:	2017/09/23 10:00
-- dojo_id:	94
-  event_id:	1998391133740234
-  participants:	1
-  evented_at:	2017/10/28 10:00
-- dojo_id:	94
-  event_id:	151604505361367
-  participants:	7
-  evented_at:	2017/11/12 10:00
-- dojo_id:	94
-  event_id:	186900575203220
-  participants:	3
-  evented_at:	2017/12/17 10:00
-- dojo_id:	94
-  event_id:	572586953133193
-  participants:	3
-  evented_at:	2018/01/13 14:00
-- dojo_id:	94
-  event_id:	2004533813138712
-  participants:	2
-  evented_at:	2018/02/03 10:00
-- dojo_id:	94
-  event_id:	143876126287162
-  participants:	2
-  evented_at:	2018/03/18 10:00
-- dojo_id:	102
-  event_id:	1820817684613917
-  participants:	6
-  evented_at:	2017/11/11 14:00
-- dojo_id:	102
-  event_id:	210972156110779
-  participants:	5
-  evented_at:	2017/12/24 14:00
-- dojo_id:	102
-  event_id:	1684157511622792
-  participants:	3
-  evented_at:	2018/01/14 14:00
-- dojo_id:	102
-  event_id:	1004396759718142
-  participants:	2
-  evented_at:	2018/02/10 14:00
-- dojo_id:	102
-  event_id:	558004947892527
-  participants:	3
-  evented_at:	2018/03/10 14:00
-- dojo_id:	111
-  event_id:	237818390082314
-  participants:	1
-  evented_at:	2017/11/12 09:30
-- dojo_id:	111
-  event_id:	2077306175824015
-  participants:	0
-  evented_at:	2018/01/14 09:15
-- dojo_id:	111
-  event_id:	147230272625797
-  participants:	0
-  evented_at:	2018/03/11 09:30
-- dojo_id:	113
-  event_id:	1996676050602519
-  participants:	1
-  evented_at:	2017/11/24 18:00
-- dojo_id:	113
-  event_id:	1999778076977852
-  participants:	0
-  evented_at:	2017/12/09 10:00
-- dojo_id:	113
-  event_id:	150574729042065
-  participants:	0
-  evented_at:	2018/01/14 13:30
-- dojo_id:	113
-  event_id:	175235543101402
-  participants:	0
-  evented_at:	2018/03/17 15:45
-- dojo_id:	125
-  event_id:	1271165696360574
-  participants:	2
-  evented_at:	2018/02/10 15:30
-- dojo_id:	125
-  event_id:	220333991873248
-  participants:	0
-  evented_at:	2018/03/17 15:30
-- dojo_id:	131
-  event_id:	162413071215576
-  participants:	5
-  evented_at:	2018/03/11 10:00
-- dojo_id:	131
-  event_id:	1570409593076996
-  participants:	3
-  evented_at:	2018/04/08 10:00
-- dojo_id:	5
-  event_id:	2025722814315179
-  participants:	0
-  evented_at:	2018/06/23 14:00
-- dojo_id:	5
-  event_id:	265141110771360
-  participants:	1
-  evented_at:	2018/09/08 14:00
-- dojo_id:	5
-  event_id:	295157691141094
-  participants:	0
-  evented_at:	2018/11/10 14:00
-- dojo_id:	5
-  event_id:	285450478766940
-  participants:	1
-  evented_at:	2018/11/24 14:00
-- dojo_id:	5
-  event_id:	944653219202907
-  participants:	0
-  evented_at:	2018/12/08 14:00
-- dojo_id:	5
-  event_id:	205570750378584
-  participants:	0
-  evented_at:	2018/12/22 09:00
-- dojo_id:	6
-  event_id:	355799418270479
-  participants:	3
-  evented_at:	2018/04/13 17:00
-- dojo_id:	6
-  event_id:	705986619791001
-  participants:	2
-  evented_at:	2018/04/20 17:00
-- dojo_id:	6
-  event_id:	179996445966974
-  participants:	2
-  evented_at:	2018/04/27 17:00
-- dojo_id:	6
-  event_id:	962164243953372
-  participants:	1
-  evented_at:	2018/05/04 17:00
-- dojo_id:	6
-  event_id:	2050016751924866
-  participants:	2
-  evented_at:	2018/05/11 17:00
-- dojo_id:	6
-  event_id:	243951806180296
-  participants:	0
-  evented_at:	2018/05/18 17:00
-- dojo_id:	6
-  event_id:	258451291554775
-  participants:	1
-  evented_at:	2018/05/25 17:00
-- dojo_id:	6
-  event_id:	909409419443443
-  participants:	2
-  evented_at:	2018/06/01 17:00
-- dojo_id:	6
-  event_id:	179759772726895
-  participants:	4
-  evented_at:	2018/06/08 17:00
-- dojo_id:	6
-  event_id:	374468339628245
-  participants:	1
-  evented_at:	2018/06/15 17:00
-- dojo_id:	6
-  event_id:	906034429521406
-  participants:	3
-  evented_at:	2018/06/22 17:00
-- dojo_id:	6
-  event_id:	192205188257910
-  participants:	1
-  evented_at:	2018/06/29 17:00
-- dojo_id:	6
-  event_id:	656864561340358
-  participants:	1
-  evented_at:	2018/07/06 17:00
-- dojo_id:	6
-  event_id:	473945713043334
-  participants:	1
-  evented_at:	2018/07/13 17:00
-- dojo_id:	6
-  event_id:	1752826784764808
-  participants:	1
-  evented_at:	2018/07/20 17:00
-- dojo_id:	6
-  event_id:	295457421197189
-  participants:	1
-  evented_at:	2018/08/03 17:00
-- dojo_id:	6
-  event_id:	261825551073994
-  participants:	1
-  evented_at:	2018/08/10 17:00
-- dojo_id:	6
-  event_id:	228912921097362
-  participants:	1
-  evented_at:	2018/08/17 17:00
-- dojo_id:	6
-  event_id:	421496404923869
-  participants:	1
-  evented_at:	2018/08/24 17:00
-- dojo_id:	6
-  event_id:	203608276974464
-  participants:	1
-  evented_at:	2018/08/31 17:00
-- dojo_id:	6
-  event_id:	263411424282775
-  participants:	1
-  evented_at:	2018/09/07 17:00
-- dojo_id:	6
-  event_id:	2184016375176752
-  participants:	2
-  evented_at:	2018/09/28 17:00
-- dojo_id:	6
-  event_id:	516506758814811
-  participants:	1
-  evented_at:	2018/10/05 17:00
-- dojo_id:	6
-  event_id:	169484263958581
-  participants:	1
-  evented_at:	2018/10/12 17:00
-- dojo_id:	6
-  event_id:	1817847148263130
-  participants:	1
-  evented_at:	2018/10/19 17:00
-- dojo_id:	6
-  event_id:	716576988689330
-  participants:	1
-  evented_at:	2018/10/26 17:00
-- dojo_id:	6
-  event_id:	647251982338783
-  participants:	1
-  evented_at:	2018/11/02 17:00
-- dojo_id:	6
-  event_id:	1429335070530370
-  participants:	1
-  evented_at:	2018/11/09 17:00
-- dojo_id:	6
-  event_id:	2157171101191131
-  participants:	1
-  evented_at:	2018/11/16 17:00
-- dojo_id:	6
-  event_id:	271193673531455
-  participants:	2
-  evented_at:	2018/11/30 17:00
-- dojo_id:	6
-  event_id:	258991148127671
-  participants:	2
-  evented_at:	2018/12/07 17:00
-- dojo_id:	6
-  event_id:	318564745401451
-  participants:	1
-  evented_at:	2018/12/14 17:00
-- dojo_id:	6
-  event_id:	198715634392961
-  participants:	1
-  evented_at:	2018/12/21 17:00
-- dojo_id:	6
-  event_id:	964712820390807
-  participants:	2
-  evented_at:	2019/01/11 17:00
-- dojo_id:	6
-  event_id:	307375003225314
-  participants:	1
-  evented_at:	2019/01/18 17:00
-- dojo_id:	6
-  event_id:	352944342202141
-  participants:	2
-  evented_at:	2019/01/25 17:00
-- dojo_id:	6
-  event_id:	303731267001111
-  participants:	1
-  evented_at:	2019/02/08 17:00
-- dojo_id:	6
-  event_id:	318931765395231
-  participants:	1
-  evented_at:	2019/02/15 17:00
-- dojo_id:	6
-  event_id:	385481951997852
-  participants:	1
-  evented_at:	2019/02/22 17:00
-- dojo_id:	10
-  event_id:	2061248857450739
-  participants:	1
-  evented_at:	2018/04/22 13:00
-- dojo_id:	10
-  event_id:	2051175671871643
-  participants:	3
-  evented_at:	2018/05/13 11:00
-- dojo_id:	10
-  event_id:	208995543163014
-  participants:	1
-  evented_at:	2018/05/27 13:00
-- dojo_id:	10
-  event_id:	1722882844426664
-  participants:	2
-  evented_at:	2018/06/16 13:30
-- dojo_id:	10
-  event_id:	194173007954667
-  participants:	1
-  evented_at:	2018/06/30 13:30
-- dojo_id:	10
-  event_id:	212787136018784
-  participants:	1
-  evented_at:	2018/07/07 13:30
-- dojo_id:	10
-  event_id:	1882674555362758
-  participants:	1
-  evented_at:	2018/07/22 13:30
-- dojo_id:	10
-  event_id:	2065221300397933
-  participants:	2
-  evented_at:	2018/08/12 13:30
-- dojo_id:	10
-  event_id:	1962055957187024
-  participants:	2
-  evented_at:	2018/09/02 13:30
-- dojo_id:	10
-  event_id:	1524634837680016
-  participants:	3
-  evented_at:	2018/09/16 13:30
-- dojo_id:	10
-  event_id:	2682710885287440
-  participants:	1
-  evented_at:	2018/09/29 13:30
-- dojo_id:	10
-  event_id:	2197594530488540
-  participants:	3
-  evented_at:	2018/10/14 13:30
-- dojo_id:	10
-  event_id:	1807666092692235
-  participants:	2
-  evented_at:	2018/10/28 13:30
-- dojo_id:	10
-  event_id:	320949125397055
-  participants:	2
-  evented_at:	2018/11/11 13:30
-- dojo_id:	10
-  event_id:	1902555713124812
-  participants:	2
-  evented_at:	2018/11/25 13:30
-- dojo_id:	10
-  event_id:	1561103553992808
-  participants:	2
-  evented_at:	2018/12/16 13:30
-- dojo_id:	10
-  event_id:	941739029353227
-  participants:	4
-  evented_at:	2018/12/23 13:30
-- dojo_id:	10
-  event_id:	377250806383629
-  participants:	2
-  evented_at:	2019/01/13 13:30
-- dojo_id:	10
-  event_id:	2004304109689530
-  participants:	1
-  evented_at:	2019/01/27 13:30
-- dojo_id:	10
-  event_id:	2868422193383166
-  participants:	2
-  evented_at:	2019/02/10 13:30
-- dojo_id:	10
-  event_id:	233822924191736
-  participants:	2
-  evented_at:	2019/02/24 13:30
-- dojo_id:	12
-  event_id:	203943203728270
-  participants:	2
-  evented_at:	2018/05/06 14:30
-- dojo_id:	12
-  event_id:	192725348039615
-  participants:	9
-  evented_at:	2018/06/03 14:30
-- dojo_id:	12
-  event_id:	686140828386440
-  participants:	9
-  evented_at:	2018/07/01 14:30
-- dojo_id:	12
-  event_id:	656047691437276
-  participants:	8
-  evented_at:	2018/08/05 10:30
-- dojo_id:	12
-  event_id:	558843207903729
-  participants:	9
-  evented_at:	2018/09/02 10:30
-- dojo_id:	12
-  event_id:	240892349918238
-  participants:	3
-  evented_at:	2018/10/07 10:30
-- dojo_id:	12
-  event_id:	243149306554647
-  participants:	12
-  evented_at:	2018/11/04 10:30
-- dojo_id:	12
-  event_id:	280271085953831
-  participants:	7
-  evented_at:	2018/12/02 10:30
-- dojo_id:	12
-  event_id:	238908956839330
-  participants:	8
-  evented_at:	2019/01/06 10:30
-- dojo_id:	12
-  event_id:	310902002871737
-  participants:	7
-  evented_at:	2019/02/03 10:30
-- dojo_id:	23
-  event_id:	376044719562618
-  participants:	5
-  evented_at:	2018/04/22 10:00
-- dojo_id:	23
-  event_id:	1808668095861929
-  participants:	3
-  evented_at:	2018/05/13 10:00
-- dojo_id:	23
-  event_id:	359226277920804
-  participants:	2
-  evented_at:	2018/05/27 10:00
-- dojo_id:	23
-  event_id:	1953144464742232
-  participants:	3
-  evented_at:	2018/09/09 10:00
-- dojo_id:	23
-  event_id:	239791583375000
-  participants:	2
-  evented_at:	2018/09/23 10:00
-- dojo_id:	23
-  event_id:	322710301792999
-  participants:	6
-  evented_at:	2018/11/11 10:00
-- dojo_id:	23
-  event_id:	127955584748288
-  participants:	1
-  evented_at:	2018/12/09 10:00
-- dojo_id:	23
-  event_id:	332887120772826
-  participants:	4
-  evented_at:	2018/12/23 10:00
-- dojo_id:	23
-  event_id:	273135840008237
-  participants:	15
-  evented_at:	2019/01/04 17:00
-- dojo_id:	23
-  event_id:	595052654274780
-  participants:	1
-  evented_at:	2019/01/13 10:00
-- dojo_id:	25
-  event_id:	2030372193868993
-  participants:	8
-  evented_at:	2018/05/13 10:00
-- dojo_id:	25
-  event_id:	195133097965195
-  participants:	6
-  evented_at:	2018/06/10 10:00
-- dojo_id:	25
-  event_id:	2096663667271531
-  participants:	6
-  evented_at:	2018/06/10 15:00
-- dojo_id:	25
-  event_id:	209010219822867
-  participants:	9
-  evented_at:	2018/07/08 10:00
-- dojo_id:	25
-  event_id:	204625466869786
-  participants:	5
-  evented_at:	2018/08/12 10:00
-- dojo_id:	25
-  event_id:	268442307303154
-  participants:	19
-  evented_at:	2018/09/02 10:00
-- dojo_id:	25
-  event_id:	613551215708512
-  participants:	9
-  evented_at:	2018/10/14 10:00
-- dojo_id:	25
-  event_id:	2278255045741224
-  participants:	9
-  evented_at:	2018/11/11 10:00
-- dojo_id:	25
-  event_id:	2111052009157326
-  participants:	20
-  evented_at:	2018/12/09 10:00
-- dojo_id:	25
-  event_id:	379521235925749
-  participants:	6
-  evented_at:	2019/01/13 10:00
-- dojo_id:	38
-  event_id:	196236491237990
-  participants:	4
-  evented_at:	2018/08/04 13:30
-- dojo_id:	73
-  event_id:	1600474296728643
-  participants:	6
-  evented_at:	2018/05/06 13:30
-- dojo_id:	73
-  event_id:	2050527055199864
-  participants:	6
-  evented_at:	2018/06/10 13:30
-- dojo_id:	73
-  event_id:	229873607802747
-  participants:	4
-  evented_at:	2018/07/01 13:30
-- dojo_id:	73
-  event_id:	495391340910164
-  participants:	4
-  evented_at:	2018/08/12 13:30
-- dojo_id:	73
-  event_id:	724939291180649
-  participants:	7
-  evented_at:	2018/09/16 13:30
-- dojo_id:	73
-  event_id:	261879051136431
-  participants:	2
-  evented_at:	2018/11/04 13:30
-- dojo_id:	73
-  event_id:	723307981372919
-  participants:	3
-  evented_at:	2018/12/09 13:30
-- dojo_id:	73
-  event_id:	355491578366248
-  participants:	6
-  evented_at:	2019/01/13 13:30
-- dojo_id:	73
-  event_id:	2438595696213784
-  participants:	8
-  evented_at:	2019/02/17 13:30
-- dojo_id:	86
-  event_id:	1939742072714754
-  participants:	2
-  evented_at:	2018/07/21 13:00
-- dojo_id:	86
-  event_id:	214372875866620
-  participants:	7
-  evented_at:	2018/09/02 10:00
-- dojo_id:	86
-  event_id:	214408712570888
-  participants:	2
-  evented_at:	2018/09/22 10:00
-- dojo_id:	86
-  event_id:	1718977434895169
-  participants:	2
-  evented_at:	2018/10/20 13:00
-- dojo_id:	86
-  event_id:	1917775238301367
-  participants:	5
-  evented_at:	2018/11/18 13:00
-- dojo_id:	86
-  event_id:	478086436032303
-  participants:	5
-  evented_at:	2018/11/18 15:30
-- dojo_id:	86
-  event_id:	2195207134101506
-  participants:	3
-  evented_at:	2018/12/16 13:00
-- dojo_id:	86
-  event_id:	314473035838779
-  participants:	1
-  evented_at:	2019/01/20 10:00
-- dojo_id:	86
-  event_id:	197625097847789
-  participants:	1
-  evented_at:	2019/01/20 13:00
-- dojo_id:	86
-  event_id:	2172994822915072
-  participants:	3
-  evented_at:	2019/02/17 13:00
-- dojo_id:	87
-  event_id:	186187292174542
-  participants:	4
-  evented_at:	2018/04/21 14:00
-- dojo_id:	87
-  event_id:	149517825899316
-  participants:	7
-  evented_at:	2018/05/19 14:00
-- dojo_id:	87
-  event_id:	223033138425857
-  participants:	4
-  evented_at:	2018/06/16 14:00
-- dojo_id:	87
-  event_id:	2034954076722298
-  participants:	5
-  evented_at:	2018/07/21 14:00
-- dojo_id:	87
-  event_id:	250902995525855
-  participants:	5
-  evented_at:	2018/08/18 14:00
-- dojo_id:	87
-  event_id:	723030118049163
-  participants:	4
-  evented_at:	2018/09/15 14:00
-- dojo_id:	87
-  event_id:	313638519412759
-  participants:	4
-  evented_at:	2018/10/14 09:30
-- dojo_id:	87
-  event_id:	289480415236734
-  participants:	3
-  evented_at:	2018/11/17 14:00
-- dojo_id:	87
-  event_id:	540235926438304
-  participants:	4
-  evented_at:	2018/12/15 14:00
-- dojo_id:	87
-  event_id:	725232874523244
-  participants:	5
-  evented_at:	2019/01/19 11:00
-- dojo_id:	87
-  event_id:	305092533476336
-  participants:	3
-  evented_at:	2019/01/19 14:00
-- dojo_id:	87
-  event_id:	553006781850776
-  participants:	4
-  evented_at:	2019/02/16 14:00
-- dojo_id:	94
-  event_id:	182495955713523
-  participants:	4
-  evented_at:	2018/04/22 10:00
-- dojo_id:	94
-  event_id:	460447231051345
-  participants:	7
-  evented_at:	2018/05/20 10:00
-- dojo_id:	94
-  event_id:	2083794118360037
-  participants:	6
-  evented_at:	2018/06/17 10:30
-- dojo_id:	94
-  event_id:	2057115447656467
-  participants:	3
-  evented_at:	2018/08/19 10:30
-- dojo_id:	94
-  event_id:	619399601812979
-  participants:	5
-  evented_at:	2018/12/16 10:00
-- dojo_id:	94
-  event_id:	1996185347156197
-  participants:	5
-  evented_at:	2019/01/20 10:00
-- dojo_id:	94
-  event_id:	2124909820923355
-  participants:	4
-  evented_at:	2019/02/17 10:00
-- dojo_id:	102
-  event_id:	589086408111015
-  participants:	5
-  evented_at:	2018/04/14 14:00
-- dojo_id:	102
-  event_id:	266200090587482
-  participants:	6
-  evented_at:	2018/05/12 14:00
-- dojo_id:	102
-  event_id:	2122252504711147
-  participants:	3
-  evented_at:	2018/06/02 14:00
-- dojo_id:	102
-  event_id:	203044667215454
-  participants:	5
-  evented_at:	2018/08/11 14:00
-- dojo_id:	102
-  event_id:	2101797823404409
-  participants:	4
-  evented_at:	2018/09/08 14:00
-- dojo_id:	102
-  event_id:	634290583638800
-  participants:	2
-  evented_at:	2018/10/13 14:00
-- dojo_id:	102
-  event_id:	157941378485533
-  participants:	4
-  evented_at:	2018/11/10 14:00
-- dojo_id:	102
-  event_id:	995304900678310
-  participants:	2
-  evented_at:	2018/12/08 14:00
-- dojo_id:	102
-  event_id:	272050403492623
-  participants:	7
-  evented_at:	2019/01/12 14:00
-- dojo_id:	102
-  event_id:	1975900619132050
-  participants:	2
-  evented_at:	2019/02/02 14:00
-- dojo_id:	113
-  event_id:	500437787102091
-  participants:	0
-  evented_at:	2018/10/13 10:15
-- dojo_id:	113
-  event_id:	2494919577225873
-  participants:	1
-  evented_at:	2018/11/17 15:15
-- dojo_id:	113
-  event_id:	375635736344303
-  participants:	1
-  evented_at:	2019/01/19 15:15
-- dojo_id:	113
-  event_id:	2108662632777427
-  participants:	0
-  evented_at:	2019/02/16 15:15
-- dojo_id:	125
-  event_id:	2136147573067146
-  participants:	0
-  evented_at:	2018/04/14 15:30
-- dojo_id:	125
-  event_id:	180876649394661
-  participants:	0
-  evented_at:	2018/05/12 15:30
-- dojo_id:	125
-  event_id:	389307884896247
-  participants:	0
-  evented_at:	2018/07/14 15:30
-- dojo_id:	125
-  event_id:	608368439564903
-  participants:	0
-  evented_at:	2018/09/08 15:30
-- dojo_id:	125
-  event_id:	492133997971590
-  participants:	1
-  evented_at:	2018/10/13 15:30
-- dojo_id:	125
-  event_id:	463539170837433
-  participants:	0
-  evented_at:	2018/11/17 15:30
-- dojo_id:	125
-  event_id:	1108808889278727
-  participants:	0
-  evented_at:	2019/01/19 15:30
-- dojo_id:	131
-  event_id:	437160593407496
-  participants:	3
-  evented_at:	2018/05/13 10:00
-- dojo_id:	131
-  event_id:	208795856393856
-  participants:	5
-  evented_at:	2018/06/10 10:00
-- dojo_id:	131
-  event_id:	254118565342508
-  participants:	7
-  evented_at:	2018/07/08 10:00
-- dojo_id:	131
-  event_id:	2136994859874386
-  participants:	8
-  evented_at:	2018/07/22 10:00
-- dojo_id:	131
-  event_id:	2148939745362350
-  participants:	2
-  evented_at:	2018/08/26 10:00
-- dojo_id:	131
-  event_id:	401022553761465
-  participants:	2
-  evented_at:	2018/09/09 10:00
-- dojo_id:	131
-  event_id:	553660595079398
-  participants:	7
-  evented_at:	2018/10/21 10:00
-- dojo_id:	131
-  event_id:	447858512404803
-  participants:	5
-  evented_at:	2018/11/18 10:00
-- dojo_id:	131
-  event_id:	349490219162977
-  participants:	8
-  evented_at:	2018/12/09 10:00
-- dojo_id:	131
-  event_id:	2136095266703930
-  participants:	6
-  evented_at:	2019/01/13 10:00
-- dojo_id:	131
-  event_id:	2064715203618898
-  participants:	15
-  evented_at:	2019/02/10 10:00
-- dojo_id:	141
-  event_id:	338083410058160
-  participants:	1
-  evented_at:	2018/07/08 14:00
-- dojo_id:	141
-  event_id:	222399278453565
-  participants:	1
-  evented_at:	2018/08/19 14:00
-- dojo_id:	141
-  event_id:	538187703285767
-  participants:	4
-  evented_at:	2018/10/21 10:00
-- dojo_id:	141
-  event_id:	739653039700994
-  participants:	4
-  evented_at:	2018/12/16 10:00
-- dojo_id:	141
-  event_id:	843787365956607
-  participants:	8
-  evented_at:	2019/02/17 10:00
-- dojo_id:	172
-  event_id:	318482825571270
-  participants:	5
-  evented_at:	2018/09/17 13:00
-- dojo_id:	172
-  event_id:	326038641491602
-  participants:	2
-  evented_at:	2018/10/21 13:00
-- dojo_id:	172
-  event_id:	1888960717818759
-  participants:	2
-  evented_at:	2008/11/23 13:00
-- dojo_id:	183
-  event_id:	173575276863248
-  participants:	2
-  evented_at:	2018/11/03 14:00
-- dojo_id:	183
-  event_id:	2039369989419033
-  participants:	3
-  evented_at:	2018/12/01 14:00
-- dojo_id:	186
-  event_id:	296809407481427
-  participants:	4
-  evented_at:	2018/12/23 13:30
-- dojo_id:	186
-  event_id:	2255034061440133
-  participants:	1
-  evented_at:	2019/01/06 13:00
-- dojo_id:	186
-  event_id:	272265090089122
-  participants:	4
-  evented_at:	2019/01/13 13:30
-- dojo_id:	186
-  event_id:	766781693674723
-  participants:	2
-  evented_at:	2019/01/27 13:30
-- dojo_id:	186
-  event_id:	639913849738762
-  participants:	2
-  evented_at:	2019/02/17 13:30
-- dojo_id:	186
-  event_id:	1153923628097026
-  participants:	2
-  evented_at:	2019/02/24 13:30
-- dojo_id:  187
+- dojo_id: 3
+  event_id: 282108105299062
+  participants: 3
+  evented_at: 2014/05/11 10:30
+- dojo_id: 3
+  event_id: 353745168142589
+  participants: 0
+  evented_at: 2014/12/14 10:30
+- dojo_id: 3
+  event_id: 1530374827222875
+  participants: 0
+  evented_at: 2015/01/18 10:30
+- dojo_id: 3
+  event_id: 372713003102001
+  participants: 1
+  evented_at: 2017/02/19 10:30
+- dojo_id: 3
+  event_id: 150816585583479
+  participants: 2
+  evented_at: 2018/03/18 10:30
+- dojo_id: 4
+  event_id: 1757237131215704
+  participants: 1
+  evented_at: 2016/06/11 10:00
+- dojo_id: 4
+  event_id: 119048968522740
+  participants: 0
+  evented_at: 2016/07/02 10:00
+- dojo_id: 4
+  event_id: 1746189202335808
+  participants: 0
+  evented_at: 2016/08/07 11:00
+- dojo_id: 4
+  event_id: 181486208951819
+  participants: 0
+  evented_at: 2016/09/25 10:00
+- dojo_id: 4
+  event_id: 1881321212097917
+  participants: 0
+  evented_at: 2016/12/10 10:00
+- dojo_id: 4
+  event_id: 1891691577771763
+  participants: 1
+  evented_at: 2017/05/05 10:00
+- dojo_id: 4
+  event_id: 303246250118327
+  participants: 0
+  evented_at: 2017/05/21 10:30
+- dojo_id: 4
+  event_id: 302013413581629
+  participants: 0
+  evented_at: 2017/06/25 11:00
+- dojo_id: 4
+  event_id: 241018079727395
+  participants: 0
+  evented_at: 2017/07/08 10:00
+- dojo_id: 4
+  event_id: 148473709163989
+  participants: 0
+  evented_at: 2018/02/24 09:30
+- dojo_id: 5
+  event_id: 1171099252903599
+  participants: 0
+  evented_at: 2015/12/13 14:00
+- dojo_id: 5
+  event_id: 1557926797763111
+  participants: 0
+  evented_at: 2015/12/26 14:00
+- dojo_id: 5
+  event_id: 1512221699079341
+  participants: 0
+  evented_at: 2016/01/23 14:00
+- dojo_id: 5
+  event_id: 498146990356226
+  participants: 0
+  evented_at: 2016/02/13 14:00
+- dojo_id: 5
+  event_id: 188778604828989
+  participants: 0
+  evented_at: 2016/03/12 14:00
+- dojo_id: 5
+  event_id: 820811628047941
+  participants: 0
+  evented_at: 2016/03/26 14:00
+- dojo_id: 5
+  event_id: 1692360861004252
+  participants: 0
+  evented_at: 2016/04/09 14:00
+- dojo_id: 5
+  event_id: 1533584503614881
+  participants: 0
+  evented_at: 2016/04/23 14:00
+- dojo_id: 5
+  event_id: 494974650706782
+  participants: 0
+  evented_at: 2016/05/14 14:00
+- dojo_id: 5
+  event_id: 1116700368376164
+  participants: 0
+  evented_at: 2016/06/04 14:00
+- dojo_id: 5
+  event_id: 956999747732571
+  participants: 1
+  evented_at: 2016/06/11 14:00
+- dojo_id: 5
+  event_id: 302400943435295
+  participants: 0
+  evented_at: 2016/06/25 14:00
+- dojo_id: 5
+  event_id: 1663244653999377
+  participants: 0
+  evented_at: 2016/07/02 14:00
+- dojo_id: 5
+  event_id: 258094944568424
+  participants: 1
+  evented_at: 2016/07/09 14:00
+- dojo_id: 5
+  event_id: 1766744170229980
+  participants: 0
+  evented_at: 2016/07/23 14:00
+- dojo_id: 5
+  event_id: 174092466336404
+  participants: 0
+  evented_at: 2016/08/20 14:00
+- dojo_id: 5
+  event_id: 1720386574891008
+  participants: 1
+  evented_at: 2016/09/10 14:00
+- dojo_id: 5
+  event_id: 187197261696650
+  participants: 0
+  evented_at: 2016/09/24 14:00
+- dojo_id: 5
+  event_id: 1789674837968427
+  participants: 0
+  evented_at: 2016/10/22 14:00
+- dojo_id: 5
+  event_id: 1693975974262684
+  participants: 0
+  evented_at: 2016/10/29 14:00
+- dojo_id: 5
+  event_id: 1793832934233578
+  participants: 0
+  evented_at: 2016/11/13 14:00
+- dojo_id: 5
+  event_id: 1834027256881811
+  participants: 0
+  evented_at: 2016/12/17 14:00
+- dojo_id: 5
+  event_id: 438753553182214
+  participants: 0
+  evented_at: 2017/01/14 14:00
+- dojo_id: 5
+  event_id: 539186879561574
+  participants: 0
+  evented_at: 2017/01/21 14:00
+- dojo_id: 5
+  event_id: 131958623980926
+  participants: 0
+  evented_at: 2017/01/28 14:00
+- dojo_id: 5
+  event_id: 223515651387781
+  participants: 0
+  evented_at: 2017/02/11 14:00
+- dojo_id: 5
+  event_id: 1318398228217252
+  participants: 0
+  evented_at: 2017/02/18 14:00
+- dojo_id: 5
+  event_id: 590202864504338
+  participants: 0
+  evented_at: 2017/02/25 14:00
+- dojo_id: 5
+  event_id: 270217776750031
+  participants: 0
+  evented_at: 2017/03/11 14:00
+- dojo_id: 5
+  event_id: 195896647574544
+  participants: 0
+  evented_at: 2017/03/25 14:00
+- dojo_id: 5
+  event_id: 1649016632071190
+  participants: 0
+  evented_at: 2017/04/01 14:00
+- dojo_id: 5
+  event_id: 721977007927269
+  participants: 0
+  evented_at: 2017/04/08 14:00
+- dojo_id: 5
+  event_id: 1659617667668592
+  participants: 0
+  evented_at: 2017/04/15 14:00
+- dojo_id: 5
+  event_id: 126863751190700
+  participants: 0
+  evented_at: 2017/04/22 14:00
+- dojo_id: 5
+  event_id: 1725401830821408
+  participants: 0
+  evented_at: 2017/05/13 14:00
+- dojo_id: 5
+  event_id: 1289656044482761
+  participants: 0
+  evented_at: 2017/05/20 14:15
+- dojo_id: 5
+  event_id: 129083887721883
+  participants: 0
+  evented_at: 2017/09/09 14:00
+- dojo_id: 5
+  event_id: 347524078993580
+  participants: 0
+  evented_at: 2017/10/21 14:00
+- dojo_id: 5
+  event_id: 123872501619621
+  participants: 0
+  evented_at: 2017/10/28 14:00
+- dojo_id: 5
+  event_id: 1895185627476782
+  participants: 1
+  evented_at: 2017/11/11 14:00
+- dojo_id: 5
+  event_id: 736924319833054
+  participants: 0
+  evented_at: 2017/11/18 14:00
+- dojo_id: 5
+  event_id: 1756960431277467
+  participants: 0
+  evented_at: 2017/12/02 14:00
+- dojo_id: 5
+  event_id: 151699935555574
+  participants: 0
+  evented_at: 2017/12/16 14:00
+- dojo_id: 5
+  event_id: 2005225829734235
+  participants: 0
+  evented_at: 2018/01/13 14:00
+- dojo_id: 5
+  event_id: 183250232265305
+  participants: 0
+  evented_at: 2018/01/27 14:00
+- dojo_id: 5
+  event_id: 196951614382814
+  participants: 0
+  evented_at: 2018/02/10 14:00
+- dojo_id: 6
+  event_id: 1865222010431191
+  participants: 3
+  evented_at: 2017/01/06 17:00
+- dojo_id: 6
+  event_id: 1835128183401486
+  participants: 2
+  evented_at: 2017/01/13 17:00
+- dojo_id: 6
+  event_id: 1186702064771423
+  participants: 1
+  evented_at: 2017/01/27 17:00
+- dojo_id: 6
+  event_id: 2220411321516306
+  participants: 1
+  evented_at: 2017/02/03 17:00
+- dojo_id: 6
+  event_id: 673119719541358
+  participants: 0
+  evented_at: 2017/02/10 17:00
+- dojo_id: 6
+  event_id: 1319860011370057
+  participants: 1
+  evented_at: 2017/02/17 17:00
+- dojo_id: 6
+  event_id: 1914344322171172
+  participants: 0
+  evented_at: 2017/03/03 17:00
+- dojo_id: 6
+  event_id: 328152047581745
+  participants: 0
+  evented_at: 2017/03/17 17:00
+- dojo_id: 6
+  event_id: 441119272896573
+  participants: 1
+  evented_at: 2017/04/07 17:00
+- dojo_id: 6
+  event_id: 1678767912425005
+  participants: 0
+  evented_at: 2017/04/14 17:00
+- dojo_id: 6
+  event_id: 110597989442050
+  participants: 0
+  evented_at: 2017/04/21 17:00
+- dojo_id: 6
+  event_id: 775565175953056
+  participants: 0
+  evented_at: 2017/04/28 17:00
+- dojo_id: 6
+  event_id: 256117138188618
+  participants: 1
+  evented_at: 2017/05/05 17:00
+- dojo_id: 6
+  event_id: 1671608046478458
+  participants: 0
+  evented_at: 2017/05/12 17:00
+- dojo_id: 6
+  event_id: 1793727127609957
+  participants: 1
+  evented_at: 2017/05/19 17:00
+- dojo_id: 6
+  event_id: 172587459932263
+  participants: 2
+  evented_at: 2017/05/26 17:00
+- dojo_id: 6
+  event_id: 1910196469202571
+  participants: 1
+  evented_at: 2017/06/02 17:00
+- dojo_id: 6
+  event_id: 284209385361031
+  participants: 2
+  evented_at: 2017/06/09 17:00
+- dojo_id: 6
+  event_id: 1462196830507754
+  participants: 2
+  evented_at: 2017/06/23 17:00
+- dojo_id: 6
+  event_id: 1565733450126925
+  participants: 1
+  evented_at: 2017/07/07 17:00
+- dojo_id: 6
+  event_id: 333327940436009
+  participants: 2
+  evented_at: 2017/07/14 17:00
+- dojo_id: 6
+  event_id: 321058928337957
+  participants: 2
+  evented_at: 2017/07/21 17:00
+- dojo_id: 6
+  event_id: 447929425573361
+  participants: 2
+  evented_at: 2017/07/28 17:00
+- dojo_id: 6
+  event_id: 1403226543124771
+  participants: 3
+  evented_at: 2017/08/01 17:00
+- dojo_id: 6
+  event_id: 1545984842127997
+  participants: 2
+  evented_at: 2017/08/11 17:00
+- dojo_id: 6
+  event_id: 1805113596185085
+  participants: 2
+  evented_at: 2017/08/18 17:00
+- dojo_id: 6
+  event_id: 1347827038647907
+  participants: 1
+  evented_at: 2017/08/24 17:00
+- dojo_id: 6
+  event_id: 259141664598096
+  participants: 2
+  evented_at: 2017/09/15 17:00
+- dojo_id: 6
+  event_id: 1380091808754113
+  participants: 2
+  evented_at: 2017/09/29 17:00
+- dojo_id: 6
+  event_id: 135224037117400
+  participants: 2
+  evented_at: 2017/10/13 17:00
+- dojo_id: 6
+  event_id: 179663472583153
+  participants: 2
+  evented_at: 2017/11/10 17:00
+- dojo_id: 6
+  event_id: 2202353063123589
+  participants: 1
+  evented_at: 2017/11/15 17:00
+- dojo_id: 6
+  event_id: 329777157494414
+  participants: 1
+  evented_at: 2017/11/17 17:00
+- dojo_id: 6
+  event_id: 129727111033945
+  participants: 2
+  evented_at: 2017/12/01 17:00
+- dojo_id: 6
+  event_id: 867615536743076
+  participants: 1
+  evented_at: 2017/12/08 17:00
+- dojo_id: 6
+  event_id: 1593897837298042
+  participants: 3
+  evented_at: 2017/12/22 17:00
+- dojo_id: 6
+  event_id: 1175989775864742
+  participants: 3
+  evented_at: 2018/01/05 15:30
+- dojo_id: 6
+  event_id: 167288794001704
+  participants: 2
+  evented_at: 2018/02/02 17:00
+- dojo_id: 6
+  event_id: 524960831224354
+  participants: 2
+  evented_at: 2018/02/09 17:00
+- dojo_id: 6
+  event_id: 2267404493486449
+  participants: 3
+  evented_at: 2018/02/16 17:00
+- dojo_id: 6
+  event_id: 183374182408242
+  participants: 2
+  evented_at: 2018/02/23 17:00
+- dojo_id: 6
+  event_id: 172697436685312
+  participants: 3
+  evented_at: 2018/03/16 17:00
+- dojo_id: 6
+  event_id: 171305233503888
+  participants: 1
+  evented_at: 2018/03/23 17:00
+- dojo_id: 6
+  event_id: 1786938384945904
+  participants: 2
+  evented_at: 2018/03/30 17:00
+- dojo_id: 6
+  event_id: 1761012693963604
+  participants: 3
+  evented_at: 2018/04/06 17:00
+- dojo_id: 10
+  event_id: 387222941352275
+  participants: 3
+  evented_at: 2012/11/25 13:30
+- dojo_id: 10
+  event_id: 474380795948040
+  participants: 3
+  evented_at: 2012/12/08 13:30
+- dojo_id: 10
+  event_id: 460957330612462
+  participants: 5
+  evented_at: 2012/12/23 13:30
+- dojo_id: 10
+  event_id: 547500775277674
+  participants: 1
+  evented_at: 2013/01/12 13:30
+- dojo_id: 10
+  event_id: 317327435044191
+  participants: 5
+  evented_at: 2013/01/27 13:30
+- dojo_id: 10
+  event_id: 436296756449051
+  participants: 3
+  evented_at: 2013/02/10 13:30
+- dojo_id: 10
+  event_id: 406024999479070
+  participants: 4
+  evented_at: 2013/02/24 13:30
+- dojo_id: 10
+  event_id: 495215710535984
+  participants: 5
+  evented_at: 2013/03/10 12:30
+- dojo_id: 10
+  event_id: 157475031075900
+  participants: 2
+  evented_at: 2013/03/24 11:00
+- dojo_id: 10
+  event_id: 129312803922507
+  participants: 3
+  evented_at: 2013/04/14 13:30
+- dojo_id: 10
+  event_id: 137493943105085
+  participants: 3
+  evented_at: 2013/04/28 13:30
+- dojo_id: 10
+  event_id: 519582071438308
+  participants: 2
+  evented_at: 2013/05/12 13:30
+- dojo_id: 10
+  event_id: 496149750450773
+  participants: 1
+  evented_at: 2013/05/19 10:00
+- dojo_id: 10
+  event_id: 165887810239120
+  participants: 3
+  evented_at: 2013/05/26 13:30
+- dojo_id: 10
+  event_id: 192716037550262
+  participants: 1
+  evented_at: 2013/06/09 13:30
+- dojo_id: 10
+  event_id: 388116921294157
+  participants: 3
+  evented_at: 2013/06/23 13:30
+- dojo_id: 10
+  event_id: 555957101107252
+  participants: 2
+  evented_at: 2013/07/15 13:30
+- dojo_id: 10
+  event_id: 435558176559071
+  participants: 3
+  evented_at: 2013/08/25 13:30
+- dojo_id: 10
+  event_id: 197019427135765
+  participants: 1
+  evented_at: 2013/09/08 13:30
+- dojo_id: 10
+  event_id: 523092061111703
+  participants: 1
+  evented_at: 2013/09/22 13:30
+- dojo_id: 10
+  event_id: 522773974477219
+  participants: 3
+  evented_at: 2013/10/13 10:00
+- dojo_id: 10
+  event_id: 530836623651464
+  participants: 2
+  evented_at: 2013/10/27 13:30
+- dojo_id: 10
+  event_id: 411668398962112
+  participants: 2
+  evented_at: 2013/11/10 13:30
+- dojo_id: 10
+  event_id: 178989245626134
+  participants: 3
+  evented_at: 2013/11/24 13:30
+- dojo_id: 10
+  event_id: 185088465018561
+  participants: 1
+  evented_at: 2013/12/08 13:30
+- dojo_id: 10
+  event_id: 433667180095660
+  participants: 3
+  evented_at: 2013/12/22 11:30
+- dojo_id: 10
+  event_id: 1410339189206442
+  participants: 3
+  evented_at: 2014/01/12 13:30
+- dojo_id: 10
+  event_id: 1480485965511910
+  participants: 1
+  evented_at: 2014/01/26 13:30
+- dojo_id: 10
+  event_id: 491834767593373
+  participants: 3
+  evented_at: 2014/02/09 13:30
+- dojo_id: 10
+  event_id: 510342592418431
+  participants: 3
+  evented_at: 2014/02/23 13:30
+- dojo_id: 10
+  event_id: 806550906025724
+  participants: 3
+  evented_at: 2014/03/09 13:30
+- dojo_id: 10
+  event_id: 530637247054051
+  participants: 3
+  evented_at: 2014/03/23 13:30
+- dojo_id: 10
+  event_id: 1495301040691776
+  participants: 5
+  evented_at: 2014/04/13 13:30
+- dojo_id: 10
+  event_id: 1480929242120115
+  participants: 3
+  evented_at: 2014/04/27 13:30
+- dojo_id: 10
+  event_id: 1396619187289651
+  participants: 6
+  evented_at: 2014/05/11 13:30
+- dojo_id: 10
+  event_id: 676444225755848
+  participants: 4
+  evented_at: 2014/05/25 13:30
+- dojo_id: 10
+  event_id: 301087016724069
+  participants: 3
+  evented_at: 2014/06/08 13:30
+- dojo_id: 10
+  event_id: 420831038058499
+  participants: 2
+  evented_at: 2014/06/22 13:30
+- dojo_id: 10
+  event_id: 711063425622311
+  participants: 2
+  evented_at: 2014/07/13 13:30
+- dojo_id: 10
+  event_id: 691873910847628
+  participants: 4
+  evented_at: 2014/07/27 13:30
+- dojo_id: 10
+  event_id: 323460614489498
+  participants: 1
+  evented_at: 2014/08/05 10:30
+- dojo_id: 10
+  event_id: 515923575174445
+  participants: 2
+  evented_at: 2014/08/10 13:30
+- dojo_id: 10
+  event_id: 1509266672619992
+  participants: 1
+  evented_at: 2014/08/19 10:30
+- dojo_id: 10
+  event_id: 768809653176992
+  participants: 5
+  evented_at: 2014/08/24 11:30
+- dojo_id: 10
+  event_id: 720403118031981
+  participants: 2
+  evented_at: 2014/09/14 13:30
+- dojo_id: 10
+  event_id: 324108981094224
+  participants: 2
+  evented_at: 2014/09/28 13:30
+- dojo_id: 10
+  event_id: 789495784448365
+  participants: 1
+  evented_at: 2014/10/12 13:30
+- dojo_id: 10
+  event_id: 459313990873281
+  participants: 2
+  evented_at: 2014/10/26 13:30
+- dojo_id: 10
+  event_id: 474795299329725
+  participants: 3
+  evented_at: 2014/11/09 13:30
+- dojo_id: 10
+  event_id: 1521287018127875
+  participants: 2
+  evented_at: 2014/11/23 13:30
+- dojo_id: 10
+  event_id: 556240847853978
+  participants: 2
+  evented_at: 2014/12/14 13:30
+- dojo_id: 10
+  event_id: 605029892936757
+  participants: 3
+  evented_at: 2014/12/27 13:30
+- dojo_id: 10
+  event_id: 1583332955229557
+  participants: 2
+  evented_at: 2015/01/10 13:30
+- dojo_id: 10
+  event_id: 778092195591556
+  participants: 2
+  evented_at: 2015/01/24 13:30
+- dojo_id: 10
+  event_id: 885831464802757
+  participants: 3
+  evented_at: 2015/02/08 13:30
+- dojo_id: 10
+  event_id: 845694292157043
+  participants: 3
+  evented_at: 2015/02/22 13:30
+- dojo_id: 10
+  event_id: 1378052885846552
+  participants: 1
+  evented_at: 2015/03/08 13:30
+- dojo_id: 10
+  event_id: 918355254864596
+  participants: 2
+  evented_at: 2015/03/22 13:30
+- dojo_id: 10
+  event_id: 367612376758593
+  participants: 4
+  evented_at: 2015/04/12 13:00
+- dojo_id: 10
+  event_id: 1563014733962465
+  participants: 3
+  evented_at: 2015/04/26 13:30
+- dojo_id: 10
+  event_id: 836897046347269
+  participants: 2
+  evented_at: 2015/05/10 13:30
+- dojo_id: 10
+  event_id: 1434993483473068
+  participants: 5
+  evented_at: 2015/05/24 13:30
+- dojo_id: 10
+  event_id: 1452246185086003
+  participants: 5
+  evented_at: 2015/06/14 13:30
+- dojo_id: 10
+  event_id: 1439402629700090
+  participants: 3
+  evented_at: 2015/06/28 13:30
+- dojo_id: 10
+  event_id: 132842030381939
+  participants: 3
+  evented_at: 2015/07/12 13:30
+- dojo_id: 10
+  event_id: 1621314688156385
+  participants: 5
+  evented_at: 2015/08/23 13:30
+- dojo_id: 10
+  event_id: 727539214035508
+  participants: 6
+  evented_at: 2015/09/13 13:30
+- dojo_id: 10
+  event_id: 1058221144196864
+  participants: 5
+  evented_at: 2015/09/27 13:30
+- dojo_id: 10
+  event_id: 1165767173451155
+  participants: 5
+  evented_at: 2015/10/11 13:30
+- dojo_id: 10
+  event_id: 1651046741846350
+  participants: 4
+  evented_at: 2015/10/25 13:30
+- dojo_id: 10
+  event_id: 901095119975444
+  participants: 2
+  evented_at: 2015/11/08 13:30
+- dojo_id: 10
+  event_id: 726033614163764
+  participants: 4
+  evented_at: 2015/11/22 13:30
+- dojo_id: 10
+  event_id: 1166114033417488
+  participants: 5
+  evented_at: 2015/12/13 13:30
+- dojo_id: 10
+  event_id: 1179778075384442
+  participants: 3
+  evented_at: 2015/12/27 13:30
+- dojo_id: 10
+  event_id: 649570675145409
+  participants: 5
+  evented_at: 2016/01/10 13:30
+- dojo_id: 10
+  event_id: 203657463316039
+  participants: 3
+  evented_at: 2016/01/24 13:30
+- dojo_id: 10
+  event_id: 1694605567490260
+  participants: 5
+  evented_at: 2016/02/14 13:30
+- dojo_id: 10
+  event_id: 1034418876596925
+  participants: 4
+  evented_at: 2016/02/28 13:30
+- dojo_id: 10
+  event_id: 1680289192188035
+  participants: 4
+  evented_at: 2016/03/13 13:30
+- dojo_id: 10
+  event_id: 449135715293431
+  participants: 2
+  evented_at: 2016/04/10 13:00
+- dojo_id: 10
+  event_id: 1114439031910626
+  participants: 4
+  evented_at: 2016/04/24 13:00
+- dojo_id: 10
+  event_id: 1693726570891661
+  participants: 3
+  evented_at: 2016/05/08 13:00
+- dojo_id: 10
+  event_id: 1123133621086185
+  participants: 5
+  evented_at: 2016/05/22 13:00
+- dojo_id: 10
+  event_id: 1624718334517797
+  participants: 2
+  evented_at: 2016/06/12 13:00
+- dojo_id: 10
+  event_id: 259959577694156
+  participants: 3
+  evented_at: 2016/06/26 13:00
+- dojo_id: 10
+  event_id: 267487330277960
+  participants: 3
+  evented_at: 2016/07/10 13:00
+- dojo_id: 10
+  event_id: 1219364568098505
+  participants: 2
+  evented_at: 2016/07/24 13:30
+- dojo_id: 10
+  event_id: 269219393456934
+  participants: 3
+  evented_at: 2016/08/21 13:30
+- dojo_id: 10
+  event_id: 989800641146429
+  participants: 4
+  evented_at: 2016/09/11 13:30
+- dojo_id: 10
+  event_id: 712200735595383
+  participants: 2
+  evented_at: 2016/09/25 13:30
+- dojo_id: 10
+  event_id: 247530932311141
+  participants: 4
+  evented_at: 2016/10/09 13:30
+- dojo_id: 10
+  event_id: 1659287021029300
+  participants: 2
+  evented_at: 2016/10/23 13:30
+- dojo_id: 10
+  event_id: 1786922758263203
+  participants: 2
+  evented_at: 2016/11/13 13:30
+- dojo_id: 10
+  event_id: 1236591519694303
+  participants: 2
+  evented_at: 2016/11/27 13:30
+- dojo_id: 10
+  event_id: 1190577344365720
+  participants: 2
+  evented_at: 2016/12/11 13:30
+- dojo_id: 10
+  event_id: 226004744504973
+  participants: 2
+  evented_at: 2016/12/25 13:30
+- dojo_id: 10
+  event_id: 856990271119968
+  participants: 2
+  evented_at: 2017/01/08 13:30
+- dojo_id: 10
+  event_id: 1423106601055588
+  participants: 3
+  evented_at: 2017/01/22 13:30
+- dojo_id: 10
+  event_id: 210084426063034
+  participants: 1
+  evented_at: 2017/02/12 13:30
+- dojo_id: 10
+  event_id: 683399645166218
+  participants: 3
+  evented_at: 2017/02/26 13:30
+- dojo_id: 10
+  event_id: 1913408145560248
+  participants: 2
+  evented_at: 2017/03/12 13:00
+- dojo_id: 10
+  event_id: 299907927093748
+  participants: 1
+  evented_at: 2017/03/19 13:00
+- dojo_id: 10
+  event_id: 632671366919252
+  participants: 3
+  evented_at: 2017/04/09 13:00
+- dojo_id: 10
+  event_id: 1461531937225622
+  participants: 5
+  evented_at: 2017/04/23 13:00
+- dojo_id: 10
+  event_id: 117362455487038
+  participants: 3
+  evented_at: 2017/05/14 13:00
+- dojo_id: 10
+  event_id: 116209682291968
+  participants: 2
+  evented_at: 2017/05/28 13:00
+- dojo_id: 10
+  event_id: 131082930793323
+  participants: 2
+  evented_at: 2017/06/11 13:00
+- dojo_id: 10
+  event_id: 250019768814919
+  participants: 2
+  evented_at: 2017/06/25 13:00
+- dojo_id: 10
+  event_id: 129216334331361
+  participants: 4
+  evented_at: 2017/07/09 13:00
+- dojo_id: 10
+  event_id: 1604932919580532
+  participants: 2
+  evented_at: 2017/07/23 13:00
+- dojo_id: 10
+  event_id: 1918533718388767
+  participants: 2
+  evented_at: 2017/08/06 10:30
+- dojo_id: 10
+  event_id: 1899478400376817
+  participants: 1
+  evented_at: 2017/08/20 13:00
+- dojo_id: 10
+  event_id: 114064885935789
+  participants: 3
+  evented_at: 2017/08/27 13:00
+- dojo_id: 10
+  event_id: 169676856935118
+  participants: 3
+  evented_at: 2017/09/10 13:00
+- dojo_id: 10
+  event_id: 133105093976863
+  participants: 4
+  evented_at: 2017/09/24 13:00
+- dojo_id: 10
+  event_id: 475878226129738
+  participants: 2
+  evented_at: 2017/10/08 13:00
+- dojo_id: 10
+  event_id: 118903968803859
+  participants: 2
+  evented_at: 2017/10/22 13:00
+- dojo_id: 10
+  event_id: 125500978166443
+  participants: 1
+  evented_at: 2017/10/29 13:00
+- dojo_id: 10
+  event_id: 322152118253771
+  participants: 2
+  evented_at: 2017/11/12 13:00
+- dojo_id: 10
+  event_id: 194086334486873
+  participants: 4
+  evented_at: 2017/11/26 13:00
+- dojo_id: 10
+  event_id: 153476485381376
+  participants: 2
+  evented_at: 2017/12/10 13:00
+- dojo_id: 10
+  event_id: 302142596972883
+  participants: 3
+  evented_at: 2017/12/24 11:00
+- dojo_id: 10
+  event_id: 1401338526642061
+  participants: 2
+  evented_at: 2018/01/14 13:00
+- dojo_id: 10
+  event_id: 300627327125410
+  participants: 3
+  evented_at: 2018/01/28 13:00
+- dojo_id: 10
+  event_id: 148010932661858
+  participants: 1
+  evented_at: 2018/02/11 13:00
+- dojo_id: 10
+  event_id: 407544226342971
+  participants: 1
+  evented_at: 2018/02/25 13:00
+- dojo_id: 10
+  event_id: 278816485986251
+  participants: 3
+  evented_at: 2018/03/11 13:00
+- dojo_id: 10
+  event_id: 159876244716378
+  participants: 3
+  evented_at: 2018/03/25 13:00
+- dojo_id: 10
+  event_id: 137873407049859
+  participants: 1
+  evented_at: 2018/04/08 13:00
+- dojo_id: 12
+  event_id: 1828285290731865
+  participants: 5
+  evented_at: 2016/01/24 15:00
+- dojo_id: 12
+  event_id: 537818193065271
+  participants: 1
+  evented_at: 2016/02/28 14:00
+- dojo_id: 12
+  event_id: 205725903124156
+  participants: 7
+  evented_at: 2016/04/03 14:00
+- dojo_id: 12
+  event_id: 1018023028283290
+  participants: 2
+  evented_at: 2016/05/22 14:30
+- dojo_id: 12
+  event_id: 589106227927359
+  participants: 3
+  evented_at: 2016/06/05 14:30
+- dojo_id: 12
+  event_id: 156093691461017
+  participants: 3
+  evented_at: 2016/07/03 14:30
+- dojo_id: 12
+  event_id: 1222854881107185
+  participants: 4
+  evented_at: 2016/08/07 14:30
+- dojo_id: 12
+  event_id: 1065320513578389
+  participants: 5
+  evented_at: 2016/09/04 14:30
+- dojo_id: 12
+  event_id: 253647818365241
+  participants: 4
+  evented_at: 2016/10/02 14:30
+- dojo_id: 12
+  event_id: 767406556732147
+  participants: 3
+  evented_at: 2016/11/06 14:30
+- dojo_id: 12
+  event_id: 1135408459891053
+  participants: 2
+  evented_at: 2016/12/04 14:30
+- dojo_id: 12
+  event_id: 213726759087564
+  participants: 4
+  evented_at: 2017/01/08 14:30
+- dojo_id: 12
+  event_id: 175267052956522
+  participants: 7
+  evented_at: 2017/02/05 14:30
+- dojo_id: 12
+  event_id: 1849901971938058
+  participants: 5
+  evented_at: 2017/03/05 14:30
+- dojo_id: 12
+  event_id: 1871675549739941
+  participants: 9
+  evented_at: 2017/04/02 14:30
+- dojo_id: 12
+  event_id: 629044113958443
+  participants: 15
+  evented_at: 2017/05/07 13:00
+- dojo_id: 12
+  event_id: 224127238081353
+  participants: 5
+  evented_at: 2017/06/04 14:30
+- dojo_id: 12
+  event_id: 242441312912233
+  participants: 5
+  evented_at: 2017/07/02 14:30
+- dojo_id: 12
+  event_id: 144011012848067
+  participants: 5
+  evented_at: 2017/08/06 14:30
+- dojo_id: 12
+  event_id: 129212117708698
+  participants: 3
+  evented_at: 2017/09/03 14:30
+- dojo_id: 12
+  event_id: 475617552809978
+  participants: 6
+  evented_at: 2017/10/01 14:30
+- dojo_id: 12
+  event_id: 151021858984695
+  participants: 5
+  evented_at: 2017/12/03 14:30
+- dojo_id: 12
+  event_id: 389754194798445
+  participants: 8
+  evented_at: 2018/01/07 14:30
+- dojo_id: 12
+  event_id: 562343147452561
+  participants: 14
+  evented_at: 2018/02/04 14:30
+- dojo_id: 12
+  event_id: 152129088806762
+  participants: 8
+  evented_at: 2018/03/04 14:30
+- dojo_id: 12
+  event_id: 783435361841855
+  participants: 7
+  evented_at: 2018/04/01 14:30
+- dojo_id: 17
+  event_id: 821389741243846
+  participants: 8
+  evented_at: 2012/04/09 06:00
+- dojo_id: 17
+  event_id: 885407574852901
+  participants: 9
+  evented_at: 2012/04/23 06:00
+- dojo_id: 17
+  event_id: 400821783272249
+  participants: 7
+  evented_at: 2012/05/03 15:00
+- dojo_id: 17
+  event_id: 911741208869868
+  participants: 0
+  evented_at: 2012/05/07 06:00
+- dojo_id: 17
+  event_id: 220876751361894
+  participants: 9
+  evented_at: 2012/05/13 13:30
+- dojo_id: 17
+  event_id: 451166431576211
+  participants: 5
+  evented_at: 2012/05/20 13:30
+- dojo_id: 17
+  event_id: 297106010375516
+  participants: 10
+  evented_at: 2012/06/03 13:30
+- dojo_id: 17
+  event_id: 248367788603101
+  participants: 2
+  evented_at: 2012/06/10 13:30
+- dojo_id: 17
+  event_id: 441986985820384
+  participants: 8
+  evented_at: 2012/06/17 13:30
+- dojo_id: 17
+  event_id: 401418479911133
+  participants: 4
+  evented_at: 2012/06/24 13:30
+- dojo_id: 17
+  event_id: 320675631350195
+  participants: 10
+  evented_at: 2012/07/01 13:30
+- dojo_id: 17
+  event_id: 427732400600971
+  participants: 2
+  evented_at: 2012/07/08 13:30
+- dojo_id: 17
+  event_id: 328649567217983
+  participants: 4
+  evented_at: 2012/07/15 13:30
+- dojo_id: 17
+  event_id: 388084371250309
+  participants: 5
+  evented_at: 2012/07/22 13:30
+- dojo_id: 17
+  event_id: 383029328429599
+  participants: 3
+  evented_at: 2012/07/29 13:30
+- dojo_id: 17
+  event_id: 181278075338706
+  participants: 4
+  evented_at: 2012/08/02 14:00
+- dojo_id: 17
+  event_id: 401260306596948
+  participants: 3
+  evented_at: 2012/08/05 13:30
+- dojo_id: 17
+  event_id: 387240681340077
+  participants: 0
+  evented_at: 2012/08/12 13:30
+- dojo_id: 17
+  event_id: 145264478944839
+  participants: 1
+  evented_at: 2012/08/19 13:30
+- dojo_id: 17
+  event_id: 425829517468915
+  participants: 3
+  evented_at: 2012/08/20 10:00
+- dojo_id: 17
+  event_id: 267976233315712
+  participants: 2
+  evented_at: 2012/08/23 14:00
+- dojo_id: 17
+  event_id: 339568092796015
+  participants: 2
+  evented_at: 2012/08/26 13:30
+- dojo_id: 17
+  event_id: 441919112517661
+  participants: 1
+  evented_at: 2012/09/02 13:30
+- dojo_id: 17
+  event_id: 447034412007709
+  participants: 6
+  evented_at: 2012/09/07 11:00
+- dojo_id: 17
+  event_id: 512707318755082
+  participants: 4
+  evented_at: 2012/09/09 13:30
+- dojo_id: 17
+  event_id: 499264423436200
+  participants: 1
+  evented_at: 2012/09/16 13:30
+- dojo_id: 17
+  event_id: 349312771824298
+  participants: 3
+  evented_at: 2012/09/23 13:30
+- dojo_id: 17
+  event_id: 231939576932115
+  participants: 8
+  evented_at: 2012/09/25 16:30
+- dojo_id: 17
+  event_id: 149731271835836
+  participants: 1
+  evented_at: 2012/10/07 13:30
+- dojo_id: 17
+  event_id: 505896092754165
+  participants: 1
+  evented_at: 2012/10/14 13:30
+- dojo_id: 17
+  event_id: 320914654674130
+  participants: 2
+  evented_at: 2012/10/21 13:30
+- dojo_id: 17
+  event_id: 498403780171970
+  participants: 9
+  evented_at: 2012/10/23 16:30
+- dojo_id: 17
+  event_id: 290060781098314
+  participants: 1
+  evented_at: 2012/10/28 13:30
+- dojo_id: 17
+  event_id: 518820548129508
+  participants: 0
+  evented_at: 2012/11/04 12:30
+- dojo_id: 17
+  event_id: 359455117482723
+  participants: 2
+  evented_at: 2012/11/11 13:30
+- dojo_id: 17
+  event_id: 221401197990324
+  participants: 7
+  evented_at: 2012/11/18 13:30
+- dojo_id: 17
+  event_id: 443252355731724
+  participants: 3
+  evented_at: 2012/11/25 13:30
+- dojo_id: 17
+  event_id: 195670910569432
+  participants: 2
+  evented_at: 2012/11/27 16:30
+- dojo_id: 17
+  event_id: 378852342199581
+  participants: 1
+  evented_at: 2012/12/02 13:30
+- dojo_id: 17
+  event_id: 442915859090631
+  participants: 1
+  evented_at: 2012/12/09 13:30
+- dojo_id: 17
+  event_id: 295348880581520
+  participants: 1
+  evented_at: 2012/12/16 13:30
+- dojo_id: 17
+  event_id: 202471706556197
+  participants: 8
+  evented_at: 2012/12/25 14:00
+- dojo_id: 17
+  event_id: 385147541575545
+  participants: 4
+  evented_at: 2013/01/06 13:30
+- dojo_id: 17
+  event_id: 537036279640881
+  participants: 6
+  evented_at: 2013/01/13 13:30
+- dojo_id: 17
+  event_id: 133872306775931
+  participants: 2
+  evented_at: 2013/01/20 13:30
+- dojo_id: 17
+  event_id: 198516473606175
+  participants: 6
+  evented_at: 2013/01/23 18:00
+- dojo_id: 17
+  event_id: 493685984004133
+  participants: 2
+  evented_at: 2013/01/27 13:30
+- dojo_id: 17
+  event_id: 559780477382162
+  participants: 6
+  evented_at: 2013/01/29 16:30
+- dojo_id: 17
+  event_id: 435689096504263
+  participants: 2
+  evented_at: 2013/02/03 13:30
+- dojo_id: 17
+  event_id: 228080403994856
+  participants: 2
+  evented_at: 2013/02/10 13:30
+- dojo_id: 17
+  event_id: 587805427913639
+  participants: 0
+  evented_at: 2013/02/17 13:30
+- dojo_id: 17
+  event_id: 247075835428324
+  participants: 3
+  evented_at: 2013/02/24 13:30
+- dojo_id: 17
+  event_id: 331545596946160
+  participants: 7
+  evented_at: 2013/03/03 13:30
+- dojo_id: 17
+  event_id: 572974186049013
+  participants: 3
+  evented_at: 2013/03/10 12:30
+- dojo_id: 17
+  event_id: 555074321179978
+  participants: 5
+  evented_at: 2013/03/26 16:30
+- dojo_id: 17
+  event_id: 577593432251302
+  participants: 16
+  evented_at: 2013/04/14 13:30
+- dojo_id: 17
+  event_id: 138594829658359
+  participants: 2
+  evented_at: 2013/04/28 13:30
+- dojo_id: 17
+  event_id: 549196798458706
+  participants: 2
+  evented_at: 2013/05/05 13:30
+- dojo_id: 17
+  event_id: 102729936597708
+  participants: 1
+  evented_at: 2013/05/12 13:30
+- dojo_id: 17
+  event_id: 112669068903404
+  participants: 1
+  evented_at: 2013/05/19 13:30
+- dojo_id: 17
+  event_id: 319735438154802
+  participants: 5
+  evented_at: 2013/05/26 13:30
+- dojo_id: 17
+  event_id: 158212667678867
+  participants: 6
+  evented_at: 2013/06/02 13:30
+- dojo_id: 17
+  event_id: 120849734779076
+  participants: 6
+  evented_at: 2013/06/09 13:30
+- dojo_id: 17
+  event_id: 572226119464360
+  participants: 3
+  evented_at: 2013/06/16 13:30
+- dojo_id: 17
+  event_id: 379342145511359
+  participants: 3
+  evented_at: 2013/06/23 13:30
+- dojo_id: 17
+  event_id: 375167555926357
+  participants: 2
+  evented_at: 2013/06/30 13:30
+- dojo_id: 17
+  event_id: 428461207251942
+  participants: 1
+  evented_at: 2013/07/07 13:30
+- dojo_id: 17
+  event_id: 143090652559213
+  participants: 0
+  evented_at: 2013/07/14 13:30
+- dojo_id: 17
+  event_id: 591697607520318
+  participants: 3
+  evented_at: 2013/07/21 13:30
+- dojo_id: 17
+  event_id: 284371955035831
+  participants: 1
+  evented_at: 2013/07/28 13:30
+- dojo_id: 17
+  event_id: 192452610923512
+  participants: 0
+  evented_at: 2013/08/04 13:30
+- dojo_id: 17
+  event_id: 640609509283967
+  participants: 1
+  evented_at: 2013/08/11 13:30
+- dojo_id: 17
+  event_id: 133338660209930
+  participants: 1
+  evented_at: 2013/08/18 13:30
+- dojo_id: 17
+  event_id: 563587930373885
+  participants: 1
+  evented_at: 2013/08/25 13:30
+- dojo_id: 17
+  event_id: 555700637822190
+  participants: 2
+  evented_at: 2013/09/01 13:30
+- dojo_id: 17
+  event_id: 419417618169630
+  participants: 1
+  evented_at: 2013/09/08 13:30
+- dojo_id: 17
+  event_id: 412638012180291
+  participants: 0
+  evented_at: 2013/09/15 13:30
+- dojo_id: 17
+  event_id: 162011553991884
+  participants: 1
+  evented_at: 2013/09/22 13:30
+- dojo_id: 17
+  event_id: 629197213781751
+  participants: 4
+  evented_at: 2013/09/29 13:30
+- dojo_id: 17
+  event_id: 576085072452189
+  participants: 0
+  evented_at: 2013/10/06 13:30
+- dojo_id: 17
+  event_id: 570833359643686
+  participants: 3
+  evented_at: 2013/10/13 13:30
+- dojo_id: 17
+  event_id: 661773863834631
+  participants: 2
+  evented_at: 2013/10/20 13:30
+- dojo_id: 17
+  event_id: 1423182211241581
+  participants: 0
+  evented_at: 2013/10/27 13:30
+- dojo_id: 17
+  event_id: 193007274218062
+  participants: 1
+  evented_at: 2013/11/03 13:30
+- dojo_id: 17
+  event_id: 306652776142074
+  participants: 2
+  evented_at: 2013/11/10 13:30
+- dojo_id: 17
+  event_id: 461103734005066
+  participants: 1
+  evented_at: 2013/11/17 13:30
+- dojo_id: 17
+  event_id: 532550280165455
+  participants: 2
+  evented_at: 2013/11/24 13:30
+- dojo_id: 17
+  event_id: 772584819424855
+  participants: 1
+  evented_at: 2013/12/01 13:30
+- dojo_id: 17
+  event_id: 194850810703103
+  participants: 0
+  evented_at: 2013/12/08 13:30
+- dojo_id: 17
+  event_id: 570054993066011
+  participants: 4
+  evented_at: 2013/12/15 13:30
+- dojo_id: 17
+  event_id: 262635600551489
+  participants: 5
+  evented_at: 2013/12/22 13:30
+- dojo_id: 17
+  event_id: 628967207162410
+  participants: 5
+  evented_at: 2013/12/29 13:30
+- dojo_id: 17
+  event_id: 1425394531029064
+  participants: 5
+  evented_at: 2014/01/12 13:30
+- dojo_id: 17
+  event_id: 1431713057062786
+  participants: 2
+  evented_at: 2014/01/19 13:30
+- dojo_id: 17
+  event_id: 542616715833895
+  participants: 1
+  evented_at: 2014/01/26 13:30
+- dojo_id: 17
+  event_id: 595131050560161
+  participants: 2
+  evented_at: 2014/02/02 13:30
+- dojo_id: 17
+  event_id: 642244299175865
+  participants: 1
+  evented_at: 2014/02/09 13:30
+- dojo_id: 17
+  event_id: 202028066672092
+  participants: 8
+  evented_at: 2014/02/16 13:30
+- dojo_id: 17
+  event_id: 585337804888407
+  participants: 3
+  evented_at: 2014/02/23 13:30
+- dojo_id: 17
+  event_id: 621457051235891
+  participants: 6
+  evented_at: 2014/03/02 13:30
+- dojo_id: 17
+  event_id: 210558612467367
+  participants: 1
+  evented_at: 2014/03/09 13:30
+- dojo_id: 17
+  event_id: 593491224065316
+  participants: 0
+  evented_at: 2014/03/16 13:30
+- dojo_id: 17
+  event_id: 519956148120465
+  participants: 3
+  evented_at: 2014/03/23 13:30
+- dojo_id: 17
+  event_id: 1413277898919529
+  participants: 1
+  evented_at: 2014/03/30 13:30
+- dojo_id: 17
+  event_id: 1436538903256711
+  participants: 7
+  evented_at: 2014/04/06 13:30
+- dojo_id: 17
+  event_id: 491648167602419
+  participants: 6
+  evented_at: 2014/04/13 13:30
+- dojo_id: 17
+  event_id: 1419320344992090
+  participants: 10
+  evented_at: 2014/04/27 13:30
+- dojo_id: 17
+  event_id: 1416576431939972
+  participants: 9
+  evented_at: 2014/04/27 14:30
+- dojo_id: 17
+  event_id: 264065467108315
+  participants: 4
+  evented_at: 2014/05/04 13:30
+- dojo_id: 17
+  event_id: 276953462471652
+  participants: 6
+  evented_at: 2014/05/18 13:30
+- dojo_id: 17
+  event_id: 224007091128952
+  participants: 6
+  evented_at: 2014/05/25 13:30
+- dojo_id: 17
+  event_id: 1397872763834906
+  participants: 6
+  evented_at: 2014/06/08 13:30
+- dojo_id: 17
+  event_id: 524910510969372
+  participants: 3
+  evented_at: 2014/06/15 13:30
+- dojo_id: 17
+  event_id: 544578602331721
+  participants: 1
+  evented_at: 2014/06/22 13:30
+- dojo_id: 17
+  event_id: 489739947826291
+  participants: 3
+  evented_at: 2014/06/29 13:30
+- dojo_id: 17
+  event_id: 333779863440091
+  participants: 3
+  evented_at: 2014/07/06 13:30
+- dojo_id: 17
+  event_id: 730135533711476
+  participants: 5
+  evented_at: 2014/07/13 13:30
+- dojo_id: 17
+  event_id: 1453660694892057
+  participants: 2
+  evented_at: 2014/07/20 13:30
+- dojo_id: 17
+  event_id: 333939453424137
+  participants: 2
+  evented_at: 2014/07/27 13:30
+- dojo_id: 17
+  event_id: 716115168423692
+  participants: 7
+  evented_at: 2014/08/03 13:30
+- dojo_id: 17
+  event_id: 1432437460378363
+  participants: 11
+  evented_at: 2014/08/17 13:30
+- dojo_id: 17
+  event_id: 526933090769212
+  participants: 6
+  evented_at: 2014/08/24 13:30
+- dojo_id: 17
+  event_id: 738140736231608
+  participants: 5
+  evented_at: 2014/08/31 13:30
+- dojo_id: 17
+  event_id: 299282053586888
+  participants: 4
+  evented_at: 2014/09/07 13:30
+- dojo_id: 17
+  event_id: 662108723866654
+  participants: 3
+  evented_at: 2014/09/14 13:30
+- dojo_id: 17
+  event_id: 858938277450455
+  participants: 4
+  evented_at: 2014/09/28 13:30
+- dojo_id: 17
+  event_id: 274490669414032
+  participants: 7
+  evented_at: 2014/10/05 13:30
+- dojo_id: 17
+  event_id: 1476646092611329
+  participants: 2
+  evented_at: 2014/10/12 13:30
+- dojo_id: 17
+  event_id: 1497665787153603
+  participants: 5
+  evented_at: 2014/10/19 13:30
+- dojo_id: 17
+  event_id: 565540416907291
+  participants: 5
+  evented_at: 2014/10/26 13:30
+- dojo_id: 17
+  event_id: 284035738470575
+  participants: 4
+  evented_at: 2014/11/09 13:30
+- dojo_id: 17
+  event_id: 740494432665416
+  participants: 5
+  evented_at: 2014/11/16 13:30
+- dojo_id: 17
+  event_id: 204660959724798
+  participants: 1
+  evented_at: 2014/11/23 13:30
+- dojo_id: 17
+  event_id: 878173398861095
+  participants: 6
+  evented_at: 2014/11/30 13:30
+- dojo_id: 17
+  event_id: 545481868887131
+  participants: 4
+  evented_at: 2014/12/07 13:30
+- dojo_id: 17
+  event_id: 735075753236009
+  participants: 0
+  evented_at: 2014/12/14 13:30
+- dojo_id: 17
+  event_id: 867155989982365
+  participants: 2
+  evented_at: 2014/12/21 13:30
+- dojo_id: 17
+  event_id: 666389723477512
+  participants: 4
+  evented_at: 2014/12/28 13:30
+- dojo_id: 17
+  event_id: 628868473902864
+  participants: 6
+  evented_at: 2015/01/11 13:30
+- dojo_id: 17
+  event_id: 390226287808265
+  participants: 5
+  evented_at: 2015/01/18 13:30
+- dojo_id: 17
+  event_id: 1497810437148724
+  participants: 2
+  evented_at: 2015/01/25 13:30
+- dojo_id: 17
+  event_id: 1531315700468878
+  participants: 0
+  evented_at: 2015/02/01 13:30
+- dojo_id: 17
+  event_id: 1415377058756631
+  participants: 0
+  evented_at: 2015/02/08 13:30
+- dojo_id: 17
+  event_id: 783174435084812
+  participants: 3
+  evented_at: 2015/02/15 13:30
+- dojo_id: 17
+  event_id: 508186529319341
+  participants: 3
+  evented_at: 2015/02/22 13:30
+- dojo_id: 17
+  event_id: 385701244944357
+  participants: 11
+  evented_at: 2015/03/01 17:00
+- dojo_id: 17
+  event_id: 816754921700118
+  participants: 8
+  evented_at: 2015/03/08 13:30
+- dojo_id: 17
+  event_id: 1560302130892023
+  participants: 6
+  evented_at: 2015/03/15 13:30
+- dojo_id: 17
+  event_id: 317301985060377
+  participants: 4
+  evented_at: 2015/03/22 13:30
+- dojo_id: 17
+  event_id: 1580116488923681
+  participants: 6
+  evented_at: 2015/04/05 13:30
+- dojo_id: 17
+  event_id: 425897324250375
+  participants: 8
+  evented_at: 2015/04/12 13:30
+- dojo_id: 17
+  event_id: 349654685235712
+  participants: 15
+  evented_at: 2015/04/19 13:30
+- dojo_id: 17
+  event_id: 1417816288523140
+  participants: 10
+  evented_at: 2015/04/26 13:30
+- dojo_id: 17
+  event_id: 825796870830137
+  participants: 10
+  evented_at: 2015/05/03 13:30
+- dojo_id: 17
+  event_id: 684006508411784
+  participants: 9
+  evented_at: 2015/05/10 13:30
+- dojo_id: 17
+  event_id: 1572012033053588
+  participants: 13
+  evented_at: 2015/05/17 13:30
+- dojo_id: 17
+  event_id: 643896685709833
+  participants: 14
+  evented_at: 2015/05/24 13:30
+- dojo_id: 17
+  event_id: 859775207393178
+  participants: 4
+  evented_at: 2015/05/31 13:30
+- dojo_id: 17
+  event_id: 585803384856498
+  participants: 10
+  evented_at: 2015/06/07 13:30
+- dojo_id: 17
+  event_id: 1123073927709956
+  participants: 8
+  evented_at: 2015/06/14 13:30
+- dojo_id: 17
+  event_id: 718742111569352
+  participants: 9
+  evented_at: 2015/06/21 13:30
+- dojo_id: 17
+  event_id: 1460316354267766
+  participants: 5
+  evented_at: 2015/06/28 13:30
+- dojo_id: 17
+  event_id: 1673629406190122
+  participants: 12
+  evented_at: 2015/07/12 13:30
+- dojo_id: 17
+  event_id: 105626839778857
+  participants: 8
+  evented_at: 2015/07/19 13:30
+- dojo_id: 17
+  event_id: 362604067282957
+  participants: 10
+  evented_at: 2015/07/26 13:30
+- dojo_id: 17
+  event_id: 484930081664911
+  participants: 7
+  evented_at: 2015/08/02 13:30
+- dojo_id: 17
+  event_id: 1626367347603133
+  participants: 6
+  evented_at: 2015/08/09 13:30
+- dojo_id: 17
+  event_id: 1017096114989069
+  participants: 2
+  evented_at: 2015/08/16 13:30
+- dojo_id: 17
+  event_id: 1677950339092440
+  participants: 3
+  evented_at: 2015/08/23 13:30
+- dojo_id: 17
+  event_id: 107928096222341
+  participants: 7
+  evented_at: 2015/08/30 13:30
+- dojo_id: 17
+  event_id: 579293372208774
+  participants: 1
+  evented_at: 2015/09/06 13:30
+- dojo_id: 17
+  event_id: 124279717919807
+  participants: 7
+  evented_at: 2015/09/13 13:30
+- dojo_id: 17
+  event_id: 667082323393180
+  participants: 6
+  evented_at: 2015/09/27 13:30
+- dojo_id: 17
+  event_id: 721688321298056
+  participants: 6
+  evented_at: 2015/10/04 13:30
+- dojo_id: 17
+  event_id: 888920401157680
+  participants: 2
+  evented_at: 2015/10/11 13:30
+- dojo_id: 17
+  event_id: 718191794948715
+  participants: 4
+  evented_at: 2015/10/18 13:30
+- dojo_id: 17
+  event_id: 618806391555538
+  participants: 7
+  evented_at: 2015/10/25 13:30
+- dojo_id: 17
+  event_id: 748731728565699
+  participants: 3
+  evented_at: 2015/11/01 13:30
+- dojo_id: 17
+  event_id: 1641054982831108
+  participants: 11
+  evented_at: 2015/11/08 13:30
+- dojo_id: 17
+  event_id: 517507981735680
+  participants: 4
+  evented_at: 2015/11/15 13:30
+- dojo_id: 17
+  event_id: 1078988905446437
+  participants: 7
+  evented_at: 2015/11/22 13:30
+- dojo_id: 17
+  event_id: 1663828673834251
+  participants: 4
+  evented_at: 2015/11/29 13:30
+- dojo_id: 17
+  event_id: 408049536032408
+  participants: 6
+  evented_at: 2015/12/06 13:30
+- dojo_id: 17
+  event_id: 1669434036606112
+  participants: 9
+  evented_at: 2015/12/13 13:30
+- dojo_id: 17
+  event_id: 897218663647756
+  participants: 9
+  evented_at: 2015/12/20 13:30
+- dojo_id: 17
+  event_id: 971293169612704
+  participants: 5
+  evented_at: 2016/01/10 13:30
+- dojo_id: 17
+  event_id: 969027449810413
+  participants: 11
+  evented_at: 2016/01/17 13:30
+- dojo_id: 17
+  event_id: 1505417546421759
+  participants: 12
+  evented_at: 2016/01/24 13:30
+- dojo_id: 17
+  event_id: 206018856399031
+  participants: 6
+  evented_at: 2016/01/31 13:30
+- dojo_id: 17
+  event_id: 782586355218681
+  participants: 7
+  evented_at: 2016/02/07 13:30
+- dojo_id: 17
+  event_id: 1693738917536683
+  participants: 5
+  evented_at: 2016/02/14 13:30
+- dojo_id: 17
+  event_id: 1632886776962250
+  participants: 8
+  evented_at: 2016/02/21 13:30
+- dojo_id: 17
+  event_id: 1657423141205697
+  participants: 10
+  evented_at: 2016/02/28 13:30
+- dojo_id: 17
+  event_id: 547510588751776
+  participants: 6
+  evented_at: 2016/03/06 13:30
+- dojo_id: 17
+  event_id: 768464759951657
+  participants: 4
+  evented_at: 2016/03/13 13:30
+- dojo_id: 17
+  event_id: 224057764604696
+  participants: 6
+  evented_at: 2016/03/20 13:30
+- dojo_id: 17
+  event_id: 118858135168365
+  participants: 9
+  evented_at: 2016/03/27 13:30
+- dojo_id: 23
+  event_id: 103290186540764
+  participants: 7
+  evented_at: 2013/05/05 12:30
+- dojo_id: 23
+  event_id: 516320411748461
+  participants: 3
+  evented_at: 2013/06/16 09:30
+- dojo_id: 23
+  event_id: 527464033969017
+  participants: 11
+  evented_at: 2013/07/28 09:30
+- dojo_id: 23
+  event_id: 583748445001932
+  participants: 7
+  evented_at: 2013/08/11 15:30
+- dojo_id: 23
+  event_id: 627667690587617
+  participants: 0
+  evented_at: 2013/09/28 15:30
+- dojo_id: 23
+  event_id: 208484312663268
+  participants: 4
+  evented_at: 2013/10/27 09:30
+- dojo_id: 23
+  event_id: 666815220009326
+  participants: 6
+  evented_at: 2013/11/10 13:30
+- dojo_id: 23
+  event_id: 621948531174819
+  participants: 8
+  evented_at: 2014/01/06 17:00
+- dojo_id: 23
+  event_id: 250530631773939
+  participants: 6
+  evented_at: 2014/02/09 12:30
+- dojo_id: 23
+  event_id: 654825751230969
+  participants: 12
+  evented_at: 2014/03/16 10:00
+- dojo_id: 23
+  event_id: 655251744511626
+  participants: 18
+  evented_at: 2014/04/13 10:00
+- dojo_id: 23
+  event_id: 303513319800857
+  participants: 15
+  evented_at: 2014/04/27 10:00
+- dojo_id: 23
+  event_id: 604081123022307
+  participants: 23
+  evented_at: 2014/05/11 10:00
+- dojo_id: 23
+  event_id: 751487264872351
+  participants: 10
+  evented_at: 2014/05/25 10:00
+- dojo_id: 23
+  event_id: 750301705000190
+  participants: 19
+  evented_at: 2014/06/08 10:00
+- dojo_id: 23
+  event_id: 1465360797039639
+  participants: 12
+  evented_at: 2014/06/22 00:00
+- dojo_id: 23
+  event_id: 1439226449673202
+  participants: 14
+  evented_at: 2014/07/13 10:00
+- dojo_id: 23
+  event_id: 674300869305788
+  participants: 9
+  evented_at: 2014/07/20 10:00
+- dojo_id: 23
+  event_id: 672645419488786
+  participants: 12
+  evented_at: 2014/08/10 10:00
+- dojo_id: 23
+  event_id: 524085527725347
+  participants: 11
+  evented_at: 2014/08/24 10:00
+- dojo_id: 23
+  event_id: 722412194472743
+  participants: 8
+  evented_at: 2014/09/14 10:00
+- dojo_id: 23
+  event_id: 295384703995615
+  participants: 8
+  evented_at: 2014/09/28 10:00
+- dojo_id: 23
+  event_id: 1550584305160845
+  participants: 14
+  evented_at: 2014/10/12 10:00
+- dojo_id: 23
+  event_id: 1494970717421720
+  participants: 11
+  evented_at: 2014/10/26 10:00
+- dojo_id: 23
+  event_id: 1626348754259349
+  participants: 16
+  evented_at: 2014/11/23 10:00
+- dojo_id: 23
+  event_id: 823621267696911
+  participants: 12
+  evented_at: 2014/12/14 10:00
+- dojo_id: 23
+  event_id: 566284313505914
+  participants: 13
+  evented_at: 2014/12/21 10:00
+- dojo_id: 23
+  event_id: 904786876207369
+  participants: 32
+  evented_at: 2014/12/21 13:30
+- dojo_id: 23
+  event_id: 759142180790151
+  participants: 16
+  evented_at: 2015/01/11 10:00
+- dojo_id: 23
+  event_id: 811470735559020
+  participants: 9
+  evented_at: 2015/01/25 10:00
+- dojo_id: 23
+  event_id: 1524579421165096
+  participants: 9
+  evented_at: 2015/02/08 10:00
+- dojo_id: 23
+  event_id: 724670037651540
+  participants: 10
+  evented_at: 2015/02/22 10:00
+- dojo_id: 23
+  event_id: 1567375243504018
+  participants: 13
+  evented_at: 2015/03/08 10:00
+- dojo_id: 23
+  event_id: 344265662431394
+  participants: 5
+  evented_at: 2015/03/22 10:00
+- dojo_id: 23
+  event_id: 287796171344083
+  participants: 14
+  evented_at: 2015/04/12 10:00
+- dojo_id: 23
+  event_id: 779661998796329
+  participants: 9
+  evented_at: 2015/04/26 10:00
+- dojo_id: 23
+  event_id: 1141865289172462
+  participants: 7
+  evented_at: 2015/05/10 10:00
+- dojo_id: 23
+  event_id: 1630077870541159
+  participants: 5
+  evented_at: 2015/05/24 10:00
+- dojo_id: 23
+  event_id: 1450938871874077
+  participants: 6
+  evented_at: 2015/06/07 10:00
+- dojo_id: 23
+  event_id: 466343503516354
+  participants: 25
+  evented_at: 2015/06/07 13:00
+- dojo_id: 23
+  event_id: 458278364332814
+  participants: 3
+  evented_at: 2015/06/28 10:00
+- dojo_id: 23
+  event_id: 396557873872559
+  participants: 10
+  evented_at: 2015/07/12 10:00
+- dojo_id: 23
+  event_id: 117372435274151
+  participants: 11
+  evented_at: 2015/08/09 10:00
+- dojo_id: 23
+  event_id: 702778606519638
+  participants: 7
+  evented_at: 2015/08/23 10:00
+- dojo_id: 23
+  event_id: 823187224469069
+  participants: 5
+  evented_at: 2015/09/06 10:00
+- dojo_id: 23
+  event_id: 549173035234139
+  participants: 8
+  evented_at: 2015/09/27 10:00
+- dojo_id: 23
+  event_id: 106000663089360
+  participants: 7
+  evented_at: 2015/10/11 10:00
+- dojo_id: 23
+  event_id: 558691364285029
+  participants: 5
+  evented_at: 2015/10/25 10:00
+- dojo_id: 23
+  event_id: 1517828718539435
+  participants: 4
+  evented_at: 2015/11/08 10:00
+- dojo_id: 23
+  event_id: 413036525562103
+  participants: 6
+  evented_at: 2015/11/22 10:00
+- dojo_id: 23
+  event_id: 189662614707738
+  participants: 1
+  evented_at: 2015/12/13 10:00
+- dojo_id: 23
+  event_id: 1492598894403645
+  participants: 28
+  evented_at: 2015/12/20 13:00
+- dojo_id: 23
+  event_id: 118105618560620
+  participants: 7
+  evented_at: 2016/01/10 10:00
+- dojo_id: 23
+  event_id: 916111845104425
+  participants: 16
+  evented_at: 2016/01/23 15:00
+- dojo_id: 23
+  event_id: 959032037485628
+  participants: 6
+  evented_at: 2016/01/24 10:00
+- dojo_id: 23
+  event_id: 174244442948444
+  participants: 8
+  evented_at: 2016/02/14 10:00
+- dojo_id: 23
+  event_id: 568132340016450
+  participants: 10
+  evented_at: 2016/02/28 10:00
+- dojo_id: 23
+  event_id: 465748546969668
+  participants: 3
+  evented_at: 2016/03/13 10:00
+- dojo_id: 23
+  event_id: 448813898651666
+  participants: 3
+  evented_at: 2016/03/27 10:00
+- dojo_id: 23
+  event_id: 1673659636233931
+  participants: 3
+  evented_at: 2016/04/10 10:00
+- dojo_id: 23
+  event_id: 615791388573354
+  participants: 3
+  evented_at: 2016/04/24 10:00
+- dojo_id: 23
+  event_id: 211431405907235
+  participants: 0
+  evented_at: 2016/05/08 10:00
+- dojo_id: 23
+  event_id: 1735118196731084
+  participants: 3
+  evented_at: 2016/05/22 10:00
+- dojo_id: 23
+  event_id: 1179011022137927
+  participants: 4
+  evented_at: 2016/06/12 10:00
+- dojo_id: 23
+  event_id: 1063496053717987
+  participants: 6
+  evented_at: 2016/06/26 10:00
+- dojo_id: 23
+  event_id: 1715442028709775
+  participants: 3
+  evented_at: 2016/07/10 10:00
+- dojo_id: 23
+  event_id: 626657640833777
+  participants: 2
+  evented_at: 2016/07/24 10:00
+- dojo_id: 23
+  event_id: 604464829731010
+  participants: 2
+  evented_at: 2016/08/14 10:00
+- dojo_id: 23
+  event_id: 168441176914947
+  participants: 2
+  evented_at: 2016/08/28 10:00
+- dojo_id: 23
+  event_id: 1789590407919537
+  participants: 0
+  evented_at: 2016/09/11 10:00
+- dojo_id: 23
+  event_id: 615652505283847
+  participants: 1
+  evented_at: 2016/09/25 10:00
+- dojo_id: 23
+  event_id: 168993833549292
+  participants: 10
+  evented_at: 2016/10/09 10:00
+- dojo_id: 23
+  event_id: 1287824911228182
+  participants: 3
+  evented_at: 2016/10/23 10:00
+- dojo_id: 23
+  event_id: 1144784428934172
+  participants: 0
+  evented_at: 2016/11/13 10:00
+- dojo_id: 23
+  event_id: 326500861041141
+  participants: 8
+  evented_at: 2016/11/20 13:30
+- dojo_id: 23
+  event_id: 1147695405307701
+  participants: 0
+  evented_at: 2016/11/27 10:00
+- dojo_id: 23
+  event_id: 377454425932108
+  participants: 2
+  evented_at: 2016/12/11 10:00
+- dojo_id: 23
+  event_id: 1827743084178019
+  participants: 0
+  evented_at: 2016/12/24 13:00
+- dojo_id: 23
+  event_id: 244671985966717
+  participants: 1
+  evented_at: 2017/01/08 10:00
+- dojo_id: 23
+  event_id: 197839364021817
+  participants: 2
+  evented_at: 2017/01/22 10:00
+- dojo_id: 23
+  event_id: 1838840436397544
+  participants: 2
+  evented_at: 2017/02/12 10:00
+- dojo_id: 23
+  event_id: 1795795394019899
+  participants: 1
+  evented_at: 2017/02/26 10:00
+- dojo_id: 23
+  event_id: 804355699718756
+  participants: 3
+  evented_at: 2017/03/12 10:00
+- dojo_id: 23
+  event_id: 1158923237568348
+  participants: 0
+  evented_at: 2017/03/26 10:00
+- dojo_id: 23
+  event_id: 1557080511041234
+  participants: 4
+  evented_at: 2017/04/09 10:00
+- dojo_id: 23
+  event_id: 444576759216497
+  participants: 4
+  evented_at: 2017/04/23 10:00
+- dojo_id: 23
+  event_id: 1873804766201009
+  participants: 0
+  evented_at: 2017/05/28 10:00
+- dojo_id: 23
+  event_id: 1943209299293367
+  participants: 3
+  evented_at: 2017/06/25 10:00
+- dojo_id: 23
+  event_id: 1919004731704304
+  participants: 4
+  evented_at: 2017/07/09 10:00
+- dojo_id: 23
+  event_id: 160970747808504
+  participants: 1
+  evented_at: 2017/08/13 10:00
+- dojo_id: 23
+  event_id: 524356697910009
+  participants: 2
+  evented_at: 2017/10/08 10:00
+- dojo_id: 23
+  event_id: 306430946505614
+  participants: 0
+  evented_at: 2017/10/22 10:00
+- dojo_id: 23
+  event_id: 1743156252657212
+  participants: 4
+  evented_at: 2017/11/12 10:00
+- dojo_id: 23
+  event_id: 540411676294995
+  participants: 6
+  evented_at: 2017/11/26 10:00
+- dojo_id: 23
+  event_id: 157284741548776
+  participants: 1
+  evented_at: 2017/11/26 13:00
+- dojo_id: 23
+  event_id: 300652750425708
+  participants: 5
+  evented_at: 2017/12/10 10:00
+- dojo_id: 23
+  event_id: 373393903123201
+  participants: 17
+  evented_at: 2017/12/23 13:00
+- dojo_id: 23
+  event_id: 137664376903336
+  participants: 5
+  evented_at: 2018/01/14 10:00
+- dojo_id: 23
+  event_id: 1971971993054687
+  participants: 1
+  evented_at: 2018/01/28 10:00
+- dojo_id: 23
+  event_id: 147985562676008
+  participants: 5
+  evented_at: 2018/02/11 10:00
+- dojo_id: 23
+  event_id: 153010755325828
+  participants: 4
+  evented_at: 2018/02/25 10:00
+- dojo_id: 23
+  event_id: 163000957694563
+  participants: 8
+  evented_at: 2018/03/11 10:00
+- dojo_id: 23
+  event_id: 186369815290042
+  participants: 23
+  evented_at: 2018/03/11 12:30
+- dojo_id: 23
+  event_id: 564212403962359
+  participants: 8
+  evented_at: 2018/03/25 10:00
+- dojo_id: 23
+  event_id: 158506298311799
+  participants: 3
+  evented_at: 2018/04/08 10:00
+- dojo_id: 25
+  event_id: 203892496742038
+  participants: 8
+  evented_at: 2017/02/12 10:00
+- dojo_id: 25
+  event_id: 164119730772102
+  participants: 7
+  evented_at: 2017/04/09 10:00
+- dojo_id: 25
+  event_id: 844271289071901
+  participants: 11
+  evented_at: 2017/09/10 10:00
+- dojo_id: 25
+  event_id: 486595658404510
+  participants: 0
+  evented_at: 2018/04/07 11:00
+- dojo_id: 25
+  event_id: 671547846348798
+  participants: 10
+  evented_at: 2018/04/08 10:00
+- dojo_id: 38
+  event_id: 535775739879149
+  participants: 4
+  evented_at: 2014/08/10 13:00
+- dojo_id: 38
+  event_id: 586510488208717
+  participants: 0
+  evented_at: 2016/11/13 14:30
+- dojo_id: 38
+  event_id: 389504828057168
+  participants: 0
+  evented_at: 2016/12/11 14:00
+- dojo_id: 38
+  event_id: 364798360565674
+  participants: 2
+  evented_at: 2017/02/12 14:00
+- dojo_id: 38
+  event_id: 131481260869469
+  participants: 3
+  evented_at: 2017/12/09 14:00
+- dojo_id: 43
+  event_id: 177633219045718
+  participants: 3
+  evented_at: 2012/12/23 14:00
+- dojo_id: 43
+  event_id: 469279509775286
+  participants: 5
+  evented_at: 2013/01/27 14:00
+- dojo_id: 43
+  event_id: 135019763332907
+  participants: 3
+  evented_at: 2013/02/24 14:00
+- dojo_id: 43
+  event_id: 343500612437440
+  participants: 3
+  evented_at: 2013/03/30 14:00
+- dojo_id: 43
+  event_id: 448608555223684
+  participants: 2
+  evented_at: 2013/05/19 14:00
+- dojo_id: 43
+  event_id: 676912922326008
+  participants: 2
+  evented_at: 2013/06/09 14:00
+- dojo_id: 43
+  event_id: 472240189528264
+  participants: 3
+  evented_at: 2013/07/21 14:00
+- dojo_id: 43
+  event_id: 491679127584140
+  participants: 2
+  evented_at: 2013/08/25 14:00
+- dojo_id: 43
+  event_id: 215457615287146
+  participants: 1
+  evented_at: 2013/09/22 14:00
+- dojo_id: 43
+  event_id: 144767342668362
+  participants: 2
+  evented_at: 2016/12/18 16:00
+- dojo_id: 45
+  event_id: 288508894852944
+  participants: 1
+  evented_at: 2016/09/25 13:30
+- dojo_id: 45
+  event_id: 1685452261773227
+  participants: 0
+  evented_at: 2016/10/22 13:30
+- dojo_id: 45
+  event_id: 1757649761152038
+  participants: 1
+  evented_at: 2016/11/23 12:30
+- dojo_id: 45
+  event_id: 1266577886747092
+  participants: 7
+  evented_at: 2016/12/18 13:30
+- dojo_id: 45
+  event_id: 1833316803546522
+  participants: 3
+  evented_at: 2017/01/29 13:30
+- dojo_id: 45
+  event_id: 372081606511228
+  participants: 0
+  evented_at: 2017/03/19 13:30
+- dojo_id: 45
+  event_id: 250596982069190
+  participants: 4
+  evented_at: 2017/04/23 13:30
+- dojo_id: 45
+  event_id: 275676182890630
+  participants: 4
+  evented_at: 2017/05/21 13:30
+- dojo_id: 45
+  event_id: 1362161870546257
+  participants: 3
+  evented_at: 2017/06/18 13:30
+- dojo_id: 45
+  event_id: 305753146532604
+  participants: 3
+  evented_at: 2017/07/16 13:30
+- dojo_id: 45
+  event_id: 309693049441616
+  participants: 3
+  evented_at: 2017/08/20 13:30
+- dojo_id: 45
+  event_id: 344975755959170
+  participants: 0
+  evented_at: 2017/09/23 13:30
+- dojo_id: 47
+  event_id: 1585047484854819
+  participants: 5
+  evented_at: 2016/11/27 13:00
+- dojo_id: 47
+  event_id: 1137605509668840
+  participants: 10
+  evented_at: 2016/12/18 13:30
+- dojo_id: 47
+  event_id: 166021170546595
+  participants: 5
+  evented_at: 2017/01/15 13:30
+- dojo_id: 47
+  event_id: 232499540542401
+  participants: 5
+  evented_at: 2017/02/12 13:30
+- dojo_id: 47
+  event_id: 1761517970842435
+  participants: 1
+  evented_at: 2017/03/12 14:30
+- dojo_id: 59
+  event_id: 1227574413955261
+  participants: 0
+  evented_at: 2016/12/23 09:30
+- dojo_id: 73
+  event_id: 1431569290484157
+  participants: 5
+  evented_at: 2017/03/26 13:30
+- dojo_id: 73
+  event_id: 1493911183974901
+  participants: 9
+  evented_at: 2017/04/30 13:30
+- dojo_id: 73
+  event_id: 1709884792645026
+  participants: 4
+  evented_at: 2017/06/11 13:30
+- dojo_id: 73
+  event_id: 137255470190639
+  participants: 7
+  evented_at: 2017/07/16 13:30
+- dojo_id: 73
+  event_id: 106920550048700
+  participants: 4
+  evented_at: 2017/09/10 13:15
+- dojo_id: 73
+  event_id: 1510323622415864
+  participants: 5
+  evented_at: 2017/10/01 13:15
+- dojo_id: 73
+  event_id: 142819799676689
+  participants: 6
+  evented_at: 2017/11/26 13:30
+- dojo_id: 73
+  event_id: 310152299475301
+  participants: 4
+  evented_at: 2018/01/14 13:30
+- dojo_id: 73
+  event_id: 1743561269015700
+  participants: 8
+  evented_at: 2018/02/18 13:30
+- dojo_id: 73
+  event_id: 169038793900038
+  participants: 8
+  evented_at: 2018/03/25 13:30
+- dojo_id: 73
+  event_id: 675550939464493
+  participants: 9
+  evented_at: 2018/04/08 13:30
+- dojo_id: 85
+  event_id: 1348587111864468
+  participants: 0
+  evented_at: 2017/05/27 14:00
+- dojo_id: 85
+  event_id: 679665385492159
+  participants: 0
+  evented_at: 2017/06/24 14:00
+- dojo_id: 85
+  event_id: 271946486606546
+  participants: 1
+  evented_at: 2017/07/22 14:00
+- dojo_id: 85
+  event_id: 475607026144055
+  participants: 2
+  evented_at: 2017/08/27 14:00
+- dojo_id: 86
+  event_id: 1436557109720751
+  participants: 5
+  evented_at: 2017/06/18 13:00
+- dojo_id: 86
+  event_id: 1885619925095540
+  participants: 7
+  evented_at: 2017/07/30 13:00
+- dojo_id: 86
+  event_id: 804582973043733
+  participants: 10
+  evented_at: 2017/08/20 13:00
+- dojo_id: 86
+  event_id: 1484174534939256
+  participants: 10
+  evented_at: 2017/09/24 13:00
+- dojo_id: 86
+  event_id: 154909391757821
+  participants: 4
+  evented_at: 2017/10/22 13:00
+- dojo_id: 86
+  event_id: 115800412443483
+  participants: 5
+  evented_at: 2017/11/19 13:00
+- dojo_id: 86
+  event_id: 167853970479855
+  participants: 0
+  evented_at: 2017/12/10 10:00
+- dojo_id: 86
+  event_id: 167960517125221
+  participants: 6
+  evented_at: 2017/12/17 13:00
+- dojo_id: 86
+  event_id: 329086557559176
+  participants: 7
+  evented_at: 2017/12/17 17:00
+- dojo_id: 86
+  event_id: 1889976764665415
+  participants: 6
+  evented_at: 2018/01/21 13:00
+- dojo_id: 86
+  event_id: 999044140234275
+  participants: 6
+  evented_at: 2018/02/18 13:00
+- dojo_id: 86
+  event_id: 1916360855343342
+  participants: 4
+  evented_at: 2018/03/18 13:00
+- dojo_id: 87
+  event_id: 435934736782336
+  participants: 6
+  evented_at: 2017/06/10 19:00
+- dojo_id: 87
+  event_id: 1959651524247858
+  participants: 6
+  evented_at: 2017/06/17 10:00
+- dojo_id: 87
+  event_id: 1696069237363858
+  participants: 4
+  evented_at: 2017/07/01 19:00
+- dojo_id: 87
+  event_id: 473150346354909
+  participants: 10
+  evented_at: 2017/07/15 10:00
+- dojo_id: 87
+  event_id: 1831203920542181
+  participants: 5
+  evented_at: 2017/08/05 09:00
+- dojo_id: 87
+  event_id: 1939390369684135
+  participants: 5
+  evented_at: 2017/08/11 09:00
+- dojo_id: 87
+  event_id: 802291489945607
+  participants: 3
+  evented_at: 2017/09/09 09:00
+- dojo_id: 87
+  event_id: 1008059672667286
+  participants: 5
+  evented_at: 2017/10/21 14:00
+- dojo_id: 87
+  event_id: 1485285231556017
+  participants: 4
+  evented_at: 2017/11/18 14:00
+- dojo_id: 87
+  event_id: 111045026343051
+  participants: 8
+  evented_at: 2017/12/16 14:00
+- dojo_id: 87
+  event_id: 702580896604255
+  participants: 6
+  evented_at: 2018/01/20 14:00
+- dojo_id: 87
+  event_id: 796550170536635
+  participants: 6
+  evented_at: 2018/02/17 14:00
+# 安曇野は 2018/03 以降 doorkeeper で収集
+# - dojo_id: 87
+#   event_id: 715404458848668
+#   participants: 6
+#   evented_at: 2018/03/17 14:00
+- dojo_id: 88
+  event_id: 1372320219469831
+  participants: 0
+  evented_at: 2017/07/23 11:20
+- dojo_id: 88
+  event_id: 1924777571134708
+  participants: 0
+  evented_at: 2017/08/20 10:20
+- dojo_id: 94
+  event_id: 1391919444222938
+  participants: 3
+  evented_at: 2017/07/14 19:00
+- dojo_id: 94
+  event_id: 462703774110402
+  participants: 4
+  evented_at: 2017/07/28 20:00
+- dojo_id: 94
+  event_id: 144385232790021
+  participants: 5
+  evented_at: 2017/08/19 10:00
+- dojo_id: 94
+  event_id: 263257480845669
+  participants: 5
+  evented_at: 2017/09/10 16:00
+- dojo_id: 94
+  event_id: 745342032335381
+  participants: 2
+  evented_at: 2017/09/23 10:00
+- dojo_id: 94
+  event_id: 1998391133740234
+  participants: 1
+  evented_at: 2017/10/28 10:00
+- dojo_id: 94
+  event_id: 151604505361367
+  participants: 7
+  evented_at: 2017/11/12 10:00
+- dojo_id: 94
+  event_id: 186900575203220
+  participants: 3
+  evented_at: 2017/12/17 10:00
+- dojo_id: 94
+  event_id: 572586953133193
+  participants: 3
+  evented_at: 2018/01/13 14:00
+- dojo_id: 94
+  event_id: 2004533813138712
+  participants: 2
+  evented_at: 2018/02/03 10:00
+- dojo_id: 94
+  event_id: 143876126287162
+  participants: 2
+  evented_at: 2018/03/18 10:00
+- dojo_id: 102
+  event_id: 1820817684613917
+  participants: 6
+  evented_at: 2017/11/11 14:00
+- dojo_id: 102
+  event_id: 210972156110779
+  participants: 5
+  evented_at: 2017/12/24 14:00
+- dojo_id: 102
+  event_id: 1684157511622792
+  participants: 3
+  evented_at: 2018/01/14 14:00
+- dojo_id: 102
+  event_id: 1004396759718142
+  participants: 2
+  evented_at: 2018/02/10 14:00
+- dojo_id: 102
+  event_id: 558004947892527
+  participants: 3
+  evented_at: 2018/03/10 14:00
+- dojo_id: 111
+  event_id: 237818390082314
+  participants: 1
+  evented_at: 2017/11/12 09:30
+- dojo_id: 111
+  event_id: 2077306175824015
+  participants: 0
+  evented_at: 2018/01/14 09:15
+- dojo_id: 111
+  event_id: 147230272625797
+  participants: 0
+  evented_at: 2018/03/11 09:30
+- dojo_id: 113
+  event_id: 1996676050602519
+  participants: 1
+  evented_at: 2017/11/24 18:00
+- dojo_id: 113
+  event_id: 1999778076977852
+  participants: 0
+  evented_at: 2017/12/09 10:00
+- dojo_id: 113
+  event_id: 150574729042065
+  participants: 0
+  evented_at: 2018/01/14 13:30
+- dojo_id: 113
+  event_id: 175235543101402
+  participants: 0
+  evented_at: 2018/03/17 15:45
+- dojo_id: 125
+  event_id: 1271165696360574
+  participants: 2
+  evented_at: 2018/02/10 15:30
+- dojo_id: 125
+  event_id: 220333991873248
+  participants: 0
+  evented_at: 2018/03/17 15:30
+- dojo_id: 131
+  event_id: 162413071215576
+  participants: 5
+  evented_at: 2018/03/11 10:00
+- dojo_id: 131
+  event_id: 1570409593076996
+  participants: 3
+  evented_at: 2018/04/08 10:00
+- dojo_id: 5
+  event_id: 2025722814315179
+  participants: 0
+  evented_at: 2018/06/23 14:00
+- dojo_id: 5
+  event_id: 265141110771360
+  participants: 1
+  evented_at: 2018/09/08 14:00
+- dojo_id: 5
+  event_id: 295157691141094
+  participants: 0
+  evented_at: 2018/11/10 14:00
+- dojo_id: 5
+  event_id: 285450478766940
+  participants: 1
+  evented_at: 2018/11/24 14:00
+- dojo_id: 5
+  event_id: 944653219202907
+  participants: 0
+  evented_at: 2018/12/08 14:00
+- dojo_id: 5
+  event_id: 205570750378584
+  participants: 0
+  evented_at: 2018/12/22 09:00
+- dojo_id: 6
+  event_id: 355799418270479
+  participants: 3
+  evented_at: 2018/04/13 17:00
+- dojo_id: 6
+  event_id: 705986619791001
+  participants: 2
+  evented_at: 2018/04/20 17:00
+- dojo_id: 6
+  event_id: 179996445966974
+  participants: 2
+  evented_at: 2018/04/27 17:00
+- dojo_id: 6
+  event_id: 962164243953372
+  participants: 1
+  evented_at: 2018/05/04 17:00
+- dojo_id: 6
+  event_id: 2050016751924866
+  participants: 2
+  evented_at: 2018/05/11 17:00
+- dojo_id: 6
+  event_id: 243951806180296
+  participants: 0
+  evented_at: 2018/05/18 17:00
+- dojo_id: 6
+  event_id: 258451291554775
+  participants: 1
+  evented_at: 2018/05/25 17:00
+- dojo_id: 6
+  event_id: 909409419443443
+  participants: 2
+  evented_at: 2018/06/01 17:00
+- dojo_id: 6
+  event_id: 179759772726895
+  participants: 4
+  evented_at: 2018/06/08 17:00
+- dojo_id: 6
+  event_id: 374468339628245
+  participants: 1
+  evented_at: 2018/06/15 17:00
+- dojo_id: 6
+  event_id: 906034429521406
+  participants: 3
+  evented_at: 2018/06/22 17:00
+- dojo_id: 6
+  event_id: 192205188257910
+  participants: 1
+  evented_at: 2018/06/29 17:00
+- dojo_id: 6
+  event_id: 656864561340358
+  participants: 1
+  evented_at: 2018/07/06 17:00
+- dojo_id: 6
+  event_id: 473945713043334
+  participants: 1
+  evented_at: 2018/07/13 17:00
+- dojo_id: 6
+  event_id: 1752826784764808
+  participants: 1
+  evented_at: 2018/07/20 17:00
+- dojo_id: 6
+  event_id: 295457421197189
+  participants: 1
+  evented_at: 2018/08/03 17:00
+- dojo_id: 6
+  event_id: 261825551073994
+  participants: 1
+  evented_at: 2018/08/10 17:00
+- dojo_id: 6
+  event_id: 228912921097362
+  participants: 1
+  evented_at: 2018/08/17 17:00
+- dojo_id: 6
+  event_id: 421496404923869
+  participants: 1
+  evented_at: 2018/08/24 17:00
+- dojo_id: 6
+  event_id: 203608276974464
+  participants: 1
+  evented_at: 2018/08/31 17:00
+- dojo_id: 6
+  event_id: 263411424282775
+  participants: 1
+  evented_at: 2018/09/07 17:00
+- dojo_id: 6
+  event_id: 2184016375176752
+  participants: 2
+  evented_at: 2018/09/28 17:00
+- dojo_id: 6
+  event_id: 516506758814811
+  participants: 1
+  evented_at: 2018/10/05 17:00
+- dojo_id: 6
+  event_id: 169484263958581
+  participants: 1
+  evented_at: 2018/10/12 17:00
+- dojo_id: 6
+  event_id: 1817847148263130
+  participants: 1
+  evented_at: 2018/10/19 17:00
+- dojo_id: 6
+  event_id: 716576988689330
+  participants: 1
+  evented_at: 2018/10/26 17:00
+- dojo_id: 6
+  event_id: 647251982338783
+  participants: 1
+  evented_at: 2018/11/02 17:00
+- dojo_id: 6
+  event_id: 1429335070530370
+  participants: 1
+  evented_at: 2018/11/09 17:00
+- dojo_id: 6
+  event_id: 2157171101191131
+  participants: 1
+  evented_at: 2018/11/16 17:00
+- dojo_id: 6
+  event_id: 271193673531455
+  participants: 2
+  evented_at: 2018/11/30 17:00
+- dojo_id: 6
+  event_id: 258991148127671
+  participants: 2
+  evented_at: 2018/12/07 17:00
+- dojo_id: 6
+  event_id: 318564745401451
+  participants: 1
+  evented_at: 2018/12/14 17:00
+- dojo_id: 6
+  event_id: 198715634392961
+  participants: 1
+  evented_at: 2018/12/21 17:00
+- dojo_id: 6
+  event_id: 964712820390807
+  participants: 2
+  evented_at: 2019/01/11 17:00
+- dojo_id: 6
+  event_id: 307375003225314
+  participants: 1
+  evented_at: 2019/01/18 17:00
+- dojo_id: 6
+  event_id: 352944342202141
+  participants: 2
+  evented_at: 2019/01/25 17:00
+- dojo_id: 6
+  event_id: 303731267001111
+  participants: 1
+  evented_at: 2019/02/08 17:00
+- dojo_id: 6
+  event_id: 318931765395231
+  participants: 1
+  evented_at: 2019/02/15 17:00
+- dojo_id: 6
+  event_id: 385481951997852
+  participants: 1
+  evented_at: 2019/02/22 17:00
+- dojo_id: 10
+  event_id: 2061248857450739
+  participants: 1
+  evented_at: 2018/04/22 13:00
+- dojo_id: 10
+  event_id: 2051175671871643
+  participants: 3
+  evented_at: 2018/05/13 11:00
+- dojo_id: 10
+  event_id: 208995543163014
+  participants: 1
+  evented_at: 2018/05/27 13:00
+- dojo_id: 10
+  event_id: 1722882844426664
+  participants: 2
+  evented_at: 2018/06/16 13:30
+- dojo_id: 10
+  event_id: 194173007954667
+  participants: 1
+  evented_at: 2018/06/30 13:30
+- dojo_id: 10
+  event_id: 212787136018784
+  participants: 1
+  evented_at: 2018/07/07 13:30
+- dojo_id: 10
+  event_id: 1882674555362758
+  participants: 1
+  evented_at: 2018/07/22 13:30
+- dojo_id: 10
+  event_id: 2065221300397933
+  participants: 2
+  evented_at: 2018/08/12 13:30
+- dojo_id: 10
+  event_id: 1962055957187024
+  participants: 2
+  evented_at: 2018/09/02 13:30
+- dojo_id: 10
+  event_id: 1524634837680016
+  participants: 3
+  evented_at: 2018/09/16 13:30
+- dojo_id: 10
+  event_id: 2682710885287440
+  participants: 1
+  evented_at: 2018/09/29 13:30
+- dojo_id: 10
+  event_id: 2197594530488540
+  participants: 3
+  evented_at: 2018/10/14 13:30
+- dojo_id: 10
+  event_id: 1807666092692235
+  participants: 2
+  evented_at: 2018/10/28 13:30
+- dojo_id: 10
+  event_id: 320949125397055
+  participants: 2
+  evented_at: 2018/11/11 13:30
+- dojo_id: 10
+  event_id: 1902555713124812
+  participants: 2
+  evented_at: 2018/11/25 13:30
+- dojo_id: 10
+  event_id: 1561103553992808
+  participants: 2
+  evented_at: 2018/12/16 13:30
+- dojo_id: 10
+  event_id: 941739029353227
+  participants: 4
+  evented_at: 2018/12/23 13:30
+- dojo_id: 10
+  event_id: 377250806383629
+  participants: 2
+  evented_at: 2019/01/13 13:30
+- dojo_id: 10
+  event_id: 2004304109689530
+  participants: 1
+  evented_at: 2019/01/27 13:30
+- dojo_id: 10
+  event_id: 2868422193383166
+  participants: 2
+  evented_at: 2019/02/10 13:30
+- dojo_id: 10
+  event_id: 233822924191736
+  participants: 2
+  evented_at: 2019/02/24 13:30
+- dojo_id: 12
+  event_id: 203943203728270
+  participants: 2
+  evented_at: 2018/05/06 14:30
+- dojo_id: 12
+  event_id: 192725348039615
+  participants: 9
+  evented_at: 2018/06/03 14:30
+- dojo_id: 12
+  event_id: 686140828386440
+  participants: 9
+  evented_at: 2018/07/01 14:30
+- dojo_id: 12
+  event_id: 656047691437276
+  participants: 8
+  evented_at: 2018/08/05 10:30
+- dojo_id: 12
+  event_id: 558843207903729
+  participants: 9
+  evented_at: 2018/09/02 10:30
+- dojo_id: 12
+  event_id: 240892349918238
+  participants: 3
+  evented_at: 2018/10/07 10:30
+- dojo_id: 12
+  event_id: 243149306554647
+  participants: 12
+  evented_at: 2018/11/04 10:30
+- dojo_id: 12
+  event_id: 280271085953831
+  participants: 7
+  evented_at: 2018/12/02 10:30
+- dojo_id: 12
+  event_id: 238908956839330
+  participants: 8
+  evented_at: 2019/01/06 10:30
+- dojo_id: 12
+  event_id: 310902002871737
+  participants: 7
+  evented_at: 2019/02/03 10:30
+- dojo_id: 23
+  event_id: 376044719562618
+  participants: 5
+  evented_at: 2018/04/22 10:00
+- dojo_id: 23
+  event_id: 1808668095861929
+  participants: 3
+  evented_at: 2018/05/13 10:00
+- dojo_id: 23
+  event_id: 359226277920804
+  participants: 2
+  evented_at: 2018/05/27 10:00
+- dojo_id: 23
+  event_id: 1953144464742232
+  participants: 3
+  evented_at: 2018/09/09 10:00
+- dojo_id: 23
+  event_id: 239791583375000
+  participants: 2
+  evented_at: 2018/09/23 10:00
+- dojo_id: 23
+  event_id: 322710301792999
+  participants: 6
+  evented_at: 2018/11/11 10:00
+- dojo_id: 23
+  event_id: 127955584748288
+  participants: 1
+  evented_at: 2018/12/09 10:00
+- dojo_id: 23
+  event_id: 332887120772826
+  participants: 4
+  evented_at: 2018/12/23 10:00
+- dojo_id: 23
+  event_id: 273135840008237
+  participants: 15
+  evented_at: 2019/01/04 17:00
+- dojo_id: 23
+  event_id: 595052654274780
+  participants: 1
+  evented_at: 2019/01/13 10:00
+- dojo_id: 25
+  event_id: 2030372193868993
+  participants: 8
+  evented_at: 2018/05/13 10:00
+- dojo_id: 25
+  event_id: 195133097965195
+  participants: 6
+  evented_at: 2018/06/10 10:00
+- dojo_id: 25
+  event_id: 2096663667271531
+  participants: 6
+  evented_at: 2018/06/10 15:00
+- dojo_id: 25
+  event_id: 209010219822867
+  participants: 9
+  evented_at: 2018/07/08 10:00
+- dojo_id: 25
+  event_id: 204625466869786
+  participants: 5
+  evented_at: 2018/08/12 10:00
+- dojo_id: 25
+  event_id: 268442307303154
+  participants: 19
+  evented_at: 2018/09/02 10:00
+- dojo_id: 25
+  event_id: 613551215708512
+  participants: 9
+  evented_at: 2018/10/14 10:00
+- dojo_id: 25
+  event_id: 2278255045741224
+  participants: 9
+  evented_at: 2018/11/11 10:00
+- dojo_id: 25
+  event_id: 2111052009157326
+  participants: 20
+  evented_at: 2018/12/09 10:00
+- dojo_id: 25
+  event_id: 379521235925749
+  participants: 6
+  evented_at: 2019/01/13 10:00
+- dojo_id: 38
+  event_id: 196236491237990
+  participants: 4
+  evented_at: 2018/08/04 13:30
+- dojo_id: 73
+  event_id: 1600474296728643
+  participants: 6
+  evented_at: 2018/05/06 13:30
+- dojo_id: 73
+  event_id: 2050527055199864
+  participants: 6
+  evented_at: 2018/06/10 13:30
+- dojo_id: 73
+  event_id: 229873607802747
+  participants: 4
+  evented_at: 2018/07/01 13:30
+- dojo_id: 73
+  event_id: 495391340910164
+  participants: 4
+  evented_at: 2018/08/12 13:30
+- dojo_id: 73
+  event_id: 724939291180649
+  participants: 7
+  evented_at: 2018/09/16 13:30
+- dojo_id: 73
+  event_id: 261879051136431
+  participants: 2
+  evented_at: 2018/11/04 13:30
+- dojo_id: 73
+  event_id: 723307981372919
+  participants: 3
+  evented_at: 2018/12/09 13:30
+- dojo_id: 73
+  event_id: 355491578366248
+  participants: 6
+  evented_at: 2019/01/13 13:30
+- dojo_id: 73
+  event_id: 2438595696213784
+  participants: 8
+  evented_at: 2019/02/17 13:30
+- dojo_id: 86
+  event_id: 1939742072714754
+  participants: 2
+  evented_at: 2018/07/21 13:00
+- dojo_id: 86
+  event_id: 214372875866620
+  participants: 7
+  evented_at: 2018/09/02 10:00
+- dojo_id: 86
+  event_id: 214408712570888
+  participants: 2
+  evented_at: 2018/09/22 10:00
+- dojo_id: 86
+  event_id: 1718977434895169
+  participants: 2
+  evented_at: 2018/10/20 13:00
+- dojo_id: 86
+  event_id: 1917775238301367
+  participants: 5
+  evented_at: 2018/11/18 13:00
+- dojo_id: 86
+  event_id: 478086436032303
+  participants: 5
+  evented_at: 2018/11/18 15:30
+- dojo_id: 86
+  event_id: 2195207134101506
+  participants: 3
+  evented_at: 2018/12/16 13:00
+- dojo_id: 86
+  event_id: 314473035838779
+  participants: 1
+  evented_at: 2019/01/20 10:00
+- dojo_id: 86
+  event_id: 197625097847789
+  participants: 1
+  evented_at: 2019/01/20 13:00
+- dojo_id: 86
+  event_id: 2172994822915072
+  participants: 3
+  evented_at: 2019/02/17 13:00
+# 安曇野は 2018/03 以降 doorkeeper で収集
+# - dojo_id: 87
+#   event_id: 186187292174542
+#   participants: 4
+#   evented_at: 2018/04/21 14:00
+# - dojo_id: 87
+#   event_id: 149517825899316
+#   participants: 7
+#   evented_at: 2018/05/19 14:00
+# - dojo_id: 87
+#   event_id: 223033138425857
+#   participants: 4
+#   evented_at: 2018/06/16 14:00
+# - dojo_id: 87
+#   event_id: 2034954076722298
+#   participants: 5
+#   evented_at: 2018/07/21 14:00
+# - dojo_id: 87
+#   event_id: 250902995525855
+#   participants: 5
+#   evented_at: 2018/08/18 14:00
+# - dojo_id: 87
+#   event_id: 723030118049163
+#   participants: 4
+#   evented_at: 2018/09/15 14:00
+# - dojo_id: 87
+#   event_id: 313638519412759
+#   participants: 4
+#   evented_at: 2018/10/14 09:30
+# - dojo_id: 87
+#   event_id: 289480415236734
+#   participants: 3
+#   evented_at: 2018/11/17 14:00
+# - dojo_id: 87
+#   event_id: 540235926438304
+#   participants: 4
+#   evented_at: 2018/12/15 14:00
+# - dojo_id: 87
+#   event_id: 725232874523244
+#   participants: 5
+#   evented_at: 2019/01/19 11:00
+# - dojo_id: 87
+#   event_id: 305092533476336
+#   participants: 3
+#   evented_at: 2019/01/19 14:00
+# - dojo_id: 87
+#   event_id: 553006781850776
+#   participants: 4
+#   evented_at: 2019/02/16 14:00
+- dojo_id: 94
+  event_id: 182495955713523
+  participants: 4
+  evented_at: 2018/04/22 10:00
+- dojo_id: 94
+  event_id: 460447231051345
+  participants: 7
+  evented_at: 2018/05/20 10:00
+- dojo_id: 94
+  event_id: 2083794118360037
+  participants: 6
+  evented_at: 2018/06/17 10:30
+- dojo_id: 94
+  event_id: 2057115447656467
+  participants: 3
+  evented_at: 2018/08/19 10:30
+- dojo_id: 94
+  event_id: 619399601812979
+  participants: 5
+  evented_at: 2018/12/16 10:00
+- dojo_id: 94
+  event_id: 1996185347156197
+  participants: 5
+  evented_at: 2019/01/20 10:00
+- dojo_id: 94
+  event_id: 2124909820923355
+  participants: 4
+  evented_at: 2019/02/17 10:00
+- dojo_id: 102
+  event_id: 589086408111015
+  participants: 5
+  evented_at: 2018/04/14 14:00
+- dojo_id: 102
+  event_id: 266200090587482
+  participants: 6
+  evented_at: 2018/05/12 14:00
+- dojo_id: 102
+  event_id: 2122252504711147
+  participants: 3
+  evented_at: 2018/06/02 14:00
+- dojo_id: 102
+  event_id: 203044667215454
+  participants: 5
+  evented_at: 2018/08/11 14:00
+- dojo_id: 102
+  event_id: 2101797823404409
+  participants: 4
+  evented_at: 2018/09/08 14:00
+- dojo_id: 102
+  event_id: 634290583638800
+  participants: 2
+  evented_at: 2018/10/13 14:00
+- dojo_id: 102
+  event_id: 157941378485533
+  participants: 4
+  evented_at: 2018/11/10 14:00
+- dojo_id: 102
+  event_id: 995304900678310
+  participants: 2
+  evented_at: 2018/12/08 14:00
+- dojo_id: 102
+  event_id: 272050403492623
+  participants: 7
+  evented_at: 2019/01/12 14:00
+- dojo_id: 102
+  event_id: 1975900619132050
+  participants: 2
+  evented_at: 2019/02/02 14:00
+- dojo_id: 113
+  event_id: 500437787102091
+  participants: 0
+  evented_at: 2018/10/13 10:15
+- dojo_id: 113
+  event_id: 2494919577225873
+  participants: 1
+  evented_at: 2018/11/17 15:15
+- dojo_id: 113
+  event_id: 375635736344303
+  participants: 1
+  evented_at: 2019/01/19 15:15
+- dojo_id: 113
+  event_id: 2108662632777427
+  participants: 0
+  evented_at: 2019/02/16 15:15
+- dojo_id: 125
+  event_id: 2136147573067146
+  participants: 0
+  evented_at: 2018/04/14 15:30
+- dojo_id: 125
+  event_id: 180876649394661
+  participants: 0
+  evented_at: 2018/05/12 15:30
+- dojo_id: 125
+  event_id: 389307884896247
+  participants: 0
+  evented_at: 2018/07/14 15:30
+- dojo_id: 125
+  event_id: 608368439564903
+  participants: 0
+  evented_at: 2018/09/08 15:30
+- dojo_id: 125
+  event_id: 492133997971590
+  participants: 1
+  evented_at: 2018/10/13 15:30
+- dojo_id: 125
+  event_id: 463539170837433
+  participants: 0
+  evented_at: 2018/11/17 15:30
+- dojo_id: 125
+  event_id: 1108808889278727
+  participants: 0
+  evented_at: 2019/01/19 15:30
+- dojo_id: 131
+  event_id: 437160593407496
+  participants: 3
+  evented_at: 2018/05/13 10:00
+- dojo_id: 131
+  event_id: 208795856393856
+  participants: 5
+  evented_at: 2018/06/10 10:00
+- dojo_id: 131
+  event_id: 254118565342508
+  participants: 7
+  evented_at: 2018/07/08 10:00
+- dojo_id: 131
+  event_id: 2136994859874386
+  participants: 8
+  evented_at: 2018/07/22 10:00
+- dojo_id: 131
+  event_id: 2148939745362350
+  participants: 2
+  evented_at: 2018/08/26 10:00
+- dojo_id: 131
+  event_id: 401022553761465
+  participants: 2
+  evented_at: 2018/09/09 10:00
+- dojo_id: 131
+  event_id: 553660595079398
+  participants: 7
+  evented_at: 2018/10/21 10:00
+- dojo_id: 131
+  event_id: 447858512404803
+  participants: 5
+  evented_at: 2018/11/18 10:00
+- dojo_id: 131
+  event_id: 349490219162977
+  participants: 8
+  evented_at: 2018/12/09 10:00
+- dojo_id: 131
+  event_id: 2136095266703930
+  participants: 6
+  evented_at: 2019/01/13 10:00
+- dojo_id: 131
+  event_id: 2064715203618898
+  participants: 15
+  evented_at: 2019/02/10 10:00
+- dojo_id: 141
+  event_id: 338083410058160
+  participants: 1
+  evented_at: 2018/07/08 14:00
+- dojo_id: 141
+  event_id: 222399278453565
+  participants: 1
+  evented_at: 2018/08/19 14:00
+- dojo_id: 141
+  event_id: 538187703285767
+  participants: 4
+  evented_at: 2018/10/21 10:00
+- dojo_id: 141
+  event_id: 739653039700994
+  participants: 4
+  evented_at: 2018/12/16 10:00
+- dojo_id: 141
+  event_id: 843787365956607
+  participants: 8
+  evented_at: 2019/02/17 10:00
+- dojo_id: 172
+  event_id: 318482825571270
+  participants: 5
+  evented_at: 2018/09/17 13:00
+- dojo_id: 172
+  event_id: 326038641491602
+  participants: 2
+  evented_at: 2018/10/21 13:00
+- dojo_id: 172
+  event_id: 1888960717818759
+  participants: 2
+  evented_at: 2008/11/23 13:00
+- dojo_id: 183
+  event_id: 173575276863248
+  participants: 2
+  evented_at: 2018/11/03 14:00
+- dojo_id: 183
+  event_id: 2039369989419033
+  participants: 3
+  evented_at: 2018/12/01 14:00
+- dojo_id: 186
+  event_id: 296809407481427
+  participants: 4
+  evented_at: 2018/12/23 13:30
+- dojo_id: 186
+  event_id: 2255034061440133
+  participants: 1
+  evented_at: 2019/01/06 13:00
+- dojo_id: 186
+  event_id: 272265090089122
+  participants: 4
+  evented_at: 2019/01/13 13:30
+- dojo_id: 186
+  event_id: 766781693674723
+  participants: 2
+  evented_at: 2019/01/27 13:30
+- dojo_id: 186
+  event_id: 639913849738762
+  participants: 2
+  evented_at: 2019/02/17 13:30
+- dojo_id: 186
+  event_id: 1153923628097026
+  participants: 2
+  evented_at: 2019/02/24 13:30
+- dojo_id: 187
   event_id:
   participants: 7
-  evented_at:	2019/02/02 13:30
-- dojo_id:  188
+  evented_at: 2019/02/02 13:30
+- dojo_id: 188
   event_id:
   participants: 0
-  evented_at:	2018/12/17 18:00
-- dojo_id:  188
+  evented_at: 2018/12/17 18:00
+- dojo_id: 188
   event_id:
   participants: 1
-  evented_at:	2019/01/21 18:00
-- dojo_id:  188
+  evented_at: 2019/01/21 18:00
+- dojo_id: 188
   event_id:
   participants: 0
-  evented_at:	2019/02/18 18:00
-- dojo_id:  191
+  evented_at: 2019/02/18 18:00
+- dojo_id: 191
   event_id:
   participants: 3
-  evented_at:	2019/02/02 10:00
-- dojo_id:  203
+  evented_at: 2019/02/02 10:00
+- dojo_id: 203
   event_id:
   participants: 4
-  evented_at:	2019/02/10 09:30
+  evented_at: 2019/02/10 09:30
 
   # 2019/03/01 - 2019/03/31
-- dojo_id:  183
+- dojo_id: 183
   event_id:
   participants: 5
-  evented_at:	2019/03/02 14:00
-- dojo_id:  187
+  evented_at: 2019/03/02 14:00
+- dojo_id: 187
   event_id:
   participants: 5
-  evented_at:	2019/03/02 14:00
-- dojo_id:  12
+  evented_at: 2019/03/02 14:00
+- dojo_id: 12
   event_id:
   participants: 6
-  evented_at:	2019/03/03 10:30
-- dojo_id:  102
+  evented_at: 2019/03/03 10:30
+- dojo_id: 102
   event_id:
   participants: 2
-  evented_at:	2019/03/09 14:00
-- dojo_id:  203
+  evented_at: 2019/03/09 14:00
+- dojo_id: 203
   event_id:
   participants: 2
-  evented_at:	2019/03/10 09:30
-- dojo_id:  73
+  evented_at: 2019/03/10 09:30
+- dojo_id: 73
   event_id:
   participants: 7
-  evented_at:	2019/03/10 13:30
-- dojo_id:  186
+  evented_at: 2019/03/10 13:30
+- dojo_id: 186
   event_id:
   participants: 2
-  evented_at:	2019/03/10 13:30
-- dojo_id:  111
+  evented_at: 2019/03/10 13:30
+- dojo_id: 111
   event_id:
   participants: 0
-  evented_at:	2019/03/11 09:30
-- dojo_id:  87
-  event_id:
-  participants: 7
-  evented_at:	2019/03/16 14:00
-- dojo_id:  125
+  evented_at: 2019/03/11 09:30
+# 安曇野は 2018/03 以降 doorkeeper で収集
+# - dojo_id: 87
+#   event_id:
+#   participants: 7
+#   evented_at: 2019/03/16 14:00
+- dojo_id: 125
   event_id:
   participants: 0
-  evented_at:	2019/03/16 15:30
-- dojo_id:  94
+  evented_at: 2019/03/16 15:30
+- dojo_id: 94
   event_id:
   participants: 6
-  evented_at:	2019/03/17 10:00
-- dojo_id:  131
+  evented_at: 2019/03/17 10:00
+- dojo_id: 131
   event_id:
   participants: 11
-  evented_at:	2019/03/17 10:00
-- dojo_id:  86
+  evented_at: 2019/03/17 10:00
+- dojo_id: 86
   event_id:
   participants: 3
-  evented_at:	2019/03/17 13:00
-- dojo_id:  94
+  evented_at: 2019/03/17 13:00
+- dojo_id: 94
   event_id:
   participants: 6
-  evented_at:	2019/03/17 10:00
-- dojo_id:  188
+  evented_at: 2019/03/17 10:00
+- dojo_id: 188
   event_id:
   participants: 0
-  evented_at:	2019/03/18 18:00
-- dojo_id:  5
+  evented_at: 2019/03/18 18:00
+- dojo_id: 5
   event_id:
   participants: 0
-  evented_at:	2019/03/23 14:00
-- dojo_id:  23
+  evented_at: 2019/03/23 14:00
+- dojo_id: 23
   event_id:
   participants: 2
-  evented_at:	2019/03/24 10:00
-- dojo_id:  10
+  evented_at: 2019/03/24 10:00
+- dojo_id: 10
   event_id:
   participants: 1
-  evented_at:	2019/03/24 13:30
-- dojo_id:  186
+  evented_at: 2019/03/24 13:30
+- dojo_id: 186
   event_id:
   participants: 1
-  evented_at:	2019/03/24 13:30
-- dojo_id:  6
+  evented_at: 2019/03/24 13:30
+- dojo_id: 6
   event_id:
   participants: 10
-  evented_at:	2019/03/30 10:30
-- dojo_id:  94
+  evented_at: 2019/03/30 10:30
+- dojo_id: 94
   event_id:
   participants: 6
-  evented_at:	2019/03/17 10:00
+  evented_at: 2019/03/17 10:00
 
   # 2019/04/01 - 2019/04/30
-- dojo_id:  6
+- dojo_id: 6
   event_id:
   participants: 2
-  evented_at:	2019/04/05 17:00
-- dojo_id:  183
+  evented_at: 2019/04/05 17:00
+- dojo_id: 183
   event_id:
   participants: 3
-  evented_at:	2019/04/06 14:00
-- dojo_id:  12
+  evented_at: 2019/04/06 14:00
+- dojo_id: 12
   event_id:
   participants: 4
-  evented_at:	2019/04/07 10:30
-- dojo_id:  10
+  evented_at: 2019/04/07 10:30
+- dojo_id: 10
   event_id:
   participants: 2
-  evented_at:	2019/04/07 13:30
-- dojo_id:  73
+  evented_at: 2019/04/07 13:30
+- dojo_id: 73
   event_id:
   participants: 5
-  evented_at:	2019/04/07 13:30
-- dojo_id:  5
+  evented_at: 2019/04/07 13:30
+- dojo_id: 5
   event_id:
   participants: 0
-  evented_at:	2019/04/13 14:00
-- dojo_id:  191
+  evented_at: 2019/04/13 14:00
+- dojo_id: 191
   event_id:
   participants: 5
-  evented_at:	2019/04/13 14:00
-- dojo_id:  125
+  evented_at: 2019/04/13 14:00
+- dojo_id: 125
   event_id:
   participants: 1
-  evented_at:	2019/04/13 15:30
-- dojo_id:  203
+  evented_at: 2019/04/13 15:30
+- dojo_id: 203
   event_id:
   participants: 4
-  evented_at:	2019/04/14 09:30
-- dojo_id:  131
+  evented_at: 2019/04/14 09:30
+- dojo_id: 131
   event_id:
   participants: 6
-  evented_at:	2019/04/14 10:00
-- dojo_id:  23
+  evented_at: 2019/04/14 10:00
+- dojo_id: 23
   event_id:
   participants: 2
-  evented_at:	2019/04/14 10:00
-- dojo_id:  25
+  evented_at: 2019/04/14 10:00
+- dojo_id: 25
   event_id:
   participants: 9
-  evented_at:	2019/04/14 10:00
-- dojo_id:  186
+  evented_at: 2019/04/14 10:00
+- dojo_id: 186
   event_id:
   participants: 1
-  evented_at:	2019/04/14 13:30
-- dojo_id:  102
+  evented_at: 2019/04/14 13:30
+- dojo_id: 102
   event_id:
   participants: 4
-  evented_at:	2019/04/14 14:00
-- dojo_id:  188
+  evented_at: 2019/04/14 14:00
+- dojo_id: 188
   event_id:
   participants: 0
-  evented_at:	2019/04/15 18:00
-- dojo_id:  6
+  evented_at: 2019/04/15 18:00
+- dojo_id: 6
   event_id:
   participants: 1
-  evented_at:	2019/04/19 17:00
-- dojo_id:  87
-  event_id:
-  participants: 4
-  evented_at:	2019/04/20 14:00
-- dojo_id:  113
+  evented_at: 2019/04/19 17:00
+# 安曇野は 2018/03 以降 doorkeeper で収集
+# - dojo_id: 87
+#   event_id:
+#   participants: 4
+#   evented_at: 2019/04/20 14:00
+- dojo_id: 113
   event_id:
   participants: 0
-  evented_at:	2019/04/20 15:15
-- dojo_id:  210
+  evented_at: 2019/04/20 15:15
+- dojo_id: 210
   event_id:
   participants: 3
-  evented_at:	2019/04/21 09:00
-- dojo_id:  94
+  evented_at: 2019/04/21 09:00
+- dojo_id: 94
   event_id:
   participants: 5
-  evented_at:	2019/04/21 10:00
-- dojo_id:  141
+  evented_at: 2019/04/21 10:00
+- dojo_id: 141
   event_id:
   participants: 2
-  evented_at:	2019/04/21 10:00
-- dojo_id:  86
+  evented_at: 2019/04/21 10:00
+- dojo_id: 86
   event_id:
   participants: 3
-  evented_at:	2019/04/21 10:30
-- dojo_id:  10
+  evented_at: 2019/04/21 10:30
+- dojo_id: 10
   event_id:
   participants: 2
-  evented_at:	2019/04/21 13:30
-- dojo_id:  186
+  evented_at: 2019/04/21 13:30
+- dojo_id: 186
   event_id:
   participants: 1
-  evented_at:	2019/04/21 13:30
-- dojo_id:  6
+  evented_at: 2019/04/21 13:30
+- dojo_id: 6
   event_id:
   participants: 1
-  evented_at:	2019/04/26 17:00
-- dojo_id:  187
+  evented_at: 2019/04/26 17:00
+- dojo_id: 187
   event_id:
   participants: 3
-  evented_at:	2019/04/27 14:00
-- dojo_id:  23
+  evented_at: 2019/04/27 14:00
+- dojo_id: 23
   event_id:
   participants: 2
-  evented_at:	2019/04/28 14:00
+  evented_at: 2019/04/28 14:00
 
   # 2019/05/01 - 2019/05/31
-- dojo_id:  12
+- dojo_id: 12
   event_id:
   participants: 4
-  evented_at:	2019/05/05 10:30
-- dojo_id:  73
+  evented_at: 2019/05/05 10:30
+- dojo_id: 73
   event_id:
   participants: 4
-  evented_at:	2019/05/05 13:30
-- dojo_id:  102
+  evented_at: 2019/05/05 13:30
+- dojo_id: 102
   event_id:
   participants: 5
-  evented_at:	2019/05/11 14:00
-- dojo_id:  183
+  evented_at: 2019/05/11 14:00
+- dojo_id: 183
   event_id:
   participants: 3
-  evented_at:	2019/05/11 14:00
-- dojo_id:  210
+  evented_at: 2019/05/11 14:00
+- dojo_id: 210
   event_id:
   participants: 1
-  evented_at:	2019/05/12 09:00
-- dojo_id:  23
+  evented_at: 2019/05/12 09:00
+- dojo_id: 23
   event_id:
   participants: 1
-  evented_at:	2019/05/12 10:00
-- dojo_id:  25
+  evented_at: 2019/05/12 10:00
+- dojo_id: 25
   event_id:
   participants: 6
-  evented_at:	2019/05/12 10:00
-- dojo_id:  6
+  evented_at: 2019/05/12 10:00
+- dojo_id: 6
   event_id:
   participants: 2
-  evented_at:	2019/05/17 17:00
-- dojo_id:  191
+  evented_at: 2019/05/17 17:00
+- dojo_id: 191
   event_id:
   participants: 1
-  evented_at:	2019/05/18 10:00
-- dojo_id:  113
+  evented_at: 2019/05/18 10:00
+- dojo_id: 113
   event_id:
   participants: 0
-  evented_at:	2019/05/18 15:15
-- dojo_id:  125
+  evented_at: 2019/05/18 15:15
+- dojo_id: 125
   event_id:
   participants: 0
-  evented_at:	2019/05/18 15:30
-- dojo_id:  94
+  evented_at: 2019/05/18 15:30
+- dojo_id: 94
   event_id:
   participants: 3
-  evented_at:	2019/05/19 10:00
-- dojo_id:  131
+  evented_at: 2019/05/19 10:00
+- dojo_id: 131
   event_id:
   participants: 4
-  evented_at:	2019/05/19 10:00
-- dojo_id:  186
+  evented_at: 2019/05/19 10:00
+- dojo_id: 186
   event_id:
   participants: 1
-  evented_at:	2019/05/19 13:30
-- dojo_id:  86
+  evented_at: 2019/05/19 13:30
+- dojo_id: 86
   event_id:
   participants: 2
-  evented_at:	2019/05/19 10:30
-- dojo_id:  10
+  evented_at: 2019/05/19 10:30
+- dojo_id: 10
   event_id:
   participants: 2
-  evented_at:	2019/05/19 13:30
-- dojo_id:  10
+  evented_at: 2019/05/19 13:30
+- dojo_id: 10
   event_id:
   participants: 1
-  evented_at:	2019/05/26 13:30
-- dojo_id:  6
+  evented_at: 2019/05/26 13:30
+- dojo_id: 6
   event_id:
   participants: 2
-  evented_at:	2019/05/31 17:00
+  evented_at: 2019/05/31 17:00
