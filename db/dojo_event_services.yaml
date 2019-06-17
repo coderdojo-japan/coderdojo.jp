@@ -652,15 +652,13 @@
   name: connpass
   group_id: 7924
   url: https://volunteer-r.connpass.com/
-
 # 大石田@PCチャレンジ倶楽部
 - dojo_id: 215
   name: facebook
   group_id: 2253119258233423
   url: https://www.facebook.com/DojoPcc/
-
 # 那覇
-#- dojo_id: 216
-#  name: doorkeeper
-#  group_id: # TODO: イベントが公開されたらAPIを叩いてGroup IDを取得する
-#  url: https://coderdojo-naha.doorkeeper.jp/
+- dojo_id: 216
+  name: doorkeeper
+  group_id: 10300
+  url: https://coderdojo-naha.doorkeeper.jp/
