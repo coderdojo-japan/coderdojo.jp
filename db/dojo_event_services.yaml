@@ -659,6 +659,6 @@
   url: https://www.facebook.com/DojoPcc/
 # 那覇
 - dojo_id: 216
- name: doorkeeper
- group_id: 10300
- url: https://coderdojo-naha.doorkeeper.jp/
+  name: doorkeeper
+  group_id: 10300
+  url: https://coderdojo-naha.doorkeeper.jp/
