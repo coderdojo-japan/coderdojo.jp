@@ -1,8 +1,10 @@
 module UpcomingEvents
   class Aggregation
     def initialize(args)
-      @from = Time.zone.today
-      @to = @from + 2.months
+      # NOTE: 1 ヶ月前 〜 2 ヶ月後のイベント情報を対象に収集
+      today = Time.zone.today
+      @from = today - 1.months + 1.day
+      @to = today + 2.months
       @provider = args[:provider]
       # NOTE: 対象は一旦収集可能な connpass, doorkeeper のみにする
       @externals = fetch_dojos(@provider)
