@@ -1,3 +1,7 @@
+- dojo_id: 1
+  name: connpass
+  group_id: 9690
+  url: https://coderdojo-inagi.doorkeeper.jp/
 - dojo_id: 64
   name: connpass
   group_id: 3316
