@@ -1439,6 +1439,20 @@
   - Scratch
   - micro:bit
   - 電子工作
+- id: 217
+  order: '232343'
+  created_at: '2019-06-20'
+  name: 師勝
+  prefecture_id: 23
+  logo: "/img/dojos/shikatsu.jpg"
+  url: https://note.mu/cd_shikatsu
+  description: 愛知県北名古屋市で毎月第2木曜日
+  tags:
+  - Scratch
+  - micro:bit
+  - ラズベリーパイ
+  - Arduino
+  - IchigoJam
 - id: 33
   order: '234249'
   is_active: false
