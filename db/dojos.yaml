@@ -1401,6 +1401,17 @@
   tags:
   - Scratch
   - micro:bit
+- id: 218
+  order: '232157'
+  created_at: '2019-06-23'
+  name: 犬山
+  prefecture_id: 23
+  logo: "/img/dojos/inuyama.png"
+  url: https://coderdojo-inuyama.rgr.jp/
+  description: 愛知県犬山市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 84
   order: '232211'
   is_active: false
