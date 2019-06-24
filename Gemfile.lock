@@ -103,6 +103,7 @@ GEM
     flamegraph (0.9.5)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
+    get_process_mem (0.2.3)
     gh (0.14.0)
       addressable
       backports
@@ -230,6 +231,9 @@ GEM
       pry (>= 0.9.11)
     public_suffix (3.0.3)
     puma (3.12.1)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -441,6 +445,7 @@ DEPENDENCIES
   pry-rails
   pry-stack_explorer
   puma
+  puma_worker_killer
   rack-attack
   rack-host-redirect
   rack-mini-profiler

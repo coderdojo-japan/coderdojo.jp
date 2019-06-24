@@ -35,9 +35,15 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # recommended that you close any connections to the database before workers
 # are forked to prevent connection leakage.
 #
-# before_fork do
-#   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
-# end
+before_fork do
+  # NOTE: We use Rolling Restarts on Heroku with Puma web server
+  # https://devcenter.heroku.com/articles/ruby-memory-use#too-many-workers-over-time
+  # https://github.com/schneems/puma_worker_killer#only-turn-on-rolling-restarts
+  require 'puma_worker_killer'
+
+  PumaWorkerKiller.enable_rolling_restart # Default is every 6 hours
+  # ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
+end
 
 # The code in the `on_worker_boot` will be called if you are using
 # clustered mode by specifying a number of `workers`. After each worker

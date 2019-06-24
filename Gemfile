@@ -3,6 +3,7 @@ ruby '2.6.2'
 
 gem 'rails', '~> 5.1.6'
 gem 'puma'
+gem "puma_worker_killer"
 gem 'pg'
 gem 'dumper'
 
