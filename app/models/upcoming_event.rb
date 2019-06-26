@@ -22,7 +22,7 @@ class UpcomingEvent < ApplicationRecord
       Prefecture.order(:id).each do |prefecture|
         events = events_by_prefecture[prefecture.id]
         next if events.blank?
-        result[prefecture] = events.sort_by(&:event_at).map(&:catalog).group_by { |d| d[:event_date] }
+        result[prefecture.name] = events.sort_by(&:event_at).map(&:catalog).group_by { |d| d[:event_date] }
       end
       result
     end
