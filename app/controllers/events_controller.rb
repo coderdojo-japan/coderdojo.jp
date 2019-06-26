@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @upcoming_events }
+      format.json { render json: @upcoming_events.map(&:last) }
     end
   end
 end
