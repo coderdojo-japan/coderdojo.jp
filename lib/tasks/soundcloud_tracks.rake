@@ -8,7 +8,7 @@ namespace :soundcloud_tracks do
     logger.info('==== START soundcloud_tracks:upsert ====')
 
     client = SoundCloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get("/users/#{ENV['SOUNDCLOUD_USER_ID']}/tracks", limit: 100).map(&:deep_symbolize_keys)
+    tracks = client.get('/users/626746926/tracks', limit: 100).map(&:deep_symbolize_keys)
 
     if tracks.length.zero?
       logger.info('no track')
