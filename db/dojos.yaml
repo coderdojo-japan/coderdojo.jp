@@ -1830,6 +1830,18 @@
   - Webサイト
   - 電子工作
   - Python
+- id: 220
+  order: '282065'
+  created_at: '2019-07-07'
+  name: あしや
+  prefecture_id: 28
+  logo: "/img/dojos/ashiya.png"
+  url: https://coderdojo-ashiya.org/
+  description: 兵庫県芦屋市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
 - id: 181
   order: '283011'
   created_at: '2018-10-18'
