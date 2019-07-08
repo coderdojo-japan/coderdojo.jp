@@ -736,6 +736,11 @@
 # 印西
 # - dojo_id: 219
 
+# あしや
+- dojo_id: 220
+  name: doorkeeper
+  group_id: 10406
+  url: https://coderdojo-ashiya.doorkeeper.jp/
 
 # たまみら
 - dojo_id: 221
