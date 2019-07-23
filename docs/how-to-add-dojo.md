@@ -58,11 +58,8 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `is_private` | 省略可。プライベートならtrueにする |
 
 
-- `id` は後述のコマンド
-- `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)を値を入力します
-- `order` の値は、Dojo の名称が公共団体名になっている場合に省略可能です ([#228](https://github.com/coderdojo-japan/coderdojo.jp/issues/228))
-- Dojo 名が市町村以外の名称になっている場合のみ入力する必要があります
-    - 例: `CoderDojo 名は` は `嘉手納` 市があるため、自動的に紐付けされます (省略可能)
+- `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
+- `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します
 
 yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
 
