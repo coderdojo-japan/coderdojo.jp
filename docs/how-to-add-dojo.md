@@ -1,76 +1,107 @@
 # 新規Dojoの追加方法
 
-新規Dojoから申請が来た場合の手順書(2018/06/13現在)
+新規Dojoから申請が来た場合の手順書
 
-## Dojo DB の追加手順
+## 追加の手順
 
-+ [CoderDojoJapanの申請フォーム](http://goo.gl/forms/UfY69hsA99) に来ている新規 Dojo を確認します
-    + 申請結果には個人情報が含まれるため、一般公開されていません :secret:
-+ `db/dojos.yaml` 以下に次のような template で追記します
-    + 都道府県順になるよう追加するとベターです
+[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support) が来たとき、
+まずは申請された Dojo 情報を確認します。
 
-```yaml
-- created_at: '2016-12-19'
-  name: 嘉手納 (沖縄)
-  prefecture_id: 47
-  logo: "/img/dojos/kadena.png"
-  url: http://coderdojokadena.hatenablog.jp/
-  description: 沖縄県中頭郡で毎月開催
-  tags:
-  - Scratch
-  - LEGO Mindstorms
-  - ラズベリーパイ
-  is_active: true
-  is_private: false
+### 申請内容と対応例
+
+申請内容には個人情報が含まれるため、一部改変しています :secret:
+
+```
+Dojo名: CoderDojo 那覇
+Dojoタグ: Scratch, Webサイト, Ruby
+説明文: 那覇市で毎月開催
+ロゴ (任意): 
+Web: https://coderdojo-naha.doorkeeper.jp/
+代表者: ***
+連絡先: ***
+受付日: 2019/06/15 9:42:10
+Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/naha
 ```
 
-フォームとカラムの対応については以下の通りです。
+例えば上記のような申請を受け取ったら、   
+`db/dojos.yaml` に次のように追記します。   
+(order 順に追加すると見やすくてベターです)
 
-| Dojoカラム | フォーム |
+
+```yaml
+- created_at: '2019-06-15'
+  name: 那覇
+  prefecture_id: 47
+  logo: "/img/dojos/japan.png"   #  ロゴがあれば naha.png として追加
+  url: https://coderdojo-naha.doorkeeper.jp/
+  description: 沖縄県那覇市で毎月開催   # 県名や開催頻度などの用語を適宜統一
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
+```
+
+各項目と内容については次の通りです。
+
+| 項目名 | 内容 |
 |:---|:---|
-| `created_at` | タイムスタンプ |
-| `order` (*1) | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) |
-| `name` | 正式名称 |
-| `prefecture_id` | `db/seeds.rb` の該当番号 |
+| `id` | 省略する。タスク実行時に自動追加 (詳細は後述) |
+| `created_at` | 掲載申請日の年月日 |
+| `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
+| `name` | Dojo名 |
+| `prefecture_id` | `db/seeds.rb` の県番号 |
 | `logo` | `public/` のDojo画像パス |
-| `url` | イベントの管理ページ (個別イベントURLではない) |
-| `description` | フォーム `Dojoの開催場所と開催頻度について教えてください` |
-| `tags` | フォーム `Dojoで対応可能な技術を教えてください (最大5つまで)` |
-| `is_active` | [省略可] アクティブ/非アクティブ (省略時、アクティブ) |
-| `is_private` | [省略可] パブリック/プライベート (省略時、パブリック) |
+| `url` | 公式Webサイト (イベント管理ページも可) |
+| `description` | フォーマット化して記載。例: `oo県xx市で毎月開催` |
+| `tags` | 周知したい技術タグを掲載 (最大5つ) |
+| `is_active` | 省略可。非アクティブになったらfalseにする |
+| `is_private` | 省略可。プライベートならtrueにする |
 
-`id`, `created_at`, `updated_at` は Rails がデフォルトで提供するカラムです。詳細は Railsガイドの[Active Recordの基礎](https://railsguides.jp/active_record_basics.html#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB)をご参照ください。
 
-### (*1) `order` の値について
-
+- `id` は後述のコマンド
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)を値を入力します
 - `order` の値は、Dojo の名称が公共団体名になっている場合に省略可能です ([#228](https://github.com/coderdojo-japan/coderdojo.jp/issues/228))
 - Dojo 名が市町村以外の名称になっている場合のみ入力する必要があります
-    - 例: `CoderDojo 嘉手納` は `嘉手納` 市があるため、自動的に紐付けされます (省略可能)
+    - 例: `CoderDojo 名は` は `嘉手納` 市があるため、自動的に紐付けされます (省略可能)
 
-yaml ファイルに各項目を追記したら、`$ bundle exec rails dojos:update_db_by_yaml` を実行して DB に新規 Dojo 情報を反映します。その後 `$ bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します。
+yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
 
-実行後、upsert される ID の値を確認します。ID は現在ある ID 群の中で『最大値+1以上』である必要があります。もし `id: 1` や `id: 3` という値がupsert されていた場合は、`rails console` 上で次のコマンドを実行して、[PostgreSQLの自動採番のシーケンスをリセット](https://github.com/coderdojo-japan/coderdojo.jp/commit/06dce309ac40df13b866d0d5809a652f224fdb7c#r33355507) します。
+```bash
+$ bundle exec rails dojos:update_db_by_yaml
+```
+
+その後、DB に反映された id を yaml に書き出すため、次のコマンドを実行します。
+
+```bash
+$ bundle exec rails dojos:migrate_adding_id_to_yaml
+```
+
+実行後、upsert される ID が現在ある ID 群の中で『最大値+1以上』であることを確認してください。
+
+もし `id: 1` や `id: 3` という値がupsert されていた場合は、`rails console` 上で次のコマンドを実行して、[PostgreSQLの自動採番のシーケンスをリセット](https://github.com/coderdojo-japan/coderdojo.jp/commit/06dce309ac40df13b866d0d5809a652f224fdb7c#r33355507)してください。
 
 ```ruby
 ActiveRecord::Base.connection.execute("SELECT setval('dojos_id_seq', coalesce((SELECT MAX(id)+1 FROM dojos), 1), false)")
 ```
 
-yaml ファイルに id および order が動的に更新されたことを確認できたら `Add CoderDojo [Dojo名]` でコミットします。
+yaml ファイルに id および order が動的に更新されたことを確認できたら `:new: Add CoderDojo 那覇 in 沖縄県` といったコミットをし、Pull Request を送ります。
 
-コミットおよび PR の例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
+Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
-### 関連 Issue
+もしこの時点で「どのイベント管理サービスを使っているか」が分かっていれば、
+続けて、後述する統計システムへの追加も行なってください。
 
-- https://github.com/coderdojo-japan/coderdojo.jp/issues/219
+## 統計システムへの追加
 
-## 集計対象の追加
+coderdojo.jp では開催日、及び参加人数などを集計し、統計ページから公開しています。
 
-現在 CoderDojo では開催日、及び参加人数などを集計しています。
-集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。
-このため、新規 Dojo を追加した場合こちらの集計対象にも追加をお願いしています。
+統計情報 - CoderDojo Japan
+https://coderdojo.jp/stats
 
-- 集計対象は `db/dojo_event_services.yaml` で管理していますので、ここに追記してください
+集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。   
+このため、新規 Dojo を追加する際は、集計対象にも追加をお願いします。
+
+集計対象は `db/dojo_event_services.yaml` で管理していますので、ここに追記してください
 
 ```yaml
 - dojo_id: 131
