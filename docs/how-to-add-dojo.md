@@ -50,7 +50,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
 | `name` | Dojo名 |
 | `prefecture_id` | `db/seeds.rb` の県番号 |
-| `logo` | `public/` のDojo画像パス |
+| `logo` | 省略可。`public/img/dojos` にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |
 | `description` | フォーマット化して記載。例: `oo県xx市で毎月開催` |
 | `tags` | 周知したい技術タグを掲載 (最大5つ) |
@@ -59,7 +59,8 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 
 - `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
-- `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します
+- `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します。
+- `logo` のロゴ画像は [TinyPNG](https://tinypng.com/) で圧縮してから `public/img/dojos` に置いてください。
 
 yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
 
