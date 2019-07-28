@@ -566,34 +566,51 @@ a {
     margin-top: 50px;
 }
 
-#event-list {
-    width: 80%;
-    margin: 0 auto;
-}
-
-#event-list .event-date {
-    text-align: left;
-    margin: .5em 0;
-}
-
-#event-list ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-#event-list ul li {
-    text-align: left;
-}
-
-#event-list .event-at {
+.event {
     display: inline-block;
-    width: 80px;
+    height: 200px;
+    width: 45%;
+    margin: 5px;
+    // padding: 15px 0;
+    background: #fff;
+    position: relative;
+    text-align: center
 }
+
+.event > header {
+    background: #2275CA;
+    color: #fff;
+    text-align: center;
+}
+
+.event > p {
+    margin: 10px;
+    text-align: left;
+}
+
+.event > p > a {
+    text-decoration: none
+}
+
+// #event-list .event-date {
+//     text-align: left;
+//     margin: .5em 0;
+// }
+
+// #event-list .event-at {
+//     display: inline-block;
+//     width: 80px;
+// }
 
 @media only screen and (min-width:560px) {
     .dojo {
         width: 220px;
         height: 275px;
+        margin: 10px;
+    }
+
+    .event {
+        width: 220px;
         margin: 10px;
     }
 }
