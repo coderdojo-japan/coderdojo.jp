@@ -436,10 +436,14 @@
   name: facebook
   group_id: 1507281716025249
   url: https://www.facebook.com/pg/coderdojomiyoshi/events/
+#- dojo_id: 102 # 第１回〜第３回は Facebook イベントで運用
+#  name: facebook
+#  group_id: 495711777474589
+#  url: https://www.facebook.com/pg/CoderDojoFukuoka/events/
 - dojo_id: 102
-  name: facebook
-  group_id: 495711777474589
-  url: https://www.facebook.com/pg/CoderDojoFukuoka/events/
+  name: connpass
+  group_id: 5138
+  url: https://coderdojo-fukuoka.connpass.com/
 - dojo_id: 113
   name: facebook
   group_id: 1928416637480111
