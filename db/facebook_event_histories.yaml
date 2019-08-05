@@ -3861,3 +3861,81 @@
   event_id:
   participants: 1
   evented_at: 2019/06/29 14:20
+
+  # 2019/07/01 - 2019/07/31
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/07/05 17:00
+- dojo_id: 183
+  event_id:
+  participants: 3
+  evented_at: 2019/07/06 14:00
+- dojo_id: 187
+  event_id:
+  participants: 3
+  evented_at: 2019/07/06 14:00
+- dojo_id: 12
+  event_id:
+  participants: 6
+  evented_at: 2019/07/07 10:30
+- dojo_id: 186
+  event_id:
+  participants: 1
+  evented_at: 2019/07/07 13:30
+- dojo_id: 198
+  event_id:
+  participants: 0
+  evented_at: 2019/07/14 09:30
+- dojo_id: 25
+  event_id:
+  participants: 4
+  evented_at: 2019/07/14 10:00
+- dojo_id: 131
+  event_id:
+  participants: 3
+  evented_at: 2019/07/14 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/07/14 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/07/19 17:00
+- dojo_id: 191
+  event_id:
+  participants: 5
+  evented_at: 2019/07/20 14:00
+- dojo_id: 186
+  event_id:
+  participants: 0
+  evented_at: 2019/07/21 09:30
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2019/07/21 09:30
+- dojo_id: 86
+  event_id:
+  participants: 3
+  evented_at: 2019/07/21 10:30
+- dojo_id: 73
+  event_id:
+  participants: 2
+  evented_at: 2019/07/21 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/07/26 17:00
+- dojo_id: 97
+  event_id:
+  participants: 6
+  evented_at: 2019/07/27 10:00
+- dojo_id: 209
+  event_id:
+  participants: 3
+  evented_at: 2019/07/27 14:20
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/07/28 13:30
