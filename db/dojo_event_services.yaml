@@ -685,6 +685,13 @@
   name: doorkeeper
   group_id: 10019
   url: https://coderdojo-suita.doorkeeper.jp/
+
+# 日吉(福岡県久留米市)
+- dojo_id: 207
+  name: connpass
+  group_id: 7561
+  url: https://coderdojo-hiyoshi.connpass.com/
+
 - dojo_id: 208
   name: connpass
   group_id: 7500
