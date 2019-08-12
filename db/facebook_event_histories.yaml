@@ -2634,14 +2634,6 @@
   event_id: 1684157511622792
   participants: 3
   evented_at: 2018/01/14 14:00
-- dojo_id: 102
-  event_id: 1004396759718142
-  participants: 2
-  evented_at: 2018/02/10 14:00
-- dojo_id: 102
-  event_id: 558004947892527
-  participants: 3
-  evented_at: 2018/03/10 14:00
 - dojo_id: 111
   event_id: 237818390082314
   participants: 1
@@ -3227,46 +3219,6 @@
   event_id: 2124909820923355
   participants: 4
   evented_at: 2019/02/17 10:00
-- dojo_id: 102
-  event_id: 589086408111015
-  participants: 5
-  evented_at: 2018/04/14 14:00
-- dojo_id: 102
-  event_id: 266200090587482
-  participants: 6
-  evented_at: 2018/05/12 14:00
-- dojo_id: 102
-  event_id: 2122252504711147
-  participants: 3
-  evented_at: 2018/06/02 14:00
-- dojo_id: 102
-  event_id: 203044667215454
-  participants: 5
-  evented_at: 2018/08/11 14:00
-- dojo_id: 102
-  event_id: 2101797823404409
-  participants: 4
-  evented_at: 2018/09/08 14:00
-- dojo_id: 102
-  event_id: 634290583638800
-  participants: 2
-  evented_at: 2018/10/13 14:00
-- dojo_id: 102
-  event_id: 157941378485533
-  participants: 4
-  evented_at: 2018/11/10 14:00
-- dojo_id: 102
-  event_id: 995304900678310
-  participants: 2
-  evented_at: 2018/12/08 14:00
-- dojo_id: 102
-  event_id: 272050403492623
-  participants: 7
-  evented_at: 2019/01/12 14:00
-- dojo_id: 102
-  event_id: 1975900619132050
-  participants: 2
-  evented_at: 2019/02/02 14:00
 - dojo_id: 113
   event_id: 500437787102091
   participants: 0
@@ -3489,10 +3441,6 @@
   event_id:
   participants: 0
   evented_at: 2019/03/03 13:00
-- dojo_id: 102
-  event_id:
-  participants: 2
-  evented_at: 2019/03/09 14:00
 - dojo_id: 203
   event_id:
   participants: 2
@@ -3616,10 +3564,6 @@
   event_id:
   participants: 1
   evented_at: 2019/04/14 13:30
-- dojo_id: 102
-  event_id:
-  participants: 4
-  evented_at: 2019/04/14 14:00
 - dojo_id: 188
   event_id:
   participants: 0
@@ -3687,10 +3631,6 @@
   event_id:
   participants: 4
   evented_at: 2019/05/05 13:30
-- dojo_id: 102
-  event_id:
-  participants: 5
-  evented_at: 2019/05/11 14:00
 - dojo_id: 183
   event_id:
   participants: 3
@@ -3773,10 +3713,6 @@
   event_id:
   participants: 1
   evented_at: 2019/06/07 17:00
-- dojo_id: 102
-  event_id:
-  participants: 4
-  evented_at: 2019/06/08 14:00
 - dojo_id: 203
   event_id:
   participants: 3
