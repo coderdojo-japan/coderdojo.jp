@@ -4,16 +4,15 @@ class SoundCloudTrack < ApplicationRecord
   DIR_PATH  = 'public/podcasts'
   URL_PATH  = 'podcasts'
 
-  validates :track_id,              presence: false, uniqueness: true
-  validates :title,                 presence: false
-  validate  :description
-  validates :original_content_size, presence: false
-  validates :duration,              presence: false
-  validate  :tag_list
-  validates :download_url,          presence: false
-  validates :permalink,             presence: false
-  validates :permalink_url,         presence: false
-  validates :uploaded_at,           presence: false
+  validates :track_id,              presence: true, uniqueness: true
+  validates :title,                 presence: true
+  validates :original_content_size, presence: true
+  validates :duration,              presence: true
+  validates :download_url,          presence: true
+  validates :permalink,             presence: true
+  validates :permalink_url,         presence: true
+  validates :uploaded_at,           presence: true
+  validates :published_date,        presence: true
 
   # instance methods
   def path
@@ -27,10 +26,6 @@ class SoundCloudTrack < ApplicationRecord
   def exists?(offset: 0)
     return false if path.include?("\u0000")
     File.exists?("#{DIR_PATH}/#{id + offset}.md")
-  end
-
-  def published_at
-    exists? ? Time.parse(content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : nil
   end
 
   def content

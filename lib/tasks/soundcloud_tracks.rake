@@ -23,6 +23,11 @@ namespace :soundcloud_tracks do
           is_new = true
           track = SoundCloudTrack.new(track_id: d[:id])
         end
+        if d[:release_year] && d[:release_month] && d[:release_day]
+          published_date = "#{d[:release_year]}-#{d[:release_month]}-#{d[:release_day]}".to_date
+        else
+          raise 'No Release Date'
+        end
         track.update!(
           title:                 d[:title],
           description:           d[:description],
@@ -32,7 +37,8 @@ namespace :soundcloud_tracks do
           download_url:          d[:download_url],
           permalink:             d[:permalink],
           permalink_url:         d[:permalink_url],
-          uploaded_at:           d[:created_at]
+          uploaded_at:           d[:created_at],
+          published_date:        published_date
         )
         logger.info("added [#{track.id}] #{track.title}") if is_new
       end
