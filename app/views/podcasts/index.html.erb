@@ -24,7 +24,7 @@
     <h3 id="episodes" style="text-align: center; padding-bottom: 10px;">📻 これまでの収録</h3>
     <ul style="font-size: 120%">
       <% @episodes.each do |episode| %>
-        <li><!-- <small><%#= episode.published_at.try(:strftime, '%Y/%m/%d') || '----/--/--' %></small> -->
+        <li><!-- <small><%#= episode.published_date.try(:strftime, '%Y/%m/%d') || '----/--/--' %></small> -->
           <%= link_to episode.title, episode.url %></li>
       <% end %>
     </ul>

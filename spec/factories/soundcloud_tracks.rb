@@ -10,5 +10,6 @@ FactoryBot.define do
     permalink             { 'title' }
     permalink_url         { 'http://aaa.bbb/title' }
     uploaded_at           { '2019/01/01 09:00:00'.in_time_zone }
+    published_date        { Time.zone.today }
   end
 end

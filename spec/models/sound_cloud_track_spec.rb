@@ -54,25 +54,6 @@ RSpec.describe SoundCloudTrack, :type => :model do
     end
   end
 
-  describe 'published_at' do
-    before :each do
-      @content_body = "Podcast Title\n収録日: 2019/05/10\n概要説明..."
-      allow(@soundcloud_track).to receive(:content) { @content_body }
-    end
-
-    it 'ファイル存在' do
-      allow(@soundcloud_track).to receive(:exists?) { true }
-
-      expect(@soundcloud_track.published_at).to eq('2019-05-10'.in_time_zone)
-    end
-
-    it 'ファイルなし ⇒ nil' do
-      allow(@soundcloud_track).to receive(:exists?) { false }
-
-      expect(@soundcloud_track.published_at).to eq(nil)
-    end
-  end
-
   describe 'content' do
     before :each do
       @content_body = "Podcast Title\n収録日: 2019/05/10\n概要説明..."
