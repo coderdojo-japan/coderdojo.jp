@@ -1,8 +1,10 @@
 module Statistics
   module Tasks
     class Connpass
-      def self.delete_event_histories(period)
-        EventHistory.for(:connpass).within(period).delete_all
+      def self.delete_event_histories(period, dojo_id)
+        histories = EventHistory.for(:connpass).within(period)
+        histories = histories.where(dojo_id: dojo_id) if dojo_id
+        histories.delete_all
       end
 
       def initialize(dojos, period)

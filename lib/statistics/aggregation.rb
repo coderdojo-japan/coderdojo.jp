@@ -3,6 +3,8 @@ module Statistics
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
       @provider = args[:provider]
+      @dojo_id = args[:dojo_id].to_i if args[:dojo_id].present? && /\A\d+\Z/.match?(args[:dojo_id])
+
       dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
       @internals = dojos[:internals]
@@ -81,7 +83,9 @@ module Statistics
 
     def find_dojos_by(services)
       services.each.with_object({}) do |name, hash|
-        hash[name] = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name }).to_a
+        dojos = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name })
+        dojos = dojos.where(id: @dojo_id) if @dojo_id
+        hash[name] = dojos.to_a
       end
     end
 
@@ -95,14 +99,18 @@ module Statistics
     def delete_event_histories
       target_period = @from.beginning_of_day..@to.end_of_day
       (@externals.keys + @internals.keys).each do |kind|
-        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period)
+        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period, @dojo_id)
       end
     end
 
     def execute
       target_period = @from..@to
       @externals.each do |kind, list|
-        puts "Aggregate of #{kind}"
+        if @dojo_id
+          puts "Aggregate of #{kind}[#{@dojo_id}]"
+        else
+          puts "Aggregate of #{kind}"
+        end
         "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, target_period).run
       end
     end
