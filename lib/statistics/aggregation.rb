@@ -11,7 +11,8 @@ module Statistics
     end
 
     def run
-      puts "Aggregate for #{@from}~#{@to}"
+      dojo_info = "[#{@dojo_id}]" if @dojo_id
+      puts "Aggregate for #{@from}~#{@to}#{dojo_info}"
       with_notifying do
         delete_event_histories
         execute
@@ -91,9 +92,9 @@ module Statistics
 
     def with_notifying
       yield
-      Notifier.notify_success(date_format(@from), date_format(@to), @provider)
+      Notifier.notify_success(date_format(@from), date_format(@to), @provider, @dojo_id)
     rescue => e
-      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, e)
+      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, @dojo_id, e)
     end
 
     def delete_event_histories
@@ -128,18 +129,22 @@ module Statistics
 
     class Notifier
       class << self
-        def notify_success(from, to, provider)
-          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計を行いました")
+        def notify_success(from, to, provider, dojo_id)
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計を行いました")
         end
 
-        def notify_failure(from, to, provider, exception)
-          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+        def notify_failure(from, to, provider, dojo_id, exception)
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
 
         def provider_info(provider)
           provider ? "(#{provider})" : nil
+        end
+
+        def dojo_info(dojo_id)
+          dojo_id ? "[#{dojo_id}]" : nil
         end
 
         def idobata_hook_url
