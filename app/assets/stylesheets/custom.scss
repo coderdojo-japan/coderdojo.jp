@@ -566,21 +566,34 @@ a {
     margin-top: 50px;
 }
 
+.event-ul{
+  padding:0;
+  max-width:1000px;
+  margin:0 auto;
+}
+
 .event {
-    display: inline-block;
-    height: 200px;
-    width: 45%;
+    border : 1px solid #e8e8e8; 
+    display: inline-table;
+    min-height: 200px;
+    /*width: 45%;*/
     margin: 5px;
     // padding: 15px 0;
     background: #fff;
     position: relative;
-    text-align: center
+    text-align: center;
 }
 
 .event > header {
     background: #2275CA;
     color: #fff;
     text-align: center;
+    padding:10px;
+}
+
+.event > header p.event-date,
+.event > header p.event-at{
+  margin:0;
 }
 
 .event > p {

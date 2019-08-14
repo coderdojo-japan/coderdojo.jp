@@ -2,7 +2,7 @@
   - upcoming_events.each do |prefecture, events|
     %p.event-region{id: prefecture}
       %a{href: "##{prefecture}", style: "color: black;"}= prefecture
-    %ul
+    %ul.event-ul
       - events.each do |event|
         %li.event
           %header
