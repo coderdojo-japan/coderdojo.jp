@@ -2,7 +2,7 @@ require_relative '../statistics.rb'
 
 namespace :statistics do
   desc '指定期間/プロバイダのイベント履歴を集計します'
-  task :aggregation, [:from, :to, :provider] => :environment do |tasks, args|
+  task :aggregation, [:from, :to, :provider, :dojo_id] => :environment do |tasks, args|
     EventHistory.transaction do
       Statistics::Aggregation.new(args).run
     end

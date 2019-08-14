@@ -15,10 +15,10 @@ RSpec.describe Statistics::Aggregation do
 
   describe '.run' do
     before do
-      d1 = Dojo.create(name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
-      d2 = Dojo.create(name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
-      DojoEventService.create(dojo_id: d1.id, name: :connpass, group_id: 9876)
-      DojoEventService.create(dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
+      d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
+      d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
+      create(:dojo_event_service, dojo_id: d1.id, name: :connpass, group_id: 9876)
+      create(:dojo_event_service, dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
     end
 
     subject { Statistics::Aggregation.new(from: Time.zone.today.prev_month.strftime('%Y%m')).run }
@@ -140,6 +140,40 @@ RSpec.describe Statistics::Aggregation do
         dojos = sa.send(:fetch_dojos, 'abc')
         expect(dojos[:externals].keys).to eq([])
         expect(dojos[:internals].keys).to eq([])
+      end
+    end
+
+    context 'find_dojos_by(services)' do
+      before :each do
+        @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
+        @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
+        @d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://dojo3.com')
+        @d4 = create(:dojo, name: 'Dojo4', email: 'info@dojo4.com', description: 'CoderDojo4', tags: %w(CoderDojo4), url: 'https://dojo4.com')
+        create(:dojo_event_service, dojo_id: @d1.id, name: :connpass,   group_id: 9876)
+        create(:dojo_event_service, dojo_id: @d2.id, name: :doorkeeper, group_id: 5555)
+        create(:dojo_event_service, dojo_id: @d2.id, name: :connpass,   group_id: 9877)
+        create(:dojo_event_service, dojo_id: @d3.id, name: :doorkeeper, group_id: 5556)
+        create(:dojo_event_service, dojo_id: @d4.id, name: :facebook,   group_id: 10000)
+      end
+
+      it 'dojo_id 指定なし' do
+        result = sa.send(:find_dojos_by, DojoEventService::EXTERNAL_SERVICES)
+        expect(result[:connpass].size).to eq(2)
+        expect(result[:connpass].map { |d| d.id }.sort).to eq([@d1.id, @d2.id].sort)
+        expect(result[:doorkeeper].size).to eq(2)
+        expect(result[:doorkeeper].map { |d| d.id }.sort).to eq([@d2.id, @d3.id].sort)
+        expect(result[:facebook].size).to eq(1)
+        expect(result[:facebook].map { |d| d.id }).to eq([@d4.id])
+      end
+
+      it 'dojo_id 指定あり' do
+        sa.instance_variable_set(:@dojo_id, @d2.id)
+        result = sa.send(:find_dojos_by, DojoEventService::EXTERNAL_SERVICES)
+        expect(result[:connpass].size).to eq(1)
+        expect(result[:connpass].map { |d| d.id }).to eq([@d2.id])
+        expect(result[:doorkeeper].size).to eq(1)
+        expect(result[:doorkeeper].map { |d| d.id }).to eq([@d2.id])
+        expect(result[:facebook].size).to eq(0)
       end
     end
   end

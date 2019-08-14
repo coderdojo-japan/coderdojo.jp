@@ -1,8 +1,10 @@
 module Statistics
   module Tasks
     class StaticYaml
-      def self.delete_event_histories(_period)
-        EventHistory.for(:static_yaml).delete_all
+      def self.delete_event_histories(_period, dojo_id)
+        histories = EventHistory.for(:static_yaml)
+        histories = histories.where(dojo_id: dojo_id) if dojo_id
+        histories.delete_all
       end
 
       def initialize(dojos, _date)

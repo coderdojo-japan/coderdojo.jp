@@ -1,8 +1,10 @@
 module Statistics
   module Tasks
     class Doorkeeper
-      def self.delete_event_histories(period)
-        EventHistory.for(:doorkeeper).within(period).delete_all
+      def self.delete_event_histories(period, dojo_id)
+        histories = EventHistory.for(:doorkeeper).within(period)
+        histories = histories.where(dojo_id: dojo_id) if dojo_id
+        histories.delete_all
       end
 
       def initialize(dojos, period)

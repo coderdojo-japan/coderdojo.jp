@@ -1,8 +1,10 @@
 module Statistics
   module Tasks
     class Facebook
-      def self.delete_event_histories(period)
-        EventHistory.for(:facebook).within(period).delete_all
+      def self.delete_event_histories(period, dojo_id)
+        histories = EventHistory.for(:facebook).within(period)
+        histories = histories.where(dojo_id: dojo_id) if dojo_id
+        histories.delete_all
       end
 
       def initialize(dojos, period)

@@ -3,13 +3,16 @@ module Statistics
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
       @provider = args[:provider]
+      @dojo_id = args[:dojo_id].to_i if args[:dojo_id].present? && /\A\d+\Z/.match?(args[:dojo_id])
+
       dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
       @internals = dojos[:internals]
     end
 
     def run
-      puts "Aggregate for #{@from}~#{@to}"
+      dojo_info = "[#{@dojo_id}]" if @dojo_id
+      puts "Aggregate for #{@from}~#{@to}#{dojo_info}"
       with_notifying do
         delete_event_histories
         execute
@@ -81,28 +84,34 @@ module Statistics
 
     def find_dojos_by(services)
       services.each.with_object({}) do |name, hash|
-        hash[name] = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name }).to_a
+        dojos = Dojo.eager_load(:dojo_event_services).where(dojo_event_services: { name: name })
+        dojos = dojos.where(id: @dojo_id) if @dojo_id
+        hash[name] = dojos.to_a
       end
     end
 
     def with_notifying
       yield
-      Notifier.notify_success(date_format(@from), date_format(@to), @provider)
+      Notifier.notify_success(date_format(@from), date_format(@to), @provider, @dojo_id)
     rescue => e
-      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, e)
+      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, @dojo_id, e)
     end
 
     def delete_event_histories
       target_period = @from.beginning_of_day..@to.end_of_day
       (@externals.keys + @internals.keys).each do |kind|
-        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period)
+        "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period, @dojo_id)
       end
     end
 
     def execute
       target_period = @from..@to
       @externals.each do |kind, list|
-        puts "Aggregate of #{kind}"
+        if @dojo_id
+          puts "Aggregate of #{kind}[#{@dojo_id}]"
+        else
+          puts "Aggregate of #{kind}"
+        end
         "Statistics::Tasks::#{kind.to_s.camelize}".constantize.new(list, target_period).run
       end
     end
@@ -120,18 +129,22 @@ module Statistics
 
     class Notifier
       class << self
-        def notify_success(from, to, provider)
-          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計を行いました")
+        def notify_success(from, to, provider, dojo_id)
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計を行いました")
         end
 
-        def notify_failure(from, to, provider, exception)
-          notify("#{from}~#{to}#{provider_info(provider)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+        def notify_failure(from, to, provider, dojo_id, exception)
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
 
         def provider_info(provider)
           provider ? "(#{provider})" : nil
+        end
+
+        def dojo_info(dojo_id)
+          dojo_id ? "[#{dojo_id}]" : nil
         end
 
         def idobata_hook_url
