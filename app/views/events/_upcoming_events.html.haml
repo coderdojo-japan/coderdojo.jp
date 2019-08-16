@@ -1,14 +1,14 @@
-%div#event-list
-  - upcoming_events.each do |prefecture, events_by_date|
-    %p.event-region{id: prefecture}
+%div#event-list.grayscale-bg
+  - upcoming_events.each do |prefecture, events|
+    %h2.event-region{id: prefecture}
       %a{href: "##{prefecture}", style: "color: black;"}= prefecture
-    - events_by_date.each do |date, events|
-      %p.event-date= l(date)
-      %ul
-        - events.each do |event|
-          %li
-            %p
-              %span.event-at= "#{event[:event_at].strftime('%k:%M')}〜"
-              %a.event-url{ href: "#{event[:event_url]}" }
-                %span= event[:event_title]
-              %span= "(#{event[:dojo_name]})"
+    %ul.event-ul
+      - events.each do |event|
+        %li.event
+          %header
+            %p.event-date= l(event[:event_date])
+            %p.event-at= "#{event[:event_at].strftime('%k:%M')}"
+          %p
+            %a.event-url{ href: "#{event[:event_url]}" }
+              %span= event[:event_title]
+            %span= "(#{event[:dojo_name]})"

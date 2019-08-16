@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   def index
     @url             = request.url
-    @upcoming_events = UpcomingEvent.group_by_prefecture_and_date
+    @upcoming_events = UpcomingEvent.group_by_prefecture
 
     respond_to do |format|
       format.html

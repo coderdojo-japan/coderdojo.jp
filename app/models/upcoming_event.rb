@@ -13,7 +13,7 @@ class UpcomingEvent < ApplicationRecord
   scope :until, ->(date) { where('event_end_at < ?', date.beginning_of_day) }
 
   class << self
-    def group_by_prefecture_and_date
+    def group_by_prefecture
       events_by_prefecture = eager_load(dojo_event_service: :dojo).since(Time.zone.today).
         merge(Dojo.default_order).
         group_by { |event| event.dojo_event_service.dojo.prefecture_id }
@@ -22,7 +22,7 @@ class UpcomingEvent < ApplicationRecord
       Prefecture.order(:id).each do |prefecture|
         events = events_by_prefecture[prefecture.id]
         next if events.blank?
-        result[prefecture.name] = events.sort_by(&:event_at).map(&:catalog).group_by { |d| d[:event_date] }
+        result[prefecture.name] = events.sort_by(&:event_at).map(&:catalog)
       end
       result
     end

@@ -4,66 +4,78 @@
 // Customized by YassLab team
 
 /* DojoCast Cover Photo */
+
 .dojocast-cover {
   border-radius: 0px;
 }
 
 /* DocSearch by Algolia */
+
 .search {
-  padding-top:    17px;
-  padding-left:   15px;
-  padding-right:  20px;
+  padding-top: 17px;
+  padding-left: 15px;
+  padding-right: 20px;
   padding-bottom: 10px;
 }
+
 #searchbox {
   padding-left: 5px;
-  font-size:    90%;
+  font-size: 90%;
 }
+
 .algolia-autocomplete {
   /* Main dropdown wrapper */
   //  max-width: 100px;
 }
+
 .algolia-autocomplete .ds-dropdown-menu {
   //  width: 200px;
 }
+
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
   /* Main category (eg. Getting Started) */
   //  color: darkgray;
   //  border: 1px solid gray;
 }
+
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
   /* Category (eg. Downloads) */
   //  color: gray;
 }
+
 .algolia-autocomplete .algolia-docsearch-suggestion--title {
   /* Title (eg. Bootstrap CDN) */
   //  font-weight: bold;
   //  color: black;
 }
+
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
   /* Description description (eg. Bootstrap currently works...) */
   //  font-size: 0.8rem;
   //  color: gray;
 }
+
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
   /* Highlighted text */
   //  color: blue;
 }
 
 /* 改行位置の調整 */
-.ignore-pc{
-  display:none;
+
+.ignore-pc {
+  display: none;
 }
-.ignore-sp{
-  display:inline;
+
+.ignore-sp {
+  display: inline;
 }
 
 @media screen and (max-width: 640px) {
-  .ignore-pc{
-    display:inline;
+  .ignore-pc {
+    display: inline;
   }
-  .ignore-sp{
-    display:none;
+  .ignore-sp {
+    display: none;
   }
 }
 
@@ -74,41 +86,43 @@
   padding-bottom: 50%;
   padding-top: 65px;
 }
+
 .home-point-slides iframe {
-  width:  100%;
+  width: 100%;
   height: 100%;
   position: absolute;
-  top:  0;
+  top: 0;
   left: 0;
 }
 
 .home-point-video {
-	position: relative;
-	margin-bottom: 30px;
-	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-	padding-top: 25px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  padding-top: 25px;
 }
 
 .home-point-video iframe {
-	position: absolute;
-	top:  0;
-	left: 3.5%;
-	width:  95% !important;
-	height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 3.5%;
+  width: 95% !important;
+  height: 100% !important;
 }
 
-.headline{
+.headline {
   color: white;
   background: #2275CA;
   padding: 10px 10px 10px 20px;
-  margin:  30px auto;
+  margin: 30px auto;
 }
 
-.headline-anchor{
+.headline-anchor {
   padding-bottom: 30px;
 }
 
-.kata{
+.kata {
   position: relative;
   a.button {
     position: absolute;
@@ -136,8 +150,7 @@
   }
 }
 
-
-div #README{
+div #README {
   margin-top: -75px;
 }
 
@@ -146,181 +159,182 @@ img {
   height: auto;
   border-radius: 10px;
 }
-a > img {
+
+a>img {
   width: 100%;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
-h2{
+h2 {
   font-weight: 500;
 }
 
-.fontsize-bigger{
-  font-size: 120%;
+.fontsize-bigger {
+  font-size: 20px;
 }
 
 .snsb {
-    overflow: hidden;
-    clear: left;
-    margin-left: 13px;
-    padding: 0 ;
+  overflow: hidden;
+  clear: left;
+  margin-left: 13px;
+  padding: 0;
 }
+
 .snsb li {
-    float: left;
-    margin: 4px;
-    list-style-type: none;
-    line-height: 0;
+  float: left;
+  margin: 4px;
+  list-style-type: none;
+  line-height: 0;
 }
+
 .snsb iframe {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 // Partner section
 .partners_logo {
-  ul{
+  ul {
     padding-left: 0px;
   }
-  li{
+  li {
     list-style-type: none;
     display: inline-block;
     padding-top: 20px;
-    
     @media only screen and (min-width: 0px) {
       margin-left: -5px;
-      margin-top:   5px;
-      width:  260px;
-      height: 120px;      
+      margin-top: 5px;
+      width: 260px;
+      height: 120px;
     }
     @media only screen and (min-width: 321px) {
       margin-top: 20px;
-      width:  300px;
-      height: 120px;      
+      width: 300px;
+      height: 120px;
     }
     @media only screen and (min-width: 560px) {
-      padding: 30px  0px 0px  0px;
-      margin:   0px  0px 0px  0px;
-      width:  220px;
+      padding: 30px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      width: 220px;
       height: 100px;
     }
     @media only screen and (min-width: 720px) {
-      padding:  0px 20px 0px 20px;
-      margin:  30px  0px 0px  0px;
-      width:  320px;
+      padding: 0px 20px 0px 20px;
+      margin: 30px 0px 0px 0px;
+      width: 320px;
       height: 100px;
     }
-    img{
-      width:100%;
+    img {
+      width: 100%;
       &:hover {
-	cursor: pointer;
+        cursor: pointer;
       }
     }
   }
 }
 
 // Customized by @coderdojo-tokyo
-
-.cd-fw{
-    text-align: center;
-    background: #2275CA;
+.cd-fw {
+  text-align: center;
+  background: #2275CA;
 }
 
-.dojo > header > a {
-    text-decoration: none
+.dojo>header>a {
+  text-decoration: none
 }
 
 @font-face {
-    font-family: coderdojo;
-    src: url(/font/coderdojo.eot);
-    src: url(/font/coderdojo.eot?#iefix) format('eot'), url(/font/coderdojo.woff) format('woff'), url(/font/coderdojo.ttf) format('truetype'), url(/font/coderdojo.svg#coderdojo) format('svg');
-    font-weight: 400;
-    font-style: normal
+  font-family: coderdojo;
+  src: url(/font/coderdojo.eot);
+  src: url(/font/coderdojo.eot?#iefix) format('eot'), url(/font/coderdojo.woff) format('woff'), url(/font/coderdojo.ttf) format('truetype'), url(/font/coderdojo.svg#coderdojo) format('svg');
+  font-weight: 400;
+  font-style: normal
 }
 
 .cd:before {
-    display: inline-block;
-    font-family: coderdojo;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+  display: inline-block;
+  font-family: coderdojo;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 
 .cd-lg {
-    font-size: 1.3333333333333333em;
-    line-height: .75em;
-    vertical-align: -15%
+  font-size: 1.3333333333333333em;
+  line-height: .75em;
+  vertical-align: -15%
 }
 
 .dojo {
-    overflow: hidden;
-    vertical-align: top
+  overflow: hidden;
+  vertical-align: top
 }
 
 .cd-2x {
-    font-size: 2em
+  font-size: 2em
 }
 
 .cd-3x {
-    font-size: 3em
+  font-size: 3em
 }
 
 .cd-4x {
-    font-size: 4em
+  font-size: 4em
 }
 
 .cd-5x {
-    font-size: 5em
+  font-size: 5em
 }
 
 .cd-fw {
-    width: 1.2857142857142858em
+  width: 1.2857142857142858em
 }
 
 .cd-spin {
-    -webkit-animation: spin 2s infinite linear;
-    animation: spin 2s infinite linear
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear
 }
 
 .cd-clock:before {
-    content: "\EA01"
+  content: "\EA01"
 }
 
 .cd-connect:before {
-    content: "\EA02"
+  content: "\EA02"
 }
 
 .cd-glyph07:before {
-    content: "\EA03"
+  content: "\EA03"
 }
 
 .cd-glyph08:before {
-    content: "\EA04"
+  content: "\EA04"
 }
 
 .cd-logo-jp:before {
-    content: "\EA05"
+  content: "\EA05"
 }
 
 .cd-logo:before {
-    content: "\EA06"
+  content: "\EA06"
 }
 
 .cd-pin:before {
-    content: "\EA07"
+  content: "\EA07"
 }
 
 .cd-spinner:before {
-    content: "\EA08"
+  content: "\EA08"
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
 }
 
 a {
@@ -328,305 +342,324 @@ a {
 }
 
 .under-construction {
-    color: #cd8585;
-    font-size: 75%;
-    margin: 0;
-    padding: .2em;
-    background: #FFF
+  color: #cd8585;
+  font-size: 75%;
+  margin: 0;
+  padding: .2em;
+  background: #FFF
 }
 
-.footer-bottom  {
-    //margin: -.25em 0 0;
-    padding: 2em 2em;
-    color: #fff;
-    background: #2275CA
+.footer-bottom {
+  //margin: -.25em 0 0;
+  padding: 2em 2em;
+  color: #fff;
+  background: #2275CA
 }
 
-.footer-bottom > h2 {
-    font-size: 87.5%;
-    margin-top: 0;
-    margin-bottom: 2em
+.footer-bottom>h2 {
+  font-size: 87.5%;
+  margin-top: 0;
+  margin-bottom: 2em
 }
 
 .footer-link {
-    color: #fff;
-    text-decoration: underline
+  color: #fff;
+  text-decoration: underline
 }
 
 .footer-link:link {
-    color: #fff;
-    text-decoration: underline
+  color: #fff;
+  text-decoration: underline
 }
 
 .footer-link:visited {
-    color: #fff;
-    text-decoration: underline
+  color: #fff;
+  text-decoration: underline
 }
 
-.title, body > footer a:hover {
-    color: #fff;
-    text-decoration: none
+.title,
+body>footer a:hover {
+  color: #fff;
+  text-decoration: none
 }
 
-.title{
+.title {
   padding-top: 15px;
   background: #2275CA;
 }
 
-.title > i.cd:before {
-    font-size: 500%;
-    display: block
+.title>i.cd:before {
+  font-size: 500%;
+  display: block
 }
 
-.title > h1 {
-    font-size: 1.5em;
-    margin: .5em 0 0.3em
+.title>h1 {
+  font-size: 1.5em;
+  margin: .5em 0 0.3em
 }
 
-.title > p {
-    padding: 0 1em;
-    margin: 0 auto;
-    max-width: 680px;
-    //font-size: 130%
+.title>p {
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: 680px; //font-size: 130%
 }
 
 @media only screen and (min-width:560px) {
-    body > footer > ul li {
-        border-radius: 3px;
-        line-height: 2.8em
-    }
-
-    .title > i.cd:before {
-        font-size: 800%
-    }
-
-    .title > h1 {
-        font-size: 1.7em;
-        margin-bottom: .5em
-    }
-
-    .title > p {
-        padding: 0 3em;
-        font-size: 110%
-    }
+  body>footer>ul li {
+    border-radius: 3px;
+    line-height: 2.8em
+  }
+  .title>i.cd:before {
+    font-size: 800%
+  }
+  .title>h1 {
+    font-size: 1.7em;
+    margin-bottom: .5em
+  }
+  .title>p {
+    padding: 0 3em;
+    font-size: 110%
+  }
 }
 
 @media only screen and (min-width:720px) {
-    .title > i.cd:before {
-        font-size: 1000%
-    }
-
-    .title > h1 {
-        font-size: 2.2em;
-        margin-bottom: .2em
-    }
-
-    .title > p {
-        padding: 0 5em;
-        font-size: 90%
-    }
+  .title>i.cd:before {
+    font-size: 1000%
+  }
+  .title>h1 {
+    font-size: 2.2em;
+    margin-bottom: .2em
+  }
+  .title>p {
+    padding: 0 5em;
+    font-size: 90%
+  }
 }
 
 @media only screen and (min-width:560px) {
-
-    .introduction {
-        max-width: 560px;
-        margin: 0 auto;
-        padding: 1.5em;
-        background: #fff
-    }
-
-    .detail-introduction {
-        max-width: 560px;
-        margin: 0 auto;
-        padding: 1.5em;
-    }
+  .introduction {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background: #fff
+  }
+  .detail-introduction {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 1.5em;
+  }
 }
 
 .introduction {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1.5em;
-    line-height: 1.7em;
-    font-size: 17.2px;
-    background: #fff
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5em;
+  line-height: 1.7em;
+  font-size: 17.2px;
+  background: #fff
 }
 
-.introduction > p {
-    margin-bottom: .8em;
-    line-height: 1.7em;
-    text-align: center
+.introduction>p {
+  margin-bottom: .8em;
+  line-height: 1.7em;
+  text-align: center
 }
 
 .detail-introduction {
-    max-width: 800px;
-    margin: auto;
-    padding: 0.5em 2em;
-    padding-bottom: 1.5em;
-    line-height: 1.7em;
-    font-size: 18px;
+  max-width: 800px;
+  margin: auto;
+  padding: 0.5em 2em;
+  padding-bottom: 1.5em;
+  line-height: 1.7em;
+  font-size: 18px;
 }
 
-.list > ul {
-    display: inline-block;
-    text-align: left;
-    padding-left: 2em;
-    color: #666
+.list>ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 2em;
+  color: #666
 }
 
-.detail-introduction > h2 {
-    font-size: 150%;
-    font-weight: 900;
-    color: #999;
-    margin-bottom: .4em
+.detail-introduction>h2 {
+  font-size: 150%;
+  font-weight: 900;
+  color: #999;
+  margin-bottom: .4em
 }
 
 .grayscale-bg {
-    background: #f7f7f7;
+  background: #f7f7f7;
 }
 
 .cover {
-    overflow: hidden;
-    min-height: 125px;
-    background: #999;
+  overflow: hidden;
+  min-height: 125px;
+  background: #999;
 }
 
-.cover > img {
-    height: 100%;
-    width: 100%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: -3%;
-    border-radius: 0px;
+.cover>img {
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: -3%;
+  border-radius: 0px;
 }
 
-.dojos > ul {
-    text-align: center;
-    padding: 0 0 1.5em
+.dojos>ul {
+  text-align: center;
+  padding: 0 0 1.5em
 }
 
-.dojos > h2 {
-    font-size: 150%;
-    font-weight: 900;
-    color: #999;
-    padding-top: 1em;
-    margin: .4em
+.dojos>h2 {
+  font-size: 150%;
+  font-weight: 900;
+  color: #999;
+  padding-top: 1em;
+  margin: .4em
 }
 
 .dojo {
-    display: inline-block;
-    height: 300px;
-    width: 45%;
-    margin: 5px;
-    padding: 15px 0;
-    background: #fff;
-    position: relative;
-    text-align: center
+  display: inline-block;
+  height: 300px;
+  width: 45%;
+  margin: 5px;
+  padding: 15px 0;
+  background: #fff;
+  position: relative;
+  text-align: center
 }
 
-.dojo > p {
-    font-size: 90%;
-    padding: 5px 10px;
-    text-align: center;
-    margin: 5px 0
+.dojo>p {
+  font-size: 90%;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 5px 0
 }
 
 .dojo-picture {
-    display: block;
-    height: 96px;
-    width: 96px;
-    background-position: center center;
-    // border-radius: 48px;
-    background-size: cover;
-    margin: 0 auto
+  display: block;
+  height: 96px;
+  width: 96px;
+  background-position: center center; // border-radius: 48px;
+  background-size: cover;
+  margin: 0 auto
 }
 
 .dojo-name {
-    display: block;
-    margin: .5em 0;
-    font-weight: bold;
+  display: block;
+  margin: .5em 0;
+  font-weight: bold;
 }
 
 .dojo-private {
-    font-size: 80%;
-    color: #fff;
-    border-radius: .3em;
-    padding: .3em;
-    margin: .2em;
-    background: #66CCFF;
+  font-size: 80%;
+  color: #fff;
+  border-radius: .3em;
+  padding: .3em;
+  margin: .2em;
+  background: #66CCFF;
 }
+
 .dojo-private:hover {
-    text-decoration: none
+  text-decoration: none
 }
 
 .event-region {
-    font-weight: bold;
-    margin-top: 50px;
+  padding: 50px 0 20px 0;
 }
 
-#event-list {
-    width: 80%;
-    margin: 0 auto;
+.event-ul {
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#event-list .event-date {
-    text-align: left;
-    margin: .5em 0;
+.event {
+  border: 1px solid #e8e8e8;
+  display: inline-table;
+  min-height: 200px;
+  margin: 5px;
+  background: #fff;
+  position: relative;
+  text-align: center;
 }
 
-#event-list ul {
-    list-style: none;
-    padding-left: 20px;
+@media only screen and (max-width: 560px) {
+  .event {
+    display: block;
+  }
 }
 
-#event-list ul li {
-    text-align: left;
+.event>header {
+  background: #2275CA;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
-#event-list .event-at {
-    display: inline-block;
-    width: 80px;
+.event>header p.event-date,
+.event>header p.event-at {
+  margin: 0;
+}
+
+.event>header p.event-date {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.event>p {
+  margin: 10px;
+  text-align: left;
+}
+
+.event>p>a {
+  text-decoration: none
 }
 
 @media only screen and (min-width:560px) {
-    .dojo {
-        width: 220px;
-        height: 275px;
-        margin: 10px;
-    }
+  .dojo {
+    width: 220px;
+    height: 275px;
+    margin: 10px;
+  }
+  .event {
+    width: 220px;
+    margin: 10px;
+  }
 }
 
 .spinner {
-    height: 3em;
-    color: #ccc
+  height: 3em;
+  color: #ccc
 }
 
 .tags {
-    margin: 0 5px;
-    padding: 0;
-    list-style: none;
-    font-size: 13px;
+  margin: 0 5px;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
 }
 
-.tags > li {
-    display: inline-block;
-    font-size: 80%;
-    color: #fff;
-    border-radius: .3em;
-    border:1px solid #e8e8e8;
-    padding: .2em .8em;
-    margin: .1em;
-    background: #99CCFF
+.tags>li {
+  display: inline-block;
+  font-size: 80%;
+  color: #fff;
+  border-radius: .3em;
+  border: 1px solid #e8e8e8;
+  padding: .2em .8em;
+  margin: .1em;
+  background: #99CCFF
 }
 
-.title > h1 {
-    font-family: 'Fjalla One', sans-serif
+.title>h1 {
+  font-family: 'Fjalla One', sans-serif
 }
 
-
-.loaded{
+.loaded {
   width: 90%;
   display: inline-block
 }
