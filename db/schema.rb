@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190616142422) do
+ActiveRecord::Schema.define(version: 20190812033029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20190616142422) do
     t.datetime "uploaded_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "published_date", null: false
     t.index ["track_id"], name: "index_soundcloud_tracks_on_track_id", unique: true
   end
 
