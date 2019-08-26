@@ -764,3 +764,9 @@
 #   name: facebook
 #   group_id:
 #   url:
+
+# 三春 (グループが作成されたら追加する)
+# - dojo_id: 223
+#   name: connpass
+#   group_id: 
+#   url: 
