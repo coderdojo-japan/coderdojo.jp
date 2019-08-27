@@ -667,3 +667,27 @@ body>footer a:hover {
 #accordion a:hover {
   text-decoration: none;
 }
+
+@media only screen and (max-width:720px) {
+  .highcharts-root {
+    transform: scale(0.8);
+  }
+  #transition-table {
+    padding: 20px 0;
+    font-size: 12px;
+    width: 520px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width:560px) {
+  .highcharts-container, .highcharts-root {
+    width: 320px !important;
+    height: 220px !important;
+  }
+  #transition-table {
+    font-size: 10px;
+    width: 320px;
+  }
+}
