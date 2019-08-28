@@ -1,0 +1,20 @@
+%nav.navbar.navbar-default.navbar-fixed-top#header
+	.container-fluid
+		.navbar-header
+			%button.navbar-toggle.collapsed{ "type" => "button", "data-toggle" => "collapse",
+                                       "data-target" => "#header-nav-toggle", "aria-expanded" => "false" }
+				%span.sr-only Toggle navigation
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+			= link_to image_tag('/img/header-logo.png', alt: 'CoderDojo logo'), '/', id: "header-logo"
+			= link_to image_tag('/img/header-brand.png', alt: 'CoderDojo brand'), '/', id: "header-brand"
+		.collapse#header-nav-toggle.navbar-collapse
+			%ul.nav.navbar-nav.navbar-right
+				%li= link_to '全国の道場', '/#dojos'
+				%li= link_to '近日開催の道場', '/events'
+				%li= link_to 'パートナー法人', '/#partners'
+				%li= link_to '統計情報', '/stats'
+				%li= link_to 'News', 'https://news.coderdojo.jp'
+				%li= link_to 'Kata', '/kata'
+				%li= link_to 'お問い合わせ', '/#contact'

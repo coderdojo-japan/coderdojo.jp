@@ -332,7 +332,7 @@ h2 {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 56px 0;
   font-size: 16px;
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif
 }
@@ -347,6 +347,104 @@ a {
   margin: 0;
   padding: .2em;
   background: #FFF
+}
+
+#header {
+  background-color: #2275CA;
+}
+
+#header-logo img {
+  margin-bottom: 2px;
+  width: 46px;
+}
+
+#header-brand img {
+  width: 150px;
+  padding: 6px 0;
+}
+
+.collapse > .navbar-nav > li > a {
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+  line-height: 26px;
+  &:hover {
+    color: #fff;
+    &:before, &:after {
+      width: 40%;
+    }
+  }
+}
+
+.collapse > .navbar-nav > li > a:before,
+.collapse > .navbar-nav > li > a:after {
+  position: absolute;
+  bottom: 10px;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.collapse > .navbar-nav > li > a:before {
+  left: 50%;
+}
+
+.collapse > .navbar-nav > li > a:after {
+  right: 50%;
+}
+
+.navbar-toggle {
+  padding: 14px 14px;
+}
+
+.navbar-header > .navbar-toggle > .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-header > .navbar-toggle:hover {
+  background-color: #0466c9;
+}
+
+@media only screen and (max-width:850px) {
+  .collapse > .navbar-nav > li > a {
+    padding: 15px 8px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  #header-logo img {
+    margin-left: 15px;
+  }
+  .collapse > .navbar-nav > li > a {
+    padding: 10px 15px;
+    &:hover {
+      color: #cce3f9;
+    }
+  }
+  .collapse > .navbar-nav > li > a:before,
+  .collapse > .navbar-nav > li > a:after {
+    content: none;
+  }
+  .navbar-toggle {
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width:560px) {
+  body {
+    padding: 50px 0;
+  }
+  #header-logo img {
+    width: 44px;
+  }
+  #header-brand img {
+    width: 120px;
+  }
+  .navbar-toggle {
+    padding: 10px 10px;
+  }
 }
 
 .footer-bottom {

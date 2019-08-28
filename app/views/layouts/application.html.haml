@@ -60,6 +60,7 @@
       %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
 
   %body
+    = render 'shared/header'
     - flash.each do |message_type, message|
       %div{:class => "alert alert-#{message_type}"}= message
     = yield
