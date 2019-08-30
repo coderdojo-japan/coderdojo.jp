@@ -1145,11 +1145,11 @@
 - id: 5
   order: '151009'
   created_at: '2015-09-16'
-  name: 新潟
+  name: 新潟西
   prefecture_id: 15
   logo: "/img/dojos/japan.png"
-  url: http://coderdojo.niigata.jp/
-  description: 新潟県新潟市で毎月3回開催
+  url: https://www.facebook.com/CoderDojoNiigata/
+  description: 新潟県新潟市で毎月開催
   tags:
   - Scratch
   - Minecraft
