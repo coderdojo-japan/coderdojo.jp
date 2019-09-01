@@ -3875,3 +3875,97 @@
   event_id:
   participants: 1
   evented_at: 2019/07/28 13:30
+
+  # 2019/08/01 - 2019/08/31
+- dojo_id: 202
+  event_id:
+  participants: 1
+  evented_at: 2019/08/03 13:00
+- dojo_id: 209
+  event_id:
+  participants: 0
+  evented_at: 2019/08/03 13:00
+- dojo_id: 183
+  event_id:
+  participants: 3
+  evented_at: 2019/08/03 14:00
+- dojo_id: 141
+  event_id:
+  participants: 2
+  evented_at: 2019/08/04 09:30
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2019/08/04 10:00
+# - dojo_id: 12
+#   event_id:
+#   participants: 2
+#   evented_at: 2019/08/04 10:30 キャンセルのため計上せず
+- dojo_id: 187
+  event_id:
+  participants: 2
+  evented_at: 2019/08/10 10:00
+- dojo_id: 203
+  event_id:
+  participants: 2
+  evented_at: 2019/08/11 09:30
+- dojo_id: 25
+  event_id:
+  participants: 6 # 若葉若松合同
+  evented_at: 2019/08/11 10:00
+- dojo_id: 186
+  event_id:
+  participants: 1
+  evented_at: 2019/08/11 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/16 17:00
+- dojo_id: 191
+  event_id:
+  participants: 6
+  evented_at: 2019/08/17 10:00
+- dojo_id: 87
+  event_id:
+  participants: 3
+  evented_at: 2019/08/17 14:00
+- dojo_id: 94
+  event_id:
+  participants: 2
+  evented_at: 2019/08/18 10:00
+- dojo_id: 86
+  event_id:
+  participants: 3
+  evented_at: 2019/08/18 10:30
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/08/18 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/23 17:00
+- dojo_id: 203
+  event_id:
+  participants: 1
+  evented_at: 2019/08/24 09:30
+- dojo_id: 97
+  event_id:
+  participants: 2
+  evented_at: 2019/08/24 10:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2019/08/25 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/08/25 13:30
+- dojo_id: 186
+  event_id:
+  participants: 2
+  evented_at: 2019/08/25 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/30 17:00
