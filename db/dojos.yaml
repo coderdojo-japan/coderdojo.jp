@@ -2462,8 +2462,8 @@
   name: 名護
   prefecture_id: 47
   logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/CoderDojo.Nago/
-  description: 沖縄県名護市で不定期開催
+  url: http://coderdojo-nago.com
+  description: 沖縄県名護市で月に２回開催
   tags:
   - Scratch
   - micro:bit
