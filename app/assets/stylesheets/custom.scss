@@ -683,11 +683,11 @@ body>footer a:hover {
 
 @media only screen and (max-width:560px) {
   .highcharts-container, .highcharts-root {
-    width: 320px !important;
-    height: 220px !important;
+    width:  100% !important;
+    height: 100% !important;
   }
   #transition-table {
     font-size: 10px;
-    width: 320px;
+    width:     100%;
   }
 }
