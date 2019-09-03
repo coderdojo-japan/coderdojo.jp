@@ -526,17 +526,14 @@
   - Mindstorms
 - id: 83
   order: '122068'
-  is_active: false
   created_at: '2017-04-27'
   name: 木更津
   prefecture_id: 12
   logo: "/img/dojos/kisarazu.png"
-  url: https://coderdojo-kisarazu.github.io/
-  description: 千葉県木更津市で不定期開催
+  url: https://www.facebook.com/coderdojokisarazu/
+  description: 千葉県木更津市で隔月開催
   tags:
   - Scratch
-  - Webサイト
-  - Java
 - id: 114
   order: '122076'
   created_at: '2017-09-06'
