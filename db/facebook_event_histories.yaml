@@ -3423,6 +3423,63 @@
   event_id:
   participants: 4
   evented_at: 2019/01/20 14:30
+# 木更津 過去イベント
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2017/07/02 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2017/08/06 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2017/09/03 10:00
+- dojo_id: 83
+  event_id:
+  participants: 0
+  evented_at: 2017/10/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 5
+  evented_at: 2017/11/05 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2017/12/03 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2018/01/07 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/02/04 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/03/04 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/04/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2018/05/06 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/06/10 10:00
+- dojo_id: 83
+  event_id:
+  participants: 4
+  evented_at: 2018/07/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 1
+  evented_at: 2018/08/05 10:00
 
   # 2019/03/01 - 2019/03/31
 - dojo_id: 183
