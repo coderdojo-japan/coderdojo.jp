@@ -203,10 +203,11 @@
   name: facebook
   group_id: 880706025404127
   url: https://www.facebook.com/pg/coderdojofunabashi/events/
+ # 木更津 
 - dojo_id: 83
-  name: google
-  group_id:
-  url:
+  name: facebook
+  group_id: 1273279189459638
+  url: https://www.facebook.com/pg/coderdojokisarazu/events/
 - dojo_id: 68
   name: connpass
   group_id: 3430
