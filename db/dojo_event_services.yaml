@@ -203,10 +203,11 @@
   name: facebook
   group_id: 880706025404127
   url: https://www.facebook.com/pg/coderdojofunabashi/events/
+ # 木更津 
 - dojo_id: 83
-  name: google
-  group_id:
-  url:
+  name: facebook
+  group_id: 1273279189459638
+  url: https://www.facebook.com/pg/coderdojokisarazu/events/
 - dojo_id: 68
   name: connpass
   group_id: 3430
@@ -661,14 +662,24 @@
   name: connpass
   group_id: 7172
   url: https://coderdojo-toyonaka.connpass.com/
+# 韮崎 Facebookイベントページなし connnpassに移行
+# - dojo_id: 195
+#   name: facebook
+#   group_id: 100032127647229
+#   url: https://www.facebook.com/CoderDojo.Nirasaki
 - dojo_id: 195
-  name: facebook
-  group_id: 100032127647229
-  url: https://www.facebook.com/CoderDojo.Nirasaki
+  name: connpass
+  group_id: 7466
+  url: https://coderdojo-nirasaki.connpass.com/
+# 北杜 Facebookイベントページなし connpassに移行
+# - dojo_id: 196
+#   name: facebook
+#   group_id: 100032055361334
+#   url: https://www.facebook.com/CoderDojo.HokutoJP
 - dojo_id: 196
-  name: facebook
-  group_id: 100032055361334
-  url: https://www.facebook.com/CoderDojo.HokutoJP
+  name: connpass
+  group_id: 7465
+  url: https://coderdojo-hokuto.connpass.com/
 - dojo_id: 198
   name: facebook
   group_id: 374114993171172
@@ -723,7 +734,7 @@
   group_id: 8197
   url: https://coderdojo-ichinomiya.connpass.com/
 
-# 大石田@PCチャレンジ倶楽部
+# 大石田@PCチャレンジ倶楽部 Facebookイベントページなし
 - dojo_id: 215
   name: facebook
   group_id: 2253119258233423
