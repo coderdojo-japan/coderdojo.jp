@@ -6,8 +6,10 @@
   = image_tag "stats_cover.png"
 %section#dojos.dojos.text-center
   %h1 統計情報
-  %div 本ページでは全国の CoderDojo の統計情報をまとめています。
-  CoderDojo の活動状況を把握する際などにご活用ください。
+  %div
+    本ページでは全国の CoderDojo の統計情報をまとめています。
+    %br.ignore-sp<>
+    CoderDojo の活動状況を把握する際などにご活用ください。
 
   %h3{style: "margin-top: 60px;"} 📊 推移グラフ
   %div{align: 'center'}
@@ -35,12 +37,12 @@
           - @dojos.each_value do |num|
             %td= num
         %tr
-          %td 開催回数
+          %td 開催数
           - @events.each_value do |num|
             %td= num
           %td= @events.values.sum
         %tr
-          %td 参加者数
+          %td 参加数
           - @participants.each_value do |num|
             %td= num
           %td= @participants.values.sum
@@ -91,11 +93,11 @@
             = render partial: 'shared/dojo', collection: dojos
 
   %h3{style: "margin-top: 60px;"} 📚 関連リンク
-  %ul{:style => "list-style: none; margin-left: -40px; margin-bottom: 40px;"}
+  %ul{:style => "list-style: none; text-align: center; width: 100%; line-height: 1.7em; margin-bottom: 40px;"}
     %li
-      %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本のCoderDojo (zen&Japan) - Google Spreadsheet
+      %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本のCoderDojo (Zen&Japan) - Spreadsheet
     %li
-      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスのAPIで統計情報を集計したい #12
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/12"} 各種イベント管理サービスAPIで統計情報を集計
     %li
-      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発 #206
+      %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues/206"} 統計情報を確認できる /stats ページの開発
 %br/
