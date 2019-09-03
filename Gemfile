@@ -21,7 +21,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'font-awesome-rails'
 gem 'haml-rails'
-gem 'rails-html-sanitizer', '~> 1.0.4'
+gem 'rails-html-sanitizer', '~> 1.2.0'
 
 # For redirection
 gem 'rack-host-redirect'
