@@ -2017,6 +2017,20 @@
   - Hour of Code
   - Mindstorms
   - CodeyRocky
+- id: 224
+  order: '320005'
+  created_at: '2019-09-06'
+  name: しまね
+  prefecture_id: 32
+  logo: "/img/dojos/japan.png"
+  url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
+  description: 島根県各地で各地で毎週１回〜２回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
+  - C#
+  - Smalruby
 - id: 211
   order: '322059'
   created_at: '2019-06-11'
