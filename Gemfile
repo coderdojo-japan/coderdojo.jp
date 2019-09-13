@@ -31,6 +31,7 @@ gem 'secure_headers'
 
 # Rendering legal documents
 gem 'kramdown'
+gem 'kramdown-parser-gfm'
 
 gem 'faraday'
 gem 'faraday_middleware'
