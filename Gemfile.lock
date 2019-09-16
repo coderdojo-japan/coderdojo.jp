@@ -177,7 +177,9 @@ GEM
       addressable
       faraday
       json (>= 1.8)
-    kramdown (1.17.0)
+    kramdown (2.1.0)
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     lazy_high_charts (1.5.8)
@@ -434,6 +436,7 @@ DEPENDENCIES
   jquery-rails
   koala
   kramdown
+  kramdown-parser-gfm
   lazy_high_charts
   listen
   memory_profiler
