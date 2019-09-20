@@ -39,7 +39,7 @@
 
 > Please note that some of the rules of our [Open Source Support Program](https://www.jetbrains.com/buy/opensource/) have changed. Most importantly, **if there is a commercial company or an organization that sponsors your OS project, i.e. if the developers are employed to work on the OS project, we will no longer be able to provide you with free licenses.**
 
-CoderDojo Japan としては、**いつパートナーシップ関係が成立/解消されるか**を明確にすることが、より多くのパートナー各社を公平に接するために大切だと考えています。**継続性のある支援・提供**をパートナー関係の成立条件とすることで、その継続性が失われたタイミングで、パートナー関係の解消条件となることが明確になります。このため、CoderDojo Japan では、パートナーシップ関係の成立条件に「継続性」を取り入れていています。
+CoderDojo Japan としては**パートナーシップ関係の成立/解消のタイミング**が明確になることで、より多くのパートナーと公平に接することができると考えています。**継続性のある支援・提供**を中心に考えることで、その継続性が失われたタイミングが、パートナーシップ関係の解消条件となることが明確になります。このため CoderDojo Japan では、パートナーシップ関係の成立条件に「継続性」を取り入れています。
 
 以上が、パートナーシップの存続期間に関する説明になります。CoderDojo Japan とのパートナーシップをご検討している方々のご参考になれば幸いです。
 
