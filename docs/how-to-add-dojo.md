@@ -118,7 +118,7 @@ https://coderdojo.jp/stats
 ### イベントページサービスごとの `group_id` の取得方法
 
 - Facebook
-  1. [lookup-id](https://lookup-id.com/#) へ
+  1. [lookup-id](https://lookup-id.com/#)、または[findmyfbid]（https://findmyfbid.com/） へ
   2. 当該 Facebook ページの URL を入力すると `group_id` が確認できます
 - connpass
   1. connpass のイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
