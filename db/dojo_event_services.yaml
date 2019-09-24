@@ -770,14 +770,26 @@
   group_id: 8204
   url: https://coderdojo-tamamira.connpass.com/
 
-# 三の丸 (イベントページができたらURLを追加する)
-# - dojo_id: 222
-#   name: facebook
-#   group_id:
-#   url:
+# 三の丸
+- dojo_id: 222
+  name: facebook
+  group_id: 2325334674450862
+  url: https://www.facebook.com/CoderDojo3nomaru/
 
 # 三春 (グループが作成されたら追加する)
 # - dojo_id: 223
 #   name: connpass
 #   group_id: 
 #   url: 
+
+# しまね
+# - dojo_id: 224
+#   name: google
+#   group_id: 
+#   url: 
+
+# 浜田
+- dojo_id: 225
+  name: facebook
+  group_id: 2402320846481133
+  url: https://www.facebook.com/CoderDojoHamada/
