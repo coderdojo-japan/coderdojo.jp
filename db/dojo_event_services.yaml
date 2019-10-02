@@ -793,3 +793,9 @@
   name: facebook
   group_id: 2402320846481133
   url: https://www.facebook.com/CoderDojoHamada/
+
+# 伊予
+- dojo_id: 226
+  name: facebook
+  group_id: 110748170321557
+  url: https://www.facebook.com/CoderDojoIyo/
