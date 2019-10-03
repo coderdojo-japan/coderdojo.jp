@@ -66,10 +66,14 @@
   name: google
   group_id:
   url:
-- dojo_id: 73
+- dojo_id: 73 # 第１回〜第６回・第１２回は Facebook イベントで運用
   name: facebook
   group_id: 193975261081844
   url: https://www.facebook.com/pg/coderdojo.hitachinaka/events/
+- dojo_id: 73 # 第７回〜
+  name: connpass
+  group_id: 4704
+  url: https://coderdojo-hitachinaka.connpass.com/
 - dojo_id: 65
   name: connpass
   group_id: 2972
@@ -236,13 +240,11 @@
   name: facebook
   group_id: 124249914820641
   url: https://www.facebook.com/pg/coderdojo.kofu/events/
-# 〜2018/02
-- dojo_id: 87
+- dojo_id: 87 # 〜2018/02
   name: facebook
   group_id: 1634610396557264
   url: https://www.facebook.com/pg/CoderDojoAzumino/events/
-# 2018/03〜
-- dojo_id: 87
+- dojo_id: 87 # 2018/03〜
   name: doorkeeper
   group_id: 9603
   url: https://coderdojo-azumino.doorkeeper.jp
@@ -628,14 +630,22 @@
   name: doorkeeper
   group_id: 9906
   url: https://coderdojo-gotanda.doorkeeper.jp/
-- dojo_id: 186
+- dojo_id: 186 # 第１回〜第３回は Facebook イベントで運用
   name: facebook
   group_id: 318691575631474
   url: https://www.facebook.com/CoderDojo.Nago/
-- dojo_id: 187
+- dojo_id: 186 # 第４回〜
+  name: connpass
+  group_id: 7455
+  url: https://coderdojo-nago.connpass.com/
+- dojo_id: 187 # 第１回は Facebook イベントで運用
   name: facebook
   group_id: 569968173442983
   url: https://www.facebook.com/CoderDojoKagoshima/
+- dojo_id: 187 # 第２回〜
+  name: connpass
+  group_id: 7373
+  url: https://coderdojo-kagoshima.connpass.com/
 - dojo_id: 188
   name: facebook
   group_id: 760136447660371
@@ -680,10 +690,14 @@
   name: connpass
   group_id: 7465
   url: https://coderdojo-hokuto.connpass.com/
+# - dojo_id: 198 connpass に移行
+#   name: facebook
+#   group_id: 374114993171172
+#   url: https://www.facebook.com/CoderDojoKOZA
 - dojo_id: 198
-  name: facebook
-  group_id: 374114993171172
-  url: https://www.facebook.com/CoderDojoKOZA
+  name: connpass
+  group_id: 8377
+  url: https://koza.connpass.com/
 - dojo_id: 202
   name: facebook
   group_id: 2109347109378340
