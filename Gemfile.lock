@@ -305,7 +305,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-retry (0.6.1)
       rspec-core (> 3.3)
-    rspec-support (3.8.2)
+    rspec-support (3.8.3)
     ruby-mp3info (0.8.10)
     ruby_parser (3.14.0)
       sexp_processor (~> 4.9)
