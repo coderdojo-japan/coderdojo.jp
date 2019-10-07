@@ -813,3 +813,9 @@
   name: facebook
   group_id: 110748170321557
   url: https://www.facebook.com/CoderDojoIyo/
+
+# 戸田公園
+- dojo_id: 227
+  name: connpass
+  group_id: 8487
+  url: https://corderdojo-todakoen.connpass.com/

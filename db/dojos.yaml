@@ -424,6 +424,18 @@
   - Webサイト
   - JavaScript
   - micro:bit
+- id: 227
+  order: '112241'
+  created_at: '2019-10-07'
+  name: 戸田公園
+  prefecture_id: 11
+  url: https://coderdojo-todakoen.com/
+  logo: "/img/dojos/japan.png"
+  description: 埼玉県戸田市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Unity
 - id: 10
   order: '112305'
   created_at: '2012-07-02'
