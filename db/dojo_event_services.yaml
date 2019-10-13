@@ -819,3 +819,9 @@
   name: connpass
   group_id: 8487
   url: https://corderdojo-todakoen.connpass.com/
+
+# 昭島
+- dojo_id: 228
+  name: connpass
+  group_id: 8204
+  url: https://coderdojo-tamamira.connpass.com/
