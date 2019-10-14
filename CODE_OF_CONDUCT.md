@@ -1,12 +1,6 @@
-# Contributor Code of Conduct
+# 行動規範
 
-CoderDojo Japan team is committed to fostering a welcoming community.
+一般社団法人 CoderDojo Japan が運営する本リポジトリは次の行動規範にしたがって運営されます。
 
-**Our Code of Conduct can be found here**:
-
+コントリビューター行動規範 - CoderDojo Japan   
 https://coderdojo.jp/docs/code-of-conduct
-
-For a history of updates, see the page history here:
-
-https://github.com/coderdojo-japan/coderdojo.jp/commits/master/db/docs/code-of-conduct.md
-
