@@ -2374,6 +2374,17 @@
   - micro:bit
   - Minecraft
   - Hour of Code
+- id: 229
+  order: '402150'
+  created_at: '2019-10-26'
+  name: ナカマ
+  prefecture_id: 40
+  logo: "/img/dojos/nakama.png"
+  url: https://www.facebook.com/CoderDojoNAKAMA/
+  description: 福岡県中間市で２ヶ月に１回程度開催
+  tags:
+  - Scratch
+  - micro:bit
 - id: 191
   order: '402214'
   created_at: '2019-01-04'

@@ -825,3 +825,9 @@
   name: connpass
   group_id: 8204
   url: https://coderdojo-tamamira.connpass.com/
+
+# ナカマ
+- dojo_id: 229
+  name: facebook
+  group_id: 527759921000353
+  url: https://www.facebook.com/CoderDojoNAKAMA/
