@@ -3884,6 +3884,10 @@
   evented_at: 2019/08/30 17:00
 
   # 2019/09/01 - 2019/09/30
+- dojo_id: 229
+  event_id:
+  participants: 0
+  evented_at: 2019/09/01 09:30
 - dojo_id: 210
   event_id:
   participants: 0
