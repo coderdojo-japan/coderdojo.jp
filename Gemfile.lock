@@ -307,7 +307,7 @@ GEM
       rspec-core (> 3.3)
     rspec-support (3.9.0)
     ruby-mp3info (0.8.10)
-    ruby_parser (3.14.0)
+    ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
     rubyzip (2.0.0)
     sass (3.7.4)
