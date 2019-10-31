@@ -884,10 +884,9 @@
   tags:
   - Scratch
   - micro:bit
-  - LEGO
-  - Mindstorms
   - Ruby
-  # - プログラミングゼミ (最大5つまでの為、非表示)
+  - プログラミングゼミ
+  - DICE CODE
 - id: 18
   order: '132080'
   created_at: '2016-09-05'
