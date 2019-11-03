@@ -887,7 +887,6 @@
   - LEGO
   - Mindstorms
   - Ruby
-  # - プログラミングゼミ (最大5つまでの為、非表示)
 - id: 18
   order: '132080'
   created_at: '2016-09-05'
@@ -1909,6 +1908,18 @@
   - Scratch
   - micro:bit
   - Webサイト
+- id: 230
+  order: '282154'
+  created_at: '2019-11-01'
+  name: みき
+  prefecture_id: 28
+  logo: "/img/dojos/miki.png"
+  url: https://coderdojo-miki.connpass.com/
+  description: 兵庫県三木市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Ruby
 - id: 181
   order: '283011'
   created_at: '2018-10-18'
