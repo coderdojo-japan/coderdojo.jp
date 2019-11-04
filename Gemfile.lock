@@ -142,7 +142,7 @@ GEM
       html2haml (>= 1.0.1)
       railties (>= 5.1)
     hash-deep-merge (0.1.1)
-    hashie (3.6.0)
+    hashie (4.0.0)
     highline (1.7.10)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
