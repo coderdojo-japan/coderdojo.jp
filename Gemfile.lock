@@ -41,7 +41,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (8.0.0)
-    autoprefixer-rails (9.6.5)
+    autoprefixer-rails (9.7.1)
       execjs
     backports (3.15.0)
     bindex (0.8.1)
@@ -200,7 +200,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.2)
+    minitest (5.13.0)
     minitest-retry (0.1.9)
       minitest (>= 5.0)
     multi_json (1.14.1)
