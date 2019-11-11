@@ -838,8 +838,13 @@
   group_id: 8974
   url: https://coderdojo-miki.connpass.com/
 
-# TODO: 2020年1月開始予定。イベント管理サービスは未定
-# 上田
+# 板橋: 独自申込フォームのため集計不可
+#- dojo_id: 231
+#  name: 
+#  group_id: 
+#  url: 
+
+# 上田: 2020年1月開始。イベント管理サービスは未定
 #- dojo_id: 232
 #  name: 
 #  group_id: 
