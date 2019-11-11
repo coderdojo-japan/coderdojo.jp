@@ -4,12 +4,12 @@
 
 ## 追加の手順
 
-[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support) が来たとき、
+[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support)が来たとき、
 まずは申請された Dojo 情報を確認します。
 
 ### 申請内容と対応例
 
-申請内容には個人情報が含まれるため、一部改変しています :secret:
+次のような掲載申請が来たときを例にとって説明します。
 
 ```
 Dojo名: CoderDojo 那覇
@@ -17,14 +17,13 @@ Dojoタグ: Scratch, Webサイト, Ruby
 説明文: 那覇市で毎月開催
 ロゴ (任意): 
 Web: https://coderdojo-naha.doorkeeper.jp/
-代表者: ***
-連絡先: ***
+代表者: *** (個人情報のため非表示)
+連絡先: *** (個人情報のため非表示)
 受付日: 2019/06/15 9:42:10
 Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/naha
 ```
 
-例えば上記のような申請を受け取ったら、   
-`db/dojos.yaml` に次のように追記します。   
+上記のような申請を受け取ったら `db/dojos.yaml` に次のように追記します。   
 (order 順に追加すると見やすくてベターです)
 
 
