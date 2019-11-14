@@ -3,7 +3,7 @@
 本ページでは、パートナーシップの存続期間についてまとめています。CoderDojo Japan とのパートナーシップをご検討している方々のご参考になれば幸いです。
 
 参考: パートナーシップのご案内   
-[https://coderdojo.jp/docs/about-partnership](https://coderdojo.jp/docs/about-partnership)
+[https://coderdojo.jp/partnership](https://coderdojo.jp/partnership)
 <br>
 
 <center><h2>パートナーシップの成立条件と解消条件</h2></center>
