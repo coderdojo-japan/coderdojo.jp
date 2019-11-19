@@ -97,7 +97,7 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 [https://speakerdeck.com/yasulab/growing-up-together-with-community](https://speakerdeck.com/yasulab/growing-up-together-with-community)
 <br>
 
-### Q. 製品の支援を検討していますが、すべての道場への発送は厳しいです。何か良い方法はありますか?
+### Q. 製品による支援を検討していますが、すべての道場への発送は厳しいです。何か良い方法はありますか?
 はい、CoderDojo 向けに一律に応募する機会を提供し、応募があった中から一定の道場に提供するという方法があります。下記の例をご参考にしていただけると幸いです。
 
 例: 株式会社Cygamesと一般社団法人 CoderDojo Japan、PC寄贈に関するパートナーシップを締結。全国160ヶ所の道場を対象にPCを寄贈
@@ -110,13 +110,13 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 
 <br>
 
-### Q. 製品の支援を検討していますが、継続的な提供は難しいです。パートナーシップを結ぶことはできますか?
+### Q. 製品による支援を検討していますが、継続的な提供は難しいです。パートナーシップを結ぶことはできますか?
 はい、単発の支援の場合、<b>期間限定のパートナーシップ</b>をご提案しております。下記の例をご参考にしていただけると幸いです。
 
 例: MakeblockからCoderDojoへ、新製品のWi-Fi付きシングルボードを200台提供 (※)
 [https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/](https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/)
 
-※ 上記の例 (2,646円×200台) の場合、5月10日〜7月31日の期間限定パートナーシップとなりました。
+※上記の例では約3,000円×200台 (配送料込み) を換算し、5月10日〜7月31日の期間限定パートナーシップとなりました。
 
 <br>
 
