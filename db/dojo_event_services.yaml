@@ -862,3 +862,9 @@
 #  name: 
 #  group_id: 
 #  url: 
+
+# 足立
+- dojo_id: 233
+  name: doorkeeper
+  group_id: 10764
+  url: https://coderdojoadachi.doorkeeper.jp/
