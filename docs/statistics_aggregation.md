@@ -35,3 +35,16 @@ rake statistics:aggregation[-,-,]
 + from, to いずれかを省略した場合、指定された他方の年/年月/年月日の履歴を集計する。
 
 + provider には、connpass, doorkeeper, facebook, static_yaml が指定可能。
+
+## 使用例
+
+追加した dojo のみ 2018 年 1 月分から connpass イベントを収集したいときは、期間と dojo_id (仮に xxx とします) を指定して以下のように実行する。
+```
+rake statistics:aggregation[201801,201910,connpass,xxx] 
+```
+
+それぞれ引数の省略が可能。
+例) provider を絞らない場合
+```
+rake statistics:aggregation[201801,201910,,xxx] 
+```
