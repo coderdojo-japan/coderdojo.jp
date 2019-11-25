@@ -706,6 +706,12 @@
   name: connpass
   group_id: 8377
   url: https://koza.connpass.com/
+
+# 岐阜
+- dojo_id: 200
+  name: connpass
+  group_id: 9330
+  url: https://coderdojo-gifu.connpass.com/
 - dojo_id: 202
   name: facebook
   group_id: 2109347109378340
