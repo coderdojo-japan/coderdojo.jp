@@ -456,7 +456,7 @@ DEPENDENCIES
   rspec-rails (~> 3.8)
   rspec-retry
   ruby-mp3info
-  sass-rails
+  sass-rails (>= 5)
   scrivito (~> 1.15.0)
   scrivito_section_widgets
   scrivito_teaser_widget
