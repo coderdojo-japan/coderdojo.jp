@@ -874,3 +874,9 @@
   name: doorkeeper
   group_id: 10764
   url: https://coderdojoadachi.doorkeeper.jp/
+
+# 本山
+- dojo_id: 234
+  name: connpass
+  group_id: 8841
+  url: https://coderdojo-motoyama.connpass.com/

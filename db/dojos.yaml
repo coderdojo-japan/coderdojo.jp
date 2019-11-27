@@ -2306,6 +2306,18 @@
   - Ruby
   - Python
   - Drone
+- id: 234
+  order: '372081'
+  created_at: '2019-11-26'
+  name: 本山
+  prefecture_id: 37
+  logo: "/img/dojos/motoyama.png"
+  url: https://www.facebook.com/coderdojo.motoyama/
+  description: 香川県三豊市豊中町本山周辺で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - PHP
 - id: 226
   order: '382108'
   created_at: '2019-10-02'
