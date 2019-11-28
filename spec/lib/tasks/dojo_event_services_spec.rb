@@ -68,7 +68,7 @@ RSpec.describe 'dojo_event_services' do
     end
 
     it '余剰データ削除 & 更新' do
-      create(:dojo_event_service, dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10002', url: 'https://coder-dojo-12.doorkeeper.jp/abc')
+      create(:dojo_event_service, dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10003', url: 'https://coder-dojo-12.doorkeeper.jp/abc')
 
       allow(YAML).to receive(:load_file).and_return([
         { 'dojo_id' => @dojo_1.id, "name" => 'doorkeeper', 'group_id' => '10001', 'url' => 'https://coder-dojo-11.doorkeeper.jp/' },
@@ -78,13 +78,14 @@ RSpec.describe 'dojo_event_services' do
 
       # before
       expect(DojoEventService.count).to eq(4)
-      expect(DojoEventService.where(dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10002').size).to eq(2)
+      expect(DojoEventService.where(dojo_id: @dojo_1.id, name: :doorkeeper).size).to eq(3)
 
       # exec
       expect(@rake[task].invoke).to be_truthy
 
       # after
       expect(DojoEventService.count).to eq(3)
+      expect(DojoEventService.where(dojo_id: @dojo_1.id, name: :doorkeeper).size).to eq(2)
       mod_records = DojoEventService.where(dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10002')
       expect(mod_records.count).to eq(1)
       expect(mod_records.first.url).to eq('https://coder-dojo-12.doorkeeper.jp/12345')
