@@ -6,7 +6,7 @@
   prefecture_id: 1
   url: http://www.coderdojo-sapporo.jp/
   logo: "/img/dojos/sapporo.jpg"
-  description: 北海道札幌市で月２回開催
+  description: 北海道札幌市で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -20,7 +20,7 @@
   prefecture_id: 1
   url: https://coderdojo-sapporo-east.blogspot.jp/
   logo: "/img/dojos/japan.png"
-  description: 北海道札幌市で月２回開催
+  description: 北海道札幌市で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -203,7 +203,7 @@
   prefecture_id: 7
   logo: "/img/dojos/aizu.png"
   url: http://coderdojoaizu.strikingly.com/
-  description: 会津若松市内で毎月第３土曜に開催
+  description: 会津若松市内で毎月第3土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -374,8 +374,8 @@
   name: 館林
   prefecture_id: 10
   logo: "/img/dojos/tatebayashi.png"
-  url: http://coderdojo-tatebayashi.net/
-  description: 群馬県館林市で2ヶ月に1回
+  url: https://www.facebook.com/cd.tatebayashi/
+  description: 群馬県館林市で不定期開催
   tags:
   - Scratch
   - WEBサイト
@@ -399,7 +399,7 @@
   prefecture_id: 11
   url: https://www.facebook.com/CoderDojoTokorozawa/
   logo: "/img/dojos/tokorozawa.png"
-  description: 埼玉県所沢市で不定期に開催
+  description: 埼玉県所沢市で不定期開催
   tags:
   - Scratch
 - id: 77
@@ -520,7 +520,7 @@
   prefecture_id: 12
   logo: "/img/dojos/ichikawa-mama.jpg"
   url: http://beyondbb.jp/CDmama/index.html
-  description: 千葉県JR市川駅近辺で毎月2回開催
+  description: 千葉県JR市川駅近辺で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -554,8 +554,8 @@
   name: 松戸
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
-  url: http://code4matsudo.org/coder-dojo-matsudo/2017/10/15/283/
-  description: 千葉県松戸市で不定期開催
+  url: http://code4matsudo.org/category/coder-dojo-matsudo/
+  description: 千葉県松戸市で隔月開催
   tags:
   - Scratch
 - id: 20
@@ -596,7 +596,7 @@
   prefecture_id: 12
   url: http://www.coderdojo-kashiwa.com/dojo/minamikashiwa/
   logo: "/img/dojos/minami-kashiwa.png"
-  description: 千葉県柏市光ヶ丘で毎月第３土曜日に開催
+  description: 千葉県柏市光ヶ丘で毎月第3土曜開催
   tags:
   - Scratch
 - id: 24
@@ -718,7 +718,7 @@
   prefecture_id: 13
   url: https://www.roundtable.co.jp/~tomio/blog/i01coach/?page_id=2532
   logo: "/img/dojos/shinagawa-gotenyama.png"
-  description: 東京都品川区で不定期に開催
+  description: 東京都品川区で不定期開催
   tags:
   - Scratch
   - Webサイト
@@ -732,7 +732,7 @@
   prefecture_id: 13
   url: https://www.facebook.com/groups/295361057723820/
   logo: "/img/dojos/japan.png"
-  description: 品川区五反田freeeオフィスで毎月第３土曜開催
+  description: 品川区五反田freeeオフィスで毎月第3土曜開催
   tags:
   - Scratch
   - micro:bit
@@ -946,7 +946,7 @@
   prefecture_id: 13
   logo: "/img/dojos/machida.png"
   url: https://coderdojo-machida.connpass.com/
-  description: 東京都町田市で不定期に開催
+  description: 東京都町田市で不定期開催
   tags:
   - Scratch
   - micro:bit
@@ -1166,7 +1166,7 @@
   prefecture_id: 14
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-chigasaki.blogspot.com/
-  description: 神奈川県茅ヶ崎市で不定期に開催
+  description: 神奈川県茅ヶ崎市で不定期開催
   tags:
   - Scratch
   - micro:bit
@@ -1365,7 +1365,7 @@
   prefecture_id: 21
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-kaizu.jimdo.com/
-  description: 岐阜県海津市で毎月2回開催
+  description: 岐阜県海津市で月2回開催
   tags:
   - Scratch
 - id: 200
@@ -1387,7 +1387,7 @@
   prefecture_id: 21
   logo: "/img/dojos/japan.png"
   url: https://coderdojotono.hatenablog.com/
-  description: 岐阜県多治見市まなびパークで毎月第１・第３土曜日に開催
+  description: 岐阜県多治見市まなびパークで毎月第1・第3土曜開催
   tags:
   - Scratch
 - id: 148
@@ -1436,7 +1436,7 @@
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: http://coderdojo-nagoya.hateblo.jp/
-  description: 名古屋市中区で毎月開催
+  description: 名古屋市中区で月2回開催
   tags:
   - Scratch
 - id: 2
@@ -1446,7 +1446,7 @@
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-mizuho.connpass.com/
-  description: 名古屋市瑞穂区で毎月開催
+  description: 名古屋市瑞穂区で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -1484,7 +1484,7 @@
   prefecture_id: 23
   logo: "/img/dojos/ichinomiya.png"
   url: https://hauska-paikka.jp/event/coderdojo/
-  description: 愛知県一宮市新生で月２回開催
+  description: 愛知県一宮市新生で月2回開催
   tags:
   - Scratch
   - PHP
@@ -1496,7 +1496,7 @@
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-seto.github.io/
-  description: 愛知県瀬戸市で毎月２回開催
+  description: 愛知県瀬戸市で月2回開催
   tags:
   - Scratch
   - Webサイト
@@ -1509,7 +1509,7 @@
   prefecture_id: 23
   logo: "/img/dojos/anjo.png"
   url: https://sites.google.com/coderdojo.com/anjo/
-  description: 愛知県安城市keyportで毎月第3土曜日午前に開催
+  description: 愛知県安城市keyportで毎月第3土曜午前に開催
   tags:
   - Scratch
   - micro:bit
@@ -1531,7 +1531,7 @@
   name: 新城
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/CoderDojo-Shinshiro-842752475889001/
+  url: https://www.facebook.com/coderdojo.shinshiro/
   description: 愛知県新城市で毎月開催
   tags:
   - Scratch
@@ -1557,7 +1557,7 @@
   prefecture_id: 23
   logo: "/img/dojos/nisshin.png"
   url: https://coderdojo-nisshin.connpass.com/
-  description: 愛知県日進市で毎月２回開催
+  description: 愛知県日進市で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -1569,7 +1569,7 @@
   prefecture_id: 23
   logo: "/img/dojos/shikatsu.jpg"
   url: https://note.mu/cd_shikatsu
-  description: 愛知県北名古屋市で毎月第2木曜日
+  description: 愛知県北名古屋市で毎月第2木曜開催
   tags:
   - Scratch
   - micro:bit
@@ -1594,7 +1594,7 @@
   prefecture_id: 24
   logo: "/img/dojos/ise.png"
   url: https://coderdojo-ise.jimdo.com/
-  description: 三重県伊勢市で不定期に開催
+  description: 三重県伊勢市で不定期開催
   tags:
   - Scratch
   - micro:bit
@@ -1730,7 +1730,7 @@
   prefecture_id: 27
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-suita.doorkeeper.jp/
-  description: 大阪府吹田市で不定期に開催
+  description: 大阪府吹田市で不定期開催
   tags:
   - Scratch
   - ラズベリーパイ
@@ -1743,7 +1743,7 @@
   prefecture_id: 27
   logo: "/img/dojos/takatsuki.png"
   url: https://www.facebook.com/coderdojotakatsuki/
-  description: 大阪府高槻市で不定期に開催
+  description: 大阪府高槻市で不定期開催
   tags:
   - Scratch
 - id: 40
@@ -1779,7 +1779,7 @@
   prefecture_id: 27
   logo: "/img/dojos/daito.png"
   url: http://coderdojodaito.strikingly.com/
-  description: 大阪府大東市で毎月第一土曜日に開催
+  description: 大阪府大東市で毎月第1土曜日に開催
   tags:
   - Scratch
   - micro:bit
@@ -1889,7 +1889,7 @@
   prefecture_id: 28
   logo: "/img/dojos/kobe.png"
   url: http://coderdojokobe.wixsite.com/home/
-  description: 神戸市中央区で月１回
+  description: 神戸市中央区で毎月開催
   tags:
   - Scratch
   - JavaScript
@@ -1899,7 +1899,7 @@
   name: 姫路
   prefecture_id: 28
   logo: "/img/dojos/himeji.png"
-  url: https://himejicoderdojo.doorkeeper.jp/
+  url: https://sites.google.com/site/himejicoderdojo/
   description: 兵庫県姫路市で第3土曜日に毎月開催
   tags:
   - Scratch
@@ -2011,7 +2011,7 @@
   prefecture_id: 29
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-asuka.github.io/
-  description: 奈良県明日香村で毎月１回開催
+  description: 奈良県明日香村で毎月1回開催
   tags:
   - Scratch
   - micro:bit
@@ -2099,7 +2099,7 @@
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
-  description: 島根県各地で各地で毎週１回〜２回開催
+  description: 島根県各地で各地で週1〜2回開催
   tags:
   - Scratch
   - Webサイト
@@ -2113,7 +2113,7 @@
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://zen.coderdojo.com/dojos/jp/ren2-mo2-ting3/iwami-takuno
-  description: 島根県大田市仁摩町で月に２回開催
+  description: 島根県大田市仁摩町で月2回開催
   tags:
   - Scratch
   - Webサイト
@@ -2126,7 +2126,7 @@
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/CoderDojoHamada
-  description: 島根県浜田市で月一で開催
+  description: 島根県浜田市で毎月開催
   tags:
   - Scratch
   - Webサイト
@@ -2289,7 +2289,7 @@
   prefecture_id: 36
   logo: "/img/dojos/miyoshi.png"
   url: https://www.facebook.com/groups/105010163561072/
-  description: 徳島県三好市で毎月第二週に開催
+  description: 徳島県三好市で毎月第2週に開催
   tags:
   - Minecraft
 - id: 188
@@ -2336,7 +2336,7 @@
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojokitakyushu/
-  description: 福岡県北九州市で１〜２ヶ月に１回開催
+  description: 福岡県北九州市で1〜2ヶ月に1回開催
   tags:
   - Scratch
   - Webサイト
@@ -2383,7 +2383,7 @@
   prefecture_id: 40
   logo: "/img/dojos/kashii.png"
   url: https://coderdojo-kashii.connpass.com/
-  description: 福岡市東区で毎月１回不定期に開催
+  description: 福岡市東区で毎月1回不定期開催
   tags:
   - Viscuit
   - Minecraft
@@ -2411,7 +2411,7 @@
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/coderdojo.fukuoka.kurume.suwano/
-  description: 福岡県久留米市で毎月2回開催
+  description: 福岡県久留米市で月2回開催
   tags:
   - Scratch
   - Medibang
@@ -2439,7 +2439,7 @@
   prefecture_id: 40
   logo: "/img/dojos/nakama.png"
   url: https://www.facebook.com/CoderDojoNAKAMA/
-  description: 福岡県中間市で２ヶ月に１回程度開催
+  description: 福岡県中間市で2ヶ月に1回程度開催
   tags:
   - Scratch
   - micro:bit
@@ -2595,7 +2595,7 @@
   prefecture_id: 47
   logo: "/img/dojos/japan.png"
   url: http://coderdojo-nago.com
-  description: 沖縄県名護市で月に２回開催
+  description: 沖縄県名護市で月2回開催
   tags:
   - Scratch
   - micro:bit
@@ -2609,7 +2609,7 @@
   prefecture_id: 47
   logo: "/img/dojos/uruma.png"
   url: https://coderdojo-uruma.hatenablog.com/
-  description: 沖縄県うるま市で毎月第２・第４土曜に開催
+  description: 沖縄県うるま市で毎月第2・第4土曜に開催
   tags:
   - Scratch
   - micro:bit
