@@ -2,7 +2,7 @@ class PodcastsController < ApplicationController
   def index
     @title          = 'DojoCast'
     @description    = 'Highlight people around CoderDojo community by Podcast.'
-    @episodes       = SoundCloudTrack.order(:published_date)
+    @episodes       = SoundCloudTrack.order(:published_date).reverse
     @url            = request.url
     @next_live_date = ENV['NEXT_LIVE_DATE'] || '未定'
 
