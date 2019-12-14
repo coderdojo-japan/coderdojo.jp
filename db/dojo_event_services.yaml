@@ -46,34 +46,46 @@
   group_id:
   url:
 
+# 名取
 - dojo_id: 85
   name: facebook
   group_id: 1379707208756830
   url: https://www.facebook.com/pg/coderdojonatori/events/
+
+# 登米
 - dojo_id: 4
   name: facebook
   group_id: 1215241118487800
   url: https://www.facebook.com/pg/coderdojo.tome/events/
+
+  # 中新田
 - dojo_id: 59
   name: facebook
   group_id: 247957532245205
   url: https://www.facebook.com/pg/coderdojoNakaniida/events/
+
 - dojo_id: 74
   name: owned
   group_id:
   url: https://zen.coderdojo.com/dojos/jp/ri4-ben3-shan1-xing2-xian4-shan1-xing2-shi4/yamagata
+
 - dojo_id: 79
   name: peatix
   group_id:
   url: http://cdaizuentry.peatix.com
+
+# 新潟西
 - dojo_id: 5
   name: facebook
   group_id: 1238071152876251
   url: https://www.facebook.com/pg/CoderDojoNiigata/events/
+
+# 金沢
 - dojo_id: 6
   name: facebook
   group_id: 377006519312870
   url: https://www.facebook.com/pg/coderdojo.kanazawa/events/
+
 - dojo_id: 7
   name: owned
   group_id:
@@ -102,10 +114,13 @@
   name: doorkeeper
   group_id: 5238
   url: https://coderdojo.doorkeeper.jp
+
+# ひばりヶ丘
 - dojo_id: 10
   name: facebook
   group_id: 497400593610071
   url: https://www.facebook.com/coderdojo.hibarigaoka/
+
 - dojo_id: 11
   name: doorkeeper
   group_id: 6509
@@ -114,6 +129,8 @@
   name: google
   group_id:
   url:
+
+# 所沢
 - dojo_id: 12
   name: facebook
   group_id: 617011185103868
@@ -148,6 +165,8 @@
   name: connpass
   group_id: 4985
   url: https://coderdojo-ikebukuro.connpass.com/
+
+# 下北沢
 - dojo_id: 17
   name: facebook # 2016年4月からは connpass
   group_id: 346407898743580
@@ -199,14 +218,19 @@
   name: google
   group_id:
   url:
+
+# 柏
 - dojo_id: 23
   name: facebook
   group_id: 472842399443384
   url: https://www.facebook.com/pg/CoderDojokashiwa/events/
+
+# 柏沼南
 - dojo_id: 125
   name: facebook
   group_id: 231578703997335
   url: https://www.facebook.com/pg/CoderDojoKashiwaShounan/events/
+
 - dojo_id: 112
   name: google
   group_id:
@@ -215,10 +239,14 @@
   name: google
   group_id:
   url:
+
+# 若葉みつわ台
 - dojo_id: 25
   name: facebook
   group_id: 238346276578113
   url: https://www.facebook.com/pg/coderdojowakaba.mitsuwadai/events/
+
+# 船橋
 - dojo_id: 86
   name: facebook
   group_id: 880706025404127
@@ -233,6 +261,7 @@
   name: connpass
   group_id: 8670
   url: https://coderdojo-kisarazu.connpass.com/
+
 - dojo_id: 68
   name: connpass
   group_id: 3430
@@ -277,14 +306,18 @@
   name: doorkeeper
   group_id: 9603
   url: https://coderdojo-azumino.doorkeeper.jp
+
 - dojo_id: 27
   name: connpass
   group_id: 2732
   url: https://coderdojo-shiojiri.connpass.com/
+
+# 諏訪湖
 - dojo_id: 94
   name: facebook
   group_id: 104207190171589
   url: https://www.facebook.com/pg/CoderDojoSuwako/events/
+
 - dojo_id: 28
   name: kokucheese
   group_id:
@@ -402,6 +435,8 @@
   name: doorkeeper
   group_id: 1993
   url: https://coderdojo-nishinomiya.doorkeeper.jp
+
+# なんば
 - dojo_id: 43
   name: facebook
   group_id: 122178467942470
@@ -412,6 +447,8 @@
   name: doorkeeper
   group_id: 9012
   url: https://coderdojo-hommachi.doorkeeper.jp
+
+# 西成
 - dojo_id: 45
   name: facebook # 休止中
   group_id: 281889288840369
@@ -446,6 +483,7 @@
   group_id: 773267359523217
   url: https://www.facebook.com/CoderDojoNankiTanabe/
 
+# 和歌山
 - dojo_id: 47
   name: facebook
   group_id: 1794762964139814
@@ -507,6 +545,7 @@
   group_id: 693901040807095
   url: https://www.facebook.com/CDTokushima/
 
+# 三好
 - dojo_id: 111
   name: facebook
   group_id: 1507281716025249
@@ -521,6 +560,8 @@
   name: connpass
   group_id: 5138
   url: https://coderdojo-fukuoka.connpass.com/
+
+# ももち
 - dojo_id: 113
   name: facebook
   group_id: 1928416637480111
@@ -613,6 +654,8 @@
   name: connpass
   group_id: 5599
   url: https://connpass.com/user/coderdojo-akabane/
+
+# 鳥取
 - dojo_id: 131
   name: facebook
   group_id: 209274086317393
@@ -638,10 +681,13 @@
   name: connpass
   group_id: 5371
   url: https://coderdojo-atsugi.connpass.com/
+
+# 呉
 - dojo_id: 141
-  name: facebook
-  group_id: 206840799906741
-  url: https://www.facebook.com/CoderDojoKURE/
+  name: doorkeeper
+  group_id: 9701
+  url: https://coderdojo-kure.doorkeeper.jp/
+
 # 北九州
 - dojo_id: 144
   name: facebook # 第3回からは connpass
@@ -703,10 +749,13 @@
   name: doorkeeper
   group_id: 9790
   url: https://coderdojo-kitakata.doorkeeper.jp/
+
+# 諏訪野＠ギャランドゥ
 - dojo_id: 172
   name: facebook
   group_id: 227758594569000
   url: https://www.facebook.com/pg/coderdojo.fukuoka.kurume.suwano/events/
+
 - dojo_id: 173
   name: connpass
   group_id: 640
@@ -733,6 +782,8 @@
   name: connpass
   group_id: 6655
   url: https://coderdojo-seto.connpass.com/
+
+# 博多
 - dojo_id: 183
   name: facebook
   group_id: 1318246998318371
@@ -757,20 +808,23 @@
   name: connpass
   group_id: 7455
   url: https://coderdojo-nago.connpass.com/
+
+# 鹿児島
 - dojo_id: 187
   name: facebook # 第2回からは connpass で運用
   group_id: 569968173442983
   url: https://www.facebook.com/CoderDojoKagoshima/
-
-# 鹿児島
 - dojo_id: 187
   name: connpass
   group_id: 7373
   url: https://coderdojo-kagoshima.connpass.com/
+
+# 神山
 - dojo_id: 188
   name: facebook
   group_id: 760136447660371
   url: https://www.facebook.com/CDKamiyama/
+
 - dojo_id: 189
   name: connpass
   group_id: 6999
@@ -779,6 +833,8 @@
   name: connpass
   group_id: 7053
   url: https://coderdojo-mizonokuchi.connpass.com/
+
+# 太宰府
 - dojo_id: 191
   name: facebook
   group_id: 2400985366820315
@@ -796,29 +852,19 @@
   group_id: 7172
   url: https://coderdojo-toyonaka.connpass.com/
 
-# 韮崎 Facebookイベントページなし connnpassに移行
-# - dojo_id: 195
-#   name: facebook
-#   group_id: 100032127647229
-#   url: https://www.facebook.com/CoderDojo.Nirasaki
+# 韮崎
 - dojo_id: 195
   name: connpass
   group_id: 7466
   url: https://coderdojo-nirasaki.connpass.com/
 
-# 北杜 Facebookイベントページなし connpassに移行
-# - dojo_id: 196
-#   name: facebook
-#   group_id: 100032055361334
-#   url: https://www.facebook.com/CoderDojo.HokutoJP
+# 北杜
 - dojo_id: 196
   name: connpass
   group_id: 7465
   url: https://coderdojo-hokuto.connpass.com/
-# - dojo_id: 198 connpass に移行
-#   name: facebook
-#   group_id: 374114993171172
-#   url: https://www.facebook.com/CoderDojoKOZA
+
+# コザ
 - dojo_id: 198
   name: connpass
   group_id: 8377
@@ -829,14 +875,19 @@
   name: connpass
   group_id: 9330
   url: https://coderdojo-gifu.connpass.com/
+
+# 松原
 - dojo_id: 202
   name: facebook
   group_id: 2109347109378340
   url: https://www.facebook.com/coderdojomatsubara/
+
+# 六ツ野
 - dojo_id: 203
   name: facebook
-  group_id: 1821472277930255 
+  group_id: 1821472277930255
   url: https://www.facebook.com/CoderDojo.Mutsuno/
+
 - dojo_id: 206
   name: doorkeeper
   group_id: 10019
@@ -852,19 +903,23 @@
   name: connpass
   group_id: 7500
   url: https://coderdojo-kozukue.connpass.com/
+
+# 石垣
 - dojo_id: 209
   name: facebook
   group_id: 789235144765295
   url: https://www.facebook.com/CoderDojo.Ishigaki/
+
+# 久地
 - dojo_id: 210
-  name: facebook
-  group_id: 261243731229399
-  url: https://www.facebook.com/pg/coderdojokuji/events/
+  name: connpass
+  group_id: 6907
+  url: https://coderdojo-kuji.connpass.com/
 
 # 島根県大田市仁摩町宅野 (石見 / Iwami)
 # - dojo_id: 211
 #   name: zen
-#   group_id: 
+#   group_id:
 #   url: https://zen.coderdojo.com/dojos/jp/ren2-mo2-ting3/iwami-takuno
 
 # 調布@電気通信大学
