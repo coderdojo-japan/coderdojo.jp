@@ -3389,7 +3389,7 @@
   participants: 1
   evented_at: 2018/08/05 10:00
 
-  # 2019/03/01 - 2019/03/31
+# 2019/03/01 - 2019/03/31
 - dojo_id: 183
   event_id:
   participants: 5
@@ -3456,7 +3456,7 @@
   participants: 6
   evented_at: 2019/03/17 10:00
 
-  # 2019/04/01 - 2019/04/30
+# 2019/04/01 - 2019/04/30
 - dojo_id: 6
   event_id:
   participants: 2
@@ -3543,7 +3543,7 @@
   participants: 2
   evented_at: 2019/04/28 14:00
 
-  # 2019/05/01 - 2019/05/31
+# 2019/05/01 - 2019/05/31
 - dojo_id: 12
   event_id:
   participants: 4
@@ -3605,7 +3605,7 @@
   participants: 2
   evented_at: 2019/05/31 17:00
 
-  # 2019/06/01 - 2019/06/30
+# 2019/06/01 - 2019/06/30
 - dojo_id: 12
   event_id:
   participants: 3
@@ -3679,7 +3679,7 @@
   participants: 5
   evented_at: 2019/06/29 10:00
 
-  # 2019/07/01 - 2019/07/31
+# 2019/07/01 - 2019/07/31
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3741,7 +3741,7 @@
   participants: 1
   evented_at: 2019/07/28 13:30
 
-  # 2019/08/01 - 2019/08/31
+# 2019/08/01 - 2019/08/31
 - dojo_id: 202
   event_id:
   participants: 1
@@ -3819,7 +3819,7 @@
   participants: 1
   evented_at: 2019/08/30 17:00
 
-  # 2019/09/01 - 2019/09/30
+# 2019/09/01 - 2019/09/30
 - dojo_id: 229
   event_id:
   participants: 0
@@ -3889,7 +3889,7 @@
   participants: 6
   evented_at: 2019/09/29 13:30
 
-  # 2019/10/01 - 2019/10/31
+# 2019/10/01 - 2019/10/31
 - dojo_id: 6
   event_id:
   participants: 2
@@ -3957,9 +3957,9 @@
 - dojo_id: 131
   event_id:
   participants: 2
-	evented_at: 2019/10/27 10:00
+  evented_at: 2019/10/27 10:00
 
- # 2019/11/01 - 2019/11/30
+# 2019/11/01 - 2019/11/30
 - dojo_id: 99
   event_id:
   participants: 0
