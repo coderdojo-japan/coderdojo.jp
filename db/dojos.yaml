@@ -2069,6 +2069,7 @@
   - アプリ
 - id: 115
   order: '313866'
+  is_active: false
   created_at: '2017-08-16'
   name: 大山
   prefecture_id: 31
