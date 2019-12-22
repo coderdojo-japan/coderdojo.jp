@@ -1410,12 +1410,13 @@
   name: 浜松
   prefecture_id: 22
   logo: "/img/dojos/hamamatsu.png"
-  url: http://coderdojo-hamamatsu.org/
+  url: https://coderdojo-hamamatsu.org/
   description: 静岡県浜松市で毎月開催
   tags:
   - Scratch
   - Webサイト
   - Minecraft
+  - micro:bit
 - id: 129
   order: '222038'
   created_at: '2018-02-18'
