@@ -4,7 +4,7 @@
 
 ## CoderDojo とは?
 
-CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では110カ国・2,000の道場、日本では全国に190以上の道場があります。CoderDojo は全国各地で定期的に開催されており、毎週、同時並行的に道場が開かれています。
+CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では110カ国・2,000の道場、日本では全国に193以上の道場があります。CoderDojo は全国各地で定期的に開催されており、毎週、同時並行的に道場が開かれています。
 
 CoderDojo の特徴は、オープンソースソフトウェア ([OSS](http://e-words.jp/w/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9.html)) の文化に根付いた非営利のコミュニティである点です。例えば PHP や Perl, Python, Ruby といったそれぞれのコミュニティが横断的に関わっており、中には OSS の第一線で活躍される方々にもご協力していただいております。現在はエンジニアやデザイナーだけでなく、各地域の保護者や学生、研究者や経営者などにも広がりを見せています。
 
@@ -18,7 +18,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 <br><br>
 
 <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<center>スライド: <a href="http://coderdojo-nishinomiya.info/">法人向け説明資料</a></center>
+<center>スライド: <a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan">法人向け説明資料</a></center>
 
 <br>
 
