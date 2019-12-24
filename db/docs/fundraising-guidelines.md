@@ -1,5 +1,5 @@
 # 資金を募るときの注意点
-<center>(<a href="http://kata.coderdojo.com/images/c/cd/FundraisingGuidelines.pdf">英語の原文を読む</a>)</center>
+<center>(<a href="https://github.com/CoderDojo/kata-archive/blob/master/files/FundraisingGuidelines.pdf">英語の原文を読む</a>)</center>
 <br/>
 
 このドキュメントでは個々のDojoが資金を集める際の一般的な注意点を示します。なお、ベルトや保険などの経費について可能な場合はできるだけ、各Dojoが直接スポンサーより援助してもらえるようにしてください。具体的な資金集めの方法については、[資金を募るときの活動事例](/docs/fundraising-methods)をお読みください。
