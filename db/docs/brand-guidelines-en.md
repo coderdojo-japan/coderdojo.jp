@@ -1,7 +1,8 @@
 # CoderDojo Brand Guidelines
 <center>(<a href="/docs/brand-guidelines">日本語で読む</a>)</center>
+<br>
 
-Original text: <a href="http://kata.coderdojo.com/wiki/Materials">CoderDojo Materials</a>
+_Latest version can be found at [CoderDojo Style Guide](http://dojo.soy/style)._
 
 ## Using CoderDojo in text:
 
