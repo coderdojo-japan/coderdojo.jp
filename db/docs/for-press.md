@@ -1,4 +1,4 @@
-# 報道関係者向け資料
+# 報道関係者の皆さまへ
 <center>(<a href="/docs/brand-guidelines-en">Click here for English</a>)</center>
 <br>
 
