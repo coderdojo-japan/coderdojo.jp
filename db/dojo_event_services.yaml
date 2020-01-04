@@ -1111,3 +1111,9 @@
   name: connpass
   group_id: 8841
   url: https://coderdojo-motoyama.connpass.com/
+
+# 稲沢正明寺
+- dojo_id: 235
+  name: peatix
+  group_id:
+  url: https://coderdojo-shomeiji.peatix.com/
