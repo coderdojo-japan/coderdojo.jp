@@ -186,6 +186,7 @@
   - AI
 - id: 215
   order: '063410'
+  is_active: false
   created_at: '2019-04-24'
   name: 大石田@PCチャレンジ倶楽部
   prefecture_id: 6
