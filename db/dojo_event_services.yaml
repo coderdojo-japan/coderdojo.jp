@@ -548,10 +548,15 @@
   group_id:
   url:
 
+# 岡南
 - dojo_id: 81
   name: connpass
   group_id: 3786
   url: https://konan-coderdojo.connpass.com/
+- dojo_id: 81
+  name: doorkeeper
+  group_id: 9993
+  url: https://coderdojo-konan.doorkeeper.jp/
 
 - dojo_id: 51
   name: connpass
