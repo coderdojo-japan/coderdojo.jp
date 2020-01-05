@@ -10,16 +10,16 @@ class StatsController < ApplicationController
     @sum_of_dojos        = DojoEventService.count('DISTINCT dojo_id')
     @sum_of_participants = EventHistory.sum(:participants)
 
-    # 2012年1月1日〜2018年12月31日までの集計結果
-    period = Time.zone.local(2012).beginning_of_year..Time.zone.local(2018).end_of_year
-    stat   = Stat.new(period)
-    @dojos        = stat.annual_sum_total_of_aggregatable_dojo
-    @events       = stat.annual_count_of_event_histories
-    @participants = stat.annual_sum_of_participants
+    # 2012年1月1日〜2019年12月31日までの集計結果
+    period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2019).end_of_year
+    statistics    = Stat.new(period)
+    @dojos        = statistics.annual_sum_total_of_aggregatable_dojo
+    @events       = statistics.annual_count_of_event_histories
+    @participants = statistics.annual_sum_of_participants
 
-    @high_charts_globals = HighChartsBuilder.global_options
-    @annual_dojos_chart           = stat.annual_dojos_chart
-    @annual_event_histories_chart = stat.annual_event_histories_chart
-    @annual_participants_chart    = stat.annual_participants_chart
+    @high_charts_globals          = HighChartsBuilder.global_options
+    @annual_dojos_chart           = statistics.annual_dojos_chart
+    @annual_event_histories_chart = statistics.annual_event_histories_chart
+    @annual_participants_chart    = statistics.annual_participants_chart
   end
 end
