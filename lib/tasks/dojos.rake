@@ -6,6 +6,7 @@ require 'yaml'
 require 'csv'
 
 namespace :dojos do
+  # NOTE: 2020年1月中はコメントアウトで残し、もし必要になる場面が無ければ翌月以降に削除する
   # desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
   # task generate_yaml: :environment do
   #   dojos = JSON.parse(File.read(Rails.root.join('db', 'parse_backup.json')))['results']
