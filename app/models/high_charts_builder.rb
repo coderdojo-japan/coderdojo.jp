@@ -10,7 +10,7 @@ class HighChartsBuilder
       data = annual_chart_data_from(source)
 
       LazyHighCharts::HighChart.new('graph') do |f|
-        f.title(text: '全国の道場数の推移')
+        f.title(text: '道場数の推移')
         f.xAxis(categories: data[:years])
         f.series(type: 'column', name: '増加数', yAxis: 0, data: data[:increase_nums])
         f.series(type: 'line', name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
