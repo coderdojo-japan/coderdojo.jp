@@ -65,17 +65,18 @@ http://www.soumu.go.jp/denshijiti/code.html
     end
   end
 
-  desc '現在のyamlファイルのカラムをソートします'
-  task sort_yaml: :environment do
-    dojos = Dojo.load_attributes_from_yaml
-
-    # Dojo column should start with 'name' for human-readability
-    dojos.map! do |dojo|
-      dojo.sort_by { |a,b| a.last }.to_h
-    end
-
-    Dojo.dump_attributes_to_yaml(dojos)
-  end
+  # NOTE: 2020年1月中はコメントアウトで残し、もし必要になる場面が無ければ翌月以降に削除する
+  # desc '現在のyamlファイルのカラムをソートします'
+  # task sort_yaml: :environment do
+  #   dojos = Dojo.load_attributes_from_yaml
+  #
+  #   # Dojo column should start with 'name' for human-readability
+  #   dojos.map! do |dojo|
+  #     dojo.sort_by { |a,b| a.last }.to_h
+  #   end
+  #
+  #   Dojo.dump_attributes_to_yaml(dojos)
+  # end
 
   desc 'DBからyamlファイルを生成します'
   task migrate_adding_id_to_yaml: :environment do
