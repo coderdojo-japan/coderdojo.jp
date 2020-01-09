@@ -35,49 +35,37 @@
       %tbody{style: 'text-align: center;'}
         %tr
           %td
-          %td= @dojo_count
+          %td= @sum_of_dojos
           %td= @sum_of_events
           %td= @sum_of_participants
 
   %h3{style: "margin-top: 80px;"} ✅ 集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
-    %li 参加者数はユニーク数ではなく延べ数です
-    %li APIで自動的に集計できるDojoが集計対象
-    %li 最新の開発状況は末尾の関連リンクを参照
+    %li 参加者数はユニーク数ではなく延べ数です。
+    %li 集計対象は API などで集計可能な道場です。
 
-  %div{style: 'margin-top: 20px;'}
+  %div{style: 'margin-top: 10px;'}
     毎週月曜朝10時に集計をしています。
     %br
     集計対象の道場数は次のとおりです。
   %div{style: 'margin-top: 10px;'}
-  %b= @sum_of_dojos
-  %b / #{@dojo_count} Dojos
+  %b= @aggregated_dojos
+  %b / #{@sum_of_dojos} Dojos
   
   %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
-    集計対象の Dojo 数の推移
+    %b 集計対象となっている道場数の推移
     %table{style: 'margin-top: 4px;'}
       %thead
         %tr
           %th
-          - @dojos.keys.each do |year|
-            %th{style: 'padding: 0 5px;'} #{year}年
-          /%th{style: 'padding: 0 5px; text-align: center;'} 合計
+          - @annual_dojos_table.keys.each do |year|
+            %th{style: 'padding: 3px 5px; font-weight: normal;'} #{year}年
       %tbody{style: 'text-align: center;'}
         %tr
           %td 道場数
-          - @dojos.each_value do |num|
-            %td= num
-          /%td= @dojos.values.last
-        /%tr
-        /  %td 開催数
-        /  - @events.each_value do |num|
-        /    %td= num
-        /  /%td= @events.values.sum
-        /%tr
-        /  %td 参加数
-        /  - @participants.each_value do |num|
-        /    %td= num
-        /  /%td= @participants.values.sum
+          - @annual_dojos_table.each_value do |num|
+            %td
+              %b= num
 
   
   %h3{style: "margin-top: 80px;"} ☯️ 日本各地の道場
