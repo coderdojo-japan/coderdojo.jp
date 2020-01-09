@@ -29,13 +29,14 @@
         %tr
           %th
           - @dojos.keys.each do |year|
-            %td{style: 'padding: 0 5px; font-weight: bold;'} #{year}年
-          %td{style: 'padding: 0 5px; font-weight: bold;'} 合計
+            %th{style: 'padding: 0 5px;'} #{year}年
+          %th{style: 'padding: 0 5px; text-align: center;'} 合計
       %tbody{style: 'text-align: center;'}
         %tr
           %td 道場数
           - @dojos.each_value do |num|
             %td= num
+          %td= @dojos.values.last
         %tr
           %td 開催数
           - @events.each_value do |num|
@@ -56,7 +57,7 @@
   %b / #{@dojo_count} Dojos
 
   %h3{style: "margin-top: 60px;"} 🆕 最新データ
-  2019年のデータも含めた最新の統計情報は次のとおりです。
+  2020年のデータも含めた最新の統計情報は次のとおりです。
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{style: 'margin-top: 4px;'}
       %thead
