@@ -30,23 +30,23 @@
           %th
           - @dojos.keys.each do |year|
             %th{style: 'padding: 0 5px;'} #{year}年
-          %th{style: 'padding: 0 5px; text-align: center;'} 合計
+          /%th{style: 'padding: 0 5px; text-align: center;'} 合計
       %tbody{style: 'text-align: center;'}
         %tr
           %td 道場数
           - @dojos.each_value do |num|
             %td= num
-          %td= @dojos.values.last
+          /%td= @dojos.values.last
         %tr
           %td 開催数
           - @events.each_value do |num|
             %td= num
-          %td= @events.values.sum
+          /%td= @events.values.sum
         %tr
           %td 参加数
           - @participants.each_value do |num|
             %td= num
-          %td= @participants.values.sum
+          /%td= @participants.values.sum
 
   %div{style: 'margin-top: 30px;'}
     ※毎週月曜日の午前10時頃に集計をしています。
