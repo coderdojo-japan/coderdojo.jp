@@ -6,21 +6,22 @@ require 'yaml'
 require 'csv'
 
 namespace :dojos do
-  desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
-  task generate_yaml: :environment do
-    dojos = JSON.parse(File.read(Rails.root.join('db', 'parse_backup.json')))['results']
-    dojos.sort_by! { |hash| hash['order'] }
-
-    # Tweak dojo info if needed
-    dojos.each do |dojo|
-      dojo['description'].strip!
-      dojo.delete 'objectId'  # Delete Parse-specific key
-      dojo.delete 'createdAt' # This is managed by database
-      dojo.delete 'updatedAt' # This is managed by database
-    end
-
-    Dojo.dump_attributes_to_yaml(dojos)
-  end
+  # NOTE: 2020年1月中はコメントアウトで残し、もし必要になる場面が無ければ翌月以降に削除する
+  # desc 'Parseから出力したjsonファイルをベースに、yamlファイルを生成します'
+  # task generate_yaml: :environment do
+  #   dojos = JSON.parse(File.read(Rails.root.join('db', 'parse_backup.json')))['results']
+  #   dojos.sort_by! { |hash| hash['order'] }
+  #
+  #   # Tweak dojo info if needed
+  #   dojos.each do |dojo|
+  #     dojo['description'].strip!
+  #     dojo.delete 'objectId'  # Delete Parse-specific key
+  #     dojo.delete 'createdAt' # This is managed by database
+  #     dojo.delete 'updatedAt' # This is managed by database
+  #   end
+  #
+  #   Dojo.dump_attributes_to_yaml(dojos)
+  # end
 
   desc '現在のyamlファイルを元にデータベースを更新します'
   task update_db_by_yaml: :environment do
