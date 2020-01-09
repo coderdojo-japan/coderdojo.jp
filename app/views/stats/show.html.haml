@@ -21,15 +21,38 @@
     %br
     = high_chart("annual_participants",    @annual_participants_chart)
 
-  /%h3{style: "margin-top: 60px;"} 📝 集計対象と期間
-  %div{style: 'margin-top: 30px;'}
+
+  %h3{style: "margin-top: 80px;"} 🆕 最新データ
+  2020年のデータも含めた最新の統計情報は次のとおりです。
+  %div{style: "margin-top: 20px;", align: 'center' }
+    %table{style: 'margin-top: 4px;'}
+      %thead
+        %tr
+          %th
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 全国の道場数
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計開催回数
+          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計参加者数
+      %tbody{style: 'text-align: center;'}
+        %tr
+          %td
+          %td= @dojo_count
+          %td= @sum_of_events
+          %td= @sum_of_participants
+
+  %h3{style: "margin-top: 80px;"} ✅ 集計方法と集計対象について
+  %ul{style: 'list-style: none; margin-left: -10px;'}
+    %li 参加者数はユニーク数ではなく延べ数です
+    %li APIで自動的に集計できるDojoが集計対象
+    %li 最新の開発状況は末尾の関連リンクを参照
+
+  %div{style: 'margin-top: 20px;'}
     毎朝午前10時頃に集計をしています。
     %br
     集計対象の道場数は次のとおりです。
   %div{style: 'margin-top: 10px;'}
   %b= @sum_of_dojos
   %b / #{@dojo_count} Dojos
-
+  
   %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
     集計対象の Dojo 数の推移
     %table{style: 'margin-top: 4px;'}
@@ -56,30 +79,7 @@
         /    %td= num
         /  /%td= @participants.values.sum
 
-
-  %h3{style: "margin-top: 80px;"} 🆕 最新データ
-  2020年のデータも含めた最新の統計情報は次のとおりです。
-  %div{style: "margin-top: 20px;", align: 'center' }
-    %table{style: 'margin-top: 4px;'}
-      %thead
-        %tr
-          %th
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 全国の道場数
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計開催回数
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計参加者数
-      %tbody{style: 'text-align: center;'}
-        %tr
-          %td
-          %td= @dojo_count
-          %td= @sum_of_events
-          %td= @sum_of_participants
-
-  %h3{style: "margin-top: 80px;"} ✅ 備考
-  %ul{style: 'list-style: none; margin-left: -10px;'}
-    %li 参加者数はユニーク数ではなく延べ数です
-    %li APIで自動的に集計できるDojoが集計対象
-    %li 最新の開発状況は末尾の関連リンクを参照
-
+  
   %h3{style: "margin-top: 80px;"} ☯️ 日本各地の道場
   #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
     - @regions_and_dojos.each_with_index do |(region, dojos), index|
