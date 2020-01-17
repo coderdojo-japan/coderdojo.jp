@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 ruby '2.6.5'
 
-gem 'rails', '~> 5.1.7'
+gem 'rails', '~> 5.2.0'
 gem 'puma'
 gem "puma_worker_killer"
 gem 'pg'
 gem 'dumper'
+gem 'bootsnap'
 
-gem 'scrivito', '~> 1.15.0'
+gem 'scrivito', '~> 1.16.0'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 
