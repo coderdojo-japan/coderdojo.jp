@@ -1122,3 +1122,9 @@
   name: peatix
   group_id:
   url: https://coderdojo-shomeiji.peatix.com/
+
+# 伊那
+- dojo_id: 237
+  name: connpass
+  group_id: 7630
+  url: https://coderdojo-ina.connpass.com/

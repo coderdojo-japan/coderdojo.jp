@@ -1335,6 +1335,20 @@
   - Viscuit
   - micro:bit
   - LEGO WeDo
+- id: 237
+  order: '202096'
+  created_at: '2019-01-19'
+  name: 伊那
+  prefecture_id: 20
+  url: https://coderdojo-ina.connpass.com/
+  logo: "/img/dojos/japan.png"
+  description: 長野県伊那市で毎月第3日曜開催
+  tags:
+  - Scratch
+  - micro:bit
+  - PHP
+  - Python
+  - Arduino
 - id: 27
   order: '202151'
   created_at: '2012-11-08'
