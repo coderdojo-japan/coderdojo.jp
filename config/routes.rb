@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/docs/charter_en",        to: redirect('/charter_en')
   get "/docs/about-partnership", to: redirect('/partnership')
   get "/docs/financial-report",  to: redirect('/financial-report')
+  get "/docs/privacy",           to: redirect('/privacy')
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                to: redirect('https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA')
   get "/podcasts/feed"    => "podcasts#feed"
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/partnership"      => "docs#show", id: 'about-partnership'
   get "/financial-report" => "docs#show", id: 'financial-report'
+  get "/privacy"          => "docs#show", id: 'privacy'
+
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
