@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "/docs/about-partnership", to: redirect('/partnership')
   get "/docs/financial-report",  to: redirect('/financial-report')
   get "/docs/privacy",           to: redirect('/privacy')
+  get "/docs/teikan",            to: redirect('/teikan')
+
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                to: redirect('https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA')
   get "/podcasts/feed"    => "podcasts#feed"
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   get "/partnership"      => "docs#show", id: 'about-partnership'
   get "/financial-report" => "docs#show", id: 'financial-report'
   get "/privacy"          => "docs#show", id: 'privacy'
+  get "/teikan"           => "docs#show", id: 'teikan'
 
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
