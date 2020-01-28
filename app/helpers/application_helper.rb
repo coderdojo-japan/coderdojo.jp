@@ -16,7 +16,7 @@ module ApplicationHelper
       request.url
     else
       # URLs rendered via Scrivito
-      page_url
+      "https://#{request.domain}/#{page_url}"
     end
   end
 
