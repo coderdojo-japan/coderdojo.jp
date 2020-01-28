@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def kata_description
-    "CoderDojo で役立つ資料や腕試しできるコンテスト情報、道場の立ち上げ方や道場が受けられる支援についてまとめています。"
+    "道場で役立つ資料やコンテスト情報、立ち上げ方や受けられる支援をまとめています。"
   end
 
   def using_scrivito?
