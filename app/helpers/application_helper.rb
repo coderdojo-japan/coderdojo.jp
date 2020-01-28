@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def kata_description
-    "道場で役立つ資料やコンテスト情報、立ち上げ方や受けられる支援をまとめています。"
+    "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
   end
 
   def using_scrivito?
