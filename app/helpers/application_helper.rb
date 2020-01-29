@@ -10,13 +10,16 @@ module ApplicationHelper
   end
 
   def full_url(page_url)
-    page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
+    # When URL is composed by Scrivito
+    return @obj.permalink if @obj && !@obj.permalink.nil?
+
+    # When URL is composed by Rails
     if page_url.empty?
-      # URLs rendered via Rails
+      # Set og:url with request param
       request.url
     else
-      # URLs rendered via Scrivito
-      "#{page_url}"
+      # Set og:url with given param
+      page_url
     end
   end
 
