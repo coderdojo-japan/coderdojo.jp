@@ -753,15 +753,18 @@
   - ゲーム
 - id: 19
   order: '131130'
-  is_active: false
-  created_at: '2016-09-27'
+  created_at: '2020-01-30'
   name: 渋谷
   prefecture_id: 13
-  logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/groups/coderdojo.shibuya/
-  description: 東京都渋谷区で不定期開催
+  logo: "/img/dojos/shibuya.png"
+  url: https://coderdojoshibuya.connpass.com/
+  description: 青山学院大学キャンパス17号館にて第2・第4土曜に開催
   tags:
   - Scratch
+  - micro:bit
+  - Swift
+  - JavaScript
+  - Design
 - id: 15
   order: '131148'
   created_at: '2016-07-20'

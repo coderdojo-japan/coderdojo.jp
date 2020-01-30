@@ -207,8 +207,8 @@
 
 - dojo_id: 19
   name: connpass
-  group_id: 3037
-  url: https://coderdojo-shibuya.connpass.com
+  group_id: 9750
+  url: https://coderdojoshibuya.connpass.com
 
 - dojo_id: 20
   # coderdojo以外にも募集しているのでそのまま集計できない
