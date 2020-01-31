@@ -205,6 +205,11 @@
   group_id: 3398
   url: https://coderdojo-nishishinjuku.connpass.com
 
+# 渋谷
+- dojo_id: 19
+  name: connpass
+  group_id: 3037
+  url: https://coderdojo-shibuya.connpass.com
 - dojo_id: 19
   name: connpass
   group_id: 9750
