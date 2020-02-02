@@ -1104,11 +1104,11 @@
 #  group_id: 
 #  url: 
 
-# 上田: 2020年1月開始。イベント管理サービスは未定
-#- dojo_id: 232
-#  name: 
-#  group_id: 
-#  url: 
+# 上田
+- dojo_id: 232
+  name: doorkeeper
+  group_id: 10783
+  url: https://coderdojoueda.doorkeeper.jp/
 
 # 足立
 - dojo_id: 233
