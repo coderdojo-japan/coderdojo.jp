@@ -21,7 +21,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 
 それぞれの参加方法は次のとおりです。
 
-### 1. Dojo 情報の更新
+## 1. Dojo 情報の更新
 
 Dojo 情報は次の手順で簡単に更新できます。
 
@@ -34,7 +34,7 @@ Dojo 情報は次の手順で簡単に更新できます。
 
 https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
-### 2. CoderDojo Kata の執筆・編集
+## 2. CoderDojo Kata の執筆・編集
 
 [Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。背景や使用例については次のスライドをご参照ください。
 
@@ -49,7 +49,7 @@ http://bit.ly/coderdojo-kata-edit
 
 編集用のユーザーアカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までお問い合わせください。
 
-### 3. 新機能の開発やデザインの改善
+## 3. 新機能の開発やデザインの改善
 
 本サイトでは以下の技術が使われているので、それぞれのツールをセットアップします。
 
@@ -58,7 +58,7 @@ http://bit.ly/coderdojo-kata-edit
 - [PostgreSQL](https://www.postgresql.jp/)
 - [Scrivito](https://scrivito.com/) (Kataページ開発時に必要)
 
-#### セットアップ方法
+### セットアップ方法
 
 1. 本リポジトリを fork 後、clone します
 1. ターミナルから `$ bin/setup` を実行します
@@ -66,7 +66,7 @@ http://bit.ly/coderdojo-kata-edit
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-#### Dockerを利用したセットアップ方法
+### Dockerを利用したセットアップ方法
 
 Dockerを利用する場合は上記ツールをインストールする必要はありません。
 
@@ -96,7 +96,7 @@ engineers to join developing Scrivito-used pages like above.
 If interested in developing them, contact [@yasulab](https://github.com/yasulab) to
 get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 
-### 他、開発に関する資料
+## 他、開発に関する資料
 
 開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
