@@ -886,7 +886,7 @@
   - Scratch
   - micro:bit
   - プログラミングゼミ
-  - LEGO Mindstorms
+  - Mindstorms
   - DICE CODE
 - id: 105
   order: '132039'
@@ -2382,7 +2382,7 @@
   - Scratch
   - Arduino
   - Unity
-  - Mindstorm
+  - Mindstorms
   - Python
 - id: 226
   order: '382108'
