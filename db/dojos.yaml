@@ -2370,6 +2370,20 @@
   - Scratch
   - Webサイト
   - PHP
+- id: 239
+  order: '382019'
+  created_at: '2020-02-03'
+  name: 松山
+  prefecture_id: 38
+  logo: "/img/dojos/matsuyama.png"
+  url: https://coderdojo-matsuyama.jpn.org/
+  description: 愛媛県松山市で月2回開催
+  tags:
+  - Scratch
+  - Arduino
+  - Unity
+  - Mindstorm
+  - Python
 - id: 226
   order: '382108'
   created_at: '2019-10-02'
