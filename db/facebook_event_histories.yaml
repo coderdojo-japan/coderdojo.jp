@@ -4098,3 +4098,61 @@
   event_id:
   participants: 0
   evented_at: 2019/12/28 11:30
+
+# 2020/01/01 - 2020/01/31
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/10 17:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 09:30
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:00
+- dojo_id: 12
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:30
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 13:30
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/17 17:00
+- dojo_id: 191
+  event_id:
+  participants: 0
+  evented_at: 2020/01/18 14:00
+- dojo_id: 94
+  event_id:
+  participants: 0
+  evented_at: 2020/01/19 10:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/01/19 10:30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/01/20 18:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/24 17:00
+- dojo_id: 229
+  event_id:
+  participants: 0
+  evented_at: 2020/01/25 13:00
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/01/26 13:30
