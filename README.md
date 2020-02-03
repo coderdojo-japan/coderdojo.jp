@@ -81,12 +81,12 @@ Dockerを利用する場合は上記ツールをインストールする必要�
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-#### Development with Scrivito
+### Development with Scrivito
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
 
 - `/kata`
-- `/news/*`
+- ~~/news/*~~ (Outdated)
 - `/sotechsha/*`
 
 CMS enables wider people to contribute to editing contents,   
