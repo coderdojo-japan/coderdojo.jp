@@ -453,6 +453,16 @@
   - micro:bit
   - 8x9Craft
   - Unity
+- id: 238
+  order: '112305'
+  created_at: '2020-02-03'
+  name: 新座志木
+  prefecture_id: 11
+  url: https://coderdojo-niizashiki.doorkeeper.jp/
+  logo: "/img/dojos/japan.png"
+  description: 埼玉県新座市で毎月開催
+  tags:
+  - Scratch
 - id: 22
   order: '121002'
   created_at: '2013-07-30'
