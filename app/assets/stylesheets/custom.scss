@@ -535,15 +535,18 @@ body>footer a:hover {
   background: #fff;
   position: relative;
   text-align: center;
-  display: block;
-  height: auto
-}
+  height: auto;
 
-.dojo>p {
-  font-size: 90%;
-  padding: 5px 10px;
-  text-align: center;
-  margin: 5px 0
+  //display: block;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 70%;
+    padding: 10px 10px 5px;
+    text-align: center;
+    margin: 5px 0;
+    margin-top: auto;
+  }
 }
 
 .dojo-picture {
@@ -552,7 +555,7 @@ body>footer a:hover {
   width: 96px;
   background-position: center center; // border-radius: 48px;
   background-size: cover;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .dojo-name {
@@ -571,7 +574,7 @@ body>footer a:hover {
 }
 
 .dojo-private:hover {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .event-region {
