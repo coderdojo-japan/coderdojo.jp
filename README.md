@@ -40,14 +40,14 @@ https://coderdojo.jp/docs にあるドキュメントの編集方法も同様で
 
 編集方法は下記の手順書をご参照してください。
 
-Kata の編集方法 - esa   
+:scroll: Kata の編集方法 - esa   
 https://esa-pages.io/p/sharing/7542/posts/213/bc0e68f705b7298ae5e0.html
 
 Kata の編集には CoderDojo Japan のアカウントが必要です。アカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までご連絡ください。
 
-CMS を利用している背景・技術仕様などについては次のスライドをご参照ください。
+CMS を利用している背景や技術仕様などについては次のスライド資料にまとめています。もし興味あればお気軽にご参照ください :wink:
 
-CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
+:scroll: CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
 
