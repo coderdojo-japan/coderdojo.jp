@@ -6,7 +6,7 @@
   %ul.tags
     - dojo.tags.each do |tag|
       %li= tag
-  %p
+  %p.dojo-desciption
     = dojo.description
     - if dojo.is_private
       %a.dojo-private{href: '/docs/private-dojo'} Private

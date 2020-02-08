@@ -521,23 +521,32 @@ body>footer a:hover {
   padding-top: 1em;
   margin: .4em
 }
+.dojo-flex{
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
 
 .dojo {
-  display: inline-block;
-  height: 300px;
   width: 45%;
   margin: 5px;
   padding: 15px 0;
   background: #fff;
   position: relative;
-  text-align: center
-}
-
-.dojo>p {
-  font-size: 90%;
-  padding: 5px 10px;
   text-align: center;
-  margin: 5px 0
+  height: auto;
+
+  //display: block;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 70%;
+    padding: 10px 10px 5px;
+    text-align: center;
+    margin: 5px 0;
+    margin-top: auto;
+  }
 }
 
 .dojo-picture {
@@ -546,7 +555,7 @@ body>footer a:hover {
   width: 96px;
   background-position: center center; // border-radius: 48px;
   background-size: cover;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .dojo-name {
@@ -565,7 +574,7 @@ body>footer a:hover {
 }
 
 .dojo-private:hover {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .event-region {
@@ -622,8 +631,7 @@ body>footer a:hover {
 
 @media only screen and (min-width:560px) {
   .dojo {
-    width: 220px;
-    height: 275px;
+    width: calc(220px - 10px);
     margin: 10px;
   }
   .event {

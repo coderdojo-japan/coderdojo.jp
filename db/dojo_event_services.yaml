@@ -205,10 +205,15 @@
   group_id: 3398
   url: https://coderdojo-nishishinjuku.connpass.com
 
+# 渋谷
 - dojo_id: 19
   name: connpass
   group_id: 3037
   url: https://coderdojo-shibuya.connpass.com
+- dojo_id: 19
+  name: connpass
+  group_id: 9750
+  url: https://coderdojoshibuya.connpass.com
 
 - dojo_id: 20
   # coderdojo以外にも募集しているのでそのまま集計できない
@@ -900,9 +905,13 @@
 
 # 太宰府
 - dojo_id: 191
-  name: facebook
+  name: facebook # connpass と併用
   group_id: 2400985366820315
   url: https://www.facebook.com/CoderDojoDazaifu/
+- dojo_id: 191
+  name: connpass
+  group_id: 7249
+  url: https://coderdojo-dazaifu.connpass.com/
 
 # 宇部
 - dojo_id: 192
@@ -1099,11 +1108,11 @@
 #  group_id: 
 #  url: 
 
-# 上田: 2020年1月開始。イベント管理サービスは未定
-#- dojo_id: 232
-#  name: 
-#  group_id: 
-#  url: 
+# 上田
+- dojo_id: 232
+  name: doorkeeper
+  group_id: 10783
+  url: https://coderdojoueda.doorkeeper.jp/
 
 # 足立
 - dojo_id: 233
@@ -1122,3 +1131,15 @@
   name: peatix
   group_id:
   url: https://coderdojo-shomeiji.peatix.com/
+
+# 伊那
+- dojo_id: 237
+  name: connpass
+  group_id: 7630
+  url: https://coderdojo-ina.connpass.com/
+
+# 新座志木
+- dojo_id: 238
+  name: doorkeeper
+  group_id: 10432
+  url: https://coderdojo-niizashiki.doorkeeper.jp/
