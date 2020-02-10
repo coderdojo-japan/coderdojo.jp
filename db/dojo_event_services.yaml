@@ -1143,3 +1143,9 @@
   name: doorkeeper
   group_id: 10432
   url: https://coderdojo-niizashiki.doorkeeper.jp/
+
+# 西尾
+- dojo_id: 241
+  name: doorkeeper
+  group_id: 10003
+  url: https://coderdojo-nishio.doorkeeper.jp/
