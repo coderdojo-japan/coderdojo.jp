@@ -1665,6 +1665,18 @@
   - Java
   - JavaScript
   is_private: true
+- id: 240
+  order: '261009'
+  created_at: '2020-02-09'
+  name: 京都四条
+  prefecture_id: 26
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-kyoto-shijo.doorkeeper.jp/
+  description: 京都府京都市で毎月開催
+  tags:
+  - Scratch
+  - Unity
+  - Webサイト
 - id: 34
   order: '261009'
   created_at: '2014-10-14'
