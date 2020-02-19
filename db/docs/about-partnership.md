@@ -4,23 +4,26 @@
 
 ## CoderDojo とは?
 
-CoderDojo は7〜17歳の子どもを対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では110カ国・2,000の道場、日本では全国に200以上の道場があります。CoderDojo は全国各地で定期的に開催されており、毎週、同時並行的に道場が開かれています。
+CoderDojo は7〜17歳を対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では110カ国・2,000の道場、日本では全国に200以上の道場があります。CoderDojo は全国各地で定期的に開催されており、延べ 10,000 人 以上の子ども達が毎年プログラミングを学んでいます。
 
-CoderDojo の特徴は、オープンソースソフトウェア ([OSS](http://e-words.jp/w/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9.html)) の文化に根付いた非営利のコミュニティである点です。例えば PHP や Perl, Python, Ruby といったそれぞれのコミュニティが横断的に関わっており、中には OSS の第一線で活躍される方々にもご協力していただいております。現在はエンジニアやデザイナーだけでなく、各地域の保護者や学生、研究者や経営者などにも広がりを見せています。
+<div style="padding: 40px 0px;">
+  <a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
+  <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center>
+</div>
 
-CoderDojo には統一されたカリキュラムがなく、代わりに子ども達の作りたいモノを後押しします。例えばアドバイスを求められたときに一緒に考えたり、子ども同士で作品を発表しあう機会を設けたりなど、参加者の自発的な学びや参加者同士の学び合いを推奨しています。これは受け身で何かを教わることよりも、作りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する「広場」のような場所となっています。
+CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
+
+CoderDojo には統一されたカリキュラムがなく、代わりに子ども達の作りたいモノを後押しします。例えばアドバイスを求められたときに一緒に考えたり、子ども同士で作品を発表しあう機会を設けたりなど、参加者の自発的な学びや参加者同士の学び合いを推奨しています。
+
+これは受け身で何かを教わることよりも、創りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する『広場』のような場所となっています。
 
 <br>
 
 <img src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
 <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 
-<br><br>
-
-<script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<center>スライド: <a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan">法人向け説明資料</a></center>
-
 <br>
+
 
 ## 提携のご提案と具体例
 
@@ -28,8 +31,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
 
-<a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
-<center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center><br>
+<br>
 
 <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
 <center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">引用元</a>)</center><br>
@@ -43,12 +45,12 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
   - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
   - 製品やサービスの継続的な提供もご相談可能です
     例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/) <br><br>
-- `B:` CoderDojo Japan が運営する SNS や Podcast で御社のイベント・プログラムなどを周知することができます (事前審査あり、周知回数は応相談)
+- `B:` CoderDojo Japan が運営する SNS や Podcast で貴社のプロダクト・イベントなどを周知することができます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知
     [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
   - 例2: CoderDojo Japan の Podcast で出演
     [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/) <br><br>
-- `C:` CoderDojo Japan のパートナーとして、公式Webサイトに御社ロゴを掲載します
+- `C:` CoderDojo Japan のパートナーとして、公式Webサイトに貴社ロゴを掲載します
 
 <img src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
 <center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
@@ -58,6 +60,11 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 上記は一般社団法人 CoderDojo Japan が描いている提携案の１つです。いかがでしょうか?
 
 「こういった提携もできますか?」といったご相談も受け付けておりますので、もし本パートナーシップにご興味ありましたら、お気軽にご連絡していただけると嬉しいです。
+
+<br>
+
+<script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<center>スライド: <a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan">法人向け説明資料</a></center>
 
 <br>
 
