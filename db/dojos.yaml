@@ -341,6 +341,20 @@
   - Scratch
   - IoT
   - 電子工作
+- id: 242
+  order: '092100'
+  created_at: '2020-02-20'
+  name: おおたわら
+  prefecture_id: 9
+  logo: "/img/dojos/otawara.png"
+  url: https://www.facebook.com/CoderDojo%E3%81%8A%E3%81%8A%E3%81%9F%E3%82%8F%E3%82%89-190082468144048/
+  description: 大田原市で毎月1回程度開催
+  tags:
+  - Hour of Code
+  - Scratch
+  - micro:bit
+  - Viscuit
+  is_private: true
 - id: 89
   order: '092142'
   created_at: '2017-06-21'
