@@ -1603,6 +1603,16 @@
   - Scratch
   - Webサイト
   - ラズベリーパイ
+- id: 243
+  order: '232238'
+  created_at: '2020-02-22'
+  name: 大府
+  prefecture_id: 23
+  logo: "/img/dojos/japan.png"
+  url: https://zen.coderdojo.com/dojos/jp/obu-aichi/da4-fu3
+  description: 愛知県大府市で毎月2回開催
+  tags:
+  - Scratch
 - id: 71
   order: '232289'
   created_at: '2017-02-17'
