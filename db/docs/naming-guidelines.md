@@ -1,4 +1,4 @@
-# CoderDojo に名前を付けよう
+# CoderDojo 命名ガイドライン
 
 <br><br>
 
