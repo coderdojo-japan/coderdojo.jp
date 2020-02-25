@@ -4,8 +4,8 @@
 
 [CoderDojo を立ち上げる](/kata#startup)手順に沿って進めていくと、『道場名』の入力欄が出てきます。CoderDojo は日本国内だけで200ヶ所以上あるため、『道場名』の欄に大きな地域名 (地方名や都道府県名など) を入力せず、 `市区町村名` または小さい粒度の地域名 (駅名など) を入力していただけると嬉しいです。
 
-- 🆗 好ましい例: `札幌東`, `那覇`, `五反田` など
-- 🆖 避けたい例: `北海道`, `沖縄`, `アジア` など
+- 🆗 好ましい例: `札幌東`, `下北沢`, `五反田` など
+- 🆖 避けたい例: `北海道`, `東京都`, `アジア` など
 
 <br>
 
@@ -61,12 +61,12 @@ CoderDojo の名前は、`道場名@スポンサー名` または `道場名@会
 <br>
 
 - Q. 住所に無い地域名でも道場名に使うことはできますか?
-- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/%E6%B3%95%E9%9A%86%E5%AF%BA%E9%A7%85)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、市区町村より小さい単位にしていただければ大丈夫です。
+- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/%E6%B3%95%E9%9A%86%E5%AF%BA%E9%A7%85)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 柏沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、市区町村より小さい単位であれば大丈夫です。
 
 <br>
 
 - Q. `関西` や `沖縄` などの地方名・都道府県名を道場名に使えませんか?
-- A. いいえ、市区町村より大きい単位での道場名は避けて頂けると嬉しいです。ただし、広島市や岐阜市など、市区町村名と都道府県名が同じである場合は、市区町村名としてつけることができます。
+- A. いいえ、市区町村より大きい単位での道場名は避けて頂けると嬉しいです。ただし、[広島市](http://www.city.hiroshima.lg.jp/)や[岐阜市](https://www.city.gifu.lg.jp/)など、開催する市区町村名が都道府県名と同じである場合はこの限りではありません。
 
 <br>
 
