@@ -6,7 +6,7 @@
   = image_tag "stats_cover.png"
 %section#dojos.dojos.text-center
   %h1 統計情報
-  %div
+  %div{style: "margin-top: 30px;"}
     本ページでは CoderDojo の統計情報をまとめています。
     %br.ignore-sp<>
     CoderDojo の活動状況を把握する際などにご活用ください。
@@ -21,8 +21,7 @@
     %br
     = high_chart("annual_participants",    @annual_participants_chart)
 
-
-  %h3{style: "margin-top: 80px;"} 🆕 最新データ
+  %h3{style: "margin-top: 80px; margin-bottom: 30px;"} 🆕 最新データ
   2020年のデータも含めた最新の統計情報は次のとおりです。
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{style: 'margin-top: 4px;'}
@@ -38,8 +37,11 @@
           %td= @sum_of_dojos
           %td= @sum_of_events
           %td= @sum_of_participants
+  %div{style: "margin-top: 20px;", align: 'center'}
+    %br
+    = high_chart("dojo_tag_chart", @dojo_tag_chart)
 
-  %h3{style: "margin-top: 80px;"} ✅ 集計方法と集計対象について
+  %h3{style: "margin-top: 80px; margin-bottom: 30px;"} ✅ 集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
     %li 参加者数はユニーク数ではなく延べ数です。
     %li 集計対象は API などで集計可能な道場です。

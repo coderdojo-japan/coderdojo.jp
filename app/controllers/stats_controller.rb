@@ -19,6 +19,24 @@ class StatsController < ApplicationController
     # TODO: 静的なDojoの開催数もデータベース上で集計できるようにする
     # https://github.com/coderdojo-japan/coderdojo.jp/issues/190
 
+    # 道場タググラフ
+    @dojo_tag_chart  = LazyHighCharts::HighChart.new('graph') do |f|
+      number_of_tags = 10
+      f.title(text: "CoderDojo タグ分布 (上位#{number_of_tags})")
+
+      tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
+        .sort_by(&:last).reverse.to_h
+      f.xAxis categories: tags.keys.take(number_of_tags).reverse
+      f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
+              tickInterval: 40, max: 200
+      f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
+               data: tags.values.take(number_of_tags).reverse,
+               dataLabels: { enabled: true, y: 20, align: 'center' }
+
+      f.chart width: 600, alignTicks: false
+      f.colors ["#A0CEFB", "#A0CEFB"]
+    end
+
     # 集計方法と集計対象
     @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id')
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
