@@ -24,6 +24,8 @@ class StatsController < ApplicationController
       number_of_tags = 10
       f.title(text: "CoderDojo タグ分布 (上位#{number_of_tags})")
 
+      # TODO: Use 'tally' method when using Ruby 2.7.0 or higher
+      # cf. https://twitter.com/yasulab/status/1154566199511941120
       tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
         .sort_by(&:last).reverse.to_h
       f.xAxis categories: tags.keys.take(number_of_tags).reverse
