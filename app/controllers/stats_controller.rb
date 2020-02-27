@@ -19,7 +19,7 @@ class StatsController < ApplicationController
     # TODO: 静的なDojoの開催数もデータベース上で集計できるようにする
     # https://github.com/coderdojo-japan/coderdojo.jp/issues/190
 
-    # 道場タググラフ
+    # 道場タグ分布
     @dojo_tag_chart  = LazyHighCharts::HighChart.new('graph') do |f|
       number_of_tags = 10
       f.title(text: "CoderDojo タグ分布 (上位#{number_of_tags})")
