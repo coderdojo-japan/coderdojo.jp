@@ -185,8 +185,8 @@ GEM
     kramdown (2.1.0)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    launchy (2.4.3)
-      addressable (~> 2.3)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     lazy_high_charts (1.5.8)
       hash-deep-merge
     listen (3.2.1)
