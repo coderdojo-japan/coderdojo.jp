@@ -704,12 +704,16 @@ body>footer a:hover {
 }
 
 /* Stats */
+#japan-map-container canvas {
+  margin: 20px auto 30px;
+}
 #japan-map-text {
   display: block;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 651px) {
   #japan-map-container canvas {
+    margin: 50px auto;
     width: 100%;
   }
   #japan-map-text {
