@@ -75,7 +75,7 @@
 
   %h3#dojos{style: "margin-top: 80px;"} 🗾 都道府県別の道場数
   .japan-map{style: "width: 100%;"}
-    %p#text{style: "margin: 20px auto; font-size: 140%;"} 北海道: 10
+    %p#text{style: "margin: 20px auto; font-size: 140%;"} [名前: 道場数]
     #japan-map-container
 
   #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
@@ -103,20 +103,10 @@
 
 :javascript
   $(function(){
-    var ac = "dodgerblue"  // Area Color
-    var hc = "deepskyblue" // Hover Color
-    var areas = [
-      {"code":1 ,  "name":"北海道地方", "color":ac, "hoverColor":hc, "prefectures":[1]},
-      {"code":2 ,  "name":"東北地方",   "color":ac, "hoverColor":hc, "prefectures":[2,3,4,5,6,7]},
-      {"code":3 ,  "name":"関東地方",   "color":ac, "hoverColor":hc, "prefectures":[8,9,10,11,12,13,14]},
-      {"code":4 ,  "name":"北陸・甲信越地方",   "color":ac, "hoverColor":hc, "prefectures":[15,16,17,18,19,20]},
-      {"code":4 ,  "name":"東海地方",   "color":ac, "hoverColor":hc, "prefectures":[21,22,23,24]},
-      {"code":6 ,  "name":"近畿地方",   "color":ac, "hoverColor":hc, "prefectures":[25,26,27,28,29,30]},
-      {"code":7 ,  "name":"中国地方",   "color":ac, "hoverColor":hc, "prefectures":[31,32,33,34,35]},
-      {"code":8 ,  "name":"四国地方",   "color":ac, "hoverColor":hc, "prefectures":[36,37,38,39]},
-      {"code":9 ,  "name":"九州地方",   "color":ac, "hoverColor":hc, "prefectures":[40,41,42,43,44,45,46]},
-      {"code":10 , "name":"沖縄地方",   "color":ac, "hoverColor":hc, "prefectures":[47]}
-    ];
+    var ac = "lightskyblue";  // Area Color
+    var hc = "deepskyblue"; // Hover Color
+    var areas      = JSON.parse('#{@data_by_region.to_json}'.replace( /&quot;/g, '"'));
+    var dataByPref = JSON.parse('#{@data_by_prefecture.to_json}'.replace( /&quot;/g, '"'));
 
     $("#japan-map-container").japanMap(
       {
@@ -125,19 +115,19 @@
         borderLineWidth: 0.1,
         drawsBoxLine:  false,
         movesIslands:  true,
-        showsAreaName: false,
-        showsPrefectureName: true,
+        showsAreaName: true,
+        showsPrefectureName: false,
         prefectureNameType: "short",
         width: 800,
-        font : "MS Mincho",
-        fontSize  : 9,
+        font : "Hiragino Kaku Gothic Pro",
+        fontSize  : 12,
         fontColor : "white",
-        fontShadowColor : "black",
-        onSelect:function(data){
-          alert(data.name);
-        },
+        fontShadowColor : "#444455",
+        // onSelect:function(data){
+        //   alert(data.name + ": "+ dataByPref[data.name]);
+        //},
         onHover:function(data){
-          $("#text").html(data.name + ": " + "#{@sum_of_dojos}");
+          $("#text").html(data.name + ": "+ dataByPref[data.name]);
         }
       }
     );
