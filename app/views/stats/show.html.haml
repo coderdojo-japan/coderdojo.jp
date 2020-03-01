@@ -2,16 +2,19 @@
 - provide(:desc,  'CoderDojo の統計情報をまとめています。')
 - provide(:url,   @url)
 
+%script{ type: 'text/javascript', src: '/js/jquery.japan-map.js'}
+
 %section.cover{style: 'padding-top:40px; background-color: white;'}
   = image_tag "stats_cover.png"
-%section#dojos.dojos.text-center
+
+%section#top.dojos.text-center
   %h1 統計情報
   %div{style: "margin-top: 30px;"}
     本ページでは CoderDojo の統計情報をまとめています。
     %br.ignore-sp<>
     CoderDojo の活動状況を把握する際などにご活用ください。
 
-  %h3{style: "margin-top: 60px;"} 📊 推移グラフ
+  %h3#graph{style: "margin-top: 60px;"} 📊 推移グラフ
   %div{align: 'center'}
     = high_chart_globals(@high_charts_globals)
     %br
@@ -21,7 +24,7 @@
     %br
     = high_chart("annual_participants",    @annual_participants_chart)
 
-  %h3{style: "margin-top: 80px; margin-bottom: 30px;"} 🆕 最新データ
+  %h3#data{style: "margin-top: 80px; margin-bottom: 30px;"} 🆕 最新データ
   2020年のデータも含めた最新の統計情報は次のとおりです。
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{style: 'margin-top: 4px;'}
@@ -41,7 +44,7 @@
     %br
     = high_chart("dojo_tag_chart", @dojo_tag_chart)
 
-  %h3{style: "margin-top: 80px; margin-bottom: 30px;"} ✅ 集計方法と集計対象について
+  %h3#howto{style: "margin-top: 80px; margin-bottom: 30px;"} ✅ 集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
     %li 参加者数はユニーク数ではなく延べ数です。
     %li 集計対象は API などで集計可能な道場です。
@@ -70,7 +73,11 @@
               %b= num
 
 
-  %h3{style: "margin-top: 80px;"} ☯️ 日本各地の道場
+  %h3#map{style: "margin-top: 80px;"} 🗾 都道府県別の道場数
+  .japan-map
+    %p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
+    #japan-map-container
+
   #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
     - @regions_and_dojos.each_with_index do |(region, dojos), index|
       .panel.panel-default
@@ -84,7 +91,7 @@
           .panel-body.grayscale-bg.dojo-flex
             = render partial: 'shared/dojo', collection: dojos
 
-  %h3{style: "margin-top: 60px;"} 📚 関連リンク
+  %h3#references{style: "margin-top: 60px;"} 📚 関連リンク
   %ul{:style => "list-style: none; text-align: center; width: 100%; line-height: 1.7em; margin-bottom: 40px;"}
     %li
       %a{:href => "https://github.com/coderdojo-japan/coderdojo.jp/issues?utf8=%E2%9C%93&q=is%3Aclose+label%3A%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1+"} 統計情報に関する『これまで』の開発 - GitHub
@@ -93,3 +100,38 @@
     %li
       %a{:href => "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本の CoderDojo (Zen & Japan) - Spreadsheet
 %br/
+
+:javascript
+  $(function(){
+    var ac = "lightskyblue";  // Area Color
+    var hc = "deepskyblue"; // Hover Color
+    var areas      = JSON.parse('#{@data_by_region.to_json}'.replace( /&quot;/g, '"'));
+    var dataByPref = JSON.parse('#{@data_by_prefecture.to_json}'.replace( /&quot;/g, '"'));
+
+    $("#japan-map-container").japanMap(
+      {
+        areas: areas,
+        selection: "prefecture",
+        borderLineWidth: 0.1,
+        drawsBoxLine:  false,
+        movesIslands:  true,
+        showsAreaName: true,
+        showsPrefectureName: false,
+        prefectureNameType: "short",
+        width: 800,
+        font : "Hiragino Kaku Gothic Pro",
+        fontSize  : 12,
+        fontColor : "white",
+        fontShadowColor : "#444455",
+        onSelect:function(data){
+          // This code is used for tapping by Mobile devices
+          $("#japan-map-text").html(data.name + ": "+ dataByPref[data.name]);
+        },
+        onHover:function(data){
+          $("#japan-map-text").html(data.name + ": "+ dataByPref[data.name]);
+        }
+      }
+    );
+  });
+
+

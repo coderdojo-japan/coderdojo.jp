@@ -44,7 +44,22 @@ class StatsController < ApplicationController
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
 
     # 日本各地の道場
+    @data_by_region = []
     @regions_and_dojos = Dojo.group_by_region_on_active
+    @regions_and_dojos.each_with_index do |(region, dojos), index|
+      @data_by_region << {
+        code:        index+1,
+        name:        "#{region} (#{dojos.count})",
+        color:       "dodgerblue",  # Area Color
+        hoverColor:  "deepskyblue", # Hover Color
+        prefectures: Prefecture.where(region: region).map(&:id)
+      }
+    end
+
+    @data_by_prefecture = {}
+    Prefecture.order(:id).each do |p|
+      @data_by_prefecture[p.name] = Dojo.active.where(prefecture_id: p.id).count
+    end
   end
 end
 
