@@ -702,3 +702,17 @@ body>footer a:hover {
     width:     100%;
   }
 }
+
+/* Stats */
+#japan-map-text {
+  display: block;
+}
+
+@media only screen and (max-width:800px) {
+  #japan-map-container canvas {
+    width: 100%;
+  }
+  #japan-map-text {
+    display: none;
+  }
+}

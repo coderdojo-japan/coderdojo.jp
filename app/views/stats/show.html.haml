@@ -74,8 +74,8 @@
 
 
   %h3#dojos{style: "margin-top: 80px;"} 🗾 都道府県別の道場数
-  .japan-map{style: "width: 100%;"}
-    %p#text{style: "margin: 20px auto; font-size: 140%;"} [名前: 道場数]
+  .japan-map
+    %p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
     #japan-map-container
 
   #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
@@ -123,11 +123,12 @@
         fontSize  : 12,
         fontColor : "white",
         fontShadowColor : "#444455",
-        // onSelect:function(data){
-        //   alert(data.name + ": "+ dataByPref[data.name]);
-        //},
+        onSelect:function(data){
+          // This code is used for tapping by Mobile devices
+          $("#japan-map-text").html(data.name + ": "+ dataByPref[data.name]);
+        },
         onHover:function(data){
-          $("#text").html(data.name + ": "+ dataByPref[data.name]);
+          $("#japan-map-text").html(data.name + ": "+ dataByPref[data.name]);
         }
       }
     );
