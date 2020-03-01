@@ -4,7 +4,7 @@
 
 %script{ type: 'text/javascript', src: '/js/jquery.japan-map.js'}
 
-%section.cover{style: 'padding-top:40px; background-color: white;'}
+%section.cover{style: 'padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;'}
   = image_tag "stats_cover.png"
 
 %section#top.dojos.text-center
@@ -115,12 +115,12 @@
         borderLineWidth: 0.1,
         drawsBoxLine:  false,
         movesIslands:  true,
-        showsAreaName: true,
-        showsPrefectureName: false,
+        showsAreaName: false,
+        showsPrefectureName: true,
         prefectureNameType: "short",
         width: 651,
         font : "Hiragino Kaku Gothic Pro",
-        fontSize  : 12,
+        fontSize  : 7,
         fontColor : "white",
         fontShadowColor : "#444455",
         onSelect:function(data){
