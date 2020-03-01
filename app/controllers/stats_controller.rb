@@ -58,7 +58,7 @@ class StatsController < ApplicationController
 
     @data_by_prefecture = {}
     Prefecture.order(:id).each do |p|
-      @data_by_prefecture[p.name] = Dojo.where(prefecture_id: p.id).count
+      @data_by_prefecture[p.name] = Dojo.active.where(prefecture_id: p.id).count
     end
   end
 end
