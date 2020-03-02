@@ -2558,10 +2558,6 @@
   event_id: 1372320219469831
   participants: 0
   evented_at: 2017/07/23 11:20
-- dojo_id: 88
-  event_id: 1924777571134708
-  participants: 0
-  evented_at: 2017/08/20 10:20
 - dojo_id: 94
   event_id: 1391919444222938
   participants: 3
@@ -4156,3 +4152,57 @@
   event_id:
   participants: 0
   evented_at: 2020/01/26 13:30
+
+# 2020/02/01 - 2020/02/29
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/02/07 17:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 09:30
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 10:00
+- dojo_id: 12
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 10:30
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 13:30
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/02/14 17:00
+- dojo_id: 94
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:30
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/02/17 18:00
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/02/23 13:30
+- dojo_id: 222
+  event_id:
+  participants: 0
+  evented_at: 2020/02/24 13:30

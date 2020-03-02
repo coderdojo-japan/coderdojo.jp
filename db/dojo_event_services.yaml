@@ -48,7 +48,7 @@
 
 # 名取
 - dojo_id: 85
-  name: facebook
+  name: facebook # connpass: https://coderdojonatori.connpass.com/
   group_id: 1379707208756830
   url: https://www.facebook.com/pg/coderdojonatori/events/
 
@@ -320,9 +320,13 @@
 
 # 甲府
 - dojo_id: 88
-  name: facebook
+  name: facebook # 第２回からは connpass
   group_id: 124249914820641
   url: https://www.facebook.com/pg/coderdojo.kofu/events/
+- dojo_id: 88
+  name: connpass
+  group_id: 4255
+  url: https://coderdojokofu.connpass.com/
 
 # 安曇野
 - dojo_id: 87
