@@ -8,13 +8,13 @@ Code Club や CoderDojo、Raspberry Jams がすべての関係者にとって安
 It matters to us that Code Clubs, CoderDojos, and Raspberry Jams are safe spaces for everyone involved. This note provides advice on coronavirus and what steps you could take to help keep everyone safe. 
 -->
 
-新型コロナウイルスに関する最新情報と、各種イベントやクラブ活動に対する影響については、それぞれの地域を管轄している[保健所のウェブサイト](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/hokenjo/)をご確認してください。それぞれのウェブサイトは定期的に更新され、あなたにとって最新の情報源となるはずです。それぞれのウェブサイトに記載されているアドバイスに従うことを私たち (CoderDojo Foundation) は強く推奨します。
+新型コロナウイルスに関する最新情報と、各種イベントやクラブ活動に対する影響については、それぞれの地域を管轄している[保健所のウェブサイト](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/hokenjo/)をご確認ください。それぞれのウェブサイトは定期的に更新され、あなたにとって最新の情報源となるはずです。私たち (CoderDojo Foundation) は、それぞれのウェブサイトに記載されているアドバイスに従うことを強く推奨します。
 
 <!--
 For the latest information on coronavirus and how it affects you and your club or event, please check the website of your local public health organisation. These organisations regularly update their websites and are your most up-to-date source of information. We strongly encourage you to defer to the advice on these websites. 
 -->
 
-また、会場提供者と連絡を取り、各種活動が安全な場となるために追加的な措置が必要かどうか議論・合意をとっておくとよいでしょう。
+また、会場提供者に連絡を取り、各種活動が安全な場となるために追加的な措置が必要かどうか議論・合意をとっておくとよいでしょう。
 
 <!--
 You should also contact the venue where you host your club or event to discuss and agree what additional actions you could take to help keep everyone safe. 
