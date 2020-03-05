@@ -20,7 +20,7 @@ For the latest information on coronavirus and how it affects you and your club o
 You should also contact the venue where you host your club or event to discuss and agree what additional actions you could take to help keep everyone safe. 
 -->
 
-保健所のアドバイスを確認し、会場提供者と協議した上で、もしキャンセルした方が良いと感じたら、キャンセルすべきでしょう。キャンセルを決める際、CoderDojo Foundation に許可を取る必要ありません。
+保健所のアドバイスを確認し、会場提供者と協議した上で、もしキャンセルした方が良いと感じたら、キャンセルすべきでしょう。キャンセルを決める際、CoderDojo Foundation に許可を取る必要はありません。
 
 <!--
 If, having checked your local public health advice and consulted your venue, you feel that it is right to cancel a club session or other event, you should do so. You do not need to contact anyone at the Raspberry Pi Foundation before making that decision.
