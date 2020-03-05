@@ -32,9 +32,9 @@ If, having checked your local public health advice and consulted your venue, you
 If you decide to go ahead with your club session or event, then you should consider taking the following actions:
 -->
 
-1. 体調不良の参加者がいる場合、参加しない方が良いとアドバイスする
-2. 参加者が陽性患者と濃厚接触していたり、[感染注意地域](https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_009.html)に渡航歴があった場合は、[基本方針や注意事項](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000164708_00001.html)などを共有する
-3. すべての参加者に手洗いや消毒などの実施を勧める。[WHO (World Health Organization) のウェブサイト](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public)にあるアドバイスも分かりやすいです。
+- (1) 体調不良の参加者がいる場合、参加しない方が良いとアドバイスする
+- (2) 参加者が陽性患者と濃厚接触していたり、[感染注意地域](https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_009.html)に渡航歴があった場合は、[基本方針や注意事項](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000164708_00001.html)などを共有する
+- (3) すべての参加者に手洗いや消毒などの実施を勧める。[WHO (World Health Organization) のウェブサイト](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public)にあるアドバイスも分かりやすいです。
 
 <!--
 1. Advise participants that they should not attend the club or event if they are feeling unwell.
