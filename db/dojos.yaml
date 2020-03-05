@@ -2706,8 +2706,8 @@
   created_at: '2020-02-25'
   name: 沖縄@ぴあ
   prefecture_id: 47
-  logo: "/img/dojos/japan.png"
-  url: https://zen.coderdojo.com/dojos/jp/japan-okinawa/pia
+  logo: "/img/dojos/okinawa-deaf.png"
+  url: https://www.facebook.com/DeafOkinawa/
   description: 沖縄市『補聴器のぴあ』で隔月開催
   tags:
   - Scratch
