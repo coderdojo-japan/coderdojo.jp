@@ -14,7 +14,7 @@ It matters to us that Code Clubs, CoderDojos, and Raspberry Jams are safe spaces
 For the latest information on coronavirus and how it affects you and your club or event, please check the website of your local public health organisation. These organisations regularly update their websites and are your most up-to-date source of information. We strongly encourage you to defer to the advice on these websites. 
 -->
 
-また、会場の提供者と連絡を取り、各種活動が安全な場となるために追加的な措置が必要かどうか議論・合意をとっておくとよいでしょう。
+また、会場提供者と連絡を取り、各種活動が安全な場となるために追加的な措置が必要かどうか議論・合意をとっておくとよいでしょう。
 
 <!--
 You should also contact the venue where you host your club or event to discuss and agree what additional actions you could take to help keep everyone safe. 
@@ -26,14 +26,14 @@ You should also contact the venue where you host your club or event to discuss a
 If, having checked your local public health advice and consulted your venue, you feel that it is right to cancel a club session or other event, you should do so. You do not need to contact anyone at the Raspberry Pi Foundation before making that decision.
 -->
 
-もし実施する場合は、次のアクションを取れるかどうか、ご検討ください。
+実施する場合は、次のアクションを取れるかどうか、ご検討ください。
 
 <!--
 If you decide to go ahead with your club session or event, then you should consider taking the following actions:
 -->
 
 - (1) 体調不良の参加者がいる場合、参加しない方が良いとアドバイスする
-- (2) 参加者が陽性患者と濃厚接触していたり、[感染注意地域](https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_009.html)に渡航歴があった場合は、[基本方針や注意事項](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000164708_00001.html)などを共有する
+- (2) 参加者が陽性患者と濃厚接触していたり、[感染注意地域](https://www.anzen.mofa.go.jp/info/pcinfectionspothazardinfo_009.html)に渡航歴があった場合は、保健所の[基本方針や注意事項](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000164708_00001.html)を確認する
 - (3) すべての参加者に手洗いや消毒などの実施を勧める。[WHO (World Health Organization) のウェブサイト](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public)にあるアドバイスも分かりやすいです。
 
 <!--
