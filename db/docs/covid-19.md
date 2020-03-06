@@ -42,7 +42,7 @@ If you decide to go ahead with your club session or event, then you should consi
 3. Encourage all attendees to adopt good hygiene practices. The [World Health Organisation’s websiet](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public) is a good starting point for finding information and advice about this.
 -->
 
-もし保護者からアドバイスを求めたら、各地域の保健所の情報を参照するようお伝えください。自身の経験から来る個人的なアドバイスはしないことを、強く推奨します。
+もし保護者からアドバイスを求められたら、各地域の保健所の情報を参照するようお伝えください。自身の経験から来る個人的なアドバイスはしないことを、強く推奨します。
 
 <!--
 If a parent or carer asks you for advice about coronavirus, please refer them to their local public health organisation. We strongly advise you not to try to provide public health advice yourself.
