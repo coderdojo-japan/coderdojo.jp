@@ -341,6 +341,20 @@
   - Scratch
   - IoT
   - 電子工作
+- id: 246
+  order: '092011'
+  created_at: '2020-03-11'
+  name: 宇都宮
+  prefecture_id: 9
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-utsunomiya.github.io/
+  description: 宇都宮市で毎月開催
+  tags:
+  - Scratch
+  - Hour of Code
+  - Webサイト
+  - LEGO
+  - Python
 - id: 242
   order: '092100'
   created_at: '2020-02-20'

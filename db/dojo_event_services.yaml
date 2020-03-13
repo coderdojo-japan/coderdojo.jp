@@ -1177,3 +1177,9 @@
 #   name: doorkeeper
 #   group_id:
 #   url: https://coderdojo-tsuwano.doorkeeper.jp/
+
+# 宇都宮
+- dojo_id: 246
+  name: doorkeeper
+  group_id: 11027
+  url: https://coderdojo-utsunomiya.doorkeeper.jp/
