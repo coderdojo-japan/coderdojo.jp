@@ -460,7 +460,7 @@ DEPENDENCIES
   rack-host-redirect
   rack-mini-profiler
   rack-user_agent
-  rails (~> 5.2.0)
+  rails (~> 5.2.4)
   rails-controller-testing
   rails-html-sanitizer (~> 1.2.0)
   rake
