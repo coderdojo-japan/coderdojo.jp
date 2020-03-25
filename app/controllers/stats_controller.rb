@@ -30,7 +30,7 @@ class StatsController < ApplicationController
         .sort_by(&:last).reverse.to_h
       f.xAxis categories: tags.keys.take(number_of_tags).reverse
       f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
-              tickInterval: 40, max: 200
+              tickInterval: 30, max: 210
       f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
                data: tags.values.take(number_of_tags).reverse,
                dataLabels: { enabled: true, y: 20, align: 'center' }
