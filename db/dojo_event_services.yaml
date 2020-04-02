@@ -249,7 +249,7 @@
 
 # 柏沼南
 - dojo_id: 125
-  name: facebook
+  name: facebook #一時休止中
   group_id: 231578703997335
   url: https://www.facebook.com/pg/CoderDojoKashiwaShounan/events/
 
@@ -619,7 +619,7 @@
 - dojo_id: 113
   name: facebook
   group_id: 1928416637480111
-  url: https://www.facebook.com/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%E3%82%82%E3%82%82%E3%81%A1Coderdojo-momochi-1928416637480111/
+  url: https://www.facebook.com/coderdojomomochi/
 
 # 久留米
 - dojo_id: 54
@@ -1056,14 +1056,14 @@
 # 三春 (グループが作成されたら追加する)
 # - dojo_id: 223
 #   name: connpass
-#   group_id: 
-#   url: 
+#   group_id:
+#   url:
 
 # しまね
 # - dojo_id: 224
 #   name: google
-#   group_id: 
-#   url: 
+#   group_id:
+#   url:
 
 # 浜田
 - dojo_id: 225
@@ -1088,7 +1088,7 @@
   url: https://corderdojo-todakoen.connpass.com/
 
 # 昭島
-# たまみらとイベント収集サイトが共通のためこちらでの収集はなし 
+# たまみらとイベント収集サイトが共通のためこちらでの収集はなし
 # - dojo_id: 228
 #   name: connpass
 #   group_id: 8204
@@ -1108,9 +1108,9 @@
 
 # 板橋: 独自申込フォームのため集計不可
 #- dojo_id: 231
-#  name: 
-#  group_id: 
-#  url: 
+#  name:
+#  group_id:
+#  url:
 
 # 上田
 - dojo_id: 232
@@ -1168,9 +1168,9 @@
 
 # 沖縄@補聴器のぴあ (Private)
 #- dojo_id: 242
-#  name: 
-#  group_id: 
-#  url: 
+#  name:
+#  group_id:
+#  url:
 
 # 津和野 TODO: イベントが追加されたら group_id を追加する
 # - dojo_id: 245

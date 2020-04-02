@@ -4206,3 +4206,29 @@
   event_id:
   participants: 0
   evented_at: 2020/02/24 13:30
+
+# 2020/03/01 - 2020/03/31
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/06 17:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/03/08 10:00 #オンライン開催
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/13 17:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/03/15 13:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/20 17:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/27 17:00
