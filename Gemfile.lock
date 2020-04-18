@@ -221,7 +221,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    os (1.0.1)
+    os (1.1.0)
     pg (1.2.3)
     posix-spawn (0.3.13)
     pry (0.13.0)
