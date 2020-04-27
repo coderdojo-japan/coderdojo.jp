@@ -248,7 +248,7 @@ GEM
       json
       websocket (~> 1.0)
     rack (2.2.2)
-    rack-attack (6.2.2)
+    rack-attack (6.3.0)
       rack (>= 1.0, < 3)
     rack-host-redirect (1.3.0)
       rack
