@@ -1214,6 +1214,17 @@
   - Scratch
   - micro:bit
   - IchigoJam
+- id: 247
+  order: '142131'
+  created_at: '2020-05-07'
+  name: 中央林間
+  prefecture_id: 14
+  logo: "/img/dojos/chuo-rinkan.png"
+  url: https://coderdojo-chuo-rinkan.blogspot.com/
+  description: オンラインで月4回程度開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 91
   order: '142158'
   created_at: '2017-06-26'
