@@ -1183,3 +1183,9 @@
   name: doorkeeper
   group_id: 11027
   url: https://coderdojo-utsunomiya.doorkeeper.jp/
+
+# 中央林間 イベントが追加されたら group_id を記入する
+# - dojo_id: 247
+#   name: connpass
+#   group_id:
+#   url: https://coderdojo-chuo-rinkan.connpass.com/
