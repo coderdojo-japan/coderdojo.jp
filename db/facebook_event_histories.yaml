@@ -4232,3 +4232,42 @@
   event_id:
   participants: 0
   evented_at: 2020/03/27 17:00
+
+# 2020/04/01 - 2020/04/30 全てリモート開催
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/10 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/04/12 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/04/12 10:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/17 17:00
+- dojo_id: 111
+  event_id:
+  participants: 0
+  evented_at: 2020/04/18 14:00
+- dojo_id: 222
+  event_id:
+  participants: 0
+  evented_at: 2020/04/18 14:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/04/19 13:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/24 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/04/26 10:00
+
