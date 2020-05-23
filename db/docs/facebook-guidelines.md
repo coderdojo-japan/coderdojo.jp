@@ -26,7 +26,7 @@
 本グループでは、一般社団法人 CoderDojo Japan と[パートナーシップ](https://coderdojo.jp/partnership)を結び、企業・コミュニティの双方にとってメリットがあると認められた場合に限り、製品やイベントなどのご案内が行われることがあります。具体例は次のとおりです。
 
 - [グーグル (Google) 合同会社から、イベント開催のご案内](https://www.facebook.com/groups/coderdojo.jp/permalink/2848628431917204/)
-- [一般社団法人未踏から、未踏ジュニア成果発表会のご案内](https://www.facebook.com/groups/coderdojo.jp/permalink/1280914402021956/)
+- [一般社団法人未踏から、『未踏ジュニア』募集開始のお知らせ](https://www.facebook.com/groups/coderdojo.jp/permalink/1280914402021956/)
 - [Makeblock 社から、ポッドキャスト『DojoCast』配信のお知らせ](https://www.facebook.com/groups/coderdojo.jp/permalink/2334904529956266/)
   - _※ Makeblock 社とのパートナーシップは、2019年7月31日で期間満了となりました_
 
