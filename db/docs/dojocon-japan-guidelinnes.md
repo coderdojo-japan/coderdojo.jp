@@ -46,7 +46,7 @@
 
 以下は DojoCon Japan の要件ではありせんが、以下に DojoCon の要件も記載しておきます。開催にあたってこちらもご参考にして頂けると幸いです。
 
-⚠️ **注釈: 翻訳当時と現在の内容とでは、違いがあるようです。最新版のポリシーは『[参照元](#reference)』をご参照ください** (安川)
+⚠️ **注釈: 下記は翻訳当時の内容となります。最新版のポリシーは『[DojoCon Handbook](https://help.coderdojo.com/hc/en-us/articles/360018873572-DojoCon-Handbook)』をご参照ください** (安川)
 
 ## Event Outline（イベント概要）
 
