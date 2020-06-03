@@ -4271,3 +4271,28 @@
   participants: 0
   evented_at: 2020/04/26 10:00
 
+# 2020/05/01 - 2020/05/31 全てリモート開催
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/05/10 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/05/10 10:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/11 18:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/05/17 13:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/18 18:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/25 18:00
