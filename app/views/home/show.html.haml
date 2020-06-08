@@ -5,7 +5,7 @@
   %br
 
 %section.cover
-  = image_tag "coderdojo-japan_cover.jpg"
+  = image_tag "coderdojo-japan_cover.jpg", alt: 'CoderDojoJapan カバー画像', loading: 'lazy'
 
 %section.introduction.text-center.list
   %br
@@ -123,7 +123,7 @@
     %p
       %a{:href => "/kata"} Kata
       では運営に役立つ情報を、
-      %a{href: "https://twitter.com/CoderDojoJapan"}<> Twitter 
+      %a{href: "https://twitter.com/CoderDojoJapan"}<> Twitter
       \ や
       %a{href: "https://www.facebook.com/groups/coderdojo.jp"}< Facebook
       では最近の活動を、
@@ -140,7 +140,7 @@
       %a.button{:href => '/kata'} Kata を読む
     %br
 
-= render partial: 'shared/partners'  
+= render partial: 'shared/partners'
 
 
 .text-center.grayscale-bg
