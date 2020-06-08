@@ -46,27 +46,24 @@ body {
   background-color: #fff;
   transition: 0.2s;
 }
-
 .collapse > .navbar-nav > li > a:before {
   left: 50%;
 }
-
 .collapse > .navbar-nav > li > a:after {
   right: 50%;
 }
-
 .navbar-toggle {
   padding: 14px 14px;
 }
 
-.navbar-header > .navbar-toggle > .icon-bar {
-  background-color: #fff;
+.navbar-header > .navbar-toggle {
+  & > .icon-bar {
+    background-color: #fff;
+  }
+  &:hover {
+    background-color: #0466c9;
+  }
 }
-
-.navbar-header > .navbar-toggle:hover {
-  background-color: #0466c9;
-}
-
 @media only screen and (max-width:950px) {
   .collapse > .navbar-nav > li > a {
     padding: 15px 8px;
