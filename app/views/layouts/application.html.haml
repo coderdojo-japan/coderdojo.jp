@@ -9,6 +9,8 @@
 
     %title= full_title(yield(:title))
     = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
+    - unless is_kata?
+      = stylesheet_link_tag 'extension/header', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = scrivito_head_tags if using_scrivito?
@@ -46,7 +48,7 @@
     %meta{:content => "#ffffff",                  :name => "msapplication-TileColor"}/
     %meta{:content => "/img/ms-icon-144x144.png", :name => "msapplication-TileImage"}/
     %meta{:content => "#ffffff",                  :name => "theme-color"}/
-    
+
     %link{:href => "https://fonts.googleapis.com/css?family=Fjalla+One", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "/build/mediaelementplayer.css", :rel => "stylesheet", :type => "text/css"}
     / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
@@ -63,6 +65,8 @@
       %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
 
   %body
+    - unless is_kata?
+      = render 'shared/header'
     - flash.each do |message_type, message|
       %div{:class => "alert alert-#{message_type}"}= message
     = yield
