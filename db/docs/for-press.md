@@ -1,5 +1,4 @@
-# 報道関係者向け資料
-<center>(<a href="/docs/brand-guidelines-en">Click here for English</a>)</center>
+# 報道関係者の皆さまへ
 <br>
 
 本ページでは一般社団法人 CoderDojo Japan の持つロゴデータやブランドガイドラインについてまとめています。プレスリリースやメディア掲載の際にご活用していただけると幸いです。

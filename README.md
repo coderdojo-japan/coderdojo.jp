@@ -10,17 +10,18 @@
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
 
-1. Dojo 情報やドキュメントなどの修正
+1. Dojo 情報やドキュメントなどの修正 ([» 詳細](#1-dojo-情報の更新))
    - 必要なもの: ブラウザ + GitHub アカウント
-2. [CoderDojo Kata](https://coderdojo.jp/kata) の執筆・編集
-   - 必要なもの: ブラウザ + coderdojo.jp アカウント
-3. 新機能の開発やデザインの改善
+2. [CoderDojo Kata](https://coderdojo.jp/kata) の執筆・編集 ([» 詳細](#2-coderdojo-kata-の執筆編集))
+   - 必要なもの: ブラウザ + coderdojo.jp アカウント 
+3. 新機能の開発やデザインの改善 ([» 詳細](#3-新機能の開発やデザインの改善))
    - 必要なもの: 各種開発環境のセットアップ (開発者向け)
 
 新機能の開発やデザインの改善には開発環境が必要ですが、ちょっとした文言の追記・修正であればブラウザだけで参加できるようになっているのが特徴です ✨📝💨 
+
 それぞれの参加方法は次のとおりです。
 
-### 1. Dojo 情報の更新
+## 1. Dojo 情報の更新
 
 Dojo 情報は次の手順で簡単に更新できます。
 
@@ -28,27 +29,31 @@ Dojo 情報は次の手順で簡単に更新できます。
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
 3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
 4. 修正内容を確認し、問題なければ Create pull request をクリックする
+   - 画像を追加したい場合は Pull Request のコメント欄に添付して頂けると助かります :relieved: ([対応例](https://github.com/coderdojo-japan/coderdojo.jp/pull/763))
 
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください ;)
 
 https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
-### 2. CoderDojo Kata の執筆・編集
+## 2. CoderDojo Kata の執筆・編集
 
-[Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。背景や使用例については次のスライドをご参照ください。
+[Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。
 
-CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
+編集方法は下記の手順書をご参照してください。
+
+:scroll: Kata の編集方法 - esa   
+https://esa-pages.io/p/sharing/7542/posts/213/bc0e68f705b7298ae5e0.html
+
+Kata の編集には CoderDojo Japan のアカウントが必要です。アカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までご連絡ください。
+
+CMS を利用している背景や技術仕様などについては次のスライド資料にまとめています。もし興味あればお気軽にご参照ください :wink:
+
+:scroll: CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
-編集方法については下記の手順書をご参考にしてください。
-
-記事の編集手順書 - Google Drive   
-http://bit.ly/coderdojo-kata-edit
 
 
-編集用のユーザーアカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までお問い合わせください。
-
-### 3. 新機能の開発やデザインの改善
+## 3. 新機能の開発やデザインの改善
 
 本サイトでは以下の技術が使われているので、それぞれのツールをセットアップします。
 
@@ -57,7 +62,7 @@ http://bit.ly/coderdojo-kata-edit
 - [PostgreSQL](https://www.postgresql.jp/)
 - [Scrivito](https://scrivito.com/) (Kataページ開発時に必要)
 
-#### セットアップ方法
+### セットアップ方法
 
 1. 本リポジトリを fork 後、clone します
 1. ターミナルから `$ bin/setup` を実行します
@@ -65,7 +70,7 @@ http://bit.ly/coderdojo-kata-edit
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-#### Dockerを利用したセットアップ方法
+### Dockerを利用したセットアップ方法
 
 Dockerを利用する場合は上記ツールをインストールする必要はありません。
 
@@ -80,12 +85,12 @@ Dockerを利用する場合は上記ツールをインストールする必要�
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-#### Development with Scrivito
+### Development with Scrivito
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
 
 - `/kata`
-- `/news/*`
+- ~~/news/*~~ (Outdated)
 - `/sotechsha/*`
 
 CMS enables wider people to contribute to editing contents,   
@@ -95,10 +100,11 @@ engineers to join developing Scrivito-used pages like above.
 If interested in developing them, contact [@yasulab](https://github.com/yasulab) to
 get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 
-### 他、開発に関する資料
+## 他、開発に関する資料
 
 開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
+- [子どものためのプログラミング道場『CoderDojo』の Ruby/Rails 活用事例](https://speakerdeck.com/yasulab/case-study-of-how-coderdojo-japan-uses-ruby)
 - [DojoCast を Jekyll から Rails に移行しました](https://yasslab.jp/ja/posts/migrate-dojocast-from-jekyll-to-rails)
 - [開発目線で見る最近の CoderDojo Japan 2018](https://yasslab.jp/ja/posts/coderdojo-japan-2018)
 - [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/docs/how-to-add-dojo.md)
@@ -119,7 +125,7 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 - **2016-now:** [coderdojo.jp](https://coderdojo.jp/) is sustainably maintained and developed by [YassLab Inc.](https://yasslab.jp/)
   - CoderDojo Japan has been incorporated and approves [@YassLab](https://github.com/YassLab) team as one of official partners for [tons of works](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors).
   - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval from CDJ board members. See [#References](#他開発に関する資料) and contributions (['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors), ['web'](https://github.com/coderdojo-japan/web/graphs/contributors), and ['coderdojo.jp'](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors)) for their continuous efforts on development.
-  [![YassLab Logo](https://yasslab.jp/img/logos/800x200.jpg)](https://yasslab.jp/)
+  [![YassLab Logo](https://yasslab.jp/img/logos/800x200.png)](https://yasslab.jp/)
 
 
 ## License
@@ -133,7 +139,7 @@ So, this application can be used and modified under the MIT License! 🆗
 
 ### The MIT License (MIT)
 
-Copyright &copy; 2012-2019 [CoderDojo Japan Association](https://coderdojo.jp/)
+Copyright &copy; 2012-2020 [CoderDojo Japan Association](https://coderdojo.jp/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

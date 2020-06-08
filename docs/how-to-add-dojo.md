@@ -4,12 +4,12 @@
 
 ## 追加の手順
 
-[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support) が来たとき、
+[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support)が来たとき、
 まずは申請された Dojo 情報を確認します。
 
 ### 申請内容と対応例
 
-申請内容には個人情報が含まれるため、一部改変しています :secret:
+次のような掲載申請が来たときを例にとって説明します。
 
 ```
 Dojo名: CoderDojo 那覇
@@ -17,14 +17,13 @@ Dojoタグ: Scratch, Webサイト, Ruby
 説明文: 那覇市で毎月開催
 ロゴ (任意): 
 Web: https://coderdojo-naha.doorkeeper.jp/
-代表者: ***
-連絡先: ***
+代表者: *** (個人情報のため非表示)
+連絡先: *** (個人情報のため非表示)
 受付日: 2019/06/15 9:42:10
 Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/naha
 ```
 
-例えば上記のような申請を受け取ったら、   
-`db/dojos.yaml` に次のように追記します。   
+上記のような申請を受け取ったら `db/dojos.yaml` に次のように追記します。   
 (order 順に追加すると見やすくてベターです)
 
 
@@ -60,7 +59,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 - `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します。
-- `logo` のロゴ画像は [TinyPNG](https://tinypng.com/) で圧縮してから `public/img/dojos` に置いてください。
+- `logo` のロゴ画像は [TinyPNG](https://tinypng.com/) で圧縮してから `public/img/dojos` に置いてください。(サイズが正方形以外の場合、表示が崩れる場合があるので、[Macのプレビューで画像に余白を付け足す方法](http://teapipin.blog10.fc2.com/blog-entry-913.html)を参考に正方形にすると良さそうです。)
 
 yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
 
@@ -118,7 +117,7 @@ https://coderdojo.jp/stats
 ### イベントページサービスごとの `group_id` の取得方法
 
 - Facebook
-  1. [lookup-id](https://lookup-id.com/#) へ
+  1. [lookup-id](https://lookup-id.com/#)、または [findmyfbid](https://findmyfbid.com/) へ
   2. 当該 Facebook ページの URL を入力すると `group_id` が確認できます
 - connpass
   1. connpass のイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)

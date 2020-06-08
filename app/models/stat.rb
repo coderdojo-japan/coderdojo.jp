@@ -25,7 +25,7 @@ class Stat
   end
 
   def annual_dojos_chart
-    HighChartsBuilder.build_annual_dojos(Dojo.annual_count(@period))
+    HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period))
   end
 
   def annual_event_histories_chart

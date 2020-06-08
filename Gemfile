@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.6.2'
+ruby '2.6.5'
 
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.4'
 gem 'puma'
 gem "puma_worker_killer"
 gem 'pg'
 gem 'dumper'
+gem 'bootsnap'
 
-gem 'scrivito', '~> 1.15.0'
+gem 'scrivito', '~> 1.16.0'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 
@@ -17,11 +18,11 @@ gem 'jquery-rails'
 
 gem 'simple_grid_rails'
 gem "bootstrap-sass"
-gem 'sass-rails'
+gem 'sass-rails', '>= 5'
 gem 'uglifier'
 gem 'font-awesome-rails'
 gem 'haml-rails'
-gem 'rails-html-sanitizer', '~> 1.0.4'
+gem 'rails-html-sanitizer', '~> 1.2.0'
 
 # For redirection
 gem 'rack-host-redirect'
@@ -31,6 +32,7 @@ gem 'secure_headers'
 
 # Rendering legal documents
 gem 'kramdown'
+gem 'kramdown-parser-gfm'
 
 gem 'faraday'
 gem 'faraday_middleware'
@@ -69,7 +71,7 @@ group :development, :test do
 
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
 
   gem 'dotenv-rails'

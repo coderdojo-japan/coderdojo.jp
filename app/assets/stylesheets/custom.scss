@@ -3,14 +3,21 @@
 
 // Customized by YassLab team
 
-/* DojoCast Cover Photo */
+/* Twemoji */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+  border-radius: 0px;
+}
 
+/* DojoCast Cover Photo */
 .dojocast-cover {
   border-radius: 0px;
 }
 
 /* DocSearch by Algolia */
-
 .search {
   padding-top: 17px;
   padding-left: 15px;
@@ -492,6 +499,7 @@ body>footer a:hover {
   background: #f7f7f7;
 }
 
+/* Top Cover Photo */
 .cover {
   overflow: hidden;
   min-height: 125px;
@@ -509,6 +517,7 @@ body>footer a:hover {
   border-radius: 0px;
 }
 
+// Each Dojo: /#dojos
 .dojos>ul {
   text-align: center;
   padding: 0 0 1.5em
@@ -521,23 +530,32 @@ body>footer a:hover {
   padding-top: 1em;
   margin: .4em
 }
+.dojo-flex{
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
 
 .dojo {
-  display: inline-block;
-  height: 300px;
   width: 45%;
   margin: 5px;
   padding: 15px 0;
   background: #fff;
   position: relative;
-  text-align: center
-}
-
-.dojo>p {
-  font-size: 90%;
-  padding: 5px 10px;
   text-align: center;
-  margin: 5px 0
+  height: auto;
+
+  //display: block;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 70%;
+    padding: 10px 10px 5px;
+    text-align: center;
+    margin: 5px 0;
+    margin-top: auto;
+  }
 }
 
 .dojo-picture {
@@ -546,7 +564,7 @@ body>footer a:hover {
   width: 96px;
   background-position: center center; // border-radius: 48px;
   background-size: cover;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .dojo-name {
@@ -565,9 +583,10 @@ body>footer a:hover {
 }
 
 .dojo-private:hover {
-  text-decoration: none
+  text-decoration: none;
 }
 
+// Each Event: /events
 .event-region {
   padding: 50px 0 20px 0;
 }
@@ -586,10 +605,7 @@ body>footer a:hover {
   background: #fff;
   position: relative;
   text-align: center;
-}
-
-@media only screen and (max-width: 560px) {
-  .event {
+  @media only screen and (max-width: 560px) {
     display: block;
   }
 }
@@ -611,6 +627,54 @@ body>footer a:hover {
   font-weight: bold;
 }
 
+.event>header div.event-ribbon {
+  width:  80px;
+  height: 80px;
+  overflow: hidden;
+  position: absolute;
+
+  top:   0px;
+  right: 0px;
+
+  &::before, &::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 5px solid #2980b9;
+
+    border-top-color:   transparent;
+    border-right-color: transparent;
+  }
+  &::before {
+    top:  0;
+    left: 0;
+  }
+  &::after {
+    bottom: 0;
+    right:  0;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    width: 220px;
+    padding: 5px 0;
+    background-color: #ffd700;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #fff;
+    font: 850 8px/1 'Lato', sans-serif;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-transform: uppercase;
+    text-align: center;
+
+    left: -48px;
+    top:   10px;
+    transform: rotate(45deg);
+  }
+}
+
+
 .event>p {
   margin: 10px;
   text-align: left;
@@ -622,8 +686,7 @@ body>footer a:hover {
 
 @media only screen and (min-width:560px) {
   .dojo {
-    width: 220px;
-    height: 275px;
+    width: calc(220px - 10px);
     margin: 10px;
   }
   .event {
@@ -666,4 +729,48 @@ body>footer a:hover {
 
 #accordion a:hover {
   text-decoration: none;
+}
+@media only screen and (max-width:720px) {
+  .highcharts-root {
+    transform: scale(0.8);
+  }
+  #transition-table {
+    padding: 20px 0;
+    font-size: 12px;
+    width: 520px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width:560px) {
+  .highcharts-container, .highcharts-root {
+    width:  100% !important;
+    height: 100% !important;
+  }
+  .highcharts-container, .highcharts-title {
+    font-size: 26px !important;
+  }
+  #transition-table {
+    font-size: 10px;
+    width:     100%;
+  }
+}
+
+/* Stats */
+#japan-map-container canvas {
+  margin: 20px auto 30px;
+}
+#japan-map-text {
+  display: block;
+}
+
+@media only screen and (max-width: 651px) {
+  #japan-map-container canvas {
+    margin: 50px auto;
+    width: 100%;
+  }
+  #japan-map-text {
+    display: none;
+  }
 }

@@ -57,6 +57,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
+    / twemoji
+    %script{src: "https://twemoji.maxcdn.com/v/latest/twemoji.min.js", crossorigin: "anonymous" }
+
     / at the end of the HEAD
     - if is_kata?
       %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
@@ -69,7 +72,11 @@
     = yield
     = scrivito_body_tags if using_scrivito?
     = render 'shared/footer'
+
     / at the end of the BODY
+    :javascript
+      twemoji.parse(document.body);
+
     - if is_kata?
       %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
               :type => "text/javascript"}

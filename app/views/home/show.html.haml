@@ -30,7 +30,7 @@
       %iframe{:allowfullscreen => "true", :mozallowfullscreen => "true", :webkitallowfullscreen => "true", :frameborder => "0", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&loop=false", :width => "595", :height => "350"}
     %div{:style => "margin-bottom:5px; color: grey;"}
       スライドが見えない場合は
-      %a{:href => "https://docs.google.com/presentation/d/13t5P1gojsde_gvcvDnPsfHYIqsS-knqWGDxyh3eG8SU/edit#slide=id.p", :target => "_blank", :title => "CoderDojo ガイダンス <一般・ボランティア向け資料>"}<>
+      %a{:href => "https://bit.ly/coderdojo-guidance-2019", :target => "_blank", :title => "CoderDojo ガイダンス <一般・ボランティア向け資料>"}<>
         コチラ
   %p{:style => "margin-top: 60px;"} さらに詳しい様子については、次の記事や動画をご参照ください。
   %ul{:style => "margin-bottom:30px;"}
@@ -47,7 +47,7 @@
     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/gLDue2xb1j8?rel=0", :width => "560"}
   %p
     %a{:href => "http://www.coderdojo-kashiwa.com/"} CoderDojo Kashiwa
-    が制作した動画です。道場の雰囲気が伝われば幸いです ;)
+    が制作した動画です。道場の雰囲気が伝われば嬉しいです 😆
   = render partial: 'shared/social_buttons'
   %br
 
@@ -95,16 +95,40 @@
     %br
     %h2#kata{:style => "color: dimgray;"} 📚 もっと詳しく知る
     %br
-    %p 下記サイトから CoderDojo の詳細や最新情報にアクセスできます。
-    %ul
+    %p
+      %a{:href => "/kata"}<> Wiki
+      \ や&nbsp;
+      %a{:href => "/podcast"}<> Podcast
+      、
+      %a{:href => "#news"}<> Newsletter
+      \ や
+      %a{:href => "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"}< YouTube
+      \ など、様々な方法で CoderDojo に関する情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
+    %ul{style: "list-style: none;"}
       %li
-        %a{:href => "/kata"} CoderDojo Kata (Wiki)
+        %a{:href => "/kata"} 📑 Kata (Wiki)
       %li
-        %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} CoderDojo Japan (Facebook)
+        %a{:href => "/podcast"} 🎧 DojoCast (Podcast)
       %li
-        %a{:href => "https://coderdojo.com/"} CoderDojo Foundation (海外)
+        %a{:href => "#news"} 📰 DojoLetter (Newsletter)
+      %li
+        %a{:href => "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"} 📺 DojoChannel (YouTube)
+      %li
+        %a{:href => "https://twitter.com/CoderDojoJapan"} 📣 CoderDojo Japan (Twitter)
+      %li
+        %a{:href => "https://www.facebook.com/groups/coderdojo.jp"} 👤 CoderDojo Japan (Facebook)
+      %li
+        %a{:href => "https://coderdojo.com/"} 🌐 CoderDojo Foundation (海外)
     %br
-    %p Kata では学習や運営に役立つ資料を、Facebook では全国の活動を知ることができます。海外の雰囲気は CoderDojo Foundation から公開しています。
+    %p
+      %a{:href => "/kata"} Kata
+      では運営に役立つ情報を、
+      %a{href: "https://twitter.com/CoderDojoJapan"}<> Twitter 
+      \ や
+      %a{href: "https://www.facebook.com/groups/coderdojo.jp"}< Facebook
+      では最近の活動を、
+      %a{href: "https://coderdojo.com/"}<> CoderDojo Foundation
+      \ からは海外の雰囲気を知ることができます。
     %br
     %p
       『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』といった場合は、

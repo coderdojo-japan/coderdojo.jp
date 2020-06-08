@@ -10,12 +10,15 @@ module ApplicationHelper
   end
 
   def full_url(page_url)
-    page_url = @obj.permalink if page_url.empty? && @obj && !@obj.permalink.nil?
+    # When URL is composed by Scrivito
+    return @obj.permalink if @obj && !@obj.permalink.nil?
+
+    # When URL is composed by Rails
     if page_url.empty?
-      # URLs rendered via Rails
+      # Set og:url with request param
       request.url
     else
-      # URLs rendered via Scrivito
+      # Set og:url with given param
       page_url
     end
   end
@@ -30,7 +33,7 @@ module ApplicationHelper
   end
 
   def kata_description
-    "全国の CoderDojo で活用されている資料や教材、子ども向けのプログラミングキャンプ・プログラミングコンテスト情報、CoderDojo の立ち上げ方・関わり方など、CoderDojo を中心にして色々なトピックまとめています。"
+    "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
   end
 
   def using_scrivito?

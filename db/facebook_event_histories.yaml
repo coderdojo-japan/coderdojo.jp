@@ -2434,22 +2434,6 @@
   participants: 5
   evented_at: 2017/10/01 13:15
 - dojo_id: 73
-  event_id: 142819799676689
-  participants: 6
-  evented_at: 2017/11/26 13:30
-- dojo_id: 73
-  event_id: 310152299475301
-  participants: 4
-  evented_at: 2018/01/14 13:30
-- dojo_id: 73
-  event_id: 1743561269015700
-  participants: 8
-  evented_at: 2018/02/18 13:30
-- dojo_id: 73
-  event_id: 169038793900038
-  participants: 8
-  evented_at: 2018/03/25 13:30
-- dojo_id: 73
   event_id: 675550939464493
   participants: 9
   evented_at: 2018/04/08 13:30
@@ -2574,10 +2558,6 @@
   event_id: 1372320219469831
   participants: 0
   evented_at: 2017/07/23 11:20
-- dojo_id: 88
-  event_id: 1924777571134708
-  participants: 0
-  evented_at: 2017/08/20 10:20
 - dojo_id: 94
   event_id: 1391919444222938
   participants: 3
@@ -3066,42 +3046,6 @@
   event_id: 196236491237990
   participants: 4
   evented_at: 2018/08/04 13:30
-- dojo_id: 73
-  event_id: 1600474296728643
-  participants: 6
-  evented_at: 2018/05/06 13:30
-- dojo_id: 73
-  event_id: 2050527055199864
-  participants: 6
-  evented_at: 2018/06/10 13:30
-- dojo_id: 73
-  event_id: 229873607802747
-  participants: 4
-  evented_at: 2018/07/01 13:30
-- dojo_id: 73
-  event_id: 495391340910164
-  participants: 4
-  evented_at: 2018/08/12 13:30
-- dojo_id: 73
-  event_id: 724939291180649
-  participants: 7
-  evented_at: 2018/09/16 13:30
-- dojo_id: 73
-  event_id: 261879051136431
-  participants: 2
-  evented_at: 2018/11/04 13:30
-- dojo_id: 73
-  event_id: 723307981372919
-  participants: 3
-  evented_at: 2018/12/09 13:30
-- dojo_id: 73
-  event_id: 355491578366248
-  participants: 6
-  evented_at: 2019/01/13 13:30
-- dojo_id: 73
-  event_id: 2438595696213784
-  participants: 8
-  evented_at: 2019/02/17 13:30
 - dojo_id: 86
   event_id: 1939742072714754
   participants: 2
@@ -3307,26 +3251,6 @@
   event_id: 2064715203618898
   participants: 15
   evented_at: 2019/02/10 10:00
-- dojo_id: 141
-  event_id: 338083410058160
-  participants: 1
-  evented_at: 2018/07/08 14:00
-- dojo_id: 141
-  event_id: 222399278453565
-  participants: 1
-  evented_at: 2018/08/19 14:00
-- dojo_id: 141
-  event_id: 538187703285767
-  participants: 4
-  evented_at: 2018/10/21 10:00
-- dojo_id: 141
-  event_id: 739653039700994
-  participants: 4
-  evented_at: 2018/12/16 10:00
-- dojo_id: 141
-  event_id: 843787365956607
-  participants: 8
-  evented_at: 2019/02/17 10:00
 - dojo_id: 172
   event_id: 318482825571270
   participants: 5
@@ -3363,14 +3287,6 @@
   event_id: 766781693674723
   participants: 2
   evented_at: 2019/01/27 13:30
-- dojo_id: 186
-  event_id: 639913849738762
-  participants: 2
-  evented_at: 2019/02/17 13:30
-- dojo_id: 186
-  event_id: 1153923628097026
-  participants: 2
-  evented_at: 2019/02/24 13:30
 - dojo_id: 187
   event_id:
   participants: 7
@@ -3411,25 +3327,66 @@
   event_id:
   participants: 10
   evented_at: 2018/08/05 14:00
-- dojo_id: 144
+# 木更津 過去イベント
+- dojo_id: 83
   event_id:
-  participants: 9
-  evented_at: 2018/11/23 14:00
-- dojo_id: 144
+  participants: 3
+  evented_at: 2017/07/02 10:00
+- dojo_id: 83
   event_id:
-  participants: 6
-  evented_at: 2019/02/16 10:00
-- dojo_id: 210
+  participants: 2
+  evented_at: 2017/08/06 10:00
+- dojo_id: 83
   event_id:
-  participants: 4
-  evented_at: 2019/01/20 14:30
-
-  # 2019/03/01 - 2019/03/31
-- dojo_id: 183
+  participants: 2
+  evented_at: 2017/09/03 10:00
+- dojo_id: 83
+  event_id:
+  participants: 0
+  evented_at: 2017/10/01 10:00
+- dojo_id: 83
   event_id:
   participants: 5
-  evented_at: 2019/03/02 14:00
-- dojo_id: 187
+  evented_at: 2017/11/05 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2017/12/03 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2018/01/07 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/02/04 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/03/04 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/04/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2018/05/06 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2018/06/10 10:00
+- dojo_id: 83
+  event_id:
+  participants: 4
+  evented_at: 2018/07/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 1
+  evented_at: 2018/08/05 10:00
+
+# 2019/03/01 - 2019/03/31
+- dojo_id: 183
   event_id:
   participants: 5
   evented_at: 2019/03/02 14:00
@@ -3437,22 +3394,10 @@
   event_id:
   participants: 6
   evented_at: 2019/03/03 10:30
-- dojo_id: 210
-  event_id:
-  participants: 0
-  evented_at: 2019/03/03 13:00
 - dojo_id: 203
   event_id:
   participants: 2
   evented_at: 2019/03/10 09:30
-- dojo_id: 73
-  event_id:
-  participants: 7
-  evented_at: 2019/03/10 13:30
-- dojo_id: 186
-  event_id:
-  participants: 2
-  evented_at: 2019/03/10 13:30
 - dojo_id: 111
   event_id:
   participants: 0
@@ -3498,10 +3443,6 @@
   event_id:
   participants: 1
   evented_at: 2019/03/24 13:30
-- dojo_id: 186
-  event_id:
-  participants: 1
-  evented_at: 2019/03/24 13:30
 - dojo_id: 6
   event_id:
   participants: 10
@@ -3511,7 +3452,7 @@
   participants: 6
   evented_at: 2019/03/17 10:00
 
-  # 2019/04/01 - 2019/04/30
+# 2019/04/01 - 2019/04/30
 - dojo_id: 6
   event_id:
   participants: 2
@@ -3527,10 +3468,6 @@
 - dojo_id: 10
   event_id:
   participants: 2
-  evented_at: 2019/04/07 13:30
-- dojo_id: 73
-  event_id:
-  participants: 5
   evented_at: 2019/04/07 13:30
 - dojo_id: 5
   event_id:
@@ -3560,10 +3497,6 @@
   event_id:
   participants: 9
   evented_at: 2019/04/14 10:00
-- dojo_id: 186
-  event_id:
-  participants: 1
-  evented_at: 2019/04/14 13:30
 - dojo_id: 188
   event_id:
   participants: 0
@@ -3581,17 +3514,9 @@
   event_id:
   participants: 0
   evented_at: 2019/04/20 15:15
-- dojo_id: 210
-  event_id:
-  participants: 3
-  evented_at: 2019/04/21 09:00
 - dojo_id: 94
   event_id:
   participants: 5
-  evented_at: 2019/04/21 10:00
-- dojo_id: 141
-  event_id:
-  participants: 2
   evented_at: 2019/04/21 10:00
 - dojo_id: 86
   event_id:
@@ -3601,10 +3526,6 @@
   event_id:
   participants: 2
   evented_at: 2019/04/21 13:30
-- dojo_id: 186
-  event_id:
-  participants: 1
-  evented_at: 2019/04/21 13:30
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3613,32 +3534,20 @@
   event_id:
   participants: 11
   evented_at: 2019/04/27 10:00
-- dojo_id: 187
-  event_id:
-  participants: 3
-  evented_at: 2019/04/27 14:00
 - dojo_id: 23
   event_id:
   participants: 2
   evented_at: 2019/04/28 14:00
 
-  # 2019/05/01 - 2019/05/31
+# 2019/05/01 - 2019/05/31
 - dojo_id: 12
   event_id:
   participants: 4
   evented_at: 2019/05/05 10:30
-- dojo_id: 73
-  event_id:
-  participants: 4
-  evented_at: 2019/05/05 13:30
 - dojo_id: 183
   event_id:
   participants: 3
   evented_at: 2019/05/11 14:00
-- dojo_id: 210
-  event_id:
-  participants: 1
-  evented_at: 2019/05/12 09:00
 - dojo_id: 23
   event_id:
   participants: 1
@@ -3671,10 +3580,6 @@
   event_id:
   participants: 4
   evented_at: 2019/05/19 10:00
-- dojo_id: 186
-  event_id:
-  participants: 1
-  evented_at: 2019/05/19 13:30
 - dojo_id: 86
   event_id:
   participants: 2
@@ -3696,19 +3601,11 @@
   participants: 2
   evented_at: 2019/05/31 17:00
 
-  # 2019/06/01 - 2019/06/30
-- dojo_id: 144
-  event_id:
-  participants: 5
-  evented_at: 2019/06/01 14:00
+# 2019/06/01 - 2019/06/30
 - dojo_id: 12
   event_id:
   participants: 3
   evented_at: 2019/06/02 10:30
-- dojo_id: 186
-  event_id:
-  participants: 2
-  evented_at: 2019/06/02 13:30
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3733,14 +3630,6 @@
   event_id:
   participants: 2
   evented_at: 2019/06/09 13:30
-- dojo_id: 73
-  event_id:
-  participants: 7
-  evented_at: 2019/06/09 13:30
-- dojo_id: 186
-  event_id:
-  participants: 0
-  evented_at: 2019/06/09 13:30
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3749,14 +3638,6 @@
   event_id:
   participants: 4
   evented_at: 2019/06/15 14:00
-- dojo_id: 187
-  event_id:
-  participants: 5
-  evented_at: 2019/06/15 14:00
-- dojo_id: 141
-  event_id:
-  participants: 3
-  evented_at: 2019/06/16 09:30
 - dojo_id: 86
   event_id:
   participants: 2
@@ -3793,12 +3674,8 @@
   event_id:
   participants: 5
   evented_at: 2019/06/29 10:00
-- dojo_id: 210
-  event_id:
-  participants: 1
-  evented_at: 2019/06/29 14:20
 
-  # 2019/07/01 - 2019/07/31
+# 2019/07/01 - 2019/07/31
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3807,18 +3684,10 @@
   event_id:
   participants: 3
   evented_at: 2019/07/06 14:00
-- dojo_id: 187
-  event_id:
-  participants: 3
-  evented_at: 2019/07/06 14:00
 - dojo_id: 12
   event_id:
   participants: 6
   evented_at: 2019/07/07 10:30
-- dojo_id: 186
-  event_id:
-  participants: 1
-  evented_at: 2019/07/07 13:30
 - dojo_id: 198
   event_id:
   participants: 0
@@ -3843,10 +3712,6 @@
   event_id:
   participants: 5
   evented_at: 2019/07/20 14:00
-- dojo_id: 186
-  event_id:
-  participants: 0
-  evented_at: 2019/07/21 09:30
 - dojo_id: 203
   event_id:
   participants: 0
@@ -3855,10 +3720,6 @@
   event_id:
   participants: 3
   evented_at: 2019/07/21 10:30
-- dojo_id: 73
-  event_id:
-  participants: 2
-  evented_at: 2019/07/21 13:30
 - dojo_id: 6
   event_id:
   participants: 1
@@ -3875,3 +3736,563 @@
   event_id:
   participants: 1
   evented_at: 2019/07/28 13:30
+
+# 2019/08/01 - 2019/08/31
+- dojo_id: 202
+  event_id:
+  participants: 1
+  evented_at: 2019/08/03 13:00
+- dojo_id: 209
+  event_id:
+  participants: 0
+  evented_at: 2019/08/03 13:00
+- dojo_id: 183
+  event_id:
+  participants: 3
+  evented_at: 2019/08/03 14:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2019/08/04 10:00
+# - dojo_id: 12
+#   event_id:
+#   participants: 2
+#   evented_at: 2019/08/04 10:30 キャンセルのため計上せず
+- dojo_id: 203
+  event_id:
+  participants: 2
+  evented_at: 2019/08/11 09:30
+- dojo_id: 25
+  event_id:
+  participants: 6 # 若葉若松合同
+  evented_at: 2019/08/11 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/16 17:00
+- dojo_id: 191
+  event_id:
+  participants: 6
+  evented_at: 2019/08/17 10:00
+- dojo_id: 87
+  event_id:
+  participants: 3
+  evented_at: 2019/08/17 14:00
+- dojo_id: 94
+  event_id:
+  participants: 2
+  evented_at: 2019/08/18 10:00
+- dojo_id: 86
+  event_id:
+  participants: 3
+  evented_at: 2019/08/18 10:30
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/08/18 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/23 17:00
+- dojo_id: 203
+  event_id:
+  participants: 1
+  evented_at: 2019/08/24 09:30
+- dojo_id: 97
+  event_id:
+  participants: 2
+  evented_at: 2019/08/24 10:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2019/08/25 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/08/25 13:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/08/30 17:00
+
+# 2019/09/01 - 2019/09/30
+- dojo_id: 229
+  event_id:
+  participants: 0
+  evented_at: 2019/09/01 09:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/09/06 17:00
+- dojo_id: 225
+  event_id:
+  participants: 1
+  evented_at: 2019/09/07 10:00
+- dojo_id: 183
+  event_id:
+  participants: 2
+  evented_at: 2019/09/07 14:00
+- dojo_id: 203
+  event_id:
+  participants: 2
+  evented_at: 2019/09/08 09:30
+- dojo_id: 25
+  event_id:
+  participants: 6
+  evented_at: 2019/09/08 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/09/13 17:00
+- dojo_id: 94
+  event_id:
+  participants: 3
+  evented_at: 2019/09/15 10:00
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2019/09/15 10:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/09/20 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2019/09/22 10:00
+- dojo_id: 131
+  event_id:
+  participants: 6
+  evented_at: 2019/09/22 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/09/27 17:00
+- dojo_id: 97
+  event_id:
+  participants: 3
+  evented_at: 2019/09/28 10:00
+- dojo_id: 191
+  event_id:
+  participants: 3
+  evented_at: 2019/09/28 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/09/29 13:30
+- dojo_id: 222
+  event_id:
+  participants: 6
+  evented_at: 2019/09/29 13:30
+
+# 2019/10/01 - 2019/10/31
+- dojo_id: 6
+  event_id:
+  participants: 2
+  evented_at: 2019/10/04 17:00
+- dojo_id: 183
+  event_id:
+  participants: 3
+  evented_at: 2019/10/05 14:00
+- dojo_id: 12
+  event_id:
+  participants: 4
+  evented_at: 2019/10/06 10:30
+- dojo_id: 6
+  event_id:
+  participants: 2
+  evented_at: 2019/10/11 17:00
+- dojo_id: 225
+  event_id:
+  participants: 1
+  evented_at: 2019/10/12 15:00
+# - dojo_id: 23 台風により中止
+#   event_id:
+#   participants: 3
+#   evented_at: 2019/10/13 10:00
+# - dojo_id: 25 台風により中止
+#   event_id:
+#   participants: 5
+#   evented_at: 2019/10/13 10:00
+# - dojo_id: 10 台風により中止
+#   event_id:
+#   participants: 2
+#   evented_at: 2019/10/13 13:30
+- dojo_id: 73
+  event_id:
+  participants: 2
+  evented_at: 2019/10/13 13:30
+- dojo_id: 191
+  event_id:
+  participants: 3
+  evented_at: 2019/10/13 14:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/10/18 17:00
+- dojo_id: 97
+  event_id:
+  participants: 3
+  evented_at: 2019/10/19 10:00
+- dojo_id: 94
+  event_id:
+  participants: 3
+  evented_at: 2019/10/20 10:00
+- dojo_id: 86
+  event_id:
+  participants: 2
+  evented_at: 2019/10/20 10:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/10/25 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2019/10/27 10:00
+- dojo_id: 131
+  event_id:
+  participants: 2
+  evented_at: 2019/10/27 10:00
+
+# 2019/11/01 - 2019/11/30
+- dojo_id: 99
+  event_id:
+  participants: 0
+  evented_at: 2019/11/02 13:00
+- dojo_id: 183
+  event_id:
+  participants: 3
+  evented_at: 2019/11/02 14:00
+- dojo_id: 12
+  event_id:
+  participants: 2
+  evented_at: 2019/11/03 10:30
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/11/03 13:30
+- dojo_id: 6
+  event_id:
+  participants: 2
+  evented_at: 2019/11/08 17:00
+- dojo_id: 203
+  event_id:
+  participants: 1
+  evented_at: 2019/11/10 09:30
+- dojo_id: 23
+  event_id:
+  participants: 1
+  evented_at: 2019/11/10 10:00
+- dojo_id: 131
+  event_id:
+  participants: 4
+  evented_at: 2019/11/10 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/11/10 13:30
+- dojo_id: 191
+  event_id:
+  participants: 3
+  evented_at: 2019/11/16 10:00
+- dojo_id: 25
+  event_id:
+  participants: 17
+  evented_at: 2019/11/17 10:00
+- dojo_id: 86
+  event_id:
+  participants: 4
+  evented_at: 2019/11/17 10:00
+- dojo_id: 94
+  event_id:
+  participants: 6
+  evented_at: 2019/11/17 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/11/22 17:00
+- dojo_id: 222
+  event_id:
+  participants: 1
+  evented_at: 2019/11/23 13:30
+- dojo_id: 10
+  event_id:
+  participants: 3
+  evented_at: 2019/11/24 13:30
+- dojo_id: 103
+  event_id:
+  participants: 1
+  evented_at: 2019/11/25 18:00
+
+# 2019/12/01 - 2019/12/31
+- dojo_id: 12
+  event_id:
+  participants: 4
+  evented_at: 2019/12/01 10:30
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/12/06 17:00
+- dojo_id: 183
+  event_id:
+  participants: 5
+  evented_at: 2019/12/07 14:00
+- dojo_id: 203
+  event_id:
+  participants: 2
+  evented_at: 2019/12/08 09:30
+- dojo_id: 23
+  event_id:
+  participants: 1
+  evented_at: 2019/12/08 10:00
+- dojo_id: 25
+  event_id:
+  participants: 8
+  evented_at: 2019/12/08 10:00
+- dojo_id: 131
+  event_id:
+  participants: 3
+  evented_at: 2019/12/08 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/12/13 17:00
+- dojo_id: 222
+  event_id:
+  participants: 4
+  evented_at: 2019/12/14 13:30
+- dojo_id: 191
+  event_id:
+  participants: 1
+  evented_at: 2019/12/14 14:00
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2019/12/15 10:30
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2019/12/15 13:30
+- dojo_id: 103
+  event_id:
+  participants: 1
+  evented_at: 2019/12/16 18:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/12/20 17:00
+- dojo_id: 23
+  event_id:
+  participants: 15
+  evented_at: 2019/12/22 10:00
+- dojo_id: 6
+  event_id:
+  participants: 1
+  evented_at: 2019/12/27 17:00
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2019/12/28 11:30
+
+# 2020/01/01 - 2020/01/31
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/10 17:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 09:30
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:00
+- dojo_id: 12
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 10:30
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/01/12 13:30
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/17 17:00
+- dojo_id: 191
+  event_id:
+  participants: 0
+  evented_at: 2020/01/18 14:00
+- dojo_id: 94
+  event_id:
+  participants: 0
+  evented_at: 2020/01/19 10:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/01/19 10:30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/01/20 18:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/01/24 17:00
+- dojo_id: 229
+  event_id:
+  participants: 0
+  evented_at: 2020/01/25 13:00
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/01/26 13:30
+
+# 2020/02/01 - 2020/02/29
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/02/07 17:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 09:30
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 10:00
+- dojo_id: 12
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 10:30
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/02/09 13:30
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/02/14 17:00
+- dojo_id: 94
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:30
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/02/16 10:30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/02/17 18:00
+- dojo_id: 10
+  event_id:
+  participants: 0
+  evented_at: 2020/02/23 13:30
+- dojo_id: 222
+  event_id:
+  participants: 0
+  evented_at: 2020/02/24 13:30
+
+# 2020/03/01 - 2020/03/31
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/06 17:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/03/08 10:00 #オンライン開催
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/13 17:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/03/15 13:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/20 17:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/03/27 17:00
+
+# 2020/04/01 - 2020/04/30 全てリモート開催
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/10 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/04/12 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/04/12 10:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/17 17:00
+- dojo_id: 111
+  event_id:
+  participants: 0
+  evented_at: 2020/04/18 14:00
+- dojo_id: 222
+  event_id:
+  participants: 0
+  evented_at: 2020/04/18 14:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/04/19 13:00
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2020/04/24 17:00
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/04/26 10:00
+
+# 2020/05/01 - 2020/05/31 全てリモート開催
+- dojo_id: 23
+  event_id:
+  participants: 0
+  evented_at: 2020/05/10 10:00
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2020/05/10 10:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/11 18:00
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2020/05/17 13:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/18 18:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/05/25 18:00

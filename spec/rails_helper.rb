@@ -63,5 +63,13 @@ RSpec.configure do |config|
     end
   end
 
+  config.around(:each, :soundcloud) do |example|
+    if ENV['SOUNDCLOUD_CLIENT_ID'].present?
+      example.run
+    else
+      example.skip
+    end
+  end
+
   config.include FactoryBot::Syntax::Methods
 end

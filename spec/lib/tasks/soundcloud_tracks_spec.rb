@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'rake'
 
-RSpec.describe 'soundcloud_tracks' do
+RSpec.describe 'soundcloud_tracks', soundcloud: true do
   before(:all) do
     @rake = Rake::Application.new
     Rake.application = @rake

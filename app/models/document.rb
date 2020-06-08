@@ -33,7 +33,7 @@ class Document
   end
 
   def description
-    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
+    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip : ''
   end
 
   def content
