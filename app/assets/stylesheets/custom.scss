@@ -503,18 +503,37 @@ body>footer a:hover {
 .cover {
   overflow: hidden;
   min-height: 125px;
-  background: #999;
+  position: relative;
+  background-color: #000;
+  z-index: 0;
+  overflow: hidden;
+  max-height: 50vh;
+  &::before {
+    content: '';
+    -ms-filter: blur(6px);
+    filter: blur(10px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: url('/assets/coderdojo-japan_cover.jpg') no-repeat center;
+    background-size: cover;
+    opacity: 0.6;
+  }
 }
 
-.cover>img {
+.cover img {
   height: 100%;
   width: 100%;
+  max-height: 50vh;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: -3%;
   border-radius: 0px;
+  object-fit: contain;
 }
 
 // Each Dojo: /#dojos
