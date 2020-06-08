@@ -507,6 +507,7 @@ body>footer a:hover {
   background-color: #000;
   z-index: 0;
   overflow: hidden;
+  max-height: 50vh;
   &::before {
     content: '';
     -ms-filter: blur(6px);
@@ -526,12 +527,13 @@ body>footer a:hover {
 .cover img {
   height: 100%;
   width: 100%;
+  max-height: 50vh;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: -3%;
   border-radius: 0px;
+  object-fit: contain;
 }
 
 // Each Dojo: /#dojos
