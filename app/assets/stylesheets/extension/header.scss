@@ -4,7 +4,13 @@ body {
 #header {
   background-color: #2275CA;
 }
-
+.navbar-header-logos {
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width:768px){
+    padding-top: 3px;
+  }
+}
 #header-logo img {
   margin-bottom: 2px;
   width: 46px;
@@ -20,11 +26,11 @@ body {
 .navbar-default {
   border: none;
 }
-.navbar-nav a {
-  color: #fff !important;
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
-  line-height: 26px !important;
+  line-height: 26px;
 }
 .collapse > .navbar-nav > li > a {
   position: relative;
@@ -99,7 +105,7 @@ body {
     display: inline;
   }
   .collapse > .navbar-nav > li > a {
-    padding: 8px 20px;
+    padding: 10px 15px;
     &:hover {
       color: #cce3f9;
     }
