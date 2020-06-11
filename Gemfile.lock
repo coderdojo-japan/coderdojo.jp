@@ -160,7 +160,7 @@ GEM
       httparty (>= 0.7.3)
       mimemagic
       multipart-post
-    httparty (0.18.0)
+    httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
