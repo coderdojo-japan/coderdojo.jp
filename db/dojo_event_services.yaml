@@ -1,3 +1,9 @@
+# 矢吹のイベントが追加されたら group_id を記入する
+# - dojo_id: 248
+#  name: connpass
+#  group_id: 
+#  url: https://coderdojoyabuki.connpass.com/
+
 # 札幌
 - dojo_id: 64
   name: connpass

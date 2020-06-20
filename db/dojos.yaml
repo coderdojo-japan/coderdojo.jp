@@ -252,6 +252,18 @@
   - Ruby
   - Python
   - tello
+- id: 248
+  order: '074667'
+  created_at: '2020-06-20'
+  name: 矢吹
+  prefecture_id: 7
+  logo: "/img/dojos/yabuki.png"
+  url: https://sites.google.com/coderdojo.com/coderdojo-yabuki/home
+  description: 福島県矢吹町で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - IchigoJam
 - id: 156
   order: '082040'
   created_at: '2018-07-09'
