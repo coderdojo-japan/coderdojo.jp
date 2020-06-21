@@ -1764,6 +1764,7 @@
   order: '271004'
   created_at: '2014-02-11'
   name: 西宮・梅田
+  counter: 2
   prefecture_id: 27
   url: http://coderdojo-nishinomiya.info/
   logo: "/img/dojos/nishinomiya.png"
@@ -1791,6 +1792,7 @@
   order: '271004'
   created_at: '2016-08-15'
   name: 大阪狭山・本町
+  counter: 2
   prefecture_id: 27
   logo: "/img/dojos/hommachi.png"
   url: https://coderdojo-hommachi.doorkeeper.jp/
@@ -2245,6 +2247,7 @@
   order: '320005'
   created_at: '2019-09-06'
   name: しまね
+  counter: 7
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
