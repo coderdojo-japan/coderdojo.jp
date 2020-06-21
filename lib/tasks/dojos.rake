@@ -30,6 +30,7 @@ namespace :dojos do
     dojos.each do |dojo|
       d = Dojo.find_or_initialize_by(id: dojo['id'])
       d.name          = dojo['name']
+      d.counter       = dojo['counter'] || 1
       d.email         = ''
       d.order         = dojo['order'] || search_order_number(dojo['name'])
       d.description   = dojo['description']

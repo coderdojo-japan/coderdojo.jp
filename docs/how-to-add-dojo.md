@@ -30,6 +30,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 ```yaml
 - created_at: '2019-06-15'
   name: 那覇
+  counter: 1                     # 省略化。連名道場のときに使います (後述)
   prefecture_id: 47
   logo: "/img/dojos/japan.png"   #  ロゴがあれば naha.png として追加
   url: https://coderdojo-naha.doorkeeper.jp/
@@ -48,6 +49,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `created_at` | 掲載申請日の年月日 |
 | `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
 | `name` | Dojo名 |
+| `counter` | 省略化。[連名道場](https://github.com/coderdojo-japan/coderdojo.jp/issues/610)を登録する際に使います |
 | `prefecture_id` | `db/seeds.rb` の県番号 |
 | `logo` | 省略可。`public/img/dojos` にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |

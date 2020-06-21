@@ -32,7 +32,7 @@ class Dojo < ApplicationRecord
     end
 
     def active_dojos_count
-      active.count
+      active.sum(:counter)
     end
 
     def group_by_region
