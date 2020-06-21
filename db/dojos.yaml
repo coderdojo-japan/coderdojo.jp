@@ -2080,6 +2080,19 @@
   - Scratch
   - Webサイト
   - Ruby
+- id: 249
+  order: '282201'
+  created_at: '2020-06-21'
+  name: 加西
+  prefecture_id: 28
+  logo: "/img/dojos/kasai.jpg"
+  url: https://coderdojokasai.connpass.com/
+  description: 加西市で毎月開催
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - C
+  - HTML
 - id: 181
   order: '283011'
   created_at: '2018-10-18'
