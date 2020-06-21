@@ -590,6 +590,13 @@ body>footer a:hover {
   display: block;
   margin: .5em 0;
   font-weight: bold;
+  .tooltip-arrow {
+    border-bottom-color: #777 !important;
+  }
+  .tooltip-inner {
+    background:  #777;
+    color:       #ffffff;
+  }
 }
 .dojo-counter {
   font-weight: bold;
