@@ -2,7 +2,11 @@
   %header
     %a{:href => "#{dojo.url}"}
       %span.dojo-picture{style: "background-image: url(#{dojo.logo});"}
-      %span.dojo-name= "#{dojo.name} (#{dojo.prefecture.name})"
+    %a{:href => "#{dojo.url}"}
+      %span.dojo-name
+        = "#{dojo.name} (#{dojo.prefecture.name}) "
+        - if not dojo.counter == 1
+          %span.dojo-counter= "#{dojo.counter}"
   %ul.tags
     - dojo.tags.each do |tag|
       %li= tag
