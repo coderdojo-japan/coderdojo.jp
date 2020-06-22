@@ -43,6 +43,8 @@ class StatsController < ApplicationController
     # TODO: 'DISTINCT dojo_id' cannot track joint-registrated dojos
     #   cf. https://github.com/coderdojo-japan/coderdojo.jp/issues/610
     @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id')
+
+    # 集計対象となっている道場数の推移
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
 
     # 日本各地の道場
