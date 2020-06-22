@@ -1,7 +1,7 @@
 class Dojo < ApplicationRecord
   NUM_OF_COUNTRIES    = "110"
   NUM_OF_WHOLE_DOJOS  = "2,000"
-  YAML_FILE           = Rails.root.join('db', 'dojos.yaml')
+  DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
   has_many   :dojo_event_services, dependent: :destroy
@@ -24,11 +24,11 @@ class Dojo < ApplicationRecord
 
   class << self
     def load_attributes_from_yaml
-      YAML.load_file(YAML_FILE)
+      YAML.load_file(DOJO_INFO_YAML_PATH)
     end
 
     def dump_attributes_to_yaml(attributes)
-      YAML.dump(attributes, File.open(YAML_FILE, 'w'))
+      YAML.dump(attributes, File.open(DOJO_INFO_YAML_PATH, 'w'))
     end
 
     def active_dojos_count
