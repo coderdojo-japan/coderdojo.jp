@@ -58,7 +58,7 @@ class Dojo < ApplicationRecord
         where(created_at: period)
           .group('year')
           .order('year ASC')
-          .pluck("to_char(created_at, 'yyyy') AS year, COUNT(id)")
+          .pluck("to_char(created_at, 'yyyy') AS year, SUM(counter)")
       ]
     end
   end
