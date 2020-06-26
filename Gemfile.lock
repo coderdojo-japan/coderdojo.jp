@@ -368,7 +368,7 @@ GEM
       scrivito
     scrivito_ui (1.16.0)
       railties
-    secure_headers (6.3.0)
+    secure_headers (6.3.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
