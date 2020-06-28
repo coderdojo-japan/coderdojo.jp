@@ -18,7 +18,7 @@
 
 - - お問い合わせの返信
 - - 物品の受領および送付
-- - 当社サイト及びシステムの品質向上
+- - 当社サイトおよびシステムの品質向上
 
 ## 個人情報の開示
 
@@ -37,13 +37,18 @@
 
 - 問い合わせ窓口: info@coderdojo.jp
 
-## cookieの使用について
+## Cookie の使用について
 
-当社では、それぞれの利用者に合わせた情報を提供するため、cookieを使用することがありますが、これにより個人を特定できる情報の収集を行えるものではありません。また、cookieの受け入れを希望されない場合は、ブラウザの設定等でいつでもcookieを破棄していただけます。
+当社では、それぞれの利用者に合わせた情報を提供するため、Cookie を使用することがありますが、これにより個人を特定できる情報の収集を行えるものではありません。また、Cookie の受け入れを希望されない場合は、ブラウザの設定等でいつでも Cookie を破棄していただけます。
 
-## SSLの使用について
+また、当社が運営するWebサイト ([coderdojo.jp](https://coderdojo.jp/) や [news.coderdojo.jp](https://news.coderdojo.jp/) など) では、利用者に提供するサービスの品質を向上させるために Google 社の [Google Analytics](https://marketingplatform.google.com/intl/ja/about/analytics/) を使用しております。Google Analytics の利用規約および Google 社のプライバシーポリシーについては下記ページをご参照ください。
 
-個人情報の入力時には、セキュリティ確保のため、これらの情報が傍受、妨害または改竄されることを防ぐ目的でSSL技術を使用しております。
+- - [Google Analytics 利用規約](https://marketingplatform.google.com/about/analytics/terms/jp/)
+- - [Google - ポリシーと規約](https://policies.google.com/?hl=ja)
+
+## SSL の使用について
+
+個人情報の入力時には、セキュリティ確保のため、これらの情報が傍受、妨害または改竄されることを防ぐ目的で SSL 技術を使用しております。
 
 ## プライバシーポリシーの変更
 
