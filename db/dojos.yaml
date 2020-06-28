@@ -1760,6 +1760,20 @@
   tags:
   - Scratch
   - 8x9Craft
+- id: 250
+  order: '262129'
+  created_at: '2020-06-27'
+  name: 京丹後
+  prefecture_id: 26
+  url: https://www.techtan.net/
+  logo: "/img/dojos/japan.png"
+  description: 京丹後市で不定期開催
+  tags:
+  - Scratch
+  - Minecraft
+  - ラズベリーパイ
+  - LEGO
+  - micro:bit
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
