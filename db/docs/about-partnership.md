@@ -123,7 +123,9 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 例: MakeblockからCoderDojoへ、新製品のWi-Fi付きシングルボードを200台提供 (※)
 [https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/](https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/)
 
-※上記の例では約3,000円×200台 (配送料込み) を換算し、5月10日〜7月31日の期間限定パートナーシップとなりました。
+※上記の例では約3,000円×200台（配送手続き込）を換算し、5月10日〜7月31日の期間限定パートナーシップとなりました。
+
+※ 配送手続きを CoderDojo Japan 側で代行したり、換算金額に価格によっては期間限定パートナーシップの対象外となることもありますので、あらかじめご了承ください。
 
 <br>
 
