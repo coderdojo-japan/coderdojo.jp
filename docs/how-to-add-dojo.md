@@ -124,12 +124,12 @@ https://coderdojo.jp/stats
 - connpass
   1. connpass のイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
   2. イベントのページを表示します (どのイベントでもOK)
-  3. url から event の ID を確認します (https://coderdojo-tobe.connpass.com/event/89808/ だと `89808`)
-  4. 以下のコマンドで上記の event ID を指定すると `group_id` (Series ID) を得ることができます
+  3. イベントページの URL をコピーします
+  4. 以下のコマンドで上記のコピーした URL を指定すると `group_id` (Series ID) が得えられます
   
   ```
-  $ curl --silent -X GET https://connpass.com/api/v1/event/?event_id=89808 | jq '.events[0].series.id'
-    5072
+  $ bin/c-search https://coderdojo-tobe.connpass.com/event/89808/
+    => 5072
   ```
   
 - Doorkeeper
