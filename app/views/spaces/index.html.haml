@@ -3,27 +3,27 @@
 
 %section.introduction.text-center.list
   %h1
-    %b CoderDojo Spaces
+    %b CoderDojo Spaces (β)
   %br
-  %p 「CoderDojo を運営してます!」という方々と、「CoderDojo 向けに場所提供してもいいよ!」という企業をマッチングするためのページです。
-  %p 以下は CoderDojo 向けにスペースを提供していただける方々のリストになります。もし興味ある企業がありましたら、それぞれに記載されている連絡先にコンタクトしてみてください ;)
+  %p CoderDojo 運営者と会場提供可能な企業をつなぐページです 🤝
+  %p リンク先のページから各法人にコンタクトしてみてください 💌
 
-%section#events.detail-introduction.text-center
-%section#dojos.dojos.text-center.grayscale-bg
-  %br/
-  %h2 スペース提供企業まとめ
-  %br/
-  %ul.loaded
+%section#spaces.detail-introduction.text-center
+%section.dojos.text-center.grayscale-bg{style: "padding-bottom: 100px;"}
+  %br
+  %h2{:style => "color: dimgray;"} スペース提供企業まとめ
+  %br
+  %ul.loaded.dojo-flex
     %li.dojo
       %header
         %a{:href => "http://www.csaj.jp/"}
-          %span.dojo-picture{:style => "background-image: url('/img/spaces/csaj.png');"}
+          %span.dojo-picture{style: "background-image: url('/img/spaces/csaj.png');"}
           %span.dojo-name CSAJ
       %ul.tags
         %li 東京都
         %li 港区
         %li 赤坂
-      %p CoderDojo 向けにCSAJ会議室を提供
+      %p CoderDojo 向けに会議室を提供可能
     %li.dojo
       %header
         %a{:href => "http://bridd.info/"}
@@ -33,26 +33,19 @@
         %li 東京都
         %li 神田
         %li 大手町
-      %p BRIDD大手町、オフィス・コワーキングスペース
-    %li.dojo
-      %header
-        %a{:href => "https://twitter.com/tkc49"}
-          %span.dojo-picture{:style => "background-image: url('/img/spaces/tkc49.jpg');"}
-          %span.dojo-name 細谷財団
-      %ul.tags
-        %li 兵庫県
-        %li 西宮市
-        %li 芦屋市
-        %li 神戸市
-      %p 現在小さく実験的に実施中。まずは上記のエリアが対象。
+      %p.dojo-description BRIDD 大手町
 
 .text-center
   %section.detail-introduction
-    %h2 お問い合わせ
+    %br
+    %h2{:style => "color: dimgray;"} お問い合わせ
+    %br
     %p
-      スペースを提供していただける企業を募集しております!
+      CoderDojo 向けに会場を提供してみませんか? 🤝
       %br
       もし興味がありましたら下記フォームよりご連絡ください 📨
+      %br
+      %br
 
     / Contact Form via Wufoo
     #contact
