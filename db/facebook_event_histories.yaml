@@ -4098,7 +4098,7 @@
 # 2020/01/01 - 2020/01/31
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/01/10 17:00
 - dojo_id: 203
   event_id:
@@ -4106,43 +4106,43 @@
   evented_at: 2020/01/12 09:30
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/01/12 10:00
 - dojo_id: 131
   event_id:
-  participants: 0
+  participants: 6
   evented_at: 2020/01/12 10:00
 - dojo_id: 12
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/01/12 10:30
 - dojo_id: 10
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/01/12 13:30
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/01/17 17:00
 - dojo_id: 191
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/01/18 14:00
 - dojo_id: 94
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/01/19 10:00
 - dojo_id: 86
   event_id:
-  participants: 0
+  participants: 3
   evented_at: 2020/01/19 10:30
 - dojo_id: 103
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/01/20 18:00
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/01/24 17:00
 - dojo_id: 229
   event_id:
@@ -4150,105 +4150,109 @@
   evented_at: 2020/01/25 13:00
 - dojo_id: 10
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/01/26 13:30
 
 # 2020/02/01 - 2020/02/29
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/02/07 17:00
 - dojo_id: 203
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/02/09 09:30
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 6
   evented_at: 2020/02/09 10:00
 - dojo_id: 12
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/02/09 10:30
 - dojo_id: 10
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/02/09 13:30
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/02/14 17:00
 - dojo_id: 94
   event_id:
-  participants: 0
+  participants: 3
   evented_at: 2020/02/16 10:00
 - dojo_id: 131
   event_id:
-  participants: 0
+  participants: 8
   evented_at: 2020/02/16 10:00
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/02/16 10:30
 - dojo_id: 86
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/02/16 10:30
 - dojo_id: 103
   event_id:
-  participants: 0
+  participants: 3
   evented_at: 2020/02/17 18:00
 - dojo_id: 10
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/02/23 13:30
 - dojo_id: 222
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/02/24 13:30
 
 # 2020/03/01 - 2020/03/31
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/03/06 17:00
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/03/08 10:00 #オンライン開催
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/03/13 17:00
 - dojo_id: 86
   event_id:
-  participants: 0
-  evented_at: 2020/03/15 13:00
+  participants: 6
+  evented_at: 2020/03/15 13:00 #オンライン開催
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/03/20 17:00
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/03/27 17:00
 
 # 2020/04/01 - 2020/04/30 全てリモート開催
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 3
+  evented_at: 2020/04/03 17:00
+- dojo_id: 6
+  event_id:
+  participants: 1
   evented_at: 2020/04/10 17:00
 - dojo_id: 23
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/04/12 10:00
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/04/12 10:00
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 3
   evented_at: 2020/04/17 17:00
 - dojo_id: 111
   event_id:
@@ -4256,29 +4260,29 @@
   evented_at: 2020/04/18 14:00
 - dojo_id: 222
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/04/18 14:00
 - dojo_id: 86
   event_id:
-  participants: 0
+  participants: 5
   evented_at: 2020/04/19 13:00
 - dojo_id: 6
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/04/24 17:00
 - dojo_id: 23
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/04/26 10:00
 
 # 2020/05/01 - 2020/05/31 全てリモート開催
 - dojo_id: 23
   event_id:
-  participants: 0
+  participants: 2
   evented_at: 2020/05/10 10:00
 - dojo_id: 25
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/05/10 10:00
 - dojo_id: 103
   event_id:
@@ -4286,13 +4290,35 @@
   evented_at: 2020/05/11 18:00
 - dojo_id: 86
   event_id:
-  participants: 0
+  participants: 4
   evented_at: 2020/05/17 13:00
 - dojo_id: 103
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/05/18 18:00
 - dojo_id: 103
   event_id:
-  participants: 0
+  participants: 1
   evented_at: 2020/05/25 18:00
+
+# 2020/06/01 - 2020/06/30
+- dojo_id: 25
+  event_id:
+  participants: 3
+  evented_at: 2020/06/14 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2020/06/14 10:30
+- dojo_id: 86
+  event_id:
+  participants: 3
+  evented_at: 2020/06/21 13:00 #オンライン開催
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2020/06/28 10:30
+- dojo_id: 103
+  event_id:
+  participants: 1
+  evented_at: 2020/06/29 19:00 #オンライン開催
