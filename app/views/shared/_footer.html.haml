@@ -1,41 +1,42 @@
 %footer#footer.footer-bottom.text-center
   %h2{:style => "line-height: 30px;"}
-    %a.footer-link{:href => "/"} ホーム
+    %a.footer-link{href: "/"} ホーム
     |
-    %a.footer-link{:href => "/kata"} Kata
+    %a.footer-link{href: "/kata"} Kata
     |
-    %a.footer-link{:href => "http://news.coderdojo.jp/"} News
+    %a.footer-link{href: "/#news"} News
     |
-    %a.footer-link{:href => "/docs"} 資料集
+    %a.footer-link{href: "/docs"} 資料集
     |
-    %a.footer-link{:href => "/charter"} 憲章
+    %a.footer-link{href: "/charter"} 憲章
     |
-    %a.footer-link{:href => "/teikan"} 定款
+    %a.footer-link{href: "/teikan"} 定款
     |
-    %a.footer-link{:href => "/stats"} 統計情報
+    %a.footer-link{href: "/stats"} 統計情報
     |
-    %a.footer-link{:href => "/sotechsha"} 公式ブック
+    %a.footer-link{href: "/sotechsha"} 公式ブック
     |
-    %a.footer-link{:href => "/privacy"} Privacy
+    %a.footer-link{href: "/privacy"} Privacy
     |
-    %a.footer-link{:href => "/podcasts"} Podcast
+    %a.footer-link{href: "/podcasts"} Podcast
   %h2
-    %a{:href => "http://news.coderdojo.jp/"}
-      %i.fa.fa-newspaper-o.fa-3x.fa-fw{"aria-hidden" => "true", :title => "News"}
-    /%a{:href => "https://github.com/coderdojo-japan"}
+    %a{href: "http://news.coderdojo.jp/", target: "_blank", rel: "external noopener"}
+      %i.fa.fa-newspaper-o.fa-3x.fa-fw{"aria-hidden" => "true", title: "News"}
+    /%a{href: "https://github.com/coderdojo-japan"} / GitHub は直後の文章でリンクがあるので省略
     / %i.fa.fa-github.fa-3x.fa-fw{"aria-hidden" => "true", :title => "GitHub"}
-    %a{:href => "https://www.facebook.com/coderdojo.jp/"}
-      %i.fa.fa-facebook.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Facebook"}
-    %a{:href => "https://twitter.com/CoderDojoJapan"}
-      %i.fa.fa-twitter.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Twitter"}
-    %a{:href => "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"}
-      %i.fa.fa-youtube.fa-3x.fa-fw{"aria-hidden" => "true", :title => "YouTube"}
-    %a{:href => "/podcasts"}
-      %i.fa.fa-podcast.fa-3x.fa-fw{"aria-hidden" => "true", :title => "Podcast"}
+    %a{href: "https://www.facebook.com/coderdojo.jp/", target: "_blank", rel: "external noopener"}
+      %i.fa.fa-facebook.fa-3x.fa-fw{"aria-hidden" => "true", title: "Facebook"}
+    %a{href: "https://twitter.com/CoderDojoJapan", target: "_blank", rel: "external noopener"}
+      %i.fa.fa-twitter.fa-3x.fa-fw{"aria-hidden" => "true", title: "Twitter"}
+    %a{href: "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA", target: "_blank", rel: "external noopener"}
+      %i.fa.fa-youtube.fa-3x.fa-fw{"aria-hidden" => "true", title: "YouTube"}
+    %a{href: "/podcasts", target: "_blank", rel: "external noopener"}
+      %i.fa.fa-podcast.fa-3x.fa-fw{"aria-hidden" => "true", title: "Podcast"}
   %p{style: "margin-bottom: 30px;"}
     本サイトのソースコードは
     %br.ignore-pc
-    %a.footer-link{:href => "https://github.com/coderdojo-japan/coderdojo.jp"} GitHub
+    %a.footer-link{href: "https://github.com/coderdojo-japan/coderdojo.jp",
+                   target: "_blank", rel: "external noopener"} GitHub
     上で公開されています。
   %p{style: "font-size: 90%; color: \#DDDDDD;"}
     Copyright &copy; 一般社団法人 CoderDojo Japan
