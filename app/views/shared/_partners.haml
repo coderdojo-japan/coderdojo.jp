@@ -1,46 +1,46 @@
 %section.detail-introduction.partners_logo.text-center
   %br
-  %h2{:style => "color: dimgray;"} 🤝 パートナー法人
+  %h2{style: "color: dimgray;"} 🤝 パートナー法人
   :javascript
     $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     })
 
-  %p{:style => "margin: 50px 0px 20px 0px;"}
+  %p{style: "margin: 50px 0px 20px 0px;"}
     様々な法人が CoderDojo の取り組みを支援しています。
     %br.ignore-sp<>
     パートナーシップの詳細は
-    %a{:href => "/partnership"}<>
+    %a{href: "/partnership"}<>
       %b コチラ
     から。
 
   %ul
-    %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', style: 'margin-bottom: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), 'https://coderdojo.jp/podcasts/8'
-    %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab 株式会社', style: 'margin-top: 20px; margin-bottom: 20px', height: '95px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発および活動資金の支援'), 'https://github.com/coderdojo-japan/coderdojo.jp#development-history--contributors'
+    %li= link_to image_tag('logos/case-shinjuku.png', alt: 'CASE Shinjuku', height: '110px', style: 'margin-bottom: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), '/podcasts/8', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/yasslab.png', alt: 'YassLab 株式会社', style: 'margin-top: 20px; margin-bottom: 20px', height: '95px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Web開発および活動資金の支援'), 'https://github.com/coderdojo-japan/coderdojo.jp#development-history--contributors', target: "_blank", rel: "external noopener"
     
-    %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/'
-    %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'https://osscafe.business.site/'
+    %li= link_to image_tag('logos/scrivito.png', alt: 'Scrivito', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Cloud-Based CMS の提供'), 'https://scrivito.com/', target: "_blank", rel: "external noopener"
+    %li= link_to image_tag("logos/osscafe.png", alt: "下北沢オープンソースCafe", style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドメイン代の支援'), 'https://osscafe.business.site/', target: "_blank", rel: "external noopener"
     
-    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), 'https://coderdojo.jp/podcasts/11'
-    %li= link_to image_tag('logos/cygames.png', alt: 'Cygames', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'PC寄贈に関する支援'), 'https://news.coderdojo.jp/2018/11/28/from-cygames-to-all-dojos-in-japan/'
+    %li= link_to image_tag('logos/mitoujr.png', alt: '未踏ジュニア', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金の継続的な支援'), '/podcasts/11', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/cygames.png', alt: 'Cygames', style: 'margin-top: 20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'PC寄贈に関する支援'), 'https://news.coderdojo.jp/2018/11/28/from-cygames-to-all-dojos-in-japan/', target: "_blank", rel: "noopener"
     
-    %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Newsサーバー代の支援'), 'https://ht79.info/'
-    %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://docs.esa.io/posts/239'
+    %li= link_to image_tag('logos/ht79.png', alt: 'NPO法人のためのIT支援事務所 ht', height: '110px', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Newsサーバー代の支援'), 'https://ht79.info/', target: "_blank", rel: "external noopener"
+    %li= link_to image_tag('logos/esa.png', alt: 'esa LLC', style: 'margin: 20px 0', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ドキュメント共有サービスの提供'), 'https://docs.esa.io/posts/239', target: "_blank", rel: "external noopener"
     
-    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/'
-    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', height: '100px', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/'
+    %li= link_to image_tag('logos/sakura-internet.png', alt: 'さくらインターネット', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'サーバー環境（クラウド）の提供'), 'https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/', target: "_blank", rel: "external noopener"
+    %li= link_to image_tag('logos/hay-kaikei.png', alt: 'Hay未来の税理士法人', height: '100px', style: 'margin-top: 30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'CoderDojo Japan の会計支援'), 'http://www.hay-kaikei.com/', target: "_blank", rel: "external noopener"
     
-    %li= link_to image_tag('logos/topsic.png', alt: 'TOPSIC', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://news.coderdojo.jp/2019/07/30/play-and-learn-with-programming-contest/'
-    %li= link_to image_tag('logos/progate.png', alt: 'Progate', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://news.coderdojo.jp/2018/10/29/プログラミング学習のprogate、全国のcoderdojoへ法人プラン/'
+    %li= link_to image_tag('logos/topsic.png', alt: 'TOPSIC', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://news.coderdojo.jp/2019/07/30/play-and-learn-with-programming-contest/', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/progate.png', alt: 'Progate', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'プログラミング学習環境の支援'), 'https://news.coderdojo.jp/2018/10/29/プログラミング学習のprogate、全国のcoderdojoへ法人プラン/', target: "_blank", rel: "noopener"
 
-    %li= link_to image_tag('logos/algolia.png', alt: 'Algolia', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '検索エンジン DocSearch の提供'), 'https://community.algolia.com/docsearch/'
-    %li= link_to image_tag('logos/facebook.png', alt: 'Facebook Japan', style: 'margin-top: -10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Facebookページの運用支援'), 'http://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/'
+    %li= link_to image_tag('logos/algolia.png', alt: 'Algolia', style: 'margin-top: 10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '検索エンジン DocSearch の提供'), 'https://community.algolia.com/docsearch/', target: "_blank", rel: "external noopener"
+    %li= link_to image_tag('logos/facebook.png', alt: 'Facebook Japan', style: 'margin-top: -10px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Facebookページの運用支援'), 'http://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/', target: "_blank", rel: "noopener"
 
-    %li= link_to image_tag('logos/code-for-everyone.png', alt: 'みんなのコード', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '学校との連携支援'), 'https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/'
-    %li= link_to image_tag('logos/techsoup-japan.png', alt: 'TechSoup Japan', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'G Suite などの寄贈申請の支援'), 'https://news.coderdojo.jp/2019/03/03/google-for-nonprofits-via-techsoup-japan/'
+    %li= link_to image_tag('logos/code-for-everyone.png', alt: 'みんなのコード', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '学校との連携支援'), 'https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/techsoup-japan.png', alt: 'TechSoup Japan', style: 'margin-top: 5px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'G Suite などの寄贈申請の支援'), 'https://news.coderdojo.jp/2019/03/03/google-for-nonprofits-via-techsoup-japan/', target: "_blank", rel: "noopener"
 
-    %li= link_to image_tag('logos/github.png', alt: 'GitHub', style: 'margin-top: -20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'GitHub for Nonprofit の提供'), 'https://news.coderdojo.jp/2019/08/29/github-for-nonprofit/'
-    %li= link_to image_tag('logos/wro.png', alt: 'WRO Japan', style: 'margin-top: -30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ロボットキットの提供'), 'https://news.coderdojo.jp/2019/12/21/wro-japan-and-coderdojo-japan/'
+    %li= link_to image_tag('logos/github.png', alt: 'GitHub', style: 'margin-top: -20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'GitHub for Nonprofit の提供'), 'https://news.coderdojo.jp/2019/08/29/github-for-nonprofit/', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/wro.png', alt: 'WRO Japan', style: 'margin-top: -30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'ロボットキットの提供'), 'https://news.coderdojo.jp/2019/12/21/wro-japan-and-coderdojo-japan/', target: "_blank", rel: "noopener"
 
-    %li= link_to image_tag('logos/hackforplay.png', alt: 'HackforPlay', style: 'margin-top: -20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '法人向け HackforPlay の提供'), 'https://news.coderdojo.jp/2020/04/06/hackforplay-for-team/'
-    %li= link_to image_tag('logos/google.png', alt: 'Google', style: 'margin-top: -30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金に対する支援'), 'https://news.coderdojo.jp/2019/11/13/google-and-coderdojo-join-forces-in-japan/'
+    %li= link_to image_tag('logos/hackforplay.png', alt: 'HackforPlay', style: 'margin-top: -20px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '法人向け HackforPlay の提供'), 'https://news.coderdojo.jp/2020/04/06/hackforplay-for-team/', target: "_blank", rel: "noopener"
+    %li= link_to image_tag('logos/google.png', alt: 'Google', style: 'margin-top: -30px', data: { toggle: 'tooltip', placement: 'bottom' }, title: '活動資金に対する支援'), 'https://news.coderdojo.jp/2019/11/13/google-and-coderdojo-join-forces-in-japan/', target: "_blank", rel: "noopener"

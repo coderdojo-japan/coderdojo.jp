@@ -32,7 +32,7 @@
               frameborder: "0", marginheight: "0", marginwidth: "0", scrolling: "no", src: "https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&loop=false", width: "595", height: "350"}
     %div{style: "margin-bottom:5px; color: grey;"}
       スライドが見えない場合は
-      %a{href: "https://bit.ly/coderdojo-guidance-2019", target: "_blank", title: "CoderDojo ガイダンス <一般・ボランティア向け資料>"}<>
+      %a{href: "https://bit.ly/coderdojo-guidance-2019", target: "_blank", rel: "external noopener", title: "CoderDojo ガイダンス <一般・ボランティア向け資料>"}<>
         コチラ
   %p{style: "margin-top: 60px;"}
     さらに詳しい様子については、
@@ -43,13 +43,13 @@
             src: "https://www.youtube.com/embed/gLDue2xb1j8?rel=0"}
   %ul{style: "margin-bottom:30px;"}
     %li
-      %a{href: "http://bakemono.jp/reading/blog/web/2256/"} CoderDojoとは? 運営者に話を聞いてみた!
+      %a{href: "http://bakemono.jp/reading/blog/web/2256/", target: "_blank", rel: "external noopener"} CoderDojoとは? 運営者に話を聞いてみた!
       (バケモノ.jp)
     %li
-      %a{href: "http://ict-enews.net/zoomin/17coderdojo/"} CoderDojoをはじめてみませんか
+      %a{href: "http://ict-enews.net/zoomin/17coderdojo/", target: "_blank", rel: "external noopener"} CoderDojoをはじめてみませんか
       (ICT教育ニュース)
     %li
-      %a{href: "https://takadanobaba.keizai.biz/column/1/"} CoderDojo Japan 特集インタビュー
+      %a{href: "https://takadanobaba.keizai.biz/column/1/", target: "_blank", rel: "external noopener"} CoderDojo Japan 特集インタビュー
       (高田馬場経済新聞)
   = render partial: 'shared/social_buttons'
   %br
@@ -64,7 +64,7 @@
 
   %p
     4月7日 (土) に
-    %a{href: "https://coderdojo-tachikawa.connpass.com/event/81311/"} でかドージョー in 多摩地域
+    %a{href: "https://coderdojo-tachikawa.connpass.com/event/81311/", target: "_blank", rel: "external noopener"} でかドージョー in 多摩地域
     が開催されます! ぜひご参加ください ;)
 
 
@@ -74,7 +74,7 @@
   %br
   %p{style: "margin: 0 30px 40px 30px;"}
     近くの道場を探してみましょう！
-    %a{href: "https://zen.coderdojo.com/find"}<>
+    %a{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
       %b 地図から探す
     こともできます。
     %br.ignore-sp<>
@@ -90,11 +90,12 @@
 %section#timeline.text-center
   %br
   %h3.text-center
-    %a{href: "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", target: "_blank"} 🐣 最近の CoderDojo
+    %a{href: "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", target: "_blank", rel: "external noopener"} 🐣 最近の CoderDojo
   %br
-  %a.twitter-timeline{href: "https://twitter.com/CoderDojoJapan", 'data-lang' => "ja",
-                      "data-chrome" => "noheader nofooter noborders", "data-dnt" => "true",
-                      "data-width" => "500", "data-tweet-limit" => "5"} @CoderDojoJapan アカウントのタイムライン
+  %a.twitter-timeline{href: "https://twitter.com/CoderDojoJapan", target: "_blank",
+                      rel: "external noopener", 'data-lang' => "ja", "data-dnt" => "true",
+                      "data-chrome" => "noheader nofooter noborders", "data-width" => "500",
+                      "data-tweet-limit" => "5"} @CoderDojoJapan アカウントのタイムライン
   %script{async: "", await: "", src: "https://platform.twitter.com/widgets.js", charset: "utf-8"}
 
 .text-center.grayscale-bg
@@ -109,7 +110,8 @@
       、
       %a{href: "#news"}<> Newsletter
       \ や
-      %a{href: "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"}< YouTube
+      %a{href: "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA",
+         target: "_blank", rel: "external noopener"}< YouTube
       \ など、様々な方法で CoderDojo に関する情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
     %ul{style: "list-style: none;"}
       %li
@@ -119,22 +121,29 @@
       %li
         %a{href: "#news"} 📰 DojoLetter (Newsletter)
       %li
-        %a{href: "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA"} 📺 DojoChannel (YouTube)
+        %a{href: "https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA",
+           target: "_blank", rel: "external noopener"} 📺 DojoChannel (YouTube)
       %li
-        %a{href: "https://twitter.com/CoderDojoJapan"} 📣 CoderDojo Japan (Twitter)
+        %a{href: "https://twitter.com/CoderDojoJapan",
+           target: "_blank", rel: "external noopener"} 📣 CoderDojo Japan (Twitter)
       %li
-        %a{href: "https://www.facebook.com/groups/coderdojo.jp"} 👤 CoderDojo Japan (Facebook)
+        %a{href: "https://www.facebook.com/groups/coderdojo.jp",
+           target: "_blank", rel: "external noopener"} 👤 CoderDojo Japan (Facebook)
       %li
-        %a{href: "https://coderdojo.com/"} 🌐 CoderDojo Foundation (海外)
+        %a{href: "https://coderdojo.com/",
+           target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation (海外)
     %br
     %p
       %a{href: "/kata"} Kata
       では運営に役立つ情報を、
-      %a{href: "https://twitter.com/CoderDojoJapan"}<> Twitter
+      %a{href: "https://twitter.com/CoderDojoJapan",
+         target: "_blank", rel: "external noopener"}<> Twitter
       \ や
-      %a{href: "https://www.facebook.com/groups/coderdojo.jp"}< Facebook
+      %a{href: "https://www.facebook.com/groups/coderdojo.jp",
+         target: "_blank", rel: "external noopener"}< Facebook
       では最近の活動を、
-      %a{href: "https://coderdojo.com/"}<> CoderDojo Foundation
+      %a{href: "https://coderdojo.com/",
+         target: "_blank", rel: "external noopener"}<> CoderDojo Foundation
       \ からは海外の雰囲気を知ることができます。
     %br
     %p
@@ -176,7 +185,8 @@
   / Contact Form via Wufoo
   #contact
   #wufoo-qkjthoy0qpuvg9{style: "margin-top: -10px"}
-    %a{href: "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9"}> 問い合わせフォーム
+    %a{href: "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9",
+       target: "_blank", rel: "external noopener"}> 問い合わせフォーム
   :javascript
     var qkjthoy0qpuvg9;(function(d, t) {
     var s = d.createElement(t), options = {
