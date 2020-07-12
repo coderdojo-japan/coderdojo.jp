@@ -1,8 +1,8 @@
 %li.dojo
   %header
-    %a{:href => "#{dojo.url}"}
+    %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
       %span.dojo-picture{style: "background-image: url(#{dojo.logo});"}
-    %a{:href => "#{dojo.url}"}
+    %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
       %span.dojo-name
         = "#{dojo.name} (#{dojo.prefecture.name}) "
         - if not dojo.counter == 1
