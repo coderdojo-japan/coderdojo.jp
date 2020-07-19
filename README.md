@@ -150,9 +150,9 @@ Also this website uses icons created by [Font Awesome](http://fontawesome.io/), 
 
 Thanks for their great works to make this app published! :sparkling_heart: 
 
-### About Texts
+### About Texts in Kata
 
-The texts, such as [Top](https://coderdojo.jp/) and [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed) license. But the texts do NOT include images, slides, and external websites linked from [coderdojo.jp](https://coderdojo.jp/). Please make sure to check their licenses and copyrights if you are interested in.
+The texts in [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed) license. But the texts do NOT include images, slides, and external websites linked from [coderdojo.jp](https://coderdojo.jp/). Please make sure to check their licenses and copyrights if you are interested in.
 
 ### About Logos and Photos
 
