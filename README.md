@@ -130,6 +130,11 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 
 ## License
 
+This web application is developed with many other brilliant works!   
+Check out the followings if you are interested in. :wink:
+
+### About Scrivito
+
 Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3.0, the author allows us to put MIT license. 😆✨
 
 > Sorry for the late reply, I wanted to confer with our team.   
@@ -137,7 +142,26 @@ Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LG
 
 So, this application can be used and modified under the MIT License! 🆗
 
-### The MIT License (MIT)
+### About Libraries and Icons
+
+The libraries like [RubyGems](https://rubygems.org/) used in this web application have their own licenses. Say, this website uses [Bootstrap](https://getbootstrap.jp/), created by Twitter licensed under the [MIT License](http://opensource.org/licenses/MIT).
+
+Also this website uses icons created by [Font Awesome](http://fontawesome.io/), licensed under SIL OFL 1.1, and [Twemoji](https://github.com/twitter/twemoji), created by Twitter, licensed under the [MIT License](http://opensource.org/licenses/MIT).
+
+Thanks for their great works to make this app published! :sparkling_heart: 
+
+### About Texts
+
+The texts, such as [Top](https://coderdojo.jp/) and [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed) license. But the texts do NOT include images, slides, and links to the external websites. Please make sure to check their licenses and copyrights if you are interested in.
+
+### About Logos and Photos
+
+The images, including logos and photos in [Top page](http://coderdojo.jp/), are not published under the following License. Contact the owner of them before using them. :relieved: 
+
+### About Source Codes
+
+The source codes, such as HTML/CSS/JavaScript and Ruby not declared before, **The MIT License (MIT)**.   
+Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
 
 Copyright &copy; 2012-2020 [CoderDojo Japan Association](https://coderdojo.jp/)
 
@@ -146,7 +170,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-### About ICON
-
-The icons used in the website are created by [Font Awesome](http://fontawesome.io/), licensed under SIL OFL 1.1.
