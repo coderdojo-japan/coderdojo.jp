@@ -156,7 +156,7 @@ The texts in [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC
 
 ### About Logos and Photos
 
-The images, including logos and photos in [Top page](http://coderdojo.jp/), are not published under the following License. Contact the owner of them before using them. :relieved: 
+The images, including logos and photos in [Top page](http://coderdojo.jp/), are not published under the following License. Contact its owner, like the maintainer of linked external website, before using them. :relieved: 
 
 ### About Source Codes
 
