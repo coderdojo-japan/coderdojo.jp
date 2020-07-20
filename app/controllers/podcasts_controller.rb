@@ -4,7 +4,7 @@ class PodcastsController < ApplicationController
     @description     = 'Highlight people around CoderDojo community by Podcast.'
     @episodes        = SoundCloudTrack.order(:published_date).reverse
     @url             = request.url
-    @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] || false
+    @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] == 'true'
 
     # For .rss format
     @art_work_url    = "https://coderdojo.jp/podcasts/cover.jpg"
