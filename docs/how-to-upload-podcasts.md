@@ -17,7 +17,7 @@ DojoCast に新しい Podcast を追加する方法 (2019/05/01現在)
 
 4. (任意) もし `SoundCloud::ResponseError: HTTP status: 401 Unauthorized` と表示されたら、[コチラ]((https://stackoverflow.com/questions/40992480/getting-a-soundcloud-api-client-id))の記事を参考に API Key を更新する
    - A. [任意のトラック](https://soundcloud.com/coderdojo-japan/dojocast-12) に行く
-   - Developers Console -> Network にタブを切り替え、 ダウンロードを押下し、`client_id` を取得する
+   - Developers Console -> Network にタブを切り替え、更新をクリックし、`client_id` を取得する
    - https://api-v2.soundcloud.com/tracks/721049914/download?client_id=THIS_IS_YOUR_CLIENT_ID
 5. **`soundcloud_tracks` のレコード ID を使って、`x.md` を作成して配置する**
    - `3.` で確認した新規 soundcloud_track レコード ID を元に、 `public/podcasts/episode_template/index.md` のテンプレートを使って `<ID>.md` を作成し、 `public/podcasts/` に配置する。
