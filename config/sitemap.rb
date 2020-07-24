@@ -13,7 +13,6 @@ SitemapGenerator::Sitemap.create do
   # Defaults: :priority => 0.5, :changefreq => 'weekly',
   #           :lastmod => Time.now, :host => default_host
 
-  add root_path,        priority: 0.9
   add events_path,      priority: 0.8
   add '/kata',          priority: 0.8
   add partnership_path, priority: 0.7
