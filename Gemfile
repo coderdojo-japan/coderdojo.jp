@@ -49,6 +49,9 @@ gem 'soundcloud'
 # For RSS feed
 gem 'ruby-mp3info', :require => 'mp3info'
 
+# For Sitemap (Google Search Console)
+gem 'sitemap_generator'
+
 group :development do
   gem 'web-console'
   gem 'spring'
