@@ -6,9 +6,9 @@
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
   %li{:style => "display: inline-block;"}
-    %a.hatena-bookmark-button{"data-hatena-bookmark-lang" => "ja", "data-hatena-bookmark-layout" => "basic-label-counter", "data-hatena-bookmark-title" => "#{full_title(yield(:title))}", href: "#{full_url(yield(:url))}", title: "このエントリーをはてなブックマークに追加"}
+    %a.hatena-bookmark-button{"data-hatena-bookmark-lang" => "ja", "data-hatena-bookmark-layout" => "basic-counter", "data-hatena-bookmark-title" => "#{full_title(yield(:title))}", href: "#{full_url(yield(:url))}", title: "このエントリーをはてなブックマークに追加"}
       %img{alt: "このエントリーをはてなブックマークに追加", height: "20", src: "https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png", style: "border: none;", width: "20"}/
     %script{async: "async", charset: "utf-8", src: "https://b.st-hatena.com/js/bookmark_button.js", type: "text/javascript"}
-  %li{:style => "display: inline-block;"}
-    %div.line-it-button{"data-lang" => "ja", "data-type" => "like", "data-url" => "#{full_url(yield(:url))}", style: "display: none;"}
-    %script{async: "async", defer: "defer", src: "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"}
+  /%li{:style => "display: inline-block;"}
+  /  %div.line-it-button{"data-lang" => "ja", "data-type" => "like", "data-url" => "#{full_url(yield(:url))}", style: "display: none;"}
+  /  %script{async: "async", defer: "defer", src: "https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"}
