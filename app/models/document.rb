@@ -9,6 +9,14 @@ class Document
         self.new(File.basename(filename, '.*'))
       end
     end
+
+    def first
+      self.all.first
+    end
+
+    def last
+      self.all.last
+    end
   end
 
   def initialize(filename)
