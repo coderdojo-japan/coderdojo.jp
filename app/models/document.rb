@@ -33,7 +33,7 @@ class Document
     data = JSON.parse(json)
 
     # This is the latest commit date in /db/docs directory
-    data.first['commit']['committer']['date']
+    data.first['commit']['committer']['date'].gsub('Z', "+09:00")
 
 
     # TODO: This does NOT work because of Heroku FS boundary:
