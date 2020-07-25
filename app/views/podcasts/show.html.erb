@@ -14,18 +14,18 @@
 <div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
   <p class="nav prev">
     <% if @episode.exists?(offset: -1) %>
-      <a href="/podcasts/<%= @episode.id - 1 %>">&larr; prev</a>
+      <%= link_to '&larr; prev'.html_safe, podcast_path(@episode.id - 1) %>
     <% else %>
-      <a href="/podcasts">&larr; Top</a>
+      <%= link_to '&larr; Top'.html_safe, podcasts_path %>
     <% end %>
   </p>
   <p class="nav toc" >
     <a href="/podcasts">DojoCast</a></p>
   <p class="nav next">
     <% if @episode.exists?(offset: +1) %>
-      <a href="/podcasts/<%= @episode.id + 1 %>">next &rarr;</a>
+      <%= link_to 'next &rarr;'.html_safe, podcast_path(@episode.id + 1) %>
     <% else %>
-      <a href="/podcasts">Top &rarr;</a>
+      <%= link_to 'Top &rarr;'.html_safe, podcasts_path %>
     <% end %>
   </p>
 </div>
