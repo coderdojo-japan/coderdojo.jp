@@ -28,13 +28,20 @@ class Document
   end
 
   def updated_at
-    uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=db/docs/&per_page=1")
-    json = Net::HTTP.get(uri)
-    data = JSON.parse(json)
+    begin
+      # Return dummy data to save calling GitHub API
+      return "2020-02-02T12:34:56+09:00" unless Rails.env.production?
 
-    # This is the latest commit date in /db/docs directory
-    data.first['commit']['committer']['date'].gsub('Z', "+09:00")
+      # Call GitHub API in Production
+      uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=db/docs/&per_page=1")
+      json = Net::HTTP.get(uri)
+      data = JSON.parse(json)
 
+      data.first['commit']['committer']['date'].gsub('Z', "+09:00")
+    rescue
+      # Return dummy data if calling GitHub API failed
+      "2020-02-02T12:34:56+09:00"
+    end
 
     # TODO: This does NOT work because of Heroku FS boundary:
     # > fatal: not a git repository (or any parent up to mount point /)
