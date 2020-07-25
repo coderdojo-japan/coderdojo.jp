@@ -43,7 +43,7 @@ gem 'rack-attack'
 gem 'google_drive'
 gem 'lazy_high_charts'
 
-# For SoundCloud
+# To fetch Podcast records from SoundCloud
 gem 'soundcloud'
 
 # For RSS feed
