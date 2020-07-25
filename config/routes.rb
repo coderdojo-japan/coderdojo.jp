@@ -16,8 +16,6 @@ Rails.application.routes.draw do
 
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                to: redirect('https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA')
-  get "/podcast",                to: redirect('/podcasts')
-  get "/podcasts/feed"    => "podcasts#feed"
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/partner",         to: redirect('/partnership')
@@ -30,7 +28,9 @@ Rails.application.routes.draw do
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
 
-  get "/stats"      => "stats#show"
+  get "/podcast",         to: redirect('/podcasts')
+  get "/podcasts/feed"    => "podcasts#feed"
+  get "/stats"            => "stats#show"
   # TODO: Need to investigate why the following code calls Scrivito.
   #       Hotfix with the code above that works correctly.
   #resources :stats,  only: %i(show)

@@ -2,7 +2,6 @@ class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
 
   DIR_PATH  = 'public/podcasts'
-  URL_PATH  = 'podcasts'
 
   validates :track_id,              presence: true, uniqueness: true
   validates :title,                 presence: true
@@ -17,10 +16,6 @@ class Podcast < ApplicationRecord
   # instance methods
   def path
     "#{DIR_PATH}/#{id}.md"
-  end
-
-  def url
-    "/#{URL_PATH}/#{id}"
   end
 
   def exists?(offset: 0)

@@ -53,7 +53,7 @@
     <h3 id="episodes" style="text-align: center; padding-bottom: 10px;">📻 これまでの収録</h3>
     <ul style="font-size: 120%">
       <% @episodes.each do |episode| %>
-        <li><%= link_to episode.title, episode.url %></li>
+	<li><%= link_to episode.title, podcast_path(episode) %></li>
       <% end %>
     </ul>
   </section>
