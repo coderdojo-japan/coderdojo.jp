@@ -8,6 +8,8 @@
 /.bundle
 vendor/bundle
 /.idea
+public/sitemap.xml.gz
+public/sitemap.xml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
