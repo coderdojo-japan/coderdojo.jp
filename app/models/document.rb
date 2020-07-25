@@ -19,6 +19,11 @@ class Document
     "#{DIR_PATH}/#{self.filename}.md"
   end
 
+  def updated_at
+    Time.at(%x(git --no-pager log -1 --format=%ct "#{self.path}").to_i)
+        .utc.strftime "%Y-%m-%dT%H:%M:%SZ"
+  end
+
   def url
     "/#{URL_PATH}/#{self.filename}"
   end
