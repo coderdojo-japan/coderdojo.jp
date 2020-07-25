@@ -13,12 +13,17 @@ SitemapGenerator::Sitemap.create do
   # Defaults: :priority => 0.5, :changefreq => 'weekly',
   #           :lastmod => Time.now, :host => default_host
 
-  add events_path,      priority: 0.8
-  add '/kata',          priority: 0.8
-  add partnership_path, priority: 0.7
-  add stats_path,       priority: 0.7
-  add charter_path,     priority: 0.6
+  add events_path,      priority: 0.9
+  add '/kata',          priority: 0.9
+  add partnership_path, priority: 0.8
+  add stats_path,       priority: 0.8
+  add charter_path,     priority: 0.7
+
   add podcasts_path,    priority: 0.6
+  Podcast.find_each do |episode|
+    add podcast_path(episode), lastmod: episode.updated_at, priority: 0.6
+  end
+
   add docs_path,        priority: 0.5
   add teikan_path,      priority: 0.5
   add privacy_path,     priority: 0.5
