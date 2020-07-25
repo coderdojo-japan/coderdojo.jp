@@ -25,8 +25,12 @@ SitemapGenerator::Sitemap.create do
   end
 
   add docs_path,        priority: 0.5
-  add teikan_path,      priority: 0.5
-  add privacy_path,     priority: 0.5
+  Document.all.each do |doc|
+    add doc.url, lastmod: doc.updated_at, priority: 0.5
+  end
+
+  add teikan_path,      priority: 0.4
+  add privacy_path,     priority: 0.4
 
 
   # Examples:
