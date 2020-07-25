@@ -1,11 +1,11 @@
 require 'rails_helper'
 require 'rake'
 
-RSpec.describe 'soundcloud_tracks', soundcloud: true do
+RSpec.describe 'podcasts', podcast: true do
   before(:all) do
     @rake = Rake::Application.new
     Rake.application = @rake
-    Rake.application.rake_require 'tasks/soundcloud_tracks'
+    Rake.application.rake_require 'tasks/podcasts'
     Rake::Task.define_task(:environment)
   end
 
@@ -17,14 +17,14 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
     (duration.to_time.to_i - Time.zone.today.to_time.to_i) * 1000
   end
 
-  describe 'soundcloud_tracks:upsert' do
+  describe 'podcasts:upsert' do
     before :each do
-      @sct_1 = create(:soundcloud_track, track_id: 111001, title: 'podcast 001', duration: '00:16:40', permalink: 'podcast-001')
-      @sct_2 = create(:soundcloud_track, track_id: 111002, title: 'podcast 002', duration: '00:33:20', permalink: 'podcast-002', published_date: '2018-07-01'.to_date)
-      @sct_3 = create(:soundcloud_track, track_id: 111003, title: 'podcast 003', duration: '00:50:00', permalink: 'podcast-003')
+      @sct_1 = create(:podcast, track_id: 111001, title: 'podcast 001', duration: '00:16:40', permalink: 'podcast-001')
+      @sct_2 = create(:podcast, track_id: 111002, title: 'podcast 002', duration: '00:33:20', permalink: 'podcast-002', published_date: '2018-07-01'.to_date)
+      @sct_3 = create(:podcast, track_id: 111003, title: 'podcast 003', duration: '00:50:00', permalink: 'podcast-003')
     end
 
-    let(:task) { 'soundcloud_tracks:upsert' }
+    let(:task) { 'podcasts:upsert' }
 
     it '単純追加(Release date あり)' do
       allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
@@ -53,15 +53,15 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
-      before_ids = SoundCloudTrack.ids
+      expect(Podcast.count).to eq(3)
+      before_ids = Podcast.ids
 
       # exec
       expect(@rake[task].invoke).to be_truthy
 
       # after
-      expect(SoundCloudTrack.count).to eq(4)
-      new_records = SoundCloudTrack.where.not(id: before_ids)
+      expect(Podcast.count).to eq(4)
+      new_records = Podcast.where.not(id: before_ids)
       expect(new_records.count).to eq(1)
 
       expect(new_records.first.track_id).to eq(123456001)
@@ -105,14 +105,14 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
+      expect(Podcast.count).to eq(3)
 
       # exec
       expect(@rake[task].invoke).to be_truthy
 
       # after
-      expect(SoundCloudTrack.count).to eq(3)
-      mod_record = SoundCloudTrack.find_by(track_id: @sct_2.track_id)
+      expect(Podcast.count).to eq(3)
+      mod_record = Podcast.find_by(track_id: @sct_2.track_id)
       expect(mod_record.title).to eq('podcast title 002')
       expect(mod_record.description).to eq('podcast 説明 002')
       expect(mod_record.duration).to eq(Time.at(6000000/1000).utc.strftime('%H:%M:%S'))
@@ -143,15 +143,15 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
-      before_ids = SoundCloudTrack.ids
+      expect(Podcast.count).to eq(3)
+      before_ids = Podcast.ids
 
       # exec
       expect { @rake[task].invoke }.to raise_error('No Release Date')
 
       # after
-      expect(SoundCloudTrack.count).to eq(3)
-      new_records = SoundCloudTrack.where.not(id: before_ids)
+      expect(Podcast.count).to eq(3)
+      new_records = Podcast.where.not(id: before_ids)
       expect(new_records.count).to eq(0)
     end
 
@@ -179,14 +179,14 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
+      expect(Podcast.count).to eq(3)
 
       # exec
       expect { @rake[task].invoke }.to raise_error('No Release Date')
 
       # after
-      expect(SoundCloudTrack.count).to eq(3)
-      mod_record = SoundCloudTrack.find_by(track_id: @sct_2.track_id)
+      expect(Podcast.count).to eq(3)
+      mod_record = Podcast.find_by(track_id: @sct_2.track_id)
       expect(mod_record.title).to eq('podcast 002')
       expect(mod_record.duration).to eq('00:33:20')
       expect(mod_record.published_date).to eq('2018-07-01'.to_date)
@@ -251,32 +251,32 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
-      before_ids = SoundCloudTrack.ids
+      expect(Podcast.count).to eq(3)
+      before_ids = Podcast.ids
 
       # exec
       expect(@rake[task].invoke).to be_truthy
 
       # after
-      expect(SoundCloudTrack.count).to eq(4)
-      new_records = SoundCloudTrack.where.not(id: before_ids)
+      expect(Podcast.count).to eq(4)
+      new_records = Podcast.where.not(id: before_ids)
       expect(new_records.count).to eq(1)
       expect(new_records.first.track_id).to eq(123456001)
       expect(new_records.first.published_date).to eq('2019-08-02'.to_date)
 
-      after_sct_1 = SoundCloudTrack.find_by(id: @sct_1.id)
+      after_sct_1 = Podcast.find_by(id: @sct_1.id)
       expect(after_sct_1.track_id).to eq(111001)
       expect(after_sct_1.title).to eq('podcast 001 mod')
       expect(calc_duration(after_sct_1.duration)).to eq(1000000)
       expect(after_sct_1.published_date).to eq('2019-08-03'.to_date)
 
-      after_sct_2 = SoundCloudTrack.find_by(id: @sct_2.id)
+      after_sct_2 = Podcast.find_by(id: @sct_2.id)
       expect(after_sct_2.track_id).to eq(111002)
       expect(after_sct_2.title).to eq('podcast 002 mod')
       expect(calc_duration(after_sct_2.duration)).to eq(2000000)
       expect(after_sct_2.published_date).to eq('2019-08-01'.to_date)
 
-      after_sct_3 = SoundCloudTrack.find_by(id: @sct_3.id)
+      after_sct_3 = Podcast.find_by(id: @sct_3.id)
       expect(after_sct_3.track_id).to eq(111003)
       expect(after_sct_3.title).to eq('podcast 003 mod')
       expect(calc_duration(after_sct_3.duration)).to eq(3000000)
@@ -339,30 +339,30 @@ RSpec.describe 'soundcloud_tracks', soundcloud: true do
       )
 
       # before
-      expect(SoundCloudTrack.count).to eq(3)
-      before_ids = SoundCloudTrack.ids
+      expect(Podcast.count).to eq(3)
+      before_ids = Podcast.ids
 
       # exec
       expect { @rake[task].invoke }.to raise_error('No Release Date')
 
       # after
-      expect(SoundCloudTrack.count).to eq(3)
-      new_records = SoundCloudTrack.where.not(id: before_ids)
+      expect(Podcast.count).to eq(3)
+      new_records = Podcast.where.not(id: before_ids)
       expect(new_records.count).to eq(0)
 
-      after_sct_1 = SoundCloudTrack.find_by(id: @sct_1.id)
+      after_sct_1 = Podcast.find_by(id: @sct_1.id)
       expect(after_sct_1.track_id).to eq(111001)
       expect(after_sct_1.title).to eq('podcast 001')
       expect(calc_duration(after_sct_1.duration)).to eq(1000000)
       expect(after_sct_1.published_date).to eq(Time.zone.today)
 
-      after_sct_2 = SoundCloudTrack.find_by(id: @sct_2.id)
+      after_sct_2 = Podcast.find_by(id: @sct_2.id)
       expect(after_sct_2.track_id).to eq(111002)
       expect(after_sct_2.title).to eq('podcast 002')
       expect(calc_duration(after_sct_2.duration)).to eq(2000000)
       expect(after_sct_2.published_date).to eq('2018-07-01'.to_date)
 
-      after_sct_3 = SoundCloudTrack.find_by(id: @sct_3.id)
+      after_sct_3 = Podcast.find_by(id: @sct_3.id)
       expect(after_sct_3.track_id).to eq(111003)
       expect(after_sct_3.title).to eq('podcast 003')
       expect(calc_duration(after_sct_3.duration)).to eq(3000000)

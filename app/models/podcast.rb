@@ -1,5 +1,5 @@
-class SoundCloudTrack < ApplicationRecord
-  self.table_name = 'soundcloud_tracks'
+class Podcast < ApplicationRecord
+  self.table_name = 'podcasts'
 
   DIR_PATH  = 'public/podcasts'
   URL_PATH  = 'podcasts'

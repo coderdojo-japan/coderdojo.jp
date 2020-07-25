@@ -2,7 +2,7 @@ class PodcastsController < ApplicationController
   def index
     @title           = 'DojoCast'
     @description     = 'CoderDojo コミュニティに関わる方々をハイライトする Podcast です 📻✨'
-    @episodes        = SoundCloudTrack.order(:published_date).reverse
+    @episodes        = Podcast.order(:published_date).reverse
     @url             = request.url
     @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] == 'true'
 
@@ -19,7 +19,7 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    @episode = SoundCloudTrack.find_by(id: params[:id])
+    @episode = Podcast.find_by(id: params[:id])
     redirect_to root_url unless @episode.exists?
 
     @title   = "#DojoCast " + @episode.title

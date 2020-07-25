@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_21_020249) do
+ActiveRecord::Schema.define(version: 2020_07_25_095112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,14 +57,7 @@ ActiveRecord::Schema.define(version: 2020_06_21_020249) do
     t.index ["service_name", "event_id"], name: "index_event_histories_on_service_name_and_event_id", unique: true
   end
 
-  create_table "prefectures", force: :cascade do |t|
-    t.string "name"
-    t.string "region"
-    t.index ["name"], name: "index_prefectures_on_name", unique: true
-    t.index ["region"], name: "index_prefectures_on_region"
-  end
-
-  create_table "soundcloud_tracks", force: :cascade do |t|
+  create_table "podcasts", force: :cascade do |t|
     t.integer "track_id", null: false
     t.string "title", null: false
     t.text "description"
@@ -78,7 +71,14 @@ ActiveRecord::Schema.define(version: 2020_06_21_020249) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "published_date", null: false
-    t.index ["track_id"], name: "index_soundcloud_tracks_on_track_id", unique: true
+    t.index ["track_id"], name: "index_podcasts_on_track_id", unique: true
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name"
+    t.string "region"
+    t.index ["name"], name: "index_prefectures_on_name", unique: true
+    t.index ["region"], name: "index_prefectures_on_region"
   end
 
   create_table "upcoming_events", force: :cascade do |t|
