@@ -10,10 +10,6 @@ RSpec.describe Podcast, :type => :model do
     expect(@podcast.path).to eq("public/podcasts/#{@podcast.id}.md")
   end
 
-  it 'url' do
-    expect(@podcast.url).to eq("/podcasts/#{@podcast.id}")
-  end
-
   describe 'exists?(offset: 0)' do
     it '\u0000 を含む ⇒ false' do
       allow(@podcast).to receive(:path) { "public/podcasts/\u0000" }
