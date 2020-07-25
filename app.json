@@ -41,7 +41,7 @@
     "LETSENCRYPT_RESPONSE": {
       "required": true
     },
-    "NEXT_LIVE_DATE": {
+    "IS_LIVE_SCHEDULED": {
       "required": true
     },
     "RACK_ENV": "staging",
