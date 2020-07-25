@@ -1,4 +1,10 @@
 {
+  "name": "CoderDojo Japan - 子どものためのプログラミング道場",
+  "description": "Settings for Heroku Review Apps",
+  "keywords": ["Ruby", "Ruby on Rails", "CoderDojo"],
+  "website": "https://coderdojo.jp/",
+  "repository": "https://github.com/coderdojo-japan/coderdojo.jp",
+  "logo": "https://coderdojo.jp/logo.png",
   "addons": [
     "logentries",
     "heroku-postgresql",
@@ -9,7 +15,6 @@
       "url": "heroku/ruby"
     }
   ],
-  "description": "Settings for Heroku Review Apps",
   "env": {
     "BASIC_AUTH_NAME": {
       "required": true
