@@ -27,7 +27,7 @@ RSpec.describe 'podcasts', podcast: true do
     let(:task) { 'podcasts:upsert' }
 
     it '単純追加(Release date あり)' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => 123456001,
             'created_at'            => '2019/01/23 01:00:00 +0000',
@@ -79,7 +79,7 @@ RSpec.describe 'podcasts', podcast: true do
     end
 
     it '単純更新(Release date あり)' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => @sct_2.track_id,
             'created_at'            => '2019/01/23 01:00:00 +0000',
@@ -120,7 +120,7 @@ RSpec.describe 'podcasts', podcast: true do
     end
 
     it '単純追加(Release date なし) ⇒ エラー' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => 123456001,
             'created_at'            => '2019/01/23 01:00:00 +0000',
@@ -156,7 +156,7 @@ RSpec.describe 'podcasts', podcast: true do
     end
 
     it '単純更新(Release date なし) ⇒ エラー' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => @sct_2.track_id,
             'created_at'            => '2019/01/23 01:00:00 +0000',
@@ -193,7 +193,7 @@ RSpec.describe 'podcasts', podcast: true do
     end
 
     it '複数 (追加/更新)' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => @sct_2.track_id,
             'created_at'            => @sct_2.uploaded_at.to_s,
@@ -284,7 +284,7 @@ RSpec.describe 'podcasts', podcast: true do
     end
 
     it '複数 (追加/更新/Release date なし含む) ⇒ エラー' do
-      allow_any_instance_of(Podcast::Client).to receive(:get).and_return(
+      allow_any_instance_of(SoundCloud::Client).to receive(:get).and_return(
         [
           { 'id'                    => @sct_2.track_id,
             'created_at'            => @sct_2.uploaded_at.to_s,

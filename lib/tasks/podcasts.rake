@@ -7,7 +7,7 @@ namespace :podcasts do
 
     logger.info('==== START podcasts:upsert ====')
 
-    client = Podcast.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
+    client = SoundCloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'])
     tracks = client.get('/users/626746926/tracks', limit: 100).map(&:deep_symbolize_keys)
 
     if tracks.length.zero?
