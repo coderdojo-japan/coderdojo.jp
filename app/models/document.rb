@@ -28,8 +28,20 @@ class Document
   end
 
   def updated_at
-    Time.at(%x(git --no-pager log -1 --format=%ct "#{self.path}").to_i)
-        .utc.strftime "%Y-%m-%dT%H:%M:%SZ"
+    uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=db/docs/&per_page=1")
+    json = Net::HTTP.get(uri)
+    data = JSON.parse(json)
+
+    # This is the latest commit date in /db/docs directory
+    data.first['commit']['committer']['date']
+
+
+    # TODO: This does NOT work because of Heroku FS boundary:
+    # > fatal: not a git repository (or any parent up to mount point /)
+    # > <lastmod>1970-01-01T00:00:00Z</lastmod>
+    #
+    #Time.at(%x(git --no-pager log -1 --format=%ct "#{self.path}").to_i)
+    #    .utc.strftime "%Y-%m-%dT%H:%M:%SZ"
   end
 
   def url

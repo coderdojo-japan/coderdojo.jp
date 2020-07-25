@@ -25,8 +25,9 @@ SitemapGenerator::Sitemap.create do
   end
 
   add docs_path,        priority: 0.5
+  last_commit_date = Document.first.updated_at
   Document.all.each do |doc|
-    add doc.url, lastmod: doc.updated_at, priority: 0.5
+    add doc.url, lastmod: last_commit_date, priority: 0.5
   end
 
   add teikan_path,      priority: 0.4
