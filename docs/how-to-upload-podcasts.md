@@ -1,31 +1,24 @@
 # DojoCast への Podcast 追加方法
 
-DojoCast に新しい Podcast を追加する方法 (2019/05/01現在)
+DojoCast に新しい Podcast を追加する方法 (2020/07/26現在)
 
 ## 手順
 
 1. **mp3 データを準備する**
-   - _TODO: 音声の収録方法や必要な機材は別途記事としてまとめる_
-2. **SoundCloud に `1.` で準備した mp3 をアップロードする**
+   - 収録方法: [:tv: StreamYard で同時ライブ配信をカンタンに (実例解説付き)](https://note.com/yasulab/n/n9bfdd69a6b01)
+2. ** `1.` で収録準備した mp3 をダウンロードし、SoundCloud にアップロードする**
    - アップロード先: [https://soundcloud.com/coderdojo-japan/](https://soundcloud.com/coderdojo-japan/)
-3. **coderdojo.jp の Podcasts テーブルに SoundCloud のトラックデータを取り込む**
-   - 次の Rake タスクを実行し、SoundCloud にアップロードされている Podcast のトラックデータを coderdojo.jp のデータベースに取り込む。無事に取り込めると、Podcast のレコード ID が表示されます
+3. **Rake タスクを実行し、Podcasts テーブルに SoundCloud のトラックデータを取り込む**
 
    ```
    $ bundle exec rake podcasts:upsert
    ```
 
-4. (任意) もし `SoundCloud::ResponseError: HTTP status: 401 Unauthorized` と表示されたら、[コチラ]((https://stackoverflow.com/questions/40992480/getting-a-soundcloud-api-client-id))の記事を参考に API Key を更新する
-   - A. [任意のトラック](https://soundcloud.com/coderdojo-japan/dojocast-12) に行く
-   - Developers Console -> Network にタブを切り替え、更新をクリックし、`client_id` を取得する
-   - https://api-v2.soundcloud.com/tracks/721049914/download?client_id=THIS_IS_YOUR_CLIENT_ID
-5. **`podcasts` のレコード ID を使って、`x.md` を作成して配置する**
-   - `3.` で確認した新規 Podcast レコード ID を元に、 `public/podcasts/episode_template/index.md` のテンプレートを使って `<ID>.md` を作成し、 `public/podcasts/` に配置する。
-6. **開発環境の [localhost:3000/podcasts](http://localhost:3000/podcasts) から結果を確認する**
-   - 問題なければ GitHub に push し、CI を通してデプロイされるのを待つ
-7. **デプロイされたら、本番環境で Rake タスクを実行する**
-   - TODO: 現在はアクセス権限が必要。CI で毎回実行しても良さそう? 🤔💭
-   - `$ heroku run bundle exec rake podcasts:upsert`
-8. **本番環境にアクセスして新規エピソードが表示されることを確認する**
-   - 上記の一連の作業が無事完了すると、[https://coderdojo.jp/podcasts](https://coderdojo.jp/podcasts) から新規エピソードが公開されるようになります。
+4. **Markdown で Podcast のページを作成する**
+   - エピソードの概要を書き、`public/podcasts/#{episode.id}.md` に配置します
+5. **[localhost:3000/podcasts](http://localhost:3000/podcasts) から結果を確認する**
+   - 問題なければ GitHub に push し、CI を通してデプロイされるのを待ちます :relieve:
+6. **[coderdojo.jp/podcasts](https://coderdojo.jp/podcasts) にアクセスし、新規エピソードを確認する**
+   - 上記の一連の作業が無事完了すると本番環境から新規エピソードが公開されます
+   - [coderdojo.jp/podcasts.rss](https://coderdojo.jp/podcasts) も合わせて更新されるので、[Apple Podcasts](https://podcasts.apple.com/jp/podcast/dojocast/id1458122473?uo=10) への登録作業は不要です :smile: :ok_hand:
 
