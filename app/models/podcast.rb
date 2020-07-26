@@ -7,10 +7,8 @@ class Podcast < ApplicationRecord
   validates :title,                 presence: true
   validates :original_content_size, presence: true
   validates :duration,              presence: true
-  #validates :download_url,          presence: true
   validates :permalink,             presence: true
   validates :permalink_url,         presence: true
-  #validates :uploaded_at,           presence: true
   validates :published_date,        presence: true
 
   # instance methods

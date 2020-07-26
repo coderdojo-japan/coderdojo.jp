@@ -17,7 +17,6 @@ namespace :podcasts do
     logger.info('no track') if rss.items.length.zero?
 
     Podcast.transaction do
-      #tracks.sort_by { |d| d[:id] }.each do |d|
       rss.items.each_with_index do |item, index|
         track_id = item.guid.content.split('/').last.to_i
         episode  = Podcast.find_by(track_id: track_id) || Podcast.new(track_id: track_id)
@@ -28,13 +27,9 @@ namespace :podcasts do
           description:           item.description,
           original_content_size: item.enclosure.length,
           duration:              item.itunes_duration.content,
-          #tag_list:              d[:tag_list],
-          #download_url:          d[:download_url],
           permalink:             item.link.split('/').last,
           permalink_url:         item.link,
           published_date:        item.pubDate.to_date,
-          #uploaded_at:           d[:created_at],
-          #published_date:        published_date
           )
 
         if is_new
