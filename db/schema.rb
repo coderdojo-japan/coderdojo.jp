@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_095112) do
+ActiveRecord::Schema.define(version: 2020_07_26_023918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,11 +63,8 @@ ActiveRecord::Schema.define(version: 2020_07_25_095112) do
     t.text "description"
     t.integer "original_content_size", null: false
     t.string "duration", null: false
-    t.string "tag_list"
-    t.string "download_url", null: false
     t.string "permalink", null: false
     t.string "permalink_url", null: false
-    t.datetime "uploaded_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "published_date", null: false

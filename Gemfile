@@ -43,9 +43,6 @@ gem 'rack-attack'
 gem 'google_drive'
 gem 'lazy_high_charts'
 
-# To fetch Podcast records from SoundCloud
-gem 'soundcloud'
-
 # For RSS feed
 gem 'ruby-mp3info', :require => 'mp3info'
 
