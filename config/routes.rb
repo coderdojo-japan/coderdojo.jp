@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get "/docs/teikan",            to: redirect('/teikan')
 
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
-  get "/youtube",                to: redirect('https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA')
+  get "/youtube",                to: redirect('https://www.youtube.com/c/CoderDojoJapan')
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/partner",         to: redirect('/partnership')
