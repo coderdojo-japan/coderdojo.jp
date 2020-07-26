@@ -10,8 +10,9 @@ namespace :podcasts do
 
     logger.info('==== START podcasts:upsert ====')
 
-    SOUNDCLOUD_RSS = 'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
-    #SOUNDCLOUD_RSS = 'soundcloud_sample.rss' # for debugging
+    SOUNDCLOUD_RSS = Rails.env.test? ?
+      'soundcloud_sample.rss' :
+      'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
     rss = RSS::Parser.parse(SOUNDCLOUD_RSS, false)
 
     logger.info('no track') if rss.items.length.zero?
