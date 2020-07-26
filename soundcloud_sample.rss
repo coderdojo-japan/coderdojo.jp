@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+      <channel>
+        <atom:link href="https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss?before=614641407" rel="next" type="application/rss+xml"/>
+        <title>DojoCast</title>
+        <link>https://coderdojo.jp/podcasts</link>
+        <pubDate>Mon, 20 Jul 2020 13:05:28 +0000</pubDate>
+        <lastBuildDate>Mon, 20 Jul 2020 13:05:28 +0000</lastBuildDate>
+        <ttl>60</ttl>
+        <language>ja</language>
+        <copyright>All rights reserved</copyright>
+        <webMaster>feeds@soundcloud.com (SoundCloud Feeds)</webMaster>
+        <description>CoderDojo コミュニティに関わる方々をハイライトする教育系ポッドキャストです。</description>
+        <itunes:subtitle>CoderDojo コミュニティに関わる方々をハイライトする教育系ポッドキャストです。</itunes:subtitle>
+        <itunes:owner>
+          <itunes:name>DojoCast</itunes:name>
+          <itunes:email>yohei@coderdojo.jp</itunes:email>
+        </itunes:owner>
+        <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="https://i1.sndcdn.com/avatars-000621762543-axkkdz-original.jpg"/>
+        <image>
+          <url>https://i1.sndcdn.com/avatars-000621762543-axkkdz-original.jpg</url>
+          <title>DojoCast</title>
+          <link>https://coderdojo.jp/podcasts</link>
+        </image>
+        <itunes:category text="Education"/>
+        <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/861237199</guid>
+      <title>018 - ゲームと機械学習と Scratch 書籍</title>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-18</link>
+      <itunes:duration>00:58:13</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>2020年7月出版の２つの Scratch 書籍を、それぞれの著者および出版社のご協力のもと、CoderDojo 向けに寄贈していただけることになりました。
+
+1. できるキッズ スクラッチでゲームをつくろう! 楽しく学べるプログラミング (著: 三橋優希・できるシリーズ編集部、出版: インプレス)
+
+2. Scratchではじめる機械学習 ―作りながら楽しく学べるAIプログラミング (著: 石原 淳也・倉本 大資、監修: 阿部 和広、出版: オライリー・ジャパン)
+
+本ライブ配信では、各書籍の著者 (三橋さん、石原さん) をお招きして、同書籍の内容や寄贈に関する経緯、CoderDojo コミュニティとの関わりなどについてお伺いします。
+
+・三橋 優希さん https://twitter.com/yukimihashi
+・石原 淳也さん https://twitter.com/jishiha
+
+書籍の詳細および寄贈の背景などについては下記の記事をご参照ください。
+
+ゲームや機械学習の Scratch 書籍、全国の CoderDojo 向けに寄贈
+https://news.coderdojo.jp/2020/07/19/scratch-books-for-coderdojo/
+
+DojoCast は CoderDojo 関係者と対談するポッドキャストです。アプリや Web でも聴けます！
+
+🎧 Podcast アプリで聴く
+https://podcasts.apple.com/jp/podcast/dojocast/id1458122473
+
+☯️ DojoCast - CoderDojo Japan
+https://coderdojo.jp/podcasts</itunes:summary>
+      <itunes:subtitle>2020年7月出版の２つの Scratch 書籍を、それぞれの著者および出版社のご協力のもと、Co…</itunes:subtitle>
+      <description>2020年7月出版の２つの Scratch 書籍を、それぞれの著者および出版社のご協力のもと、CoderDojo 向けに寄贈していただけることになりました。
+
+1. できるキッズ スクラッチでゲームをつくろう! 楽しく学べるプログラミング (著: 三橋優希・できるシリーズ編集部、出版: インプレス)
+
+2. Scratchではじめる機械学習 ―作りながら楽しく学べるAIプログラミング (著: 石原 淳也・倉本 大資、監修: 阿部 和広、出版: オライリー・ジャパン)
+
+本ライブ配信では、各書籍の著者 (三橋さん、石原さん) をお招きして、同書籍の内容や寄贈に関する経緯、CoderDojo コミュニティとの関わりなどについてお伺いします。
+
+・三橋 優希さん https://twitter.com/yukimihashi
+・石原 淳也さん https://twitter.com/jishiha
+
+書籍の詳細および寄贈の背景などについては下記の記事をご参照ください。
+
+ゲームや機械学習の Scratch 書籍、全国の CoderDojo 向けに寄贈
+https://news.coderdojo.jp/2020/07/19/scratch-books-for-coderdojo/
+
+DojoCast は CoderDojo 関係者と対談するポッドキャストです。アプリや Web でも聴けます！
+
+🎧 Podcast アプリで聴く
+https://podcasts.apple.com/jp/podcast/dojocast/id1458122473
+
+☯️ DojoCast - CoderDojo Japan
+https://coderdojo.jp/podcasts</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/861237199-coderdojo-japan-dojocast-18.mp3" length="55903711"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/754788799</guid>
+      <title>017 - 映画と漫画とプログラミング</title>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-17</link>
+      <itunes:duration>01:02:24</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>映画『電気海月のインシデント』プロデューサーの @kondo_orange さん、一般社団法人 CoderDojo Japan 理事の @kiriem_ さんのお二人と『DojoCast』を配信します 🎤👥✨
+
+映画『電気海月のインシデント』https://jellyfish-movie.jp/
+
+https://twitter.com/kondo_orange
+https://twitter.com/kiriem_
+
+DojoCast は CoderDojo 関係者と対談するポッドキャストです。アプリや Web でも聴けます！
+
+🎧 Podcast アプリで聴く
+https://podcasts.apple.com/jp/podcast/dojocast/id1458122473
+
+☯️ DojoCast - CoderDojo Japan
+https://coderdojo.jp/podcasts</itunes:summary>
+      <itunes:subtitle>映画『電気海月のインシデント』プロデューサーの @kondo_orange さん、一般社団法人 C…</itunes:subtitle>
+      <description>映画『電気海月のインシデント』プロデューサーの @kondo_orange さん、一般社団法人 CoderDojo Japan 理事の @kiriem_ さんのお二人と『DojoCast』を配信します 🎤👥✨
+
+映画『電気海月のインシデント』https://jellyfish-movie.jp/
+
+https://twitter.com/kondo_orange
+https://twitter.com/kiriem_
+
+DojoCast は CoderDojo 関係者と対談するポッドキャストです。アプリや Web でも聴けます！
+
+🎧 Podcast アプリで聴く
+https://podcasts.apple.com/jp/podcast/dojocast/id1458122473
+
+☯️ DojoCast - CoderDojo Japan
+https://coderdojo.jp/podcasts</description>
+      <enclosure type="audio/x-m4a" url="https://feeds.soundcloud.com/stream/754788799-coderdojo-japan-dojocast-17.m4a" length="119240724"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/751361416</guid>
+      <title>016 - DojoCon Japan 2019 を開催してみて</title>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-16</link>
+      <itunes:duration>00:30:31</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>DojoCon Japan 2019 実行委員の方々に DojoCon Japan 2019 を開催してみた感想について聞いてみました。
+
+DojoCon Japan 2019 - つぎのステップ    
+[https://dojocon2019.coderdojo.jp/](https://dojocon2019.coderdojo.jp/)</itunes:summary>
+      <itunes:subtitle>DojoCon Japan 2019 実行委員の方々に DojoCon Japan 2019 を開…</itunes:subtitle>
+      <description>DojoCon Japan 2019 実行委員の方々に DojoCon Japan 2019 を開催してみた感想について聞いてみました。
+
+DojoCon Japan 2019 - つぎのステップ    
+[https://dojocon2019.coderdojo.jp/](https://dojocon2019.coderdojo.jp/)</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/751361416-coderdojo-japan-dojocast-16.mp3" length="29311488"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-000676238839-qocwa2-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/721049914</guid>
+      <title>015 - DojoCon Japan 2019 Highlights</title>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-15</link>
+      <itunes:duration>00:55:49</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>DojoCon Japan 2019 実行委員長 Utsu さん、副実行委員長 Katz さんのお二人と DojoCon Japan 2019 の見どころについてお話ししました。
+
+DojoCon Japan 2019 - つぎのステップ
+https://dojocon2019.coderdojo.jp/</itunes:summary>
+      <itunes:subtitle>DojoCon Japan 2019 実行委員長 Utsu さん、副実行委員長 Katz さんのお…</itunes:subtitle>
+      <description>DojoCon Japan 2019 実行委員長 Utsu さん、副実行委員長 Katz さんのお二人と DojoCon Japan 2019 の見どころについてお話ししました。
+
+DojoCon Japan 2019 - つぎのステップ
+https://dojocon2019.coderdojo.jp/</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/721049914-coderdojo-japan-dojocast-15.mp3" length="53585783"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-000645568900-uougf9-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/665969993</guid>
+      <title>014 - [PR] Highlights of Shenzhen @ Makeblock</title>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-14</link>
+      <itunes:duration>00:14:30</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>Makeblock 社 @maming435 さんと CoderDojo メンター @YukiMihashi さんのお２人と、様々なIT企業・ベンチャー企業などが集まる『深圳 (シンセン)』の Makeblock 社で収録しました。深圳の大学城 (University Town) 、決済事情、Makeblock Halocode PM、未踏ジュニア深圳ツアーの話などについて触れています。</itunes:summary>
+      <itunes:subtitle>Makeblock 社 @maming435 さんと CoderDojo メンター @YukiMi…</itunes:subtitle>
+      <description>Makeblock 社 @maming435 さんと CoderDojo メンター @YukiMihashi さんのお２人と、様々なIT企業・ベンチャー企業などが集まる『深圳 (シンセン)』の Makeblock 社で収録しました。深圳の大学城 (University Town) 、決済事情、Makeblock Halocode PM、未踏ジュニア深圳ツアーの話などについて触れています。</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/665969993-coderdojo-japan-dojocast-14.mp3" length="13930368"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-000582668165-mfj109-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/630718164</guid>
+      <title>013 - Story behind The Official Book by CoderDojo community</title>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-13</link>
+      <itunes:duration>00:53:37</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>ゲスト: CoderDojo 枚方の共同チャンピオンで、CoderDojo Japan 公式 Scratch 本の筆頭著者である @ippey_s さんとお話ししました。
+
+詳細: https://coderdojo.jp/podcasts/13</itunes:summary>
+      <itunes:subtitle>ゲスト: CoderDojo 枚方の共同チャンピオンで、CoderDojo Japan 公式 Sc…</itunes:subtitle>
+      <description>ゲスト: CoderDojo 枚方の共同チャンピオンで、CoderDojo Japan 公式 Scratch 本の筆頭著者である @ippey_s さんとお話ししました。
+
+詳細: https://coderdojo.jp/podcasts/13</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/630718164-coderdojo-japan-dojocast-13.mp3" length="51470208"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/625063656</guid>
+      <title>012 - The 1st CoderDojo and the Global Vision</title>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-12</link>
+      <itunes:duration>00:15:46</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>Guest: Bill Liao, co-founder of CoderDojo, talking about the story of the 1st CoderDojo, including how he met James Whelton (the other co-founder), why he started, and what vision is behind the rule, &quot;Be Cool!&quot;.
+
+See the following page for details.
+https://coderdojo.jp/podcasts/12</itunes:summary>
+      <itunes:subtitle>Guest: Bill Liao, co-founder of CoderDojo, talkin…</itunes:subtitle>
+      <description>Guest: Bill Liao, co-founder of CoderDojo, talking about the story of the 1st CoderDojo, including how he met James Whelton (the other co-founder), why he started, and what vision is behind the rule, &quot;Be Cool!&quot;.
+
+See the following page for details.
+https://coderdojo.jp/podcasts/12</description>
+      <enclosure type="audio/x-m4a" url="https://feeds.soundcloud.com/stream/625063656-coderdojo-japan-dojocast-12.m4a" length="30180884"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614982114</guid>
+      <title>011 - [PR] How Mitou Junior PMs do Mentoring</title>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-11</link>
+      <itunes:duration>01:02:02</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>未踏ジュニア代表で CoderDojo ロンドンでもメンターをしていた @ukkaripon さん、CoderDojo 金沢代表で未踏ジュニアPMの @teramotodaiki さんをお迎えして、CoderDojo と未踏ジュニアの共通点、PMのメンタリング事例、好きなものを作り込んだクリエータの活躍例、チーム開発vs個人開発、なぜプロトタイプは高く評価されやすいのか、などを話しました。
+
+収録日: 2019/03/25
+https://coderdojo.jp/podcasts/11</itunes:summary>
+      <itunes:subtitle>未踏ジュニア代表で CoderDojo ロンドンでもメンターをしていた @ukkaripon さん…</itunes:subtitle>
+      <description>未踏ジュニア代表で CoderDojo ロンドンでもメンターをしていた @ukkaripon さん、CoderDojo 金沢代表で未踏ジュニアPMの @teramotodaiki さんをお迎えして、CoderDojo と未踏ジュニアの共通点、PMのメンタリング事例、好きなものを作り込んだクリエータの活躍例、チーム開発vs個人開発、なぜプロトタイプは高く評価されやすいのか、などを話しました。
+
+収録日: 2019/03/25
+https://coderdojo.jp/podcasts/11</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614982114-coderdojo-japan-dojocast-11.mp3" length="59550896"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614982105</guid>
+      <title>010 - Programming is Beyond a Job For Me</title>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-10</link>
+      <itunes:duration>01:02:59</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>Guests: James Whelton, Junya Ishihara, Reina Masumoto, and Yuki Mihashi. (And Yosuke Toyota from the middle of recording.) This episode includes where James go around during Japan trip, his experiences in startup in Dubai, and differences in style between Startup and CoderDojo.
+
+For English speakers, give it a listen from 1.35. ;) This podcast is conducted in English, but includes Japanese a little bit. But no worries! All Japanese talks are translated into English just after them by me (@yasulab).
+
+収録日: 2018/12/05
+https://coderdojo.jp/podcasts/10</itunes:summary>
+      <itunes:subtitle>Guests: James Whelton, Junya Ishihara, Reina Masu…</itunes:subtitle>
+      <description>Guests: James Whelton, Junya Ishihara, Reina Masumoto, and Yuki Mihashi. (And Yosuke Toyota from the middle of recording.) This episode includes where James go around during Japan trip, his experiences in startup in Dubai, and differences in style between Startup and CoderDojo.
+
+For English speakers, give it a listen from 1.35. ;) This podcast is conducted in English, but includes Japanese a little bit. But no worries! All Japanese talks are translated into English just after them by me (@yasulab).
+
+収録日: 2018/12/05
+https://coderdojo.jp/podcasts/10</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614982105-coderdojo-japan-dojocast-10.mp3" length="60465024"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614982087</guid>
+      <title>009 - Tsuyoi Hiroshima - DojoBudokai</title>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-9</link>
+      <itunes:duration>00:54:11</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>CoderDojo 紙屋町 (旧: CoderDojo 広島) の活動をされている鼠屋さん、安藤さんと、広島における活動や DojoBudokai の話、子どもと接するときに考えていることなどについてお話してきました。
+
+収録日: 2017/09/16
+https://coderdojo.jp/podcasts/9</itunes:summary>
+      <itunes:subtitle>CoderDojo 紙屋町 (旧: CoderDojo 広島) の活動をされている鼠屋さん、安藤さ…</itunes:subtitle>
+      <description>CoderDojo 紙屋町 (旧: CoderDojo 広島) の活動をされている鼠屋さん、安藤さんと、広島における活動や DojoBudokai の話、子どもと接するときに考えていることなどについてお話してきました。
+
+収録日: 2017/09/16
+https://coderdojo.jp/podcasts/9</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614982087-coderdojo-japan-dojocast-9.mp3" length="52018781"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614982066</guid>
+      <title>008 - [PR] 未来にコミットしたい</title>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-8</link>
+      <itunes:duration>00:56:24</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>第三者からみた CoderDojo のイメージと、関係者からみた CoderDojo のイメージとを対比させながら、150坪もある新宿区高田馬場のシェアオフィス＆コワーキングスペース「CASE Shinjuku」の仲居頭である森下ことみさんと、そのお仲間である大串肇さん (通称: メガネさん) と一緒に収録しました。また、CoderDojo コミュニティが過去に遭遇した課題や、CoderDojo の広がり方の傾向、CASE Shinjuku と CoderDojo Japan とが共通して共感していることなどについてお話ししました
+
+収録日: 2017/07/07
+https://coderdojo.jp/podcasts/8</itunes:summary>
+      <itunes:subtitle>第三者からみた CoderDojo のイメージと、関係者からみた CoderDojo のイメージと…</itunes:subtitle>
+      <description>第三者からみた CoderDojo のイメージと、関係者からみた CoderDojo のイメージとを対比させながら、150坪もある新宿区高田馬場のシェアオフィス＆コワーキングスペース「CASE Shinjuku」の仲居頭である森下ことみさんと、そのお仲間である大串肇さん (通称: メガネさん) と一緒に収録しました。また、CoderDojo コミュニティが過去に遭遇した課題や、CoderDojo の広がり方の傾向、CASE Shinjuku と CoderDojo Japan とが共通して共感していることなどについてお話ししました
+
+収録日: 2017/07/07
+https://coderdojo.jp/podcasts/8</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614982066-coderdojo-japan-dojocast-8.mp3" length="54149954"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614981976</guid>
+      <title>007 - Hack for Dojo</title>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-7</link>
+      <itunes:duration>00:54:39</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>CoderDojo Kanazawa の寺本さん (@teramotodaiki)、CoderDojo Kashiwa の宮島さん (@mjk_0513) と、どうやってパソコンを集めたのか、どんなOSを入れると良さそうかといった運営面のノウハウと、10代の頃からアクションを起こし続けている二人が今に至ったキッカケや、学校の外側にあるコミュニティと触れる面白さついてお伺いしました。
+
+収録日: 2017/04/25
+https://coderdojo.jp/podcasts/7</itunes:summary>
+      <itunes:subtitle>CoderDojo Kanazawa の寺本さん (@teramotodaiki)、CoderDo…</itunes:subtitle>
+      <description>CoderDojo Kanazawa の寺本さん (@teramotodaiki)、CoderDojo Kashiwa の宮島さん (@mjk_0513) と、どうやってパソコンを集めたのか、どんなOSを入れると良さそうかといった運営面のノウハウと、10代の頃からアクションを起こし続けている二人が今に至ったキッカケや、学校の外側にあるコミュニティと触れる面白さついてお伺いしました。
+
+収録日: 2017/04/25
+https://coderdojo.jp/podcasts/7</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614981976-coderdojo-japan-dojocast-7.mp3" length="52468224"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614981952</guid>
+      <title>006 - [PR] 未踏ジュニアとコーダー道場</title>
+      <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-6</link>
+      <itunes:duration>00:58:25</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>未踏ジュニア代表の鵜飼さん (@ukkaripon) さんに、未踏ジュニアについて伺ってきました。どのような目的で、どんなプログラムなのか、また、鵜飼さんの思いや、立ち上げの背景についてもお話ししました。
+
+収録日: 2017/04/24
+https://coderdojo.jp/podcasts/6</itunes:summary>
+      <itunes:subtitle>未踏ジュニア代表の鵜飼さん (@ukkaripon) さんに、未踏ジュニアについて伺ってきました。…</itunes:subtitle>
+      <description>未踏ジュニア代表の鵜飼さん (@ukkaripon) さんに、未踏ジュニアについて伺ってきました。どのような目的で、どんなプログラムなのか、また、鵜飼さんの思いや、立ち上げの背景についてもお話ししました。
+
+収録日: 2017/04/24
+https://coderdojo.jp/podcasts/6</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614981952-coderdojo-japan-dojocast-6.mp3" length="28041089"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614981916</guid>
+      <title>005 - DecaDojo とは？</title>
+      <pubDate>Sat, 22 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-5</link>
+      <itunes:duration>00:54:33</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>DecaDojo の成り立ちについて、DecaDojo in Saitama の運営メンバーに伺ってきました。
+
+https://coderdojo.jp/podcasts/5</itunes:summary>
+      <itunes:subtitle>DecaDojo の成り立ちについて、DecaDojo in Saitama の運営メンバーに伺っ…</itunes:subtitle>
+      <description>DecaDojo の成り立ちについて、DecaDojo in Saitama の運営メンバーに伺ってきました。
+
+https://coderdojo.jp/podcasts/5</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614981916-coderdojo-japan-dojocast-5.mp3" length="52371072"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614799783</guid>
+      <title>004 - DojoCon Japan のキッカケ</title>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-4</link>
+      <itunes:duration>00:31:48</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>CoderDojo 西宮・梅田のチャンピオンであり、一般社団法人 CoderDojo Japan の理事であり、DojoCon Japan 2016 と DojoCon Japan 2017 の実行委員長である細谷崇さん (@tkc49) と一緒に、DojoCon Japan についてお話ししました。
+
+収録日 : 2017/04/16
+https://coderdojo.jp/podcasts/4</itunes:summary>
+      <itunes:subtitle>CoderDojo 西宮・梅田のチャンピオンであり、一般社団法人 CoderDojo Japan …</itunes:subtitle>
+      <description>CoderDojo 西宮・梅田のチャンピオンであり、一般社団法人 CoderDojo Japan の理事であり、DojoCon Japan 2016 と DojoCon Japan 2017 の実行委員長である細谷崇さん (@tkc49) と一緒に、DojoCon Japan についてお話ししました。
+
+収録日 : 2017/04/16
+https://coderdojo.jp/podcasts/4</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614799783-coderdojo-japan-dojocast-4.mp3" length="30532224"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614792823</guid>
+      <title>003 - 沖縄の CoderDojo の始まり</title>
+      <pubDate>Sat, 15 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-3</link>
+      <itunes:duration>00:42:55</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>沖縄県那覇市南風原で CoderDojo Okinawa を運営されている比嘉さんと収録しました。CoderDojo Okinawa が一度休止になったものの、代表を比嘉さんに引き継いて活動が再開した話や、パソコンが 20〜30 台集まった話などをしています。雑談タイムでは、観光を兼ねて沖縄の CoderDojo に来てみてはどうか、沖縄でノマドワークしてはどうかという話をしています。
+
+収録日 : 2017/04/15
+https://coderdojo.jp/podcasts/3</itunes:summary>
+      <itunes:subtitle>沖縄県那覇市南風原で CoderDojo Okinawa を運営されている比嘉さんと収録しました。…</itunes:subtitle>
+      <description>沖縄県那覇市南風原で CoderDojo Okinawa を運営されている比嘉さんと収録しました。CoderDojo Okinawa が一度休止になったものの、代表を比嘉さんに引き継いて活動が再開した話や、パソコンが 20〜30 台集まった話などをしています。雑談タイムでは、観光を兼ねて沖縄の CoderDojo に来てみてはどうか、沖縄でノマドワークしてはどうかという話をしています。
+
+収録日 : 2017/04/15
+https://coderdojo.jp/podcasts/3</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614792823-coderdojo-japan-dojocast-3.mp3" length="41211648"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614642385</guid>
+      <title>002 - 柏と CoderDojo と Scratch</title>
+      <pubDate>Thu, 13 Apr 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-2</link>
+      <itunes:duration>00:50:18</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>小・中学生で Scratch を学び、高校で CoderDojo を始めた宮島さん (@mjk_0513) が、今は何を学び、どんな活動をしているのか聞いてみました。また、CoderDojo Kashiwa が柏市と一緒に進めている取り組みや、上海における教育事例についても伺いました ;)
+
+収録日 : 2017/04/13
+https://coderdojo.jp/podcasts/2</itunes:summary>
+      <itunes:subtitle>小・中学生で Scratch を学び、高校で CoderDojo を始めた宮島さん (@mjk_0…</itunes:subtitle>
+      <description>小・中学生で Scratch を学び、高校で CoderDojo を始めた宮島さん (@mjk_0513) が、今は何を学び、どんな活動をしているのか聞いてみました。また、CoderDojo Kashiwa が柏市と一緒に進めている取り組みや、上海における教育事例についても伺いました ;)
+
+収録日 : 2017/04/13
+https://coderdojo.jp/podcasts/2</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614642385-coderdojo-japan-dojocast-2.mp3" length="24148008"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/614641407</guid>
+      <title>001 - 日本の CoderDojo の成り立ち</title>
+      <pubDate>Sat, 25 Mar 2017 00:00:00 +0000</pubDate>
+      <link>https://soundcloud.com/coderdojo-japan/dojocast-1</link>
+      <itunes:duration>00:47:37</itunes:duration>
+      <itunes:author>一般社団法人 CoderDojo Japan</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>jishiha さん (CoderDojo 調布) と、日本の CoderDojo の成り立ちについて話しました。
+
+収録日 : 2017/03/25
+https://coderdojo.jp/podcasts/1</itunes:summary>
+      <itunes:subtitle>jishiha さん (CoderDojo 調布) と、日本の CoderDojo の成り立ちにつ…</itunes:subtitle>
+      <description>jishiha さん (CoderDojo 調布) と、日本の CoderDojo の成り立ちについて話しました。
+
+収録日 : 2017/03/25
+https://coderdojo.jp/podcasts/1</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/614641407-coderdojo-japan-dojocast-1.mp3" length="22887860"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-ftMkEtHAMWy1WX9V-80KiyQ-t3000x3000.jpg"/>
+    </item>
+      </channel>
+    </rss>
