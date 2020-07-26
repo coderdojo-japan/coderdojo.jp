@@ -71,8 +71,6 @@ RSpec.describe 'podcasts', podcast: true do
       expect(new_records.first.description).to eq('説明 001')
       expect(new_records.first.original_content_size).to eq(124542711)
       expect(new_records.first.duration).to eq(Time.at(5189815/1000).utc.strftime('%H:%M:%S'))
-      expect(new_records.first.tag_list).to eq('coderdojo')
-      expect(new_records.first.download_url).to eq('https://api.soundcloud.com/tracks/123456001/download')
       expect(new_records.first.permalink).to eq('podcast-001')
       expect(new_records.first.permalink_url).to eq('https://soundcloud.com/coderdojojp/podcast-001')
       expect(new_records.first.published_date).to eq('2019-08-12'.to_date)
