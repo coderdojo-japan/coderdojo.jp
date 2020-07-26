@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_023918) do
+ActiveRecord::Schema.define(version: 2020_07_26_040034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_023918) do
     t.integer "track_id", null: false
     t.string "title", null: false
     t.text "description"
-    t.integer "original_content_size", null: false
+    t.integer "content_size", null: false
     t.string "duration", null: false
     t.string "permalink", null: false
     t.string "permalink_url", null: false

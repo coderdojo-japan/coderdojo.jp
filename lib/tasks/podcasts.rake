@@ -27,13 +27,13 @@ namespace :podcasts do
           logger.info("Update: #{episode.title} (ID = #{episode.id})")
 
         episode.update!(
-          title:                 item.title,
-          description:           item.description,
-          original_content_size: item.enclosure.length,
-          duration:              item.itunes_duration.content,
-          permalink:             item.link.split('/').last,
-          permalink_url:         item.link,
-          published_date:        item.pubDate.to_date,
+          title:          item.title,
+          description:    item.description,
+          content_size:   item.enclosure.length,
+          duration:       item.itunes_duration.content,
+          permalink:      item.link.split('/').last,
+          permalink_url:  item.link,
+          published_date: item.pubDate.to_date,
           )
       end
     end

@@ -43,7 +43,7 @@ xml.rss :version => '2.0',
         xml.pubDate      episode.published_date.rfc2822
         xml.enclosure({
           url:    "http://feeds.soundcloud.com/stream/#{episode.track_id}-#{@soundcloud_user}-#{episode.permalink}.mp3",
-          length: episode.original_content_size,
+          length: episode.content_size,
           type:   'audio/mpeg' })
         xml.itunes       :duration, episode.duration
       end
