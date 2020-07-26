@@ -20,7 +20,10 @@ namespace :podcasts do
       rss.items.each_with_index do |item, index|
         track_id = item.guid.content.split('/').last.to_i
         episode  = Podcast.find_by(track_id: track_id) || Podcast.new(track_id: track_id)
-        is_new   = episode.new_record?
+
+        episode.new_record? ?
+          logger.info("Create: #{episode.title} (ID = #{episode.id})") :
+          logger.info("Update: #{episode.title} (ID = #{episode.id})")
 
         episode.update!(
           title:                 item.title,
@@ -31,12 +34,6 @@ namespace :podcasts do
           permalink_url:         item.link,
           published_date:        item.pubDate.to_date,
           )
-
-        if is_new
-          logger.info("New: #{episode.title} (ID = #{episode.id})")
-        else
-          logger.info("Update: #{episode.title} (ID = #{episode.id})")
-        end
       end
     end
 
