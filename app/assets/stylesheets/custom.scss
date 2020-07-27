@@ -808,3 +808,31 @@ body>footer a:hover {
     display: none;
   }
 }
+
+.btn-cover {
+  display: flex;
+  max-width: 600px;
+  margin: auto;
+  justify-content: center;
+  @media only screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    margin: 0 24px;
+  }
+}
+.btn-blue {
+  background: #2275CA;
+  padding: 12px 24px;
+  color: #fff;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  border: solid 2px #2275CA;
+  transition: all .1s;
+  &:hover {
+    text-decoration: none;
+    background: #f7f7f7;
+    color: #2275CA;
+  }
+}
