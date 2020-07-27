@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/docs/code_of_conduct",   to: redirect('/docs/code-of-conduct')
   get "/docs/charter",           to: redirect('/charter')
   get "/docs/charter_en",        to: redirect('/charter_en')
+  get "/docs/styleguides",       to: redirect('/styleguides')
   get "/docs/about-partnership", to: redirect('/partnership')
   get "/docs/financial-report",  to: redirect('/financial-report')
   get "/docs/privacy",           to: redirect('/privacy')
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   get "/youtube",                to: redirect('https://www.youtube.com/CoderDojoJapan')
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
+  get "/styleguides"      => "docs#show", id: 'styleguides'
   get "/partner",         to: redirect('/partnership')
   get "/partnership"      => "docs#show", id: 'about-partnership'
   get "/financial-report" => "docs#show", id: 'financial-report'
