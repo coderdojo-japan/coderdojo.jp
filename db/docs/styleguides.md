@@ -78,6 +78,9 @@
 </style>
 <div id='copy' style='color:#fff;opacity:0;'>
 </div>
+
+<script type='text/javascript' src="/js/notify.min.js"></script>
+
 <script type="text/javascript">
   function Copy(color) {
     var div = document.getElementById('copy');
@@ -86,5 +89,10 @@
     div.appendChild(text);
     window.getSelection().selectAllChildren(div);
     document.execCommand('copy');
+    $.notify.defaults({autoHideDelay: 2000, arrowShow: false, globalPosition: 'bottom right'});
+    $.notify("コピーしました", "success");
+    
   }
 </script>
+
+
