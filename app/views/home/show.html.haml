@@ -77,10 +77,10 @@
     %br.ignore-sp<>
     参加方法は各道場のWebサイトに記載されています
   .btn-cover{style: "margin-bottom: 40px;"}
-    %a.btn-blue{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
-      地図情報から探す
     %a.btn-blue{href: "/events"}<>
       近日開催から探す
+    %a.btn-blue{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
+      地図情報から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 
 %section#timeline.text-center
