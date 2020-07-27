@@ -72,19 +72,15 @@
   %br
   %h2{style: "color: dimgray;"} 🗾 日本各地の道場
   %br
-  %p{style: "margin: 0 30px 40px 30px;"}
+  %p{style: "margin: 0 30px 20px 30px;"}
     近くの道場を探してみましょう！
-    %a{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
-      %b 地図から探す
-    こともできます。
     %br.ignore-sp<>
     参加方法は各道場のWebサイトに記載されています ☯️🏃💨
-    %br
-    %br
-    (近日開催の道場は
-    %a{href: "/events"}<>
-      %b コチラ
-    から 📅)
+  .btn-cover{style: "margin-bottom: 40px;"}
+    %a.btn-blue{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
+      地図情報から探す
+    %a.btn-blue{href: "/events"}<>
+      近日開催から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 
 %section#timeline.text-center
@@ -167,7 +163,7 @@
     %h2{style: "color: dimgray;"} 📰 ニュースレター購読
     %br
     = render partial: 'shared/newsletter'
-    %div#contact{style: "padding-bottom: 40px;"}  
+    %div#contact{style: "padding-bottom: 40px;"}
 
 
 %section.detail-introduction.text-center
