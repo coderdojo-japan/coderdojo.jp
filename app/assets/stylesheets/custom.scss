@@ -102,6 +102,16 @@ img.emoji {
   left: 0;
 }
 
+.home-point-thumbnail {
+  img {
+    opacity: 0.97;
+  }
+  img:hover {
+    opacity: 1.0;
+  }
+
+}
+
 .home-point-video {
   position: relative;
   margin-bottom: 30px;

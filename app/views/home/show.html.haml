@@ -38,9 +38,9 @@
     さらに詳しい様子については、
     %br.ignore-pc<>
     次の動画や記事をぜひ！😆
-  %div{style: "margin-top: 30px; margin-bottom: 30px;"}
-    %a{href: 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"}
-      %img{src: '/img/video-thumbnail.jpg', alt: 'Promotion Video by CoderDojo Kashiwa'}
+
+  %div.home-point-thumbnail{style: "margin-top: 30px; margin-bottom: 30px;"}
+    = link_to image_tag("video-thumbnail.jpg", alt: 'Promotion Video by CoderDojo Kashiwa'), 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"
   /%div.home-point-video
   /  %iframe{allowfullscreen: "", frameborder: "0", height: "315", width: "560",
   /          src: "https://www.youtube.com/embed/gLDue2xb1j8?rel=0"}
