@@ -1,38 +1,6 @@
 %body
   - if @obj && !@obj.permalink.nil?
-    / Navigation
-    %nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
-      .container-fluid
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header.page-scroll
-          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            目次
-            %i.fa.fa-bars
-          %a.navbar-brand{:href => "#top"} CoderDojo Kata
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav.navbar-right
-            / DocSearch: https://github.com/algolia/docsearch-configs/blob/master/configs/coderdojo.json
-            %li.search
-              %input#searchbox{ :placeholder => "🔍 検索", :type => "text" }
-              #hits
-              #pagination
-            %li
-              %a{:href => "#README"} はじめに
-            %li
-              %a{:href => "#learn"} 学ぶ
-            %li
-              %a{:href => "#challenge"} 腕試し
-            %li
-              %a{:href => "#startup"} 立ち上げる
-            %li
-              %a{:href => "#support"} 支援
-            %li
-              %a{:href => "#faq"} FAQ
-        / /.navbar-collapse
-      / /.container
-    / Page Header
+    
     / Set your background image for this header on the line below.
     %header.intro-header{:style => "padding-top: 100px; background-image: url('img/kata-cover.png')"}
       .container
@@ -41,10 +9,10 @@
             .post-heading
               %h1 CoderDojo Kata
               %h2.subheading 道場情報まとめ
-            
-    / Post Content        
-    %article 
-      .container 
+
+    / Post Content
+    %article
+      .container
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.fontsize-bigger
             / Navigator

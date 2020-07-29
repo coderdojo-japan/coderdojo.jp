@@ -70,6 +70,51 @@ body {
     background-color: #0466c9;
   }
 }
+.nav > .navbar-dd-p {
+  &> a {
+    display: inline-block;
+    padding-right: 0;
+  }
+}
+.navbar-dd {
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 60px;
+  padding: 0 0 8px 0;
+  background: #2275CA;
+  width: 120px;
+  a {
+    color: #fff;
+    padding: 4px 12px;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background: #66a2df;
+    }
+  }
+}
+.navbar-dd-c {
+  display: none;
+  &:checked ~ .navbar-dd {
+    display: block;
+  }
+  &:checked ~ .navbar-dd-l::before {
+    content: '\f0d8';
+  }
+}
+.navbar-dd-l {
+  cursor: pointer;
+  &:hover:before {
+    opacity: .8;
+  }
+  &::before {
+    content: '\f0d7';
+    font-family: 'Font Awesome 5 Free';
+    color: #fff;
+    padding-right: 15px;
+  }
+}
 @media only screen and (max-width:950px) {
   .collapse > .navbar-nav > li > a {
     padding: 15px 8px;
