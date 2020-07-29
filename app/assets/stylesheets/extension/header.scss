@@ -123,7 +123,7 @@ body {
   }
 }
 
-@media only screen and (max-width:840px) {
+@media only screen and (max-width:865px) {
   .container-fluid {
     padding: 5px 10px;
   }
@@ -145,6 +145,15 @@ body {
 }
 
 @media only screen and (max-width:768px){
+  .navbar-dd {
+    display: block;
+    position: static;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .navbar-dd-l {
+    display: none;
+  }
   #header-logo img {
     margin-left: 15px;
   }
@@ -157,11 +166,14 @@ body {
       color: #cce3f9;
     }
   }
-  .collapse > .navbar-nav > li > a:before,
-  .collapse > .navbar-nav > li > a:after {
+  .collapse > .navbar-nav > li:before,
+  .collapse > .navbar-nav > li:after {
     content: none;
   }
   .navbar-toggle {
     padding: 12px;
+  }
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 540px;
   }
 }
