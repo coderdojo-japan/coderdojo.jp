@@ -14,7 +14,7 @@
     "review": {
       "addons": ["heroku-postgresql:hobby-dev"]
     }
-  }
+  },
   "buildpacks": [
     {
       "url": "heroku/ruby"
@@ -22,7 +22,7 @@
   ],
   "env": {
     "RACK_ENV":  "staging",
-    "RAILS_ENV": "staging",
+    "RAILS_ENV": "staging"
   },
   "formation": {
     "web": {
