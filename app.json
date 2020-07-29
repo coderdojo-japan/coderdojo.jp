@@ -10,71 +10,19 @@
     "heroku-postgresql",
     "scheduler"
   ],
+  "environments": {
+    "review": {
+      "addons": ["heroku-postgresql:hobby-dev"]
+    }
+  },
   "buildpacks": [
     {
       "url": "heroku/ruby"
     }
   ],
   "env": {
-    "BASIC_AUTH_NAME": {
-      "required": true
-    },
-    "BASIC_AUTH_PASSWORD": {
-      "required": true
-    },
-    "DOORKEEPER_API_TOKEN": {
-      "required": true
-    },
-    "DUMPER_APP_KEY": {
-      "required": true
-    },
-    "FACEBOOK_APP_ID": {
-      "required": true
-    },
-    "FACEBOOK_APP_SECRET": {
-      "required": true
-    },
-    "IDOBATA_HOOK_URL": {
-      "required": true
-    },
-    "LANG": {
-      "required": true
-    },
-    "LETSENCRYPT_REQUEST": {
-      "required": true
-    },
-    "LETSENCRYPT_RESPONSE": {
-      "required": true
-    },
-    "IS_LIVE_SCHEDULED": {
-      "required": true
-    },
-    "RACK_ENV": "staging",
-    "RAILS_ENV": "staging",
-    "RAILS_SERVE_STATIC_FILES": {
-      "required": true
-    },
-    "SCRIVITO_API_KEY": {
-      "required": true
-    },
-    "SCRIVITO_EMAIL": {
-      "required": true
-    },
-    "SCRIVITO_PASSWORD": {
-      "required": true
-    },
-    "SCRIVITO_TENANT": {
-      "required": true
-    },
-    "SCRIVITO_WORKSPACE": {
-      "required": true
-    },
-    "SECRET_KEY_BASE": {
-      "required": true
-    },
-    "TZ": {
-      "required": true
-    }
+    "RACK_ENV":  "staging",
+    "RAILS_ENV": "staging"
   },
   "formation": {
     "web": {
