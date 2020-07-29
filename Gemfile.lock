@@ -181,7 +181,7 @@ GEM
       kramdown (~> 2.0)
     launchy (2.5.0)
       addressable (~> 2.7)
-    lazy_high_charts (1.5.8)
+    lazy_high_charts (1.6.1)
       hash-deep-merge
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
