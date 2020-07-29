@@ -1,4 +1,7 @@
 # 理事の募集について (2017年度)
+
+<center>(本ページは2017年度の古い情報となっています。最新版は<a href="/join-in-board">コチラ</a>から)</center>
+
 <br>
 一般社団法人 CoderDojo Japan では次の事業を行なっておりますが、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、これらの事業に理事として参加していただける方を募集します。
 
@@ -63,7 +66,7 @@ src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfulls
 
 ## 応募フォーム
 
-応募〆切: 2017年10月20日 (金曜)
+応募〆切: 2017年10月20日 (参考用として本フォームは公開状態のままとしています)
 
 <div class="home-point-video" style="margin-left: -25px;">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYga5Tc8yopmh_zDwRdDf1tA6r5dEc3-np8HWnSFsXa8P27w/viewform?embedded=true" width="560" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
