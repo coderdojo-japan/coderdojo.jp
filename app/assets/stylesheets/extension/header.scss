@@ -31,19 +31,21 @@ body {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
+  &:hover{
+    color: #fff;
+  }
 }
-.collapse > .navbar-nav > li > a {
+.collapse > .navbar-nav > li {
   position: relative;
   &:hover {
-    color: #fff;
     &:before, &:after {
       width: 40%;
     }
   }
 }
 
-.collapse > .navbar-nav > li > a:before,
-.collapse > .navbar-nav > li > a:after {
+.collapse > .navbar-nav > li:before,
+.collapse > .navbar-nav > li:after {
   position: absolute;
   bottom: 10px;
   content: "";
@@ -52,10 +54,10 @@ body {
   background-color: #fff;
   transition: 0.2s;
 }
-.collapse > .navbar-nav > li > a:before {
+.collapse > .navbar-nav > li:before {
   left: 50%;
 }
-.collapse > .navbar-nav > li > a:after {
+.collapse > .navbar-nav > li:after {
   right: 50%;
 }
 .navbar-toggle {
