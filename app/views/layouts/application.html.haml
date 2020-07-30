@@ -64,8 +64,9 @@
 
 
     / at the end of the HEAD
-    - if is_kata?
-      %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} 
+    / TODO: Fix this later - https://github.com/coderdojo-japan/coderdojo.jp/issues/912
+    /- if is_kata?
+    /  %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"}
 
   %body
     = render 'shared/header'
@@ -79,16 +80,17 @@
     :javascript
       twemoji.parse(document.body);
 
-    - if is_kata?
-      %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
-              :type => "text/javascript"}
-      :javascript
-        docsearch({
-          apiKey: '315da3c406c3fa374a0696590f4821a3',
-          indexName: 'coderdojo',
-          inputSelector: '#searchbox',
-          debug: false // Set debug to true if you want to inspect the dropdown
-        });
+    / TODO: Fix this later - https://github.com/coderdojo-japan/coderdojo.jp/issues/912
+    /- if is_kata?
+    /  %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
+    /          :type => "text/javascript"}
+    /  :javascript
+    /    docsearch({
+    /      apiKey: '315da3c406c3fa374a0696590f4821a3',
+    /      indexName: 'coderdojo',
+    /      inputSelector: '#searchbox',
+    /      debug: false // Set debug to true if you want to inspect the dropdown
+    /    });
 
   #fb-root
   :javascript
