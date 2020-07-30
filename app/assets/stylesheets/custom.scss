@@ -12,6 +12,16 @@ img.emoji {
   border-radius: 0px;
 }
 
+/* Lazyload with fade animation */
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
 /* DojoCast Cover Photo */
 .dojocast-cover {
   border-radius: 0px;
