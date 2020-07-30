@@ -31,19 +31,21 @@ body {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
+  &:hover{
+    color: #fff;
+  }
 }
-.collapse > .navbar-nav > li > a {
+.collapse > .navbar-nav > li {
   position: relative;
   &:hover {
-    color: #fff;
     &:before, &:after {
       width: 40%;
     }
   }
 }
 
-.collapse > .navbar-nav > li > a:before,
-.collapse > .navbar-nav > li > a:after {
+.collapse > .navbar-nav > li:before,
+.collapse > .navbar-nav > li:after {
   position: absolute;
   bottom: 10px;
   content: "";
@@ -52,10 +54,10 @@ body {
   background-color: #fff;
   transition: 0.2s;
 }
-.collapse > .navbar-nav > li > a:before {
+.collapse > .navbar-nav > li:before {
   left: 50%;
 }
-.collapse > .navbar-nav > li > a:after {
+.collapse > .navbar-nav > li:after {
   right: 50%;
 }
 .navbar-toggle {
@@ -70,13 +72,55 @@ body {
     background-color: #0466c9;
   }
 }
+.nav > .navbar-dd-p {
+  &> a {
+    display: inline-block;
+    padding-right: 0;
+  }
+  &:hover > .navbar-dd {
+    display: block;
+  }
+}
+.navbar-dd {
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 50px;
+  padding: 10px 0 8px 0;
+  background: #2275CA;
+  width: 120px;
+  a {
+    color: #fff;
+    padding: 4px 12px;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background: #66a2df;
+    }
+  }
+}
+.navbar-dd-l {
+  display: inline-block;
+  margin-bottom: 2px;
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    color: #fff;
+    margin-right: 15px;
+  }
+}
 @media only screen and (max-width:950px) {
   .collapse > .navbar-nav > li > a {
     padding: 15px 8px;
   }
 }
 
-@media only screen and (max-width:840px) {
+@media only screen and (max-width:865px) {
   .container-fluid {
     padding: 5px 10px;
   }
@@ -98,6 +142,15 @@ body {
 }
 
 @media only screen and (max-width:768px){
+  .navbar-dd {
+    display: block;
+    position: static;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .navbar-dd-l {
+    display: none;
+  }
   #header-logo img {
     margin-left: 15px;
   }
@@ -110,11 +163,14 @@ body {
       color: #cce3f9;
     }
   }
-  .collapse > .navbar-nav > li > a:before,
-  .collapse > .navbar-nav > li > a:after {
+  .collapse > .navbar-nav > li:before,
+  .collapse > .navbar-nav > li:after {
     content: none;
   }
   .navbar-toggle {
     padding: 12px;
+  }
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 540px;
   }
 }

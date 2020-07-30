@@ -17,5 +17,15 @@
         %li= link_to 'パートナー法人', '/#partners'
         %li= link_to '統計情報',       '/stats'
         %li= link_to 'News',           '/#news'
-        %li= link_to 'Kata',           '/kata'
+        %li.navbar-dd-p
+          = link_to 'Kata',           '/kata'
+          %span.navbar-dd-l
+          %ul.navbar-dd
+            %li= link_to 'はじめに',   '/kata#README'
+            %li= link_to '学ぶ',      '/kata#learn'
+            %li= link_to '腕試し',    '/kata#challenge'
+            %li= link_to '立ち上げる', '/kata#startup'
+            %li= link_to '支援',      '/kata#support'
+            %li= link_to 'FAQ',      '/kata#faq'
+
         %li= link_to 'お問い合わせ',   '/#contact'

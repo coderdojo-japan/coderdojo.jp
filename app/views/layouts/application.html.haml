@@ -9,8 +9,7 @@
 
     %title= full_title(yield(:title))
     = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
-    - unless is_kata?
-      = stylesheet_link_tag 'extension/header', 'data-turbolinks-track' => true, media: 'all'
+    = stylesheet_link_tag 'extension/header', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = scrivito_head_tags if using_scrivito?
@@ -62,11 +61,10 @@
 
     / at the end of the HEAD
     - if is_kata?
-      %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} if is_kata?
+      %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} 
 
   %body
-    - unless is_kata?
-      = render 'shared/header'
+    = render 'shared/header'
     - flash.each do |message_type, message|
       %div{:class => "alert alert-#{message_type}"}= message
     = yield
