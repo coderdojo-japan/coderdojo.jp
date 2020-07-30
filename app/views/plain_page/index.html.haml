@@ -2,7 +2,7 @@
   - if @obj && !@obj.permalink.nil?
     
     / Set your background image for this header on the line below.
-    %header.intro-header{:style => "padding-top: 100px; background-image: url('img/kata-cover.png')"}
+    %header.intro-header{class: 'lazyload', loading: 'lazy', style: "padding-top: 100px; background-image: url('img/kata-cover.png')"}
       .container
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
