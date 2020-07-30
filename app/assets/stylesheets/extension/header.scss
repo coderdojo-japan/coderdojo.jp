@@ -77,13 +77,16 @@ body {
     display: inline-block;
     padding-right: 0;
   }
+  &:hover > .navbar-dd {
+    display: block;
+  }
 }
 .navbar-dd {
   display: none;
   position: absolute;
   list-style: none;
-  top: 60px;
-  padding: 0 0 8px 0;
+  top: 50px;
+  padding: 10px 0 8px 0;
   background: #2275CA;
   width: 120px;
   a {
@@ -96,29 +99,17 @@ body {
     }
   }
 }
-.navbar-dd-c {
-  display: none;
-  &:checked ~ .navbar-dd {
-    display: block;
-  }
-  &:checked ~ .navbar-dd-l::before {
-    transform: rotate(180deg);
-  }
-}
 .navbar-dd-l {
-  cursor: pointer;
+  display: inline-block;
   margin-bottom: 2px;
-  &:hover:before {
-    opacity: .8;
-  }
   &::before {
     content: '';
     display: block;
     width: 0;
     height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 7px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
     color: #fff;
     margin-right: 15px;
   }

@@ -19,8 +19,7 @@
         %li= link_to 'News',           '/#news'
         %li.navbar-dd-p
           = link_to 'Kata',           '/kata'
-          = check_box_tag :kataNav, 'ドロップダウンメニュー表示', false, class: 'navbar-dd-c'
-          = label_tag :kataNav, '', class: 'navbar-dd-l'
+          %span.navbar-dd-l
           %ul.navbar-dd
             %li= link_to 'はじめに',   '/kata#README'
             %li= link_to '学ぶ',      '/kata#learn'
