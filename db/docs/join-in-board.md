@@ -44,7 +44,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
    - 実績: 決算書の作成、税務・法務などの各種事務書類の作成、問い合わせ対応、理事の募集、隔週の定例ミーティング実施、[CoderDojo Foundation](https://coderdojo.com/foundation/) および [Raspberry Pi Foundation](https://www.raspberrypi.org/about/governance/) との定期ミーティング (英語) など <br><br>
 
 
-なお、CoderDojo Japan や CoderDojo Foundation、および Raspberry Pi Foundation が行なっている活動の一部はオープンになっているため、理事にならなくても活動に協力・参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[理事以外の開発事例](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is%3Apr+is%3Aclose+-author%3Ayasulab+-label%3Adependencies))
+なお、CoderDojo Japan や CoderDojo Foundation、および Raspberry Pi Foundation が行なっている活動の一部はオープンになっているため、理事にならなくても活動に協力・参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[理事以外の開発事例](https://bit.ly/pull-requests-sample-to-coderdojo-jp))
 
 <br>
 
