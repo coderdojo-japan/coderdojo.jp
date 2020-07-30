@@ -59,6 +59,10 @@
     / twemoji
     %script{src: "https://twemoji.maxcdn.com/v/latest/twemoji.min.js", crossorigin: "anonymous" }
 
+    / lazyload library
+    %script{src: '/js/lazysizes.min.js', async: ''}
+
+
     / at the end of the HEAD
     - if is_kata?
       %link{:href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", :rel => "stylesheet"} 
