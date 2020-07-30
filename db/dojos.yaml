@@ -1788,6 +1788,20 @@
   - ラズベリーパイ
   - LEGO
   - micro:bit
+- id: 252
+  order: '272027'
+  created_at: '2020-07-30'
+  name: 岸和田
+  prefecture_id: 27
+  url: https://coderdojo-kishiwada.connpass.com/
+  logo: "/img/dojos/japan.png"
+  description: 岸和田市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - RaspberryPi
+  - Python
+  - 電子工作
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
