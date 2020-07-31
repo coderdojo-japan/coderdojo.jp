@@ -2302,6 +2302,7 @@
   - Smalruby
 - id: 211
   order: '322059'
+  is_active: false
   created_at: '2019-06-11'
   name: 石見@Takuno
   prefecture_id: 32
