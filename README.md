@@ -112,6 +112,14 @@ get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
 - [CoderDojo を支える Rails CMS の活用事例 - Speaker Deck](https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo)
 - [CoderDojo Japan のバックエンドを更新しました (2016年)](https://coderdojo.jp/news/2016/12/12/new-backend)
 
+### API (開発中)
+
+現在提供中の API です。今後仕様が変更される可能性もあるため、    
+本番環境で利用したい場合は yohei@coderdojo.jp までご連絡ください
+
+- Podcast RSS: https://coderdojo.jp/podcasts.rss
+- Sitemap XML: https://coderdojo.jp/sitemap.xml
+- 近日開催の道場: https://coderdojo.jp/events.json
 
 ## Development History & Contributors
 
