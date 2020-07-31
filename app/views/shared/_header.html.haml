@@ -8,7 +8,7 @@
         %span.icon-bar
         %span.icon-bar
       .navbar-header-logos
-        = link_to image_tag('/img/header-logo.png', alt: 'CoderDojo logo'), '/', id: "header-logo"
+        = link_to image_tag('/img/header-logo.png',  alt: 'CoderDojo logo'),  '/', id: "header-logo"
         = link_to image_tag('/img/header-brand.png', alt: 'CoderDojo brand'), '/', id: "header-brand"
     .collapse#header-nav-toggle.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
@@ -18,14 +18,14 @@
         %li= link_to '統計情報',       '/stats'
         %li= link_to 'News',           '/#news'
         %li.navbar-dd-p
-          = link_to 'Kata',           '/kata'
+          = link_to 'Kata',            '/kata'
           %span.navbar-dd-l
           %ul.navbar-dd
             %li= link_to 'はじめに',   '/kata#README'
-            %li= link_to '学ぶ',      '/kata#learn'
-            %li= link_to '腕試し',    '/kata#challenge'
+            %li= link_to '学ぶ',       '/kata#learn'
+            %li= link_to '腕試し',     '/kata#challenge'
             %li= link_to '立ち上げる', '/kata#startup'
-            %li= link_to '支援',      '/kata#support'
-            %li= link_to 'FAQ',      '/kata#faq'
+            %li= link_to '支援',       '/kata#support'
+            %li= link_to 'FAQ',        '/kata#faq'
 
         %li= link_to 'お問い合わせ',   '/#contact'
