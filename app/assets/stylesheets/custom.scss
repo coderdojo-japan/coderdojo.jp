@@ -602,8 +602,6 @@ body>footer a:hover {
   height: 96px;
   width: 96px;
   // border-radius: 48px;
-  background-position: center center;
-  background-size: cover;
   margin: 0 auto;
 }
 
@@ -639,6 +637,36 @@ body>footer a:hover {
 
 .dojo-private:hover {
   text-decoration: none;
+}
+
+/*Dojo一覧スマートフォン用*/
+.dojo-sp {
+  width: 100%;
+  padding: 7px;
+  margin: 3px;
+  border-radius: 5px;
+  header {
+    text-align: left;
+  }
+  .tags {
+    text-align: left;
+    margin: 0;
+  }
+}
+.dojo-picture-sp {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px 5px 0;
+}
+.dojo .dojo-sp-info {
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+}
+.dojo-name-sp {
+  margin: .2em 0;
+  font-size: 1.5rem;
 }
 
 // Each Event: /events
