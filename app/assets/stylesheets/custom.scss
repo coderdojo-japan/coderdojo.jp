@@ -224,34 +224,17 @@ h2 {
 .partners_logo {
   ul {
     padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 680px;
   }
   li {
     list-style-type: none;
     display: inline-block;
-    padding-top: 20px;
-    @media only screen and (min-width: 0px) {
-      margin-left: -5px;
-      margin-top: 5px;
-      width: 260px;
-      height: 120px;
-    }
-    @media only screen and (min-width: 321px) {
-      margin-top: 20px;
-      width: 300px;
-      height: 120px;
-    }
-    @media only screen and (min-width: 560px) {
-      padding: 30px 0px 0px 0px;
-      margin: 0px 0px 0px 0px;
-      width: 220px;
-      height: 100px;
-    }
-    @media only screen and (min-width: 720px) {
-      padding: 0px 20px 0px 20px;
-      margin: 30px 0px 0px 0px;
-      width: 320px;
-      height: 100px;
-    }
+    width: calc(50% - 6%);
+    margin: 2% 3%;
     img {
       width: 100%;
       &:hover {
