@@ -25,22 +25,11 @@ namespace :podcasts do
         track_id = item.guid.content.split('/').last.to_i
         episode  = Podcast.find_by(track_id: track_id) || Podcast.new(track_id: track_id)
 
-        if episode.new_record?
-          logger.info("Create: #{item.title   }")
-          episode.create!(
-            id:             item.title.split('-').first.to_i,
-            title:          item.title,
-            description:    item.description,
-            content_size:   item.enclosure.length,
-            duration:       item.itunes_duration.content,
-            permalink:      item.link.split('/').last,
-            permalink_url:  item.link,
-            published_date: item.pubDate.to_date,
-            )
-        else
-          logger.info("Update: #{episode.title}")
+        episode.new_record? ?
+          logger.info("Creating: #{item.title   }") :
+          logger.info("Updating: #{episode.title}")
 
-          episode.update!(
+        params = {
             title:          item.title,
             description:    item.description,
             content_size:   item.enclosure.length,
@@ -48,8 +37,10 @@ namespace :podcasts do
             permalink:      item.link.split('/').last,
             permalink_url:  item.link,
             published_date: item.pubDate.to_date,
-            )
-        end
+        }
+        params[:id] = item.title.split('-').first.to_i if episode.new_record?
+
+        episode.update!(params)
       end
     end
 
