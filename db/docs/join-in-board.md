@@ -70,10 +70,11 @@ info@coderdojo.jp
 
 さらに詳しい情報については、2020年8月3日 (月) 12:00-13:00 にライブ配信する『[DojoCast](/podcasts)』でまとめていきたいと思います。ライブ配信後もアーカイブ版を公開する予定ですので、よければぜひご視聴いただけると幸いです。
 
-<div class="home-point-video" style="margin-top: 50px; margin-bottom: 100px;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/4yvRtgBTqBs"
-   frameborder="0" allowfullscreen></iframe>
-</div>
+<br>
+
+<iframe width="100%" height="120" scrolling="no" frameborder="yes"
+ src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/869231116&auto_play=false&buying=false&sharing=false&download=true&show_artwork=false&show_playcount=false&show_user=false">
+</iframe>
 
 <br>
 
