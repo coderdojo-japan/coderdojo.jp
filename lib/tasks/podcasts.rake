@@ -15,7 +15,10 @@ namespace :podcasts do
       'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
     rss = RSS::Parser.parse(SOUNDCLOUD_RSS, false)
 
-    logger.info('no track') if rss.items.length.zero?
+    if rss.items.length.zero?
+      logger.info('No track exists. Maybe failed to set RSS URL?')
+      exit
+    end
 
     Podcast.transaction do
       rss.items.each_with_index do |item, index|
