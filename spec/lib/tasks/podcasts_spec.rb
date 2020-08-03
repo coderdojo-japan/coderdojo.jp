@@ -15,6 +15,7 @@ RSpec.describe 'DojoCast:', podcast: true do
 
   describe 'podcasts:upsert' do
     before :each do
+      Podcast.destroy_all
       @episode = create(:podcast,
                  track_id:  111001,
                  title:     '999 - podcast 999',
