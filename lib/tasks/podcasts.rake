@@ -23,10 +23,11 @@ namespace :podcasts do
         episode  = Podcast.find_by(track_id: track_id) || Podcast.new(track_id: track_id)
 
         episode.new_record? ?
-          logger.info("Create: #{episode.title} (ID = #{episode.id})") :
-          logger.info("Update: #{episode.title} (ID = #{episode.id})")
+          logger.info("Create: #{item.title   }") :
+          logger.info("Update: #{episode.title}")
 
         episode.update!(
+          id:             item.title.split('-').first.to_i,
           title:          item.title,
           description:    item.description,
           content_size:   item.enclosure.length,
