@@ -59,8 +59,8 @@ RSpec.configure do |config|
     ex.run_with_retry retry: 3
   end
 
-# The settings below are suggested to provide a good initial experience
-# with RSpec, but feel free to customize to your heart's content.
+  # The settings below are suggested to provide a good initial experience
+  # with RSpec, but feel free to customize to your heart's content.
   # This allows you to limit a spec run to individual examples or groups
   # you care about by tagging them with `:focus` metadata. When nothing
   # is tagged with `:focus`, all examples get run. RSpec also provides
@@ -106,4 +106,9 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
+
+  # Reset test database when finished running all specs
+  #config.after :all do
+  #  ApplicationRecord.subclasses.each(&:delete_all)
+  #end
 end
