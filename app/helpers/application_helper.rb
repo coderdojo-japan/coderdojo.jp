@@ -32,9 +32,10 @@ module ApplicationHelper
     end
   end
 
-  def meta_image(filepath='og-image.png')
+  def meta_image(filepath)
     base_url = Rails.env.development? ? 'http://localhost:3000/' : 'https://coderdojo.jp/'
-    filepath = filepath[1..] if filepath.starts_with? '/'
+    filepath = '/img/ogp-default.jpeg' if filepath.blank?
+    filepath = filepath[1..]           if filepath.starts_with? '/'
     base_url + filepath
   end
 
