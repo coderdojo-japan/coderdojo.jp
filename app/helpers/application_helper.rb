@@ -12,7 +12,7 @@ module ApplicationHelper
   def full_url(page_url)
     # When URL is composed by Scrivito
     return "https://coderdojo.jp/#{@obj.permalink}" if @obj && !@obj.permalink.nil?
-    binding.pry
+
     # When URL is composed by Rails
     if page_url.empty?
       # Set og:url with request param
