@@ -1,7 +1,6 @@
 class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
-
-  DIR_PATH  = 'public/podcasts'
+  DIR_PATH        = 'public/podcasts'
 
   validates :track_id,       presence: true, uniqueness: true
   validates :title,          presence: true
@@ -19,6 +18,11 @@ class Podcast < ApplicationRecord
   def exists?(offset: 0)
     return false if path.include?("\u0000")
     File.exists?("#{DIR_PATH}/#{id + offset}.md")
+  end
+
+  def cover
+    cover = Dir.glob("public/podcasts/#{self.id}.{jpg,png}")
+    cover.blank? ? nil: cover.first[7..]
   end
 
   def content

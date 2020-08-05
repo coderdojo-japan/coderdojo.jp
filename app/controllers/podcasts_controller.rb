@@ -6,7 +6,7 @@ class PodcastsController < ApplicationController
     @url             = request.url
     @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] == 'true'
 
-    # For .rss format
+    # GET /podcasts.rss
     @art_work_url    = "https://coderdojo.jp/podcasts/cover.jpg"
     @author          = "一般社団法人 CoderDojo Japan"
     @copyright       = "Copyright © 2012-#{Time.current.year} #{@author}"

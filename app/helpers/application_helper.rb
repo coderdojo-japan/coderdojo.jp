@@ -32,6 +32,12 @@ module ApplicationHelper
     end
   end
 
+  def meta_image(filepath='og-image.png')
+    base_url = Rails.env.development? ? 'http://localhost:3000/' : 'https://coderdojo.jp/'
+    filepath = filepath[1..] if filepath.starts_with? '/'
+    base_url + filepath
+  end
+
   def kata_description
     "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
   end
