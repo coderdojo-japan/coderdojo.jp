@@ -45,7 +45,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
   - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
   - 製品やサービスの継続的な提供もご相談可能です
     例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/) <br><br>
-- `B:` CoderDojo Japan が運営する SNS や Podcast で貴社のプロダクト・イベントなどを周知することができます (事前審査あり、周知回数は応相談)
+- `B:` CoderDojo Japan が運営する SNS や Podcast で貴社のプロダクト・イベントなどを周知できます (事前審査あり、周知回数は応相談)
   - 例1: CoderDojo Japan の Facebook Group で周知
     [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
   - 例2: CoderDojo Japan の Podcast で出演
