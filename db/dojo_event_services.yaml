@@ -1202,11 +1202,11 @@
 #  group_id:
 #  url:
 
-# 津和野 TODO: イベントが追加されたら group_id を追加する
-# - dojo_id: 245
-#   name: doorkeeper
-#   group_id:
-#   url: https://coderdojo-tsuwano.doorkeeper.jp/
+# 津和野
+- dojo_id: 245
+  name: doorkeeper
+  group_id: 11024
+  url: https://coderdojo-tsuwano.doorkeeper.jp/
 
 # 宇都宮
 - dojo_id: 246
@@ -1214,7 +1214,7 @@
   group_id: 11027
   url: https://coderdojo-utsunomiya.doorkeeper.jp/
 
-# 中央林間 イベントが追加されたら group_id を記入する
+# 中央林間
 - dojo_id: 247
   name: connpass
   group_id: 10215
