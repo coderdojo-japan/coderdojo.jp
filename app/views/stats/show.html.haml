@@ -78,7 +78,7 @@
 
   %h3#map{style: "margin-top: 80px;"} 🗾 地域別の道場数
   .japan-map
-    %p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
+    /%p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
     #japan-map-container
 
   #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
@@ -106,11 +106,12 @@
 
 :javascript
   $(function(){
-    var areas      = JSON.parse('#{@data_by_region.to_json}'.replace( /&quot;/g, '"'));
+    var areas      = JSON.parse('#{@data_by_region.to_json    }'.replace( /&quot;/g, '"'));
     var dataByPref = JSON.parse('#{@data_by_prefecture.to_json}'.replace( /&quot;/g, '"'));
 
     $("#japan-map-container").japanMap(
       {
+        // NOTE: Tweak stats_controller if you want to tweak map colors
         areas: areas,
         selection: "prefecture",
         borderLineWidth: 0.1,

@@ -55,7 +55,7 @@ class StatsController < ApplicationController
         code:        index+1,
         name:        "#{region} (#{dojos.count})",
         color:       "dodgerblue",  # Area Color
-        hoverColor:  "deepskyblue", # Hover Color
+        hoverColor:  "dodgerblue", # Another option: "deepskyblue"
         prefectures: Prefecture.where(region: region).map(&:id)
       }
     end

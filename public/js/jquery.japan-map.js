@@ -628,7 +628,8 @@
                 context.fillStyle = this.brighten(context.fillStyle, 0.2);
         }
 
-        this.element.style.cursor = (this.data.code == null)? "default" : "pointer";
+	// this.element.style.cursor = (this.data.code == null)? "default" : "pointer";
+        this.element.style.cursor = (this.data.code == null)? "default" : "default";
     };
 
     MapCanvas.prototype.isHovering = function(){
