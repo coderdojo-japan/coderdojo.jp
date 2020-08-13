@@ -1,7 +1,8 @@
 %li.dojo
   %header
     %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
-      %img.dojo-picture{class: 'lazyload', "data-src" => "#{dojo.logo}"}
+      %img.dojo-picture{class: 'lazyload', src: "/spinner.svg", "data-src" => "#{dojo.logo}",
+                        loading: "lazy"}
     %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
       %span.dojo-name
         = "#{dojo.name} (#{dojo.prefecture.name}) "
