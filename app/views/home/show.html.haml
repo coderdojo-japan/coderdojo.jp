@@ -5,7 +5,8 @@
   %br
 
 %section.cover
-  = image_tag "coderdojo-japan_cover.jpg", alt: 'CoderDojoJapan カバー画像', loading: 'lazy', class: 'lazyload'
+  = image_tag "/coderdojo-japan_cover.min.jpg", alt: 'CoderDojo Japan カバー画像', class: 'lazyload',
+              "data-src" => "/coderdojo-japan_cover.jpg", loading: 'lazy'
 
 %section.introduction.text-center.list
   %br
@@ -40,7 +41,7 @@
     次の動画や記事をぜひ！😆
 
   %div.home-point-thumbnail{style: "margin-top: 30px; margin-bottom: 30px;"}
-    = link_to image_tag("video-thumbnail.jpg", alt: 'Promotion Video by CoderDojo Kashiwa', class: 'lazyload', loading: 'lazy'), 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"
+    = link_to image_tag("/video-thumbnail.min.jpg", alt: 'Promotion Video by CoderDojo Kashiwa', class: 'lazyload', loading: 'lazy', 'data-src' => '/video-thumbnail.jpg'), 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"
   /%div.home-point-video
   /  %iframe{allowfullscreen: "", frameborder: "0", height: "315", width: "560",
   /          src: "https://www.youtube.com/embed/gLDue2xb1j8?rel=0"}
@@ -151,7 +152,9 @@
         Kata の立ち上げる
       を読んでみてください。
     %div.kata
-      = link_to image_tag("kata_cover.png", alt: 'CoderDojo Kata', class: 'lazyload', loading: 'lazy', style: 'margin-bottom: 15px;'), '/kata'
+      = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
+                          'data-src' => '/kata_cover.jpg', loading: 'lazy', 
+                          style: 'margin-bottom: 15px;'), '/kata'
       %a.button{href: '/kata'} Kata を読む
     %br
     %div#partners

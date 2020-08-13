@@ -15,7 +15,7 @@ img.emoji {
 /* Lazyload with fade animation */
 .lazyload,
 .lazyloading {
-	opacity: 0;
+	opacity: 6;
 }
 .lazyloaded {
 	opacity: 1;
@@ -521,7 +521,7 @@ body>footer a:hover {
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: url('/img/coderdojo-japan_cover.jpg') no-repeat center;
+    background: url('/coderdojo-japan_cover.min.jpg') no-repeat center;
     background-size: cover;
     opacity: 0.6;
   }
