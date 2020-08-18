@@ -170,7 +170,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.3.1)
-    jwt (2.2.1)
+    jwt (2.2.2)
     koala (3.0.0)
       addressable
       faraday
