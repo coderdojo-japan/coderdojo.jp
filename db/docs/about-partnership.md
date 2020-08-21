@@ -131,7 +131,7 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 
 ### Q. 他のパートナーシップの事例を教えてくれませんか?
 
-上記の他にも、次のようなパートナーシップがあります。こちらもご参考になれば幸いです。
+上記の他にも、次のようなパートナーシップがあります。
 
 例: プログラミング学習のProgate、CoderDojo Japanと提携
 [https://prtimes.jp/main/html/rd/p/000000045.000015015.html](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
@@ -142,14 +142,30 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 例: CoderDojo Japanとみんなのコード、 プログラミング教育に関するパートナーシップを締結
 [https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/](https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/)
 
-上記の他にも、提携したプログラムの公式ハッシュタグを用意し、そこで広く様々な投稿を受け付けるスタイルもあります。こちらもご参考になれば幸いです。
+<br>
 
-**ハッシュタグ例: [#MakeblockHaloCoderDojo](https://twitter.com/hashtag/MakeblockHaloCoderDojo)**
-
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【新製品発表、<a href="https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw">@CoderDojoJapan</a> と提携🎉 】 <a href="https://twitter.com/hashtag/MakeblockHaloCoderDojo?src=hash&amp;ref_src=twsrc%5Etfw">#MakeblockHaloCoderDojo</a><br><br>新製品のWi-Fi内臓シングルボードコンピュータ「Makeblock HaloCode」の発表・販売開始と、当製品におけるCoderDojo Japan様との提携を発表します！<br><br>製品の概要や、この度の提携の背景・目的はこちら☞<a href="https://t.co/IHeabye2N6">https://t.co/IHeabye2N6</a> <a href="https://t.co/2lStpXziqk">pic.twitter.com/2lStpXziqk</a></p>&mdash; Makeblock Japan (@MakeblockJapan) <a href="https://twitter.com/MakeblockJapan/status/1126653080727109635?ref_src=twsrc%5Etfw">May 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+提携に合わせて公式ハッシュタグを用意したり、既存のハッシュタグを使って広く様々な周知を促す事例もあります。こちらもご参考になれば幸いです。
 
 <br>
 
+**ハッシュタグ例: [#MakeblockHaloCoderDojo](https://twitter.com/hashtag/MakeblockHaloCoderDojo)**
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【新製品発表、<a href="https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw">@CoderDojoJapan</a> と提携🎉 】 <a href="https://twitter.com/hashtag/MakeblockHaloCoderDojo?src=hash&amp;ref_src=twsrc%5Etfw">#MakeblockHaloCoderDojo</a><br><br>新製品のWi-Fi内臓シングルボードコンピュータ「Makeblock HaloCode」の発表・販売開始と、当製品におけるCoderDojo Japan様との提携を発表します！<br><br>製品の概要や、この度の提携の背景・目的はこちら☞<a href="https://t.co/IHeabye2N6">https://t.co/IHeabye2N6</a> <a href="https://t.co/2lStpXziqk">pic.twitter.com/2lStpXziqk</a></p>&mdash; Makeblock Japan (@MakeblockJapan) <a href="https://twitter.com/MakeblockJapan/status/1126653080727109635?ref_src=twsrc%5Etfw">May 10, 2019</a></blockquote> 
+
+<br>
+**ハッシュタグ例: [#Google](https://twitter.com/hashtag/Google)**
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">CoderDojo Japanが行う、女性がプログラミングを楽しく学べる環境を支援する 「Girls Initiative for CoderDojo キャンペーン」💻その一環として、女子小中学生が <a href="https://twitter.com/hashtag/Google?src=hash&amp;ref_src=twsrc%5Etfw">#Google</a> エンジニアと交流する「Mind the Gap オンラインセッション」を開催します。お申し込みは⇒ <a href="https://t.co/FmYcd5rgL6">https://t.co/FmYcd5rgL6</a> <a href="https://t.co/GDyhNZ74WX">pic.twitter.com/GDyhNZ74WX</a></p>&mdash; Google Japan (@googlejapan) <a href="https://twitter.com/googlejapan/status/1285869407558938626?ref_src=twsrc%5Etfw">July 22, 2020</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+これまでの提携事例については、下記のプレス記事まとめページをご参照ください。
+[https://news.coderdojo.jp/category/press/](https://news.coderdojo.jp/category/press/)
+
+
+<br>
 
 ### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
 CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で周知することが可能です。(上記 `B` に該当)
