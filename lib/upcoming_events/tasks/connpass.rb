@@ -3,7 +3,7 @@ module UpcomingEvents
     class Connpass
       def initialize(dojos, period)
         @client = EventService::Providers::Connpass.new
-        @dojos = dojos
+        @dojos  = dojos
         @params = build_params(period)
       end
 

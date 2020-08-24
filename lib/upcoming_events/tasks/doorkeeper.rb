@@ -3,7 +3,7 @@ module UpcomingEvents
     class Doorkeeper
       def initialize(dojos, period)
         @client = EventService::Providers::Doorkeeper.new
-        @dojos = dojos
+        @dojos  = dojos
         @params = build_params(period)
       end
 
