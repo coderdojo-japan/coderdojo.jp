@@ -8,9 +8,9 @@ class UpcomingEvent < ApplicationRecord
   validates :participants, presence: true
   validates :event_end_at, presence: true
 
-  scope :for, ->(service) { where(dojo_event_service: DojoEventService.for(service)) }
-  scope :since, ->(date) { where('event_end_at >= ?', date.beginning_of_day) }
-  scope :until, ->(date) { where('event_end_at < ?', date.beginning_of_day) }
+  scope :for,   ->(service) { where(dojo_event_service: DojoEventService.for(service)) }
+  scope :since, ->(date)    { where('event_end_at >= ?', date.beginning_of_day) }
+  scope :until, ->(date)    { where('event_end_at < ?',  date.beginning_of_day) }
 
   class << self
     def group_by_prefecture
