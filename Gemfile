@@ -8,7 +8,7 @@ gem 'pg'
 gem 'dumper'
 gem 'bootsnap'
 
-gem 'scrivito', '~> 1.16.0'
+gem 'scrivito', '~> 1.17'
 gem 'scrivito_section_widgets'
 gem 'scrivito_teaser_widget'
 
