@@ -27,6 +27,17 @@
   - ラズベリーパイ
   - Python
   - Unity
+- id: 253
+  order: '012050'
+  created_at: '2020-09-10'
+  name: 室蘭
+  prefecture_id: 1
+  url: https://www.npokuru2.net/coderdojo%E5%AE%A4%E8%98%AD
+  logo: "/img/dojos/japan.png"
+  description: 室蘭市で月1回開催
+  tags:
+  - Scratch
+  - 電子工作
 - id: 100
   order: '012319'
   created_at: '2017-09-20'
