@@ -1,6 +1,6 @@
 # お問い合わせありがとうございます ✉️✨
 
-<img class='lazyload' loading='lazy' style='margin: 40px 0;' src='/img/thanks.low.png' data-src='/img/thanks.png' alt='お問い合わせありがとうございます' />
+<img class='lazyload' loading='lazy' style='margin: 40px auto;width:120px;display:block;border-radius:0;' src='/spinner.png' data-src='/img/mail-icon.png' alt='お問い合わせありがとうございます' />
 
 お問い合わせありがとうございます。３営業日以内にご返信いたしますね。
 
