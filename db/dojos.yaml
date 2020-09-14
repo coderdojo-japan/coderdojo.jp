@@ -977,6 +977,20 @@
   description: 三鷹周辺で月に1回程度開催
   tags:
   - Scratch
+- id: 254
+  order: '132055'
+  created_at: '2020-09-14'
+  name: 青梅
+  prefecture_id: 13
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojoome.github.io/
+  description: 青梅市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Python
+  - ラズベリーパイ
+  - 電子工作
 - id: 228
   order: '132071'
   created_at: '2019-10-11'
