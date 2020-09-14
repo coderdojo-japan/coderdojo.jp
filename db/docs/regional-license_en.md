@@ -123,7 +123,7 @@ or as otherwise specified by the relevant party by notice in writing to each oth
 
 This agreement and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the law of Ireland. The parties irrevocably agree that the courts of Ireland shall have exclusive jurisdiction to settle any dispute or claim that arises out of or in connection with this Agreement.
 
-<img src="/img/sign_en.png" alt='Signature'/>
+<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/sign_en.png" alt='Signature'/>
 
 <br>
 

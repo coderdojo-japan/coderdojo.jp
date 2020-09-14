@@ -7,7 +7,7 @@
 CoderDojo は7〜17歳を対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本では全国に{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は全国各地で定期的に開催されており、延べ 10,000 人 以上の子ども達が毎年プログラミングを学んでいます。
 
 <div style="padding: 40px 0px;">
-  <a href="/stats"><img src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
+  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
   <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center>
 </div>
 
@@ -19,7 +19,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 <br>
 
-<img src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
+<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
 <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 
 <br>
@@ -33,7 +33,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 <br>
 
-<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
+<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
 <center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">引用元</a>)</center><br>
 
 もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo Japan が描いているパートナーシップの内容とその具体例は次のとおりです。
@@ -52,7 +52,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
     [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/) <br><br>
 - `C:` CoderDojo Japan のパートナーとして、公式Webサイトに貴社ロゴを掲載します
 
-<img src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
+<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
 <center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
 <br>
 
