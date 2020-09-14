@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "/docs/teikan",            to: redirect('/teikan')
   get "/docs/join-in-board",     to: redirect('/join-in-board')
   get "/docs/thanks",            to: redirect('/thanks')
+  get "/docs/signup",            to: redirect('/signup')
 
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                to: redirect('https://www.youtube.com/CoderDojoJapan')
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   get "/teikan"           => "docs#show", id: 'teikan'
   get "/join-in-board"    => "docs#show", id: 'join-in-board'
   get "/thanks"           => "docs#show", id: 'thanks'
+  get "/signup"           => "docs#show", id: 'signup'
 
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
