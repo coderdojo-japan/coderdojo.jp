@@ -84,7 +84,8 @@
       .panel.panel-default
         .panel-heading{id: "heading#{index}", role: "tab"}
           %h4.panel-title
-            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "##{"collapse#{index}"}", role: "button"}
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse",
+               href: "##{"collapse#{index}"}", role: "button"}
               %i.fa.fa-chevron-right{"aria-hidden" => "true"}
               = region
               \- #{dojos.pluck(:counter).sum} Dojos
