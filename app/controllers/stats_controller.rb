@@ -53,7 +53,7 @@ class StatsController < ApplicationController
     @regions_and_dojos.each_with_index do |(region, dojos), index|
       @data_by_region << {
         code:        index+1,
-        name:        "#{region} (#{dojos.count})",
+        name:        "#{region} (#{dojos.pluck(:counter).sum})",
         color:       "dodgerblue",  # Area Color
         hoverColor:  "dodgerblue", # Another option: "deepskyblue"
         prefectures: Prefecture.where(region: region).map(&:id)
