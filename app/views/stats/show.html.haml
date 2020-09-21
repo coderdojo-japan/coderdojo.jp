@@ -1,51 +1,54 @@
 - provide(:title, '統計情報')
-- provide(:desc,  'CoderDojo の統計情報をまとめています。')
+- provide(:desc,  'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。')
 - provide(:url,   @url)
 - provide(:meta_image,  "/img/ogp-stats.jpeg")
 
 %script{ type: 'text/javascript', src: '/js/jquery.japan-map.js'}
 
-%section{style: 'padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;'}
+%section#top{style: 'padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;'}
   = image_tag "stats_cover.png"
 
-%section#top.dojos.text-center
+%section.stats.text-center
   %h1 統計情報
-  %div{style: "margin: 30px 36px 0; line-height: 1.8em;"}
+  %div{style: "margin: 30px 36px 0;"}
     本ページでは CoderDojo の統計情報をまとめています。
     %br.ignore-sp<>
     全国の活動状況を把握したい場面などでご活用ください。
 
-  %h3#graph{style: "margin-top: 60px;"} 📊 推移グラフ
+  %h3#graph 📊 推移グラフ
   %div{align: 'center'}
     = high_chart_globals(@high_charts_globals)
     %br
+    %br
     = high_chart("annual_dojos",           @annual_dojos_chart)
+    %br
     %br
     = high_chart("annual_event_histories", @annual_event_histories_chart)
     %br
+    %br
     = high_chart("annual_participants",    @annual_participants_chart)
 
-  %h3#data{style: "margin-top: 80px; margin-bottom: 30px;"} 🆕 最新データ
+  %h3#data{style: "margin-bottom: 30px;"} 🆕 最新データ
   %p
     #{Time.current.year}年のデータも含めた
     %br<>
     最新の統計情報は次のとおりです。
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{style: 'margin-top: 4px;', border: '1'}
-      %tr{style: 'padding: 3px 5px'}
-        %th{style: 'padding: 5px 10px;'} 掲載中の道場数
-        %th{style: 'padding: 5px 10px;'} 累計開催回数
-        %th{style: 'padding: 5px 10px;'} 累計参加者数
+      %tr
+        %th 掲載中の道場数
+        %th 累計開催回数
+        %th 累計参加者数
       %tr.text-center
-        %td{style: 'padding: 5px 10px;'}= @sum_of_dojos
-        %td{style: 'padding: 5px 10px;'}= @sum_of_events
-        %td{style: 'padding: 5px 10px;'}= @sum_of_participants
+        %td= @sum_of_dojos
+        %td= @sum_of_events
+        %td= @sum_of_participants
 
   %div#tag{style: "margin-top: 20px;", align: 'center'}
     %br
     = high_chart("dojo_tag_chart", @dojo_tag_chart)
 
-  %h3#howto{style: "margin-top: 80px; margin-bottom: 30px;"} ✅ 集計方法と集計対象について
+  %h3#howto{style: "margin-bottom: 30px;"} ✅ 集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
     %li 参加者数はユニーク数ではなく延べ数です。
     %li 集計対象は API などで集計可能な道場です。
@@ -60,18 +63,18 @@
 
   %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
     %b 集計対象となっている道場数の推移
-    %table{style: 'margin-top: 4px;', border: '1'}
+    %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
-        %th.text-center{style: 'padding: 3px 5px; font-weight: normal;'} 西暦
+        %th{style: 'font-weight: normal;'} 西暦
         - @annual_dojos_table.keys.each do |year|
-          %th.text-center{style: 'padding: 3px 5px; font-weight: normal;'} #{year}
+          %th{style: 'font-weight: normal;'} #{year}
       %tr{style: 'text-align: center;'}
-        %td{style: 'padding: 3px 5px;'} 道場数
+        %td 道場数
         - @annual_dojos_table.each_value do |num|
           %td= num
 
 
-  %h3#map{style: "margin-top: 80px;"} 🗾 地域別の道場数
+  %h3#map 🗾 地域別の道場数
   .japan-map
     /%p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
     #japan-map-container
@@ -89,23 +92,23 @@
           .panel-body.grayscale-bg.dojo-flex
             = render partial: 'shared/dojo', collection: dojos
 
-  %h4#prefectures{style: "margin-top: 60px;"} 都道府県別の道場数
+  %h4#prefectures 都道府県別の道場数
   %div{style: "margin-top: 20px;", align: 'center' }
-    %table{style: 'margin-top: 4px;', border: '1'}
+    %table{border: '1'}
       %tr
         %th{style: 'padding: 10px;'} 都道府県名
         %th{style: 'padding: 10px;'} 道場数
       - @data_by_prefecture.each_with_index do |(prefecture, count), index|
-        %tr.text-center
+        %tr
           - if count == 0
-            %td{style: 'background-color: gainsboro;'}= prefecture
-            %td{style: 'background-color: gainsboro;'}= count
+            %td{style: 'background-color: gainsboro; padding: 0px;'}= prefecture
+            %td{style: 'background-color: gainsboro; padding: 0px;'}= count
           - else
-            %td= prefecture
-            %td= count
+            %td{style: 'padding: 0px;'}= prefecture
+            %td{style: 'padding: 0px;'}= count
 
-  %h3#references{style: "margin-top: 60px;"} 📚 関連リンク
-  %ul{style: "list-style: none; text-align: center; width: 100%; line-height: 1.7em; margin-bottom: 40px;"}
+  %h3#references 📚 関連リンク
+  %ul
     %li
       %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues?utf8=%E2%9C%93&q=is%3Aclose+label%3A%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1+"} 統計情報に関する『これまで』の開発 - GitHub
     %li
