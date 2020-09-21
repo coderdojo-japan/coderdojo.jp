@@ -26,21 +26,20 @@
     = high_chart("annual_participants",    @annual_participants_chart)
 
   %h3#data{style: "margin-top: 80px; margin-bottom: 30px;"} 🆕 最新データ
-  2020年のデータも含めた最新の統計情報は次のとおりです。
+  %p
+    #{Time.current.year}年のデータも含めた
+    %br<>
+    最新の統計情報は次のとおりです。
   %div{style: "margin-top: 20px;", align: 'center' }
-    %table{style: 'margin-top: 4px;'}
-      %thead
-        %tr
-          %th
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 掲載中の道場数
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計開催回数
-          %td{style: 'padding: 0 10px; font-weight: bold;'} 累計参加者数
-      %tbody{style: 'text-align: center;'}
-        %tr
-          %td
-          %td= @sum_of_dojos
-          %td= @sum_of_events
-          %td= @sum_of_participants
+    %table{style: 'margin-top: 4px;', border: '1'}
+      %tr{style: 'padding: 3px 5px'}
+        %th{style: 'padding: 5px 10px;'} 掲載中の道場数
+        %th{style: 'padding: 5px 10px;'} 累計開催回数
+        %th{style: 'padding: 5px 10px;'} 累計参加者数
+      %tr.text-center
+        %td{style: 'padding: 5px 10px;'}= @sum_of_dojos
+        %td{style: 'padding: 5px 10px;'}= @sum_of_events
+        %td{style: 'padding: 5px 10px;'}= @sum_of_participants
       %div#tag
 
   %div{style: "margin-top: 20px;", align: 'center'}
@@ -62,18 +61,15 @@
 
   %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
     %b 集計対象となっている道場数の推移
-    %table{style: 'margin-top: 4px;'}
-      %thead
-        %tr
-          %th
-          - @annual_dojos_table.keys.each do |year|
-            %th{style: 'padding: 3px 5px; font-weight: normal;'} #{year}年
-      %tbody{style: 'text-align: center;'}
-        %tr
-          %td 道場数
-          - @annual_dojos_table.each_value do |num|
-            %td
-              %b= num
+    %table{style: 'margin-top: 4px;', border: '1'}
+      %tr
+        %th.text-center{style: 'padding: 3px 5px; font-weight: normal;'} 西暦
+        - @annual_dojos_table.keys.each do |year|
+          %th.text-center{style: 'padding: 3px 5px; font-weight: normal;'} #{year}
+      %tr{style: 'text-align: center;'}
+        %td{style: 'padding: 3px 5px;'} 道場数
+        - @annual_dojos_table.each_value do |num|
+          %td= num
 
 
   %h3#map{style: "margin-top: 80px;"} 🗾 地域別の道場数
