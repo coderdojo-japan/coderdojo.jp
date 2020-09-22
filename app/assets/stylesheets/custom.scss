@@ -3,6 +3,49 @@
 @import "color";
 // Customized by YassLab team
 
+/* Kata */
+article.kata p {
+  line-height: 1.7em;
+}
+.kata-header {
+  background-color: #777777;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
+.kata-header .kata-heading {
+  padding: 100px 0 50px;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  .kata-header .kata-heading {
+    padding: 150px 0;
+  }
+}
+.kata-header .kata-heading h1 {
+  font-size: 35px;
+}
+.kata-header .kata-heading .kata-subheading {
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 10px 0 30px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .kata-header .kata-heading h1 {
+    font-size: 55px;
+  }
+  .kata-header .kata-heading .kata-subheading {
+    font-size: 30px;
+  }
+}
+
 /* Twemoji */
 img.emoji {
   height: 1em;
