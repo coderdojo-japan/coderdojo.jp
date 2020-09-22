@@ -160,3 +160,4 @@
 - [☯️ 大阪Ruby会議02で coderdojo.jp 開発事例を発表します - yasslab.jp](https://yasslab.jp/ja/news/cfp-accepted-at-osaka-rubykaigi02)
 - [🛠 DojoCast を Jekyll から Rails に移行しました - yasslab.jp](https://yasslab.jp/ja/news/migrate-dojocast-from-jekyll-to-rails)
 - [☯️ 開発目線で見る最近の CoderDojo Japan 2018 - yasslab.jp](https://yasslab.jp/ja/news/coderdojo-japan-2018)
+- [☯️ CoderDojo Japan の各種機能と実装について【2017年版】 - Qiita](https://qiita.com/yasulab/items/1d12e6b295c0a9e577f1)
