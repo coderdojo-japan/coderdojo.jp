@@ -47,8 +47,9 @@ Rails.application.routes.draw do
   get "/events"  => "events#index"
 
   # Redirects
-  get "/releases/2016/12/12/new-backend", to: redirect('/news/2016/12/12/new-backend')
-  get "/blogs/2016/12/12/new-backend",    to: redirect('/news/2016/12/12/new-backend')
+  get "/releases/2016/12/12/new-backend", to: redirect('/docs/post-backend-update-history')
+  get "/blogs/2016/12/12/new-backend",    to: redirect('/docs/post-backend-update-history')
+  get "/news/2016/12/12/new-backend",     to: redirect('/docs/post-backend-update-history')
 
   # Issue SSL Certification
   get "/.well-known/acme-challenge/:id" => "lets_encrypt#show"
