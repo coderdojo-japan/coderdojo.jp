@@ -79,19 +79,8 @@
     /%p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
     #japan-map-container
 
-  #accordion.panel-group{"aria-multiselectable" => "true", role: "tablist"}
-    - @regions_and_dojos.each_with_index do |(region, dojos), index|
-      .panel.panel-default
-        .panel-heading{id: "heading#{index}", role: "tab"}
-          %h4.panel-title
-            %a{"data-parent" => "#accordion", "data-toggle" => "collapse",
-               href: "##{"collapse#{index}"}", role: "button"}
-              %i.fa.fa-chevron-right{"aria-hidden" => "true"}
-              = region
-              \- #{dojos.pluck(:counter).sum} Dojos
-        .panel-collapse.collapse{id: "collapse#{index}", role: "tabpanel"}
-          .panel-body.grayscale-bg.dojo-flex
-            = render partial: 'shared/dojo', collection: dojos
+  / NOTE: Always show dojos with accordion style to compact
+  = render partial: 'shared/dojos_stats', locals: { regions_and_dojos: @regions_and_dojos }
 
   %h4#prefectures 都道府県別の道場数
   %div{style: "margin-top: 20px;", align: 'center' }
