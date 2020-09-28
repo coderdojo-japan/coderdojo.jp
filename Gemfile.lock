@@ -280,7 +280,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    regexp_parser (1.7.1)
+    regexp_parser (1.8.1)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
