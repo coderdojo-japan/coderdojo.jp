@@ -24,7 +24,7 @@
     %meta{content: "#{meta_image(yield(:meta_image))}", property: "og:image"}/
     %meta{content: "image/png",                         property: "og:image:type"}/
     %meta{content: "CoderDojo Japan",                   property: "og:site_name"}/
-  
+
     %meta{content: "summary_large_image",               name: "twitter:card"}/
     %meta{content: "@CoderDojoJapan",                   name: "twitter:site"}/
     %meta{content: "@CoderDojoJapan",                   name: "twitter:creator"}/
@@ -68,9 +68,7 @@
 
 
     / at the end of the HEAD
-    / TODO: Fix this later - https://github.com/coderdojo-japan/coderdojo.jp/issues/912
-    /- if is_kata?
-    /  %link{href: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", rel: "stylesheet"}
+    %link{href: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", rel: "stylesheet"}
 
   %body
     = render 'shared/header'
@@ -84,17 +82,16 @@
     :javascript
       twemoji.parse(document.body);
 
-    / TODO: Fix this later - https://github.com/coderdojo-japan/coderdojo.jp/issues/912
-    /- if is_kata?
-    /  %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js",
-    /          type: "text/javascript"}
-    /  :javascript
-    /    docsearch({
-    /      apiKey: '315da3c406c3fa374a0696590f4821a3',
-    /      indexName: 'coderdojo',
-    /      inputSelector: '#searchbox',
-    /      debug: false // Set debug to true if you want to inspect the dropdown
-    /    });
+
+    %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js", type: "text/javascript"}
+
+    :javascript
+      docsearch({
+        apiKey: '315da3c406c3fa374a0696590f4821a3',
+        indexName: 'coderdojo',
+        inputSelector: '#searchbox',
+        debug: false // Set debug to true if you want to inspect the dropdown
+      });
 
   #fb-root
   :javascript
