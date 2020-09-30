@@ -1,3 +1,5 @@
+@import "color";
+
 body {
   padding: 64px 0 0;
 }
@@ -120,7 +122,7 @@ body {
   }
 }
 
-@media only screen and (max-width:865px) {
+@media only screen and (max-width:900px) {
   .container-fluid {
     padding: 5px 10px;
   }
@@ -175,5 +177,59 @@ body {
   }
   .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 540px;
+  }
+}
+
+/* DocSearch by Algolia */
+.search {
+  padding-top: 17px;
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  position: absolute;
+  right: 0;
+  #searchbox {
+    width: 0;
+    transition: all .3s;
+    padding: 4px 0;
+    border: none;
+    border-radius: 4px;
+  }
+}
+.search-icon {
+  width: 16px;
+  border-radius: 0;
+}
+.collapse > .navbar-nav > li.search-li {
+  position: static;
+  &::before, &::after {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.search-label {
+  margin: 0;
+  padding: 15px 8px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 26px;
+  cursor: pointer;
+}
+.search-checkbox {
+  display: none;
+}
+.search-checkbox:checked + .search {
+  #searchbox {
+    width: 190px;
+    transition: all .3s;
+    padding: 4px;
+    box-shadow: 0 0 6px 1px rgba(88, 88, 88, 41%);
+    border: #fff solid 1px;
+    &:focus{
+      border: $main-blue solid 2px;
+      outline: none;
+    }
   }
 }

@@ -10,7 +10,7 @@
       .navbar-header-logos
         = link_to image_tag('/img/header-logo.png',  alt: 'CoderDojo logo'),  '/', id: "header-logo"
         = link_to image_tag('/img/header-brand.png', alt: 'CoderDojo brand'), '/', id: "header-brand"
-    .collapse#header-nav-toggle.navbar-collapse
+    #bs-example-navbar-collapse-1.collapse#header-nav-toggle.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li= link_to '全国の道場',     '/#dojos'
         %li= link_to '近日開催の道場', '/events'
@@ -27,5 +27,12 @@
             %li= link_to '立ち上げる', '/kata#startup'
             %li= link_to '支援',       '/kata#support'
             %li= link_to 'FAQ',        '/kata#faq'
-
+        / DocSearch: https://github.com/algolia/docsearch-configs/blob/master/configs/coderdojo.json
+        %li.search-li
+          <label for="search" class="search-label"><img src="/img/search.svg" alt="検索" class="search-icon" /></label>
+          = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox'
+          .search
+            %input#searchbox{ :placeholder => "資料を検索", :type => "text" }
+            #hits
+            #pagination
         %li= link_to 'お問い合わせ',   '/#contact'
