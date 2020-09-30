@@ -18,7 +18,7 @@ RSpec.feature "Sotechsha2", type: :feature, scrivito: true, retry: 3  do
       visit "/sotechsha2"
       expect(page).to have_selector "a[href]"
       # topimg,snsbtn
-      expect(page).to have_selector "img", count: 4
+      expect(page).to have_selector "img", count: 5
     end
   end
 
