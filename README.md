@@ -1,4 +1,4 @@
-[![Cover](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/master/public/cover.png)](https://coderdojo.jp/)
+[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/master/public/cover_rounded.png)](https://coderdojo.jp/)
 
 # CoderDojo Japan
 
