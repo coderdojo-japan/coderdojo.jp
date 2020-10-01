@@ -83,14 +83,14 @@
       twemoji.parse(document.body);
 
 
-    %script{:src  => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js", type: "text/javascript"}
+    %script{src: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js", type: "text/javascript"}
 
     :javascript
       docsearch({
         apiKey: '315da3c406c3fa374a0696590f4821a3',
         indexName: 'coderdojo',
         inputSelector: '#searchbox',
-        debug: false // Set debug to true if you want to inspect the dropdown
+        debug: false // Set this true if you want to inspect the dropdown
       });
 
   #fb-root

@@ -32,7 +32,7 @@
           <label for="search" class="search-label"><img src="/img/search.svg" alt="検索" class="search-icon" /></label>
           = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox'
           .search
-            %input#searchbox{ :placeholder => "資料を検索", :type => "text" }
+            %input#searchbox{ placeholder: "資料を検索", type: "text" }
             #hits
             #pagination
         %li= link_to 'お問い合わせ',   '/#contact'
