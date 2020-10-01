@@ -93,12 +93,9 @@ Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based R
 - ~~/news/*~~ (Outdated)
 - `/sotechsha/*`
 
-CMS enables wider people to contribute to editing contents,   
-but on the other hand, this requires Scrivito API Keys for    
-engineers to join developing Scrivito-used pages like above.
+CMS enables wider people to contribute to editing contents, but on the other hand, this requires Scrivito API Keys for engineers to join developing Scrivito-used pages like above.
 
-If interested in developing them, contact [@yasulab](https://github.com/yasulab) to
-get production keys (`SCRIVITO_TENANT` and `SCRIVITO_API_KEY`).
+We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are not required in development. If you find any problem that needs them report it to [GitHub Issues](https://github.com/coderdojo-japan/coderdojo.jp/issues).
 
 ## 他、開発に関する資料
 
@@ -168,8 +165,7 @@ The images, such as logos and photos of [each dojo](http://coderdojo.jp/#dojos),
 
 ### About Source Codes
 
-The source codes, such as HTML/CSS/JavaScript and Ruby not declared before, **The MIT License (MIT)**.   
-Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
+The source codes, such as HTML/CSS/JavaScript and Ruby not declared before, are published under **[The MIT License (MIT)](https://opensource.org/licenses/MIT)**. Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
 
 Copyright &copy; 2012-2020 [CoderDojo Japan Association](https://coderdojo.jp/)
 
