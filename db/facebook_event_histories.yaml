@@ -4374,3 +4374,25 @@
   event_id:
   participants: 1
   evented_at: 2020/08/30 14:00
+
+# 2020/09/01 - 2020/09/30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/09/07 18:00 #オンライン開催
+- dojo_id: 25
+  event_id:
+  participants: 2
+  evented_at: 2020/09/13 10:00
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2020/09/13 14:00
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2020/09/14 18:00 #オンライン開催
+- dojo_id: 86
+  event_id:
+  participants: 2
+  evented_at: 2020/09/20 10:00
