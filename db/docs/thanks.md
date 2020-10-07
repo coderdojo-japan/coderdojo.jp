@@ -33,7 +33,7 @@ CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち�
 
 <br>
 
-『もしご興味ありましたら、下記ページから詳細をご参照ください。
+もしご興味ありましたら、下記ページから詳細をご参照ください。
 
 🤝 パートナーシップのご案内   
 [https://coderdojo.jp/partnership](https://coderdojo.jp/partnership)
