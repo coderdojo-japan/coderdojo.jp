@@ -13,7 +13,7 @@
 </div>
 <br>
 
-<blockquote style="padding-top: 10px; font-style: normal;">オンラインをご希望の場合は<br class="ignore-pc"> <a href="https://zoom.us/jp-jp/meetings.html">Zoom</a> または <a href="https://whereby.com/">Whereby</a> を用意できます。</blockquote>
+<blockquote style="padding-top: 10px; font-style: normal;">オンラインをご希望の場合は<br class="ignore-pc"> <a href="https://zoom.us/jp-jp/meetings.html">Zoom</a> または <a href="https://whereby.com/">Whereby</a> をご用意できます。</blockquote>
 
 <br>
 
