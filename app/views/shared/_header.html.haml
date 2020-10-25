@@ -32,9 +32,15 @@
         %li.search-li
           %label.search-label{for: 'search'}
             %img.search-icon{alt: '検索', src: '/img/search.svg'}
-          = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox'
+          = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox', onclick: 'focusSearchBox()'
           %div.search
             %input#searchbox{placeholder: "資料を検索", type: "text"}
             #hits
             #pagination
         %li= link_to 'お問い合わせ',   '/#contact'
+
+:javascript
+  function focusSearchBox() {
+    document.getElementById("searchbox").focus();
+  }
+        
