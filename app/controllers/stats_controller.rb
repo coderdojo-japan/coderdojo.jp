@@ -27,10 +27,16 @@ class StatsController < ApplicationController
       # TODO: Use 'tally' method when using Ruby 2.7.0 or higher
       # cf. https://twitter.com/yasulab/status/1154566199511941120
       tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
-        .sort_by(&:last).reverse.to_h
+
+      # Add tags for multiple dojos: https://github.com/coderdojo-japan/coderdojo.jp/issues/992
+      Dojo.where('counter > 1').each do |dojo|
+        dojo.tags.each {|tag| tags[tag] += (dojo.counter - 1) }
+      end
+      tags = tags.sort_by{|key, value| value}.reverse.to_h
+
       f.xAxis categories: tags.keys.take(number_of_tags).reverse
       f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
-              tickInterval: 30, max: 210
+              tickInterval: 40, max: 240
       f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
                data: tags.values.take(number_of_tags).reverse,
                dataLabels: { enabled: true, y: 20, align: 'center' }
