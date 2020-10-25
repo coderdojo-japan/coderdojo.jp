@@ -45,3 +45,7 @@ footerで利用しているWufooのフォームの成形用のcss
   }
 }
 
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file {
+    padding: .3rem;
+    box-sizing: border-box;
+}
