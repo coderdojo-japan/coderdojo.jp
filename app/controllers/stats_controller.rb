@@ -33,7 +33,7 @@ class StatsController < ApplicationController
         dojo.tags.each {|tag| tags[tag] += (dojo.counter - 1) }
       end
       tags = tags.sort_by{|key, value| value}.reverse.to_h
-      binding.pry
+
       f.xAxis categories: tags.keys.take(number_of_tags).reverse
       f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
               tickInterval: 40, max: 240
