@@ -27,12 +27,14 @@
             %li= link_to '立ち上げる', '/kata#startup'
             %li= link_to '支援',       '/kata#support'
             %li= link_to 'FAQ',        '/kata#faq'
+
         / DocSearch: https://github.com/algolia/docsearch-configs/blob/master/configs/coderdojo.json
         %li.search-li
-          <label for="search" class="search-label"><img src="/img/search.svg" alt="検索" class="search-icon" /></label>
+          %label.search-label{for: 'search'}
+            %img.search-icon{alt: '検索', src: '/img/search.svg'}
           = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox'
-          .search
-            %input#searchbox{ placeholder: "資料を検索", type: "text" }
+          %div.search
+            %input#searchbox{placeholder: "資料を検索", type: "text"}
             #hits
             #pagination
         %li= link_to 'お問い合わせ',   '/#contact'
