@@ -237,21 +237,27 @@ h2 {
   font-size: 20px;
 }
 
-.snsb {
-  overflow: hidden;
-  clear: left;
-  margin-left: 13px;
+.social_buttons {
+  margin-left: -32px;
   padding: 0;
 }
-
-.snsb li {
+.social_buttons ul {
+  padding-left: 300px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 200px;
+}
+.social_buttons li {
   float: left;
   margin: 4px;
   list-style-type: none;
   line-height: 0;
 }
-
-.snsb iframe {
+.social_buttons iframe {
   margin: 0 !important;
 }
 

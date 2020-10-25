@@ -9,5 +9,5 @@
       = content_tag(:p, truncate(scrivito_value(sts_post.abstract), :length => 250, :escape => false))
       = link_to("もっと見る", scrivito_path(sts_post), :class => "btn btn-warning btn-block")
       %hr/
-    = render 'shared/social_buttons'
+    = render 'shared/social_buttons_raw'
     = render 'shared/sitemap_sotechsha'
