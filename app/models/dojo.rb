@@ -11,7 +11,7 @@ class Dojo < ApplicationRecord
   before_save { self.email = self.email.downcase }
 
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
-  scope :active, -> { where(is_active: true) }
+  scope :active,        -> { where(is_active: true) }
 
   validates :name,        presence: true, length: { maximum: 50 }
   validates :email,       presence: false
