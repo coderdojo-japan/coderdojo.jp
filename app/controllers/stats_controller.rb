@@ -48,6 +48,11 @@ class StatsController < ApplicationController
     # 集計方法と集計対象
     # TODO: 'DISTINCT dojo_id' cannot track joint-registrated dojos
     #   cf. https://github.com/coderdojo-japan/coderdojo.jp/issues/682
+    # TODO: 集計対象となっている道場数の推移と合わせて調整すると良さそう
+    # joint_dojo_counter  = Dojo.where('counter > 1').map do |d|
+    #   d.dojo_event_services.any? ? (d.counter-1) : 0 # Remove itself from counting
+    # end.sum
+    # @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id') + joint_dojo_counter
     @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id')
 
     # 集計対象となっている道場数の推移
