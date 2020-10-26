@@ -53,13 +53,14 @@
     %li 参加者数はユニーク数ではなく延べ数です。
     %li 集計対象は API などで集計可能な道場です。
 
-  %div{style: 'margin-top: 10px;'}
+  %p{style: 'margin-top: 10px;'}
     毎週月曜朝10時に集計をしています。
     %br
     集計対象の道場数は次のとおりです。
-  %div{style: 'margin-top: 10px;'}
-  %b= @aggregated_dojos
-  %b / #{@sum_of_dojos} Dojos
+  %p{style: 'margin-top: 10px; margin-bottom: -5px;'}
+    %b= @aggregated_dojos
+    %b Dojos
+  %span{style: 'font-size: 10px;'} （非アクティブな道場の過去の活動記録も含まれています）
 
   %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
     %b 集計対象となっている道場数の推移
