@@ -100,74 +100,78 @@
                       "data-tweet-limit" => "5"} @CoderDojoJapan アカウントのタイムライン
   %script{async: "", await: "", src: "https://platform.twitter.com/widgets.js", charset: "utf-8"}
 
-%section.detail-introduction.text-center.grayscale-bg.list
-  %br
-  %h2#kata{style: "color: dimgray;"} 📚 もっと詳しく知る
-  %br
-  %p
-    %a{href: "/kata"}<> Wiki
-    \ や&nbsp;
-    %a{href: "/podcast"}<> Podcast
-    、
-    %a{href: "#news"}<> Newsletter
-    \ や
-    %a{href: "https://www.youtube.com/CoderDojoJapan",
-       target: "_blank", rel: "external noopener"}< YouTube
-    \ など、様々な方法で CoderDojo に関する情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
-  %ul{style: "list-style: none;"}
-    %li
-      %a{href: "/kata"} 📑 Kata (Wiki)
-    %li
-      %a{href: "/podcast"} 🎧 DojoCast (Podcast)
-    %li
-      %a{href: "#news"} 📰 DojoLetter (Newsletter)
-    %li
+/ Start with 'div' not 'section' due to grayscale-bg area
+.text-center.grayscale-bg
+  %section.detail-introduction.list
+    %br
+    %h2#kata{style: "color: dimgray;"} 📚 もっと詳しく知る
+    %br
+    %p
+      %a{href: "/kata"}<> Wiki
+      \ や&nbsp;
+      %a{href: "/podcast"}<> Podcast
+      、
+      %a{href: "#news"}<> Newsletter
+      \ や
       %a{href: "https://www.youtube.com/CoderDojoJapan",
-         target: "_blank", rel: "external noopener"} 📺 DojoChannel (YouTube)
-    %li
+         target: "_blank", rel: "external noopener"}< YouTube
+      \ など、様々な方法で CoderDojo に関する情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
+    %ul{style: "list-style: none;"}
+      %li
+        %a{href: "/kata"} 📑 Kata (Wiki)
+      %li
+        %a{href: "/podcast"} 🎧 DojoCast (Podcast)
+      %li
+        %a{href: "#news"} 📰 DojoLetter (Newsletter)
+      %li
+        %a{href: "https://www.youtube.com/CoderDojoJapan",
+           target: "_blank", rel: "external noopener"} 📺 DojoChannel (YouTube)
+      %li
+        %a{href: "https://twitter.com/CoderDojoJapan",
+           target: "_blank", rel: "external noopener"} 📣 CoderDojo Japan (Twitter)
+      %li
+        %a{href: "https://www.facebook.com/groups/coderdojo.jp",
+           target: "_blank", rel: "external noopener"} 👤 CoderDojo Japan (Facebook)
+      %li
+        %a{href: "https://coderdojo.com/",
+           target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation (海外)
+    %br
+    %p
+      %a{href: "/kata"} Kata
+      では運営に役立つ情報を、
       %a{href: "https://twitter.com/CoderDojoJapan",
-         target: "_blank", rel: "external noopener"} 📣 CoderDojo Japan (Twitter)
-    %li
+         target: "_blank", rel: "external noopener"}<> Twitter
+      \ や
       %a{href: "https://www.facebook.com/groups/coderdojo.jp",
-         target: "_blank", rel: "external noopener"} 👤 CoderDojo Japan (Facebook)
-    %li
+         target: "_blank", rel: "external noopener"}< Facebook
+      では最近の活動を、
       %a{href: "https://coderdojo.com/",
-         target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation (海外)
-  %br
-  %p
-    %a{href: "/kata"} Kata
-    では運営に役立つ情報を、
-    %a{href: "https://twitter.com/CoderDojoJapan",
-       target: "_blank", rel: "external noopener"}<> Twitter
-    \ や
-    %a{href: "https://www.facebook.com/groups/coderdojo.jp",
-       target: "_blank", rel: "external noopener"}< Facebook
-    では最近の活動を、
-    %a{href: "https://coderdojo.com/",
-       target: "_blank", rel: "external noopener"}<> CoderDojo Foundation
-    \ からは海外の雰囲気を知ることができます。
-  %br
-  %p
-    『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』といった場合は、
-    %a{href: "/kata#startup"}<>
-      Kata の立ち上げる
-    を読んでみてください。
-  %div.kata
-    = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
-                        'data-src' => '/kata_cover.jpg', loading: 'lazy', 
-                          style: 'margin-bottom: 15px;'), '/kata'
-    %a.button{href: '/kata'} Kata を読む
-  %br
-  %div#partners
+         target: "_blank", rel: "external noopener"}<> CoderDojo Foundation
+      \ からは海外の雰囲気を知ることができます。
+    %br
+    %p
+      『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』といった場合は、
+      %a{href: "/kata#startup"}<>
+        Kata の立ち上げる
+      を読んでみてください。
+    %div.kata
+      = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
+                          'data-src' => '/kata_cover.jpg', loading: 'lazy',
+                            style: 'margin-bottom: 15px;'), '/kata'
+      %a.button{href: '/kata'} Kata を読む
+    %br
+    %div#partners
 
 = render partial: 'shared/partners'
 %div#news{style: "padding-bottom: 30px;"}
 
-%section.detail-introduction.text-center.grayscale-bg
-  %br
-  %h2{style: "color: dimgray;"} 📰 ニュースレター購読
-  %br
-  = render partial: 'shared/newsletter'
+/ Start with 'div' not 'section' due to grayscale-bg area
+.text-center.grayscale-bg
+  %section.detail-introduction
+    %br
+    %h2{style: "color: dimgray;"} 📰 ニュースレター購読
+    %br
+    = render partial: 'shared/newsletter'
   %div#contact{style: "padding-bottom: 40px;"}
   
 %section#faq.detail-introduction
