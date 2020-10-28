@@ -161,7 +161,6 @@
   %div#partners
 
 = render partial: 'shared/partners'
-
 %div#news{style: "padding-bottom: 30px;"}
 
 %section.detail-introduction.text-center.grayscale-bg
@@ -170,6 +169,34 @@
   %br
   = render partial: 'shared/newsletter'
   %div#contact{style: "padding-bottom: 40px;"}
+  
+%section#faq.detail-introduction
+  %br
+  %h2.text-center{style: "color: dimgray;"} ✅ よくある質問と回答
+  %br
+  %ul{style: "list-style: none;"}
+    %li
+      %p
+        Q．初めてです。どうしたらよいですか？
+        %br
+        A．
+        %a{href: '#dojos'}<> 🗾 全国の道場
+        から興味のある道場を探し、開催情報を調べてみましょう 🔍
+    %li
+      %p
+        Q．直近の CoderDojo 開催情報を知りたいです。
+        %br
+        A．
+        %a{href: '/events'}<> 📅 近日開催の道場
+        に開催情報があります。オンライン開催もあります ⚡️
+    %li
+      %p
+        Q．もっと詳しい資料はありますか？
+        %br
+        A．
+        %a{href: '/kata'}<> 📚 道場情報まとめ
+        にまとめてみました！運営に関わってみたい方はぜひ 😉
+  %div#contact
 
 %section.detail-introduction.text-center
   %br
