@@ -1862,9 +1862,9 @@
   name: 大阪狭山・本町
   counter: 2
   prefecture_id: 27
-  logo: "/img/dojos/hommachi.png"
+  logo: "/img/dojos/sayama-hommachi.png"
   url: https://coderdojo-hommachi.doorkeeper.jp/
-  description: 大阪狭山と本町で隔月開催
+  description: 大阪狭山で毎月開催/本町で不定期開催
   tags:
   - Scratch
   - Ruby
