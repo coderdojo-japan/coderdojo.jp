@@ -1,4 +1,4 @@
-# CoderDojo Regional License
+# 🌐 CoderDojo Regional License
 <center>(<a href="regional-license">日本語の訳文を読む</a>)</center>
 <br/>
 

@@ -1,4 +1,4 @@
-# COVID-19: advice for Code Clubs, CoderDojos, and Raspberry Jams
+# 💌 COVID-19: advice for Code Clubs, CoderDojos, and Raspberry Jams
 <center>(2020年3月5日のメールより引用。<a href="covid-19">日本語の意訳を読む</a>)</center>
 <br/>
 

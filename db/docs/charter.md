@@ -1,4 +1,4 @@
-# CoderDojo 憲章
+# ☯️ CoderDojo 憲章
 <center>(<a href="charter_en">英語の原文を読む</a>)</center>
 <br/>
 

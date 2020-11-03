@@ -1,4 +1,4 @@
-# DojoCon Japan 開催ガイドライン
+# ☯️ DojoCon Japan 開催ガイドライン
 
 <br>
 

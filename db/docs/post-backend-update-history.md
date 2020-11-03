@@ -1,4 +1,4 @@
-# 記事：CoderDojo Japan のバックエンド刷新
+# 🛠 記事：CoderDojo Japan のバックエンド刷新
 
 <p class="text-center"><small>本記事は2016年12月12日に公開した記事を一部改訂したアーカイブ版です。</small></p>
 

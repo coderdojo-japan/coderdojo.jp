@@ -1,8 +1,8 @@
-# お問い合わせありがとうございます ✉️✨
+# 💌 お問い合わせありがとうございます 
 
 <img class='lazyload' loading='lazy' style='margin: 40px auto;width:120px;display:block;border-radius:0;' src='/spinner.svg' data-src='/img/mail-icon.png' alt='お問い合わせありがとうございます' />
 
-お問い合わせありがとうございます。３営業日以内にご返信いたしますね。
+お問い合わせありがとうございます！３営業日以内にご返信いたしますね。
 
 返信が無い場合は、お手数をおかけしますが info@coderdojo.jp までご連絡いただけると幸いです。
 

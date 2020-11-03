@@ -1,4 +1,4 @@
-# 資金を募るときの活動事例
+# 💰 資金を募るときの活動事例
 <center>(<a href="https://github.com/CoderDojo/kata-archive/blob/master/files/Fundraising_Methods.pdf">英語の原文を読む</a>)</center>
 <br/>
 

@@ -1,4 +1,4 @@
-# 資金を募るときの注意点
+# 💰 資金を募るときの注意点
 <center>(<a href="https://github.com/CoderDojo/kata-archive/blob/master/files/FundraisingGuidelines.pdf">英語の原文を読む</a>)</center>
 <br/>
 

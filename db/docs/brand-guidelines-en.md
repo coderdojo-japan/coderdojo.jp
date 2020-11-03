@@ -1,4 +1,4 @@
-# CoderDojo Brand Guidelines
+# ✅ CoderDojo Brand Guidelines
 <center>(<a href="/docs/brand-guidelines">日本語で読む</a>)</center>
 <br>
 

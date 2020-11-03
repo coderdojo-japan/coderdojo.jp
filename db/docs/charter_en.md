@@ -1,4 +1,4 @@
-# CoderDojo Foundation charter for CoderDojo
+# ☯️ CoderDojo Foundation charter for CoderDojo
 <center>(<a href="charter">日本語訳を読む</a>)</center>
 <br/>
 

@@ -1,4 +1,4 @@
-# 推奨活動ガイドライン
+# 📜 推奨活動ガイドライン
 <center>(<a href="https://coderdojo.com/news/2014/06/04/coderdojo-recommended-practice/">英語の原文を読む</a>)</center>
 <br/>
 

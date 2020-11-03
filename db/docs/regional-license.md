@@ -1,4 +1,4 @@
-# 地域ライセンス契約書
+# 🌐 地域ライセンス契約書
 <center>(<a href="regional-license_en">英語の原文を読む</a>)</center>
 <br/>
 
