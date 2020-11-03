@@ -1740,6 +1740,18 @@
   description: 大治町海部郡で毎月開催
   tags:
   - Scratch
+- id: 255
+  order: '242021'
+  created_at: '2020-11-02'
+  name: 四日市
+  prefecture_id: 24
+  logo: "/img/dojos/yokkaichi.jpg"
+  url: https://zen.coderdojo.com/dojos/jp/san1-zhong4-xian4/si4-ri4-shi4
+  description: 三重県四日市市で月に１回開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Minecraft
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
