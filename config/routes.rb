@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "/docs/charter_en",        to: redirect('/charter_en')
   get "/docs/styleguides",       to: redirect('/styleguides')
   get "/docs/about-partnership", to: redirect('/partnership')
-  get "/docs/calendar",          to: redirect('/calendar')
+  get "/docs/calendar-yohei",    to: redirect('/calendar-yohei')
   get "/docs/financial-report",  to: redirect('/financial-report')
   get "/docs/privacy",           to: redirect('/privacy')
   get "/docs/teikan",            to: redirect('/teikan')
@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 
   get "/login",                  to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                to: redirect('https://www.youtube.com/CoderDojoJapan')
-  get "/calendar"         => "docs#show", id: 'calendar'
+  get "/calendar",               to: redirect('/calendar-yohei')
+  get "/calendar-yohei"   => "docs#show", id: 'calendar-yohei'
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/styleguides"      => "docs#show", id: 'styleguides'
