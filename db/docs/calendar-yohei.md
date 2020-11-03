@@ -1,4 +1,4 @@
-# 📆 予定表
+# 📆 予定表（安川）
 
 <br>
 
@@ -8,7 +8,7 @@
 
 <div class="gc_wrapper">
   <div class="responsive-iframe-container small-container"> 
-  <iframe src="https://calendar.google.com/calendar/b/2/embed?title=%E4%BA%88%E5%AE%9A%E8%A1%A8&amp;height=600&amp;wkst=2&amp;bgcolor=%23F2F2F2&amp;src=en.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=yasslab.jp_ac8rsip6rn0a77egdea47tc6t8%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Asia%2FTokyo" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/b/2/embed?title=%E4%BA%88%E5%AE%9A%E8%A1%A8&amp;height=600&amp;wkst=2&amp;bgcolor=%23F2F2F2&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=yasslab.jp_ac8rsip6rn0a77egdea47tc6t8%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Asia%2FTokyo" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
 </div>
 <br>
