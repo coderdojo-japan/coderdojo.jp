@@ -21,13 +21,13 @@ CoderDojo Zen での申請がまだお済みでない場合は、下記ページ
 
 - ✅ 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
 
-申請後もロゴ画像や説明文を更新できますので、まずはお気軽にお申し込みください 👀💨✨
+申請後もロゴ画像や説明文を更新できますので、まずは気軽にお申し込みください 📮✨
 
 - 🛠 掲載した Dojo 情報の更新方法: [https://bit.ly/how-to-update-dojo-info](https://bit.ly/how-to-update-dojo-info)
 
 <br>
 
-何かご不明な点などあれば `info@coderdojo.jp` までご連絡ください 💌💨
+ご不明な点などあれば `info@coderdojo.jp` までご連絡ください 💌💨
 
 <br>
 
