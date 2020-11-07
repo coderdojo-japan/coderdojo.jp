@@ -1965,6 +1965,18 @@
   - Scratch
   - Webサイト
   - アプリ開発
+- id: 256
+  order: '272116'
+  created_at: '2020-11-07'
+  name: 茨木
+  prefecture_id: 27
+  logo: "/img/dojos/japan.png"
+  url: https://dojo.mosugi.com/
+  description: オンラインで毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - アプリ開発
 - id: 202
   order: '272175'
   created_at: '2019-02-18'
