@@ -32,7 +32,7 @@
 </div>
 
 <div class="container" style="line-height: 1.9em; margin-bottom: -100px;">
-  <section class="doc" style="padding: 50px 0px 0px 0px;">
+  <section class="doc" style="padding: 50px 0px 50px 0px;">
     <iframe width="100%" height="120" scrolling="no" frameborder="yes"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<%= @episode.track_id %>&auto_play=false&buying=false&sharing=false&download=true&show_artwork=false&show_playcount=false&show_user=false">
     </iframe>
@@ -41,6 +41,10 @@
     <%= raw @content %>
   </section>
 
+  <p style="color: #5F5F5F"><small>面白かったら <a href='https://www.youtube.com/CoderDojoJapan'>YouTube</a> チャンネル登録もぜひ!! 📺✨</small></p>
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
+  
   <section class="introduction text-center list" style="padding-top: 50px;">
     <%= render 'shared/social_buttons' %>
   </section>
