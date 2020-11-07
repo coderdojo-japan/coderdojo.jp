@@ -11,8 +11,14 @@
     <p style="text-align: center; padding-bottom: 10px;">CoderDojo コミュニティに関わる方々を<br class="ignore-pc">ハイライトする Podcast です 📻✨</p>
     <img class="lazyload" src="/podcasts/cover-sub.jpg" alt="インタビューの様子"/>
 
+    <div class='text-center' style="margin-top: 30px;">
+      <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
+      <script src="https://apis.google.com/js/platform.js"></script>
+    </div>
+
     <h3 id="live" style="text-align: center; padding-top: 70px;">🎙
       最新エピソードを聴く</h3>
+
 
     <div class="container" style="line-height: 1.9em; margin-bottom: -100px;">
       <section class="doc" style="padding: 30px 0px 0px 0px;">
@@ -21,7 +27,8 @@
 	   data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<%= @episodes.first.track_id %>&auto_play=false&buying=false&sharing=false&download=true&show_artwork=false&show_playcount=false&show_user=false">
 	  </iframe>
 	<% end %>
-	<br />
+	<br>
+
       </section>
     </div>
 
@@ -58,6 +65,8 @@
     </ul>
   </section>
 
+  <br>
+  
   <section class="introduction text-center list" style="margin-bottom: 30px;">
     <%= render 'shared/social_buttons' %>
   </section>
