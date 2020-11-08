@@ -41,11 +41,13 @@
     <%= raw @content %>
   </section>
 
-  <p style="color: #5F5F5F"><small>面白かったら <a href='https://www.youtube.com/CoderDojoJapan'>YouTube</a> チャンネル登録もぜひ!! 📺✨</small></p>
-  <script src="https://apis.google.com/js/platform.js"></script>
-  <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
+  <div style="margin-bottom: 40px;">
+    <p style="color: #5F5F5F"><small>面白かったら <a href='https://www.youtube.com/CoderDojoJapan'>YouTube</a> チャンネル登録もぜひ!! 📺✨</small></p>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
+  </div>
   
-  <section class="introduction text-center list" style="padding-top: 50px;">
+  <section class="text-center list" style="padding-top: 50px; margin-left: -10px;">
     <%= render 'shared/social_buttons' %>
   </section>
 </div>
