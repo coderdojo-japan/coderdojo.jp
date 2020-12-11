@@ -1,10 +1,10 @@
 # 🌐 地域ライセンス契約書
-<center>(<a href="regional-license_en">英語の原文を読む</a>)</center>
+<center><small>(本契約書は、契約当時の写しとなります。<a href="regional-license_en">英語の原文を読む</a>)</small></center>
 <br/>
 
 <div style="font-size: 80%">
-※ In any event there is discrepancy between English and Japanese, the English Agreement shall control to the contents herein. <br/>
-※ 英語と日本語で矛盾が生じた場合は、原文のライセンス契約を優先するものとする。<br><br>
+  ※ In any event there is discrepancy between English and Japanese, the English Agreement shall control to the contents herein. <br>
+  ※ 英語と日本語で矛盾が生じた場合は、原文のライセンス契約を優先するものとする。<br><br>
 </div>
 
 以下のライセンス契約は、地域または国の全ての登録済 CoderDojo 慈善団体と締結されるものです。本ライセンス契約は、ある地域を代表する組織または非公認のグループと締結する基本的な MOU（覚書）として行使されることになります。
