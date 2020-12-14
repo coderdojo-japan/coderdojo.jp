@@ -4410,3 +4410,26 @@
   event_id:
   participants: 3
   evented_at: 2020/10/18 10:00
+
+# 2020/11/01 - 2020/11/30
+- dojo_id: 10
+  event_id:
+  participants: 1
+  evented_at: 2020/11/29 16:30 #オンライン開催
+- dojo_id: 12
+  event_id:
+  participants: 5
+  evented_at: 2020/11/07 14:00
+- dojo_id: 25
+  event_id:
+  participants: 3
+  evented_at: 2020/11/08 10:00
+- dojo_id: 86
+  event_id:
+  participants: 5
+  evented_at: 2020/11/15 10:30
+- dojo_id: 131
+  event_id:
+  participants: 3
+  evented_at: 2020/11/29 10:00
+
