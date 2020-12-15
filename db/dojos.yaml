@@ -51,6 +51,20 @@
   - Progate
   - Minecraft
   - 電子工作
+- id: 259
+  order: '032093'
+  created_at: '2020-12-15'
+  name: 一関平泉
+  prefecture_id: 3
+  url: https://www.facebook.com/CoderDojoIchinosekiHiraizumi
+  logo: "/img/dojos/coderdojo.png"
+  description: 一関市で不定期に開催
+  tags:
+  - Scratch
+  - RaspberryPi
+  - Python
+  - Arduino
+  - Webサイト
 - id: 201
   order: '032026'
   created_at: '2019-02-14'
