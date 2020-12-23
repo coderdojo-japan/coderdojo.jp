@@ -127,6 +127,9 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 
 ※ 配送手続きを CoderDojo Japan 側で代行したり、換算金額に価格によっては期間限定パートナーシップの対象外となることもありますので、あらかじめご了承ください。
 
+PR例: 014 - Highlights of Shenzhen @ Makeblock 本社 (深セン)    
+[https://coderdojo.jp/podcasts/14](https://coderdojo.jp/podcasts/14)
+
 <br>
 
 ### Q. 他のパートナーシップの事例を教えてくれませんか?
