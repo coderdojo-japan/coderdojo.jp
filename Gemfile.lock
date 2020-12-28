@@ -78,7 +78,7 @@ GEM
     concurrent-ruby (1.1.7)
     connection_pool (2.2.3)
     crass (1.0.6)
-    debug_inspector (0.0.3)
+    debug_inspector (1.0.0)
     declarative (0.0.20)
     declarative-option (0.1.0)
     diff-lcs (1.4.4)
