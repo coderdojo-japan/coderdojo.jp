@@ -1,7 +1,7 @@
 class PodcastsController < ApplicationController
   def index
     @title           = 'DojoCast'
-    @description     = 'CoderDojo コミュニティに関わる方々をハイライトする Podcast です 📻✨'
+    @description     = 'CoderDojo に関わる人々をハイライトする Podcast 📻✨'
     @episodes        = Podcast.order(:published_date).reverse
     @url             = request.url
     @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] == 'true'
