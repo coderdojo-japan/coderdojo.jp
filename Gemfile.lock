@@ -47,7 +47,7 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (10.1.0.0)
       execjs
-    backports (3.20.0)
+    backports (3.20.1)
     bindex (0.8.1)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
