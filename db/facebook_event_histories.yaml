@@ -4433,3 +4433,36 @@
   participants: 3
   evented_at: 2020/11/29 10:00
 
+# 2020/12/01 - 2020/12/31
+- dojo_id: 12
+  event_id:
+  participants: 3
+  evented_at: 2020/12/12 14:00
+- dojo_id: 23
+  event_id:
+  participants: 7
+  evented_at: 2020/12/13 14:00 #オンライン開催
+- dojo_id: 25
+  event_id:
+  participants: 2
+  evented_at: 2020/12/13 10:00
+- dojo_id: 86
+  event_id:
+  participants: 2
+  evented_at: 2020/12/20 10:30
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2020/12/19 15:15
+- dojo_id: 131
+  event_id:
+  participants: 2
+  evented_at: 2020/12/13 10:00
+- dojo_id: 203
+  event_id:
+  participants: 1
+  evented_at: 2020/12/20 9:30
+- dojo_id: 222
+  event_id:
+  participants: 1
+  evented_at: 2020/12/13 14:00
