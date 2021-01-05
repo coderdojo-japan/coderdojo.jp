@@ -110,53 +110,57 @@
     %h2#kata{style: "color: dimgray;"} 📚 もっと詳しく知る
     %br
     %p
-      %a{href: "/kata"}<> Wiki
-      \ や&nbsp;
-      %a{href: "/podcast"}<> Podcast
-      、
-      %a{href: "#news"}<> Newsletter
+      %a{href: "/podcast"}<> 🎧 Podcast
       \ や
       %a{href: "https://www.youtube.com/CoderDojoJapan",
-         target: "_blank", rel: "external noopener"}< YouTube
-      \ など、様々な方法で CoderDojo に関する情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
+         target: "_blank", rel: "external noopener"}<> 📺 YouTube
+      \ など、様々な方法で CoderDojo の最新情報を発信しています。お好みの方法でフォローして頂けると嬉しいです。
+  
     %ul{style: "list-style: none;"}
       %li
-        %a{href: "/kata"} 📑 Kata (Wiki)
+        %a{href: "/kata"} 📑 Kata (型)
+        %span{style: 'font-size: 65%'} (Wiki)
       %li
-        %a{href: "/podcast"} 🎧 DojoCast (Podcast)
+        %a{href: "/podcast"} 🎧 DojoCast
+        %span{style: 'font-size: 65%'} (Podcast)
       %li
-        %a{href: "#news"} 📰 DojoLetter (Newsletter)
+        %a{href: "#news"} 📰 DojoLetter
+        %span{style: 'font-size: 65%'} (Newsletter)
       %li
         %a{href: "https://www.youtube.com/CoderDojoJapan",
-           target: "_blank", rel: "external noopener"} 📺 DojoChannel (YouTube)
+           target: "_blank", rel: "external noopener"} 📺 DojoChannel
+        %span{style: 'font-size: 65%'} (YouTube)
       %li
         %a{href: "https://twitter.com/CoderDojoJapan",
-           target: "_blank", rel: "external noopener"} 📣 CoderDojo Japan (Twitter)
+           target: "_blank", rel: "external noopener"} 📣 CoderDojo Japan
+        %span{style: 'font-size: 65%'} (Twitter)
       %li
         %a{href: "https://www.facebook.com/groups/coderdojo.jp",
-           target: "_blank", rel: "external noopener"} 👤 CoderDojo Japan (Facebook)
+           target: "_blank", rel: "external noopener"} 👥 CoderDojo Japan
+        %span{style: 'font-size: 65%'} (Facebook)
       %li
         %a{href: "https://coderdojo.com/",
-           target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation (海外)
+           target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation
+        %span{style: 'font-size: 65%'} (海外)
     %br
     %p
-      %a{href: "/kata"} Kata
+      %a{href: "/kata"} 📑 Kata
       では運営に役立つ情報を、
       %a{href: "https://twitter.com/CoderDojoJapan",
-         target: "_blank", rel: "external noopener"}<> Twitter
-      \ や
-      %a{href: "https://www.facebook.com/groups/coderdojo.jp",
-         target: "_blank", rel: "external noopener"}< Facebook
-      では最近の活動を、
+         target: "_blank", rel: "external noopener"} 📣 Twitter
+      では最近の活動状況を、
       %a{href: "https://coderdojo.com/",
-         target: "_blank", rel: "external noopener"}<> CoderDojo Foundation
-      \ からは海外の雰囲気を知ることができます。
+         target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation
+      では海外の雰囲気を知ることができます。
     %br
     %p
-      『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』といった場合は、
-      %a{href: "/kata#startup"}<>
-        Kata の立ち上げる
-      を読んでみてください。
+      『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』という場合は
+      %a{href: "/kata"}< 📑 Kata
+      \ の
+      %a{href: "/kata#startup"}<> 『立ち上げる』
+      や
+      %a{href: "/kata#support"}<> 『支援』
+      をお読みください。
     %div.kata
       = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
                           'data-src' => '/kata_cover.jpg', loading: 'lazy',
