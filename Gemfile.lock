@@ -45,7 +45,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
-    autoprefixer-rails (10.1.0.0)
+    autoprefixer-rails (10.2.0.0)
       execjs
     backports (3.20.1)
     bindex (0.8.1)
