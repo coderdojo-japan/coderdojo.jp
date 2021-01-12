@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ $# -eq 0 ]
+then
+    echo "Usage: d-search [DOORKEEPER_EVENT_URL | DOORKEEPER_EVENT_ID]"
+else
+    id=`echo $1 | sed -e 's/[^0-9]//g'`
+    curl -sL "api.doorkeeper.jp/events/${id}" | jq ".event.group"
+fi
+
+
