@@ -165,11 +165,16 @@
       = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
                           'data-src' => '/kata_cover.jpg', loading: 'lazy',
                             style: 'margin-bottom: 15px;'), '/kata'
-      %a.button{href: '/kata'} Kata を読む
+      %a.button-to-details{href: '/kata'} Kata を読む
     %br
     %div#partners
 
 = render partial: 'shared/partners'
+%section.detail-introduction.partners_logo.text-center
+  %br
+  %div.kata{style: 'margin-bottom: 100px;'}
+    %a.button-to-details{href: '/partnership'} パートナーシップの詳細を読む
+
 %div#news{style: "padding-bottom: 30px;"}
 
 / Start with 'div' not 'section' due to grayscale-bg area

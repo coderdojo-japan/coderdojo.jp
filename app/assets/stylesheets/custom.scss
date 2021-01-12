@@ -186,29 +186,29 @@ img.emoji {
 
 .kata {
   position: relative;
-  a.button {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    -ms-transform: translate(-40%, -50%);
-    background-color: RoyalBlue;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 7px 11px;
-    @media screen and (max-width: 480px) {
-      font-size: 9px;
-      padding: 0px 5px;
-    }
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 0.9;
-    &:hover {
-      text-decoration: underline;
-      opacity: 0.95;
-    }
+}
+a.button-to-details {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  -ms-transform: translate(-40%, -50%);
+  background-color: #2275ca;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 11px;
+  @media screen and (max-width: 480px) {
+    font-size: 9px;
+    padding: 0px 6px;
+  }
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.9;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.95;
   }
 }
 
