@@ -131,6 +131,11 @@ https://coderdojo.jp/stats
   $ bin/c-search https://coderdojo-tobe.connpass.com/event/89808/
     => 5072
   ```
+  `jq`コマンドが使えない場合はインストールしてください。
+
+  ```
+  $ brew install jq
+  ```
   
 - Doorkeeper
   1. connpassと 同様に、Doorkeeper のイベントページの url から event ID を確認します (https://coderdojo-suita.doorkeeper.jp/events/90704 だと `90704`)
