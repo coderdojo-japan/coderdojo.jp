@@ -51,20 +51,6 @@
   - Progate
   - Minecraft
   - 電子工作
-- id: 261
-  order: '012173'
-  created_at: '2021-01-09'
-  name: 江別
-  prefecture_id: 1
-  logo: img/dojos/ebetu.png
-  url: https://coderdojo-ebetsu.connpass.com/
-  description: 江別市で月に1回
-  tags:
-  - Scratch
-  - Python
-  - micro:bit
-  - PHP
-  - java
 - id: 259
   order: '032093'
   created_at: '2020-12-15'
