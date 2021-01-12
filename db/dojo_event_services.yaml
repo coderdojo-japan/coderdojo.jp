@@ -1,3 +1,8 @@
+- dojo_id: 261
+  name: connpass
+  group_id: 9624
+  url: https://coderdojo-ebetsu.connpass.com/
+
 # 伊勢原 イベントがまだ無いためgroup_idが不明
 #- dojo_id: 260
 #  name: connpass
