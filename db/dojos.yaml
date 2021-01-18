@@ -472,6 +472,20 @@
   - Scratch
   - Webサイト
   - アプリ
+- id: 263
+  order: '111074'
+  created_at: '2021-01-16'
+  name: 浦和@Urawa Minecraft Club
+  prefecture_id: 11
+  logo: "/img/dojos/urawa.png"
+  url: https://www.urawa-minecraftclub.com/
+  description: さいたま市浦和区 毎週日曜日
+  tags:
+  - Minecraft
+  - Makecode
+  - Scratch
+  - micro:bit
+  - Unity
 - id: 12
   order: '112089'
   created_at: '2015-12-01'
