@@ -4466,3 +4466,21 @@
   event_id:
   participants: 1
   evented_at: 2020/12/13 14:00
+
+# 2021/01/01 - 2021/01/31
+- dojo_id: 25
+  event_id:
+  participants: 5
+  evented_at: 2021/01/17 10:00 #オンライン開催
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2021/01/17 10:30
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2021/01/31 10:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2021/01/24 13:30
