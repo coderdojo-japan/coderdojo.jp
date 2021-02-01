@@ -216,7 +216,7 @@ GEM
     minitest (5.14.3)
     minitest-retry (0.2.1)
       minitest (>= 5.0)
-    msgpack (1.4.1)
+    msgpack (1.4.2)
     multi_json (1.15.0)
     multipart-post (2.1.1)
     net-http-persistent (2.9.4)
