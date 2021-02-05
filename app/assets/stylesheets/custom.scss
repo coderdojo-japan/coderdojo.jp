@@ -940,3 +940,8 @@ body>footer a:hover {
     color: #2275CA;
   }
 }
+
+section {
+  scroll-margin-top: 70px;
+  scroll-snap-align: center;
+}

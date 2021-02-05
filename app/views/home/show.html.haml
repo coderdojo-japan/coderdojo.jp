@@ -61,8 +61,6 @@
     %script{src: "https://apis.google.com/js/platform.js"}
   %br
   = render partial: 'shared/social_buttons'
-  %br
-  %div#dojos
 
 /
   %section#events.detail-introduction.text-center
@@ -77,7 +75,7 @@
     オンライン開催! 早めにお申し込みください 😆🎫✨
 
 
-%section.dojos.text-center.grayscale-bg
+%section.dojos.text-center.grayscale-bg#dojos
   %br
   %h2{style: "color: dimgray;"} 🗾 日本各地の道場
   %br
@@ -115,7 +113,7 @@
       %a{href: "https://www.youtube.com/CoderDojoJapan",
          target: "_blank", rel: "external noopener"} 📺 YouTube
       など、様々な方法で CoderDojo の最新情報を発信しています。お好みの方法で最新情報をキャッチしてみよう！
-  
+
     %ul{style: "list-style: none;"}
       %li
         %a{href: "/kata"} 📑 Kata (型)
@@ -166,8 +164,6 @@
                           'data-src' => '/kata_cover.jpg', loading: 'lazy',
                             style: 'margin-bottom: 15px;'), '/kata'
       %a.button-to-details{href: '/kata'} Kata を読む
-    %br
-    %div#partners
 
 = render partial: 'shared/partners'
 %section.detail-introduction.partners_logo.text-center
@@ -175,11 +171,11 @@
   %div.kata{style: 'margin-bottom: 100px;'}
     %a.button-to-details{href: '/partnership'} パートナーシップの詳細を読む
 
-%div#news{style: "padding-bottom: 30px;"}
+%div{style: "padding-bottom: 30px;"}
 
 / Start with 'div' not 'section' due to grayscale-bg area
 .text-center.grayscale-bg
-  %section.detail-introduction
+  %section.detail-introduction#news
     %br
     %h2{style: "color: dimgray;"} 📰 ニュースレター購読
     %br
@@ -192,9 +188,8 @@
           過去の配信を読んでみる
         )
     = render partial: 'shared/newsletter'
-  %div#contact{style: "padding-bottom: 40px;"}
-  
-%section#faq.detail-introduction
+
+%section#faq.detail-introduction#contact
   %br
   %h2.text-center{style: "color: dimgray;"} ✅ よくある質問と回答
   %br
@@ -236,7 +231,6 @@
         A．
         %a{href: '/kata'}<> 📚 道場情報まとめ
         にあります！運営に関わってみたい方はぜひ 😉
-  %div#contact
 
 %section.detail-introduction.text-center
   %br
@@ -247,7 +241,6 @@
     %br
     %br
   / Contact Form via Wufoo
-  #contact
   #wufoo-qkjthoy0qpuvg9{style: "margin-top: -10px"}
     %a{href: "https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9",
        target: "_blank", rel: "external noopener"}> 問い合わせフォーム
