@@ -2416,7 +2416,7 @@
   order: '320005'
   created_at: '2019-09-06'
   name: しまね
-  counter: 6
+  counter: 7
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
