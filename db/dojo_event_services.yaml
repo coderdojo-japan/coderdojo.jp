@@ -40,11 +40,11 @@
 #   group_id: ???
 #   url:      ???
 
-# 茨木: 未定
-# - dojo_id: 256
-#   name:     ???
-#   group_id: ???
-#   url:      ???
+# 茨木
+- dojo_id: 256
+  name: connpass
+  group_id: 10907
+  url: http://coderdojoibaraki.connpass.com
 
 # 四日市: 未定
 # - dojo_id: 255
