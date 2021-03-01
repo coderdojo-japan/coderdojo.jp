@@ -65,6 +65,20 @@
   - micro:bit
   - PHP
   - java
+- id: 265
+  order: '022039'
+  created_at: '2021-02-28'
+  name: 八戸@吹上
+  prefecture_id: 2
+  logo: "/img/dojos/hachinohe.png"
+  url: https://coderdojo-hachinohe.aomori.jp/
+  description: 八戸市内で毎月第一日曜日に開催
+  tags:
+  - Scratch
+  - Webサイト
+  - 電子工作
+  - Ruby
+  - JavaScript
 - id: 259
   order: '032093'
   created_at: '2020-12-15'
