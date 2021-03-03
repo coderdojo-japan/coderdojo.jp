@@ -4484,3 +4484,17 @@
   event_id:
   participants: 0
   evented_at: 2021/01/24 13:30
+
+# 2021/02/01 - 2021/02/28
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2021/02/05 17:00
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2021/02/21 10:30
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2021/02/21 10:00
