@@ -49,6 +49,9 @@ gem 'ruby-mp3info', :require => 'mp3info'
 # For Sitemap (Google Search Console)
 gem 'sitemap_generator'
 
+# For Pokemon image file downloads
+gem 'aws-sdk-s3', '~> 1'
+
 group :development do
   gem 'web-console'
   gem 'spring'
