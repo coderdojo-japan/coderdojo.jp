@@ -5,7 +5,7 @@ class PokemonsController < ApplicationController
   end
   before_action :download_key_present?, only: :download
 
-  def index; end
+  def new; end
 
   def create
     pokemon = Pokemon.create(

@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   get  "/podcast",         to: redirect('/podcasts')
   get  "/podcasts/feed"    => "podcasts#feed"
   get  "/stats"            => "stats#show"
-  get  "/pokemon"          => "pokemons#index"
+  get  "/pokemon"          => "pokemons#new"
   post "/pokemon"          => "pokemons#create"
   get  "/pokemon/download" => "pokemons#show"
   # TODO: Need to investigate why the following code calls Scrivito.
