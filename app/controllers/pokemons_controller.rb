@@ -37,6 +37,6 @@ class PokemonsController < ApplicationController
   end
 
   def download_key_present?
-    redirect_to pokemon_path, alert: 'ダウンロードキーがありません。' if params[:key].blank?
+    redirect_to pokemon_path, alert: 'ダウンロードキーがありません。もう一度申し込んでください。' if params[:key].blank?
   end
 end
