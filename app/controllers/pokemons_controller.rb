@@ -12,6 +12,7 @@ class PokemonsController < ApplicationController
       email: params[:email],
       parent_name: params[:parent_name],
       participant_name: params[:participant_name],
+      dojo_name: params[:dojo_name],
       presigned_url: generate_presigned_url,
       download_key: SecureRandom.hex
     )
