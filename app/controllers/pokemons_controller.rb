@@ -1,21 +1,25 @@
 class PokemonsController < ApplicationController
+  if Rails.env.staging? || Rails.env.production?
+    http_basic_authenticate_with name: ENV['BASIC_AUTH_NAME'],
+                                 password: ENV['BASIC_AUTH_PASSWORD']
+  end
   before_action :download_key_present?, only: :download
 
   def index; end
 
   def create
     pokemon = Pokemon.create(
-              email: params[:email],
-              parent_name: params[:parent_name],
-              participant_name: params[:participant_name],
-              presigned_url: generate_presigned_url,
-              download_key: SecureRandom.hex
-            )
-  redirect_to pokemon_download_path(p: pokemon.download_key)
+      email: params[:email],
+      parent_name: params[:parent_name],
+      participant_name: params[:participant_name],
+      presigned_url: generate_presigned_url,
+      download_key: SecureRandom.hex
+    )
+    redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 
   def show
-    pokemon_download_key = Pokemon.find_by(download_key: params[:p])
+    pokemon_download_key = Pokemon.find_by(download_key: params[:key])
     @presigned_url = pokemon_download_key.presigned_url
   end
 
@@ -32,6 +36,6 @@ class PokemonsController < ApplicationController
   end
 
   def download_key_present?
-    redirect_to pokemon_path, alert: 'ダウンロードキーがありません。' if params[:p].blank?
+    redirect_to pokemon_path, alert: 'ダウンロードキーがありません。' if params[:key].blank?
   end
 end
