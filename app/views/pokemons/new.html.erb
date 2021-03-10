@@ -8,25 +8,25 @@
     <h1 style="text-align: center;">ポケモンのそざいをダウンロード</h1>
     <p style="text-align: center; padding-bottom: 10px;">下記のフォームから申し込むと素材をダウンロードするページに遷移するよ</p>
 
-    <%= form_with url: pokemon_path do |f| %>
+    <%= form_with url: pokemon_path, class: 'pokemon-form' do |f| %>
       <div class="field">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email" %>
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "pokemon-form__field" %>
       </div>
 
       <div class="field">
-        <%= f.label :parent_name %>
-        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name" %>
+        <%= f.label :parent_name, "保護者の名前" %>
+        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "pokemon-form__field" %>
       </div>
 
       <div class="field">
-        <%= f.label :participant_name %>
-        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name" %>
+        <%= f.label :participant_name, "参加者の名前" %>
+        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "pokemon-form__field" %>
       </div>
 
       <div class="field">
-        <%= f.label :dojo_name %>
-        <%= f.text_field :dojo_name, autofocus: true, required: true %>
+        <%= f.label :dojo_name, "道場名" %>
+        <%= f.text_field :dojo_name, autofocus: true, required: true, class: "pokemon-form__field" %>
       </div>
 
       <div class="field">
@@ -34,7 +34,7 @@
         <%= f.label :term_of_use, "#{ link_to '利用規約', 'https://www.google.com/url?q=https://drive.google.com/file/d/19dLG3F6iyLk6eHoZxzi7WdA3yl0vkR2B/view?usp%3Dsharing&sa=D&source=editors&ust=1614911877166000&usg=AFQjCNFVBz0DmVVpCcW-RDXnKg9MNr56kw', target: '_blank'}に同意する".html_safe, style: "display:inline" %><br/>
       </div>
 
-      <%= f.submit %>
+      <%= f.submit "申し込む", class: "pokemon-form__submit" %>
     <% end %>
-
+  </section>
 </div>

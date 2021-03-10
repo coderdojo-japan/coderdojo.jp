@@ -945,3 +945,24 @@ section {
   scroll-margin-top: 70px;
   scroll-snap-align: center;
 }
+
+.pokemon-form {
+  max-width: 500px;
+  margin: 20px auto;
+  &__field {
+    display: block;
+    width: 100%;
+  }
+  &__submit {
+    appearance: none;
+    background: $main-blue;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: block;
+    margin: 20px auto;
+    max-width: 320px;
+    width: 100%;
+  }
+}
