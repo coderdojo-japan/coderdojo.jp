@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_040034) do
+ActiveRecord::Schema.define(version: 2021_03_05_034208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 2020_07_26_040034) do
     t.datetime "updated_at", null: false
     t.date "published_date", null: false
     t.index ["track_id"], name: "index_podcasts_on_track_id", unique: true
+  end
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "parent_name", null: false
+    t.string "participant_name", null: false
+    t.string "dojo_name", null: false
+    t.text "presigned_url"
+    t.string "download_key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["download_key"], name: "index_pokemons_on_download_key", unique: true
   end
 
   create_table "prefectures", force: :cascade do |t|

@@ -1,0 +1,12 @@
+<% provide(:title, "Pokemon 素材ダウンロードページ") %>
+<% provide(:desc,  '') %>
+<% provide(:url,   '/pokemon/downloads' ) %>
+<% provide(:meta_image,  '') %>
+
+<div class="container" style="line-height: 2.2em;">
+  <section class="doc" style="padding: 50px 0px 0px 0px;">
+    <h1 style="text-align: center;">ポケモンのそざいをダウンロード</h1>
+    <p style="text-align: center; padding-bottom: 10px;">下記のリンクから素材をダウンロードしてください。✨</p>
+
+    <%= link_to '今すぐダウンロード', @presigned_url %>
+</div>

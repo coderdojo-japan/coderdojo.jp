@@ -1,0 +1,40 @@
+<% provide(:title, "Pokemon 素材ダウンロード申し込みページ") %>
+<% provide(:desc,  'Pokemon の素材をダウンロードできるページだよ') %>
+<% provide(:url,   '/pokemon' ) %>
+<% provide(:meta_image,  '') %>
+
+<div class="container" style="line-height: 2.2em;">
+  <section class="doc" style="padding: 50px 0px 0px 0px;">
+    <h1 style="text-align: center;">ポケモンのそざいをダウンロード</h1>
+    <p style="text-align: center; padding-bottom: 10px;">下記のフォームから申し込むと素材をダウンロードするページに遷移するよ</p>
+
+    <%= form_with url: pokemon_path do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :parent_name %>
+        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :participant_name %>
+        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :dojo_name %>
+        <%= f.text_field :dojo_name, autofocus: true, required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.check_box :term_of_use, required: true, style: "display:inline" %>
+        <%= f.label :term_of_use, "#{ link_to '利用規約', 'https://www.google.com/url?q=https://drive.google.com/file/d/19dLG3F6iyLk6eHoZxzi7WdA3yl0vkR2B/view?usp%3Dsharing&sa=D&source=editors&ust=1614911877166000&usg=AFQjCNFVBz0DmVVpCcW-RDXnKg9MNr56kw', target: '_blank'}に同意する".html_safe, style: "display:inline" %><br/>
+      </div>
+
+      <%= f.submit %>
+    <% end %>
+
+</div>
