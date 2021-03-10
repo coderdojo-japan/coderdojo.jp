@@ -4,8 +4,8 @@ class CreatePokemons < ActiveRecord::Migration[5.2]
       t.string :email,            null: false
       t.string :parent_name,      null: false
       t.string :participant_name, null: false
-      t.string :dojo_nmae,        null: false
-      t.text   :presigned_url,
+      t.string :dojo_name,        null: false
+      t.text   :presigned_url
       t.string :download_key,     index: { unique: true }
 
       t.timestamps
