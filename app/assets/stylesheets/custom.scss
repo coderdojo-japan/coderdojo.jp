@@ -975,5 +975,8 @@ section {
   &__terms ul {
     font-size: 16px;
     line-height: 1.6em;
+    li {
+      margin-bottom: 10px;
+    }
   }
 }
