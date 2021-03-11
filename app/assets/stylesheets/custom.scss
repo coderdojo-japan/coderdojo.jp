@@ -968,4 +968,12 @@ section {
   .field {
     margin-top: 12px;
   }
+  &__h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__terms ul {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
 }
