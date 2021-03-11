@@ -4,8 +4,12 @@
 <% provide(:meta_image,  '') %>
 
 <div class="container" style="line-height: 2.2em;">
-  <section class="doc" style="padding: 50px 0px;">
-    <h1 style="text-align: center;">ポケモン素材のダウンロード</h1>
+  <section class="introduction" style="padding: 50px 0px;">
+    <div style="text-align: center;">
+      <h1 style='line-height: 1.4em;'>ポケモン素材の<br class='ignore-pc'>ダウンロード</h1>
+          <img class='lazyload' style='padding-bottom: 20px;'  src='https://i.gyazo.com/073de074fdd294e5a7a1059c02c09fe3.png' loading='lazy' />
+    </div>
+
     <p style="padding-bottom: 10px;">『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードお申し込みフォームです。</p>
 
     <%= form_with url: pokemon_path, class: 'pokemon-form' do |f| %>
@@ -37,6 +41,6 @@
       <%= f.submit "申し込む", class: "pokemon-form__submit" %>
     <% end %>
 
-    <p style='color: gray; text-align: center; padding: 30px 0px'>回答のコピーが指定したアドレスにメールで送信されます。</p>
+    <p style='color: gray; text-align: center; padding: 30px 0px'>回答のコピーがメールで送信されます。</p>
   </section>
 </div>
