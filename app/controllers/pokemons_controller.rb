@@ -32,7 +32,8 @@ class PokemonsController < ApplicationController
       :get_object,
       bucket: 'coderdojo-jp-pokemon',
       key: 'pokemon-sozai.zip',
-      expires_in: 3600
+      #expires_in: 3600 # 60min
+      expires_in: 300   #  5min
     )
   end
 
