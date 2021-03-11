@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
   if Rails.env.staging? || Rails.env.production?
-    http_basic_authenticate_with name: ENV['BASIC_AUTH_NAME'],
-                                 password: ENV['BASIC_AUTH_PASSWORD']
+    http_basic_authenticate_with name: ENV['BASIC_AUTH_NAME_FOR_POKEMON'],
+                                 password: ENV['BASIC_AUTH_PASSWORD_FOR_POKEMON']
   end
   before_action :download_key_present?, only: :download
 
