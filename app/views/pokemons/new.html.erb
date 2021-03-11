@@ -1,12 +1,12 @@
-<% provide(:title, "Pokemon 素材ダウンロード申し込みページ") %>
-<% provide(:desc,  'Pokemon の素材をダウンロードできるページだよ') %>
+<% provide(:title, '『ポケモンと学ぶ初めてのプログラミング』に参加する皆さまへ') %>
+<% provide(:desc,  '『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードお申し込みフォームです。') %>
 <% provide(:url,   '/pokemon' ) %>
 <% provide(:meta_image,  '') %>
 
 <div class="container" style="line-height: 2.2em;">
-  <section class="doc" style="padding: 50px 0px 0px 0px;">
-    <h1 style="text-align: center;">ポケモンのそざいをダウンロード</h1>
-    <p style="text-align: center; padding-bottom: 10px;">下記のフォームから申し込むと素材をダウンロードするページに遷移するよ</p>
+  <section class="doc" style="padding: 50px 0px;">
+    <h1 style="text-align: center;">ポケモン素材のダウンロード</h1>
+    <p style="padding-bottom: 10px;">『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードお申し込みフォームです。</p>
 
     <%= form_with url: pokemon_path, class: 'pokemon-form' do |f| %>
       <div class="field">
@@ -36,5 +36,7 @@
 
       <%= f.submit "申し込む", class: "pokemon-form__submit" %>
     <% end %>
+
+    <p style='color: gray; text-align: center; padding: 30px 0px'>回答のコピーが指定したアドレスにメールで送信されます。</p>
   </section>
 </div>
