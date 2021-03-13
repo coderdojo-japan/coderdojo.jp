@@ -4,4 +4,10 @@ class Pokemon < ApplicationRecord
   validates :participant_name, presence: true
   validates :dojo_name,        presence: true
   validates :download_key,     presence: true
+
+  EXPIRATION_MINUTES = 60
+
+  def download_key_expired?
+    self.created_at < Pokemon::EXPIRATION_MINUTES.minutes.ago
+  end
 end

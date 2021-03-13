@@ -2,12 +2,11 @@ class PokemonsController < ApplicationController
   http_basic_authenticate_with(
     name:     ENV['BASIC_AUTH_NAME_FOR_POKEMON'],
     password: ENV['BASIC_AUTH_PASSWORD_FOR_POKEMON']) unless Rails.env.development?
-  before_action :download_key_present?, only: :download
 
-  EXPIRATION_SECONDS = 300 # 300 seconds = 5 minutes
-
+  # GET /pokemon
   def new; end
 
+  # POST /pokemon
   def create
     pokemon = Pokemon.create(
       email:            params[:email],
@@ -20,9 +19,18 @@ class PokemonsController < ApplicationController
     redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 
+  # GET /pokemon/download
   def show
-    pokemon_download_key = Pokemon.find_by(download_key: params[:key])
-    @presigned_url       = pokemon_download_key.presigned_url
+    pokemon = Pokemon.find_by(download_key: params[:key])
+    if pokemon.nil?
+      # You can locally debug by 'GET /pokemon/download' in development
+      redirect_to pokemon_path, alert: 'ダウンロードキーが無効です。お手数ですがもう一度お申し込み頂けると幸いです。' unless Rails.env.development?
+    elsif pokemon.download_key_expired?
+      redirect_to pokemon_path, alert: 'ダウンロードの有効期限が過ぎているようです。お手数ですがもう一度お申し込み頂けると幸いです。'
+    end
+
+    # Guard nil because 'redirect_to' does NOT stop the step
+    @presigned_url = pokemon.presigned_url unless pokemon.nil?
   end
 
   private
@@ -33,11 +41,7 @@ class PokemonsController < ApplicationController
       :get_object,
       bucket:     'coderdojo-jp-pokemon',
       key:        'pokemon-sozai.zip',
-      expires_in: EXPIRATION_SECONDS
+      expires_in: Pokemon::EXPIRATION_MINUTES * 60 # seconds
     )
-  end
-
-  def download_key_present?
-    redirect_to pokemon_path, alert: 'ダウンロードキーがありません。もう一度申し込んでください。' if params[:key].blank?
   end
 end
