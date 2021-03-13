@@ -2,8 +2,11 @@
 - provide(:desc,  '')
 - provide(:url,   '/pokemon/downloads' )
 - provide(:meta_image,  '')
+
 .container{style: "line-height: 2.2em;"}
   %section.doc{style: "padding: 50px 50px 0px 0px;"}
     %h1{style: "text-align: center;"} 利用規約への同意ありがとうございました 💖
     %p{style: "text-align: center; padding-bottom: 10px;"} ボタンをクリックして、ポケモン素材をダウンロードしよう！✨
-    = link_to 'ポケモン素材をダウンロードする', @presigned_url, class:"btn-blue", style:"max-width:300px;display:block;margin:10px auto;"
+    = link_to @presigned_url, class:"btn-blue", style:"max-width:320px; display:block; margin:20px auto 50px;" do
+      %i.fas.fa-folder-download.white
+      ポケモン素材をダウンロードする
