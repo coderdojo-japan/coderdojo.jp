@@ -4,11 +4,11 @@
   group_id: 11610
   url: https://coderdojo-hachinohe.doorkeeper.jp/
 
-# 藤井寺: イベントサービス未定
-# - dojo_id: 264
-#   name:     ???
-#   group_id: ???
-#   url:      ???
+# 藤井寺
+- dojo_id: 264
+  name: doorkeeper
+  group_id: 11663
+  url: https://coderdojo-fujiidera.doorkeeper.jp/
 
 # 浦和@Urawa Minecraft Club
 - dojo_id: 263
