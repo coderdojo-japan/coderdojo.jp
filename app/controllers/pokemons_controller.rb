@@ -15,14 +15,14 @@ class PokemonsController < ApplicationController
       participant_name: params[:participant_name],
       dojo_name:        params[:dojo_name],
       presigned_url:    generate_presigned_url,
-      download_key:     SecureRandom.hex
+      download_key:     SecureRandom.urlsafe_base64
     )
     redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 
   def show
     pokemon_download_key = Pokemon.find_by(download_key: params[:key])
-    @presigned_url = pokemon_download_key.presigned_url
+    @presigned_url       = pokemon_download_key.presigned_url
   end
 
   private
