@@ -2,28 +2,30 @@
 - provide(:desc,  '『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードお申し込みフォームです。')
 - provide(:url,   '/pokemon' )
 - provide(:meta_image,  'https://i.gyazo.com/811c10c67aa6187783f2fca21acbb427.png')
-.container{style: "line-height: 2.2em;"}
+
+.container
   %section.introduction{style: "padding: 50px 0px;"}
-    %div{style: "text-align: center;"}
+    %div.text-center
       %h1{style: "line-height: 1.4em;"}
         ポケモン素材の
         %br.ignore-pc>/
         ダウンロード
       %img.lazyload{loading: "lazy", src: "https://i.gyazo.com/073de074fdd294e5a7a1059c02c09fe3.png", style: "padding-bottom: 20px; border-radius: 4px;"}/
+
     %p 『ポケモンと学ぶ初めてのプログラミング』のワークショップで使うポケモン素材です。
     %p 利用規約は、保護者の方が参加者と一緒にご確認いただくようお願い致します。
     = form_with url: pokemon_path, class: 'form' do |f|
       .field
-        = f.label :email, "メールアドレス"
+        = f.label       :email, "メールアドレス"
         = f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field"
       .field
-        = f.label :parent_name, "保護者の名前"
+        = f.label      :parent_name, "保護者の名前"
         = f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field"
       .field
-        = f.label :participant_name, "参加者の名前"
+        = f.label      :participant_name, "参加者の名前"
         = f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field"
       .field
-        = f.label :dojo_name, "道場名"
+        = f.label      :dojo_name, "道場名"
         = f.text_field :dojo_name, autofocus: true, required: true, class: "form__field"
       .form__terms
         %h2.form__h2 ポケモン素材の利用規約
@@ -37,8 +39,8 @@
             %a{href: "https://bit.ly/pokemon-sozai-tos", rel: "noopener", target: "_blank"}> ポケモン素材の利用規約（全文）
             をご確認ください。
       .field
-        = f.check_box :term_of_use, style: "display:inline", required: true
-        = f.label     :term_of_use, "上記の利用規約に同意する".html_safe, style: "display:inline"
+        = f.check_box :term_of_use, required: true,             style: "display:inline"
+        = f.label     :term_of_use, "上記の利用規約に同意する", style: "display:inline"
 
       = f.submit "申し込む", class: "form__submit"
     /%p{style: "color: gray; text-align: center; padding-bottom: 30px"} 回答のコピーがメールで送信されます。
