@@ -48,7 +48,7 @@ GEM
     autoprefixer-rails (10.2.4.0)
       execjs
     aws-eventstream (1.1.1)
-    aws-partitions (1.433.0)
+    aws-partitions (1.434.0)
     aws-sdk-core (3.113.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -96,7 +96,7 @@ GEM
     crass (1.0.6)
     debug_inspector (1.0.0)
     declarative (0.0.20)
-    declarative-option (0.1.1)
+    declarative-option (0.1.0)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
