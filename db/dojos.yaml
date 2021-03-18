@@ -1109,10 +1109,10 @@
   logo: "/img/dojos/kodaira.png"
   description: 小平市で隔週開催
   tags:
-  - Scratch
   - Minecraft
-  - CS Unplugged
+  - Scratch
   - マルチメディア
+  - アプリ開発
 - id: 147
   order: '132250'
   created_at: '2018-05-06'
