@@ -4,7 +4,6 @@ class PodcastsController < ApplicationController
     @description     = 'CoderDojo に関わる人々をハイライトする Podcast 📻✨'
     @episodes        = Podcast.order(:published_date).reverse
     @url             = request.url
-    @is_live_scheduled = ENV['IS_LIVE_SCHEDULED'] == 'true'
 
     # GET /podcasts.rss
     @art_work_url    = "https://coderdojo.jp/podcasts/cover.jpg"

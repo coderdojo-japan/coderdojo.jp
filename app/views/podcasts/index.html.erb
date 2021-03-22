@@ -38,25 +38,6 @@
        data-text="" data-show-count="false">#DojoCast でツイートする</a>
     </p>
 
-    <% if @is_live_scheduled %>
-      <p id="live" style="text-align: center; padding: 30px 30px; font-size: 120%;">
-	<span>🗓 
-	  <b>次回ライブ配信</b><br>
-	  <!--<small>決まったら更新します! 😆</small>-->
-	</span>
-      </p>
-      
-      <div class="home-point-video">
-	<iframe src="https://www.youtube.com/embed/live_stream?channel=UCal5GuoCDCMDQe07w69TuJA"
-	 width="560" height="315" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <p style="text-align: center; padding-top: 10px;">
-	<a href="https://twitter.com/intent/tweet?button_hashtag=DojoCast&hashtags=CoderDojo"
-	 class="twitter-hashtag-button" data-size="large" data-lang="ja"
-	 data-text="" data-show-count="false">#DojoCast でツイートする</a>
-      </p>
-    <% end %>
-
     <h3 id="episodes" style="text-align: center; padding-top: 70px;padding-bottom: 10px;">📻 これまでの収録</h3>
     <ul style="font-size: 120%">
       <% @episodes.each do |episode| %>
