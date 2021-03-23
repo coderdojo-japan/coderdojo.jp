@@ -66,13 +66,17 @@
     %b 集計対象となっている道場数の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
-        %th{style: 'font-weight: normal;'} 西暦
+        %th{style: 'font-weight: normal;'}
+          %small 西暦
         - @annual_dojos_table.keys.each do |year|
-          %th{style: 'font-weight: normal;'} #{year}
+          %th{style: 'font-weight: normal;'}
+            %small= year
       %tr{style: 'text-align: center;'}
-        %td 道場数
+        %td
+          %small 道場数
         - @annual_dojos_table.each_value do |num|
-          %td= num
+          %td
+            %small= num
 
 
   %h3#map 🗾 地域別の道場数
@@ -87,16 +91,22 @@
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{border: '1'}
       %tr
-        %th{style: 'padding: 10px;'} 都道府県名
-        %th{style: 'padding: 10px;'} 道場数
+        %th{style: 'padding: 10px;'}
+          %small 都道府県名
+        %th{style: 'padding: 10px;'}
+          %small 道場数
       - @data_by_prefecture.each_with_index do |(prefecture, count), index|
         %tr
           - if count == 0
-            %td{style: 'background-color: gainsboro; padding: 0px;'}= prefecture
-            %td{style: 'background-color: gainsboro; padding: 0px;'}= count
+            %td{style: 'background-color: gainsboro; padding: 0px;'}
+              %small= prefecture
+            %td{style: 'background-color: gainsboro; padding: 0px;'}
+              %small= count
           - else
-            %td{style: 'padding: 0px;'}= prefecture
-            %td{style: 'padding: 0px;'}= count
+            %td{style: 'padding: 0px;'}
+              %small= prefecture
+            %td{style: 'padding: 0px;'}
+              %small= count
 
   %h3#references 📚 関連リンク
   %ul
