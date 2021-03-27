@@ -89,7 +89,7 @@
 
     :javascript
       docsearch({
-        apiKey: '315da3c406c3fa374a0696590f4821a3',
+        apiKey: '#{ENV.fetch("ALGOLIA_API_KEY")}',
         indexName: 'coderdojo',
         inputSelector: '#searchbox',
         debug: false // Set this true if you want to inspect the dropdown
