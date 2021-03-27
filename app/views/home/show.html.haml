@@ -85,16 +85,19 @@
     参加方法は各道場のWebサイトに記載されています
   .btn-cover{style: "margin-bottom: 40px;"}
     %a.btn-blue{href: "/events"}<>
+      %i.far.fa-calendar-alt
       近日開催から探す
     %a.btn-blue{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
+      %i.far.fa-map-marked
       地図情報から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 
 %section#timeline.text-center{style: 'margin-bottom: 50px;'}
   %br
-  %h3.text-center
-    %a{href: "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", target: "_blank", rel: "external noopener"} 🐣 最近の CoderDojo
-  %br
+  %h3.text-center{style: 'margin-bottom: 30px;'}
+    %a{href: "https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja", target: "_blank", rel: "external noopener"}
+      %i.fab.fa-twitter
+      最近の CoderDojo
   %a.twitter-timeline{href: "https://twitter.com/CoderDojoJapan", target: "_blank",
                       rel: "external noopener", 'data-lang' => "ja", "data-dnt" => "true",
                       "data-chrome" => "noheader nofooter noborders", "data-width" => "500",
