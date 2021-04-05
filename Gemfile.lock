@@ -226,7 +226,7 @@ GEM
     memoist (0.16.2)
     memory_profiler (1.0.0)
     method_source (1.0.0)
-    mini_mime (1.0.3)
+    mini_mime (1.1.0)
     mini_portile2 (2.5.0)
     minitest (5.14.4)
     minitest-retry (0.2.1)
