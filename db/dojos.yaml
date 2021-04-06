@@ -4,7 +4,7 @@
   created_at: '2016-09-26'
   name: 札幌
   prefecture_id: 1
-  url: http://www.coderdojo-sapporo.jp/
+  url: https://coderdojo-sapporo.jp/
   logo: "/img/dojos/sapporo.jpg"
   description: 札幌市で月2回開催
   tags:
@@ -256,7 +256,7 @@
   name: 会津
   prefecture_id: 7
   logo: "/img/dojos/aizu.png"
-  url: http://coderdojoaizu.strikingly.com/
+  url: https://coderdojoaizu.strikingly.com/
   description: 会津若松市内で毎月第3土曜に開催
   tags:
   - Scratch
@@ -367,7 +367,7 @@
   name: 水戸
   prefecture_id: 8
   logo: "/img/dojos/mito.png"
-  url: http://coderdojo-mito.com/
+  url: https://coderdojo-mito.com/
   description: 水戸市で毎月開催
   tags:
   - Scratch
@@ -551,7 +551,7 @@
   created_at: '2012-07-02'
   name: ひばりヶ丘
   prefecture_id: 11
-  url: http://coderdojo.hanare-hibari.info/
+  url: https://coderdojo.hanare-hibari.info/
   logo: "/img/dojos/hibarigaoka.jpg"
   description: 新座市で月2回開催
   tags:
@@ -577,7 +577,7 @@
   name: 千葉
   prefecture_id: 12
   logo: "/img/dojos/chiba.png"
-  url: http://chiba.coderdojo.chiba.jp/
+  url: https://chiba.coderdojo.chiba.jp/
   description: 千葉市で毎月開催
   tags:
   - Scratch
@@ -591,7 +591,7 @@
   name: 若葉みつわ台
   prefecture_id: 12
   logo: "/img/dojos/wakaba-mitsuwadai.png"
-  url: http://wakaba.coderdojo.chiba.jp/
+  url: https://wakaba.coderdojo.chiba.jp/
   description: 千葉市若葉区みつわ台で毎月開催
   tags:
   - Scratch
@@ -638,7 +638,7 @@
   name: 市川真間
   prefecture_id: 12
   logo: "/img/dojos/ichikawa-mama.jpg"
-  url: http://beyondbb.jp/CDmama/index.html
+  url: https://beyondbb.jp/CDmama/index.html
   description: JR市川駅近辺で月2回開催
   tags:
   - Scratch
@@ -651,7 +651,7 @@
   name: 船橋
   prefecture_id: 12
   logo: "/img/dojos/funabashi.jpg"
-  url: http://funabashi.coderdojo.chiba.jp/
+  url: https://funabashi.coderdojo.chiba.jp/
   description: 船橋市で毎月開催
   tags:
   - Scratch
@@ -673,7 +673,7 @@
   name: 松戸
   prefecture_id: 12
   logo: "/img/dojos/japan.png"
-  url: http://code4matsudo.org/category/coder-dojo-matsudo/
+  url: https://code4matsudo.org/category/coder-dojo-matsudo/
   description: 松戸市で隔月開催
   tags:
   - Scratch
@@ -693,7 +693,7 @@
   created_at: '2014-09-22'
   name: 柏
   prefecture_id: 12
-  url: http://www.coderdojo-kashiwa.com/
+  url: https://www.coderdojo-kashiwa.com/
   logo: "/img/dojos/coderdojo.png"
   description: 柏市で毎月3回開催
   tags:
@@ -703,7 +703,7 @@
   created_at: '2018-01-27'
   name: 柏沼南
   prefecture_id: 12
-  url: https://www.facebook.com/CoderDojoKashiwaShounan/
+  url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=kashiwashounan
   logo: "/img/dojos/kashiwa-shounan.jpg"
   description: 柏市沼南で毎月第2土曜開催
   tags:
@@ -713,7 +713,7 @@
   created_at: '2017-09-26'
   name: 南柏
   prefecture_id: 12
-  url: http://www.coderdojo-kashiwa.com/dojo/minamikashiwa/
+  url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=minamikashiwa
   logo: "/img/dojos/minami-kashiwa.png"
   description: 柏市光ヶ丘で毎月第3土曜開催
   tags:
@@ -1068,7 +1068,7 @@
   name: 調布
   prefecture_id: 13
   logo: "/img/dojos/chofu.jpg"
-  url: http://coderdojochofu.hatenablog.jp/
+  url: https://coderdojochofu.hatenablog.jp/
   description: 調布市で毎月開催
   tags:
   - Scratch
@@ -1106,7 +1106,7 @@
   created_at: '2014-05-21'
   name: 小平
   prefecture_id: 13
-  url: http://coderdojo-kodaira.github.io/
+  url: https://coderdojo-kodaira.github.io/
   logo: "/img/dojos/kodaira.png"
   description: 小平市で隔週開催
   tags:
@@ -1305,7 +1305,7 @@
   name: 藤沢
   prefecture_id: 14
   logo: "/img/dojos/fujisawa.png"
-  url: http://coderdojofujisawa.hatenablog.com/
+  url: https://coderdojofujisawa.hatenablog.com/
   description: 藤沢市で不定期開催
   tags:
   - Scratch
@@ -1421,7 +1421,7 @@
   created_at: '2013-08-14'
   name: 福井
   prefecture_id: 18
-  url: http://coderdojo.cowbell.jp/
+  url: https://coderdojo.cowbell.jp/
   logo: "/img/dojos/coderdojo.png"
   description: 福井市で不定期開催
   tags:
@@ -1637,7 +1637,7 @@
   name: 名古屋
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
-  url: http://coderdojo-nagoya.hateblo.jp/
+  url: https://coderdojo-nagoya.hateblo.jp/
   description: 名古屋市中区で月2回開催
   tags:
   - Scratch
@@ -1661,7 +1661,7 @@
   name: 天白
   prefecture_id: 23
   logo: "/img/dojos/tempaku.png"
-  url: http://coderdojo-tempaku.hatenablog.com/
+  url: https://coderdojo-tempaku.hatenablog.com/
   description: 名古屋市天白区で月2回開催
   tags:
   - Scratch
@@ -1817,7 +1817,7 @@
   name: 大治
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
-  url: http://coderdojo-oharu.connpass.com/
+  url: https://coderdojo-oharu.connpass.com/
   description: 大治町海部郡で毎月開催
   tags:
   - Scratch
@@ -1937,7 +1937,7 @@
   name: 西宮・梅田
   counter: 2
   prefecture_id: 27
-  url: http://coderdojo-nishinomiya.info/
+  url: https://coderdojo-nishinomiya.info/
   logo: "/img/dojos/nishinomiya.png"
   description: 西宮/梅田でそれぞれ毎月開催
   tags:
@@ -2050,7 +2050,7 @@
   name: 枚方
   prefecture_id: 27
   logo: "/img/dojos/hirakata.png"
-  url: http://coderdojo-hirakata.org
+  url: https://coderdojo-hirakata.org
   description: 枚方市で毎月開催
   tags:
   - Scratch
@@ -2088,7 +2088,7 @@
   name: 大東
   prefecture_id: 27
   logo: "/img/dojos/daito.png"
-  url: http://coderdojodaito.strikingly.com/
+  url: https://coderdojodaito.strikingly.com/
   description: 大東市で毎月第1土曜開催
   tags:
   - Scratch
@@ -2209,7 +2209,7 @@
   name: 神戸
   prefecture_id: 28
   logo: "/img/dojos/kobe.png"
-  url: http://coderdojokobe.wixsite.com/home/
+  url: https://coderdojokobe.wixsite.com/home/
   description: 神戸市中央区で毎月開催
   tags:
   - Scratch
@@ -2304,7 +2304,7 @@
   created_at: '2014-10-26'
   name: 奈良
   prefecture_id: 29
-  url: http://coderdojo-nara-ikoma.github.io/
+  url: https://coderdojo-nara-ikoma.github.io/
   logo: "/img/dojos/nara.png"
   description: 奈良市で毎月開催
   tags:
@@ -2319,7 +2319,7 @@
   name: 生駒
   prefecture_id: 29
   logo: "/img/dojos/ikoma.png"
-  url: http://coderdojo-nara-ikoma.github.io/
+  url: https://coderdojo-nara-ikoma.github.io/
   description: 生駒市で毎月開催
   tags:
   - Scratch
@@ -2343,7 +2343,7 @@
   name: 三郷
   prefecture_id: 29
   logo: "/img/dojos/sango.png"
-  url: http://www.kokuchpro.com/group/CoderDojo35/
+  url: https://www.kokuchpro.com/group/CoderDojo35/
   description: 三郷町で毎月開催
   tags:
   - Scratch
@@ -2634,7 +2634,7 @@
   name: 光
   prefecture_id: 35
   logo: "/img/dojos/hikari.png"
-  url: http://coderdojo-hikari.com/
+  url: https://coderdojo-hikari.com/
   description: 光市で毎月開催
   tags:
   - Scratch
@@ -2812,7 +2812,7 @@
   name: 日吉
   prefecture_id: 40
   logo: "/img/dojos/japan.png"
-  url: http://coderdojo-hiyoshi.com/
+  url: https://coderdojo-hiyoshi.com/
   description: 久留米市日吉校区コミュニティセンターで隔月開催
   tags:
   - Scratch
@@ -2925,7 +2925,7 @@
   name: 宜野湾
   prefecture_id: 47
   logo: "/img/dojos/ginowan.png"
-  url: http://www.coderdojo-ginowan.com/
+  url: https://www.coderdojo-ginowan.com/
   description: 宜野湾市で毎週開催
   tags:
   - Scratch
@@ -3019,7 +3019,7 @@
   name: 宮古島
   prefecture_id: 47
   logo: "/img/dojos/miyakojima.jpg"
-  url: http://coderdojo-miyakojima.com/
+  url: https://coderdojo-miyakojima.com/
   description: 宮古島市で不定期開催
   tags:
   - Scratch
@@ -3032,7 +3032,7 @@
   name: 嘉手納
   prefecture_id: 47
   logo: "/img/dojos/kadena.png"
-  url: http://coderdojokadena.hatenablog.jp/
+  url: https://coderdojokadena.hatenablog.jp/
   description: 中頭郡嘉手納町で毎月開催
   tags:
   - Scratch
