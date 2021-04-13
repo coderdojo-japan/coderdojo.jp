@@ -410,7 +410,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    trailblazer-option (0.1.0)
+    trailblazer-option (0.1.1)
     travis (1.8.13)
       backports
       faraday (~> 0.9)
