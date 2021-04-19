@@ -781,6 +781,18 @@ body>footer a:hover {
   }
 }
 
+.event-tag-pokemon {
+  background-color: $lightblue;
+  font-weight: bold;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.event-tag-pokemon-cover {
+  text-align: left;
+  padding: 0 10px;
+}
+
 
 .event>p {
   margin: 10px;

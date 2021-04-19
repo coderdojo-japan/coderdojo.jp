@@ -15,3 +15,6 @@
             %a.event-url{ href: "#{event[:event_url]}" }
               %span= event[:event_title]
             %span= "(#{event[:dojo_name]})"
+            - if event[:event_title].include? 'ポケモン'
+              %div.event-tag-pokemon-cover
+                %span.event-tag-pokemon ポケモン
