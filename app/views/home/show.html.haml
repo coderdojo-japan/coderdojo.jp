@@ -9,7 +9,6 @@
               "data-src" => "/coderdojo-japan_cover.jpg", loading: 'lazy'
 
 %section.introduction.text-center.list
-  %br
   %p
     CoderDojo は7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では#{Dojo::NUM_OF_COUNTRIES}カ国・#{Dojo::NUM_OF_WORLD_DOJOS}の道場、日本には
     %b>= @dojo_count
@@ -62,9 +61,15 @@
   %br
   = render partial: 'shared/social_buttons'
 
-/
-  %section#events.detail-introduction.text-center
+%section#events.detail-introduction.text-center
   %h2 🆕 イベントのお知らせ
+  %p.event-notice{style: "margin-top: 30px; margin-bottom: 60px;"}
+    %a{href: "https://forms.gle/Kig1vW2oh4QVBHKT7", target: "_blank", rel: "external noopener"} プログラミングで『ポケモン』を動かしてみよう！
+    %br
+    %small
+      5月16日 (日曜) 午前10時からオンライン開催
+
+/
   %ol.bxslider{style: "list-style: none; margin-left: -40px; margin-top: 30px;"}
     %li
       = link_to image_tag("dojocon_japan_2020.png", alt: "DojoCon Japan 2020", style: "margin-bottom: 15px;", class: 'lazyload', loading: 'lazy'), "https://dojocon2020.coderdojo.jp/", target: "_blank", rel: "external noopener"
