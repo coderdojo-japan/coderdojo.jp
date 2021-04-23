@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
-  http_basic_authenticate_with(
-    name:     ENV['BASIC_AUTH_NAME_FOR_POKEMON'],
-    password: ENV['BASIC_AUTH_PASSWORD_FOR_POKEMON']) unless Rails.env.development?
+  #http_basic_authenticate_with(
+  #  name:     ENV['BASIC_AUTH_NAME_FOR_POKEMON'],
+  #  password: ENV['BASIC_AUTH_PASSWORD_FOR_POKEMON']) unless Rails.env.development?
 
   # GET /pokemon
   def new; end
