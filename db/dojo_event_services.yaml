@@ -16,11 +16,11 @@
   group_id: 100038184130896
   url: https://www.facebook.com/urawaminecraftclub/
 
-# 宇治: イベントサービス未定
-# - dojo_id: 262
-#   name:     ???
-#   group_id: ???
-#   url:      ???
+# 宇治
+- dojo_id: 262
+  name:     connpass
+  group_id: 11083
+  url:      https://coderdojo-uji.connpass.com/
 
 # 江別
 - dojo_id: 261
