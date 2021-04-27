@@ -107,7 +107,7 @@ GEM
       posix-spawn (>= 0.3.6)
     erubi (1.10.0)
     erubis (2.7.0)
-    ethon (0.13.0)
+    ethon (0.14.0)
       ffi (>= 1.15.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
