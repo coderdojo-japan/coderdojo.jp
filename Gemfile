@@ -56,6 +56,7 @@ group :development do
   gem 'web-console'
   gem 'spring'
   gem 'listen'
+  gem 'letter_opener_web'
   gem 'rack-mini-profiler', require: false
   gem 'flamegraph', require: false
   gem 'stackprof', require: false

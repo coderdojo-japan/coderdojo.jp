@@ -69,6 +69,9 @@ Rails.application.routes.draw do
   get '/logout',       to: 'sessions#destroy'
   resource :session, only: [:create, :destroy]
 
+  # Check development sent emails
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
   # See the documentation of 'scrivito_route' for a detailed description.
   scrivito_route '/',              using: 'homepage'
