@@ -16,6 +16,7 @@ class PokemonsController < ApplicationController
       presigned_url:    generate_presigned_url,
       download_key:     SecureRandom.urlsafe_base64
     )
+    PokemonMailer.with(pokemon: pokemon).send_tos.deliver_now
     redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 

@@ -102,4 +102,17 @@ Rails.application.configure do
   config.middleware.use Rack::HostRedirect, {
     %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
   }
+
+  # Mailer settings
+  config.action_mailer.delivery_method       = :smtp
+  config.action_mailer.default_url_options   = { host: ENV['CODERDOJO_JAPAN_DEFAUL_URL'] }
+  ActionMailer::Base.smtp_settings           = {
+    address:              'smtp.mailgun.org',
+    port:                 '587',
+    authentication:       :plain,
+    user_name:            ENV['CODERDOJO_JAPAN_MAILGUN_USER'],
+    password:             ENV['CODERDOJO_JAPAN_MAILGUN_PASS'],
+    domain:               'coderdojo.jp',
+    enable_starttls_auto: true
+  }
 end
