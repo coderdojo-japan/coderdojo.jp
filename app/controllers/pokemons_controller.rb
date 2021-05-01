@@ -17,6 +17,7 @@ class PokemonsController < ApplicationController
       download_key:     SecureRandom.urlsafe_base64
     )
     PokemonMailer.with(pokemon: pokemon).send_tos.deliver_now
+
     redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 
@@ -25,12 +26,12 @@ class PokemonsController < ApplicationController
     pokemon = Pokemon.find_by(download_key: params[:key])
     if pokemon.nil?
       # You can locally debug by 'GET /pokemon/download' in development
-      redirect_to pokemon_path, alert: 'ダウンロードキーが無効です。お手数ですがもう一度お申し込み頂けると幸いです。' unless Rails.env.development?
+      redirect_to pokemon_path, alert: 'ダウンロードのURLが間違っているようです。お手数ですがもう一度お申し込み頂けると幸いです。' unless Rails.env.development?
     elsif pokemon.download_key_expired?
       redirect_to pokemon_path, alert: 'ダウンロードの有効期限が過ぎているようです。お手数ですがもう一度お申し込み頂けると幸いです。'
     end
 
-    # Guard nil because 'redirect_to' does NOT stop the step
+    # Guard nil because 'redirect_to' above does NOT stop running this code
     @presigned_url = pokemon.presigned_url unless pokemon.nil?
   end
 

@@ -1,5 +1,17 @@
 <p><%= @pokemon.parent_name %>様</p>
-<p>ポケモン素材の申し込みありがとうございます。</p>
-<p>ポケモン素材の利用規約を再度見れるように案内のメールをお送りしています。</p>
 
-<p><a href="https://drive.google.com/file/d/1SS5nBuEd67jZzX2CwKjgu54W3uWY4KCq/view">コチラ</a>から利用規約をご参照ください。</p>
+<p>ポケモン素材の<a href="https://drive.google.com/file/d/1SS5nBuEd67jZzX2CwKjgu54W3uWY4KCq/view">利用規約</a>にご同意して頂きありがとうございます！</p>
+
+<p>
+  ポケモン素材は<%= link_to 'コチラ', pokemon_download_url(key: @pokemon.download_key) %>からダウンロードできます。<br>
+  <small>※
+    ダウンロードの有効期間は６０分です。
+  </small>
+</p>
+
+<p>プログラミングでポケモンを動かし、楽しんでいただけると嬉しいです！</p>
+
+<p><small>
+  一般社団法人CoderDojo Japan<br>
+  <a href='https://coderdojo.jp/'>https://coderdojo.jp/</a>
+</small></p>
