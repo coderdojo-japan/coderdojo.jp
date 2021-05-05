@@ -1,6 +1,14 @@
-<%= @pokemon.parent_name %>様
-ポケモン素材の申し込みありがとうございます。
-ポケモン素材の利用規約を再度見れるように案内のメールをお送りしています。
+<%= @pokemon.parent_name %> 様
 
-下記のリンクから利用規約をご参照ください。
-https://bit.ly/pokemon-sozai-tos
+利用規約に同意して頂きありがとうございます。
+ポケモン素材は下記リンクからダウンロードできます。
+
+ポケモン素材をダウンロードする → <%= link_to 'コチラ', pokemon_download_url(key: @pokemon.download_key) %>
+（※ ダウンロードの有効期間は６０分です。）
+
+利用規約を確認する → https://drive.google.com/file/d/1SS5nBuEd67jZzX2CwKjgu54W3uWY4KCq/view
+
+プログラミングでポケモンを動かし、楽しんでいただけると嬉しいです。
+
+一般社団法人CoderDojo Japan
+https://coderdojo.jp/
