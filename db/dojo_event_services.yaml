@@ -9,11 +9,13 @@
   name: connpass
   group_id: 7653
   url: https://coderdojokibi.connpass.com/
+
 # 富山 未定
 # - dojo_id: 267
 #   name: facebook
 #   group_id: ???
 #   url: https://www.facebook.com/groups/504322904195372/
+
 # 東住吉
 - dojo_id: 266
   name: doorkeeper
