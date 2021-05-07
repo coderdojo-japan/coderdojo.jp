@@ -14,17 +14,18 @@ Rails.application.routes.draw do
   #get "/docs/financial-report",  to: redirect('/financial-report')
   #get "/docs/privacy",           to: redirect('/privacy')
   #get "/docs/teikan",            to: redirect('/teikan')
-  #get "/docs/join-in-board",     to: redirect('/join-in-board')
   #get "/docs/signup",            to: redirect('/signup')
-  get "/docs/thanks",            to: redirect('/thanks')
-  get "/docs/calendar-yohei",    to: redirect('/calendar/yohei')
-  get "/docs/calendar-kirie",    to: redirect('/calendar/kirie')
+  #get "/docs/join-in-board",     to: redirect('/join-in-board')
+  get "/docs/join-in-board-2017", to: redirect('/join-in-board-2017')
+  get "/docs/thanks",             to: redirect('/thanks')
+  get "/docs/calendar-yohei",     to: redirect('/calendar/yohei')
+  get "/docs/calendar-kirie",     to: redirect('/calendar/kirie')
 
-  get "/login",                  to: redirect('/login-8717e64efaf19d7d')
-  get "/youtube",                to: redirect('https://www.youtube.com/CoderDojoJapan')
-  get "/calendar",               to: redirect('/calendar/yohei')
-  get "/calendar-yohei",         to: redirect('/calendar/yohei')
-  get "/calendar-kirie",         to: redirect('/calendar/kirie')
+  get "/login",                   to: redirect('/login-8717e64efaf19d7d')
+  get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
+  get "/calendar",                to: redirect('/calendar/yohei')
+  get "/calendar-yohei",          to: redirect('/calendar/yohei')
+  get "/calendar-kirie",          to: redirect('/calendar/kirie')
   get "/calendar/yohei"   => "docs#show", id: 'calendar-yohei'
   get "/calendar/kirie"   => "docs#show", id: 'calendar-kirie'
   get "/charter"          => "docs#show", id: 'charter'
@@ -35,7 +36,8 @@ Rails.application.routes.draw do
   get "/financial-report" => "docs#show", id: 'financial-report'
   get "/privacy"          => "docs#show", id: 'privacy'
   get "/teikan"           => "docs#show", id: 'teikan'
-  get "/join-in-board"    => "docs#show", id: 'join-in-board'
+  get "/join-in-board"      => "docs#show", id: 'join-in-board'
+  get "/join-in-board-2017" => "docs#show", id: 'join-in-board-2017'
   get "/thanks"           => "docs#show", id: 'thanks'
   get "/signup"           => "docs#show", id: 'signup'
 
