@@ -4516,3 +4516,25 @@
   event_id:
   participants: 1
   evented_at: 2021/03/21 9:30
+
+# 2021/04/01 - 2021/04/30
+- dojo_id: 25
+  event_id:
+  participants: 0
+  evented_at: 2021/04/11 10:00
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2021/04/18 10:30
+- dojo_id: 103
+  event_id:
+  participants: 0
+  evented_at: 2021/04/26 18:30 #オンライン開催
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2021/04/17 15:15
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2021/04/18 10:00
