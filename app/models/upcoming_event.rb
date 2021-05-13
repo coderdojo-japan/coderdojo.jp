@@ -26,6 +26,12 @@ class UpcomingEvent < ApplicationRecord
       end
       result
     end
+
+    def group_by_keyword(keyword)
+      eager_load(dojo_event_service: :dojo).since(Time.zone.today).
+        merge(Dojo.default_order).
+        where('event_title like(?)', "%#{keyword}%")
+    end
   end
 
   def catalog
