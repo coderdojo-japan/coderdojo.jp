@@ -20,9 +20,6 @@
   %p.event-notice{style: "margin-top: 30px; margin-bottom: 60px;"}
     🆕 ポケモン・ワークショップ開催中！
     %br
-    %small
-      %a{href: "https://bit.ly/pokemon-special-workshop-in-kashiwa", target: "_blank", rel: "external noopener"} 5月16日 10:00〜 @ Kashiwa
-    %br
     - @pokemon_events.each do |event|
       %a{href: "#{event.event_url}", target: "_blank", rel: "external noopener"}
         %small #{event.event_at.strftime('%-m月%d日 %H:%M〜')} @ #{event.dojo_event_service.dojo.name}
