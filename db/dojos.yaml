@@ -2679,6 +2679,18 @@
   - Unity
   - Java
   - Webサイト
+- id: 270
+  order: '352110'
+  created_at: '2021-05-13'
+  name: 長門
+  prefecture_id: 35
+  logo: "/img/dojos/coderdojo.png"
+  url: https://sites.google.com/view/coderdojonagato
+  description: 長門市しごとセンターで第4土曜開催
+  tags:
+  - Scratch
+  - ｍBot
+  - Sphero Edu
 - id: 103
   order: '362018'
   created_at: '2017-10-02'
