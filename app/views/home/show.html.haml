@@ -174,16 +174,18 @@
                             style: 'margin-bottom: 15px;'), '/kata'
       %a.button-to-details{href: '/kata'} Kata を読む
 
-= render partial: 'shared/partners'
-%section.detail-introduction.partners_logo.text-center
-  %br
-  %div.kata{style: 'margin-bottom: 100px;'}
-    %a.button-to-details{href: '/partnership'} パートナーシップの詳細を読む
+%section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
+  %h2{style: "color: dimgray;"} 🤝 パートナー法人
+  %p{style: "margin: 50px 0px 20px 0px;"}
+    様々な法人が CoderDojo の取り組みを支援しています。
 
-%div{style: "padding-bottom: 30px;"}
+  = render partial: 'shared/partners'
+  %div.kata{style: 'margin-top: 60px; margin-bottom: 150px;'}
+    %a.button-to-details{href: '/partnership'} 法人向け資料を読む
+
 
 / Start with 'div' not 'section' due to grayscale-bg area
-.text-center.grayscale-bg
+.text-center.grayscale-bg{style: "padding-top: 20px; padding-bottom: 50px;"}
   %section.detail-introduction#news
     %br
     %h2{style: "color: dimgray;"} 📰 ニュースレター購読
@@ -198,7 +200,7 @@
         )
     = render partial: 'shared/newsletter'
 
-%section#faq.detail-introduction#contact
+%section#faq.detail-introduction#contact{style: "padding-top: 30px;"}
   %br
   %h2.text-center{style: "color: dimgray;"} ✅ よくある質問と回答
   %br
