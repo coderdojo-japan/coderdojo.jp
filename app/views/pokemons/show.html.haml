@@ -12,7 +12,9 @@
 
     %img.lazyload{loading: "lazy", src: 'https://i.gyazo.com/612bd10c725dc91a6a3bcc2d7a6d427a.png', style: "padding-bottom: 20px; border-radius: 4px; max-width: 500px;"}
     %p{style: "padding-top: 20px;"}
-      ボタンをクリックして、ポケモン素材をダウンロードしよう！
+      ボタンをクリックして、
+      %br.ignore-pc<>
+      ポケモン素材をダウンロードしよう！
     = link_to @presigned_url, class:"btn-blue", style:"max-width:320px; display:block; margin:20px auto 100px;" do
       %i.fas.fa-folder-download.white
       ポケモン素材をダウンロードする
