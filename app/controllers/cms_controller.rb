@@ -1,3 +1,3 @@
 class CmsController < ApplicationController
-  include Scrivito::ControllerActions
+  # include Scrivito::ControllerActions
 end
