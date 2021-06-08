@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require scrivito
-//= require scrivito_section_widgets
-//= require scrivito
 //= require bootstrap-sprockets
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
