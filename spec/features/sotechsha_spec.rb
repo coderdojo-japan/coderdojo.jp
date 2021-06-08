@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.feature "Sotechsha", type: :feature, scrivito: true, retry: 3  do
 
-  describe "GET /sotechsha/num" do
+  xdescribe "GET /sotechsha/num" do
     scenario "Quizzes should be permalink" do
       (0..6).each do |num|
         visit "/sotechsha/#{num}"
@@ -13,7 +13,7 @@ RSpec.feature "Sotechsha", type: :feature, scrivito: true, retry: 3  do
     end
   end
 
-  describe "GET /sotechsha" do
+  xdescribe "GET /sotechsha" do
     scenario "SoTechSha link should be rendered" do
       visit "/sotechsha"
       expect(page).to have_selector "a[href]"
@@ -22,7 +22,7 @@ RSpec.feature "Sotechsha", type: :feature, scrivito: true, retry: 3  do
     end
   end
 
-  describe "GET /sotechsha/1" do
+  xdescribe "GET /sotechsha/1" do
     scenario "Datetime should be formatted" do
       visit "/sotechsha/1"
       expect(page).to have_selector ".h5", text: /\d{4}年\d{2}月\d{2}日$/
