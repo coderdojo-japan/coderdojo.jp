@@ -1,2 +1,3 @@
-class Widget < Scrivito::BasicWidget
+#class Widget < Scrivito::BasicWidget
+class Widget
 end
