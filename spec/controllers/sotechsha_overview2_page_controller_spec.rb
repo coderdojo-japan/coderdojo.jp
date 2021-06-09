@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SotechshaOverview2PageController, type: :controller, scrivito: true do
   render_views
 
-  xdescribe "GET #index" do
+  describe "GET #index" do
     it "set @sts_post" do
       obj = Obj.find_by_permalink!("sotechsha2")
       request.for_scrivito_obj(obj)

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller, scrivito: true do
-  xdescribe "GET #create" do
+  describe "GET #create" do
     it "param match" do
       get :create, params: { email: ENV['SCRIVITO_EMAIL'],
                              password: ENV['SCRIVITO_PASSWORD'] }
@@ -12,7 +12,7 @@ RSpec.describe SessionsController, type: :controller, scrivito: true do
       expect(flash[:alert]).to be_present
     end
   end
-  xdescribe "GET #destroy" do
+  describe "GET #destroy" do
     it 'user login' do
       session[:user] = ENV['SCRIVITO_EMAIL']
       get :destroy

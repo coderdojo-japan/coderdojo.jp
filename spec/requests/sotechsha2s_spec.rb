@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Sotechsha2s", type: :request, scrivito: true do
-  xdescribe "Quizzes should be permalink" do
+  describe "Quizzes should be permalink" do
     it "Quizzes should be permalink" do
       (0..6).each do |num|
         get "/sotechsha2/#{num}"
