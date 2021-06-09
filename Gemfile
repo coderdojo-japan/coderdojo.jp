@@ -8,9 +8,9 @@ gem 'pg'
 gem 'dumper'
 gem 'bootsnap'
 
-#gem 'scrivito', '~> 1.17'
-#gem 'scrivito_section_widgets'
-#gem 'scrivito_teaser_widget'
+gem 'scrivito', '~> 1.17'
+gem 'scrivito_section_widgets'
+gem 'scrivito_teaser_widget'
 
 gem 'coffee-rails'
 gem 'jbuilder'

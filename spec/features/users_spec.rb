@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 require 'rails_helper'
-# include Scrivito::ControllerHelper
+include Scrivito::ControllerHelper
 
 RSpec.feature "Users", type: :feature, scrivito: true do
   subject { page }
 
-  xdescribe "log in" do
+  describe "log in" do
     let(:login)     { LoginPage.instance }
     let(:login_path) { login.slug + login.id }
 
