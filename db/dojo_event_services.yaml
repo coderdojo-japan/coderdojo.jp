@@ -7,7 +7,7 @@
 さが
 - dojo_id: 269
   name: facebook #イベントページなし
-  group_id: ???
+  group_id:
   url: https://www.facebook.com/CoderDojo%E3%81%95%E3%81%8C-101932535364071
 - dojo_id: 269
   name: peatix # 募集はpeatixを利用
