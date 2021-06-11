@@ -4,11 +4,15 @@
 #   group_id: ???
 #   url:      ???
 
-# さが 未定
-# - dojo_id: 269
-#   name: facebook
-#   group_id: ???
-#   url: https://www.facebook.com/CoderDojo%E3%81%95%E3%81%8C-101932535364071
+# さが
+- dojo_id: 269
+  name: facebook #イベントページなし
+  group_id:
+  url: https://www.facebook.com/CoderDojo%E3%81%95%E3%81%8C-101932535364071
+- dojo_id: 269
+  name: peatix # 募集はpeatixを利用
+  group_id:
+  url: https://peatix.com/group/10488940
 
 # 吉備
 - dojo_id: 268
@@ -18,7 +22,7 @@
 
 # 富山 未定
 # - dojo_id: 267
-#   name: facebook
+#   name: facebook #イベントページなし
 #   group_id: ???
 #   url: https://www.facebook.com/groups/504322904195372/
 
@@ -42,7 +46,7 @@
 
 # 浦和@Urawa Minecraft Club
 - dojo_id: 263
-  name: facebook
+  name: facebook #イベントページなし
   group_id: 100038184130896
   url: https://www.facebook.com/urawaminecraftclub/
 
@@ -66,7 +70,7 @@
 
 # 一関平泉
 # - dojo_id:
-#   name: facebook
+#   name: facebook  #イベントページなし
 #   group_id: 102789928307330
 #   url: https://www.facebook.com/CoderDojoIchinosekiHiraizumi
 
@@ -413,7 +417,7 @@
   group_id: 880706025404127
   url: https://www.facebook.com/coderdojofunabashi/events/
 
- # 木更津
+# 木更津
 - dojo_id: 83
   name: facebook #2019年6月からは connpass
   group_id: 1273279189459638
