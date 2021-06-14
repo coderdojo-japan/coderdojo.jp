@@ -433,7 +433,7 @@ GEM
       railties (>= 5.0)
     webrick (1.7.0)
     websocket (1.2.9)
-    websocket-driver (0.7.4)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     woothee (1.11.1)
