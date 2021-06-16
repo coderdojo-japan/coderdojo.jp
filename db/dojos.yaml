@@ -781,6 +781,7 @@
   - Minecraft
 - id: 157
   order: '122302'
+  is_active: false
   created_at: '2018-11-25'
   name: 酒々井
   prefecture_id: 12
