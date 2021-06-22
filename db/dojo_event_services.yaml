@@ -1,9 +1,3 @@
-# 青梅
-- dojo_id: 254
-  name: connpass
-  group_id: 10837
-  url: https://coderdojo-ome.connpass.com/
-
 # 柏原
 # - dojo_id: 271
 #   name: Doorkeeper #イベントページなし
@@ -110,11 +104,11 @@
 #   group_id: ???
 #   url:      ???
 
-# 青梅: 未定
-# - dojo_id: 254
-#   name:     ???
-#   group_id: ???
-#   url:      ???
+# 青梅
+- dojo_id: 254
+  name: connpass
+  group_id: 10837
+  url: https://coderdojo-ome.connpass.com/
 
 # 室蘭: 未定
 # - dojo_id: 253
