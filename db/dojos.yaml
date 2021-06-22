@@ -89,7 +89,7 @@
   description: 一関市で不定期に開催
   tags:
   - Scratch
-  - RaspberryPi
+  - ラズベリーパイ
   - Python
   - Arduino
   - Webサイト
@@ -1047,7 +1047,7 @@
   - Scratch
   - Webサイト
   - Python
-  - RaspberryPi
+  - ラズベリーパイ
   - RPA
 - id: 228
   order: '132071'
@@ -1939,7 +1939,7 @@
   tags:
   - Scratch
   - Webサイト
-  - RaspberryPi
+  - ラズベリーパイ
   - Python
   - 電子工作
 - id: 42
@@ -2019,7 +2019,7 @@
   tags:
   - Scratch
   - micro:bit
-  - RaspberryPi
+  - ラズベリーパイ
   - 電子工作
   - プログラミング言語
 - id: 46
@@ -2142,7 +2142,7 @@
   - Scratch
   - Webサイト
   - micro:bit
-  - Raspberry Pi
+  - ラズベリーパイ
   - Arduino
 - id: 41
   order: '272272'
@@ -2192,7 +2192,7 @@
   - Scratch
   - Webサイト
   - Micro:bit
-  - Raspberry Pi
+  - ラズベリーパイ
   - Arduino
 - id: 110
   order: '272281'
