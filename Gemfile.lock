@@ -145,8 +145,8 @@ GEM
       rexml
       signet (~> 0.14)
       webrick
-    google-apis-drive_v3 (0.9.0)
-      google-apis-core (~> 0.1)
+    google-apis-drive_v3 (0.10.0)
+      google-apis-core (>= 0.3, < 2.a)
     google-apis-sheets_v4 (0.6.0)
       google-apis-core (~> 0.1)
     google_drive (3.0.7)
