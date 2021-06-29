@@ -135,15 +135,14 @@ GEM
       net-http-pipeline
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    google-apis-core (0.3.0)
+    google-apis-core (0.4.0)
       addressable (~> 2.5, >= 2.5.1)
-      googleauth (~> 0.14)
-      httpclient (>= 2.8.1, < 3.0)
+      googleauth (>= 0.16.2, < 2.a)
+      httpclient (>= 2.8.1, < 3.a)
       mini_mime (~> 1.0)
       representable (~> 3.0)
-      retriable (>= 2.0, < 4.0)
+      retriable (>= 2.0, < 4.a)
       rexml
-      signet (~> 0.14)
       webrick
     google-apis-drive_v3 (0.10.0)
       google-apis-core (>= 0.3, < 2.a)
