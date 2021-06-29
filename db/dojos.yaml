@@ -312,7 +312,7 @@
   prefecture_id: 7
   logo: "/img/dojos/yabuki.png"
   url: https://sites.google.com/coderdojo.com/coderdojo-yabuki/home
-  description: 福島県矢吹町で毎月開催
+  description: 矢吹町で毎月開催
   tags:
   - Scratch
   - micro:bit
@@ -1401,7 +1401,7 @@
   prefecture_id: 16
   logo: "/img/dojos/japan.png"
   url: https://www.facebook.com/groups/504322904195372/
-  description: 富山県富山市で毎月開催
+  description: 富山市で毎月開催
   tags:
   - Scratch
 - id: 257
@@ -1733,7 +1733,7 @@
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://www.coderdojo-nishio.com/
-  description: 愛知県西尾市で毎月開催
+  description: 西尾市で毎月開催
   tags:
   - Scratch
   - micro:bit
@@ -1779,7 +1779,7 @@
   prefecture_id: 23
   logo: "/img/dojos/japan.png"
   url: https://zen.coderdojo.com/dojos/jp/obu-aichi/da4-fu3
-  description: 愛知県大府市で毎月2回開催
+  description: 大府市で毎月2回開催
   tags:
   - Scratch
 - id: 71
@@ -1839,7 +1839,7 @@
   prefecture_id: 24
   logo: "/img/dojos/yokkaichi.jpg"
   url: https://www.facebook.com/CoderDojoYokkaichi/
-  description: 三重県四日市市で月に１回開催
+  description: 四日市市で月に１回開催
   tags:
   - Scratch
   - micro:bit
@@ -1911,7 +1911,7 @@
   prefecture_id: 26
   logo: "/img/dojos/japan.png"
   url: https://coderdojo-uji.blogspot.com/
-  description: 京都府宇治市で2〜3ヶ月に1回開催
+  description: 宇治市で2〜3ヶ月に1回開催
   tags:
   - Scratch
 - id: 250
@@ -2488,7 +2488,7 @@
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
   url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
-  description: 島根県各地で各地で週1〜2回開催
+  description: 各地で週1〜2回開催
   tags:
   - Scratch
   - Webサイト
