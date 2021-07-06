@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get "/login",                   to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
+  get "/brand",                   to: redirect('/docs/brand-guidelines')
   get "/calendar",                to: redirect('/calendar/yohei')
   get "/calendar-yohei",          to: redirect('/calendar/yohei')
   get "/calendar-kirie",          to: redirect('/calendar/kirie')
