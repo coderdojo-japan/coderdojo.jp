@@ -9,9 +9,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_HOST: localhost
+      TZ: Asia/Tokyo
+      SCRIVITO_EMAIL: test@example.com
+      SCRIVITO_PASSWORD: testpassword
+      SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
+      SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
     services:
       db:
         image: postgres:10.4-alpine
+        ports:
+          - 5432:5432
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
@@ -29,7 +38,3 @@ jobs:
           bundle exec rails db:setup
       - name: rspec
         run: bundle exec rails spec
-        env:
-          TZ: Asia/Tokyo
-          SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
-          SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
