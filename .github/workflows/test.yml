@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     services:
-      postgres:
+      db:
         image: postgres:10.4-alpine
         env:
           POSTGRES_USER: postgres
