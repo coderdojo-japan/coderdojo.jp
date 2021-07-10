@@ -1,0 +1,35 @@
+name: actions
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "*"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:10.4-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: prepare db
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:setup
+      - name: rspec
+        run: bundle exec rails spec
+        env:
+          TZ: Asia/Tokyo
+          SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
+          SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
