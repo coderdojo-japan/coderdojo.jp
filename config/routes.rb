@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root "home#show"
 
+  # Debug URL
+  get "/debug" => "home#debug"
+
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   #get "/docs/code_of_conduct",   to: redirect('/docs/code-of-conduct')
