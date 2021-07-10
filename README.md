@@ -2,7 +2,7 @@
 
 # CoderDojo Japan
 
-[![Build Status](https://travis-ci.com/coderdojo-japan/coderdojo.jp.svg?branch=master)](https://travis-ci.com/coderdojo-japan/coderdojo.jp)
+[![Build Status](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/test.yml/badge.svg)](https://github.com/coderdojo-japan/coderdojo.jp/actions)
 
 一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。
 
