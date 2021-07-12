@@ -4564,3 +4564,21 @@
   event_id:
   participants: 1
   evented_at: 2021/05/02 10:30 #オンライン開催
+
+# 2021/06/01 - 2021/06/30
+- dojo_id: 25
+  event_id:
+  participants: 1
+  evented_at: 2021/06/13 10:00
+- dojo_id: 86
+  event_id:
+  participants: 3
+  evented_at: 2021/06/20 10:30
+- dojo_id: 94
+  event_id:
+  participants: 0
+  evented_at: 2021/06/20 10:00
+- dojo_id: 131
+  event_id:
+  participants: 2
+  evented_at: 2021/06/20 10:00
