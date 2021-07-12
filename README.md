@@ -85,6 +85,27 @@ Dockerを利用する場合は上記ツールをインストールする必要�
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
+### CI/Deploy 構成
+
+[coderdojo.jp](https://coderdojo.jp/)  は現在、次の構成でテスト・デプロイされています。
+
+- CI: [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions)
+- Deploy: Heroku + [Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)
+- 関連PR: [:octocat: replace travis with github actions and heroku integration](https://github.com/coderdojo-japan/coderdojo.jp/pull/1315)
+
+各コミットがpushされる度にCIが動ききます。本家ブランチにコミットされ、CIがpassすると、Heroku側でデプロイ前/デプロイ後の各種スクリプトが実行されます
+
+- デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
+- デプロイ後: [scripts/release.sh - coderdojo-japan/coderdojo.jp](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/scripts/release.sh)
+
+GitHub Actionsに `deploy` workflow を入れることもできましたが、次の２つを理由に分離しています。
+
+1. CIフローとDeployフローの責務を分離し、本番環境のログの機密性を高める
+   - 例: デプロイ関連のログは[Heroku Activity Logs](https://dashboard.heroku.com/apps/coderdojo-japan/activity)に集約させ、誰でもアクセスできる状態にしない
+2. [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)を使い、本番環境の安定性を高める
+   - 例: Herokuデプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
+
+
 ### Development with Scrivito
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
