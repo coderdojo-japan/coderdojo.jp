@@ -93,10 +93,11 @@ Dockerを利用する場合は上記ツールをインストールする必要�
 - Deploy: Heroku + [Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)
 - 関連PR: [:octocat: replace travis with github actions and heroku integration](https://github.com/coderdojo-japan/coderdojo.jp/pull/1315)
 
-各コミットがpushされる度にCIが動ききます。本家ブランチにコミットされ、CIがpassすると、Heroku側でデプロイ前/デプロイ後の各種スクリプトが実行されます
+各コミットがpushされる度にCIが動きます。本家ブランチにコミットされ、CIがpassすると、Heroku側でデプロイ前/デプロイ後の各種スクリプトが実行されます
 
+- テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/.github/workflows/test.yml)
 - デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
-- デプロイ後: [scripts/release.sh - coderdojo-japan/coderdojo.jp](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/scripts/release.sh)
+- デプロイ後: [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/scripts/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/Procfile)
 
 GitHub Actionsに `deploy` workflow を入れることもできましたが、次の２つを理由に分離しています。
 
