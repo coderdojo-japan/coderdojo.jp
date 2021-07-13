@@ -10,6 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
+      DATABASE_HOST: localhost
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: password
+      DATABASE_PORT: 5432
       TZ: Asia/Tokyo
       SCRIVITO_EMAIL: test@example.com
       SCRIVITO_PASSWORD: testpassword
