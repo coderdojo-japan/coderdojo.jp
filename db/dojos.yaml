@@ -2136,7 +2136,7 @@
   name: 柏原
   prefecture_id: 27
   logo: "/img/dojos/coderdojo.png"
-  url: https://www.coderdojo-kashiwara.com
+  url: https://www.coderdojo-fujiidera-kashiwara.com
   description: 柏原市で毎月1回開催
   tags:
   - Scratch
@@ -2186,7 +2186,7 @@
   name: 藤井寺
   prefecture_id: 27
   logo: "/img/dojos/coderdojo.png"
-  url: https://www.coderdojo-fujiidera.com
+  url: https://www.coderdojo-fujiidera-kashiwara.com
   description: 藤井寺市で毎月開催
   tags:
   - Scratch
