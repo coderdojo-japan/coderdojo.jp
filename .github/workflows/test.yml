@@ -15,10 +15,6 @@ jobs:
       DATABASE_PASSWORD: password
       DATABASE_PORT: 5432
       TZ: Asia/Tokyo
-      SCRIVITO_EMAIL: test@example.com
-      SCRIVITO_PASSWORD: testpassword
-      SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
-      SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
     services:
       db:
         image: postgres:10.4-alpine
@@ -42,6 +38,11 @@ jobs:
       - name: rspec with scrivito
         if: ${{ github.repository_owner == 'coderdojo-japan' }}
         run: bundle exec rails spec
+        env:
+          SCRIVITO_EMAIL: test@example.com
+          SCRIVITO_PASSWORD: testpassword
+          SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
+          SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
       - name: rspec without scrivito 
         if: ${{ github.repository_owner != 'coderdojo-japan' }}
         run: bundle exec rspec spec --tag ~@scrivito
