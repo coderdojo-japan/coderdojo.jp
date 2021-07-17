@@ -300,10 +300,14 @@
   name: connpass
   group_id: 3809
   url: https://coderdojokodaira-ninja.connpass.com/
-- dojo_id: 13
+- dojo_id: 13 #実態はGoogleフォームで管理
   name: connpass
   group_id: 11719
   url: https://coderdojo-jp-kodaira.connpass.com/
+- dojo_id: 13 #Googleフォームで管理しているものとは「別枠」（裾野拡大目的の企画モノ専用）
+  name: peatix
+  group_id: 
+  url: https://coderdojo-kodaira-study.peatix.com/
 
 - dojo_id: 14
   name: peatix
