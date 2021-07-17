@@ -36,7 +36,7 @@ jobs:
           bundle exec rails db:create
           bundle exec rails db:setup
       - name: rspec with scrivito
-        if: ${{ github.repository_owner == 'coderdojo-japan' }}
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: bundle exec rails spec
         env:
           SCRIVITO_EMAIL: test@example.com
@@ -44,5 +44,5 @@ jobs:
           SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
           SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
       - name: rspec without scrivito 
-        if: ${{ github.repository_owner != 'coderdojo-japan' }}
+        if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
         run: bundle exec rspec spec --tag ~@scrivito
