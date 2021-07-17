@@ -36,7 +36,10 @@ jobs:
           bundle exec rails db:create
           bundle exec rails db:setup
       - name: rspec with scrivito
-        if: ${{ github.repository_owner == 'coderdojo-japan' }}
+        if: |
+              github.event.comment.author_association == 'OWNER' ||
+              github.event.comment.author_association == 'MEMBER' ||
+              github.event.comment.author_association == 'COLLABORATOR'
         run: bundle exec rails spec
         env:
           SCRIVITO_EMAIL: test@example.com
@@ -44,5 +47,8 @@ jobs:
           SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
           SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
       - name: rspec without scrivito 
-        if: ${{ github.repository_owner != 'coderdojo-japan' }}
+        if: |
+              github.event.comment.author_association != 'OWNER' &&
+              github.event.comment.author_association != 'MEMBER' &&
+              github.event.comment.author_association != 'COLLABORATOR'
         run: bundle exec rspec spec --tag ~@scrivito
