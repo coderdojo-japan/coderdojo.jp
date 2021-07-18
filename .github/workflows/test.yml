@@ -42,10 +42,13 @@ jobs:
           echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
           echo "COMMIT_SHORT_SHA=$(git rev-parse --short=8 ${{ github.sha }})"     >> $GITHUB_ENV
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            message=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
-            echo "COMMIT_MESSAGE=$message"                                         >> $GITHUB_ENV
+            head_sha=$(git rev-parse --short=8 ${{ github.event.pull_request.head.sha }})
+            echo "COMMIT_MESSAGE=$(git log --format=%B -n 1 $head_sha)"            >> $GITHUB_ENV
+            echo "COMMIT_URL=${{ github.event.pull_request.html_url }}"            >> $GITHUB_ENV
           else
+            head_sha=$(git rev-parse --short=8 ${{ github.event.head_commit.sha }})
             echo "COMMIT_MESSAGE=${{ github.event.head_commit.message }}"          >> $GITHUB_ENV
+            echo "COMMIT_URL=https://github.com/${{ github.repository }}/commit/$head_sha" >> $GITHUB_ENV
           fi
         # NOTE: ${{ github.event.head_commit.message }} is empty string if Pull Request triggers Actions.
 
@@ -77,7 +80,7 @@ jobs:
           format: 'html'
           message: |
             <div>
-            CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-danger'>Failure</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
+            CI build for <a href='${{ env.COMMIT_URL }}'>${{ github.repository }}</a> : <span class='label label-danger'>Failure</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
             <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ env.COMMIT_MESSAGE }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
             </div>
 
@@ -91,6 +94,6 @@ jobs:
           format: 'html'
           message: |
             <div>
-            CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-success'>Success</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
+            CI build for <a href='${{ env.COMMIT_URL }}'>${{ github.repository }}</a> : <span class='label label-success'>Success</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
             <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ env.COMMIT_MESSAGE }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
             </div>
