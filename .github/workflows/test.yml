@@ -15,6 +15,7 @@ jobs:
       DATABASE_PASSWORD: password
       DATABASE_PORT: 5432
       TZ: Asia/Tokyo
+      COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
 
     services:
       db:
@@ -40,9 +41,6 @@ jobs:
         run: |
           echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
           echo "COMMIT_SHORT_SHA=$(git rev-parse --short=8 ${{ github.sha }})"     >> $GITHUB_ENV
-          echo "COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s')"                 >> $GITHUB_ENV
-        # NOTE: ${{ github.event.head_commit.message }} can be empty string in Pull Request.
-        # https://github.community/t/accessing-commit-message-in-pull-request-event/17158
 
       - name: 🧪 Prepare DB
         run: |
