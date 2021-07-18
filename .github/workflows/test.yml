@@ -70,7 +70,7 @@ jobs:
           message: |
             <div>
             CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-danger'>Failure</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
-            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.head_commit.message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
+            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.commits[0].message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
             </div>
 
       - name: 🆗 Notify results (Success)
@@ -84,5 +84,5 @@ jobs:
           message: |
             <div>
             CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-success'>Success</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
-            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.head_commit.message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
+            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.commits[0].message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
             </div>
