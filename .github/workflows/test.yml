@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - "*"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,7 +16,6 @@ jobs:
       DATABASE_PASSWORD: password
       DATABASE_PORT: 5432
       TZ: Asia/Tokyo
-      COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
 
     services:
       db:
@@ -41,6 +41,14 @@ jobs:
         run: |
           echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
           echo "COMMIT_SHORT_SHA=$(git rev-parse --short=8 ${{ github.sha }})"     >> $GITHUB_ENV
+          if [ -n "${{ github.event.head_commit.message }}" ]; then
+            echo "COMMIT_MESSAGE=${{ github.event.head_commit.message }}"          >> $GITHUB_ENV
+          else
+            message=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
+            echo "COMMIT_MESSAGE=$message"                                         >> $GITHUB_ENV
+          fi
+        # NOTE: ${{ github.event.head_commit.message }} is empty string if Pull Request triggers Actions.
+        # https://zenn.dev/kafumi/articles/792af80a638012
 
       - name: 🧪 Prepare DB
         run: |
