@@ -37,27 +37,6 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: 👤 Get commit info for notification
-        run: |
-          echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            head_sha=$(git rev-parse --short=8 ${{ github.event.pull_request.head.sha }})
-            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
-            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
-            echo "$(git log --format=%B -n 1 $head_sha)"   >> $GITHUB_ENV
-            echo "EOF"                                     >> $GITHUB_ENV
-            echo "COMMIT_URL=${{ github.event.pull_request.html_url }}"   >> $GITHUB_ENV
-            echo "COMMIT_LINK=${{github.repository}}#${{github.event.pull_request.number}}" >> $GITHUB_ENV
-          else
-            head_sha=$(git rev-parse --short=8 ${{ github.sha }})
-            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
-            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
-            echo "${{ github.event.head_commit.message }}" >> $GITHUB_ENV
-            echo "EOF"                                     >> $GITHUB_ENV
-            echo "COMMIT_URL=https://github.com/${{github.repository}}/commit/$head_sha" >> $GITHUB_ENV
-            echo "COMMIT_LINK=${{ github.repository }}#$head_sha"                        >> $GITHUB_ENV
-          fi
-
       - name: 🧪 Prepare DB
         run: |
           bundle exec rails db:create
@@ -76,30 +55,45 @@ jobs:
         if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
         run: bundle exec rspec spec --tag ~@scrivito
 
-      - name: 🆖 Notify results (Failed)
-        env:
-          IDOBATA_SECRETS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
-        if:   failure() && (env.IDOBATA_SECRETS != null)
-        uses: mahaker/actions-idobata@v1.1.1
-        with:
-          hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
-          format: 'html'
-          message: |
-            <div>
-            CI build for <a href='${{ env.COMMIT_URL }}'>${{ env.COMMIT_LINK }}</a> : <span class='label label-danger'>Failure</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
-            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ env.COMMIT_MESSAGE }} (<a href='https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }}'>${{ env.COMMIT_SHA }}</a>)
-            </div>
+      - name: 👤 Set env vars for notification
+        if:   always()
+        run: |
+          echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
+          if [ "${{ job.status }}" = "success" ]; then
+            echo "STATUS_LABEL=success" >> $GITHUB_ENV
+            echo "STATUS_TEXT=Success"  >> $GITHUB_ENV
+          else
+            echo "STATUS_LABEL=danger"  >> $GITHUB_ENV
+            echo "STATUS_TEXT=Failure"  >> $GITHUB_ENV
+          fi
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            head_sha=$(git rev-parse --short=8 ${{ github.event.pull_request.head.sha }})
+            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
+            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
+            echo "$(git log --format=%B -n 1 $head_sha)"   >> $GITHUB_ENV
+            echo "EOF"                                     >> $GITHUB_ENV
+            echo "COMMIT_URL=${{ github.event.pull_request.html_url }}"   >> $GITHUB_ENV
+            echo "COMMIT_LINK=${{github.repository}}#${{github.event.pull_request.number}}" >> $GITHUB_ENV
+          else
+            head_sha=$(git rev-parse --short=8 ${{ github.sha }})
+            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
+            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
+            echo "${{ github.event.head_commit.message }}" >> $GITHUB_ENV
+            echo "EOF"                                     >> $GITHUB_ENV
+            echo "COMMIT_URL=https://github.com/${{github.repository}}/commit/$head_sha" >> $GITHUB_ENV
+            echo "COMMIT_LINK=${{ github.repository }}#$head_sha"                        >> $GITHUB_ENV
+          fi
 
-      - name: 🆗 Notify results (Success)
+      - name: 🔔 Notify results
         env:
           IDOBATA_SECRETS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
-        if:   success() && (env.IDOBATA_SECRETS != null)
+        if:   always() && (env.IDOBATA_SECRETS != null)
         uses: mahaker/actions-idobata@v1.1.1
         with:
           hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
           format: 'html'
           message: |
             <div>
-            CI build for <a href='${{ env.COMMIT_URL }}'>${{ env.COMMIT_LINK }}</a> : <span class='label label-success'>Success</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
-            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ env.COMMIT_MESSAGE }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHA }}</a>)
+            CI build for <a href='${{ env.COMMIT_URL }}'>${{ env.COMMIT_LINK }}</a> : <span class='label label-${{ env.STATUS_LABEL }}'>${{ env.STATUS_TEXT }}</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
+            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ env.COMMIT_MESSAGE }} (<a href='https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }}'>${{ env.COMMIT_SHA }}</a>)
             </div>
