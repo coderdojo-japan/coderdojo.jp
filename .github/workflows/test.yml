@@ -30,7 +30,7 @@ jobs:
       - name: ☑️ Checkout code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 10
+          fetch-depth: 2
 
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -47,7 +47,6 @@ jobs:
             message=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
             echo "COMMIT_MESSAGE=$message"                                         >> $GITHUB_ENV
           fi
-          echo  "$message"
         # NOTE: ${{ github.event.head_commit.message }} is empty string if Pull Request triggers Actions.
 
       - name: 🧪 Prepare DB
