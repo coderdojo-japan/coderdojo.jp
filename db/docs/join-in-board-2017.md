@@ -19,7 +19,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 
 - **(1) 日本国内の「CoderDojo」の設立及び運営の支援**
    - 内容: [CoderDojo Japan](/) および [CoderDojo Kata](/kata) の運営・コンテンツ更新をします
-   - 実績: 各Dojo情報の掲載、運営ノウハウのKataへの記載など ([コミットログ詳細](https://github.com/coderdojo-japan/coderdojo.jp/commits/master))<br><br>
+   - 実績: 各Dojo情報の掲載、運営ノウハウのKataへの記載など ([コミットログ詳細](https://github.com/coderdojo-japan/coderdojo.jp/commits/main))<br><br>
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
    - 内容: メールなどの問い合わせ対応または理事として主体的な営業・交渉をします
    - 実績: [SoftBank](https://www.softbank.jp/corp/csr/next_generation/pepper/social/)、[ソーテック社](http://www.sotechsha.co.jp/sp/1151/)、[さくらインターネット](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/)、[各種スポンサー](/#sponsors)との提携など<br><br>

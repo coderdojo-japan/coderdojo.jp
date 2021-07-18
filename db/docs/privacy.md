@@ -52,7 +52,7 @@
 
 ## プライバシーポリシーの変更
 
-収集する個人情報の変更、利用目的の変更、またはその他プライバシーポリシーの変更を行う際は、当ページでの変更を持って公表とさせていただきます。プライバシーポリシーの変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/master/db/docs/privacy.md) よりご確認することができます。
+収集する個人情報の変更、利用目的の変更、またはその他プライバシーポリシーの変更を行う際は、当ページでの変更を持って公表とさせていただきます。プライバシーポリシーの変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/privacy.md) よりご確認することができます。
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>

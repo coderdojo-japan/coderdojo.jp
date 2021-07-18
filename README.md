@@ -1,4 +1,4 @@
-[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/master/public/cover_rounded.png)](https://coderdojo.jp/)
+[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/cover_rounded.png)](https://coderdojo.jp/)
 
 # CoderDojo Japan
 
@@ -25,7 +25,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 
 Dojo 情報は次の手順で簡単に更新できます。
 
-1. [db/dojos.yaml](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/db/dojos.yaml) を開く
+1. [db/dojos.yaml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) を開く
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
 3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
 4. 修正内容を確認し、問題なければ Create pull request をクリックする
@@ -33,7 +33,7 @@ Dojo 情報は次の手順で簡単に更新できます。
 
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください ;)
 
-https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
+https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
 ## 2. CoderDojo Kata の執筆・編集
 
@@ -95,9 +95,9 @@ Dockerを利用する場合は上記ツールをインストールする必要�
 
 各コミットがpushされる度にCIが動きます。本家ブランチにコミットされ、CIがpassすると、Heroku側でデプロイ前/デプロイ後の各種スクリプトが実行されます
 
-- テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/.github/workflows/test.yml)
+- テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/.github/workflows/test.yml)
 - デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
-- デプロイ後: [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/scripts/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/Procfile)
+- デプロイ後: [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/Procfile)
 
 GitHub Actionsに `deploy` workflow を入れることもできましたが、次の２つを理由に分離しています。
 
@@ -121,10 +121,10 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ## 他、開発に関する資料
 
-開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/master/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
+開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
 - [DojoCast を Jekyll から Rails に移行しました](https://yasslab.jp/ja/posts/migrate-dojocast-from-jekyll-to-rails)
-- [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/docs/how-to-add-dojo.md)
+- [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how-to-add-dojo.md)
 - [子どものためのプログラミング道場『CoderDojo』の Ruby/Rails 活用事例](https://speakerdeck.com/yasulab/case-study-of-how-coderdojo-japan-uses-ruby)
 - [CoderDojo を支える Rails CMS の活用事例 - Speaker Deck](https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo)
 - [2020年 coderdojo.jp 開発ふりかえり](https://note.com/yasslab/n/nb42fb058d4a0?magazine_key=m7ed183f728c3)

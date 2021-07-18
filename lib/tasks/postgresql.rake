@@ -1,5 +1,5 @@
 namespace :postgresql do
-  # https://github.com/coderdojo-japan/coderdojo.jp/blob/master/docs/how-to-update-db-id.md
+  # https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how_to_update_db_id.md
   # https://github.com/rails/rails/blob/ec8697bf0bfafff7d897fb50e322afe42ddc1623/activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb#L289-L315
   desc '全てのテーブルのsequenceを既存のidの最大値に設定しなおす'
   task reset_pk_sequence: :environment do
