@@ -30,7 +30,7 @@ jobs:
       - name: ☑️ Checkout code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 1
+          fetch-depth: 10
 
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -44,7 +44,8 @@ jobs:
           if [ -n "${{ github.event.head_commit.message }}" ]; then
             echo "COMMIT_MESSAGE=${{ github.event.head_commit.message }}"          >> $GITHUB_ENV
           else
-            echo "COMMIT_MESSAGE=$(git log --format=%B -n 1 ${{ github.event.after }})" >> $GITHUB_ENV
+            message=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
+            echo "COMMIT_MESSAGE=$message"                                         >> $GITHUB_ENV
           fi
           echo  "$message"
         # NOTE: ${{ github.event.head_commit.message }} is empty string if Pull Request triggers Actions.
