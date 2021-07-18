@@ -47,8 +47,8 @@ jobs:
             message=$(git log --format=%B -n 1 ${{ github.event.pull_request.head.sha }})
             echo "COMMIT_MESSAGE=$message"                                         >> $GITHUB_ENV
           fi
+          echo  "$message"
         # NOTE: ${{ github.event.head_commit.message }} is empty string if Pull Request triggers Actions.
-        # https://zenn.dev/kafumi/articles/792af80a638012
 
       - name: 🧪 Prepare DB
         run: |
