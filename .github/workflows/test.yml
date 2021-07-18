@@ -15,6 +15,7 @@ jobs:
       DATABASE_PASSWORD: password
       DATABASE_PORT: 5432
       TZ: Asia/Tokyo
+
     services:
       db:
         image: postgres:10.4-alpine
@@ -23,19 +24,29 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
+
     steps:
-      - uses: actions/checkout@v2
+      - name: ☑️ Checkout code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: ruby/setup-ruby@v1
+
+      - name: 💎 Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.3
           bundler-cache: true
-      - name: prepare db
+
+      - name: 👤 Get commit info for notification
+        run: |
+          echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
+          echo "COMMIT_SHORT_SHA=$(git rev-parse --short=8 ${{ github.sha }})"     >> $GITHUB_ENV
+
+      - name: 🧪 Prepare DB
         run: |
           bundle exec rails db:create
           bundle exec rails db:setup
-      - name: rspec with scrivito
+
+      - name: 🔧 Test with Scrivito
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: bundle exec rails spec
         env:
@@ -43,6 +54,35 @@ jobs:
           SCRIVITO_PASSWORD: testpassword
           SCRIVITO_TENANT: ${{ secrets.SCRIVITO_TENANT }}
           SCRIVITO_API_KEY: ${{ secrets.SCRIVITO_API_KEY }}
-      - name: rspec without scrivito 
+
+      - name: 🔧 Test without Scrivito
         if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
         run: bundle exec rspec spec --tag ~@scrivito
+
+      - name: 🆖 Notify results (Failed)
+        env:
+          IDOBATA_SECRETS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+        if:   failure() && (env.IDOBATA_SECRETS != null)
+        uses: mahaker/actions-idobata@v1.1.1
+        with:
+          hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+          format: 'html'
+          message: |
+            <div>
+            CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-danger'>Failure</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
+            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.head_commit.message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
+            </div>
+
+      - name: 🆗 Notify results (Success)
+        env:
+          IDOBATA_SECRETS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+        if:   success() && (env.IDOBATA_SECRETS != null)
+        uses: mahaker/actions-idobata@v1.1.1
+        with:
+          hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+          format: 'html'
+          message: |
+            <div>
+            CI build for <a href='https://github.com/${{ github.repository }}'>${{ github.repository }}</a> : <span class='label label-success'>Success</span> (<a href='https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'>GitHub Actions</a>)<br>
+            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> <a href='https://github.com/${{ env.COMMIT_ACTOR }}'>${{ env.COMMIT_ACTOR }}</a>: ${{ github.event.head_commit.message }} (<a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>${{ env.COMMIT_SHORT_SHA }}</a>)
+            </div>
