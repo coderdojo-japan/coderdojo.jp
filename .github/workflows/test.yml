@@ -47,7 +47,7 @@ jobs:
             echo "COMMIT_URL=${{ github.event.pull_request.html_url }}"            >> $GITHUB_ENV
             echo "COMMIT_LINK=${{github.repository}}#${{github.event.pull_request.number}}" >> $GITHUB_ENV
           else
-            head_sha=$(git rev-parse --short=8 ${{ github.event.head_commit.sha }})
+            head_sha=$(git rev-parse --short=8 ${{ github.sha }})
             echo "COMMIT_MESSAGE=${{ github.event.head_commit.message }}"          >> $GITHUB_ENV
             echo "COMMIT_URL=https://github.com/${{ github.repository }}/commit/$head_sha" >> $GITHUB_ENV
             echo "COMMIT_LINK=${{ github.repository }}#$head_sha"                          >> $GITHUB_ENV
