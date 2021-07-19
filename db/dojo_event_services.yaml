@@ -1,9 +1,5 @@
-# 藤井寺・柏原
-- dojo_id: 272
-  name: doorkeeper
-  group_id: 11663
-  url: https://coderdojo-fujiidera.doorkeeper.jp/
-- dojo_id: 272
+# 柏原
+- dojo_id: 271
   name: doorkeeper
   group_id: 11894
   url: https://coderdojo-kashiwara.doorkeeper.jp/
@@ -47,6 +43,12 @@
   name: doorkeeper
   group_id: 11610
   url: https://coderdojo-hachinohe.doorkeeper.jp/
+
+# 藤井寺
+- dojo_id: 264
+  name: doorkeeper
+  group_id: 11663
+  url: https://coderdojo-fujiidera.doorkeeper.jp/
 
 # 浦和@Urawa Minecraft Club
 - dojo_id: 263
