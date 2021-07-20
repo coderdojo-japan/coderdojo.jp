@@ -93,5 +93,4 @@ jobs:
           hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
           format: 'markdown'
           message: |
-            CI build for [${{ env.COMMIT_LINK }}](${{ env.COMMIT_URL }}) : <span class='label label-${{ env.STATUS_LABEL }}'>${{ env.STATUS_TEXT }}</span> ([GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}))<br>
-            <img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> [${{ env.COMMIT_ACTOR }}](https://github.com/${{ env.COMMIT_ACTOR }}): ${{ env.COMMIT_MESSAGE }} ([${{ env.COMMIT_SHA }}](https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }}))
+            CI build for [${{ env.COMMIT_LINK }}](${{ env.COMMIT_URL }}) : <span class='label label-${{ env.STATUS_LABEL }}'>${{ env.STATUS_TEXT }}</span> ([GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}))<br><img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> [${{ env.COMMIT_ACTOR }}](https://github.com/${{ env.COMMIT_ACTOR }}): ${{ env.COMMIT_MESSAGE }} ([${{ env.COMMIT_SHA }}](https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }}))
