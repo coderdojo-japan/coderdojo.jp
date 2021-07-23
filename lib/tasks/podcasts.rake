@@ -11,8 +11,9 @@ namespace :podcasts do
     logger.info('==== START podcasts:upsert ====')
 
     SOUNDCLOUD_RSS = Rails.env.test? ?
-      'soundcloud_sample.rss' :
-      'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
+      'anchorfm_sample.rss' :
+      'https://anchor.fm/s/54d501e8/podcast/rss'
+      #'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
     rss = RSS::Parser.parse(SOUNDCLOUD_RSS, false)
 
     if rss.items.length.zero?
@@ -22,8 +23,8 @@ namespace :podcasts do
 
     Podcast.transaction do
       rss.items.each_with_index do |item, index|
-        track_id = item.guid.content.split('/').last.to_i
-        episode  = Podcast.find_by(track_id: track_id) || Podcast.new(track_id: track_id)
+        track_id = item.guid.content.split('-').last.to_i
+        episode  = Podcast.find_by(id: track_id) || Podcast.new(id: track_id)
 
         episode.new_record? ?
           logger.info("Creating: #{item.title   }") :
