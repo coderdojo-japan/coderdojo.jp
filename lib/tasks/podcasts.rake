@@ -13,7 +13,6 @@ namespace :podcasts do
     SOUNDCLOUD_RSS = Rails.env.test? ?
       'anchorfm_sample.rss' :
       'https://anchor.fm/s/54d501e8/podcast/rss'
-      #'https://feeds.soundcloud.com/users/soundcloud:users:626746926/sounds.rss'
     rss = RSS::Parser.parse(SOUNDCLOUD_RSS, false)
 
     if rss.items.length.zero?
