@@ -6,9 +6,9 @@ DojoCast に新しい Podcast を追加する方法 (2020/07/26現在)
 
 1. **mp3 データを準備する**
    - :scroll: 収録方法: [:tv: StreamYard で同時ライブ配信をカンタンに (実例解説付き)](https://note.com/yasulab/n/n9bfdd69a6b01)
-2. **収録した音声ファイルを編集し、SoundCloud にアップロードする**
-   - :notes: アップロード先: [https://soundcloud.com/coderdojo-japan/](https://soundcloud.com/coderdojo-japan/)
-3. **Rake タスクを実行し、Podcasts テーブルに SoundCloud のトラックデータを取り込む**
+2. **収録した音声ファイルを編集し、Anchor.fm にアップロードする**
+   - :notes: アップロード先: [https://anchor.fm/coderdojo-japan](https://anchor.fm/coderdojo-japan)
+3. **Rake タスクを実行し、Podcasts テーブルに Anchor.fm のトラックデータを取り込む**
 
    ```
    $ bundle exec rake podcasts:upsert
