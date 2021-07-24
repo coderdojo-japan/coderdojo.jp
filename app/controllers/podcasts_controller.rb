@@ -1,15 +1,15 @@
 class PodcastsController < ApplicationController
   def index
-    @title           = 'DojoCast'
-    @description     = 'CoderDojo に関わる人々をハイライトする Podcast 📻✨'
-    @episodes        = Podcast.order(:published_date).reverse
-    @url             = request.url
+    @title         = 'DojoCast'
+    @description   = 'CoderDojo に関わる人々をハイライトする Podcast 📻✨'
+    @episodes      = Podcast.order(:published_date).reverse
+    @url           = request.url
 
     # GET /podcasts.rss
-    @art_work_url    = "https://coderdojo.jp/podcasts/cover.jpg"
-    @author          = "一般社団法人 CoderDojo Japan"
-    @copyright       = "Copyright © 2012-#{Time.current.year} #{@author}"
-    @soundcloud_user = 'coderdojo-japan'
+    @art_work_url  = "https://coderdojo.jp/podcasts/cover.jpg"
+    @author        = "一般社団法人 CoderDojo Japan"
+    @copyright     = "Copyright © 2012-#{Time.current.year} #{@author}"
+    @anchorfm_user = 'coderdojo-japan'
 
     respond_to do |format|
       format.html

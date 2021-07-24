@@ -1,7 +1,7 @@
 require 'rss'
 
 namespace :podcasts do
-  desc 'SoundCloud から Podcast データ情報を取得して登録'
+  desc 'Anchor.fm から Podcast データ情報を取得して登録'
   task upsert: :environment do
     user_id     = '626746926'
     logger      = ActiveSupport::Logger.new('log/podcasts.log')
@@ -10,10 +10,10 @@ namespace :podcasts do
 
     logger.info('==== START podcasts:upsert ====')
 
-    SOUNDCLOUD_RSS = Rails.env.test? ?
+    ANCHOR_FM_RSS = Rails.env.test? ?
       'anchorfm_sample.rss' :
       'https://anchor.fm/s/54d501e8/podcast/rss'
-    rss = RSS::Parser.parse(SOUNDCLOUD_RSS, false)
+    rss = RSS::Parser.parse(ANCHOR_FM_RSS, false)
 
     if rss.items.length.zero?
       logger.info('No track exists. Maybe failed to set RSS URL?')
@@ -22,23 +22,25 @@ namespace :podcasts do
 
     Podcast.transaction do
       rss.items.each_with_index do |item, index|
-        track_id = item.guid.content.split('-').last.to_i
-        episode  = Podcast.find_by(id: track_id) || Podcast.new(id: track_id)
+        episode_id = item.title.split('-').first.to_i
+        raise StandardError.new("ID 取得に失敗しました。") if episode_id.zero?
 
+        episode = Podcast.find_by(id: episode_id) || Podcast.new(id: episode_id)
         episode.new_record? ?
           logger.info("Creating: #{item.title   }") :
           logger.info("Updating: #{episode.title}")
 
         params = {
-            title:          item.title,
-            description:    item.description,
-            content_size:   item.enclosure.length,
-            duration:       item.itunes_duration.content,
-            permalink:      item.link.split('/').last,
-            permalink_url:  item.link,
-            published_date: item.pubDate.to_date,
+          title:          item.title,
+          description:    item.description,
+          content_size:   item.enclosure.length,
+          duration:       item.itunes_duration.content,
+          permalink:      item.link.split('/').last,
+          permalink_url:  item.link,
+          enclosure_url:  item.enclosure.url,
+          published_date: item.pubDate.to_date,
         }
-        params[:id] = item.title.split('-').first.to_i if episode.new_record?
+        params[:id] = episode_id if episode.new_record?
 
         episode.update!(params)
       end
