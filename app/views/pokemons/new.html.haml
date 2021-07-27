@@ -20,16 +20,16 @@
     = form_with url: pokemon_path, class: 'form' do |f|
       .field
         = f.label       :email, "メールアドレス"
-        = f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field"
+        = f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: example@gmail.com'
       .field
         = f.label      :parent_name, "保護者の名前"
-        = f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field"
+        = f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場'
       .field
         = f.label      :participant_name, "参加者の名前"
-        = f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field"
+        = f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
       .field
         = f.label      :dojo_name, "道場名"
-        = f.text_field :dojo_name, autofocus: true, required: true, class: "form__field"
+        = f.text_field :dojo_name, autofocus: true, required: true, class: "form__field", placeholder: '例: CoderDojo 柏'
       .form__terms
         %h2.form__h2 ポケモン素材の利用規約
         %p
