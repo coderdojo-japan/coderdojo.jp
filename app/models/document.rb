@@ -67,6 +67,9 @@ class Document
   def description
     @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip : ''
   end
+  def description=(text)
+    @desc  ||= text
+  end
 
   def content
     @content ||= exists? ? File.read(path) : ''
