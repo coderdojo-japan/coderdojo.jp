@@ -78,9 +78,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
 ### Dockerを利用したセットアップ方法
 
-Dockerを利用する場合は上記ツールをインストールする必要はありません。
-
-その代わり、Dockerをインストールする必要があります。
+Dockerを利用する場合は上記ツールをインストールする必要はありません。その代わり、Dockerをインストールする必要があります。
 
 - [Docker](https://www.docker.com/community-edition)
 
@@ -145,8 +143,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ### API (開発中)
 
-現在提供中の API です。今後仕様が変更される可能性もあるため、    
-本番環境で利用したい場合は yohei@coderdojo.jp までご連絡ください
+現在提供中の API です。今後仕様が変更される可能性もあるため、本番環境で利用したい場合は yohei@coderdojo.jp までご連絡ください! 📮
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
 - Sitemap XML: https://coderdojo.jp/sitemap.xml
