@@ -65,7 +65,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 - [Ruby on Rails](http://rubyonrails.org/)
 - [PostgreSQL](https://www.postgresql.jp/)
 - [Scrivito](https://scrivito.com/) (Kataページ開発時に必要)
-  - *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*
+  - (:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
 
 
 ### セットアップ方法
@@ -115,7 +115,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 
 ### Development with Scrivito
 
-*NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*
+(:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
 
 Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
 
