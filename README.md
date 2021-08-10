@@ -67,8 +67,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 - [Scrivito](https://scrivito.com/) (Kataページ開発時に必要)
   - (:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
 
-
-### セットアップ方法
+セットアップ方法の方法は次の通りです。
 
 1. 本リポジトリを fork 後、clone します
 1. ターミナルから `$ bin/setup` を実行します
@@ -76,11 +75,9 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-### Dockerを利用したセットアップ方法
+### Docker を利用したセットアップ方法
 
-Dockerを利用する場合は上記ツールをインストールする必要はありません。その代わり、Dockerをインストールする必要があります。
-
-- [Docker](https://www.docker.com/community-edition)
+上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
 
 1. 本リポジトリを fork 後、clone します
 1. `.env.sample` をコピーして `.env` にリネームします
