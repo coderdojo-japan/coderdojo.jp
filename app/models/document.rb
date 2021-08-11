@@ -61,11 +61,13 @@ class Document
   end
 
   def title
-    @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
+    return '' unless self.exists?
+    @title ||= self.content.lines.first[2..-1].strip.gsub('<br>', '')
   end
 
   def description
-    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip : ''
+    return '' unless self.exists?
+    @desc  ||= self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip
   end
   def description=(text)
     @desc  ||= text
