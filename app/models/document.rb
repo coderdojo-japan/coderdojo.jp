@@ -67,7 +67,9 @@ class Document
 
   def description
     return '' unless self.exists?
-    @desc  ||= self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip
+    @desc ||= Kramdown::Document.new(
+                                 self.get_second_paragraph,
+                                 input: 'GFM').to_html
   end
   def description=(text)
     @desc  ||= text
@@ -75,5 +77,11 @@ class Document
 
   def content
     @content ||= exists? ? File.read(path) : ''
+  end
+
+  private
+
+  def get_second_paragraph
+    self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip
   end
 end

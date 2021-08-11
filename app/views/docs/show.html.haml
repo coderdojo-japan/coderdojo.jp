@@ -1,6 +1,6 @@
-- provide(:title, @doc.title)
-- provide(:desc,  @doc.description)
-- provide(:url,   @url)
+- provide :title, @doc.title
+- provide :desc,  strip_tags(@doc.description)
+- provide :url,   @url
 .container{:style => "line-height: 1.9em;"}
   %section.doc{:style => "padding: 50px 0px 100px 0px;"}
     = raw @content
