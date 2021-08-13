@@ -86,6 +86,16 @@ info@coderdojo.jp
 [https://coderdojo.jp/stats](https://coderdojo.jp/stats)
 <br>
 
+### Q. CoderDojo Japan の Facebook グループでイベントを紹介できますか？
+はい、上記 `B:` に記載されている通り、パートナー法人の方に限りイベントや製品に関する投稿ができます。投稿される場合は info@coderdojo.jp までお気軽にご相談ください。
+
+- 📮 パートナー法人による、Facebook グループへの投稿例
+  - 例1: [未踏社団から、未踏ジュニア最終成果報告会のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/1821539831292741)
+  - 例2: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
+  - 例3: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
+
+<br>
+
 ### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか?
 はい、一般社団法人 CoderDojo Japan の決算書も公開しています。こちらもご参考になれば ;)
 
