@@ -46,10 +46,9 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
   - 製品やサービスの継続的な提供もご相談可能です
     例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/) <br><br>
 - `B:` CoderDojo Japan が運営する SNS や Podcast で貴社のプロダクト・イベントなどを周知できます (事前審査あり、周知回数は応相談)
-  - 例1: CoderDojo Japan の Facebook Group で周知
-    [[PR] 年齢の近い未踏ジュニアクリエータの活躍を Dojo で見にきませんか?](https://www.facebook.com/groups/coderdojo.jp/permalink/1423117721134956/)
-  - 例2: CoderDojo Japan の Podcast で出演
-    [[PR] 未来にコミットしたい - Podcasting with CASE Shinjuku](http://dojocast.coderdojo.jp/8/) <br><br>
+  - 例1: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
+  - 例2: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
+  - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](https://coderdojo.jp/podcasts/23) <br><br>
 - `C:` CoderDojo Japan のパートナーとして、公式Webサイトに貴社ロゴを掲載します
 
 <img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
