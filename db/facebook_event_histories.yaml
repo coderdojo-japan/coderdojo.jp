@@ -4594,8 +4594,8 @@
   evented_at: 2021/07/17 18:30
 - dojo_id: 83
   event_id:
-  participants: 2021/07/03 18:00 #オンライン開催
-  evented_at: 2
+  participants: 2
+  evented_at: 2021/07/03 18:00 #オンライン開催
 - dojo_id: 131
   event_id:
   participants: 0
