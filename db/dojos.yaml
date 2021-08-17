@@ -1634,8 +1634,8 @@
   name: 三島・沼津
   prefecture_id: 22
   logo: "/img/dojos/mishima-numazu.png"
-  url: https://coderdojo-mn.org/
-  description: 国立沼津高専で隔月開催
+  url: https://coderdojo-mn.com/
+  description: 静岡県立工科短期大学校で隔月開催
   tags:
   - Scratch
   - Viscuit
