@@ -52,6 +52,8 @@ Rails.application.routes.draw do
   get  "/pokemon"          => "pokemons#new"
   post "/pokemon"          => "pokemons#create"
   get  "/pokemon/download" => "pokemons#show"
+  get  "/pokemon/workshop" => "pokemons#workshop"
+
   # TODO: Need to investigate why the following code calls Scrivito.
   #       Hotfix with the code above that works correctly.
   #resources :stats,  only: %i(show)

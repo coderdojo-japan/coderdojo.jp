@@ -1,0 +1,36 @@
+- provide(:title, '『プログラミングでポケモンをうごかしてみよう』のワークショップ事例')
+- provide(:desc,  '『プログラミングでポケモンをうごかしてみよう』のワークショップ事例を掲載しています。ワークショップの開催を予定している CoderDojo 関係者のご参考になれば幸いです。')
+- provide(:url,   '/pokemon' )
+- provide(:meta_image,  'https://i.gyazo.com/811c10c67aa6187783f2fca21acbb427.png')
+
+.container
+  %section.introduction{style: "padding: 50px 0px;"}
+    %div.text-center
+      %h1{style: "line-height: 1.4em;"}
+        ポケモンワークショップの
+        %br.ignore-pc>/
+        事例紹介
+      %img.lazyload{loading: "lazy", src: "https://i.gyazo.com/073de074fdd294e5a7a1059c02c09fe3.png", style: "padding-bottom: 50px; border-radius: 4px;"}/
+
+    %p{style: "padding-bottom: 20px;" } 『プログラミングでポケモンをうごかしてみよう』のワークショップ事例を掲載しています。ワークショップの開催を予定している CoderDojo 関係者のご参考になれば幸いです。
+      
+    %iframe{width: "697", height: "392", src: "https://www.youtube.com/embed/Wr-z-QE-k8s", title:"YouTube video player", frameborder: "0", allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "1"}
+
+    %h3#references{style: "padding-top: 50px;"} 📚 関連リンク
+    %ul
+      %li
+        %a{href: "https://prtimes.jp/main/html/rd/p/000000003.000038935.html"} プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に - PR TIMES
+      %li
+        %a{href: "https://withyou.pokemon.co.jp/news/5/"} 全国のCoderDojoでプログラミングワークショップが実施可能に | POKÉMON with YOU - ポケモンはいつもキミといっしょ -
+      %li
+        %a{href: "https://takadanobaba.keizai.biz/headline/656/"} プログラミングでポケモンを動かすワークショップ、全国のコーダー道場で実現 - 高田馬場経済新聞
+
+    %p.pokemon-notes
+      Scratch（スクラッチ）は、Scratch財団がMITメディアラボのライフロング・キンダーガーテン・グループの協力により開発しているプロジェクトです。
+      %a{href: "https://scratch.mit.edu", rel: "noopener", target: "_blank"}<> https://scratch.mit.edu
+      \ から自由に入手できます。
+      %br
+      %br
+      ©2021 Pokémon. ©1995-2021 Nintendo/Creatures Inc./GAME FREAK inc.
+      %br
+      ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの登録商標です。

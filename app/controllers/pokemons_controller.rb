@@ -6,6 +6,9 @@ class PokemonsController < ApplicationController
   # GET /pokemon
   def new; end
 
+  # GET /pokemon/workshop
+  def workshop; end
+
   # POST /pokemon
   def create
     pokemon = Pokemon.create(
