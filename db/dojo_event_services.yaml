@@ -1,8 +1,8 @@
 # 春日
-# - dojo_id: 73
-#   name: facebook #イベントページなし
-#   group_id:
-#   url: https://www.facebook.com/CoderDojo-%E6%98%A5%E6%97%A5Kasuga-104395465285317
+- dojo_id: 73
+  name: connpass
+  group_id: 11819
+  url: https://coderdojo-kasuga.connpass.com/
 
 # 柏原
 - dojo_id: 271
