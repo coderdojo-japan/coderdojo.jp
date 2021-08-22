@@ -12,7 +12,7 @@ CoderDojo については下記スライドにまとめられております。�
 
 <div class='text-center' style='margin-bottom: 50px;'>
   <div class='home-point-slides'>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/embed?start=false&loop=false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="595" height="350"></iframe>
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfSoYY3Iw6o0DL4Ki6-JNhgIOb61pktNZMRAYQZ4QdvORYb5ryBmOshmoDwe6M1BA8O-_-dzXOTReP/embed?start=false&loop=false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="595" height="350"></iframe>
   </div>
 </div>
 
