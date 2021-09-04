@@ -24,6 +24,7 @@
       - @pokemon_events.each do |event|
         %a{href: "#{event.event_url}", target: "_blank", rel: "external noopener"}
           %small #{event.event_at.strftime('%-m月%d日 %H:%M〜')} @ #{event.dojo_event_service.dojo.name}
+        %br
 
   = render partial: 'upcoming_events', locals: { upcoming_events: @upcoming_events }
 
