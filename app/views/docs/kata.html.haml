@@ -1,0 +1,27 @@
+- provide(:meta_image,  "/img/ogp-kata.jpeg")
+
+%body
+  / Set your background image for this header on the line below.
+  %header.kata-header{class: 'lazyload', loading: 'lazy', style: "padding-top: 100px; background-image: url('/img/kata-cover.png')"}
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          .kata-heading
+            %h1 CoderDojo Kata
+            %h2.kata-subheading 道場情報まとめ
+
+  / Post Content
+  %section.kata
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.fontsize-bigger
+          / Navigator
+          %p{style: "margin-top: -35px; padding-bottom: 20px;"}
+            %a{href: "/"}トップ
+            → Kata
+          / Scrivito contents: = scrivito_tag :div, @obj, :body
+          %p TBD: Migate contents here.
+          %hr/
+          %p{align: "right", style: "color: grey; padding-bottom: 50px;"}
+            / 更新日: = @obj.last_changed.strftime("%Y年%m月%d日")
+            更新日: 2021年9月4日
