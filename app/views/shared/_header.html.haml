@@ -8,8 +8,10 @@
         %span.icon-bar
         %span.icon-bar
       .navbar-header-logos
-        = link_to image_tag('/img/header-logo.png',  alt: 'CoderDojo logo'),  '/', id: "header-logo"
-        = link_to image_tag('/img/header-brand.png', alt: 'CoderDojo brand'), '/', id: "header-brand"
+        = link_to lazy_image_tag('/img/header-logo.png',  min: '/img/header-logo.min.png',
+                                 alt: 'CoderDojo logo'),  '/', id: "header-logo"
+        = link_to lazy_image_tag('/img/header-brand.png', min: '/img/header-brand.min.png',
+                                 alt: 'CoderDojo brand'), '/', id: "header-brand"
     #bs-example-navbar-collapse-1.collapse#header-nav-toggle.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li= link_to '全国の道場',     '/#dojos'
