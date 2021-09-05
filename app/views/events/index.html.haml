@@ -4,7 +4,7 @@
 - provide(:meta_image,  "/img/ogp-events.jpeg")
 
 %section.cover
-  = image_tag "events_cover.jpg"
+  = lazy_image_tag 'events_cover.jpg', min: 'events_cover.min.jpg', alt: 'Cover Photo on Upcoming Events'
 
 %section#events.text-center
   %br
