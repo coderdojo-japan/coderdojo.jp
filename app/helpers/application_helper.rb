@@ -50,4 +50,16 @@ module ApplicationHelper
   def is_kata?
     request.path.starts_with? "/kata"
   end
+
+  # 画像を aFarkas/lazysizes 経由で遅延読み込みする
+  # cf. https://github.com/aFarkas/lazysizes
+  def lazy_image_tag(source, options={})
+    options['data-src'] = asset_path(source)
+    options['loading']  = 'lazy' # Optimize if available
+    options[:class].blank? ?
+      options[:class] = "lazyload" :
+      options[:class] = "lazyload #{options[:class]}"
+
+    image_tag('/spinner.svg', options)
+  end
 end
