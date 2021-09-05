@@ -41,6 +41,9 @@ Rails.application.routes.draw do
   get "/join-in-board-2017" => "docs#show", id: 'join-in-board-2017'
   get "/thanks"           => "docs#show", id: 'thanks'
   get "/signup"           => "docs#show", id: 'signup'
+  get "/kata"             => "docs#kata"
+  #get "/debug/kata"       => "docs#kata"
+
 
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)

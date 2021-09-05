@@ -6,6 +6,8 @@ class DocsController < ApplicationController
     @url   = request.url
   end
 
+  def kata; end
+
   def show
     @doc = Document.new(params[:id])
     redirect_to root_url unless @doc.exists?
