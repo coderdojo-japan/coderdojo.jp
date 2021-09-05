@@ -21,7 +21,7 @@ class PodcastsController < ApplicationController
     @episode = Podcast.find_by(id: params[:id])
     redirect_to root_url unless @episode.exists?
 
-    @title   = "#DojoCast " + @episode.title
+    @title   = @episode.title.split('-').last
     @content = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
     @url     = request.url
   end

@@ -1,4 +1,4 @@
-<% provide(:title, @title) %>
+<% provide(:title, @title + ' - DojoCast') %>
 <% provide(:desc,  @episode.description) %>
 <% provide(:url,   @url) %>
 <% provide(:meta_image,  @episode.cover) %>
@@ -36,6 +36,7 @@
     <iframe class="lazyload" src="https://anchor.fm/coderdojo-japan/embed/episodes/<%= @episode.permalink %>" width="100%" scrolling="no" frameborder="yes"></iframe>
     <br />
 
+    <h1 id='title'>📻 <%= @title %></h1>
     <%= raw @content %>
   </section>
 
