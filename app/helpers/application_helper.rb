@@ -60,6 +60,8 @@ module ApplicationHelper
       options[:class] = "lazyload" :
       options[:class] = "lazyload #{options[:class]}"
 
-    image_tag('/spinner.svg', options)
+    options[:min].blank? ?
+      image_tag(asset_path('/spinner.svg'), options) :
+      image_tag(asset_path(options[:min]),  options)
   end
 end
