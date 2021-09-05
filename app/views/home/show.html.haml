@@ -5,8 +5,7 @@
   %br
 
 %section.cover
-  = image_tag "/coderdojo-japan_cover.min.jpg", alt: 'CoderDojo Japan カバー画像', class: 'lazyload',
-              "data-src" => "/coderdojo-japan_cover.jpg", loading: 'lazy'
+  = lazy_image_tag '/coderdojo-japan_cover.jpg', min: '/coderdojo-japan_cover.min.jpg', alt: 'CoderDojo Japan カバー画像'
 
 %section.introduction.text-center.list
   %p
@@ -40,7 +39,7 @@
     次の動画や記事をぜひ！😆
 
   %div.home-point-thumbnail{style: "margin-top: 30px; margin-bottom: 30px;"}
-    = link_to image_tag("/video-thumbnail.min.jpg", alt: 'Promotion Video by CoderDojo Kashiwa', class: 'lazyload', loading: 'lazy', 'data-src' => '/video-thumbnail.jpg'), 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"
+    = link_to lazy_image_tag('/video-thumbnail.jpg', min: '/video-thumbnail.min.jpg', alt: 'Promotion Video by CoderDojo Kashiwa'), 'https://www.youtube.com/watch?v=gLDue2xb1j8', target: "_blank", rel: "external noopener"
   /%div.home-point-video
   /  %iframe{allowfullscreen: "", frameborder: "0", height: "315", width: "560",
   /          src: "https://www.youtube.com/embed/gLDue2xb1j8?rel=0"}
@@ -73,7 +72,7 @@
 /
   %ol.bxslider{style: "list-style: none; margin-left: -40px; margin-top: 30px;"}
     %li
-      = link_to image_tag("dojocon_japan_2020.png", alt: "DojoCon Japan 2020", style: "margin-bottom: 15px;", class: 'lazyload', loading: 'lazy'), "https://dojocon2020.coderdojo.jp/", target: "_blank", rel: "external noopener"
+      = link_to lazy_image_tag('dojocon_japan_2020.png', alt: "DojoCon Japan 2020", style: "margin-bottom: 15px;"), "https://dojocon2020.coderdojo.jp/", target: "_blank", rel: "external noopener"
 
   %p
     12月27日に
@@ -169,9 +168,7 @@
       %a{href: "/kata#support"}<> 『支援』
       をお読みください。
     %div.kata
-      = link_to image_tag("/kata_cover.min.jpg", alt: 'Kata カバー画像', class: 'lazyload',
-                          'data-src' => '/kata_cover.jpg', loading: 'lazy',
-                            style: 'margin-bottom: 15px;'), '/kata'
+      = link_to lazy_image_tag('/kata_cover.jpg', min: '/kata_cover.min.jpg', alt: 'Kata カバー画像', style: 'margin-bottom: 15px;'), '/kata'
       %a.button-to-details{href: '/kata'} Kata を読む
 
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}

@@ -6,7 +6,7 @@
 %script{ type: 'text/javascript', src: '/js/jquery.japan-map.js'}
 
 %section#top{style: 'padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;'}
-  = image_tag "stats_cover.png"
+  = lazy_image_tag 'stats_cover.png', alt: 'Cover photo for CoderDojo Stats'
 
 %section.stats.text-center
   %h1 統計情報
