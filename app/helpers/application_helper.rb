@@ -60,8 +60,15 @@ module ApplicationHelper
       options[:class] = "lazyload" :
       options[:class] = "lazyload #{options[:class]}"
 
-    options[:min].blank? ?
-      image_tag(asset_path('/spinner.svg'), options) :
-      image_tag(asset_path(options[:min]),  options)
+    if options[:min] == true
+      # Use minified image path: foo.png -> foo.min.png
+      image_tag(asset_path(source).split('.').join('.min.'),  options)
+    elsif !options[:min].blank?
+      # The minified path above can be overridden if path is given.
+      image_tag(asset_path(options[:min]), options)
+    else
+      # Default minified image is spinner.
+      image_tag(asset_path('/spinner.svg'), options)
+    end
   end
 end
