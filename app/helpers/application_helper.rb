@@ -71,4 +71,29 @@ module ApplicationHelper
       image_tag(asset_path('/spinner.svg'), options)
     end
   end
+
+  # NOTE: Delete this helper to avoid overriding when /dojos routing is added.
+  def dojos_path(options={anchor: 'dojos'})
+    root_path(options)
+  end
+
+  def welcome_path(options={anchor: 'welcome'})
+    root_path(options)
+  end
+
+  def news_path(options={anchor: 'news'})
+    root_path(options)
+  end
+
+  def news_url(path='/')
+    'https://news.coderdojo.jp' + path
+  end
+
+  def foundation_url(path='/foundation/')
+    'https://coderdojo.com' + path
+  end
+
+  def zen_url(path='/')
+    'https://zen.coderdojo.com' + path
+  end
 end

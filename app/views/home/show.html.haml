@@ -89,10 +89,10 @@
     %br.ignore-sp<>
     参加方法は各道場のWebサイトに記載されています
   .btn-cover{style: "margin-bottom: 40px;"}
-    %a.btn-blue{href: "/events"}<>
+    %a.btn-blue{href: events_path}<>
       %i.far.fa-calendar-alt
       近日開催から探す
-    %a.btn-blue{href: "https://zen.coderdojo.com/find", target: "_blank", rel: "external noopener"}<>
+    %a.btn-blue{href: zen_url('/find'), target: '_blank', rel: 'external noopener'}<>
       %i.far.fa-map-marked
       地図情報から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
@@ -116,7 +116,7 @@
     %h2#kata{style: "color: dimgray;"} 📚 もっと詳しく知る
     %br
     %p
-      %a{href: "/podcast"}🎧 Podcast
+      %a{href: podcasts_path}🎧 Podcast
       や
       %a{href: "https://www.youtube.com/CoderDojoJapan",
          target: "_blank", rel: "external noopener"} 📺 YouTube
@@ -124,13 +124,13 @@
 
     %ul{style: "list-style: none;"}
       %li
-        %a{href: "/kata"} 📑 Kata (型)
+        %a{href: kata_path} 📑 Kata (型)
         %span{style: 'font-size: 65%'} (Wiki)
       %li
-        %a{href: "/podcast"} 🎧 DojoCast
+        %a{href: podcasts_path} 🎧 DojoCast
         %span{style: 'font-size: 65%'} (Podcast)
       %li
-        %a{href: "#news"} 📰 DojoLetter
+        %a{href: news_path} 📰 DojoLetter
         %span{style: 'font-size: 65%'} (Newsletter)
       %li
         %a{href: "https://www.youtube.com/CoderDojoJapan",
@@ -145,31 +145,31 @@
            target: "_blank", rel: "external noopener"} 👥 CoderDojo Japan
         %span{style: 'font-size: 65%'} (Facebook)
       %li
-        %a{href: "https://coderdojo.com/",
+        %a{href: foundation_url('/'),
            target: "_blank", rel: "external noopener"} 🌐 CoderDojo Foundation
         %span{style: 'font-size: 65%'} (海外)
     %br
     %p
-      %a{href: "/kata"} 📑 Kata
+      %a{href: kata_path} 📑 Kata
       では運営に役立つ情報を、
       %a{href: "https://twitter.com/CoderDojoJapan",
          target: "_blank", rel: "external noopener"}<> 📣 Twitter
       \ では最近の活動状況を、
-      %a{href: "https://coderdojo.com/",
+      %a{href: foundation_url('/'),
          target: "_blank", rel: "external noopener"}<> 🌐 CoderDojo Foundation
       \ では海外の雰囲気を知ることができます。
     %br
     %p
       『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』という場合は
-      %a{href: "/kata"}< 📑 Kata
+      %a{href: kata_path}< 📑 Kata
       \ の
-      %a{href: "/kata#startup"}<> 『立ち上げる』
+      %a{href: kata_path(anchor: 'startup')}<> 『立ち上げる』
       や
-      %a{href: "/kata#support"}<> 『支援』
+      %a{href: kata_path(anchor: 'support')}<> 『支援』
       をお読みください。
     %div.kata
       = link_to lazy_image_tag('/kata_cover.jpg', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'), '/kata'
-      %a.button-to-details{href: '/kata'} Kata を読む
+      %a.button-to-details{href: kata_path} Kata を読む
 
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
   %h2{style: "color: dimgray;"} 🤝 パートナー法人
@@ -178,7 +178,7 @@
 
   = render partial: 'shared/partners'
   %div.kata{style: 'margin-top: 60px; margin-bottom: 150px;'}
-    %a.button-to-details{href: '/partnership'} 法人向け資料を読む
+    %a.button-to-details{href: partnership_path} 法人向け資料を読む
 
 
 / Start with 'div' not 'section' due to grayscale-bg area
@@ -192,7 +192,7 @@
       %br.ignore-sp<>
       %small
         (
-        %a{:href => 'https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/', :target => '_blank'}<>
+        %a{href: 'https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/', :target => '_blank'}<>
           過去の配信を読んでみる
         )
     = render partial: 'shared/newsletter'
@@ -208,7 +208,7 @@
         Q．CoderDojo ってなんですか?
         %br
         A．
-        %a{href: '#welcome'}<> 📜 イラスト付きスライド
+        %a{href: welcome_path}<> 📜 イラスト付きスライド
         があるので、ぜひチェックしてみてください 👀
     %li
       %p
@@ -223,21 +223,21 @@
         Q．初めてです。どうしたらよい?
         %br
         A．
-        %a{href: '#dojos'}<> 🗾 全国の道場
+        %a{href: dojos_path}<> 🗾 全国の道場
         から興味のある道場を探し、開催情報を調べてみましょう 🔍
     %li
       %p
         Q．直近の開催情報をありますか?
         %br
         A．
-        %a{href: '/events'}<> 📅 近日開催の道場
+        %a{href: events_path}<> 📅 近日開催の道場
         があります。オンライン開催もあります ⚡️
     %li
       %p
         Q．道場を立ち上げてみたいです。
         %br
         A．
-        %a{href: '/kata#startup'}<> 📚 Kata
+        %a{href: kata_path(anchor: 'startup')}<> 📚 Kata
         \ に資料があります！運営に関わってみたい方はぜひ 😉
 
 %section.detail-introduction.text-center
