@@ -89,6 +89,10 @@ module ApplicationHelper
     'https://news.coderdojo.jp' + path
   end
 
+  def dojoletter_url()
+    'https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/'
+  end
+
   def foundation_url(path='/foundation/')
     'https://coderdojo.com' + path
   end
