@@ -93,7 +93,7 @@ module ApplicationHelper
     'https://coderdojo.com' + path
   end
 
-  def zen_url(path='/')
+  def zen_url(path='/find')
     'https://zen.coderdojo.com' + path
   end
 end
