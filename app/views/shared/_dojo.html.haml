@@ -1,18 +1,16 @@
 %li.dojo
   %header
-    %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
-      %img.dojo-picture{class: 'lazyload', src: "/spinner.svg", "data-src" => "#{dojo.logo}",
-                        loading: "lazy"}
-    %a{href: "#{dojo.url}", target: "_blank", rel: "external noopener"}
-      %span.dojo-name
-        = "#{dojo.name} (#{dojo.prefecture.name}) "
-        - if not dojo.counter == 1
-          %span.dojo-counter{'data-toggle' => 'tooltip', 'data-placement' => 'bottom',
-                             'data-original-title' => '道場数'}= "#{dojo.counter}"
+    = link_to lazy_image_tag(dojo.logo, alt: "CoderDojo #{dojo.name}", class: 'dojo-picture'), dojo.url,
+              target: "_blank", rel: "external noopener"
+    %span.dojo-name
+      = link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener"
+      - if not dojo.counter == 1
+        %span.dojo-counter{'data-toggle' => 'tooltip', 'data-placement' => 'bottom',
+                           'data-original-title' => '道場数'}= dojo.counter
   %ul.tags
     - dojo.tags.each do |tag|
       %li= tag
   %p.dojo-desciption
     = dojo.description
     - if dojo.is_private
-      %a.dojo-private{href: '/docs/private-dojo'} Private
+      = link_to 'Private', doc_path('private-dojo'), class: 'dojo-private'
