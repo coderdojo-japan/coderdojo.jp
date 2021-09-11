@@ -6,7 +6,9 @@ class DocsController < ApplicationController
     @url   = request.url
   end
 
-  def kata; end
+  def kata
+    @dojo_count = Dojo.active_dojos_count
+  end
 
   def show
     @doc = Document.new(params[:id])
