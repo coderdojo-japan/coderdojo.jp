@@ -488,11 +488,11 @@
 		  <br>
 		</li>
 		<li>
-		  <p>ログイン後、画面上部にある「<a href="https://zen.coderdojo.com/start-dojo">道場を始める (Start a Dojo)</a>」ボタンをクリックし、必要な情報を入力していきます。<br><strong>※ ページの一番下の左側から、言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</p>
+		  <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br><strong>※ ページの一番下の左側から、言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</p>
 		  <br>
 		</li>
 		<li>
-		  <p>入力後、<a href="https://zen.coderdojo.com/charter">CoderDojo 憲章</a>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
+		  <p>入力後、<%= link_to 'CoderDojo 憲章', zen_url('/charter') %>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
 		  <br>
 		</li>
 		<li>
@@ -536,13 +536,13 @@
 	      <br>
 	      <ul>
 		<li>
-		  <p><strong>CoderDojo Global Slack (提供: <a href="https://coderdojo.com/foundation/">CoderDojo Foundation</a>)</strong></p>
-		  <p>世界中の Dojo 関係者が集まる連絡網 (Slack) があります。英語でのコミュニケーションとなりますが、世界中の Dojo と情報交換できる貴重な場ですので、よければ<a href="https://coderdojo.com/coderdojo-global-slack/"><strong>コチラ</strong></a>から申請してみてください。</p>
+		  <p><strong>CoderDojo Global Slack (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</strong></p>
+		  <p>世界中の Dojo 関係者が集まる連絡網 (Slack) があります。英語でのコミュニケーションとなりますが、世界中の Dojo と情報交換できる貴重な場ですので、よければ<b><%= link_to 'コチラ', foundation_url('/coderdojo-global-slack/') %></b></a>から申請してみてください。</p>
 		  <br>
 		</li>
 		<li>
 		  <p><strong>オンライン開催用ビデオ会議 (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</strong></p>
-		  <p>CoderDojo 承認時にもらえる「道場名@coderdojo.com」というメールアドレスを使って、ビデオ会議サービスの <a href="https://zoom.us/docs/jp-jp/jp-info.html">Zoom</a> や <a href="https://apps.google.com/intl/ja/meet/">Google Meet</a> を使うと、時間制限などが一部解除された状態でご利用いただけます。詳細は「<a href="https://coderdojo.com/2020/08/28/three-options-for-running-your-coderdojo-sessions/">Three options for running your CoderDojo sessions (英語)</a>」をご参照ください。</p>
+		  <p>CoderDojo 承認時にもらえる「道場名@coderdojo.com」というメールアドレスを使って、ビデオ会議サービスの <a href="https://zoom.us/docs/jp-jp/jp-info.html">Zoom</a> や <a href="https://apps.google.com/intl/ja/meet/">Google Meet</a> を使うと、時間制限などが一部解除された状態でご利用いただけます。詳細は「<%= link_to 'Three options for running your CoderDojo sessions (英語)', foundation_url('/2020/08/28/three-options-for-running-your-coderdojo-sessions') %>」をご参照ください。</p>
 		  <br>
 		</li>
 		<li>
@@ -684,7 +684,7 @@
 		  <p><strong><a href="https://coderdojo.jp/docs/regional-license">CoderDojo 地域ライセンス契約書 (日英併記)</a></strong><br>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
 		</li>
 		<li>
-		  <p><strong><a href="https://coderdojo.com/start-a-dojo/">Create a Dojo (英語)</a></strong><br>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
+		  <p><strong><%= link_to 'Create a Dojo (英語)', foundation_url('/start-a-dojo/') %></strong><br>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
 		  <br>
 		</li>
 	      </ul>
@@ -785,7 +785,7 @@
 		  <h5>Q. CoderDojo は学生でも立ち上げることができますか?</h5>
 		  <p>はい、19歳以上の方であれば誰でも申請できます。また、14歳以上18歳以下の場合においても、一緒に運営してくれる大人または保護者がいれば、その情報を入力することで CoderDojo の申請をすることができます。</p>
 		  <p>ただし、必ず承認されるわけではないので、あらかじめご了承していただけると幸いです。また、Slack などの各種サービスには<a href="https://slack.com/intl/ja-jp/terms-of-service/user">年齢制限がある</a>ため、利用規約の条件を満たしているかどうかにもご注意ください。</p>
-		  <p><b><a href="https://coderdojo.com/start-a-dojo/">☯️ Start a Dojo - CoderDojo Foundation</a></b></p>
+		  <p><b><%= link_to '☯️ Start a Dojo - CoderDojo Foundation', foundation_url('/start-a-dojo/') %></b></p>
 		  <p><b><a href="https://speakerdeck.com/yu_san_19/why-dont-you-enjoy-the-youth-champion-at-dojocon-japan-2018">📑 Why don't you enjoy the youth champion? (日本の事例)</a></b></p>
 		  <br>
 		</li>
