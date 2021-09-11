@@ -39,8 +39,19 @@ https://coderdojo.jp/docs にあるドキュメントの編集方法も同様で
 
 <br>
 
-## 2. CoderDojo Kata の執筆・編集
+## 2. Kata 情報の更新
 
+Kata 情報も、Dojo 情報と同様の方法で更新できます。
+
+1. [kata.html.erb](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/app/views/docs/kata.html.erb) を開く
+2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
+3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
+4. 修正内容を確認し、問題なければ Create pull request をクリックする
+   - 画像を追加したい場合は Pull Request のコメント欄に添付して頂けると助かります :relieved: ([対応例](https://github.com/coderdojo-japan/coderdojo.jp/pull/763))
+
+以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
+
+<!--
 [Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。
 
 編集方法は下記の手順書をご参照してください。
@@ -54,6 +65,7 @@ CMS を利用している背景や技術仕様などについては次のスラ�
 
 :scroll: CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
+-->
 
 <br>
 
@@ -64,7 +76,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 - [Ruby](https://www.ruby-lang.org/ja/)
 - [Ruby on Rails](http://rubyonrails.org/)
 - [PostgreSQL](https://www.postgresql.jp/)
-- [Scrivito](https://scrivito.com/) (Kataページ開発時に必要)
+- [Scrivito](https://scrivito.com/)
   - (:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
 
 セットアップ方法の方法は次の通りです。
