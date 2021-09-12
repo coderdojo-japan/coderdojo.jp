@@ -3,9 +3,9 @@
 <% provide :meta_image,  "/img/ogp-kata.jpeg" %>
 
 <style type="text/css">
-  h2 { font-weight: 900; }
-  h3 { font-weight: 700; }
-  h4 { font-weight: 600; font-size: 20px; line-height: 1.5em; margin-top: 15px; margin-bottom: 3px;}
+  h2 { font-weight: 900; margin-top: 30px; }
+  h3 { font-weight: 700; margin-top: 80px; }
+  h4 { font-weight: 600; margin-top: 15px; font-size: 20px; line-height: 1.5em; margin-bottom: 3px;}
 </style>
 
 <!-- Set your background image for this header on the line below. -->
@@ -31,18 +31,16 @@
 	<div id="README" class="headline-anchor"></div>
 	<h2 class="headline">はじめに</h2>
 	<p>Kata (型) では、全国の CoderDojo から公開された役立つ資料を共有したり (<strong><a href="#learn">学ぶ</a></strong>)、力をつけた子どもが<strong><a href="#challenge">腕試し</a></strong>できるプログラミングコンテスト情報をまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo が受けられる<strong><a href="#support">支援</a></strong>、<strong><a href="#faq">よくある質問と回答</a></strong> (FAQ) についてもまとめています。</p>
-	<br>
 
 	<h3 id='coderdojo-is'>CoderDojo とは? ☯️</h3>
 	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
-	<%= lazy_image_tag('/kata/coderdojo-zero.png', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 100px;', min: true) %>
+	<%= lazy_image_tag('/kata/coderdojo-zero.png', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
 	
 	<h3 id='welcome'>まず何を読むといい？ 🤔</h3>
 	<p>初めての方向けには次の資料をオススメしています。スライドや動画、インタビュー記事を見ると CoderDojo の雰囲気が掴めます。</p>
-	<br>
-	<ul>
+	<ul style='margin: 30px auto;'>
 	  <li>
 	    <p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/pub?start=false&amp;loop=false">CoderDojo へようこそ! (スライド)</a></p>
 	  </li>
@@ -53,15 +51,13 @@
 	    <p><a href="https://www.youtube.com/watch?v=gLDue2xb1j8">あなたが Dojo に来る理由は何ですか? (動画)</a></p>
 	  </li>
 	</ul>
-	<br>
+
 	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本各地の道場', dojos_path %></a>や<%= link_to '近日開催の道場', events_path %>、<%= link_to 'CoderDojo Zen (地図)', zen_url %> から最寄りの道場を探してみましょう!</p>
-	<br>
 
 	<h3 id='details'>もっと詳しく知りたい場合は？ 👀</h3>
 	<p>CoderDojo は書籍・新聞、Webメディアでも紹介されています。CoderDojo について紹介している記事や書籍を新しい順でご紹介します。興味のあるトピックがあればぜひ読んでみてください。</p>
-	<br>
 
-	<h4 id='newspapers'>📰 新聞・書籍</h4>
+	<h4 id='newspapers' style='margin-top: 40px;'>📰 新聞・書籍</h4>
 	<ul>
 	  <li>
 	    <p><a href="https://the-japan-news.com/news/article/0007690557">Free coding sessions to move Pokemon characters surges in popularity - The Japan News</a></p>
@@ -127,9 +123,8 @@
 	    <p><a href="https://www.facebook.com/note.php?note_id=321408997945053&amp;id=204862942932993">Kids are coding it for themselves - Nikkei Asian Review</a></p>
 	  </li>
 	</ul>
-	<br>
 
-	<h4 id='press-releases'>📜 Webメディア・プレスリリース</h4>
+	<h4 id='press-releases' style='margin-top: 40px;'>📜 Webメディア・プレスリリース</h4>
 	<ul>
 	  <li>
 	    <p><a href="https://withyou.pokemon.co.jp/activity/ict_education/">POKÉMON with YOU - ポケモンはいつもキミといっしょ - (ICT教育支援)</a></p>
@@ -162,7 +157,7 @@
 	    <p><a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場「CoderDojo」をはじめてみませんか - ICT教育ニュース</a></p>
 	  </li>
 	  <li>
-	    <p><a href="http://berd.benesse.jp/special/manabi/manabi_10.php">「自由」というルールを共有し、プログラミングの学習機会を提供する CoderDojo Japan - ベネッセ教育総合研究所</a><a href="http://bakemono.jp/reading/blog/web/2256/"><br></a></p>
+	    <p><a href="http://berd.benesse.jp/special/manabi/manabi_10.php">「自由」というルールを共有し、プログラミングの学習機会を提供する CoderDojo Japan - ベネッセ教育総合研究所</a><a href="http://bakemono.jp/reading/blog/web/2256/"></a></p>
 	  </li>
 	  <li>
 	    <p><a href="https://4yuuu.com/articles/view/473532">実は日本に40もある！参加費無料の「プログラミング道場」って？ | 4yuuu!</a></p>
@@ -179,7 +174,6 @@
 	</ul>
 	<br>
 	<p>上記の他にも、一般社団法人 CoderDojo Japan が発表したプレスリリースや公式ニュースレターもあります。詳細は <%= link_to 'news.coderdojo.jp', news_url %> をご参照ください 📰</p>
-	<br>
 
 	<div id="learn" class="headline-anchor"></div>
 	<h2 class="headline">📚 学ぶ</h2>
@@ -189,7 +183,6 @@
 	  <div>
 	    <p><%= link_to '毎年 1,500 回以', stats_path %>の Dojo が日本各地で開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
 	    <p>CoderDojo 関係者が制作した教材を中心にまとめてみたので、参加者や運営者、メンターなどのご参考になれば嬉しいです。</p>
-	    <br>
 
 	    <h3 id='scratch'>🐱 Scratch 資料</h3>
 	    <ul>
@@ -227,7 +220,7 @@
 	      </li>
 	      <li>
 		<h4 id='scratch-game-manuals'><a href="https://github.com/ikaken/CoderDojoMito/tree/master/%E4%BD%93%E9%A8%93%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0%E4%BD%9C%E6%88%90%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB">Scratch ゲーム作成マニュアル集</a></h4>
-		<p>by 井川 @ <a href="https://coderdojo-mito.com/">CoderDojo 水戸</a><br></p>
+		<p>by 井川 @ <a href="https://coderdojo-mito.com/">CoderDojo 水戸</a></p>
 	      </li>
 	      <li>
 		<h4 id='scratch-drill'><a href="https://www.dropbox.com/s/po0a9m4wo6fst57/%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%83%89%E3%83%AA%E3%83%AB.pdf?dl=0">スクラッチドリル</a></h4>
@@ -246,7 +239,6 @@
 		<p>by 斎藤 ＠ <a href="https://coderdojoaizu.mystrikingly.com/" target="_blank">CoderDojo 会津</a></p>
 	      </li>
 	    </ul>
-	    <br>
 
 	    <h3 id='microbit'>🎮 micro:bit 資料</h3>
 	    <ul>
@@ -264,7 +256,7 @@
 	      </li>
 	      <li>
 		<h4 id='microbit-hiragana'><a href="https://www.coderdojo-hiroshima.com/%E5%AD%A6%E7%BF%92%E3%83%92%E3%83%B3%E3%83%88/microbit%E3%81%A7%E3%81%B2%E3%82%89%E3%81%8C%E3%81%AA%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">micro:bit でひらがなを表示させて見よう</a></h4>
-		<p>by ナカオク @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a><br></p>
+		<p>by ナカオク @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a></p>
 	      </li>
 	      <li>
 		<h4 id='microbit-ble'><a href="https://memakura.github.io/s2microbit-ble/">Smi:bit / スマイビー (Scratch 2.0 対応)</a></h4>
@@ -274,7 +266,6 @@
 		<h4 id='microbit-project'><a href="https://note.mu/coding/n/n74d63b44531c">micro:bit で自由研究</a></h4>
 		<p>by E研究員 @ <a href="https://coderdojo-kohokunt.connpass.com/">CoderDojo 港北ニュータウン</a></li>
 	    </ul>
-	    <br>
 
 	    <h3 id='basics'>🛠 HTML、電子工作、LEGO など</h3>
 	    <ul>
@@ -284,7 +275,10 @@
 	      </li>
 	      <li>
 		<h4 id='basics-chart'><a href="http://tsuyoshioshima.github.io/ninjachart/">まよえるニンジャのための やりたいことさがし</a></h4>
-		<p>by とがぞの @ <a href="https://coderdojo-kodaira.github.io/">CoderDojo こだいら</a> (<a href="http://coderdojo-kodaira.blog.jp/archives/59932567.html">データ</a>提供)<br>by 大島 @ <a href="http://coderdojo-saitama.com/">CoderDojo さいたま</a> (ツール提供)</p>
+		<p>
+		  by とがぞの @ <a href="https://coderdojo-kodaira.github.io/">CoderDojo こだいら</a> (<a href="http://coderdojo-kodaira.blog.jp/archives/59932567.html">データ</a>提供)<br>
+		  by 大島 @ <a href="http://coderdojo-saitama.com/">CoderDojo さいたま</a> (ツール提供)
+		</p>
 	      </li>
 	      <li>
 		<h4 id='basics-website'><a href="http://www.coderdojo-hiroshima.com/My_first_website_ja.pdf">はじめてのWebサイト</a></h4>
@@ -292,7 +286,9 @@
 	      </li>
 	      <li>
 		<h4 id='basics-arduino'><a href="https://lets.makewitharduino.com/">Let's Make With Arduino!</a> + <a href="https://docs.google.com/spreadsheets/d/1XNd1BK2tiDwk3GTYJ60RzaXj_kwvB3FDpDuXZVm-MCQ/edit">部品購入先リスト</a></h4>
-		<p>by 岡田バナナ @ <a href="https://coderdojo-nishinomiya.info/">CoderDojo西宮 / 梅田</a><br>by 塚本 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
+		<p>
+		  by 岡田バナナ @ <a href="https://coderdojo-nishinomiya.info/">CoderDojo西宮 / 梅田</a><br>
+		  by 塚本 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
 	      </li>
 	      <li>
 		<h4 id='basics-snap'><a href="http://153.127.198.12/aizu/aboutSnap.pdf" target="_blank">Snapのこと（入門テキスト）</a></h4>
@@ -307,7 +303,6 @@
 		<p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
 	      </li>
 	    </ul>
-	    <br>
 
 	    <h3 id='design'>🎨 イラスト素材、音声素材など</h3>
 	    <ul>
@@ -328,7 +323,6 @@
 		<p>by いらすとや</p>
 	      </li>
 	    </ul>
-	    <br>
 
 	    <h3 id='workshop'>👥 ワークショップ向け資料</h3>
 	    <ul>
@@ -357,12 +351,12 @@
 
 	  <div id="challenge" class="headline-anchor"></div>
 	  <h2 class="headline">腕試し</h2>
-	  <%= lazy_image_tag('/kata/challenge.png', alt: 'DojoCon Japan の様子', min: true) %>
+	  <%= lazy_image_tag('/kata/challenge.png', alt: 'DojoCon Japan の様子', min: true, style: 'margin-bottom: 30px;') %>
 
-	  <p><br>プログラミングはやればやるほど日に日に力がついていきます。「プログラミングに少し慣れたかな」と感じたら、腕試しのつもりで<a href='#challenge-contents'>コンテスト</a>や<a href='#challenge-grants'>支援プログラム</a>に挑戦してみてはいかがでしょうか?</p>
+	  <p>プログラミングはやればやるほど日に日に力がついていきます。「プログラミングに少し慣れたかな」と感じたら、腕試しのつもりで<a href='#challenge-contents'>コンテスト</a>や<a href='#challenge-grants'>支援プログラム</a>に挑戦してみてはいかがでしょうか?</p>
 	  <p>空手や柔道に大会があるように、プログラミング界隈にも全国の応募者が毎年「ワザ」を磨き合う場があります。海外のコンテストであれば、世界中の同世代と学び合う機会もあります 🤝✨</p>
 	  <p>腕試しはワザを磨く近道です。以下のリストが「次の一歩」を踏み出すご参考になれば嬉しいです! 🏃💨</p>
-	  <br>
+
 	  <h3 id='challenge-contents'>🏅 コンテスト</h3>
 	  <ul>
 	    <li>
@@ -434,7 +428,6 @@
 	      <p>22歳以下を対象とした、自らのアイデアと技術で新しい未来を拓く作品提出型コンテストです。最高賞の受賞者は、優勝賞金に加えて、下記「<a href="#ipa-mitou">未踏事業</a>」への推薦枠も使えるようになります。</p>
 	    </li>
 	  </ul>
-	  <br>
 
 	  <h3 id='challenge-grants'>🎫 支援プログラム</h3>
 	  <ul>
@@ -490,15 +483,12 @@
 
 	  <div id="startup" class="headline-anchor"></div>
 	  <h2 class="headline">立ち上げる</h2>
-	  <%= lazy_image_tag('/kata/startup.png', alt: 'CoderDojo 調布の様子', min: true) %>
-	  <br>
-	  <br>
+	  <%= lazy_image_tag('/kata/startup.png', alt: 'CoderDojo 調布の様子', min: true, style: 'margin-bottom: 30px;') %>
 	  <div>
 	    <div>
 	      <p>CoderDojo の参加者が自由に作品を創れるように、<strong>CoderDojo という「場」そのものを創ることもできます。</strong></p>
 	      <p>ただし、<a href="https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja">「CoderDojo」という国際商標</a>を使うためのルールもあります。例えば CoderDojo では特定の性別や人種を理由に参加拒否したり、参加者に参加費を徴収することができません。もし会場費が掛かる場合であっても、募金やスポンサーなどを募って費用を工面する必要があります。</p>
 	      <p>本項では皆さんが感じる不安や懸念を払拭できるように、Dojo を立ち上げるときのポイントや、資金を集める方法とその事例集、Dojo の申請方法、Dojo 承認後に得られる<a href="#support">法人からの支援一覧</a>などを説明していきます。</p>
-	      <br>
 
 	      <h3 id='startup-first-step'>🐾 立ち上げの最初の一歩</h3>
 	      <p>最初に CoderDojo の軸となる「CoderDojo 憲章」の内容を確認しましょう!</p>
@@ -509,85 +499,87 @@
 	      <p>CoderDojo 憲章を確認し、ご同意していただけるようであれば、下記の運営者向け資料に目を通して、より具体的なイメージを掴んでいきます。</p>
 	      <ul>
 		<li>
-		  <p><strong><a href="https://bit.ly/coderdojo-starter-kit-for-champions">Dojo 運営・企画資料 - はじめて CoderDojo を立ち上げる方のために</a></strong><br>（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</p>
+		  <p>
+		    <strong><a href="https://bit.ly/coderdojo-starter-kit-for-champions">Dojo 運営・企画資料 - はじめて CoderDojo を立ち上げる方のために</a></strong><br>
+		    （制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）
+		  </p>
 		</li>
 		<li>
-		  <p><strong><%= link_to '資金を募るときの活動事例', doc_path('fundraising-methods') %></strong></a> / <strong><%= link_to '資金を募るときの注意点', doc_path('fundraising-guidelines') %></strong></a><br>（会場費などの実費を工面する場面でお役立てください）</p>
+		  <p>
+		    <strong><%= link_to '資金を募るときの活動事例', doc_path('fundraising-methods') %></strong></a> / <strong><%= link_to '資金を募るときの注意点', doc_path('fundraising-guidelines') %></strong></a><br>
+		    （会場費などの実費を工面する場面でお役立てください）
+		  </p>
 		</li>
 	      </ul>
 	      <br>
 	      <p>具体的なイメージが掴めたら、準備・申請の手続きを進めていきましょう!</p>
-	      <br>
+
 	      <h3 id='startup-flowchart'>☯️ Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span></h3>
 	    </div>
 	  </div>
-	  <%= lazy_image_tag('/kata/startup-flowchart.png', alt: 'CoderDojo の立ち上げから開催までのフローチャート', style: "margin-bottom: 100px;", min: true) %>
-	  <div>
-	    <div>
-	      <h3 id='startup-create-account'>🆕 アカウント登録から、申請までの流れ</h3>
-	      <p>CoderDojo の申請には、大きく分けて次の3つのステップがあります。</p>
-	      <br>
-	      <ol>
-		<li>
-		  <p>Raspberry Pi アカウントを作成する</p>
-		</li>
-		<li>
-		  <p>Champion (代表者) 情報を登録する</p>
-		</li>
-		<li>立ち上げる CoderDojo の情報を入力し、申請する</li>
-	      </ol>
-	      <br>
-	      <p>本セクションでは「アカウントはまだ持っていない」という状態から、CoderDojo 申請までの流れをまとめています。既にアカウントをお持ちの場合、以下の 2. から読み進めてください。</p>
-	      <br>
-	      <ol>
-		<li>
-		  <p>まずは CoderDojo を申請するために、Raspberry Pi アカウント (※) を作成します</p>
-		  <p><strong>・</strong><a href="https://my.raspberrypi.org/signup">アカウント登録フォーム</a><br>
-		    　13歳以上の場合は「13 and over」をクリックしてください。<br>
-		    <br>
-		    ※ CoderDojo と Raspberry Pi の合併に伴い、現在は１つのシステムに統合されています。合併の詳細は <a href="https://jp.techcrunch.com/2017/05/27/20170526raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事</a>をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <p>アカウント作成後、作成したアカウントで <%= link_to 'CoderDojo Zen にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
-		  <br>
-		</li>
-		<li>
-		  <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br><strong>※ ページの一番下の左側から、言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</p>
-		  <br>
-		</li>
-		<li>
-		  <p>入力後、<%= link_to 'CoderDojo 憲章', zen_url('/charter') %>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
-		  <br>
-		</li>
-		<li>
-		  <p>同意すると、Dojo立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
-		  <p><strong>✔︎ </strong>チェック項目の例: 連絡先を設定したか、ボランティアに当てはあるか、安全性に問題はないか、など。すべての情報を完璧に揃える必要はありません! まずは気に留めておくぐらいで大丈夫です 🙆</p>
-		  <br>
-		</li>
-		<li>
-		  <p>最後に、登録する道場名などの情報を入力していきます (<a href="/img/how-to-name-a-dojo.png">参考画面</a>)</p>
-		  <p>・⚠️ 「道場名」には<strong>「地域名」または「地域名 @ 会場スポンサー名」</strong>という名称を入力してください (日本語で大丈夫です 🆗)</p>
-		  <p>・例: 「宜野湾」「札幌」「ひばりヶ丘 @ Hanare」「五反田 @ freee」</p>
-		  <p>・<strong>「CoderDojo」や「コーダー道場」という接頭語は不要</strong>です。CoderDojo であることは自明なので 😉<br></p>
-		  <p>・詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください</p>
-		</li>
+	  <%= lazy_image_tag('/kata/startup-flowchart.png', alt: 'CoderDojo の立ち上げから開催までのフローチャート', style: "margin-bottom: 50px;", min: true) %>
+
+	  <h3 id='startup-create-account'>🆕 アカウント登録から、申請までの流れ</h3>
+	  <p>CoderDojo の申請には、大きく分けて次の3つのステップがあります。</p>
+	  <ol style="margin: 30px auto;">
+	    <li>
+	      <p>Raspberry Pi アカウントを作成する</p>
+	    </li>
+	    <li>
+	      <p>Champion (代表者) 情報を登録する</p>
+	    </li>
+	    <li>立ち上げる CoderDojo の情報を入力し、申請する</li>
+	  </ol>
+
+	  <p>本セクションでは「アカウントはまだ持っていない」という状態から、CoderDojo 申請までの流れをまとめています。既にアカウントをお持ちの場合、以下の 2. から読み進めてください。</p>
+	  <br>
+	  <ol>
+	    <li>
+	      <p>まずは CoderDojo を申請するために、Raspberry Pi アカウント (※) を作成します</p>
+	      <p><strong>・</strong><a href="https://my.raspberrypi.org/signup">アカウント登録フォーム</a><br>
+		　13歳以上の場合は「13 and over」をクリックしてください。<br>
 		<br>
-		<li>
-		  <p>以上で CoderDojo の申請手続きは完了です! 👏</p>
-		  <p>・後日、CoderDojo Foundation からメールが届きます (<a href="https://esa-pages.io/p/sharing/7542/posts/140/2963352d1fa7db71f1e6.html">メールの例</a>) 📨</p>
-		  <p>・無事に承認されると <%= link_to 'CoderDojo Zen (地図版)', zen_url %> から表示されるようになります 🗺</p>
-		  <p>・詳細は <%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %>をご参照ください ✅</p>
-		  <br>
-		</li>
-	      </ol>
-	      <p>もし分からないことがあれば、<a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> やお近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者に聞いてみるのが早いです 😉</p>
+		※ CoderDojo と Raspberry Pi の合併に伴い、現在は１つのシステムに統合されています。合併の詳細は <a href="https://jp.techcrunch.com/2017/05/27/20170526raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事</a>をご参照ください。</p>
 	      <br>
-	      <p><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中」と判断されるのでご注意ください。</p>
+	    </li>
+	    <li>
+	      <p>アカウント作成後、作成したアカウントで <%= link_to 'CoderDojo Zen にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
 	      <br>
-	      <p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
-	    </div>
-	  </div>
+	    </li>
+	    <li>
+	      <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br><strong>※ ページの一番下の左側から、言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <p>入力後、<%= link_to 'CoderDojo 憲章', zen_url('/charter') %>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <p>同意すると、Dojo立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
+	      <p><strong>✔︎ </strong>チェック項目の例: 連絡先を設定したか、ボランティアに当てはあるか、安全性に問題はないか、など。すべての情報を完璧に揃える必要はありません! まずは気に留めておくぐらいで大丈夫です 🙆</p>
+	      <br>
+	    </li>
+	    <li>
+	      <p>最後に、登録する道場名などの情報を入力していきます (<a href="/img/how-to-name-a-dojo.png">参考画面</a>)</p>
+	      <p>・⚠️ 「道場名」には<strong>「地域名」または「地域名 @ 会場スポンサー名」</strong>という名称を入力してください (日本語で大丈夫です 🆗)</p>
+	      <p>・例: 「宜野湾」「札幌」「ひばりヶ丘 @ Hanare」「五反田 @ freee」</p>
+	      <p>・<strong>「CoderDojo」や「コーダー道場」という接頭語は不要</strong>です。CoderDojo であることは自明なので 😉</p>
+	      <p>・詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください</p>
+	      <br>
+	    </li>
+	    <li>
+	      <p>以上で CoderDojo の申請手続きは完了です! 👏</p>
+	      <p>・後日、CoderDojo Foundation からメールが届きます (<a href="https://esa-pages.io/p/sharing/7542/posts/140/2963352d1fa7db71f1e6.html">メールの例</a>) 📨</p>
+	      <p>・無事に承認されると <%= link_to 'CoderDojo Zen (地図版)', zen_url %> から表示されるようになります 🗺</p>
+	      <p>・詳細は <%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %>をご参照ください ✅</p>
+	      <br>
+	    </li>
+	  </ol>
+	  <p>もし分からないことがあれば、<a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> やお近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者に聞いてみるのが早いです 😉</p>
+	  <br>
+	  <p><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中」と判断されるのでご注意ください。</p>
+	  <br>
+	  <p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
 
 	  <div>
 	    <div id="support" class="headline-anchor"></div>
@@ -595,226 +587,221 @@
 	  </div>
 	  <%= lazy_image_tag('/kata/support.png', alt: 'CoderDojo in Minecraft', min: true) %>
 
-	  <div>
-	    <div>
-	      <p style='margin: 30px auto'>CoderDojo は国内外のパートナー企業から様々な支援を得ております。承認された Dojo では、必要に応じて次の支援を得ることができます。<a href="/kata#startup">CoderDojo を立ち上げて</a>、承認されたら、ぜひご活用ください 😆</p>
-	      <ul>
-		<li>
-		  <h4 id='coderdojo-globalslack'>CoderDojo Global Slack (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</h4>
-		  <p>世界中の Dojo 関係者が集まる連絡網 (Slack) があります。英語でのコミュニケーションとなりますが、世界中の Dojo と情報交換できる貴重な場ですので、よければ<b><%= link_to 'コチラ', foundation_url('/coderdojo-global-slack/') %></b></a>から申請してみてください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='support-online-sessions'>オンライン開催用ビデオ会議 (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</h4>
-		  <p>CoderDojo 承認時にもらえる「道場名@coderdojo.com」というメールアドレスを使って、ビデオ会議サービスの <a href="https://zoom.us/docs/jp-jp/jp-info.html">Zoom</a> や <a href="https://apps.google.com/intl/ja/meet/">Google Meet</a> を使うと、時間制限などが一部解除された状態でご利用いただけます。詳細は「<%= link_to 'Three options for running your CoderDojo sessions (英語)', foundation_url('/2020/08/28/three-options-for-running-your-coderdojo-sessions') %>」をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='coderdojo-japan-champions'>CoderDojo Japan Champions (提供: <a href="https://takadanobaba.keizai.biz/column/1/">CoderDojo Japan</a>)</h4>
-		  <p>日本全国の Dojo 代表者限定の非公開 Facebook グループもあります。このグループでは運営に関する相談や、運営者向けの非公開情報などを共有しています。Dojo が承認されたら<a href="https://www.facebook.com/groups/coderdojo.jp.champions/"><strong>コチラ</strong></a>からお気軽に申請してください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='coderdojo-promotion'>coderdojo.jp と近日開催の道場への掲載 (提供: <%= link_to 'CoderDojo Japan', root_path %>)</h4>
-		  <p>希望する Dojo は、いつでも <%= link_to 'coderdojo.jp に掲載', dojos_path  %>することができます。また、<a href="https://www.doorkeeper.jp/">Doorkeeper</a> や <a href="https://connpass.com/">connpass</a> でイベントを管理・作成している場合は、<%= link_to '近日開催の道場', events_path %>からイベントが自動的に周知されるようになります。準備ができたら<b><%= link_to 'コチラ', signup_path %></b>から申請してください! 😸</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='doorkeeper-sponsorship'>Doorkeeper スポンサーシップ (提供: <a href="https://yasslab.jp/ja/">YassLab</a> & <a href="https://www.doorkeeper.jp/">Doorkeeper</a>)</h4>
-		  <p>希望する Dojo は、有償のイベント管理サービス「<a href="https://www.doorkeeper.jp/">Doorkeeper</a>」を無償でご利用いただけます。ご希望の Dojo は、YassLab 社が提供する <a href="https://yasslab.jp/ja/doorkeeper/"><strong>Doorkeeper スポンサーシップ</strong></a>からお気軽に申請してください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='sakura-internet'>さくらのクラウド (提供: <a href="https://www.sakura.ad.jp/">さくらインターネット</a>)</h4>
-		  <p>希望する Dojo は、さくらインターネットが提供するクラウドサーバー (<a href="http://cloud.sakura.ad.jp/">さくらのクラウド</a>) を利用することができます。サーバーを得るための手順については、CoderDojo Japan が提供する <a href="https://github.com/coderdojo-japan/dojopaas"><strong>DojoPaaS</strong></a> をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='progate'>Progate 法人プラン (提供: <a href="https://prog-8.com/">Progate</a>)</h4>
-		  <p>希望する Dojo は、プログラミング学習サービス「Progate」の<a href="https://prtimes.jp/main/html/rd/p/000000045.000015015.html">法人プラン</a>が利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2602207313204212/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='hackforplay'>HackforPlay 法人プラン (提供: <a href="http://hackforplay.xyz/">HackforPlay</a>)</h4>
-		  <p>希望する Dojo は、ゲームを作りながらプログラミングが学べるWebサービス「HackforPlay」の<a href="https://www.hackforplay.xyz/pages/post/enterprise">法人プラン</a>を利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2801692616589013/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='topsic'>プログラミング問題 TOPSIC (提供: <a href="https://products.sint.co.jp/topsic">TOPSIC</a>)</h4>
-		  <p>希望する Dojo は、プログラミング問題を解いて学ぶサービス「TOPSIC」が利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2304609409630672/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='esa'>ドキュメント共有サービス (提供: <a href="https://esa.io/">esa.io</a>)</h4>
-		  <p>自律的なチームのためのドキュメント共有サービス「<a href="https://esa.io/">esa.io</a>」が利用できます。「情報を育てる」がコンセプトのサービスで、メンターや参加者と共有したい情報を貯めていきたいときに便利です。詳細は<a href="https://docs.esa.io/posts/239"><strong>コチラ</strong></a>から! (\( ⁰⊖⁰)/)</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='tfabworks'>TFabWorks製品の無償レンタル (提供: <a href="https://tfabworks.com/">TFabWorks</a>)</h4>
-		  <p>希望する Dojo は、TFabWorks 製品を中心とした micro:bit キットの無償レンタルプログラムに申請できます。ご希望の道場は、TFabWorks 社が提供する<a href="https://tfabworks.com/coderdojo-rental/"><strong>コチラ</strong></a>からお申し込みください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='grips'>教育用ロボットアームの無償レンタル (提供: <a href="https://grips.co.jp/">GRIPS</a>)</h4>
-		  <p>希望する Dojo は、プログラミングできる教育用ロボットアーム「Dobot Magician Lite」がレンタルできます。同プログラムの詳細および申込フォームについては<strong><a href="https://news.coderdojo.jp/2021/04/28/dobot-rental-program/">コチラ</a></strong>をご参照ください。</p>
-		  <br>
-		</li>
-		<li>
-		  <h4 id='pokemon'>プログラミングでポケモンをうごかしてみよう (提供: <a href="https://news.coderdojo.jp/2021/04/23/programming-with-pokemon/">ポケモン</a>)</h4>
-		  <p>希望する Dojo は、所定の手続きを経た上で、ワークショッププログラム「プログラミングでポケモンをうごかしてみよう」を実施できます。詳細は <strong><a href="https://www.facebook.com/groups/coderdojo.jp.champions/posts/3845580288866902/">Champions グループの投稿</a></strong>をご参照ください。</p>
-		</li>
-	      </ul>
+	  <p style='margin: 30px auto'>CoderDojo は国内外のパートナー企業から様々な支援を得ております。承認された Dojo では、必要に応じて次の支援を得ることができます。<a href="/kata#startup">CoderDojo を立ち上げて</a>、承認されたら、ぜひご活用ください 😆</p>
+	  <ul>
+	    <li>
+	      <h4 id='coderdojo-globalslack'>CoderDojo Global Slack (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</h4>
+	      <p>世界中の Dojo 関係者が集まる連絡網 (Slack) があります。英語でのコミュニケーションとなりますが、世界中の Dojo と情報交換できる貴重な場ですので、よければ<b><%= link_to 'コチラ', foundation_url('/coderdojo-global-slack/') %></b></a>から申請してみてください。</p>
 	      <br>
-	      <p>一般社団法人 CoderDojo Japan では様々な企業・団体との連携を承っています。全国の CoderDojo との協力・提携に興味ありましたら、下記ページをご参照してください。</p>
-	      <p><strong><%= link_to '🤝 パートナーシップのご案内 - CoderDojo Japan', doc_path('about-partnership') %></strong></p>
+	    </li>
+	    <li>
+	      <h4 id='support-online-sessions'>オンライン開催用ビデオ会議 (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</h4>
+	      <p>CoderDojo 承認時にもらえる「道場名@coderdojo.com」というメールアドレスを使って、ビデオ会議サービスの <a href="https://zoom.us/docs/jp-jp/jp-info.html">Zoom</a> や <a href="https://apps.google.com/intl/ja/meet/">Google Meet</a> を使うと、時間制限などが一部解除された状態でご利用いただけます。詳細は「<%= link_to 'Three options for running your CoderDojo sessions (英語)', foundation_url('/2020/08/28/three-options-for-running-your-coderdojo-sessions') %>」をご参照ください。</p>
 	      <br>
+	    </li>
+	    <li>
+	      <h4 id='coderdojo-japan-champions'>CoderDojo Japan Champions (提供: <a href="https://takadanobaba.keizai.biz/column/1/">CoderDojo Japan</a>)</h4>
+	      <p>日本全国の Dojo 代表者限定の非公開 Facebook グループもあります。このグループでは運営に関する相談や、運営者向けの非公開情報などを共有しています。Dojo が承認されたら<a href="https://www.facebook.com/groups/coderdojo.jp.champions/"><strong>コチラ</strong></a>からお気軽に申請してください。</p>
 	      <br>
-	      <h3 id='docs-for-organizers'>📚 Dojo 運営者向け！役立つ資料まとめ</h3>
-	      <p>法人からの支援だけでなく、CoderDojo コミュニティが CoderDojo コミュニティのために制作した資料もあります。皆さんの Dojo 運営にお役立てください 😉</p>
+	    </li>
+	    <li>
+	      <h4 id='coderdojo-promotion'>coderdojo.jp と近日開催の道場への掲載 (提供: <%= link_to 'CoderDojo Japan', root_path %>)</h4>
+	      <p>希望する Dojo は、いつでも <%= link_to 'coderdojo.jp に掲載', dojos_path  %>することができます。また、<a href="https://www.doorkeeper.jp/">Doorkeeper</a> や <a href="https://connpass.com/">connpass</a> でイベントを管理・作成している場合は、<%= link_to '近日開催の道場', events_path %>からイベントが自動的に周知されるようになります。準備ができたら<b><%= link_to 'コチラ', signup_path %></b>から申請してください! 😸</p>
 	      <br>
-	      <ul>
-		<li>
-		  <h4 id='doc-dojo-startup'><a href="https://bit.ly/coderdojo-starter-kit-for-champions">Dojo 運営・企画資料 - はじめて CoderDojo を立ち上げる方のために</a></h4>
-		  <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-hibarigaoka-example'><a href="https://www.slideshare.net/mniizuma/ss-123239560">CoderDojo ひばりヶ丘の活動事例</a></h4>
-		  <p>by <a href="https://coderdojo.hanare-hibari.info/">CoderDojo ひばりヶ丘</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-owari-example'><a href="https://coderdojoowari.org/news/how-to-start-owari">CoderDojo 尾張の作り方</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-online-sessions'><a href="https://docs.google.com/document/d/1ufOVvxD8wLBvDixgE-33Ltroeae8cQ2DlsEsKUkaK00/edit">オンライン道場の開催方法</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-private-dojo'><a href="https://education.microsoft.com/Story/Lesson?token=1Ofpv">Private CoderDojo を学校内に立ち上げる方法</a></h4>
-		  <p>by <a href="https://sites.google.com/view/coderdojomusamura/">CoderDojo 武蔵村山</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-fundrasing-methods'><%= link_to '資金を募るときの活動事例', doc_path('fundraising-methods') %></h4>
-		  <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
-		</li>
-		<li>
-		  <h4 id='doc-fundraising-guidelines'><%= link_to '資金を募るときの注意点', doc_path('fundraising-guidelines') %></h4>
-		  <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-contribution'><a href="https://www.slideshare.net/y3sei/dojoconjapan2018workshopcontribute-by-hikari">自分にできる貢献の仕方を見つけよう</a></h4>
-		  <p>by <a href="https://coderdojo-hikari.com">CoderDojo 光</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-mentors-in-kichijoji'><a href="https://kichijojijp.wixsite.com/coderdojo/for-menter">メンターをする人へ</a></h4>
-		  <p>by <a href="https://kichijojijp.wixsite.com/coderdojo">CoderDojo 吉祥寺</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-mentors-in-nishinomiya'><a href="https://www.slideshare.net/tomoyukisugita/dojocon-japan2018">メンターの心得</a></h4>
-		  <p>by <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮/梅田</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-mentor-agreement-example'><a href="https://github.com/coderdojo-nishinomiya-umeda/document/blob/master/MentorAgreement.md">メンター同意書の作成例</a></h4>
-		  <p>by <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮/梅田</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-mentoring-without-technical-skills'><a href="https://www.slideshare.net/taniokah/mentoring-without-technical-skills-124569781">Mentoring without Technical Skills (日本語訳)</a></h4>
-		  <p>by <a href="https://cdtokushima.github.io/open/">CoderDojo 徳島</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-mentors-in-owari'><a href="https://docs.google.com/presentation/d/1H4zLDRIP28S7tkoARKo2qoPybNrLViGsK8VYsAXDM7g/edit#slide=id.p">メンター・サポーター事前打ち合わせ</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-mentors-in-ise'><a href="https://drive.google.com/file/d/0B0iP2Y_R2PEEZHcwQjNmSjR3SUk/view">CoderDojo メンター用資料</a></h4>
-		  <p>by <a href="https://coderdojo-ise.jimdo.com/">CoderDojo 伊勢</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-zen-signup'><a href="https://coderdojo-gifu.org/how-to-register">Zen のアカウント作成 & 参加申し込み方法</a></h4>
-		  <p>by <a href="https://coderdojo-gifu.org/">CoderDojo 岐阜</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-for-emergency'><a href="https://coderdojoowari.org/about/emergency">台風・災害・緊急の時</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-terms-example-in-owari'><a href="https://docs.google.com/document/d/1_BHBxqb_uK1bHV-_ZA7nx9wADmKV8rsNWebkV3QUNOQ/edit#heading=h.liei7p1jhrxs">CoderDojo Owari 規約</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-terms-example-in-kodaira'><a href="https://drive.google.com/file/d/0B4RWVH6FrM8aUl9zdldWXzJBWGM/view">コーダー道場こだいら 会則</a></h4>
-		  <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-dojo-to-dojo'><a href="https://www.slideshare.net/togazo/decadojo7may2017">DojoとDojo、そして地域！みんなつながる合同イベントのすすめ</a></h4>
-		  <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-workshop-example'><a href="https://bit.ly/coderdojo-facilitators-guide">CoderDojo 初参加者向けワークショップ (スライド資料)</a></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <a href="https://dojocon2019.coderdojo.jp/workshop/1/">DojoCon Japan 2019 実行委員会</a></p>
-		</li>
-		<li>
-		  <h4 id='doc-recommended-practice'><%= link_to '推奨活動ガイドライン', doc_path('recommended-practice') %></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
-		</li>
-		<li>
-		  <h4 id='doc-nameing-guidelines'><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
-		</li>
-		<li>
-		  <h4 id='doc-regional-license'><%= link_to 'CoderDojo 地域ライセンス契約書 (日英併記)', doc_path('regional-license') %></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
-		</li>
-		<li>
-		  <h4 id='doc-create-a-dojo'><%= link_to 'Create a Dojo (英語)', foundation_url('/start-a-dojo/') %></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
-		</li>
-	      </ul>
+	    </li>
+	    <li>
+	      <h4 id='doorkeeper-sponsorship'>Doorkeeper スポンサーシップ (提供: <a href="https://yasslab.jp/ja/">YassLab</a> & <a href="https://www.doorkeeper.jp/">Doorkeeper</a>)</h4>
+	      <p>希望する Dojo は、有償のイベント管理サービス「<a href="https://www.doorkeeper.jp/">Doorkeeper</a>」を無償でご利用いただけます。ご希望の Dojo は、YassLab 社が提供する <a href="https://yasslab.jp/ja/doorkeeper/"><strong>Doorkeeper スポンサーシップ</strong></a>からお気軽に申請してください。</p>
 	      <br>
+	    </li>
+	    <li>
+	      <h4 id='sakura-internet'>さくらのクラウド (提供: <a href="https://www.sakura.ad.jp/">さくらインターネット</a>)</h4>
+	      <p>希望する Dojo は、さくらインターネットが提供するクラウドサーバー (<a href="http://cloud.sakura.ad.jp/">さくらのクラウド</a>) を利用することができます。サーバーを得るための手順については、CoderDojo Japan が提供する <a href="https://github.com/coderdojo-japan/dojopaas"><strong>DojoPaaS</strong></a> をご参照ください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='progate'>Progate 法人プラン (提供: <a href="https://prog-8.com/">Progate</a>)</h4>
+	      <p>希望する Dojo は、プログラミング学習サービス「Progate」の<a href="https://prtimes.jp/main/html/rd/p/000000045.000015015.html">法人プラン</a>が利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2602207313204212/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='hackforplay'>HackforPlay 法人プラン (提供: <a href="http://hackforplay.xyz/">HackforPlay</a>)</h4>
+	      <p>希望する Dojo は、ゲームを作りながらプログラミングが学べるWebサービス「HackforPlay」の<a href="https://www.hackforplay.xyz/pages/post/enterprise">法人プラン</a>を利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2801692616589013/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='topsic'>プログラミング問題 TOPSIC (提供: <a href="https://products.sint.co.jp/topsic">TOPSIC</a>)</h4>
+	      <p>希望する Dojo は、プログラミング問題を解いて学ぶサービス「TOPSIC」が利用できます。利用方法については、全国の Dojo 代表者が参加する <a href="https://www.facebook.com/groups/coderdojo.jp.champions/permalink/2304609409630672/"><strong>Champions グループの投稿</strong></a>をご参照ください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='esa'>ドキュメント共有サービス (提供: <a href="https://esa.io/">esa.io</a>)</h4>
+	      <p>自律的なチームのためのドキュメント共有サービス「<a href="https://esa.io/">esa.io</a>」が利用できます。「情報を育てる」がコンセプトのサービスで、メンターや参加者と共有したい情報を貯めていきたいときに便利です。詳細は<a href="https://docs.esa.io/posts/239"><strong>コチラ</strong></a>から! (\( ⁰⊖⁰)/)</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='tfabworks'>TFabWorks製品の無償レンタル (提供: <a href="https://tfabworks.com/">TFabWorks</a>)</h4>
+	      <p>希望する Dojo は、TFabWorks 製品を中心とした micro:bit キットの無償レンタルプログラムに申請できます。ご希望の道場は、TFabWorks 社が提供する<a href="https://tfabworks.com/coderdojo-rental/"><strong>コチラ</strong></a>からお申し込みください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='grips'>教育用ロボットアームの無償レンタル (提供: <a href="https://grips.co.jp/">GRIPS</a>)</h4>
+	      <p>希望する Dojo は、プログラミングできる教育用ロボットアーム「Dobot Magician Lite」がレンタルできます。同プログラムの詳細および申込フォームについては<strong><a href="https://news.coderdojo.jp/2021/04/28/dobot-rental-program/">コチラ</a></strong>をご参照ください。</p>
+	      <br>
+	    </li>
+	    <li>
+	      <h4 id='pokemon'>プログラミングでポケモンをうごかしてみよう (提供: <a href="https://news.coderdojo.jp/2021/04/23/programming-with-pokemon/">ポケモン</a>)</h4>
+	      <p>希望する Dojo は、所定の手続きを経た上で、ワークショッププログラム「プログラミングでポケモンをうごかしてみよう」を実施できます。詳細は <strong><a href="https://www.facebook.com/groups/coderdojo.jp.champions/posts/3845580288866902/">Champions グループの投稿</a></strong>をご参照ください。</p>
+	    </li>
+	  </ul>
+	  <br>
+	  <p>一般社団法人 CoderDojo Japan では様々な企業・団体との連携を承っています。全国の CoderDojo との協力・提携に興味ありましたら、下記ページをご参照してください。</p>
+	  <p><strong><%= link_to '🤝 パートナーシップのご案内 - CoderDojo Japan', doc_path('about-partnership') %></strong></p>
+	  <br>
 
-	      <h3 id='references'>🌐 他、関連リンク</h3>
-	      <p>CoderDojo は国際的なコミュニティで、海外でも大きな輪が広がっています。ぜひ国内外の CoderDojo と繋がってみてください。</p>
-	      <br>
-	      <p><strong>英語</strong> (運営: CoderDojo Foundation)</p>
-	      <ul>
-		<li>
-		  <p><%= link_to 'Webサイト', foundation_url('/') %> (coderdojo.com)</p>
-		</li>
-		<li>
-		  <p><%= link_to '世界の道場', zen_url %> (CoderDojo Zen)</p>
-		</li>
-		<li>
-		  <p><a href="https://twitter.com/CoderDojo">Twitter アカウント</a> (@CoderDojo)</p>
-		</li>
-		<li>
-		  <p><%= link_to 'CoderDojo Global Slack', foundation_url('/coderdojo-global-slack/') %> (チャットツール)</p>
-		</li>
-		<li>
-		  <p><a href="https://github.com/coderdojo">GitHub Organization</a> (ソースコード共有用)</p>
-		</li>
-	      </ul>
-	      <br>
-	      <br>
-	      <p><strong>日本語</strong> (運営: CoderDojo Japan)</p>
-	      <ul>
-		<li>
-		  <p><%= link_to 'Webサイト', root_path %> (coderdojo.jp)</p>
-		</li>
-		<li>
-		  <p><%= link_to '近日開催の道場', events_path %> (coderdojo.jp)</p>
-		</li>
-		<li>
-		  <p><a href="https://twitter.com/coderdojojapan">Twitter アカウント</a> (最新情報を発信します)</p>
-		</li>
-		<li>
-		  <p><a href="Facebook (一般公開グループ)">Facebook グループ</a> (開催報告・相談用グループ)</p>
-		</li>
-		<li>
-		  <p><a href="http://github.com/coderdojo-japan">GitHub Organization</a> (ソースコード共有用)</p>
-		</li>
-	      </ul>
-	    </div>
-	  </div>
+	  <h3 id='docs-for-organizers'>📚 Dojo 運営者向け！役立つ資料まとめ</h3>
+	  <p>法人からの支援だけでなく、CoderDojo コミュニティが CoderDojo コミュニティのために制作した資料もあります。皆さんの Dojo 運営にお役立てください 😉</p>
+	  <br>
+	  <ul>
+	    <li>
+	      <h4 id='doc-dojo-startup'><a href="https://bit.ly/coderdojo-starter-kit-for-champions">Dojo 運営・企画資料 - はじめて CoderDojo を立ち上げる方のために</a></h4>
+	      <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-hibarigaoka-example'><a href="https://www.slideshare.net/mniizuma/ss-123239560">CoderDojo ひばりヶ丘の活動事例</a></h4>
+	      <p>by <a href="https://coderdojo.hanare-hibari.info/">CoderDojo ひばりヶ丘</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-owari-example'><a href="https://coderdojoowari.org/news/how-to-start-owari">CoderDojo 尾張の作り方</a></h4>
+	      <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-online-sessions'><a href="https://docs.google.com/document/d/1ufOVvxD8wLBvDixgE-33Ltroeae8cQ2DlsEsKUkaK00/edit">オンライン道場の開催方法</a></h4>
+	      <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-private-dojo'><a href="https://education.microsoft.com/Story/Lesson?token=1Ofpv">Private CoderDojo を学校内に立ち上げる方法</a></h4>
+	      <p>by <a href="https://sites.google.com/view/coderdojomusamura/">CoderDojo 武蔵村山</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-fundrasing-methods'><%= link_to '資金を募るときの活動事例', doc_path('fundraising-methods') %></h4>
+	      <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-fundraising-guidelines'><%= link_to '資金を募るときの注意点', doc_path('fundraising-guidelines') %></h4>
+	      <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-contribution'><a href="https://www.slideshare.net/y3sei/dojoconjapan2018workshopcontribute-by-hikari">自分にできる貢献の仕方を見つけよう</a></h4>
+	      <p>by <a href="https://coderdojo-hikari.com">CoderDojo 光</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-mentors-in-kichijoji'><a href="https://kichijojijp.wixsite.com/coderdojo/for-menter">メンターをする人へ</a></h4>
+	      <p>by <a href="https://kichijojijp.wixsite.com/coderdojo">CoderDojo 吉祥寺</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-mentors-in-nishinomiya'><a href="https://www.slideshare.net/tomoyukisugita/dojocon-japan2018">メンターの心得</a></h4>
+	      <p>by <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮/梅田</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-mentor-agreement-example'><a href="https://github.com/coderdojo-nishinomiya-umeda/document/blob/master/MentorAgreement.md">メンター同意書の作成例</a></h4>
+	      <p>by <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮/梅田</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-mentoring-without-technical-skills'><a href="https://www.slideshare.net/taniokah/mentoring-without-technical-skills-124569781">Mentoring without Technical Skills (日本語訳)</a></h4>
+	      <p>by <a href="https://cdtokushima.github.io/open/">CoderDojo 徳島</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-mentors-in-owari'><a href="https://docs.google.com/presentation/d/1H4zLDRIP28S7tkoARKo2qoPybNrLViGsK8VYsAXDM7g/edit#slide=id.p">メンター・サポーター事前打ち合わせ</a></h4>
+	      <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-mentors-in-ise'><a href="https://drive.google.com/file/d/0B0iP2Y_R2PEEZHcwQjNmSjR3SUk/view">CoderDojo メンター用資料</a></h4>
+	      <p>by <a href="https://coderdojo-ise.jimdo.com/">CoderDojo 伊勢</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-zen-signup'><a href="https://coderdojo-gifu.org/how-to-register">Zen のアカウント作成 & 参加申し込み方法</a></h4>
+	      <p>by <a href="https://coderdojo-gifu.org/">CoderDojo 岐阜</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-for-emergency'><a href="https://coderdojoowari.org/about/emergency">台風・災害・緊急の時</a></h4>
+	      <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-terms-example-in-owari'><a href="https://docs.google.com/document/d/1_BHBxqb_uK1bHV-_ZA7nx9wADmKV8rsNWebkV3QUNOQ/edit#heading=h.liei7p1jhrxs">CoderDojo Owari 規約</a></h4>
+	      <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-terms-example-in-kodaira'><a href="https://drive.google.com/file/d/0B4RWVH6FrM8aUl9zdldWXzJBWGM/view">コーダー道場こだいら 会則</a></h4>
+	      <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-dojo-to-dojo'><a href="https://www.slideshare.net/togazo/decadojo7may2017">DojoとDojo、そして地域！みんなつながる合同イベントのすすめ</a></h4>
+	      <p>by <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-workshop-example'><a href="https://bit.ly/coderdojo-facilitators-guide">CoderDojo 初参加者向けワークショップ (スライド資料)</a></h4>
+	      <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <a href="https://dojocon2019.coderdojo.jp/workshop/1/">DojoCon Japan 2019 実行委員会</a></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-recommended-practice'><%= link_to '推奨活動ガイドライン', doc_path('recommended-practice') %></h4>
+	      <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-nameing-guidelines'><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></h4>
+	      <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-regional-license'><%= link_to 'CoderDojo 地域ライセンス契約書 (日英併記)', doc_path('regional-license') %></h4>
+	      <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    </li>
+	    <li>
+	      <h4 id='doc-create-a-dojo'><%= link_to 'Create a Dojo (英語)', foundation_url('/start-a-dojo/') %></h4>
+	      <p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
+	    </li>
+	  </ul>
+	  <br>
+
+	  <h3 id='references'>🌐 他、関連リソース</h3>
+	  <p>CoderDojo は国際的なコミュニティで、海外でも大きな輪が広がっています。ぜひ国内外の CoderDojo と繋がってみてください。</p>
+	  <br>
+	  <h4>英語リソース <span style="font-weight: normal; font-size: 14px;">(運営: CoderDojo Foundation)</span></h4>
+	  <ul>
+	    <li>
+	      <p><%= link_to 'Webサイト', foundation_url('/') %> (coderdojo.com)</p>
+	    </li>
+	    <li>
+	      <p><%= link_to '世界の道場', zen_url %> (CoderDojo Zen)</p>
+	    </li>
+	    <li>
+	      <p><a href="https://twitter.com/CoderDojo">Twitter アカウント</a> (@CoderDojo)</p>
+	    </li>
+	    <li>
+	      <p><%= link_to 'CoderDojo Global Slack', foundation_url('/coderdojo-global-slack/') %> (チャットツール)</p>
+	    </li>
+	    <li>
+	      <p><a href="https://github.com/coderdojo">GitHub Organization</a> (ソースコード共有用)</p>
+	    </li>
+	  </ul>
+	  <br>
+	  <h4>日本語リソース <span style="font-weight: normal; font-size: 14px;">(運営: CoderDojo Japan)</span></h4>
+	  <ul>
+	    <li>
+	      <p><%= link_to 'Webサイト', root_path %> (coderdojo.jp)</p>
+	    </li>
+	    <li>
+	      <p><%= link_to '近日開催の道場', events_path %> (coderdojo.jp)</p>
+	    </li>
+	    <li>
+	      <p><a href="https://twitter.com/coderdojojapan">Twitter アカウント</a> (最新情報を発信します)</p>
+	    </li>
+	    <li>
+	      <p><a href="Facebook (一般公開グループ)">Facebook グループ</a> (開催報告・相談用グループ)</p>
+	    </li>
+	    <li>
+	      <p><a href="http://github.com/coderdojo-japan">GitHub Organization</a> (ソースコード共有用)</p>
+	    </li>
+	  </ul>
 
 	  <div>
 	    <div id="faq" class="headline-anchor"></div>
