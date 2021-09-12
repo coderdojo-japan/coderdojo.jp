@@ -439,7 +439,7 @@
 
 # 木更津
 - dojo_id: 83
-  name: facebook #2019年6月からは connpass
+  name: facebook # connpassと併用
   group_id: 1273279189459638
   url: https://www.facebook.com/coderdojokisarazu/events/
 - dojo_id: 83
