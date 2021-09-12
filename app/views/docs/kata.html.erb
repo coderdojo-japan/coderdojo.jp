@@ -28,333 +28,331 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fontsize-bigger">
 	<!-- Migrated contents from Scrivito (= scrivito_tag :div, @obj, :body) -->
+	<div id="README" class="headline-anchor"></div>
+	<h2 class="headline">はじめに</h2>
+	<p>Kata (型) では、全国の CoderDojo から公開された役立つ資料を共有したり (<strong><a href="#learn">学ぶ</a></strong>)、力をつけた子どもが<strong><a href="#challenge">腕試し</a></strong>できるプログラミングコンテスト情報をまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo が受けられる<strong><a href="#support">支援</a></strong>、<strong><a href="#faq">よくある質問と回答</a></strong> (FAQ) についてもまとめています。</p>
+	<br>
+
+	<h3 id='coderdojo-is'>CoderDojo とは? ☯️</h3>
+	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
+	<br>
+	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
+	<%= lazy_image_tag('/kata/coderdojo-zero.png', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 100px;', min: true) %>
+	
+	<h3 id='welcome'>まず何を読むといい？ 🤔</h3>
+	<p>初めての方向けには次の資料をオススメしています。スライドや動画、インタビュー記事を見ると CoderDojo の雰囲気が掴めます。</p>
+	<br>
+	<ul>
+	  <li>
+	    <p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/pub?start=false&amp;loop=false">CoderDojo へようこそ! (スライド)</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.youtube.com/watch?v=VEcFnEYT6mQ">CoderDojo ってなんかのおぅ? (動画)</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.youtube.com/watch?v=gLDue2xb1j8">あなたが Dojo に来る理由は何ですか? (動画)</a></p>
+	  </li>
+	</ul>
+	<br>
+	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本各地の道場', dojos_path %></a>や<%= link_to '近日開催の道場', events_path %>、<%= link_to 'CoderDojo Zen (地図)', zen_url %> から最寄りの道場を探してみましょう!</p>
+	<br>
+
+	<h3 id='details'>もっと詳しく知りたい場合は？ 👀</h3>
+	<p>CoderDojo は書籍・新聞、Webメディアでも紹介されています。CoderDojo について紹介している記事や書籍を新しい順でご紹介します。興味のあるトピックがあればぜひ読んでみてください。</p>
+	<br>
+
+	<h4 id='newspapers'>📰 新聞・書籍</h4>
+	<ul>
+	  <li>
+	    <p><a href="https://the-japan-news.com/news/article/0007690557">Free coding sessions to move Pokemon characters surges in popularity - The Japan News</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://takadanobaba.keizai.biz/headline/656/">プログラミングでポケモンを動かすワークショップ、全国のコーダー道場で実現 - 高田馬場経済新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://amazon.co.jp/dp/B08BWFL2B9/">情報処理 2020年8月号 (特集「プログラミング教育の最前線」 - 地域におけるプログラミング学習コミュニティ CoderDojo の果たす役割)</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://takadanobaba.keizai.biz/headline/467/">女子小中学生とグーグル女性エンジニアのオンライン交流「コーダー道場」参加者募集 - 高田馬場経済新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://mainichi.jp/articles/20190829/k00/00m/040/088000c">プログラミング教育の地域格差が課題に。民間団体や若手起業家らに注目 - 毎日新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.yomiuri.co.jp/teen/junior/jnews/20190708-OYT8T50018/">無料でプログラミングが学べる道場って、どんなところ？ - 読売新聞オンライン</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://takadanobaba.keizai.biz/headline/187/">アイルランド発プログラミング道場の創始者が高田馬場でトークイベント</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://takadanobaba.keizai.biz/column/1/">CoderDojo Japan 特集インタビュー - 高田馬場経済新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://www.impressrd.jp/news/171004/NP">シビックテックイノベーション - インプレスR&D</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://shunan.keizai.biz/headline/210/">光市で子ども向けプログラミング道場 県内初の「CoderDojo」- 周南経済新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://mainichi.jp/articles/20170807/kei/00s/00s/014000c">Ｌｅｔ’ｓプログラミング コーダー道場に行ってみよう - 毎日新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://chofu.keizai.biz/headline/2420/">調布でプログラミング体験イベント盛況　参加者増加も人手不足が課題 - 調布経済新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://www.sotechsha.co.jp/pc/html/1151.htm">CoderDojo Japan公式ブック - Scratch(スクラッチ)でつくる! たのしむ!　プログラミング道場 | ソーテック社</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.facebook.com/groups/coderdojo.jp/permalink/1067818389998226/">20年度、小学校で必修科　論理的思考育む機会にも - 朝日新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.amazon.co.jp/dp/4822238814/">日経Kids+ 子どもと一緒に楽しむ! プログラミング(日経ホームマガジン)</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://www.sotechsha.co.jp/pc/html/1151.htm">CoderDojo Japan公式ブック - Scratch(スクラッチ)でつくる! たのしむ!　プログラミング道場 | ソーテック社</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.facebook.com/groups/coderdojo.jp/permalink/1067818389998226/">20年度、小学校で必修化。論理的思考育む機会にも - 朝日新聞</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://ec.nikkeibp.co.jp/item/books/255990.html">日経Kids＋　親子で始めるプログラミング </a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://store.toyokeizai.net/magazine/toyo/20160516/">今すぐ始めるプログラミング | 週刊東洋経済 2016年5月21日号</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://book.impress.co.jp/books/1114101123">子どもにプログラミングを学ばせるべき 6 つの理由 「21 世紀型スキル」で社会を生き抜く - インプレス</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.facebook.com/note.php?note_id=321408997945053&amp;id=204862942932993">Kids are coding it for themselves - Nikkei Asian Review</a></p>
+	  </li>
+	</ul>
+	<br>
+
+	<h4 id='press-releases'>📜 Webメディア・プレスリリース</h4>
+	<ul>
+	  <li>
+	    <p><a href="https://withyou.pokemon.co.jp/activity/ict_education/">POKÉMON with YOU - ポケモンはいつもキミといっしょ - (ICT教育支援)</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://prtimes.jp/main/html/rd/p/000000003.000038935.html">プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に。</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://prtimes.jp/main/html/rd/p/000000002.000038935.html">TFabWorksと連携し、micro:bitなどの無償レンタルプログラムを全国のCoderDojo向けに提供</a></p>
+	  </li>
+	  <li>
+	    <p><%= link_to 'How the CoderDojo community in Japan has adapted to change', foundation_url('/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/') %></p>
+	  </li>
+	  <li>
+	    <p><a href="https://www.watch.impress.co.jp/kodomo_it/news/1203065.html">こどもとIT - Wi-Fi付シングルボードコンピューター「Halocode」を子どもたちと一緒にいじってみた - Impress Watch</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://persol-tech-s.co.jp/i-engineer/human/coderdojo">プログラミング未経験だった経済学部生が、CoderDojoと出会いITの奥深さに気づけた理由 - i ENGINEER</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://myfuna.net/archives/townnews/%E5%AD%90%E3%81%A9%E3%82%82%E3%81%8C%E7%84%A1%E6%96%99%E3%81%A7%E5%AD%A6%E3%81%B9%E3%82%8B%E3%80%8Ccoderdojo%EF%BC%88%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%EF%BC%89%E3%80%8D%E3%80%81">子どもが無料で学べる「CoderDojo（コーダー道場）」、船橋でも今月末に開催へ - MyFunaねっと</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://www.itmedia.co.jp/news/articles/1705/29/news132.html">Raspberry Pi、子どもプログラミング道場CoderDojoと統合 - ITmedia</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://itpro.nikkeibp.co.jp/atcl/interview/14/262522/102600287/">「教わるのではなく学び取る」、子供向けプログラミング道場「CoderDojo」が全国で急増中：ITpro</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場「CoderDojo」をはじめてみませんか - ICT教育ニュース</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://berd.benesse.jp/special/manabi/manabi_10.php">「自由」というルールを共有し、プログラミングの学習機会を提供する CoderDojo Japan - ベネッセ教育総合研究所</a><a href="http://bakemono.jp/reading/blog/web/2256/"><br></a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://4yuuu.com/articles/view/473532">実は日本に40もある！参加費無料の「プログラミング道場」って？ | 4yuuu!</a></p>
+	  </li>
+	  <li>
+	    <p><a href="http://bakemono.jp/reading/blog/web/2256/">子ども向け無料プログラミング道場、CoderDojoとは？　運営者に話を聞いてみた！ | バケモノ.jp</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4">コーダー道場 - Wikipedia</a></p>
+	  </li>
+	  <li>
+	    <p><a href="https://tech.a-listers.jp/2012/05/09/coderdojo-tokyo-1-james-whelton-in-japan/">CoderDojo Tokyo #1 と創始者ジェームズ・ウェルトン氏来日のまとめ | A-Listers</a></p>
+	  </li>
+	</ul>
+	<br>
+	<p>上記の他にも、一般社団法人 CoderDojo Japan が発表したプレスリリースや公式ニュースレターもあります。詳細は <%= link_to 'news.coderdojo.jp', news_url %> をご参照ください 📰</p>
+	<br>
+
+	<div id="learn" class="headline-anchor"></div>
+	<h2 class="headline">📚 学ぶ</h2>
+	<%= lazy_image_tag('/kata/learn.png', alt: 'CoderDojo 梅田の様子', style: 'margin-bottom: 30px;', min: true) %>
+
 	<div>
-	  <div id="README" class="headline-anchor"></div>
-	  <h2 class="headline">はじめに</h2>
-	  <p>Kata (型) では、全国の CoderDojo から公開された役立つ資料を共有したり (<strong><a href="#learn">学ぶ</a></strong>)、力をつけた子どもが<strong><a href="#challenge">腕試し</a></strong>できるプログラミングコンテスト情報をまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo が受けられる<strong><a href="#support">支援</a></strong>、<strong><a href="#faq">よくある質問と回答</a></strong> (FAQ) についてもまとめています。</p>
-	  <br>
-
-	  <h3 id='coderdojo-is'>CoderDojo とは? ☯️</h3>
-	  <p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
-	  <br>
-	  <p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
-	  <%= lazy_image_tag('/kata/coderdojo-zero.png', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 100px;', min: true) %>
-	  
-	  <h3 id='welcome'>まず何を読むといい？ 🤔</h3>
-	  <p>初めての方向けには次の資料をオススメしています。スライドや動画、インタビュー記事を見ると CoderDojo の雰囲気が掴めます。</p>
-	  <br>
-	  <ul>
-	    <li>
-	      <p><a href="https://docs.google.com/presentation/d/e/2PACX-1vTukDtBzvD62d9rNLBY1kXp8arXJBnB-Lq6YWSW5oZXoeokGLscob1HNYzmD7mIIxhkoQyCJVoFAFvh/pub?start=false&amp;loop=false">CoderDojo へようこそ! (スライド)</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.youtube.com/watch?v=VEcFnEYT6mQ">CoderDojo ってなんかのおぅ? (動画)</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.youtube.com/watch?v=gLDue2xb1j8">あなたが Dojo に来る理由は何ですか? (動画)</a></p>
-	    </li>
-	  </ul>
-	  <br>
-	  <p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本各地の道場', dojos_path %></a>や<%= link_to '近日開催の道場', events_path %>、<%= link_to 'CoderDojo Zen (地図)', zen_url %> から最寄りの道場を探してみましょう!</p>
-	  <br>
-
-	  <h3 id='details'>もっと詳しく知りたい場合は？ 👀</h3>
-	  <p>CoderDojo は書籍・新聞、Webメディアでも紹介されています。CoderDojo について紹介している記事や書籍を新しい順でご紹介します。興味のあるトピックがあればぜひ読んでみてください。</p>
-	  <br>
-
-	  <h4 id='newspapers'>📰 新聞・書籍</h4>
-	  <ul>
-	    <li>
-	      <p><a href="https://the-japan-news.com/news/article/0007690557">Free coding sessions to move Pokemon characters surges in popularity - The Japan News</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://takadanobaba.keizai.biz/headline/656/">プログラミングでポケモンを動かすワークショップ、全国のコーダー道場で実現 - 高田馬場経済新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://amazon.co.jp/dp/B08BWFL2B9/">情報処理 2020年8月号 (特集「プログラミング教育の最前線」 - 地域におけるプログラミング学習コミュニティ CoderDojo の果たす役割)</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://takadanobaba.keizai.biz/headline/467/">女子小中学生とグーグル女性エンジニアのオンライン交流「コーダー道場」参加者募集 - 高田馬場経済新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://mainichi.jp/articles/20190829/k00/00m/040/088000c">プログラミング教育の地域格差が課題に。民間団体や若手起業家らに注目 - 毎日新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.yomiuri.co.jp/teen/junior/jnews/20190708-OYT8T50018/">無料でプログラミングが学べる道場って、どんなところ？ - 読売新聞オンライン</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://takadanobaba.keizai.biz/headline/187/">アイルランド発プログラミング道場の創始者が高田馬場でトークイベント</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://takadanobaba.keizai.biz/column/1/">CoderDojo Japan 特集インタビュー - 高田馬場経済新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://www.impressrd.jp/news/171004/NP">シビックテックイノベーション - インプレスR&D</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://shunan.keizai.biz/headline/210/">光市で子ども向けプログラミング道場 県内初の「CoderDojo」- 周南経済新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://mainichi.jp/articles/20170807/kei/00s/00s/014000c">Ｌｅｔ’ｓプログラミング コーダー道場に行ってみよう - 毎日新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://chofu.keizai.biz/headline/2420/">調布でプログラミング体験イベント盛況　参加者増加も人手不足が課題 - 調布経済新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://www.sotechsha.co.jp/pc/html/1151.htm">CoderDojo Japan公式ブック - Scratch(スクラッチ)でつくる! たのしむ!　プログラミング道場 | ソーテック社</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.facebook.com/groups/coderdojo.jp/permalink/1067818389998226/">20年度、小学校で必修科　論理的思考育む機会にも - 朝日新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.amazon.co.jp/dp/4822238814/">日経Kids+ 子どもと一緒に楽しむ! プログラミング(日経ホームマガジン)</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://www.sotechsha.co.jp/pc/html/1151.htm">CoderDojo Japan公式ブック - Scratch(スクラッチ)でつくる! たのしむ!　プログラミング道場 | ソーテック社</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.facebook.com/groups/coderdojo.jp/permalink/1067818389998226/">20年度、小学校で必修化。論理的思考育む機会にも - 朝日新聞</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://ec.nikkeibp.co.jp/item/books/255990.html">日経Kids＋　親子で始めるプログラミング </a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://store.toyokeizai.net/magazine/toyo/20160516/">今すぐ始めるプログラミング | 週刊東洋経済 2016年5月21日号</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://book.impress.co.jp/books/1114101123">子どもにプログラミングを学ばせるべき 6 つの理由 「21 世紀型スキル」で社会を生き抜く - インプレス</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.facebook.com/note.php?note_id=321408997945053&amp;id=204862942932993">Kids are coding it for themselves - Nikkei Asian Review</a></p>
-	    </li>
-	  </ul>
-	  <br>
-
-	  <h4 id='press-releases'>📜 Webメディア・プレスリリース</h4>
-	  <ul>
-	    <li>
-	      <p><a href="https://withyou.pokemon.co.jp/activity/ict_education/">POKÉMON with YOU - ポケモンはいつもキミといっしょ - (ICT教育支援)</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://prtimes.jp/main/html/rd/p/000000003.000038935.html">プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に。</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://prtimes.jp/main/html/rd/p/000000002.000038935.html">TFabWorksと連携し、micro:bitなどの無償レンタルプログラムを全国のCoderDojo向けに提供</a></p>
-	    </li>
-	    <li>
-	      <p><%= link_to 'How the CoderDojo community in Japan has adapted to change', foundation_url('/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/') %></p>
-	    </li>
-	    <li>
-	      <p><a href="https://www.watch.impress.co.jp/kodomo_it/news/1203065.html">こどもとIT - Wi-Fi付シングルボードコンピューター「Halocode」を子どもたちと一緒にいじってみた - Impress Watch</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://persol-tech-s.co.jp/i-engineer/human/coderdojo">プログラミング未経験だった経済学部生が、CoderDojoと出会いITの奥深さに気づけた理由 - i ENGINEER</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://myfuna.net/archives/townnews/%E5%AD%90%E3%81%A9%E3%82%82%E3%81%8C%E7%84%A1%E6%96%99%E3%81%A7%E5%AD%A6%E3%81%B9%E3%82%8B%E3%80%8Ccoderdojo%EF%BC%88%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%EF%BC%89%E3%80%8D%E3%80%81">子どもが無料で学べる「CoderDojo（コーダー道場）」、船橋でも今月末に開催へ - MyFunaねっと</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://www.itmedia.co.jp/news/articles/1705/29/news132.html">Raspberry Pi、子どもプログラミング道場CoderDojoと統合 - ITmedia</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://itpro.nikkeibp.co.jp/atcl/interview/14/262522/102600287/">「教わるのではなく学び取る」、子供向けプログラミング道場「CoderDojo」が全国で急増中：ITpro</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://ict-enews.net/zoomin/17coderdojo/">子どものための無料プログラミング道場「CoderDojo」をはじめてみませんか - ICT教育ニュース</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://berd.benesse.jp/special/manabi/manabi_10.php">「自由」というルールを共有し、プログラミングの学習機会を提供する CoderDojo Japan - ベネッセ教育総合研究所</a><a href="http://bakemono.jp/reading/blog/web/2256/"><br></a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://4yuuu.com/articles/view/473532">実は日本に40もある！参加費無料の「プログラミング道場」って？ | 4yuuu!</a></p>
-	    </li>
-	    <li>
-	      <p><a href="http://bakemono.jp/reading/blog/web/2256/">子ども向け無料プログラミング道場、CoderDojoとは？　運営者に話を聞いてみた！ | バケモノ.jp</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4">コーダー道場 - Wikipedia</a></p>
-	    </li>
-	    <li>
-	      <p><a href="https://tech.a-listers.jp/2012/05/09/coderdojo-tokyo-1-james-whelton-in-japan/">CoderDojo Tokyo #1 と創始者ジェームズ・ウェルトン氏来日のまとめ | A-Listers</a></p>
-	    </li>
-	  </ul>
-	  <br>
-	  <p>上記の他にも、一般社団法人 CoderDojo Japan が発表したプレスリリースや公式ニュースレターもあります。詳細は <%= link_to 'news.coderdojo.jp', news_url %> をご参照ください 📰</p>
-	  <br>
-
-	  <div id="learn" class="headline-anchor"></div>
-	  <h2 class="headline">📚 学ぶ</h2>
-	  <%= lazy_image_tag('/kata/learn.png', alt: 'CoderDojo 梅田の様子', style: 'margin-bottom: 30px;', min: true) %>
-
 	  <div>
-	    <div>
-	      <p><%= link_to '毎年 1,500 回以', stats_path %>の Dojo が日本各地で開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
-	      <p>CoderDojo 関係者が制作した教材を中心にまとめてみたので、参加者や運営者、メンターなどのご参考になれば嬉しいです。</p>
-	      <br>
+	    <p><%= link_to '毎年 1,500 回以', stats_path %>の Dojo が日本各地で開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
+	    <p>CoderDojo 関係者が制作した教材を中心にまとめてみたので、参加者や運営者、メンターなどのご参考になれば嬉しいです。</p>
+	    <br>
 
-	      <h3 id='scratch'>🐱 Scratch 資料</h3>
-	      <ul>
-		<li>
-		  <h4 id='scratch-account'><a href="https://coderdojoowari.org/news/make-scratch-account/">【動画】Scratch アカウントの作成方法</a></h4>
-		  <p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-ninja'><a href="https://www.coderdojo-hiroshima.com/wp-content/uploads/2019/01/coderdojo-kamiyacho-beginner.pdf">プログラミング入門</a> + <a href="https://scratch.mit.edu/projects/119995141/">忍者テンプレート</a></h4>
-		  <p>by <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-collect-gems'><a href="https://coderdojo-hommachi.github.io/assets/pdf/collect_gems.pdf">Collect gems - Learn Scratch</a></h4>
-		  <p>by 尾篭 @ <a href="https://coderdojo-hommachi.doorkeeper.jp/">CoderDojo 本町</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-first-mission'><a href="https://github.com/kwaka1208/FirstMission">FirstMission</a> + <a href="https://scratch.mit.edu/projects/68155398/">作品例</a></h4>
-		  <p>by 若林 @ <a href="http://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-getting-started'><a href="https://speakerdeck.com/yu_san_19/lets-getting-started-scratch">Scratch を始めよう！</a></h4>
-		  <p>by 曽我 @ <a href="https://www.coderdojo-konan.jp/">CoderDojo 岡山 岡南</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-shooting'><a href="https://coderdojochofu.hatenablog.jp/archive/category/Scratch%E3%81%A7%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86%EF%BC%81">Scratch でシューティングゲームを作ろう!</a></h4>
-		  <p>by おおやけ @ <a href="https://coderdojochofu.hatenablog.jp/">CoderDojo 調布</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-tsume'><a href="https://scratch.mit.edu/studios/3675208/">詰め Scratch</a></h4>
-		  <p>by おおやけ @ <a href="https://coderdojochofu.hatenablog.jp/">CoderDojo 調布</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-resources'><a href="http://beyondbb.jp/CDmama/materials.html">プログラミング学習のための Scratch 教材集</a></h4>
-		  <p>by 太田 @ <a href="https://beyondbb.jp/CDmama/index.html">CoderDojo 市川真間</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-game-manuals'><a href="https://github.com/ikaken/CoderDojoMito/tree/master/%E4%BD%93%E9%A8%93%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0%E4%BD%9C%E6%88%90%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB">Scratch ゲーム作成マニュアル集</a></h4>
-		  <p>by 井川 @ <a href="https://coderdojo-mito.com/">CoderDojo 水戸</a><br></p>
-		</li>
-		<li>
-		  <h4 id='scratch-drill'><a href="https://www.dropbox.com/s/po0a9m4wo6fst57/%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%83%89%E3%83%AA%E3%83%AB.pdf?dl=0">スクラッチドリル</a></h4>
-		  <p>by 岩田 @ <a href="https://coderdojo-tempaku.com/">CoderDojo 天白</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-hackathon'><a href="https://drive.google.com/file/d/1OJ2v05hxlTUA3OhyuGs9wHsSRDjr9_Wa/view">ハッカソンの実施例</a> (<a href="https://hackmd.io/s/Bk5iOvinN">ふりかえり</a>)</h4>
-		  <p>by 岩田 @ <a href="https://coderdojo-tempaku.com/">CoderDojo 天白</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-pair-programming'><a href="https://www.dropbox.com/s/1zz5rl28x5qkxx2/Scratch%E8%A8%AD%E8%A8%88%E5%9B%B3.pdf?dl=0">ペアプログラミング用Scratch設計図</a> + <a href="https://www.dropbox.com/s/xz5hzswr10vruao/Scratch%E8%A8%AD%E8%A8%88%E5%9B%B3.jpg?dl=0">利用例</a></h4>
-		  <p>by 宇津 @ <a href="https://coderdojo-nagoya.github.io/">CoderDojo 名古屋</a></p>
-		</li>
-		<li>
-		  <h4 id='scratch-variables'><a href="http://153.127.198.12/aizu/scratch_var_CoderDojoAizu.pdf">変数とリスト,リンゴキャッチ,ブロック崩し</a></h4>
-		  <p>by 斎藤 ＠ <a href="https://coderdojoaizu.mystrikingly.com/" target="_blank">CoderDojo 会津</a></p>
-		</li>
-	      </ul>
-	      <br>
+	    <h3 id='scratch'>🐱 Scratch 資料</h3>
+	    <ul>
+	      <li>
+		<h4 id='scratch-account'><a href="https://coderdojoowari.org/news/make-scratch-account/">【動画】Scratch アカウントの作成方法</a></h4>
+		<p>by <a href="https://coderdojoowari.org/">CoderDojo 尾張</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-ninja'><a href="https://www.coderdojo-hiroshima.com/wp-content/uploads/2019/01/coderdojo-kamiyacho-beginner.pdf">プログラミング入門</a> + <a href="https://scratch.mit.edu/projects/119995141/">忍者テンプレート</a></h4>
+		<p>by <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-collect-gems'><a href="https://coderdojo-hommachi.github.io/assets/pdf/collect_gems.pdf">Collect gems - Learn Scratch</a></h4>
+		<p>by 尾篭 @ <a href="https://coderdojo-hommachi.doorkeeper.jp/">CoderDojo 本町</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-first-mission'><a href="https://github.com/kwaka1208/FirstMission">FirstMission</a> + <a href="https://scratch.mit.edu/projects/68155398/">作品例</a></h4>
+		<p>by 若林 @ <a href="http://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-getting-started'><a href="https://speakerdeck.com/yu_san_19/lets-getting-started-scratch">Scratch を始めよう！</a></h4>
+		<p>by 曽我 @ <a href="https://www.coderdojo-konan.jp/">CoderDojo 岡山 岡南</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-shooting'><a href="https://coderdojochofu.hatenablog.jp/archive/category/Scratch%E3%81%A7%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86%EF%BC%81">Scratch でシューティングゲームを作ろう!</a></h4>
+		<p>by おおやけ @ <a href="https://coderdojochofu.hatenablog.jp/">CoderDojo 調布</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-tsume'><a href="https://scratch.mit.edu/studios/3675208/">詰め Scratch</a></h4>
+		<p>by おおやけ @ <a href="https://coderdojochofu.hatenablog.jp/">CoderDojo 調布</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-resources'><a href="http://beyondbb.jp/CDmama/materials.html">プログラミング学習のための Scratch 教材集</a></h4>
+		<p>by 太田 @ <a href="https://beyondbb.jp/CDmama/index.html">CoderDojo 市川真間</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-game-manuals'><a href="https://github.com/ikaken/CoderDojoMito/tree/master/%E4%BD%93%E9%A8%93%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0%E4%BD%9C%E6%88%90%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB">Scratch ゲーム作成マニュアル集</a></h4>
+		<p>by 井川 @ <a href="https://coderdojo-mito.com/">CoderDojo 水戸</a><br></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-drill'><a href="https://www.dropbox.com/s/po0a9m4wo6fst57/%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%83%89%E3%83%AA%E3%83%AB.pdf?dl=0">スクラッチドリル</a></h4>
+		<p>by 岩田 @ <a href="https://coderdojo-tempaku.com/">CoderDojo 天白</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-hackathon'><a href="https://drive.google.com/file/d/1OJ2v05hxlTUA3OhyuGs9wHsSRDjr9_Wa/view">ハッカソンの実施例</a> (<a href="https://hackmd.io/s/Bk5iOvinN">ふりかえり</a>)</h4>
+		<p>by 岩田 @ <a href="https://coderdojo-tempaku.com/">CoderDojo 天白</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-pair-programming'><a href="https://www.dropbox.com/s/1zz5rl28x5qkxx2/Scratch%E8%A8%AD%E8%A8%88%E5%9B%B3.pdf?dl=0">ペアプログラミング用Scratch設計図</a> + <a href="https://www.dropbox.com/s/xz5hzswr10vruao/Scratch%E8%A8%AD%E8%A8%88%E5%9B%B3.jpg?dl=0">利用例</a></h4>
+		<p>by 宇津 @ <a href="https://coderdojo-nagoya.github.io/">CoderDojo 名古屋</a></p>
+	      </li>
+	      <li>
+		<h4 id='scratch-variables'><a href="http://153.127.198.12/aizu/scratch_var_CoderDojoAizu.pdf">変数とリスト,リンゴキャッチ,ブロック崩し</a></h4>
+		<p>by 斎藤 ＠ <a href="https://coderdojoaizu.mystrikingly.com/" target="_blank">CoderDojo 会津</a></p>
+	      </li>
+	    </ul>
+	    <br>
 
-	      <h3 id='microbit'>🎮 micro:bit 資料</h3>
-	      <ul>
-		<li>
-		  <h4 id='microbit-programming'><a href="http://beyondbb.jp/SSP/SSPNo.3microbitA.pdf">micro:bit プログラミング (Scratch 3.0 対応)</a></h4>
-		  <p>by 太田 @ <a href="https://beyondbb.jp/CDmama/">CoderDojo 市川真間</a></p>
-		</li>
-		<li>
-		  <h4 id='microbit-getting-started'><a href="https://docs.google.com/presentation/d/1PX3geSydvXTEh2M7vwCV_tPIHNjqoHFVtrj09xT6a6Y/edit#slide=id.p">micro:bit をはじめよう</a></h4>
-		  <p>by 松浦 @ <a href="https://coderdojo-ise.jimdo.com/">CoderDojo 伊勢</a></p>
-		</li>
-		<li>
-		  <h4 id='microbit-game'><a href="https://www.coderdojo-hiroshima.com/%E5%AD%A6%E7%BF%92%E3%83%92%E3%83%B3%E3%83%88/microbit%E3%81%A7%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%82%8B">micro:bit でゲームを作る</a></h4>
-		  <p>by 小川 @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a></p>
-		</li>
-		<li>
-		  <h4 id='microbit-hiragana'><a href="https://www.coderdojo-hiroshima.com/%E5%AD%A6%E7%BF%92%E3%83%92%E3%83%B3%E3%83%88/microbit%E3%81%A7%E3%81%B2%E3%82%89%E3%81%8C%E3%81%AA%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">micro:bit でひらがなを表示させて見よう</a></h4>
-		  <p>by ナカオク @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a><br></p>
-		</li>
-		<li>
-		  <h4 id='microbit-ble'><a href="https://memakura.github.io/s2microbit-ble/">Smi:bit / スマイビー (Scratch 2.0 対応)</a></h4>
-		  <p>by 川嶋 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
-		</li>
-		<li>
-		  <h4 id='microbit-project'><a href="https://note.mu/coding/n/n74d63b44531c">micro:bit で自由研究</a></h4>
-		  <p>by E研究員 @ <a href="https://coderdojo-kohokunt.connpass.com/">CoderDojo 港北ニュータウン</a></li>
-	      </ul>
-	      <br>
+	    <h3 id='microbit'>🎮 micro:bit 資料</h3>
+	    <ul>
+	      <li>
+		<h4 id='microbit-programming'><a href="http://beyondbb.jp/SSP/SSPNo.3microbitA.pdf">micro:bit プログラミング (Scratch 3.0 対応)</a></h4>
+		<p>by 太田 @ <a href="https://beyondbb.jp/CDmama/">CoderDojo 市川真間</a></p>
+	      </li>
+	      <li>
+		<h4 id='microbit-getting-started'><a href="https://docs.google.com/presentation/d/1PX3geSydvXTEh2M7vwCV_tPIHNjqoHFVtrj09xT6a6Y/edit#slide=id.p">micro:bit をはじめよう</a></h4>
+		<p>by 松浦 @ <a href="https://coderdojo-ise.jimdo.com/">CoderDojo 伊勢</a></p>
+	      </li>
+	      <li>
+		<h4 id='microbit-game'><a href="https://www.coderdojo-hiroshima.com/%E5%AD%A6%E7%BF%92%E3%83%92%E3%83%B3%E3%83%88/microbit%E3%81%A7%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E3%82%8B">micro:bit でゲームを作る</a></h4>
+		<p>by 小川 @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a></p>
+	      </li>
+	      <li>
+		<h4 id='microbit-hiragana'><a href="https://www.coderdojo-hiroshima.com/%E5%AD%A6%E7%BF%92%E3%83%92%E3%83%B3%E3%83%88/microbit%E3%81%A7%E3%81%B2%E3%82%89%E3%81%8C%E3%81%AA%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">micro:bit でひらがなを表示させて見よう</a></h4>
+		<p>by ナカオク @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 紙屋町</a><br></p>
+	      </li>
+	      <li>
+		<h4 id='microbit-ble'><a href="https://memakura.github.io/s2microbit-ble/">Smi:bit / スマイビー (Scratch 2.0 対応)</a></h4>
+		<p>by 川嶋 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
+	      </li>
+	      <li>
+		<h4 id='microbit-project'><a href="https://note.mu/coding/n/n74d63b44531c">micro:bit で自由研究</a></h4>
+		<p>by E研究員 @ <a href="https://coderdojo-kohokunt.connpass.com/">CoderDojo 港北ニュータウン</a></li>
+	    </ul>
+	    <br>
 
-	      <h3 id='basics'>🛠 HTML、電子工作、LEGO など</h3>
-	      <ul>
-		<li>
-		  <h4 id='design-zoom'><a href="https://docs.google.com/presentation/d/e/2PACX-1vTuTnuBEH8X6Dyw6KrfuCkH2yeJA0_90_OkCddDAgCcChxMOfOOMReNixLVmIBkItkLKJXEG9b8hoCp/pub?loop=false">Zoomの使い方 - はじめてのWeb会議の参加方法</a></h4>
-		  <p>by とがぞの</p>
-		</li>
-		<li>
-		  <h4 id='basics-chart'><a href="http://tsuyoshioshima.github.io/ninjachart/">まよえるニンジャのための やりたいことさがし</a></h4>
-		  <p>by とがぞの @ <a href="https://coderdojo-kodaira.github.io/">CoderDojo こだいら</a> (<a href="http://coderdojo-kodaira.blog.jp/archives/59932567.html">データ</a>提供)<br>by 大島 @ <a href="http://coderdojo-saitama.com/">CoderDojo さいたま</a> (ツール提供)</p>
-		</li>
-		<li>
-		  <h4 id='basics-website'><a href="http://www.coderdojo-hiroshima.com/My_first_website_ja.pdf">はじめてのWebサイト</a></h4>
-		  <p>by 鼠屋 @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 広島</a></p>
-		</li>
-		<li>
-		  <h4 id='basics-arduino'><a href="https://lets.makewitharduino.com/">Let's Make With Arduino!</a> + <a href="https://docs.google.com/spreadsheets/d/1XNd1BK2tiDwk3GTYJ60RzaXj_kwvB3FDpDuXZVm-MCQ/edit">部品購入先リスト</a></h4>
-		  <p>by 岡田バナナ @ <a href="https://coderdojo-nishinomiya.info/">CoderDojo西宮 / 梅田</a><br>by 塚本 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
-		</li>
-		<li>
-		  <h4 id='basics-snap'><a href="http://153.127.198.12/aizu/aboutSnap.pdf" target="_blank">Snapのこと（入門テキスト）</a></h4>
-		  <p>by 斎藤 ＠ <a href="https://coderdojoaizu.mystrikingly.com/">CoderDojo 会津</a></p>
-		</li>
-		<li>
-		  <h4 id='basics-pitagora'><a href="http://pegpeg.jp/tool/2014/09/09/686">スクラッチでピタゴラ装置を作ろう! (指導者向け)</a></h4>
-		  <p>by 安川、石原 @ <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo Tokyo (下北沢)</a>
-		</li>
-		<li>
-		  <h4 id='basics-resources'><%= link_to '海外の Dojo 教材リソース (英語)', foundation_url('/resources/') %></h4>
-		  <p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
-		</li>
-	      </ul>
-	      <br>
+	    <h3 id='basics'>🛠 HTML、電子工作、LEGO など</h3>
+	    <ul>
+	      <li>
+		<h4 id='design-zoom'><a href="https://docs.google.com/presentation/d/e/2PACX-1vTuTnuBEH8X6Dyw6KrfuCkH2yeJA0_90_OkCddDAgCcChxMOfOOMReNixLVmIBkItkLKJXEG9b8hoCp/pub?loop=false">Zoomの使い方 - はじめてのWeb会議の参加方法</a></h4>
+		<p>by とがぞの</p>
+	      </li>
+	      <li>
+		<h4 id='basics-chart'><a href="http://tsuyoshioshima.github.io/ninjachart/">まよえるニンジャのための やりたいことさがし</a></h4>
+		<p>by とがぞの @ <a href="https://coderdojo-kodaira.github.io/">CoderDojo こだいら</a> (<a href="http://coderdojo-kodaira.blog.jp/archives/59932567.html">データ</a>提供)<br>by 大島 @ <a href="http://coderdojo-saitama.com/">CoderDojo さいたま</a> (ツール提供)</p>
+	      </li>
+	      <li>
+		<h4 id='basics-website'><a href="http://www.coderdojo-hiroshima.com/My_first_website_ja.pdf">はじめてのWebサイト</a></h4>
+		<p>by 鼠屋 @ <a href="https://www.coderdojo-hiroshima.com/">CoderDojo 広島</a></p>
+	      </li>
+	      <li>
+		<h4 id='basics-arduino'><a href="https://lets.makewitharduino.com/">Let's Make With Arduino!</a> + <a href="https://docs.google.com/spreadsheets/d/1XNd1BK2tiDwk3GTYJ60RzaXj_kwvB3FDpDuXZVm-MCQ/edit">部品購入先リスト</a></h4>
+		<p>by 岡田バナナ @ <a href="https://coderdojo-nishinomiya.info/">CoderDojo西宮 / 梅田</a><br>by 塚本 @ <a href="https://coderdojo-nara-ikoma.github.io/">CoderDojo 奈良・生駒</a></p>
+	      </li>
+	      <li>
+		<h4 id='basics-snap'><a href="http://153.127.198.12/aizu/aboutSnap.pdf" target="_blank">Snapのこと（入門テキスト）</a></h4>
+		<p>by 斎藤 ＠ <a href="https://coderdojoaizu.mystrikingly.com/">CoderDojo 会津</a></p>
+	      </li>
+	      <li>
+		<h4 id='basics-pitagora'><a href="http://pegpeg.jp/tool/2014/09/09/686">スクラッチでピタゴラ装置を作ろう! (指導者向け)</a></h4>
+		<p>by 安川、石原 @ <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo Tokyo (下北沢)</a>
+	      </li>
+	      <li>
+		<h4 id='basics-resources'><%= link_to '海外の Dojo 教材リソース (英語)', foundation_url('/resources/') %></h4>
+		<p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
+	      </li>
+	    </ul>
+	    <br>
 
-	      <h3 id='design'>🎨 イラスト素材、音声素材など</h3>
-	      <ul>
-		<li>
-		  <h4 id='design-scratch-ninja'><a href="https://github.com/spicagraph/project-ninja">project-ninja (Scratchのイラスト素材集)</a></h4>
-		  <p>by spicagraph</p>
-		</li>
-		<li>
-		  <h4 id='design-scratch-game'><a href="https://scratch.mit.edu/projects/372335885/">アクションゲーム向けフリーイラスト素材 (Scratch向け)</a></h4>
-		  <p>by yuki384</p>
-		</li>
-		<li>
-		  <h4 id='design-sound'><a href="https://soundeffect-lab.info/">フリー効果音素材 (Scratchでも利用可)</a></h4>
-		  <p>by 効果音ラボ</p>
-		</li>
-		<li>
-		  <h4 id='design-irasutoya'><a href="https://www.irasutoya.com/">いらすとや (Scratchでは利用不可)</a></h4>
-		  <p>by いらすとや</p>
-		</li>
-	      </ul>
-	      <br>
+	    <h3 id='design'>🎨 イラスト素材、音声素材など</h3>
+	    <ul>
+	      <li>
+		<h4 id='design-scratch-ninja'><a href="https://github.com/spicagraph/project-ninja">project-ninja (Scratchのイラスト素材集)</a></h4>
+		<p>by spicagraph</p>
+	      </li>
+	      <li>
+		<h4 id='design-scratch-game'><a href="https://scratch.mit.edu/projects/372335885/">アクションゲーム向けフリーイラスト素材 (Scratch向け)</a></h4>
+		<p>by yuki384</p>
+	      </li>
+	      <li>
+		<h4 id='design-sound'><a href="https://soundeffect-lab.info/">フリー効果音素材 (Scratchでも利用可)</a></h4>
+		<p>by 効果音ラボ</p>
+	      </li>
+	      <li>
+		<h4 id='design-irasutoya'><a href="https://www.irasutoya.com/">いらすとや (Scratchでは利用不可)</a></h4>
+		<p>by いらすとや</p>
+	      </li>
+	    </ul>
+	    <br>
 
-	      <h3 id='workshop'>👥 ワークショップ向け資料</h3>
-	      <ul>
-		<li>
-		  <h4 id='workshop-mekurun'><a href="https://mekurun.com/">メクルン - スライド形式で作りながら学べる学習サイト</a></h4>
-		  <p>by Mekurun</p>
-		</li>
-		<li>
-		  <h4 id='workshop-hour-of-code'><a href="https://code.org/learn">Hour of Code - １時間のチュートリアルまとめ</a></h4>
-		  <p>by Code.org</p>
-		</li>
-		<li>
-		  <h4 id='workshop-nekonige'><a href="https://swikis.ddo.jp/abee/77">ネコから逃げろ！ゲームを使ったスクラッチワークショップ</a></h4>
-		  <p>by abee</p>
-		</li>
-		<li>
-		  <h4 id='workshop-raspi'><a href="https://yasslab.jp/ja/workshops/raspi/">1.5時間で学ぶ! Scratch + Raspberry Pi ワークショップ</a></h4>
-		  <p>by YassLab</p>
-		</li>
-		<li>
-		  <h4 id='workshop-scratch'><a href="https://scratch.mit.edu/ideas">Scratch チュートリアル</a></h4>
-		  <p>by MIT Media Lab</p>
-		</li>
-	      </ul>
-	    </div>
+	    <h3 id='workshop'>👥 ワークショップ向け資料</h3>
+	    <ul>
+	      <li>
+		<h4 id='workshop-mekurun'><a href="https://mekurun.com/">メクルン - スライド形式で作りながら学べる学習サイト</a></h4>
+		<p>by Mekurun</p>
+	      </li>
+	      <li>
+		<h4 id='workshop-hour-of-code'><a href="https://code.org/learn">Hour of Code - １時間のチュートリアルまとめ</a></h4>
+		<p>by Code.org</p>
+	      </li>
+	      <li>
+		<h4 id='workshop-nekonige'><a href="https://swikis.ddo.jp/abee/77">ネコから逃げろ！ゲームを使ったスクラッチワークショップ</a></h4>
+		<p>by abee</p>
+	      </li>
+	      <li>
+		<h4 id='workshop-raspi'><a href="https://yasslab.jp/ja/workshops/raspi/">1.5時間で学ぶ! Scratch + Raspberry Pi ワークショップ</a></h4>
+		<p>by YassLab</p>
+	      </li>
+	      <li>
+		<h4 id='workshop-scratch'><a href="https://scratch.mit.edu/ideas">Scratch チュートリアル</a></h4>
+		<p>by MIT Media Lab</p>
+	      </li>
+	    </ul>
 	  </div>
 
 	  <div id="challenge" class="headline-anchor"></div>
