@@ -4600,3 +4600,13 @@
   event_id:
   participants: 0
   evented_at: 2021/07/18 10:00
+
+# 2021/08/01 - 2021/08/31
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2021/08/01 10:00 #オンライン開催
+- dojo_id: 86
+  event_id:
+  participants: 0
+  evented_at: 2021/08/15 10:30
