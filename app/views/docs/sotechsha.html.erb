@@ -4,7 +4,8 @@
 
 <div class="container-fluid">
   <div class="col-md-6" id="top">
-    <img class="img-responsive center-block ls-is-cached lazyloaded" alt="Scratchでつくる! たのしむ! プログラミング道場" style="width: 90%" data-src="/assets/sotechsha-1_book-cover-beeb6431b5108cb00b579c6702046622024492338c18747f708e9e10cd54ea0e.png" loading="lazy" src="/assets/sotechsha-1_book-cover-beeb6431b5108cb00b579c6702046622024492338c18747f708e9e10cd54ea0e.png">
+    <%= lazy_image_tag('sotechsha-1_book-cover.png', alt: 'Scratchでつくる! たのしむ! プログラミング道場', class: 'img-responsive center-block', style: 'width: 90%;', min: true) %>
+
     <div style="text-align: center; font-size: 19.2px;">
       <div class="img-responsive center-block"><div><div><p><br>本ページでは、書籍で利用する素材や、課題の答えを掲載しています。</p><p><span style="font-size: 19.2px;">本書に関するお問い合わせは</span><span style="font-size: 19.2px; background-color: rgb(255, 255, 255);"><a href="http://sotechsha.co.jp/dokusha/">コチラ</a>から <img draggable="false" class="emoji" alt="📮" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f4ee.png"></span></p><p><span style="font-size: 19.2px;"><br></span></p></div>
       </div></div>
@@ -12,14 +13,13 @@
   </div>
   <div class="col-md-6">
     <h3><strong>スプライト素材のダウンロード</strong></h3>
-    <p></p><p><span style="font-size: 19.2px;">書籍内でタカシくんが使っているものと同じスプライト素材をダウンロードしていただけます。</span></p>
-    <p><br></p><p></p>
+    <p><span style="font-size: 19.2px;">書籍内でタカシくんが使っているものと同じスプライト素材をダウンロードしていただけます。</span></p>
     <a class="btn btn-warning btn-block" href="/sotechsha/gazou">もっと見る</a>
     <hr>
     <h3><strong>序章課題</strong></h3>
-    <p></p><h2>リンゴが消えて、別の場所から出てくるようにするには？</h2>
-    <p><span style="font-size: 19.2px;"><br></span></p>
-    <p><span style="font-size: 19.2px;"><b>課題内容（書籍P.32）</b></span></p>
+    <h2>リンゴが消えて、別の場所から出てくるようにするには？</h2>
+    <br>
+    <p><b>課題内容（書籍P.32）</b></p>
     <p>ネコがリンゴにさわったら、リンゴが消えて別の場所から出てくるようにスクリプトを作り直してみよう。ネコがリンゴにさわったときに、リンゴの位置をランダムに設定し直すと、ちがった動きに...</p>
     <a class="btn btn-warning btn-block" href="/sotechsha/0">もっと見る</a>
     <hr>
