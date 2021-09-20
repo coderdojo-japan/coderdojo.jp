@@ -10,6 +10,8 @@ class DocsController < ApplicationController
     @dojo_count = Dojo.active_dojos_count
   end
 
+  def sotechsha;  end
+
   def show
     @doc = Document.new(params[:id])
     redirect_to root_url unless @doc.exists?
