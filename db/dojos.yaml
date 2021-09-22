@@ -1129,6 +1129,19 @@
   - Scratch
   - マルチメディア
   - アプリ開発
+- id: 275
+  order: '132152'
+  created_at: '2021-09-22'
+  name: 国立
+  prefecture_id: 13
+  url: https://coderdojo-kunitachi.connpass.com/
+  logo: "/img/dojos/japan.png"
+  description: 国立市で不定期に開催
+  tags:
+  - Scratch
+  - Lua
+  - Unity
+  - Python
 - id: 147
   order: '132250'
   created_at: '2018-05-06'
