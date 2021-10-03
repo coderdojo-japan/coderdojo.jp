@@ -55,42 +55,8 @@ jobs:
         if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
         run: bundle exec rspec spec --tag ~@scrivito
 
-      - name: 👤 Set env vars for notification
-        if:   always()
-        run: |
-          echo "COMMIT_ACTOR=${{ github.actor }}" | awk -F '-preview' '{print $1}' >> $GITHUB_ENV
-          if [ "${{ job.status }}" = "success" ]; then
-            echo "STATUS_LABEL=success" >> $GITHUB_ENV
-            echo "STATUS_TEXT=Success"  >> $GITHUB_ENV
-          else
-            echo "STATUS_LABEL=danger"  >> $GITHUB_ENV
-            echo "STATUS_TEXT=Failure"  >> $GITHUB_ENV
-          fi
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            head_sha=$(git rev-parse --short=8 ${{ github.event.pull_request.head.sha }})
-            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
-            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
-            echo "$(git log --format=%B -n 1 $head_sha)"   >> $GITHUB_ENV
-            echo "EOF"                                     >> $GITHUB_ENV
-            echo "COMMIT_URL=${{ github.event.pull_request.html_url }}"   >> $GITHUB_ENV
-            echo "COMMIT_LINK=${{github.repository}}#${{github.event.pull_request.number}}" >> $GITHUB_ENV
-          else
-            head_sha=$(git rev-parse --short=8 ${{ github.sha }})
-            echo "COMMIT_SHA=$head_sha"                    >> $GITHUB_ENV
-            echo "COMMIT_MESSAGE<<EOF"                     >> $GITHUB_ENV
-            echo "${{ github.event.head_commit.message }}" >> $GITHUB_ENV
-            echo "EOF"                                     >> $GITHUB_ENV
-            echo "COMMIT_URL=https://github.com/${{github.repository}}/commit/$head_sha" >> $GITHUB_ENV
-            echo "COMMIT_LINK=${{ github.repository }}#$head_sha"                        >> $GITHUB_ENV
-          fi
-
       - name: 🔔 Notify results
-        env:
-          IDOBATA_SECRETS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
-        if:   always() && (env.IDOBATA_SECRETS != null)
-        uses: mahaker/actions-idobata@v1.1.1
+        uses: yasslab/idobata_notify@main # https://github.com/yasslab/idobata_notify
+        if: always()
         with:
-          hookUrl: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
-          format: 'markdown'
-          message: |
-            CI build for [${{ env.COMMIT_LINK }}](${{ env.COMMIT_URL }}) : <span class='label label-${{ env.STATUS_LABEL }}'>${{ env.STATUS_TEXT }}</span> ([GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}))<br><img src='https://github.com/${{ env.COMMIT_ACTOR }}.png' class='icon-rounded' width='16' height='16'> [${{ env.COMMIT_ACTOR }}](https://github.com/${{ env.COMMIT_ACTOR }}): ${{ env.COMMIT_MESSAGE }} ([${{ env.COMMIT_SHA }}](https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }}))
+          idobata_hook_url: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
