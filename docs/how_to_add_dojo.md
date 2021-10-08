@@ -48,7 +48,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
   prefecture_id: 47
   logo: "/img/dojos/japan.png"   #  ロゴがあれば naha.png として追加
   url: https://coderdojo-naha.doorkeeper.jp/
-  description: 沖縄県那覇市で毎月開催   # 県名や開催頻度などの用語を適宜統一
+  description: 那覇市で毎月開催     # 県名や開催頻度などの用語を適宜統一
   tags:
   - Scratch
   - Webサイト
@@ -67,7 +67,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `prefecture_id` | [db/seeds.rb](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/seeds.rb) の県番号 |
 | `logo` | 省略可。[public/img/dojos](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/img/dojos) にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |
-| `description` | フォーマット化して記載。例: `oo県xx市で毎月開催` |
+| `description` | 既存のパターンに沿って記載。`prefecture_id`があるので都道府県情報は省略。例: `xx市で毎月開催` |
 | `tags` | 周知したい技術タグを掲載 (最大5つ) |
 | `is_active` | 省略可。非アクティブになったらfalseにする |
 | `is_private` | 省略可。プライベートならtrueにする |
