@@ -150,8 +150,8 @@ https://coderdojo.jp/stats
 
 dojos.yaml, dojo_event_services.yaml の更新を GitHub に push すると、次の手順で本番環境に反映されます。
 
-1. GitHub の更新を Travis CI が検知する
-1. Travis CI で各種テストが実行される
+1. GitHub の更新を GitHub Actions が検知する
+1. GitHub Actions で各種テストが実行される
   - １つ以上のテストが失敗すると本番環境には反映されない
 1. すべてのテストが成功すると、本番環境へのデプロイが始まります
 
