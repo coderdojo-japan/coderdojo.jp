@@ -1,9 +1,9 @@
 if Rails.env.development? && ENV.key?('ENABLE_RACK_PROFILER')
-  require 'rack-mini-profiler'
-  require 'flamegraph'
   require 'stackprof'
+  require 'flamegraph'
   require 'memory_profiler'
 
-  # initialization is skipped so trigger it
-  Rack::MiniProfilerRails.initialize!(Rails.application)
+  # Remove these comment if you like to profile performance.
+  #require 'rack-mini-profiler'
+  #Rack::MiniProfilerRails.initialize!(Rails.application)
 end

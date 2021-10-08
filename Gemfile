@@ -57,10 +57,10 @@ group :development do
   gem 'spring'
   gem 'listen'
   gem 'letter_opener_web'
-  gem 'rack-mini-profiler', require: false
+  gem 'stackprof',  require: false
   gem 'flamegraph', require: false
-  gem 'stackprof', require: false
-  gem 'memory_profiler', require: false
+  gem 'memory_profiler',    require: false
+  gem 'rack-mini-profiler', require: false
 end
 
 group :development, :test do
