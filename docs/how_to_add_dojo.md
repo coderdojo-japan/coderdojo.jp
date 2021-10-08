@@ -168,9 +168,9 @@ https://coderdojo.jp/stats
 
 dojos.yaml, dojo_event_services.yaml の更新を GitHub に push すると、次の手順で本番環境に反映されます。
 
-1. GitHub の更新を GitHub Actions が検知する
-1. GitHub Actions で各種テストが実行される
-  - １つ以上のテストが失敗すると本番環境には反映されない
+1. GitHub の更新を [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions) が検知します
+1. [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions) で各種テストが実行されます
+   - １つ以上のテストが失敗すると本番環境には反映されません
 1. すべてのテストが成功すると、本番環境へのデプロイが始まります
 
-したがって、Pull Request の時点で CI がパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) に映されます。
+したがって、Pull Request 時点で CI がパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) に反映されます。
