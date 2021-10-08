@@ -1442,6 +1442,19 @@
   tags:
   - Scratch
   - Webサイト
+- id: 276
+  order: '162108'
+  created_at: '2021-10-08'
+  name: なんと@よってカフェ
+  prefecture_id: 16
+  logo: "/img/dojos/japan.png"
+  url: https://lovetonami.com/coderdojo/
+  description: 南砺市で毎月２回開催
+  tags:
+  - Scratch
+  - Webサイト
+  - LEGO
+  - Viscuit
 - id: 6
   order: '172014'
   created_at: '2016-11-24'
