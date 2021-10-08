@@ -4,7 +4,7 @@
 
 ## 追加の手順
 
-[coderdojo.jp への掲載申請](https://coderdojo.jp/kata#support)が来たとき、
+[coderdojo.jp への掲載申請](https://coderdojo.jp/signup)が来たとき、
 まずは申請された Dojo 情報を確認します。
 
 ### 申請内容と対応例
