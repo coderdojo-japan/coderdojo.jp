@@ -45,13 +45,13 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 | 項目名 | 内容 |
 |:---|:---|
-| `id` | 省略する。タスク実行時に自動追加 (詳細は後述) |
+| `id` | **入力しない。** タスク実行時に自動で追加されます (詳細は後述) |
 | `created_at` | 掲載申請日の年月日 |
 | `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
 | `name` | Dojo名 |
 | `counter` | 省略化。[連名道場](https://github.com/coderdojo-japan/coderdojo.jp/issues/610)を登録する際に使います |
-| `prefecture_id` | `db/seeds.rb` の県番号 |
-| `logo` | 省略可。`public/img/dojos` にあるDojoロゴ画像パス |
+| `prefecture_id` | [db/seeds.rb](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/seeds.rb) の県番号 |
+| `logo` | 省略可。[public/img/dojos](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/img/dojos) にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |
 | `description` | フォーマット化して記載。例: `oo県xx市で毎月開催` |
 | `tags` | 周知したい技術タグを掲載 (最大5つ) |
