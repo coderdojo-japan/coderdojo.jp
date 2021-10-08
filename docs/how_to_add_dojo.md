@@ -1,13 +1,26 @@
 # 新規Dojoの追加方法
 
-新規Dojoから申請が来た場合の手順書
+新規Dojoから申請が来た場合の手順書をまとめています。
 
-## 追加の手順
+<br>
+
+## 追加の手順とデータの読み方
 
 [coderdojo.jp への掲載申請](https://coderdojo.jp/signup)が来たとき、
 まずは申請された Dojo 情報を確認します。
 
-### 申請内容と対応例
+### TL;DR（忙しい人向け）
+
+1. 掲載依頼の申請内容を確認する
+2. 総務省の[全国地方公共団体コード](https://www.soumu.go.jp/denshijiti/code.html)ページに行く
+3. 最新版の PDF にアクセスし、申請内容と一致する全国地方公共団体コードを確認する
+4. `db/dojos.yaml` ファイルを開き、全国地方公共団体コードの近い値（隣接する Dojo）のデータを見つける
+5. 同じ全国地方公共団体コードがあれば同コードの直後に、初のコードであれば `order` の昇順で適した場所を探す
+6. 申請内容と下記サンプルデータを参考に、新しい Dojo データを追加し、Pull Request を送る
+
+<br>
+
+### データの読み方（申請内容と対応例）
 
 次のような掲載申請が来たときを例にとって説明します。
 
@@ -28,7 +41,8 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 
 ```yaml
-- created_at: '2019-06-15'
+- order: '472018'
+  created_at: '2019-06-15'
   name: 那覇
   counter: 1                     # 省略化。連名道場のときに使います (後述)
   prefecture_id: 47
@@ -90,6 +104,8 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 もしこの時点で「どのイベント管理サービスを使っているか」が分かっていれば、
 続けて、後述する統計システムへの追加も行なってください。
 
+<br>
+
 ## 統計システムへの追加
 
 coderdojo.jp では開催日、及び参加人数などを集計し、統計ページから公開しています。
@@ -145,6 +161,8 @@ https://coderdojo.jp/stats
   $ curl --silent -X GET https://api.doorkeeper.jp/events/90704 | jq '.event.group'
     9690
   ```
+
+<br>
 
 ## 本番環境への反映方法
 
