@@ -62,10 +62,11 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 <br>
 
-<script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<center>スライド: <a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan">法人向け説明資料</a></center>
 
-<br>
+<script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p style="margin: 0 300px 50px;">
+<a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan" class='btn-blue' target='_blank' rel='external noopener'>スライド資料を見る <i class='far fa-external-link'></i></a>
+</p>
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
