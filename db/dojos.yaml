@@ -189,6 +189,20 @@
   - 3D CAD
   - Pepper
   - micro:bit
+- id: 277
+  order: '042129'
+  created_at: '2021-10-18'
+  name: 富谷
+  prefecture_id: 4
+  logo: "/img/dojos/tomiya.png"
+  url: https://coderdojotomiyajp.github.io/
+  description: 富谷市で毎月開催
+  tags:
+  - Scratch
+  - Java
+  - JavaScript
+  - micro:bit
+  - MakeyMakey
 - id: 59
   order: '044458'
   created_at: '2016-10-06'
