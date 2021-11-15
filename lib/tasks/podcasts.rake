@@ -23,7 +23,7 @@ namespace :podcasts do
     Podcast.transaction do
       rss.items.each_with_index do |item, index|
         episode_id = item.title.split('-').first.to_i
-        raise StandardError.new("ID 取得に失敗しました。") if episode_id.zero?
+        raise StandardError.new("ID 取得に失敗しました。(Title: #{item.title})") if episode_id.zero?
 
         episode = Podcast.find_by(id: episode_id) || Podcast.new(id: episode_id)
         episode.new_record? ?
