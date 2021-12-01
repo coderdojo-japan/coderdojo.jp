@@ -83,9 +83,16 @@ info@coderdojo.jp
 ## 📑 よくある質問と回答
 
 ### Q. ミーティングはありますか?
-- **A.** 隔週の定例ミーティング (定例会) があります。原則オンラインで行われ、これまでのところ、平日の日中に時間を合わせて実施することが多いです 👥
+- **A.** 隔週の定例ミーティング (定例会) があります。原則オンラインで行われ、これまでのところ、平日の日中に時間を合わせて実施することが多いです。具体的な雰囲気は下記の YouTube 動画「<a href="https://youtu.be/xn5Y5OTvRZU" target="_blank" rel="noopener">公開定例会</a>」をご参照ください 👥
 
-![定例会の様子 - esa.io](/img/board-meetup-sample.png)
+<div class="home-point-video">
+  <iframe width="560" height="315" class='lazyload' frameborder="0" 
+   data-src="https://www.youtube.com/embed/xn5Y5OTvRZU?rel=0" allowfullscreen></iframe>
+</div>
+
+<!--![定例会の様子 - esa.io](/img/board-meetup-sample.png)-->
+
+<br>
 
 ### Q. 既存の取り組みを引き継ぐことはありますか?
 - **A.** いいえ、引き継ぐ必要性のある取り組みは現メンバーが引き継ぐため、就任後に何かを引き継ぐことはありません。言い換えると、定例会への参加以外はそれぞれが自律的に動くことになるため、主体的に動く姿勢が求められます。
