@@ -2,7 +2,7 @@
 <center>(<a href="/docs/fundraising-methods">日本語で読む</a> / <a href="https://github.com/CoderDojo/kata-archive/blob/master/files/Fundraising_Methods.pdf">原文を読む</a>)</center>
 <br/>
 
-This document contains suggestions for fundraising activities for an individual Dojo. For guidelines on fundraising please see our [Fundraising Guidelines](/docs/fundraising-guidelines) document. Please note wherever possible we would encourage Dojos to see to have expenses such as belts, insurance covered directly by a sponsor.
+This document contains suggestions for fundraising activities for an individual Dojo. For guidelines on fundraising please see our [Fundraising Guidelines](/docs/fundraising-guidelines_en) document. Please note wherever possible we would encourage Dojos to see to have expenses such as belts, insurance covered directly by a sponsor.
 
 ## Funding Through Grants
 
