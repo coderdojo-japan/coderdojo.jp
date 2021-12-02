@@ -1,8 +1,8 @@
 # 💰 資金を募るときの活動事例
-<center>(<a href="https://github.com/CoderDojo/kata-archive/blob/master/files/Fundraising_Methods.pdf">英語の原文を読む</a>)</center>
+<center>(<a href="/docs/fundraising-methods_en">英語で読む</a>)</center>
 <br/>
 
-この文書は、個々のDojoの資金集め活動をする際の具体案を記載したものです。資金集めの注意点については、[資金を募るときの注意点](/docs/fundraising-guidelines)をお読みください。Dojoに要する費用、例えばベルトや保険などについては、スポンサーから直接支給してもらうようDojoへ奨励している旨をご留意ください。
+この文書は、個々のDojoの資金集め活動をする際の具体案を記載したものです。資金集めの注意点については、[資金を募るときの注意点](/docs/fundraising-guidelines_en)をお読みください。Dojoに要する費用、例えばベルトや保険などについては、スポンサーから直接支給してもらうようDojoへ奨励している旨をご留意ください。
 
 
 ## 助成金による資金集め
