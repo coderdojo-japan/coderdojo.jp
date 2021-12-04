@@ -7,7 +7,7 @@
 
 <ul>
   <li><a href='#coderdojo-guidance'>1. CoderDojo はそれぞれ独立しています</a></li>
-  <li><a href='#coderdojo-in-writing'>2. 「道場」または「クラブ」と表記しています</a></li>
+  <li><a href='#coderdojo-in-writing'>2. 道場またはクラブと表記しています</a></li>
   <div id='coderdojo-guidance'></div>
   <li><a href='#how-to-download'>3. ロゴ画像のダウンロード方法について</a></li>
 </ul>
@@ -39,7 +39,7 @@
 <br>
 
 
-## 2. 「道場」または「クラブ」と表記しています
+## 2. 道場またはクラブと表記しています
 
 一般社団法人 CoderDojo Japan では、CoderDojo について説明する場面では「プログラミング道場」または「プログラミングクラブ」という表記を使用しています。
 
@@ -61,8 +61,7 @@
 
 一般社団法人 CoderDojo Japan に関するロゴ画像データなどを下記ページから公開しています。メディア掲載で必要な場面などありましたら、お気軽にご活用していただけると幸いです。
 
-CoderDojo Japan 公開ロゴ - Google Drive    
-[https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
+[CoderDojo Japan 公開ロゴ - Google Drive](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)    
 
 [![CoderDojo Japan ロゴデータ一式](/img/for-press.png)](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
 
