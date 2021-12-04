@@ -18,9 +18,9 @@
 
 『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)であり、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)の際に利用許諾を受け、それぞれ独立して運営されています。
 
-一般社団法人 CoderDojo Japan も[ライセンス契約](https://coderdojo.jp/docs/regional-license)を締結し、商標利用を承認された公式法人の１つではありますが、全国の CoderDojo の運営者ではありません。
+一般社団法人 CoderDojo Japan も[ライセンス契約](/docs/regional-license)を締結し、商標利用を承認された公式法人の１つではありますが、全国の CoderDojo の運営者ではありません。
 
-したがって、例えば「全国の CoderDojo 一覧 (運営: CoderDojo Japan)」といった表記は事実ではないため、そういったご紹介は避けていただけると嬉しいです。
+したがって、例えば「全国の CoderDojo 一覧 (運営: CoderDojo Japan)」といった表記は事実とは異なるため、そういったご紹介は避けていただけると嬉しいです。
 
 <br>
 
@@ -30,7 +30,7 @@
 
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 
-詳細は下記のガイダンス資料をご参照ください。
+詳細はガイダンス資料をご参照ください。
 
 <div id='coderdojo-in-writing'></div>
 
@@ -41,7 +41,7 @@
 
 ## 2. 道場またはクラブと表記しています
 
-一般社団法人 CoderDojo Japan では、CoderDojo について説明する場面では「プログラミング道場」または「プログラミングクラブ」という表記を使用しています。
+一般社団法人 CoderDojo Japan では、CoderDojo を説明する場面で「プログラミング道場」または「プログラミングクラブ」という表記を使用しています。
 
 上記以外の表記を禁止しているわけではなく、また、メディア媒体によって様々な制約があるかと思いますが、可能な限り公式の表記に準じていただけると大変幸いです。
 
@@ -49,7 +49,7 @@
 
 [![CoderDojo とは、プログラミングクラブの自由な世界規模のネットワーク](/img/coderdojo-guidance-3.png)](/#welcome)
 
-詳細は下記のブランドガイドラインをご参照していただけると幸いです。
+詳細はブランドガイドラインをご参照ください。
 
 <div id='how-to-download'></div>
 
@@ -59,7 +59,7 @@
 
 ## 3. ロゴ画像のダウンロード方法について
 
-一般社団法人 CoderDojo Japan に関するロゴ画像データなどを下記ページから公開しています。メディア掲載で必要な場面などありましたら、お気軽にご活用していただけると幸いです。
+一般社団法人 CoderDojo Japan のロゴ画像データは下記ページから公開しています。メディア掲載時に必要な場面などありましたら、お気軽にご活用ください。
 
 [CoderDojo Japan 公開ロゴ - Google Drive](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)    
 
@@ -70,9 +70,9 @@
 
 <h2>連絡先</h2>
 
-以上がメディア関係者向けの情報となります。皆さまの執筆時のお役に立てば嬉しいです。
+メディア関係者向けの情報は以上となります。皆さまの執筆時のお役に立てば嬉しいです。
 
-何かご不明な点があれば下記連絡先までお問い合わせください。
+他、何かご不明な点があれば下記連絡先までお問い合わせください。
 
 <br>
 <div align="right">
