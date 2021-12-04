@@ -3,6 +3,15 @@
 
 本ページでは本・電子書籍・Webサイトなどで『CoderDojo』について紹介する際の注意点・留意点をまとめています。皆さまのメディア掲載時のご活用していただけると幸いです。
 
+### 目次
+
+<ul>
+  <li><a href='#coderdojo-guidance'>1. CoderDojo はそれぞれ独立しています</a></li>
+  <li><a href='#coderdojo-in-writing'>2. 「道場」または「クラブ」と表記しています</a></li>
+  <div id='coderdojo-guidance'></div>
+  <li><a href='#how-to-download'>3. ロゴ画像のダウンロード方法について</a></li>
+</ul>
+
 <br>
 
 ## 1. CoderDojo はそれぞれ独立しています
@@ -21,12 +30,18 @@
 
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 
+詳細は下記のガイダンス資料をご参照ください。
+
+<div id='coderdojo-in-writing'></div>
+
+詳細を見る → [CoderDojo ガイダンス資料](/#welcome)
+
 <br>
+
 
 ## 2. 「道場」または「クラブ」と表記しています
 
-
-[https://coderdojo.jp/](https://coderdojo.jp/) では『CoderDojo』のことを「プログラミング道場」または「プログラミングクラブ」と説明しています。
+一般社団法人 CoderDojo Japan では、CoderDojo について説明する場面では「プログラミング道場」または「プログラミングクラブ」という表記を使用しています。
 
 上記以外の表記を禁止しているわけではなく、また、メディア媒体によって様々な制約があるかと思いますが、可能な限り公式の表記に準じていただけると大変幸いです。
 
@@ -34,25 +49,27 @@
 
 [![CoderDojo とは、プログラミングクラブの自由な世界規模のネットワーク](/img/coderdojo-guidance-3.png)](/#welcome)
 
-<br>
+詳細は下記のブランドガイドラインをご参照していただけると幸いです。
 
-## 3. ブランドガイドラインがあります
+<div id='how-to-download'></div>
 
-細かな点で恐縮ですが、正しい表記は『CoderDojo』となります。したがって、
-
-- ・Coder Dojo
-- ・Coderdojo
-- ・coderdojo
-
-といった表記はいずれも間違った表記となりますので、ご注意していただけると嬉しいです。
-
-詳しくは下記のブランドガイドラインにまとめてあります。よければご参照していただけると幸いです。
-
-参考: [CoderDojo ブランドガイドライン](/docs/brand-guidelines)
+詳細を見る → [CoderDojo ブランドガイドライン](/docs/brand-guidelines)
 
 <br>
 
-## 連絡先
+## 3. ロゴ画像のダウンロード方法について
+
+一般社団法人 CoderDojo Japan に関するロゴ画像データなどを下記ページから公開しています。メディア掲載で必要な場面などありましたら、お気軽にご活用していただけると幸いです。
+
+CoderDojo Japan 公開ロゴ - Google Drive    
+[https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
+
+[![CoderDojo Japan ロゴデータ一式](/img/for-press.png)](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
+
+
+<br>
+
+<h2>連絡先</h2>
 
 以上がメディア関係者向けの情報となります。皆さまの執筆時のお役に立てば嬉しいです。
 
