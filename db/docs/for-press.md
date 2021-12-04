@@ -10,7 +10,7 @@
 CoderDojo Japan 公開ロゴ - Google Drive    
 [https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
 
-[![CoderDojo Japan ロゴデータ一式](/img/for-press.png)](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
+[![CoderDojo Japan ロゴデータ一式](/img/for-press.png)](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
 
 CoderDojo に関する説明を行うときの留意点を下記にまとめておきました。こちらも合わせてご参考にして頂けると嬉しいです。
 
