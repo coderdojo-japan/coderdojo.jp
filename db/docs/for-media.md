@@ -1,7 +1,7 @@
 # 📰 メディア関係者の皆さまへ
 <br>
 
-本ページでは本・電子書籍・Webサイトなどで『CoderDojo』について紹介する際の注意点・留意点をまとめています。皆さまのメディア掲載時のご活用していただけると幸いです。
+本ページでは新聞・書籍・Webサイトなどで『CoderDojo』について紹介する際に役立つ TIPS をまとめています。メディア掲載時のご活用していただけると幸いです。
 
 ### 目次
 
@@ -18,17 +18,27 @@
 
 『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)であり、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)の際に利用許諾を受け、それぞれ独立して運営されています。
 
-一般社団法人 CoderDojo Japan も[ライセンス契約](/docs/regional-license)を締結し、商標利用を承認された公式法人の１つではありますが、全国の CoderDojo の運営者ではありません。
-
-したがって、例えば「全国の CoderDojo 一覧 (運営: CoderDojo Japan)」といった表記は事実とは異なるため、そういったご紹介は避けていただけると嬉しいです。
-
-<br>
-
 [![CoderDojo に対する誤解](/img/coderdojo-guidance-1.png)](/#welcome)
 
 <br>
 
+一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を通して商標利用の許諾を受けた[公式法人の１つ](https://coderdojo.com/regional-bodies/)で、CoderDojo 憲章に同意して運営されている各 Dojo と基本的に同じ立ち位置となります。
+
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
+<small>
+  ※
+  CoderDojo 憲章の[詳細を読む](/charter)。<br>
+  ※
+  CoderDojo Japan の[役割と活動実績を読む](/join-in-board)。
+</small>
+<br>
+
+CoderDojo では上記の仕組みをベースとして、それぞれが決定権を持って活動しております。したがって、例えば次のような説明は事実とは異なりますので、ご注意いただけると幸いです。
+
+- ❌ CoderDojo Japan が全国の CoderDojo を運営している
+- ⭕️ 全国の CoderDojo は、それぞれの代表者が運営している
+
+<br>
 
 詳細はガイダンス資料をご参照ください。
 
