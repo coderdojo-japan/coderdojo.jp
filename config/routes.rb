@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get "/docs/thanks",             to: redirect('/thanks')
   get "/docs/calendar-yohei",     to: redirect('/calendar/yohei')
   get "/docs/calendar-kirie",     to: redirect('/calendar/kirie')
+  get "/docs/for-media",          to: redirect('/for-media')
 
   get "/login",                   to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
   get "/calendar/kirie"   => "docs#show", id: 'calendar-kirie'
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
+  get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
   get "/partner",         to: redirect('/partnership')
   get "/partnership"      => "docs#show", id: 'about-partnership'

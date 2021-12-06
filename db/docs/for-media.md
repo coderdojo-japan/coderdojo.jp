@@ -1,7 +1,7 @@
 # 📰 メディア関係者の皆さまへ
 <br>
 
-本ページでは新聞・書籍・Webサイトなどで『CoderDojo』について紹介する際に役立つ TIPS をまとめています。メディア掲載時のご活用していただけると幸いです。
+本ページでは新聞・書籍・Webサイトなどで『CoderDojo』を説明する際に役立つ TIPS をまとめています。メディア掲載時のお役に立てば幸いです。
 
 ### 目次
 
@@ -16,13 +16,13 @@
 
 ## 1. CoderDojo はそれぞれ独立しています
 
-『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)であり、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)の際に利用許諾を受け、それぞれ独立して運営されています。
+『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)となっていて、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)時にその利用許諾を受け、それぞれが独立して運営しています。
 
 [![CoderDojo に対する誤解](/img/coderdojo-guidance-1.png)](/#welcome)
 
 <br>
 
-一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を通して商標利用の許諾を受けた[公式法人の１つ](https://coderdojo.com/regional-bodies/)で、CoderDojo 憲章に同意して運営されている各 Dojo と基本的に同じ立ち位置となります。
+一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を交わして利用許諾を受けた[公式法人の１つ](https://coderdojo.com/regional-bodies/)です。CoderDojo 憲章に則って運営している各 Dojo と、基本的に同じ立ち位置となります。
 
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 <small>
@@ -33,7 +33,7 @@
 </small>
 <br>
 
-CoderDojo では上記の仕組みをベースとして、それぞれが決定権を持って活動しております。したがって、例えば次のような説明は事実とは異なりますので、ご注意いただけると幸いです。
+CoderDojo は上記の仕組みで回っていて、それぞれが決定権を持って活動しております。したがって、例えば次のような説明は事実とは異なりますので、ご注意いただけると幸いです。
 
 - ❌ CoderDojo Japan が全国の CoderDojo を運営している
 - ⭕️ 全国の CoderDojo は、それぞれの代表者が運営している
@@ -51,13 +51,21 @@ CoderDojo では上記の仕組みをベースとして、それぞれが決定�
 
 ## 2. 道場またはクラブと表記しています
 
-一般社団法人 CoderDojo Japan では、CoderDojo を説明する場面で「プログラミング道場」または「プログラミングクラブ」という表記を使用しています。
+一般社団法人 CoderDojo Japan では、CoderDojo を説明する場面で「プログラミング道場」または「プログラミングクラブ」という表記を使っています。
 
-上記以外の表記を禁止しているわけではなく、また、メディア媒体によって様々な制約があるかと思いますが、可能な限り公式の表記に準じていただけると大変幸いです。
+上記以外の表記を禁止しているわけではなく、また、メディア媒体によって様々な制約があるかと思いますが、メディア掲載時には可能な限り公式の表記に準じていただけると大変幸いです。
 
 <br>
 
+図: CoderDojo の表記例
+
 [![CoderDojo とは、プログラミングクラブの自由な世界規模のネットワーク](/img/coderdojo-guidance-3.png)](/#welcome)
+
+また、「CoderDojo」の表記に関するブランドガイドラインもあります。こちらも合わせてご確認いただけると幸いです。
+
+- ❌ Coder Dojo
+- ❌ Coderdojo
+- ⭕️ CoderDojo 
 
 詳細はブランドガイドラインをご参照ください。
 
