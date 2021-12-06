@@ -463,11 +463,11 @@
 
 # 木更津
 - dojo_id: 83
-  name: facebook # connpassと併用
+  name: facebook 
   group_id: 1273279189459638
   url: https://www.facebook.com/coderdojokisarazu/events/
 - dojo_id: 83
-  name: connpass
+  name: connpass # 2021/07以降 Facebook で運用
   group_id: 8670
   url: https://coderdojo-kisarazu.connpass.com/
 
