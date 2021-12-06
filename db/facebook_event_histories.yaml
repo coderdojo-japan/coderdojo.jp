@@ -4638,3 +4638,25 @@
   event_id:
   participants: 1
   evented_at: 2021/10/31 10:00
+
+# 2021/011/01 - 2021/11/30
+- dojo_id: 25
+  event_id:
+  participants: 2
+  evented_at: 2021/11/14 10:00
+- dojo_id: 83
+  event_id:
+  participants: 2
+  evented_at: 2021/11/07 10:00
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2021/11/20 15:15
+- dojo_id: 131
+  event_id:
+  participants: 2
+  evented_at: 2021/11/28 10:00
+- dojo_id: 203
+  event_id:
+  participants: 0
+  evented_at: 2021/11/14 10:00
