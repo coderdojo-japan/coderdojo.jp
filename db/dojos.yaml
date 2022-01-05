@@ -1325,6 +1325,20 @@
   - micro:bit
   - mBot
   - Minecraft
+- id: 278
+  order: '141330'
+  created_at: '2022-01-04'
+  name: 武蔵小杉
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/coderdojocosugi
+  description: 武蔵小杉、向河原周辺で不定期開催
+  tags:
+  - Scratch
+  - micro:bit
+  - toio
+  - Sphero
+  - ドローン
 - id: 138
   order: '142042'
   is_active: false
