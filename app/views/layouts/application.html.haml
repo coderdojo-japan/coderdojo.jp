@@ -67,7 +67,6 @@
     / lazyload library
     %script{src: '/js/lazysizes.min.js', async: ''}
 
-
     / at the end of the HEAD
     %link{href: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", rel: "stylesheet"}
 
@@ -83,13 +82,16 @@
     :javascript
       twemoji.parse(document.body);
 
-
     %script{src: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js", type: "text/javascript"}
 
     :javascript
       docsearch({
-        apiKey: '#{ENV["ALGOLIA_API_KEY"]}',
-        indexName: 'coderdojo',
+        // This is search ONLY API key, scoped to your production index.
+        // So don't have to worry disclosing it in the frontend.
+        // https://docsearch.algolia.com/docs/migrating-from-legacy/
+        appId:         '#{ENV["ALGOLIA_APP_ID"]}',
+        apiKey:        '#{ENV["ALGOLIA_API_KEY"]}',
+        indexName:     'coderdojo',
         inputSelector: '#searchbox',
         debug: false // Set this true if you want to inspect the dropdown
       });
