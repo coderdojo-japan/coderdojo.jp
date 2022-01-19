@@ -18,15 +18,18 @@
   %h3#graph 📊 推移グラフ
   %div{align: 'center'}
     = high_chart_globals(@high_charts_globals)
-    %br
-    %br
-    = high_chart("annual_dojos",           @annual_dojos_chart)
-    %br
-    %br
-    = high_chart("annual_event_histories", @annual_event_histories_chart)
-    %br
-    %br
-    = high_chart("annual_participants",    @annual_participants_chart)
+
+    / 道場数の推移
+    %p{style: 'margin: 40px auto;'}
+      = high_chart("annual_dojos",           @annual_dojos_chart)
+      
+    / 開催回数の推移
+    %p{style: 'margin: 40px auto;'}
+      = high_chart("annual_event_histories", @annual_event_histories_chart)
+
+    / 参加者数
+    %p{style: 'margin: 40px auto;'}  
+      = high_chart("annual_participants",    @annual_participants_chart)
 
   %h3#data{style: "margin-bottom: 30px;"} 🆕 最新データ
   %p
