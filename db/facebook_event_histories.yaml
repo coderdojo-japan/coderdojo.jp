@@ -4682,3 +4682,13 @@
   event_id:
   participants: 0
   evented_at: 2021/12/12 10:00
+
+# 2022/01/01 - 2022/01/31
+- dojo_id: 83
+  event_id:
+  participants: 4
+  evented_at: 2022/01/09 10:00 #オンライン開催
+- dojo_id: 131
+  event_id:
+  participants: 3
+  evented_at: 2022/01/16 10:00
