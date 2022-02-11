@@ -6,7 +6,7 @@
       - events.each do |event|
         %li.event
           %header
-            - if event[:event_title].include? 'オンライン'
+            - if event[:event_title].include? 'オンライン' or event[:event_title].include? 'リモート'
               %div.event-ribbon
                 %span オンライン
             %p.event-date= l(event[:event_date])
