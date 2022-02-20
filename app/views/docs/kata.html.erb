@@ -34,6 +34,17 @@
 
 	<p>Kata (型) では、全国の CoderDojo から公開された役立つ資料を共有したり (<strong><a href="#learn">学ぶ</a></strong>)、力をつけた子どもが<strong><a href="#challenge">腕試し</a></strong>できるプログラミングコンテスト情報をまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo が受けられる<strong><a href="#support">支援</a></strong>、<strong><a href="#faq">よくある質問と回答</a></strong> (FAQ) についてもまとめています。</p>
 
+	<div class='btn-cover' style="margin: 20px auto;">
+	  <a class='btn-blue' href='#learn'>
+	    <i class='far fa-books'></i>
+	    教材・資料を探す
+	  </a>
+	  <a class='btn-blue' href='#challenge'>
+	    <i class='far fa-trophy-alt'></i>
+	    コンテストを探す
+	  </a>
+	</div>
+
 	<h3 id='coderdojo-is'>CoderDojo とは? ☯️</h3>
 	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
 	<br>
