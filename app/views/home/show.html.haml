@@ -188,14 +188,15 @@
     %h2{style: "color: dimgray;"} 📰 ニュースレター購読
     %br
     %p
-      最新情報をメールで受け取ってみませんか？毎月配信しています。
-      %br.ignore-sp<>
+      最新情報はメールで受け取れます。
+      %br.ignore-pc<>
       %small
-        (
-        %a{href: dojoletter_url, target: '_blank', rel: 'noopener'}<>
-          過去の配信を読んでみる
-        )
+        (毎月配信)
     = render partial: 'shared/newsletter'
+    .btn-cover{style: 'margin-top: 40px;'}
+      %a.btn-blue{href: dojoletter_url, target: '_blank', rel: 'noopener'}<>
+        %i.far.fa-newspaper
+        過去の配信を読む
 
 %section#faq.detail-introduction#contact{style: "padding-top: 30px;"}
   %br
