@@ -169,7 +169,10 @@
       をお読みください。
     %div.kata
       = link_to lazy_image_tag('/kata_cover.jpg', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'), '/kata'
-      %a.button-to-details{href: kata_path} Kata を読む
+    .btn-cover{style: 'margin-top: 20px; margin-bottom: 100px;'}
+      %a.btn-blue{href: kata_path}<>
+        %i.far.fa-books
+        資料集「Kata」を読む
 
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
   %h2{style: "color: dimgray;"} 🤝 パートナー法人
