@@ -177,8 +177,10 @@
     様々な法人が CoderDojo の取り組みを支援しています。
 
   = render partial: 'shared/partners'
-  %div.kata{style: 'margin-top: 60px; margin-bottom: 150px;'}
-    %a.button-to-details{href: partnership_path} 法人向け資料を読む
+  .btn-cover{style: 'margin-top: 40px; margin-bottom: 100px;'}
+    %a.btn-blue{href: partnership_path}<>
+      %i.far.fa-handshake
+      法人向け資料を読む
 
 
 / Start with 'div' not 'section' due to grayscale-bg area
