@@ -628,7 +628,18 @@
 
 	<p><a href="/kata#startup">CoderDojo を立ち上げ</a>、承認された Dojo がスムーズに運営できるように、様々な支援・資料が用意されています。パートナー法人からの<a href='#support-programs'>支援プログラム</a>や、CoderDojo 関係者が作成した<a href='#support-docs'>運営者向け資料</a>が皆さんの Dojo 運営に役立てば嬉しいです 😌💖</p>
 
-	<h3 id='support-programs' style='margin-bottom: 30px;'>🏢 パートナー法人からの支援プログラム</h3>
+	<div class='btn-cover' style="margin-top: 20px;">
+	  <a class='btn-blue' href='#support-programs'>
+	    <i class='far fa-gift'></i>
+	    支援プログラムを見る
+	  </a>
+	  <a class='btn-blue' href='#support-docs'>
+	    <i class='far fa-yin-yang'></i>
+	    運営者向け資料を見る
+	  </a>
+	</div>
+
+	<h3 id='support-programs' style='padding-top: 80px;'>🎁 パートナー法人からの支援プログラム</h3>
 	<ul>
 	  <li>
 	    <h4 id='coderdojo-globalslack'>CoderDojo Global Slack (提供: <%= link_to 'CoderDojo Foundation', foundation_url %>)</h4>
@@ -704,9 +715,8 @@
 	<br>
 	<p>一般社団法人 CoderDojo Japan では様々な企業・団体との連携を承っています。全国の CoderDojo との協力・提携に興味ありましたら、下記ページをご参照してください。</p>
 	<p><strong><%= link_to '🤝 パートナーシップのご案内 - CoderDojo Japan', doc_path('about-partnership') %></strong></p>
-	<br>
 
-	<h3 id='support-docs'>📚 Dojo 運営者向け！役立つ資料まとめ</h3>
+	<h3 id='support-docs' style='padding-top: 80px;'>📚 Dojo 運営者向け！役立つ資料まとめ</h3>
 	<p>法人からの支援だけでなく、CoderDojo コミュニティが CoderDojo コミュニティのために制作した資料もあります。皆さんの Dojo 運営にお役立てください 😉</p>
 	<br>
 	<ul>
@@ -834,19 +844,22 @@
 	<h4>日本語リソース <span style="font-weight: normal; font-size: 14px;">(運営: CoderDojo Japan)</span></h4>
 	<ul>
 	  <li>
-	    <p><%= link_to 'Webサイト', root_path %> (coderdojo.jp)</p>
+	    <p><%= link_to 'DojoCast', podcasts_path %> (Podcast)</p>
 	  </li>
 	  <li>
-	    <p><%= link_to '近日開催の道場', events_path %> (coderdojo.jp)</p>
+	    <p><%= link_to 'DojoLetter', news_path %> (Newsletter)</p>
 	  </li>
 	  <li>
-	    <p><a href="https://twitter.com/coderdojojapan">Twitter アカウント</a> (最新情報を発信します)</p>
+	    <p><%= link_to 'DojoChannel', 'https://www.youtube.com/CoderDojoJapan' %> (YouTube)</p>
 	  </li>
 	  <li>
-	    <p><a href="Facebook (一般公開グループ)">Facebook グループ</a> (開催報告・相談用グループ)</p>
+	    <p><%= link_to 'CoderDojo Japan', 'https://twitter.com/CoderDojoJapan' %> (Twitter)</p>
 	  </li>
 	  <li>
-	    <p><a href="http://github.com/coderdojo-japan">GitHub Organization</a> (ソースコード共有用)</p>
+	    <p><%= link_to 'CoderDojo Japan', 'https://www.facebook.com/groups/coderdojo.jp' %> (Facebook)</p>
+	  </li>
+	  <li>
+	    <p><%= link_to 'CoderDojo Japan', 'http://github.com/coderdojo-japan' %> (GitHub)</p>
 	  </li>
 	</ul>
 
