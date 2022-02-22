@@ -42,5 +42,11 @@
 :javascript
   function focusSearchBox() {
     document.getElementById("searchbox").focus();
-  }
-        
+  };
+
+  document.addEventListener('click', (e) => {
+    if(e.target.closest('#header-nav-toggle') || !e.target.closest('#header-nav-toggle')) {
+      const element = document.getElementById('header-nav-toggle')
+      element.classList.remove('in');
+    }
+  })
