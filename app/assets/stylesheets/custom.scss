@@ -3,6 +3,29 @@
 @import "color";
 // Customized by YassLab team
 
+/* Newsletter */
+#mc_embed_signup {
+  flex: auto;
+}
+input.email {
+  margin-bottom: 15px;
+}
+input.button {
+  background: #2275CA;
+  border-radius: 5px;
+  border: solid 2px #2275CA;
+  color: #fff;
+  display: inline-block;
+  // font-weight: bold;
+  text-align: center;
+  transition: all .1s;
+  &:hover {
+    text-decoration: none;
+    background: #f7f7f7;
+    color: #2275CA;
+  }
+}
+
 /* Kata */
 section.kata p {
   line-height: 1.7em;
@@ -455,7 +478,7 @@ body>footer a:hover {
   max-width: 680px; //font-size: 130%
 }
 
-@media only screen and (min-width:560px) {
+@media only screen and (min-width: 560px) {
   body>footer>ul li {
     border-radius: 3px;
     line-height: 2.8em
@@ -473,7 +496,7 @@ body>footer a:hover {
   }
 }
 
-@media only screen and (min-width:720px) {
+@media only screen and (min-width: 720px) {
   .title>i.cd:before {
     font-size: 1000%
   }
@@ -487,7 +510,7 @@ body>footer a:hover {
   }
 }
 
-@media only screen and (min-width:560px) {
+@media only screen and (min-width: 560px) {
   .introduction {
     max-width: 560px;
     margin: 0 auto;
@@ -803,7 +826,7 @@ body>footer a:hover {
   text-decoration: none
 }
 
-@media only screen and (min-width:560px) {
+@media only screen and (min-width: 560px) {
   .dojo {
     width: calc(220px - 10px);
     margin: 10px;
@@ -945,12 +968,19 @@ body>footer a:hover {
   margin: 5px;
   padding: 12px 24px;
   text-align: center;
+  text-decoration: none;
   transition: all .1s;
   width: 100%;
   &:hover {
     text-decoration: none;
     background: #f7f7f7;
     color: #2275CA;
+  }
+  &:visited, &:focus, &:active{
+    // TODO: クリック後のテキスト色のみを白色にしたい
+    //background: #2275CA;
+    text-decoration: none;
+    font-color: #fff;
   }
 }
 

@@ -169,7 +169,10 @@
       をお読みください。
     %div.kata
       = link_to lazy_image_tag('/kata_cover.jpg', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'), '/kata'
-      %a.button-to-details{href: kata_path} Kata を読む
+    .btn-cover{style: 'margin-top: 20px; margin-bottom: 100px;'}
+      %a.btn-blue{href: kata_path}<>
+        %i.far.fa-books
+        資料集「Kata」を読む
 
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
   %h2{style: "color: dimgray;"} 🤝 パートナー法人
@@ -177,8 +180,10 @@
     様々な法人が CoderDojo の取り組みを支援しています。
 
   = render partial: 'shared/partners'
-  %div.kata{style: 'margin-top: 60px; margin-bottom: 150px;'}
-    %a.button-to-details{href: partnership_path} 法人向け資料を読む
+  .btn-cover{style: 'margin-top: 40px; margin-bottom: 100px;'}
+    %a.btn-blue{href: partnership_path}<>
+      %i.far.fa-handshake
+      法人向け資料を読む
 
 
 / Start with 'div' not 'section' due to grayscale-bg area
@@ -188,14 +193,15 @@
     %h2{style: "color: dimgray;"} 📰 ニュースレター購読
     %br
     %p
-      最新情報をメールで受け取ってみませんか？毎月配信しています。
-      %br.ignore-sp<>
+      最新情報はメールで受け取れます。
+      %br.ignore-pc<>
       %small
-        (
-        %a{href: dojoletter_url, target: '_blank', rel: 'noopener'}<>
-          過去の配信を読んでみる
-        )
+        (毎月配信)
     = render partial: 'shared/newsletter'
+    .btn-cover{style: 'margin-top: 40px;'}
+      %a.btn-blue{href: dojoletter_url, target: '_blank', rel: 'noopener'}<>
+        %i.far.fa-newspaper
+        過去の配信を読む
 
 %section#faq.detail-introduction#contact{style: "padding-top: 30px;"}
   %br
@@ -239,6 +245,13 @@
         A．
         %a{href: kata_path(anchor: 'startup')}<> 📚 Kata
         \ に資料があります！運営に関わってみたい方はぜひ 😉
+  .btn-cover{style: 'margin-top: 40px;'}
+    %a.btn-blue{href: kata_path(anchor: 'faq')}<>
+      %i.far.fa-comment-check
+      他のよくある質問と
+      %br.ignore-pc<>
+      回答を確認する
+
 
 %section.detail-introduction.text-center
   %br
