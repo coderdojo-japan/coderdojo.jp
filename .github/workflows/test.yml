@@ -50,10 +50,10 @@ jobs:
           SCRIVITO_API_KEY:  ${{ secrets.SCRIVITO_API_KEY }}
         run: |
           if [ '${{ github.actor }}' == *'dependabot'* ]; then
-            echo 'Run test without Scrivito'
+            echo 'Run test without Scrivito by Dependabot PR'
             bundle exec rspec spec --tag ~@scrivito
           elif [ '${{ github.event.pull_request.head.repo.full_name }}' != '${{ github.repository }}' ]; then
-            echo 'Run test without Scrivito'
+            echo 'Run test without Scrivito by ${{ github.actor }}'
             bundle exec rspec spec --tag ~@scrivito
           else
             echo 'Run test with Scrivito'
