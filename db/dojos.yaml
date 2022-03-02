@@ -1459,6 +1459,19 @@
   description: 富山市で毎月開催
   tags:
   - Scratch
+- id: 279
+  order: '162060'
+  created_at: '2022-03-01'
+  name: 滑川
+  prefecture_id: 16
+  logo: "/img/dojos/japan.png"
+  url: https://sites.google.com/coderdojo.com/coderdojo-namerikawa/top
+  description: 滑川市で毎月開催
+  tags:
+  - Appinventor
+  - EV3
+  - Scratch
+  - Swift
 - id: 257
   order: '162086'
   created_at: '2020-11-13'
