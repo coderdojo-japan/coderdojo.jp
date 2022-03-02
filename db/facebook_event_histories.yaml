@@ -4692,3 +4692,16 @@
   event_id:
   participants: 3
   evented_at: 2022/01/16 10:00
+# 2022/02/01 - 2022/02/28
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2022/02/20 13s:00 #オンライン開催
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2022/02/06 10:00 #オンライン開催
+- dojo_id: 113
+  event_id:
+  participants: 2
+  evented_at: 2022/02/19 15:15
