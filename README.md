@@ -118,6 +118,27 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 2. [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase) を使い、本番環境の安定性を高める
    - 例: Heroku デプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
 
+### CI で実行される各種 Rake タスクと概要
+
+最新版は [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh) からご確認いただけます。
+
+```
+# データベースのマイグレーション
+bundle exec rails db:migrate
+
+# 開発用データの流し込み（seeding）
+bundle exec rails db:seed
+
+# db/dojos.yaml のデータを反映するタスク
+bundle exec rails dojos:update_db_by_yaml
+
+# 近日開催の道場を更新するタスク
+bundle exec rails dojo_event_services:upsert
+
+# ポッドキャスト「DojoCast」のデータを反映するタスク
+bundle exec rails podcasts:upsert
+```
+
 
 ### Development with Scrivito
 
