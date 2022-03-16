@@ -2882,7 +2882,7 @@
   name: 神山
   prefecture_id: 36
   logo: "/img/dojos/kamiyama.png"
-  url: https://www.facebook.com/CDKamiyama/
+  url: https://coderdojokamiyama.netlify.app/
   description: 神山町で毎月開催
   tags:
   - Scratch
