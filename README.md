@@ -129,8 +129,11 @@ bundle exec rails db:migrate
 # 開発用データの流し込み（seeding）
 bundle exec rails db:seed
 
-# db/dojos.yaml のデータを反映するタスク
+# db/dojos.yaml の内容をDBに反映するタスク
 bundle exec rails dojos:update_db_by_yaml
+
+# DBの内容を db/dojos.yaml に反映するタスク
+bundle exec rails dojos:migrate_adding_id_to_yaml
 
 # 近日開催の道場を更新するタスク
 bundle exec rails dojo_event_services:upsert
