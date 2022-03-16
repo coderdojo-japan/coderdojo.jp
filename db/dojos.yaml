@@ -1742,8 +1742,8 @@
   created_at: '2014-10-20'
   name: 名古屋
   prefecture_id: 23
-  logo: "/img/dojos/japan.png"
-  url: https://coderdojo-nagoya.hateblo.jp/
+  logo: "/img/dojos/nagoya.png"
+  url: https://coderdojo-nagoya.connpass.com/
   description: 名古屋市中区で月2回開催
   tags:
   - Scratch
