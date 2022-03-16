@@ -1238,7 +1238,10 @@
   url: https://coderdojo-naha.doorkeeper.jp/
 
 # 師勝
-# - dojo_id: 217
+- dojo_id: 217
+  name: connpass
+  group_id: 7824
+  url: https://coderdojo-shikatsu.connpass.com/
 
 # 犬山
 - dojo_id: 218
