@@ -1399,6 +1399,7 @@
   - Webサイト
 - id: 199
   order: '142077'
+  is_active: false
   created_at: '2019-02-06'
   name: 茅ヶ崎
   prefecture_id: 14
