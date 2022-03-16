@@ -17,13 +17,17 @@ CoderDojo Zen での申請がまだお済みでない場合は、下記ページ
 
 <br>
 
-なお、文字数やタグ数に上限があるため、申請内容を一部変更して掲載する場合があります 🙏
+### 掲載にあたって、以下の点をご確認ください
 
-- ✅ 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
+1. 文字数やタグ数に上限があるため、申請内容を一部変更して掲載する場合があります 🙏
+  - ✅ 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
+  - <br>
+1. Zen で非アクティブとなった場合、もしくは１年以上開催されていない場合は非表示になります 😴
+  - 📜️ [CoderDojo Zen の状態を確認する方法 - CoderDojo Japan](/docs/how-to-check-dojo-status)
+  - <br>
+1. 申請後もロゴ画像や説明文を更新できますので、まずは気軽にお申し込みください 📮✨
+  - 🛠 [申請後に Dojo 情報を更新する方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp#readme)
 
-申請後もロゴ画像や説明文を更新できますので、まずは気軽にお申し込みください 📮✨
-
-- 🛠 掲載した Dojo 情報の更新方法: [https://bit.ly/how-to-update-dojo-info](https://bit.ly/how-to-update-dojo-info)
 
 <br>
 
