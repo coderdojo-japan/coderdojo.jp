@@ -95,11 +95,12 @@
   - Webサイト
 - id: 201
   order: '032026'
+  is_active: false
   created_at: '2019-02-14'
   name: 宮古
   prefecture_id: 3
-  url: https://kokucheese.com/event/index/556037/
-  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/CoderDojoMiyako/
+  logo: "/img/dojos/miyako.jpg"
   description: 宮古市で毎月開催
   tags:
   - Scratch
@@ -129,6 +130,7 @@
   - ラズベリーパイ
 - id: 107
   order: '032069'
+  is_active: false
   created_at: '2017-06-20'
   name: きたかみ
   prefecture_id: 3
@@ -2408,6 +2410,7 @@
   - Python
 - id: 220
   order: '282065'
+  is_active: false
   created_at: '2019-07-07'
   name: あしや
   prefecture_id: 28
@@ -3171,6 +3174,7 @@
   - C-Style
 - id: 198
   order: '472115'
+  is_active: false
   created_at: '2019-02-03'
   name: コザ
   prefecture_id: 47
