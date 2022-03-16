@@ -58,7 +58,7 @@
   group_id: 11894
   url: https://coderdojo-kashiwara.doorkeeper.jp/
 
-# 長門: 未定
+# 長門: Google Form
 # - dojo_id: 270
 #   name:     ???
 #   group_id: ???
@@ -140,11 +140,11 @@
 #   group_id: ???
 #   url:      ???
 
-# となみ: 未定
+# となみ: 独自のイベントぺーじ
 # - dojo_id: 257
 #   name:     ???
 #   group_id: ???
-#   url:      ???
+#   url:      https://coderdojo-tonami.org/event/
 
 # 茨木
 - dojo_id: 256
@@ -700,7 +700,7 @@
   group_id: 281889288840369
   url: https://www.facebook.com/coderdojo.nishinari.osaka/events/
 
-  # 東大阪 (近畿) と合同開催のため八尾の集計は不要
+# 東大阪 (近畿) と合同開催のため八尾の集計は不要
 # - dojo_id: 101
 #   name: connpass
 #   group_id: 2777
@@ -1249,8 +1249,9 @@
   group_id: 10271
   url: https://coderdojo-inuyama.doorkeeper.jp/
 
-# 印西
+# 印西：Google Form
 # - dojo_id: 219
+#   url: https://inzai.coderdojo.chiba.jp/
 
 # あしや
 - dojo_id: 220
