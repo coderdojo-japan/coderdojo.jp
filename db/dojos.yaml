@@ -2908,7 +2908,7 @@
   name: 松山
   prefecture_id: 38
   logo: "/img/dojos/matsuyama.png"
-  url: https://coderdojo-matsuyama.jpn.org/
+  url: https://coderdojo-matsuyama.doorkeeper.jp/
   description: 松山市で月2回開催
   tags:
   - Scratch
