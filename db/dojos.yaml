@@ -341,8 +341,8 @@
   created_at: '2018-07-09'
   name: 古河
   prefecture_id: 8
-  logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/coderdojokoga/
+  logo: "/img/dojos/koga.png"
+  url: https://coderdojokoga.connpass.com/
   description: 古河市で毎月開催
   tags:
   - Scratch
