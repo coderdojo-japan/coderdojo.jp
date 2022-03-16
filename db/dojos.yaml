@@ -1078,6 +1078,7 @@
   - Java
 - id: 174
   order: '132047'
+  is_active: false
   created_at: '2018-10-05'
   name: 三鷹
   prefecture_id: 13
@@ -1130,6 +1131,7 @@
   - ラズベリーパイ
 - id: 212
   order: '132080'
+  is_active: false
   created_at: '2019-06-10'
   name: 調布@電気通信大学
   prefecture_id: 13
@@ -1168,6 +1170,7 @@
   - アプリ開発
 - id: 275
   order: '132152'
+  is_active: false
   created_at: '2021-09-22'
   name: 国立
   prefecture_id: 13
