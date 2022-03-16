@@ -1295,10 +1295,11 @@
   - Hour of Code
 - id: 154
   order: '141135'
+  is_active: false
   created_at: '2017-04-03'
   name: 鴨居
   prefecture_id: 14
-  logo: "/img/dojos/kamoi.png"
+  logo: "/img/dojos/kamoi.jpg"
   url: https://coderdojo-kamoi.connpass.com/
   description: 横浜市緑区東本郷で毎月開催
   tags:
