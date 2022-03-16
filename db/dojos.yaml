@@ -2742,6 +2742,7 @@
   - 電子工作
 - id: 258
   order: '332054'
+  is_active: false
   created_at: '2020-12-07'
   name: 笠岡
   prefecture_id: 33
