@@ -1081,8 +1081,8 @@
   created_at: '2018-10-05'
   name: 三鷹
   prefecture_id: 13
-  logo: "/img/dojos/japan.png"
-  url: https://cdm.rbn.tokyo/
+  logo: "/img/dojos/mitaka.png"
+  url: https://coderdojo-mitaka.connpass.com/
   description: 三鷹周辺で月に1回程度開催
   tags:
   - Scratch
