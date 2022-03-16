@@ -2339,8 +2339,8 @@
   created_at: '2017-05-26'
   name: せんなん
   prefecture_id: 27
-  logo: "/img/dojos/japan.png"
-  url: https://www.facebook.com/coderdojo.sennan.osaka.jp/
+  logo: "/img/dojos/sennan.png"
+  url: http://coderdojo-sennan.net/
   description: 泉南市で毎月開催
   tags:
   - Scratch
