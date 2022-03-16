@@ -3004,6 +3004,7 @@
   - Mindstorms
 - id: 172
   order: '402036'
+  is_active: false
   created_at: '2018-08-25'
   name: 諏訪野＠ギャランドゥ
   prefecture_id: 40
