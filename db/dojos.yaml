@@ -1872,8 +1872,8 @@
   created_at: '2020-02-22'
   name: 大府
   prefecture_id: 23
-  logo: "/img/dojos/japan.png"
-  url: https://zen.coderdojo.com/dojos/jp/obu-aichi/da4-fu3
+  logo: "/img/dojos/obu.png"
+  url: https://coderdojo-obu.connpass.com/
   description: 大府市で毎月2回開催
   tags:
   - Scratch
