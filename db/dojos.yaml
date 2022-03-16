@@ -1595,6 +1595,7 @@
   - Processing
 - id: 133
   order: '192104'
+  is_active: false
   created_at: '2018-03-02'
   name: 甲斐竜王
   prefecture_id: 19
@@ -1686,6 +1687,7 @@
   - LEGO WeDo
 - id: 96
   order: '212211'
+  is_active: false
   created_at: '2017-09-26'
   name: 海津
   prefecture_id: 21
