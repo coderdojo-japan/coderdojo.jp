@@ -2801,6 +2801,18 @@
   description: 福山市で不定期開催
   tags:
   - Scratch
+- id: 281
+  order: '342076'
+  created_at: '2022-03-16'
+  name: 福山大門
+  prefecture_id: 34
+  logo: "/img/dojos/japan.png"
+  url: https://www.facebook.com/groups/332290965392043
+  description: 福山市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
+  - LEGO
 - id: 194
   order: '342092'
   created_at: '2019-01-18'
