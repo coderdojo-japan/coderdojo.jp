@@ -1620,7 +1620,7 @@
   - Webサイト
   - Viscuit
   - micro:bit
-  - LEGO WeDo
+  - LEGO
 - id: 232
   order: '202037'
   created_at: '2019-11-10'
@@ -1645,7 +1645,7 @@
   - Webサイト
   - Viscuit
   - micro:bit
-  - LEGO WeDo
+  - LEGO
 - id: 237
   order: '202096'
   created_at: '2020-01-19'
@@ -1684,7 +1684,7 @@
   - Webサイト
   - Viscuit
   - micro:bit
-  - LEGO WeDo
+  - LEGO
 - id: 96
   order: '212211'
   is_active: false
