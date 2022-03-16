@@ -790,6 +790,7 @@
   - Ruby
 - id: 152
   order: '122301'
+  is_active: false
   created_at: '2018-06-30'
   name: やちまた
   prefecture_id: 12
@@ -963,6 +964,7 @@
   - Arduino
 - id: 16
   order: '131156'
+  is_active: false
   created_at: '2016-09-09'
   name: すぎなみ
   prefecture_id: 13
