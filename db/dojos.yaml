@@ -1809,6 +1809,7 @@
   - ラズベリーパイ
 - id: 214
   order: '232033'
+  is_active: false
   created_at: '2019-05-18'
   name: 一宮
   prefecture_id: 23
@@ -1976,6 +1977,7 @@
   - LabVIEW
 - id: 37
   order: '252018'
+  is_active: false
   created_at: '2015-09-16'
   name: 大津
   prefecture_id: 25
@@ -2000,6 +2002,7 @@
   is_private: true
 - id: 240
   order: '261009'
+  is_active: false
   created_at: '2020-02-09'
   name: 京都四条
   prefecture_id: 26
@@ -2103,11 +2106,12 @@
   - 電子工作
 - id: 116
   order: '271004'
+  is_active: false
   created_at: '2017-11-02'
   name: 阿倍野
   prefecture_id: 27
   logo: "/img/dojos/abeno.png"
-  url: https://www.facebook.com/CoderDojoAbeno/
+  url: https://coderdojo-abeno.doorkeeper.jp/
   description: 大阪市阿倍野区で毎月開催
   tags:
   - Scratch
