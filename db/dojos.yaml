@@ -208,6 +208,7 @@
   - MakeyMakey
 - id: 59
   order: '044458'
+  is_active: false
   created_at: '2016-10-06'
   name: 中新田
   prefecture_id: 4
@@ -232,6 +233,7 @@
   - 3Dプリンタ
 - id: 139
   order: '052035'
+  is_active: false
   created_at: '2018-03-27'
   name: 増田
   prefecture_id: 5
