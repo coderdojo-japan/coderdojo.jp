@@ -25,8 +25,11 @@ module ApplicationHelper
 
   def full_description(description)
     description = kata_description if @obj && @obj.permalink == "kata"
+
+    # Default description
+    # Outdated: "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、毎年1,000回以上のイベントが世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WORLD_DOJOS}ヶ所で開催されています。"
     if description.empty?
-      "CoderDojo は子どものためのプログラミング道場です。2011年にアイルランドで始まり、日本では#{Dojo.active_dojos_count}ヶ所以上、世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WORLD_DOJOS}ヶ所で開催されています。" # Default description
+      "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、毎年1,000回以上のイベントが日本各地で開催されています。"
     else
       description
     end
