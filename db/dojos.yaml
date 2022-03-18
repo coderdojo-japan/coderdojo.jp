@@ -1685,6 +1685,19 @@
   - Viscuit
   - micro:bit
   - LEGO
+- id: 282
+  order: '204234'
+  created_at: '2022-03-17'
+  name: 木曽
+  prefecture_id: 20
+  logo: "/img/dojos/kiso.png"
+  url: https://coderdojo-kiso.connpass.com/
+  description: 南木曽町で不定期に開催
+  tags:
+  - Scratch
+  - Webサイト
+  - JavaScript
+  - toio
 - id: 96
   order: '212211'
   is_active: false
