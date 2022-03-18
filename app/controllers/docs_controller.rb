@@ -15,9 +15,11 @@ class DocsController < ApplicationController
     redirect_to root_url unless @doc.exists?
 
     if @doc.content.include? "NUM_OF_"
-      @doc.content.gsub! "{{ NUM_OF_JAPAN_DOJOS }}", Dojo.active_dojos_count.to_s
-      @doc.content.gsub! "{{ NUM_OF_WORLD_DOJOS }}", Dojo::NUM_OF_WORLD_DOJOS
-      @doc.content.gsub! "{{ NUM_OF_COUNTRIES }}",   Dojo::NUM_OF_COUNTRIES
+      @doc.content.gsub! "{{ NUM_OF_JAPAN_DOJOS }}",  Dojo.active_dojos_count.to_s
+      @doc.content.gsub! "{{ NUM_OF_WORLD_DOJOS }}",  Dojo::NUM_OF_WORLD_DOJOS
+      @doc.content.gsub! "{{ NUM_OF_COUNTRIES }}",    Dojo::NUM_OF_COUNTRIES
+      @doc.content.gsub! "{{ NUM_OF_TOTAL_EVENTS }}", Dojo::NUM_OF_TOTAL_EVENTS
+      @doc.content.gsub! "{{ NUM_OF_TOTAL_NINJAS }}", Dojo::NUM_OF_TOTAL_NINJAS
     end
 
     @content = Kramdown::Document.new(@doc.content, input: 'GFM').to_html

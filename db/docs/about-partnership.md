@@ -4,7 +4,7 @@
 
 ## CoderDojo とは?
 
-CoderDojo は7〜17歳を対象にしたプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本では全国に{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は全国各地で定期的に開催されており、延べ 10,000 人 以上の子ども達が毎年プログラミングを学んでいます。
+CoderDojo は7〜17歳を主な対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は日本各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上開催されており、延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達がプログラミングを学んでいます。
 
 <div style="padding: 40px 0px;">
   <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
