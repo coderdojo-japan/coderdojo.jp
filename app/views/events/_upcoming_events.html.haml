@@ -1,6 +1,7 @@
 %div#event-list.grayscale-bg
   - upcoming_events.each do |prefecture, events|
-    %h2.event-region{id: prefecture}
+    %div{id: prefecture}
+    %h2.event-region
       %a{href: "##{prefecture}", style: "color: black;"}= prefecture
     %ul.event-ul
       - events.each do |event|

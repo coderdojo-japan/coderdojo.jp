@@ -22,7 +22,7 @@
       🆕 ポケモン・ワークショップ開催中！
       %br
       - @pokemon_events.each do |event|
-        %a{href: "#{event.event_url}", target: "_blank", rel: "external noopener"}
+        %a{href: "##{event.dojo_event_service.dojo.prefecture.name}"}
           %small #{event.event_at.strftime('%-m月%d日 %H:%M〜')} @ #{event.dojo_event_service.dojo.name}
         %br
 
