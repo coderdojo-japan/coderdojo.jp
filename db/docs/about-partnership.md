@@ -6,17 +6,6 @@
 
 CoderDojo は7〜17歳を主な対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は日本各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上開催されており、延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達がプログラミングを学んでいます。
 
-<div style="padding: 40px 0px;">
-  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-stats.png" alt="写真: 参加者数の推移" /></a>
-  <center>図: CoderDojo の延べ参加者数の推移 (<a href="/stats">詳細</a>)</center>
-</div>
-
-CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
-
-CoderDojo には統一されたカリキュラムがなく、代わりに子ども達の作りたいモノを後押しします。例えばアドバイスを求められたときに一緒に考えたり、子ども同士で作品を発表しあう機会を設けたりなど、参加者の自発的な学びや参加者同士の学び合いを推奨しています。
-
-これは受け身で何かを教わることよりも、創りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する『広場』のような場所となっています。
-
 <br>
 
 <img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/kata-cover.png" alt="写真: CoderDojo 西宮・梅田における風景" />
@@ -24,49 +13,50 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 <br>
 
+[CoderDojoの普及](https://jp.quora.com/CoderDojo%E3%81%AF%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%A6%E5%BA%83%E3%81%BE%E3%81%A3%E3%81%A6%E3%81%84%E3%81%8D%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%81%8B)に伴い、個人だけでなく法人とも連携しやすい状況にしていくため、2016年に公式日本法人「[一般社団法人CoderDojo Japan](/about-coderdojo-japan)」が設立されました。公式日本法人では、[{{ NUM_OF_PARTNERSHIPS }}社のパートナー法人](/#partners)と連携し、全国のCoderDojoに対して[様々な支援プログラム](/kata#support)を提供しています。
 
-## 提携のご提案と具体例
+<div style="padding: 40px 0px;">
+  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners.png" alt="写真: パートナー法人の年次推移" /></a>
+  <center>図: パートナー法人の年次推移 (<a href='https://news.coderdojo.jp/category/press/'>最近の提携事例</a>)</center>
+</div>
+
+## CoderDojo の特徴
+
+CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
+
+<div style="padding: 40px 0px;">
+  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/kata/coderdojo-zero.png" alt="写真: CoderDojo の運営者向けイベントの様子" /></a>
+  <center>写真: CoderDojo の<a href="https://www.facebook.com/events/2197296287267893/">運営者向けイベント</a>の様子</center>
+</div>
+
+CoderDojo には統一されたカリキュラムがなく、代わりに子ども達の作りたいモノを後押しします。例えばアドバイスを求められたときに一緒に考えたり、子ども同士で作品を発表しあう機会を設けたりなど、参加者の自発的な学びや参加者同士の学び合いを推奨しています。
+
+これは受け身で何かを教わることよりも、創りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する『広場』のような場所となっています。
 
 <br>
+
+
+## これまでの提携事例
 
 全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
 
 <br>
 
-<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 下北沢の参加者による発表の様子" /></a>
-<center>写真: <a href="https://coderdojo-tokyo.connpass.com/">CoderDojo 下北沢</a>の参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子 (<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45">引用元</a>)</center><br>
+<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
+<center>写真: CoderDojo 参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子</center><br>
 
-もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo Japan が描いているパートナーシップの内容とその具体例は次のとおりです。
-
-<br>
-
-- `A:` CoderDojo Japan への単発の提供ではなく、<b>継続的な提供</b>であると嬉しいです
-  - 継続的な提供が始まった時点からパートナーとしてご紹介し、支援が終わった時点でパートナーシップを解消します
-  - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
-  - 製品やサービスの継続的な提供もご相談可能です
-    例: [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/press/2017/0720_cloud-coderjapan/) <br><br>
-- `B:` CoderDojo Japan が運営する SNS や Podcast で貴社のプロダクト・イベントなどを周知できます (事前審査あり、周知回数は応相談)
-  - 例1: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
-  - 例2: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
-  - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](https://coderdojo.jp/podcasts/23) <br><br>
-- `C:` CoderDojo Japan のパートナーとして、公式Webサイトに貴社ロゴを掲載します
-
-<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
-<center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
-<br>
-
-
-上記は一般社団法人 CoderDojo Japan が描いている提携案の１つです。いかがでしょうか?
-
-「こういった提携もできますか?」といったご相談も受け付けておりますので、もし本パートナーシップにご興味ありましたら、お気軽にご連絡していただけると嬉しいです。
+もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。これまでの提携事例については下記スライドをご参照ください。
 
 <br>
-
 
 <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<p style="margin: 0 300px 50px;">
-<a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan" class='btn-blue' target='_blank' rel='external noopener'>スライド資料を見る <i class='far fa-external-link'></i></a>
-</p>
+<center><a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan" target='_blank' rel='external noopener'>スライド資料を見る <i class='far fa-external-link'></i></a></center>
+
+<br>  
+
+上記はあくまで提携の一例ですので「こういった提携もできますか?」といったご相談にも対応しております。草案の時点でも大丈夫ですので、まずは気軽にご連絡いただけると嬉しいです。
+
+<br>
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
@@ -76,9 +66,28 @@ info@coderdojo.jp
 
 <br>
 
-## よくある質問と回答 {#faq}
+### 参考: CoderDojo Japan にできること
+
+- `A:` 単発の支援、継続的なご支援のいずれにも対応しています。
+  - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
+  - 物品によるご支援の場合、発送は御社側でご対応していただけると幸いです。
+    例: [CoderDojo向けTFabWorks製品無償レンタルプログラム - TFabWorks](https://tfabworks.com/coderdojo-rental/) <br><br>
+- `B:` CoderDojo Japan が運営する SNS などで貴社事業を周知できます (事前審査あり、周知回数は応相談)
+  - 例1: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
+  - 例2: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
+  - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](https://coderdojo.jp/podcasts/23) <br><br>
+- `C:` CoderDojo Japan 公式Webサイトのトップページに、ロゴ画像を掲載できます
+
+<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
+<center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
 
 <br>
+
+さらに細かな事例については下記「よくある質問と回答」をご参照ください。
+
+<br>
+
+## よくある質問と回答 {#faq}
 
 ### Q. 道場数の推移や開催回数の推移などの統計情報はありますか?
 はい、あります。下記ページより CoderDojo Japan が把握している統計情報を公開しています。

@@ -3,6 +3,7 @@ class Dojo < ApplicationRecord
   NUM_OF_WORLD_DOJOS  = "2,200"
   NUM_OF_TOTAL_EVENTS = "1,000"
   NUM_OF_TOTAL_NINJAS = "10,000"
+  NUM_OF_PARTNERSHIPS = "25"
   DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yaml')
 
   belongs_to :prefecture
