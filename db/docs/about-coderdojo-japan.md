@@ -1,7 +1,7 @@
-# 🤝 理事募集のお知らせ
+# ☯️ 一般社団法人 CoderDojo Japan について
 
 <br>
-一般社団法人 CoderDojo Japan (以下、CoderDojo Japan) では、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業に理事として参加してみたい方を募集します。
+一般社団法人 CoderDojo Japan では次の事業を行なっておりますが、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。
 
 <br>
 
@@ -13,6 +13,10 @@
 - (6) 前各号に附帯関連する一切の事業
 
 <div style="text-align: center; padding-top: 10px;"><a href="https://coderdojo.jp/teikan">定款</a>の第4条  (事業) より抜粋</div>
+
+<br>
+
+本ページでは、上記の各事業の具体例をまとめています。また、一般社団法人 CoderDojo Japan 理事への参画に興味ある方向けの情報についてもまとめています。
 
 <br>
 

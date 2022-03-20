@@ -2,8 +2,11 @@ class DocsController < ApplicationController
   def index
     @title = 'CoderDojo Japan ドキュメント集'
     @desc  = 'CoderDojo に関する公式情報を本ページでまとめています。'
-    @docs  = Document.all.reject{|doc| doc.title.start_with? '📆 予定表'}
     @url   = request.url
+    @docs  = Document.all.delete_if.each do |doc|
+      doc.title.start_with? '📆 予定表' or
+      doc.filename.start_with? '_'
+    end
   end
 
   def kata
@@ -20,6 +23,7 @@ class DocsController < ApplicationController
       @doc.content.gsub! "{{ NUM_OF_COUNTRIES }}",    Dojo::NUM_OF_COUNTRIES
       @doc.content.gsub! "{{ NUM_OF_TOTAL_EVENTS }}", Dojo::NUM_OF_TOTAL_EVENTS
       @doc.content.gsub! "{{ NUM_OF_TOTAL_NINJAS }}", Dojo::NUM_OF_TOTAL_NINJAS
+      @doc.content.gsub! "{{ NUM_OF_PARTNERSHIPS }}", Dojo::NUM_OF_PARTNERSHIPS
     end
 
     @content = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
