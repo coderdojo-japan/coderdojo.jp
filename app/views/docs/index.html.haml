@@ -1,12 +1,12 @@
-- provide(:title, @title)
-- provide(:desc,  @desc)
-- provide(:url,   @url )
-- provide(:meta_image,  "/img/ogp-docs.jpeg")
+- provide :title, strip_tags(@title)
+- provide :desc,  strip_tags(@desc)
+- provide :url,   @url
+- provide :meta_image, "/img/ogp-docs.jpeg"
 
-.container{:style => "line-height: 2.2em;"}
-  %section.doc{:style => "padding: 50px 0px 50px 0px;"}
-    %h2{:style => "text-align: center;"}= @title
-    %p{ :style => "text-align: center; padding-bottom: 50px;"}= @desc
-    %ul{:style => "font-size: 120%"}
+.container{style: "line-height: 2.2em;"}
+  %section.doc{style: "padding: 50px 0px 50px 0px;"}
+    %h2{style: "text-align: center;"}= @title
+    %p{ style: "text-align: center; padding-bottom: 50px;"}= @desc
+    %ul{style: "font-size: 120%"}
       - @docs.each do |doc|
         %li= link_to doc.title, doc.url
