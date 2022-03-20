@@ -3,10 +3,16 @@
 - provide :url,   @url
 - provide :meta_image, "/img/ogp-docs.jpeg"
 
-.container{style: "line-height: 2.2em;"}
-  %section.doc{style: "padding: 50px 0px 50px 0px;"}
-    %h2{style: "text-align: center;"}= @title
-    %p{ style: "text-align: center; padding-bottom: 50px;"}= @desc
-    %ul{style: "font-size: 120%"}
+.container
+  %section.doc{style: "padding: 50px 0px;"}
+    %h2.text-center= @title.html_safe
+    %p.text-center{style: "padding-bottom: 50px;"}
+      = @desc.html_safe
+      %br
+      初めての方は
+      %a{href: kata_path}
+        %b Kata
+      をご参照ください。
+    %ul
       - @docs.each do |doc|
-        %li= link_to doc.title, doc.url
+        %li{style: ''}= link_to doc.title, doc.url

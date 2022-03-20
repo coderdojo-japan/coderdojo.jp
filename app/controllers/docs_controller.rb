@@ -1,7 +1,7 @@
 class DocsController < ApplicationController
   def index
-    @title = 'CoderDojo Japan 資料集'
-    @desc  = 'CoderDojo に関するドキュメントをまとめたページです。'
+    @title = 'CoderDojo 資料集'
+    @desc  = 'CoderDojo に関する資料を<br class="ignore-pc">トピック毎にまとめたページです。'
     @url   = request.url
     @docs  = Document.all.delete_if.each do |doc|
       # 英文ページと記録用ページなどは一覧から非表示にする
