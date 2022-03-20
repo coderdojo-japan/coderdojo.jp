@@ -5,12 +5,14 @@ RSpec.feature "Docs", type: :feature do
     scenario "Document index should be exist" do
       visit docs_path
       expect(page).to have_http_status(:success)
-      expect(page).to have_css 'section.doc a[href]', count: (Document.all.count - 2)
+      expect(page).to have_css 'section.doc a[href]', count: (Document.all.count - 3)
     end
+
     scenario "Charter should be exist" do
       visit doc_path('charter')
       expect(page).to have_http_status(:success)
     end
+
     scenario "Load doc file with absolute path" do
       visit "#{docs_path}/"
       expect(page).to have_http_status(:success)

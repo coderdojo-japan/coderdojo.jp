@@ -4,9 +4,10 @@ RSpec.describe DocsController, type: :controller do
   describe "GET #index" do
     it "show @docs" do
       get :index
-      expect(assigns(:docs).first.title).to eq Document.all.first.title
+      expect(assigns(:docs).last.title).to eq Document.all.last.title
     end
   end
+
   describe "GET #show" do
     it "show @content" do
       param    = 'charter'
