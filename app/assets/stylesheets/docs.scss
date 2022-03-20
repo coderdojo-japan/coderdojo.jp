@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* 一覧ページ用: /docs */
+.docs {
+  font-family: serif;
+  line-height: 2.2em;
+  a:hover{
+    text-decoration: none;
+  }
+  ul {
+    li {
+      list-style-type: none;
+      font-size: 20px;
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+
+      @media only screen and (max-width: 768px) {
+	padding-bottom: 10px;
+	margin-left: -35px;
+      }
+    }
+  }
+}
+
+/* 各ページ用: /doc/* */
+
 .doc {
   counter-reset: doc-chapter;
   position: relative;

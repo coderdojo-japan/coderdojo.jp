@@ -3,26 +3,6 @@
 @import "color";
 // Customized by YassLab team
 
-/* Docs */
-.doc {
-  line-height: 2.2em;
-  a:hover{
-    text-decoration: none;
-  }
-  ul {
-    li {
-      font-size: 20px;
-      padding-left: 1.5em;
-      text-indent: -1.5em;
-
-      @media only screen and (max-width: 768px) {
-	padding-bottom: 10px;
-	margin-left: -30px;
-      }
-    }
-  }
-}
-
 /* Newsletter */
 #mc_embed_signup {
   flex: auto;
