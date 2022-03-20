@@ -1,4 +1,4 @@
-# ✅ CoderDojo ブランド ガイドライン
+# ✅ CoderDojo ブランドガイドライン
 <center>(<a href="/docs/brand-guidelines_en">原文を読む</a>)</center>
 <br>
 
