@@ -4,7 +4,7 @@
 
 [![Build Status](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/test.yml/badge.svg)](https://github.com/coderdojo-japan/coderdojo.jp/actions)
 
-一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。
+一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。本ページでは、トップページに掲載されている Dojo 情報を更新する方法や、開発環境のセットアップ方法などをまとめています。
 
 ## 開発に参加するには?
 
