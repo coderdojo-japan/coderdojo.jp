@@ -28,11 +28,15 @@
 #  group_id: ??
 #  url: ??
 
-# 武蔵小杉
+# 武蔵小杉（現在は connpass で運用）
 - dojo_id: 278
   name: facebook
   group_id: 288768132053174
   url: https://www.facebook.com/coderdojocosugi
+- dojo_id: 278
+  name: connpass
+  group_id: 12412
+  url: https://coderdojo-musashikosugi.connpass.com/
 
 # 富谷
 - dojo_id: 277
