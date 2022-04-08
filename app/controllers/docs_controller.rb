@@ -4,11 +4,8 @@ class DocsController < ApplicationController
     @desc  = 'CoderDojo に関する資料を<br class="ignore-pc">トピック毎にまとめたページです。'
     @url   = request.url
     @docs  = Document.all.delete_if.each do |doc|
-      # 英文ページと記録用ページなどは一覧から非表示にする
-      doc.filename.end_with? '_en'        or
-        doc.filename.start_with? '_'      or
-        doc.title.start_with? '📆 予定表' or
-        doc.title.start_with? '💌 お問い合わせ'
+      # 記録用ページと英文ページはドキュメント一覧から非表示にする
+      doc.filename.start_with? '_' or doc.filename.end_with? '_en'
     end
   end
 

@@ -24,28 +24,29 @@ Rails.application.routes.draw do
   get "/about-coderdojo"          => "docs#show", id: 'about-coderdojo'
 
   get "/docs/thanks",             to: redirect('/thanks')
-  get "/docs/calendar-yohei",     to: redirect('/calendar/yohei')
-  get "/docs/calendar-kirie",     to: redirect('/calendar/kirie')
   get "/docs/for-media",          to: redirect('/for-media')
+  get "/docs/_calendar-yohei",    to: redirect('/calendar/yohei')
+  get "/docs/_calendar-kirie",    to: redirect('/calendar/kirie')
+  get "/docs/_thanks",            to: redirect('/thanks')
 
   get "/login",                   to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
   get "/brand",                   to: redirect('/docs/brand-guidelines')
   get "/calendar",                to: redirect('/calendar/yohei')
-  get "/calendar-yohei",          to: redirect('/calendar/yohei')
-  get "/calendar-kirie",          to: redirect('/calendar/kirie')
-  get "/calendar/yohei"   => "docs#show", id: 'calendar-yohei'
-  get "/calendar/kirie"   => "docs#show", id: 'calendar-kirie'
+  get "/calendar/yohei"   => "docs#show", id: '_calendar-yohei'
+  get "/calendar/kirie"   => "docs#show", id: '_calendar-kirie'
+  get "/thanks"           => "docs#show", id: '_thanks'
+
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
+
   get "/partner",         to: redirect('/partnership')
   get "/partnership"      => "docs#show", id: 'about-partnership'
   get "/financial-report" => "docs#show", id: 'financial-report'
   get "/privacy"          => "docs#show", id: 'privacy'
   get "/teikan"           => "docs#show", id: 'teikan'
-  get "/thanks"           => "docs#show", id: 'thanks'
   get "/signup"           => "docs#show", id: 'signup'
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
