@@ -1,4 +1,6 @@
-- provide :title, @doc.title
+/ Google replace Emoji with whitespace when indexing.
+/ So we need to remove the emoji letter from OGP title.
+- provide :title, @doc.title[2..-1]
 - provide :desc,  @doc.description
 - provide :url,   @url
 

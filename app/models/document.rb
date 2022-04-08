@@ -65,7 +65,7 @@ class Document
     @title ||=
       ActionController::Base.helpers.strip_tags(
         Kramdown::Document.new(self.get_first_paragraph, input: 'GFM').to_html
-      ).strip[2..-1]
+      ).strip
   end
 
   def description
