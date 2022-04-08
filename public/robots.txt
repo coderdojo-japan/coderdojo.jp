@@ -2,7 +2,7 @@
 #
 # To ban all spiders from the entire site uncomment the next two lines:
 User-agent: *
-Disallow: /calendar/yohei
-Disallow: /calendar/kirie
+Disallow: /calendar/*
+Disallow: /docs/*calendar
 
 Sitemap: https://coderdojo.jp/sitemap.xml.gz
