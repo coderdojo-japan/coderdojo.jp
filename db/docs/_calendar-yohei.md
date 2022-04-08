@@ -1,4 +1,4 @@
-# 📆 予定表（[安川](https://twitter.com/yasulab)）
+# 🗓 予定表（[安川](https://twitter.com/yasulab)）
 
 <br>
 
