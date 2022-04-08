@@ -62,17 +62,21 @@ class Document
 
   def title
     return '' unless self.exists?
-    @title ||= self.content.lines.first[2..-1].strip.gsub('<br>', '')
+    @title ||=
+      ActionController::Base.helpers.strip_tags(
+        Kramdown::Document.new(self.get_first_paragraph, input: 'GFM').to_html
+      ).strip[2..-1]
   end
 
   def description
     return '' unless self.exists?
-    @desc ||= Kramdown::Document.new(
-                                 self.get_second_paragraph,
-                                 input: 'GFM').to_html
+    @desc ||=
+      ActionController::Base.helpers.strip_tags(
+        Kramdown::Document.new(self.get_second_paragraph, input: 'GFM').to_html
+      ).strip
   end
   def description=(text)
-    @desc  ||= text
+    @desc ||= text
   end
 
   def content
@@ -80,6 +84,10 @@ class Document
   end
 
   private
+
+  def get_first_paragraph
+    self.content.lines.reject{|l| l =~ /^(\n|<)/ }.first.gsub('<br>', '').strip
+  end
 
   def get_second_paragraph
     self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.gsub('<br>', '').strip
