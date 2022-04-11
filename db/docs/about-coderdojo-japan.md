@@ -12,7 +12,7 @@
 - (5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有
 - (6) 前各号に附帯関連する一切の事業
 
-<div style="text-align: center; padding-top: 10px;"><a href="https://coderdojo.jp/teikan">定款</a>の第4条  (事業) より抜粋</div>
+<div style="text-align: center; padding-top: 10px;"><a href="/teikan">定款</a>の第4条  (事業) より抜粋</div>
 
 <br>
 
@@ -24,31 +24,31 @@
 
 <br>
 
-CoderDojo Japan では、定款に定められた事業内容にしたがって、提携している[パートナー法人](https://coderdojo.jp/#partners)とともに、これまで下記の活動を実施してきました。
+CoderDojo Japan では、定款に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、これまで下記の活動を実施してきました。
 
 <br>
 
 - **(1) 日本国内の「CoderDojo」の設立及び運営の支援**
-   - 内容: [Kata](https://coderdojo.jp/kata), [DojoCast](https://coderdojo.jp/podcasts), [Docs](https://coderdojo.jp/docs), [Stats](https://coderdojo.jp/stats), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas) などの運営・開発をします
+   - 内容: [Kata](/kata), [DojoCast](/podcasts), [Docs](/docs), [Stats](/stats), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas) などの運営・開発をします
    - 実績: [GitHub Organization](https://github.com/coderdojo-japan) の[コミットログ](https://github.com/coderdojo-japan/coderdojo.jp/commits/main)をご参照ください<br><br>
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
-   - 内容: [パートナーシップ](https://coderdojo.jp/partnership)をご検討されている法人に営業・交渉をします
+   - 内容: [パートナーシップ](/partnership)をご検討されている法人に営業・交渉をします
    - 実績: [news.coderdojo.jp の『Press』タグ](https://news.coderdojo.jp/category/press/)をご参照ください<br><br>
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
    - 内容: CoderDojo 間の情報共有や、合同で開催するイベントの支援をします
-   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](https://dojocon2019.coderdojo.jp/) や [DecaDojo](https://peraichi.com/landing_pages/view/decadojo-okinawa/) の共催・後援など<br><br>
-- **(4) 国内外の「CoderDojo」に関する普及及び広報に関する活動**
+   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](https://dojocon2021.coderdojo.jp/) や [DecaDojo](https://peraichi.com/landing_pages/view/decadojo-okinawa/) の共催・後援など<br><br>
+- **(4) 国内外の「CoderDojo」に関する普及および゙広報に関する活動**
    - 内容: News サイトや SNS、Podcastなどで CoderDojo 活動の周知を支援します
-   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/coderdojo.jp)、[DojoCast](http://dojocast.coderdojo.jp/) をご参照ください<br><br>
+   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/coderdojo.jp)、[DojoCast](/podcasts) をご参照ください<br><br>
 - **(5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有**
    - 内容: CoderDojo コミュニティで得られた知見をオープンに共有します
    - 実績: ラズパイ財団 CEOとのミートアップ、CoderDojo 共同設立者 (James, Bill) とのミートアップなど。詳細は [YouTube の合同セッション・イベントまとめ](https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA/playlists?view=50&sort=dd&shelf_id=6)をご参照ください<br><br>
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
-   - 実績: 決算書の作成、税務・法務などの各種事務書類の作成、問い合わせ対応、理事の募集、隔週の定例ミーティング実施、[CoderDojo Foundation](https://coderdojo.com/foundation/) および [Raspberry Pi Foundation](https://www.raspberrypi.org/about/governance/) との定期ミーティング (英語) など <br><br>
+   - 実績: 決算書などの各種税務・法務作業、問い合わせ対応、理事の募集、理事内の隔週ミーティング、[CoderDojo Foundation](https://coderdojo.com/foundation/) との隔月ミーティング (英語) など <br><br>
 
 
-なお、CoderDojo Japan や CoderDojo Foundation、および Raspberry Pi Foundation が行なっている活動の一部はオープンになっているため、理事にならなくても活動に協力・参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[理事以外の開発事例](https://bit.ly/pull-requests-sample-to-coderdojo-jp))
+なお、CoderDojo Japan や CoderDojo Foundation、ならびにラズベリーパイ財団が行なっている活動の一部はオープンになっているため、理事にならなくても活動に参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[DojoLetterの編集](https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/)、[Webシステムの開発](https://github.com/coderdojo-japan)など)
 
 <br>
 
@@ -60,19 +60,19 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 info@coderdojo.jp
 </div>
 
-## 📜 背景と活動詳細
+## 📜 理事募集のお知らせ
 
 <br>
 
-一般社団法人 CoderDojo Japan は細谷さんと安川の2人が2016年に立ち上げ、2017年からは宮島さんを新たに迎え、各種パートナー法人とともに上記活動を継続的に実施してきました。
+一般社団法人 CoderDojo Japan は [@tkc49](https://twitter.com/tkc49) と [@yasulab](https://twitter.com/yasulab) が[2016年に立ち上げ](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)、2017年からは [@kiriem_](https://twitter.com/kiriem_) さんが新たに参画し、各パートナー法人とともに上記活動を継続的に実施してきました。
 
 <br>
 
-2020年7月をもって共同設立者である細谷さんが理事役から相談役に移るため、それに伴って新たな理事募集を行います。隔週の定例ミーティング参加などは任意となるものの、理事以外の意見を求めたい場面で相談対応をしていただいたり、細谷さん主導で始まった [news.coderdojo.jp](https://news.coderdojo.jp) の運用などには引き続き関わっていただける予定となっております。
+2020年7月をもって共同設立者である [@tkc49](https://twitter.com/tkc49) さんが理事役から相談役に移ったため、それに伴って新たな理事募集を行います。隔週の定例ミーティング参加などは任意となるものの、理事以外の意見を求めたい場面で相談対応をしていただいたり、[@tkc49](https://twitter.com/tkc49) さん主導で始まった [news.coderdojo.jp](https://news.coderdojo.jp) の運用などにも引き続き関わっていただいております。
 
 <br>
 
-さらに詳しい情報については、2020年8月3日 (月) に配信した『[DojoCast#019](https://youtu.be/fcIVHHeKQLQ)』でまとめましたので、よければぜひご視聴いただけると幸いです。
+さらに詳しい情報については、2020年8月3日 (月) に配信した『[DojoCast#019](/podcasts/19)』でまとめましたので、よければぜひご視聴いただけると幸いです。
 
 <br>
 
@@ -80,14 +80,14 @@ info@coderdojo.jp
   <iframe width="560" height="315" class='lazyload' frameborder="0" 
    data-src="https://www.youtube.com/embed/fcIVHHeKQLQ?rel=0" allowfullscreen></iframe>
 </div>
-<a href="https://youtu.be/fcIVHHeKQLQ" target="_blank" rel="noopener"><img class="lazyload" data-src="/img/DojoCast_019_shownote.png" /></a>
+<a href="/podcasts/19"><img class="lazyload" data-src="/img/DojoCast_019_shownote.png" /></a>
 
 <br>
 
 ## 📑 よくある質問と回答
 
 ### Q. ミーティングはありますか?
-- **A.** 隔週の定例ミーティング (定例会) があります。原則オンラインで行われ、これまでのところ、平日の日中に時間を合わせて実施することが多いです。具体的な雰囲気は下記の YouTube 動画「<a href="https://youtu.be/xn5Y5OTvRZU" target="_blank" rel="noopener">公開定例会</a>」をご参照ください 👥
+- **A.** はい、隔週の定例ミーティング (定例会) があります。原則オンラインで行われ、これまでのところ、平日の日中に時間を合わせて実施することが多いです。具体的な雰囲気は下記の YouTube 動画「<a href="/podcasts/26">公開定例会</a>」をご参照ください 👥
 
 <div class="home-point-video">
   <iframe width="560" height="315" class='lazyload' frameborder="0" 
@@ -115,7 +115,7 @@ _(**NOTE:** 他、追加でいただいた質問などあれば、随時追記�
 
 ## ✅ 応募概要、応募の流れ
 
-1. **情報の取り扱い:** 応募内容は[プライバシーポリシー](https://coderdojo.jp/privacy)にしたがって管理され、一般公開されることはありません ㊙️
+1. **情報の取り扱い:** 応募内容は[プライバシーポリシー](/privacy)にしたがって管理され、一般公開されることはありません ㊙️
 1. **募集人数:** １名。応募〆切はなく、随時募集となります。興味あればお気軽にご連絡ください 👤
 1. **応募方法:** 下記フォームより各種項目を記載し、ご応募ください。自薦・他薦は問いません。他薦の場合は、推薦理由を書いていただけると嬉しいです 📝
 1. **応募後の流れ:** いただいた応募内容を拝見させていただき、さらに詳しい内容をインタビューで伺わせていただくことがあります。結果にかかわらず、１ヶ月以内にすべての応募者にメールにて返信いたします 📩
