@@ -64,6 +64,8 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 info@coderdojo.jp
 </div>
 
+<div id='benefit'></div>
+
 <br>
 
 ### 参考: CoderDojo Japan にできること
@@ -97,7 +99,7 @@ info@coderdojo.jp
 <br>
 
 ### Q. CoderDojo Japan の Facebook グループでイベントを紹介できますか？
-はい、上記 `B:` に記載されている通り、パートナー法人の方に限りイベントや製品に関する投稿ができます。投稿される場合は info@coderdojo.jp までお気軽にご相談ください。
+はい、上記「<a href='#benefit'>CoderDojo Japan にできること</a>」の `B:` に記載されている通り、パートナー法人の方に限りイベントや製品に関する投稿ができます。投稿される場合は info@coderdojo.jp までお気軽にご相談ください。
 
 - 📮 パートナー法人による、Facebook グループへの投稿例
   - 例1: [未踏社団から、未踏ジュニア最終成果報告会のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/1821539831292741)
