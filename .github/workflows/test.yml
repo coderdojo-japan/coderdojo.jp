@@ -83,3 +83,4 @@ jobs:
         uses: yasslab/idobata_notify@main
         with:
           idobata_hook_url: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+          status: ${{ needs.test.result }}
