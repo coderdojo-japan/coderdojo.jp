@@ -74,8 +74,10 @@ jobs:
 
   notify:
     needs: [test, deploy]
+    env:
+      IDOBATA_GITHUB_ACTIONS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
     runs-on: ubuntu-latest
-    if: always()
+    if: always() && (env.IDOBATA_GITHUB_ACTIONS != null)
     steps:
       - name: 🔔 Notify results
         uses: yasslab/idobata_notify@main
