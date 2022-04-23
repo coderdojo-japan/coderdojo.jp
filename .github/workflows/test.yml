@@ -60,10 +60,28 @@ jobs:
             bundle exec rspec spec
           fi
 
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+
+  notify:
+    needs: [test, deploy]
+    env:
+      IDOBATA_GITHUB_ACTIONS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
       - name: 🔔 Notify results
-        env:
-          IDOBATA_GITHUB_ACTIONS: ${{ secrets.IDOBATA_GITHUB_ACTIONS }}
         uses: yasslab/idobata_notify@main
-        if: always() && (env.IDOBATA_GITHUB_ACTIONS != null)
+        if: env.IDOBATA_GITHUB_ACTIONS != null
         with:
           idobata_hook_url: ${{ env.IDOBATA_GITHUB_ACTIONS }}
+          status: ${{ needs.test.result }}
