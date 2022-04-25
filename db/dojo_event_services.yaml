@@ -251,6 +251,10 @@
   name: kokucheese
   group_id:
   url: http://kokucheese.com/main/host/codoMe/
+- dojo_id: 109 #2022/04以降 doorkeeper で運用
+  name: doorkeeper
+  group_id: 12365
+  url: https://coderdojo-takizawa.doorkeeper.jp/
 
 # きたかみ
 - dojo_id: 107
