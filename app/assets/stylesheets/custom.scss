@@ -206,6 +206,9 @@ img.emoji {
 .headline-anchor {
   padding-bottom: 60px;
 }
+.headline-kata {
+  margin-top: 100px;
+}
 
 .kata {
   position: relative;
@@ -255,6 +258,7 @@ a>img {
 h2 {
   font-weight: 500;
 }
+h1,h2,h3,h4,h5,h6 { scroll-margin-top: 100px; }
 
 .fontsize-bigger {
   font-size: 20px;

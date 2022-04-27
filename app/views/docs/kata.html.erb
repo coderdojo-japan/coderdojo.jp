@@ -29,10 +29,9 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fontsize-bigger">
 
 	<!-- Migrated contents from Scrivito (= scrivito_tag :div, @obj, :body) -->
-	<div id="README" class="headline-anchor"></div>
-	<h2 class="headline">はじめに</h2>
+	<h2 id="README" class="headline headline-kata" style='margin-top: 60px;'>✅ はじめに</h2>
 
-	<p>Kata (型) では、全国の CoderDojo から公開された役立つ資料を共有したり (<strong><a href="#learn">学ぶ</a></strong>)、力をつけた子どもが<strong><a href="#challenge">腕試し</a></strong>できるプログラミングコンテスト情報をまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo が受けられる<strong><a href="#support">支援</a></strong>、<strong><a href="#faq">よくある質問と回答</a></strong> (FAQ) についてもまとめています。</p>
+	<p>本ページでは、全国の CoderDojo が制作した<strong><a href='#learn'>教材・学習コンテンツ</a></strong>や、腕試しにちょうど良い<strong><a href="#challenge">大会・コンテスト情報</a></strong>などをまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo を対象とした<strong><a href="#support">支援プログラム</a></strong>、よくある質問と回答（<strong><a href="#faq">FAQ</a></strong>）についてもまとめています。</p>
 
 	<div class='btn-cover' style="margin: 20px auto;">
 	  <a class='btn-blue' href='#learn'>
@@ -45,7 +44,7 @@
 	  </a>
 	</div>
 
-	<h3 id='coderdojo-is'>CoderDojo とは? ☯️</h3>
+	<h3 id='coderdojo'>CoderDojo とは? ☯️</h3>
 	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
@@ -194,8 +193,7 @@
 	<br>
 	<p>上記の他にも、一般社団法人 CoderDojo Japan が発表したプレスリリースや公式ニュースレターもあります。詳細は <%= link_to 'news.coderdojo.jp', news_url %> をご参照ください 📰</p>
 
-	<div id="learn" class="headline-anchor"></div>
-	<h2 class="headline">📚 学ぶ</h2>
+	<h2 id="learn" class="headline headline-kata">📚 学ぶ</h2>
 	<%= lazy_image_tag('/kata/learn.png', alt: 'CoderDojo 梅田の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p><%= link_to '毎年 1,000 回以上', stats_path %>の Dojo が日本各地で開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
@@ -289,7 +287,6 @@
 	  </li>
 	</ul>
 
-	<div id='learn-minecraft'></div>
 	<h3 id='learn-minecraft'>🛠 マインクラフト</h3>
 	<ul>
 	  <li>
@@ -395,8 +392,7 @@
 	  </li>
 	</ul>
 
-	<div id="challenge" class="headline-anchor"></div>
-	<h2 class="headline">腕試し</h2>
+	<h2 id="challenge" class="headline headline-kata">🏆 腕試し</h2>
 	<%= lazy_image_tag('/kata/challenge.png', alt: 'DojoCon Japan の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>プログラミングはやればやるほど日に日に力がついていきます。「プログラミングに少し慣れたかな」と感じたら、腕試しのつもりで<a href='#challenge-contents'>コンテスト</a>や<a href='#challenge-grants'>支援プログラム</a>に挑戦してみてはいかがでしょうか?</p>
@@ -531,8 +527,7 @@
 	  </li>
 	</ul>
 
-	<div id="startup" class="headline-anchor"></div>
-	<h2 class="headline">立ち上げる</h2>
+	<h2 id='startup' class="headline headline-kata">☯️ 立ち上げる</h2>
 	<%= lazy_image_tag('/kata/startup.png', alt: 'CoderDojo 調布の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>CoderDojo の参加者が自由に作品を創れるように、<strong>CoderDojo という「場」そのものを創ることもできます。</strong></p>
@@ -629,8 +624,7 @@
 	<p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
 
 
-	<div id="support" class="headline-anchor"></div>
-	<h2 class="headline">🤝 支援・資料</h2>
+	<h2 id='support' class="headline headline-kata">🤝 支援・資料</h2>
 	<%= lazy_image_tag('/kata/support.png', alt: 'CoderDojo in Minecraft', min: true, style: 'margin-bottom: 30px') %>
 
 	<p><a href="/kata#startup">CoderDojo を立ち上げ</a>、承認された Dojo がスムーズに運営できるように、様々な支援・資料が用意されています。CoderDojo 運営者を対象とした<a href='#support-programs'>パートナー法人による支援</a>や、CoderDojo 関係者が作成した<a href='#support-docs'>運営者向け資料</a>が皆さんの Dojo 運営に役立てば嬉しいです 😌💖</p>
@@ -874,8 +868,7 @@
 	  </li>
 	</ul>
 
-	<div id="faq" class="headline-anchor"></div>
-	<h2 class="headline">📑 FAQ</h2>
+	<h2 id='faq' class="headline headline-kata">📑 FAQ</h2>
 	<%= lazy_image_tag('/kata/faq.png', alt: '統計情報：参加者数の推移', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>よくある質問を本項にまとめています。ご参考になれば幸いです 😸</p>
