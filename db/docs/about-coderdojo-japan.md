@@ -18,13 +18,24 @@
 
 本ページでは、上記の各事業の具体例をまとめています。また、一般社団法人 CoderDojo Japan 理事への参画に興味ある方向けの情報についてもまとめています。
 
+<div class='btn-cover' style="margin: 20px auto;">
+  <a class='btn-blue' href='#doing'>
+    <i class='far fa-handshake'></i>
+    活動内容を見る
+  </a>
+  <a class='btn-blue' href='#call-for'>
+    <i class='far fa-scroll'></i>
+    理事募集を見る
+  </a>
+</div>
+
 <br>
 
-## 🤝 活動内容と実績
+## 🤝 活動内容と実績 {#doing}
 
 <br>
 
-CoderDojo Japan では、定款に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、これまで下記の活動を実施してきました。
+CoderDojo Japan では、定款に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、これまで下記の活動を実施しています。
 
 <br>
 
@@ -52,7 +63,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 
 <br>
 
-一方、パートナー法人と[連名でプレスリリースを出す](https://www.sakura.ad.jp/information/pressreleases/2020/03/25/1968203191/)など、アイデアの実現に向けて、相手方と秘密情報を共有・保持しながら動くこともあります。理事として CoderDojo コミュニティを裏側からサポートしたい場合は、ぜひご検討していただけると嬉しいです。
+一方、パートナー法人と[連名でプレスリリースを出す](https://www.sakura.ad.jp/information/pressreleases/2020/03/25/1968203191/)など、アイデアの実現に向けて、相手方と秘密情報を共有・保持しながら動くこともあります。CoderDojo コミュニティを裏側からサポートする事業にご興味がある場合は、下記「[理事募集のお知らせ](#call-for)」をご確認ください。
 
 <div align="right" style="margin-top: 30px; margin-bottom: 50px;">
 一般社団法人 CoderDojo Japan<br>
@@ -60,7 +71,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 info@coderdojo.jp
 </div>
 
-## 📜 理事募集のお知らせ
+## 📜 理事募集のお知らせ {#call-for}
 
 <br>
 
