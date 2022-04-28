@@ -76,8 +76,7 @@
     width: calc(14.28% - 8px);
   }
 </style>
-<div id='copy' style='color:#fff;opacity:0;'>
-</div>
+<div id='copy' style='color:#fff;opacity:0;'></div>
 
 <script type='text/javascript' src="/js/notify.js"></script>
 

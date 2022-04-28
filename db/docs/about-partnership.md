@@ -64,11 +64,9 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 info@coderdojo.jp
 </div>
 
-<div id='benefit'></div>
-
 <br>
 
-### 参考: CoderDojo Japan にできること
+### 参考: CoderDojo Japan にできること {#benefit}
 
 - `A:` 単発の支援、継続的なご支援のいずれにも対応しています。
   - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
