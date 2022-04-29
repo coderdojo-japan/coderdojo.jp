@@ -581,7 +581,8 @@
 	    <p><strong>・</strong><a href="https://my.raspberrypi.org/signup">アカウント登録フォーム</a><br>
 	      　13歳以上の場合は「13 and over」をクリックしてください。<br>
 	      <br>
-	      ※ CoderDojo と Raspberry Pi の合併に伴い、現在は１つのシステムに統合されています。合併の詳細は <a href="https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8//index.html">CoderDojo Foundation の記事</a>をご参照ください。</p>
+	      <small>※
+	      <a href='https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8//index.html'>CoderDojo と Raspberry Pi の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。</small></p>
 	    <br>
 	  </li>
 	  <li>
@@ -589,7 +590,9 @@
 	    <br>
 	  </li>
 	  <li>
-	    <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br><strong>※ ページの一番下の左側から、言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</p>
+	    <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br>
+	      <small><strong>✔︎ ページ最下部から言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</small>
+	    </p>
 	    <br>
 	  </li>
 	  <li>
@@ -597,29 +600,24 @@
 	    <br>
 	  </li>
 	  <li>
-	    <p>同意すると、Dojo立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
-	    <p><strong>✔︎ </strong>チェック項目の例: 連絡先を設定したか、ボランティアに当てはあるか、安全性に問題はないか、など。すべての情報を完璧に揃える必要はありません! まずは気に留めておくぐらいで大丈夫です 🙆</p>
+	    <p>同意すると、Dojo 立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
+	    <p><small><strong>✔︎ </strong>チェック項目には、連絡先を設定したか、ボランティアに当てはあるか、安全性を考慮しているかなどがあります。申請時にすべての情報を完璧に揃える必要はありません! 運営に役立つチェックリストとしてご活用ください 📑</small></p>
 	    <br>
 	  </li>
 	  <li>
 	    <p>最後に、登録する道場名などの情報を入力していきます (<a href="/img/how-to-name-a-dojo.png">参考画面</a>)</p>
-	    <p>・⚠️ 「道場名」には<strong>「地域名」または「地域名 @ 会場スポンサー名」</strong>という名称を入力してください (日本語で大丈夫です 🆗)</p>
-	    <p>・例: 「宜野湾」「札幌」「ひばりヶ丘 @ Hanare」「五反田 @ freee」</p>
-	    <p>・<strong>「CoderDojo」や「コーダー道場」という接頭語は不要</strong>です。CoderDojo であることは自明なので 😉</p>
-	    <p>・詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください</p>
+	    <p><small>️<strong>✔︎ </strong> 「道場名」には <code>地域名</code> または <code>地域名 @ スポンサー名</code> を入力できます。日本語でも OK で、例えば <code>諏訪湖</code> や <code>中央林間</code>、<code>五反田 @ freee</code> と入力すると<a href='https://zen.coderdojo.com/find'>道場検索システム (CoderDojo Zen)</a> からも日本語で表示されるようになります。なお、CoderDojo であることは自明のため、<strong>「CoderDojo」という接頭語は不要</strong>です。詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください。</small></p>
 	    <br>
 	  </li>
 	  <li>
 	    <p>以上で CoderDojo の申請手続きは完了です! 👏</p>
-	    <p>・後日、CoderDojo Foundation からメールが届きます (<a href="https://esa-pages.io/p/sharing/7542/posts/140/2963352d1fa7db71f1e6.html">メールの例</a>) 📨</p>
-	    <p>・無事に承認されると <%= link_to 'CoderDojo Zen (地図版)', zen_url %> から表示されるようになります 🗺</p>
-	    <p>・詳細は <%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %>をご参照ください ✅</p>
+	    <p><small>️<strong>✔︎ </strong> 後日、CoderDojo Foundation からメールが届きます (<a href="https://esa-pages.io/p/sharing/7542/posts/140/2963352d1fa7db71f1e6.html">メールの例</a>)。無事に承認されると <%= link_to '道場検索システム (CoderDojo Zen)', zen_url %> でも表示されるようになります。詳細は「<strong><%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %></strong>」をご参照ください。</small></p>
 	    <br>
 	  </li>
 	</ol>
-	<p>もし分からないことがあれば、<a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> やお近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者に聞いてみるのが早いです 😉</p>
+	<p>もし分からないことがあれば、<a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> やお近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者（各 Dojo の代表者）に聞いてみるのもオススメです 😉</p>
 	<br>
-	<p><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中」と判断されるのでご注意ください。</p>
+	<p><small><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中」と判断されるのでご注意ください。</small></p>
 	<br>
 	<p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
 
