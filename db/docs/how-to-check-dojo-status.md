@@ -21,13 +21,22 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 - **A. CoderDojo をまだ申請していない場合**
   - CoderDojo Kata の『[立ち上げる](/kata#startup)』にしたがって申請してください。
   - 承認され、かつ、現在の状態が『アクティブ』になっていると地図上に表示されます。
+
+<br>
+
 - **B. 申請はしたけど、地図上に表示されなかった場合**
   - CoderDojo の現在の状態が『審査中』になっている可能性があります。
   - [CoderDojo Global Slack](https://coderdojo.com/coderdojo-global-slack/) にある `#foundation-support` チャンネルで質問をすると、審査チームから詳しい状況をご確認できます。([DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです）
     ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
+
+<br>
+
 - **C. 以前は表示されていたけど、現在は地図上に表示されなくなった場合**
   - CoderDojo の現在の状態が『非アクティブ』と判断された可能性があります。
   - [CoderDojo の現在の状態を『アクティブ』に変更する](/docs/how-to-change-dojo-status)にしたがって進めてください。
+
+<br>
+
 - **D. 上記のいずれにも該当していない場合**
   - CoderDojo Japan が把握していない状態になっているかもしれません。
   - お手数ですが、下記の連絡先までご連絡をお願い致します。
