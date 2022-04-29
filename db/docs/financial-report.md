@@ -14,9 +14,9 @@
 
 ## 関連リンク
 
-- [一般社団法人 CoderDojo Japan が設立されました - DojoCon Japan 2016](http://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html)
-- [一般社団法人 CoderDojo Japan 定款](https://coderdojo.jp/docs/teikan)
-- [CoderDojo 憲章](https://coderdojo.jp/docs/charter)
+- [一般社団法人 CoderDojo Japan について](/about-coderdojo-japan)
+- [一般社団法人 CoderDojo Japan 定款](/teikan)
+- [CoderDojo 憲章 (CoderDojo Charter)](/charter)
 
 
 <br>

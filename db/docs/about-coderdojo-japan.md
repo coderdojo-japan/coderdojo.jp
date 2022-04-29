@@ -75,7 +75,7 @@ info@coderdojo.jp
 
 <br>
 
-一般社団法人 CoderDojo Japan は [@tkc49](https://twitter.com/tkc49) と [@yasulab](https://twitter.com/yasulab) が[2016年に立ち上げ](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)、2017年からは [@kiriem_](https://twitter.com/kiriem_) さんが新たに参画し、各パートナー法人とともに上記活動を継続的に実施してきました。
+一般社団法人 CoderDojo Japan は [@tkc49](https://twitter.com/tkc49) と [@yasulab](https://twitter.com/yasulab) が[2016年に立ち上げ](https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html)、2017年からは [@kiriem_](https://twitter.com/kiriem_) さんが新たに参画し、各パートナー法人とともに上記活動を継続的に実施してきました。(参考: [CoderDojo Foundation による紹介記事](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body))
 
 <br>
 
