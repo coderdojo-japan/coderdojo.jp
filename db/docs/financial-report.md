@@ -1,7 +1,7 @@
 # 📊 一般社団法人 CoderDojo Japan <br>決算報告書
 <br>
 
-一般社団法人 CoderDojo Japan の各期の決算報告書を本ページにまとめております。CoderDojo コミュニティに参画・提携・支援する際などにご参考にして頂ければ幸いです。
+一般社団法人 CoderDojo Japan の各期の決算報告書を本ページにまとめております。[法人として CoderDojo コミュニティの支援](/partnership)を検討する場面などでご参考にして頂けると幸いです。
 
 ## 決算報告書
 
@@ -16,7 +16,7 @@
 
 - [一般社団法人 CoderDojo Japan について](/about-coderdojo-japan)
 - [一般社団法人 CoderDojo Japan 定款](/teikan)
-- [CoderDojo 憲章 (CoderDojo Charter)](/charter)
+- [パートナーシップのご案内（法人向け）](/partnership)
 
 
 <br>

@@ -56,7 +56,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
    - 実績: ラズパイ財団 CEOとのミートアップ、CoderDojo 共同設立者 (James, Bill) とのミートアップなど。詳細は [YouTube の合同セッション・イベントまとめ](https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA/playlists?view=50&sort=dd&shelf_id=6)をご参照ください<br><br>
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
-   - 実績: 決算書などの各種税務・法務作業、問い合わせ対応、理事の募集、[CoderDojo Foundation](https://coderdojo.com/foundation/) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など <br><br>
+   - 実績: [問い合わせ対応](/#inquiry)、[決算書の作成](/financial-report)、[理事の募集](#call-for)、[CoderDojo Foundation](https://coderdojo.com/foundation/) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など <br><br>
 
 
 CoderDojo Japan が実施している上記活動、ならびに [CoderDojo Foundation や Raspberry Pi Foundation が行なっている活動](https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8//index.html)の一部はオープンになっているため、理事にならなくても活動に参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[DojoLetterの編集](https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/)、[Webシステムの開発](https://github.com/coderdojo-japan)など)
