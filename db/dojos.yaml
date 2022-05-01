@@ -1370,9 +1370,9 @@
   created_at: '2022-01-04'
   name: 武蔵小杉
   prefecture_id: 14
-  logo: "/img/dojos/japan.png"
+  logo: "/img/dojos/musashi-kosugi.png"
   url: https://coderdojo-musashikosugi.connpass.com/
-  description: 武蔵小杉、向河原周辺で不定期開催
+  description: 武蔵小杉、向河原周辺で毎月開催
   tags:
   - Scratch
   - micro:bit
