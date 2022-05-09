@@ -4720,3 +4720,21 @@
   event_id:
   participants: 2
   evented_at: 2022/03/06 10:00 #オンライン開催
+
+# 2022/04/01 - 2022/04/30
+- dojo_id: 25
+  event_id:
+  participants: 3
+  evented_at: 2022/04/10 10:00
+- dojo_id: 86
+  event_id:
+  participants: 2
+  evented_at: 2022/04/14 10:30
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2022/04/03 10:00 #オンライン開催
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2022/04/16 15:15
