@@ -714,11 +714,11 @@
   group_id: 122178467942470
   url: https://www.facebook.com/CoderDojoNamba/events/
 
-# 大阪狭山・本町
+# 大阪狭山
 - dojo_id: 44
   name: doorkeeper
   group_id: 9012
-  url: https://coderdojo-hommachi.doorkeeper.jp
+  url: https://coderdojo-osakasayama.doorkeeper.jp
 
 # 西成
 - dojo_id: 45

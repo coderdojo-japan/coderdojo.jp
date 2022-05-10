@@ -2118,12 +2118,11 @@
 - id: 44
   order: '271004'
   created_at: '2016-08-15'
-  name: 大阪狭山・本町
-  counter: 2
+  name: 大阪狭山
   prefecture_id: 27
-  logo: "/img/dojos/sayama-hommachi.png"
-  url: https://coderdojo-hommachi.doorkeeper.jp/
-  description: 大阪狭山で毎月開催/本町で不定期開催
+  logo: "/img/dojos/osakasayama.png"
+  url: https://coderdojo-osakasayama.doorkeeper.jp/
+  description: 大阪狭山で毎月開催
   tags:
   - Scratch
   - Ruby
