@@ -46,7 +46,7 @@ INPUT_TEXT.each do |line|
   end
 
   dojo_data.nil? ?
-    not_found << dojo_name && next :
+    not_found << dojo_name :
     dojo_list << dojo_data
 end
 
