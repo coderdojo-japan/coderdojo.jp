@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore text file to write news article with internal API:
+# https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
+get_dojo_list.txt
+
 # Ignore bundler config & bundler gems
 /.bundle
 vendor/bundle
