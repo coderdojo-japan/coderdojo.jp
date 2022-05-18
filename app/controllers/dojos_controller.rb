@@ -3,9 +3,10 @@ class DojosController < ApplicationController
     @dojo_data = []
     Dojo.active.each do |dojo|
       @dojo_data << {
-        name: dojo.name,
-        url:  dojo.url,
-        prefecture: dojo.prefecture.region,
+        url:         dojo.url,
+        name:        dojo.name,
+        order:       dojo.order,
+        prefecture:  dojo.prefecture.region,
         linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.region}）",
       }
     end
