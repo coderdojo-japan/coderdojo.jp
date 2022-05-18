@@ -37,7 +37,7 @@ INPUT_TEXT.each do |line|
     binding.pry if dojo_name.nil?
     dojo[:name].start_with? dojo_name.downcase
       .gsub('ishigaki',       '石垣')
-      .gsub('kodaira',        '小平')
+      .gsub('kodaira',        'こだいら')
       .gsub('toke',           '土気')
       .gsub('anjo',           '安城')
       .gsub('nagareyama',     '流山')
