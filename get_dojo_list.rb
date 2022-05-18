@@ -10,24 +10,54 @@ require 'pry'
 #
 # 詳細: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
 
-TEXT   = IO.readlines('./get_dojo_list.txt')
-DOJOS  = JSON.parse(Net::HTTP.get URI.parse('https://coderdojo.jp/dojos.json'))
-result = "<ul>\n"
+INPUT_TEXT = IO.readlines('./get_dojo_list.txt')
+DOJO_DB    = JSON.parse(Net::HTTP.get URI.parse('https://coderdojo.jp/dojos.json')).map do |data|
+  data.transform_keys!(&:to_sym)
+end
 
 # CoderDojo の名前を使って、Dojo 一覧からデータを検索
-dojo_name =''
+result  = "<ul>\n"
+dojo_name = ''
+dojo_list = []
 not_found = []
-TEXT.each do |line|
+INPUT_TEXT.each do |line|
   next if line.start_with?('#') || line.strip.empty?
-  dojo_name = line.split[1..].join
-  dojo_data = DOJOS.find {|dojo| dojo['name'].start_with? dojo_name}
-  not_found << dojo_name && next if dojo_data.nil?
-  result << "  <li>#{dojo_data['linked_text']}</li>\n"
-  #result << "  <li>#{d['linked_text']}</li>\n"
+
+  # Delete prefix like 'CoderDojo', fix 表記揺れ, etc.
+  dojo_name = line
+    .gsub(/coderdojo/i,   '')
+    .gsub(/コーダー道場/, '')
+    .gsub('（', '(').gsub('）', ')') # Ex: Anjo（愛知県）
+    .gsub(/\(.*\)+/,      '')        #     Delete '(...)'
+    .split('/').first                # Ex: 堺/泉北和泉
+    .strip
+
+  # Search dojo data by its KANJI name from DOJO_DB
+  dojo_data = DOJO_DB.find do |dojo|
+    binding.pry if dojo_name.nil?
+    dojo[:name].start_with? dojo_name.downcase
+      .gsub('ishigaki',       '石垣')
+      .gsub('kodaira',        '小平')
+      .gsub('toke',           '土気')
+      .gsub('anjo',           '安城')
+      .gsub('nagareyama',     '流山')
+      .gsub('minami-kashiwa', '南柏')
+      .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 and 三次. Only 三好 uses 'Miyoshi' for now.
+  end
+
+  dojo_data.nil? ?
+    not_found << dojo_name && next :
+    dojo_list << dojo_data
 end
-result << "</ul>\n"
+
+dojo_list.sort_by!{ |dojo| dojo[:order] }
+result <<  dojo_list.map{ |dojo| "  <li>#{dojo[:linked_text]}</li>" }.join("\n")
+result << "\n</ul>\n"
 puts result
 
+
+
 # 検索して見つからなかった Dojo 一覧があれば出力
-puts '---' if not_found.nil?
+puts '--- NOTE ---'
+puts "道場数: #{dojo_list.count}"
 not_found.each {|dojo_name| puts "Not found: #{dojo_name}" }
