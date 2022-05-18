@@ -1168,7 +1168,7 @@
 - id: 13
   order: '132110'
   created_at: '2014-05-21'
-  name: 小平
+  name: こだいら
   prefecture_id: 13
   url: https://coderdojo-kodaira.github.io/
   logo: "/img/dojos/kodaira.png"
