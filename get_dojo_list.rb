@@ -55,10 +55,9 @@ result <<  dojo_list.map{ |dojo| "  <li>#{dojo[:linked_text]}</li>" }.join("\n")
 result << "\n</ul>\n"
 puts result
 
-
-
 # 検索して見つからなかった Dojo 一覧があれば出力
-puts '--- NOTE ---'
-puts "道場数: #{dojo_list.count}"
-puts "Yay! All given dojo names are successfully hit in DB! 🎉" if not_found.empty?
-not_found.each {|dojo_name| puts "Not found: #{dojo_name}" }
+if not_found.any?
+  puts '--- NOTE ---'
+  puts "道場数: #{dojo_list.count}"
+  not_found.each {|dojo_name| puts "Not found: #{dojo_name}" }
+end
