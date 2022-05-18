@@ -4,8 +4,8 @@
 #
 # 詳細: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
 
-CoderDojo 札幌
-CoderDojo 札幌東
-CoderDojo 室蘭
 CoderDojo 八戸
-CoderDojo 陸前高田
+CoderDojo 柏
+CoderDojo 名古屋
+CoderDojo 五反田
+CoderDojo 稲城
