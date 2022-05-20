@@ -2649,18 +2649,18 @@
 - id: 224
   order: '320005'
   created_at: '2019-09-06'
-  name: しまね
+  name: 大田・邑南、他
   counter: 7
   prefecture_id: 32
   logo: "/img/dojos/japan.png"
-  url: https://github.com/smalruby/smalruby.jp/wiki/道場のフォーム
-  description: 各地で週1〜2回開催
+  url: https://iwapro.connpass.com/
+  description: 島根県西部の各地で毎月開催
   tags:
   - Scratch
   - Webサイト
+  - Unity
   - Ruby
-  - C#
-  - Smalruby
+  - micro:bit
 - id: 211
   order: '322059'
   is_active: false
