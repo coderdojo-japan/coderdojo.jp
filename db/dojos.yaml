@@ -1174,10 +1174,11 @@
   logo: "/img/dojos/kodaira.png"
   description: 小平市で毎週および不定期に開催
   tags:
-  - Minecraft
   - Scratch
+  - Minecraft
+  - micro:bit
+  - toio
   - マルチメディア
-  - アプリ開発
 - id: 275
   order: '132152'
   is_active: false
