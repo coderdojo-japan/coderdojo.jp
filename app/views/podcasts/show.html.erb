@@ -1,7 +1,7 @@
-<% provide(:title, @title + ' - DojoCast') %>
-<% provide(:desc,  @episode.description) %>
-<% provide(:url,   @url) %>
-<% provide(:meta_image,  @episode.cover) %>
+<% provide :title, @title + ' - DojoCast' %>
+<% provide :desc,  strip_tags(@episode.description).delete("\n") %>
+<% provide :url,   @url %>
+<% provide :meta_image,  @episode.cover %>
 
 <%= lazy_image_tag('/podcasts/dojocast-cover.jpg', alt: 'DojoCast Cover Photo', class: 'dojocast-cover') %>
 
