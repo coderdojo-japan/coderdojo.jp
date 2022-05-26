@@ -3275,11 +3275,11 @@
   url: https://coderdojo-nago.connpass.com/
   description: 名護市で月2回開催
   tags:
-  - Scratch
-  - micro:bit
   - Minecraft
-  - Webサイト
-  - アプリ開発
+  - toio
+  - micro:bit
+  - Drone
+  - 3D Printer
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
