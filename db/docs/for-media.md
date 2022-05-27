@@ -28,7 +28,7 @@
   ※
   CoderDojo 憲章の[詳細を読む](/charter)。<br>
   ※
-  CoderDojo Japan の[役割と活動実績を読む](/join-in-board)。
+  CoderDojo Japan の[役割と活動実績を読む](/about-coderdojo-japan)。
 </small>
 <br>
 
