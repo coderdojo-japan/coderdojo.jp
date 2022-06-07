@@ -8,7 +8,7 @@
 
 <div class="gc_wrapper">
   <div class="responsive-iframe-container small-container">
-    <iframe src="https://calendar.google.com/calendar/embed?src=kirie%40inpw.jp&ctz=Asia%2FTokyo&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;showTitle=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=1&amp;hl=ja" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?src=kirie%40inpw.jp&ctz=Asia%2FTokyo&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;showTitle=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=1&amp;hl=ja" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
 </div>
 <br>
