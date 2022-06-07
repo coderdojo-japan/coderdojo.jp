@@ -130,7 +130,7 @@
   - ラズベリーパイ
 - id: 107
   order: '032069'
-
+  is_active: false
   created_at: '2017-06-20'
   name: きたかみ
   prefecture_id: 3
