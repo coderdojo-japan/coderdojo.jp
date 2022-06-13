@@ -4738,3 +4738,21 @@
   event_id:
   participants: 0
   evented_at: 2022/04/16 15:15
+
+# 2022/05/01 - 2022/05/31
+- dojo_id: 25
+  event_id:
+  participants: 1
+  evented_at: 2022/05/20 10:00
+- dojo_id: 86
+  event_id:
+  participants: 1
+  evented_at: 2022/05/22 10:30
+- dojo_id: 83
+  event_id:
+  participants: 6
+  evented_at: 2022/05/1 10:00
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2022/05/20 10:00
