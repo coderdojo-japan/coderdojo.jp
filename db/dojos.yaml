@@ -771,6 +771,20 @@
   tags:
   - Scratch
   - micro:bit
+- id: 284
+  order: '122211'
+  created_at: '2022-06-17'
+  name: 八千代
+  prefecture_id: 12
+  logo: "/img/dojos/yachiyo.png"
+  url: https://coderdojo-yachiyo.connpass.com/
+  description: 八千代市で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - JavaScript
+  - Node.js
+  - micro:bit
 - id: 251
   order: '122246'
   created_at: '2020-07-29'
