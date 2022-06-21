@@ -57,5 +57,5 @@ Dojoの費用を賄う（例：保険）又はDojoに投資する（例：機材
 **資金集めをDojo内で行う場合、Dojo出席者とその家族が献金にプレッシャーを感じないことが不可欠です。そのようなプレッシャーを感じさせることは、経済状況に関係なく無料、オープン、参加が可能というCoderDojoの精神に反します。**
 <br>
 
-この文書は [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) ライセンスの基に公開されています。
+この文書は [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) ライセンスの基に公開されています。また、分かりやすさのため一部の文体を意訳・変更しています。
 
