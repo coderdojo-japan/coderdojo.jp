@@ -2,13 +2,14 @@
 
 <br>
 
-打ち合わせの日程候補を挙げる際などで参考にして頂けると嬉しいです。午前中の場合は10:00am以前、もしくは10:15am以降だと助かります 🙏 
+打ち合わせの日程候補を挙げる際などで参考にして頂けると嬉しいです。午前中の場合は10:10am以降だと助かります 🙏 
 
 <br>
 
 <div class="gc_wrapper">
   <div class="responsive-iframe-container small-container">
-    <iframe src="https://calendar.google.com/calendar/embed?src=yasslab.jp_ac8rsip6rn0a77egdea47tc6t8%40group.calendar.google.com&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;showTitle=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=1&amp;wkst=2&amp;color=%23182C57&amp;bgcolor=%23F2F2F2&amp;hl=ja&amp;ctz=Asia%2FTokyo" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&showTabs=0&showPrint=0&showDate=1&wkst=2&color=%23182C57&bgcolor=%23F2F2F2&hl=ja&ctz=Asia%2FTokyo&src=yohei%40coderdojo.jp&src=ja.japanese%23holiday%40group.v.calendar.google.com&src=yasslab.jp_ac8rsip6rn0a77egdea47tc6t8%40group.calendar.google.com"
+     style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
 </div>
 <br>
