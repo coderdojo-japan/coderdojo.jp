@@ -6,8 +6,8 @@ class DojosController < ApplicationController
         url:         dojo.url,
         name:        dojo.name,
         order:       dojo.order,
-        prefecture:  dojo.prefecture.region,
-        linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.region}）",
+        prefecture:  dojo.prefecture.name,
+        linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.name}）",
       }
     end
 
