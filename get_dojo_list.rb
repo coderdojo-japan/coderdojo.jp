@@ -50,6 +50,7 @@ INPUT_TEXT.each do |line|
       .gsub('nagareyama',     '流山')
       .gsub('minami-kashiwa', '南柏')
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
+      .gsub('町田',           'まちだ')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
   end
 
