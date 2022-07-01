@@ -1,7 +1,7 @@
 class DojosController < ApplicationController
   def index
     @dojo_data = []
-    Dojo.active.each do |dojo|
+    Dojo.all.each do |dojo|
       @dojo_data << {
         url:         dojo.url,
         name:        dojo.name,
