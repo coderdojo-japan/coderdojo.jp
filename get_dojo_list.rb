@@ -20,6 +20,8 @@ result  = "<ul>\n"
 dojo_name = ''
 dojo_list = []
 not_found = []
+
+# Load and tweak dojo names from get_dojo_list.txt
 INPUT_TEXT.each do |line|
   next if line.start_with?('#') || line.strip.empty?
 
@@ -27,9 +29,13 @@ INPUT_TEXT.each do |line|
   dojo_name = line
     .gsub(/coderdojo/i,   '')
     .gsub(/コーダー道場/, '')
+    .gsub('‪',            '')
+    .gsub('　',           '')
+    .gsub('＠',           '@')
     .gsub('（', '(').gsub('）', ')') # Ex: Anjo（愛知県）
     .gsub(/\(.*\)+/,      '')        #     Delete '(...)'
     .split('/').first                # Ex: 堺/泉北和泉
+    .split('、').first               # Ex: 東大阪、八尾
     .strip
 
   # Search dojo data by its KANJI name from DOJO_DB
@@ -37,12 +43,14 @@ INPUT_TEXT.each do |line|
     binding.pry if dojo_name.nil?
     dojo[:name].start_with? dojo_name.downcase
       .gsub('ishigaki',       '石垣')
+      .gsub('hitachinaka',    'ひたちなか')
       .gsub('kodaira',        'こだいら')
       .gsub('toke',           '土気')
       .gsub('anjo',           '安城')
       .gsub('nagareyama',     '流山')
       .gsub('minami-kashiwa', '南柏')
-      .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 and 三次. Only 三好 uses 'Miyoshi' for now.
+      .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
+      .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
   end
 
   dojo_data.nil? ?
