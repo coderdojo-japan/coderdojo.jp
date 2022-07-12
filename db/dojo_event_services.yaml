@@ -18,9 +18,9 @@
 
 # 福山大門（広島県）：Facebook?
 #- dojo_id: 243
-#  name: 
-#  group_id: 
-#  url: 
+#  name:
+#  group_id:
+#  url:
 
 # 大府
 - dojo_id: 243
@@ -44,7 +44,7 @@
 - dojo_id: 278
   name: facebook
   group_id: 288768132053174
-  url: https://www.facebook.com/coderdojocosugi
+  url: https://www.facebook.com/coderdojocosugi #ページ削除されているようです。
 - dojo_id: 278
   name: connpass
   group_id: 12412
@@ -519,7 +519,7 @@
 
 # 木更津
 - dojo_id: 83
-  name: facebook 
+  name: facebook
   group_id: 1273279189459638
   url: https://www.facebook.com/coderdojokisarazu/events/
 - dojo_id: 83
@@ -895,7 +895,7 @@
 
 # 宮古島
 - dojo_id: 56
-  name: facebook # イベントページなし
+  name: facebook #イベントページなし
   group_id:
   url: https://www.facebook.com/coderdojo.miyakojima/
 
@@ -1257,9 +1257,9 @@
   group_id: 8197
   url: https://coderdojo-ichinomiya.connpass.com/
 
-# 大石田@PCチャレンジ倶楽部 Facebookイベントページなし
+# 大石田@PCチャレンジ倶楽部
 - dojo_id: 215
-  name: facebook
+  name: facebook #イベントページなし
   group_id: 2253119258233423
   url: https://www.facebook.com/DojoPcc/
 
