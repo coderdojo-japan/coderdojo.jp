@@ -2,11 +2,11 @@
 <center>(<a href="/docs/fundraising-guidelines_en">英語で読む</a>)</center>
 <br/>
 
-この記事は各 Dojo が資金を集めるときの一般的なガイドラインです。会場代や保険代を工面したいときなど、具体的な資金集めの方法については[資金を募るときの活動事例](/docs/fundraising-methods)をお読みください。
+この記事は、各 Dojo が資金を集めるときの一般的なガイドラインです。会場代や保険代を工面したいときなど、具体的な資金集めの方法については[資金を募るときの活動事例](/docs/fundraising-methods)をお読みください。
 
 <blockquote>
   <small>※
-  本記事では読み手が理解しやすいように、具体例を日本国内の事例に置き換えたり重要部分を太字で強調しています。</small>
+    本記事では読み手が理解しやすいように、具体例を日本国内の事例に置き換えたり、一部の文体を意訳・変更しています。</small>
 </blockquote>
 
 
@@ -33,4 +33,4 @@ CoderDojo 財団は、Dojo 運営に関する出費ができるかぎり０に�
 寄付者（会場スポンサーなど含む）の期待を一切無視すること
 <br/>
 
-この文書は [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) ライセンスの基に公開されています。また、分かりやすさのため一部の文体を意訳・変更しています。
+この文書は [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) ライセンスの基に公開されています。
