@@ -2,7 +2,7 @@
 <center>(<a href="/docs/fundraising-methods_en">英語で読む</a>)</center>
 <br/>
 
-この記事は、各 Dojo が資金集めをするときの具体的なアイデア集です。資金集めに関する一般的なポイントについては、[資金を募るときのガイドライン](/docs/fundraising-guidelines)をお読みください。
+この記事は、各 Dojo が資金を集めるときの具体的な事例集です。資金集めに関する一般的な注意事項については[資金を募るときのガイドライン](/docs/fundraising-guidelines)をお読みください。
 
 <blockquote>
   <small>※
