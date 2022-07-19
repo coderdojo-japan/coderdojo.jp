@@ -60,7 +60,7 @@ Dojo での活動を広くお披露目する場を設け、その出席者に対
 - - CoderDojo クイズナイト
 - - 世界記録（ワールドレコード）に挑戦
 
-**資金集めを Dojo 内で行う場合、Dojo 出席者とその家族が献金にプレッシャーを感じないことが不可欠です。そのようなプレッシャーを感じさせることは CoderDojo の精神に反します。**
+いずれの資金集めにおいても、[CoderDojo 憲章](/charter)に沿って、Dojo 参加者やその保護者が寄付に対する強制的なプレッシャーを感じないようにすることが大切です。皆さんの Dojo 運営のご参考になれば幸いです。
 <br>
 
 この文書は [Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) ライセンスの基に公開されています。
