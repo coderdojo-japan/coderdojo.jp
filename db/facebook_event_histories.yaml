@@ -4770,3 +4770,29 @@
   event_id:
   participants: 3
   evented_at: 2022/06/5 10:00
+
+# 2022/07/01 - 2022/07/31
+- dojo_id: 6
+  event_id:
+  participants: 0
+  evented_at: 2022/07/01 17:00
+- dojo_id: 25
+  event_id:
+  participants: 2
+  evented_at: 2022/07/10 10:00
+- dojo_id: 86
+  event_id:
+  participants: 2
+  evented_at: 2022/07/17 10:30
+- dojo_id: 83
+  event_id:
+  participants: 4
+  evented_at: 2022/07/03 10:00
+- dojo_id: 113
+  event_id:
+  participants: 0
+  evented_at: 2022/07/23 15:15
+- dojo_id: 131
+  event_id:
+  participants: 2
+  evented_at: 2022/07/24 10:00
