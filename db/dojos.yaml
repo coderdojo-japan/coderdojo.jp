@@ -1725,6 +1725,19 @@
   - Webサイト
   - JavaScript
   - toio
+- id: 285
+  order: '212105'
+  created_at: '2022-08-12'
+  name: 恵那
+  prefecture_id: 21
+  logo: "/img/dojos/ena.jpg"
+  url: https://zen.coderdojo.com/dojos/jp/qi2-fu4-xian4-hui4-na4-shi4-ming2-zhi4-ting3/ena
+  description: 恵那市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - クリスタ
+  - LEGO
 - id: 96
   order: '212211'
   is_active: false
