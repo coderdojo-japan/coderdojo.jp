@@ -2219,6 +2219,19 @@
   - Scratch
   - Minecraft
   - micro:bit
+- id: 286
+  order: '272043'
+  created_at: '2022-08-28'
+  name: 池田石橋
+  prefecture_id: 27
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-ikeda.connpass.com/
+  description: 池田市石橋で毎月開催
+  tags:
+  - Scratch
+  - Python
+  - Java
+  - JavaScript
 - id: 206
   order: '272051'
   created_at: '2019-02-28'
