@@ -16,7 +16,11 @@
 3. 最新版の PDF にアクセスし、申請内容と一致する全国地方公共団体コードを確認する
 4. `db/dojos.yaml` ファイルを開き、全国地方公共団体コードの近い値（隣接する Dojo）のデータを見つける
 5. 同じ全国地方公共団体コードがあれば同コードの直後に、初のコードであれば `order` の昇順で適した場所を探す
-6. 申請内容と下記サンプルデータを参考に、新しい Dojo データを追加し、Pull Request を送る
+6. 下記「[データの読み方](#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9%E7%94%B3%E8%AB%8B%E5%86%85%E5%AE%B9%E3%81%A8%E5%AF%BE%E5%BF%9C%E4%BE%8B)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) に追加する
+7. 下記「[統計システムへの追加](#%E7%B5%B1%E8%A8%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E8%BF%BD%E5%8A%A0)」を参考に、イベント管理サービスを [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) に追加する
+8. 上記の作業結果をコミットし、Pull Request (PR) を送る
+
+参考 PR: [coderdojo-japan/coderdojo.jp#1449](https://github.com/coderdojo-japan/coderdojo.jp/pull/1449)
 
 <br>
 
