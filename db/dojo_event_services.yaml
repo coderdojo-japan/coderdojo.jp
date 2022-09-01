@@ -1,8 +1,8 @@
-# 池田池橋 (TODO: 初回イベントが立てられると Group ID が決定する)
-#- dojo_id: 286
-#  name: connpass
-#  group_id: ??
-#  url: https://coderdojo-ikeda.connpass.com/
+# 池田池橋
+- dojo_id: 286
+  name: connpass
+  group_id: 12862
+  url: https://coderdojo-ikeda.connpass.com/
 
 # 恵那 未定
 # - dojo_id: 285
