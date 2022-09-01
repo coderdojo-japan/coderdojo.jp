@@ -1,3 +1,15 @@
+# 本ファイルの取り扱い方は下記ページをご参照ください
+# https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how_to_add_dojo.md
+
+## 以下、コピペ用テンプレート
+# Dojo名
+#- dojo_id: 
+#  name: connpass or doorkeeper
+#  group_id: 
+#  url: 
+
+
+
 # 池田池橋
 - dojo_id: 286
   name: connpass
