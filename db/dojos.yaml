@@ -2395,10 +2395,8 @@
   description: 藤井寺市/柏原市で毎月開催
   tags:
   - Scratch
-  - Webサイト
-  - Micro:bit
-  - ラズベリーパイ
-  - Arduino
+  - micro:bit
+  - Minecraft
 - id: 110
   order: '272281'
   created_at: '2017-05-26'
