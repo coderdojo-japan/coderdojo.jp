@@ -8,7 +8,11 @@
 #  group_id: 
 #  url: 
 
-
+# 新所沢 （イベントが作成されたらgroup_idとurlを追加する）
+#- dojo_id: 287
+#  name: doorkeeper
+#  group_id: ??
+#  url: ??
 
 # 池田池橋
 - dojo_id: 286
