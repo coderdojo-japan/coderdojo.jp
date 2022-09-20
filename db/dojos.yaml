@@ -553,6 +553,20 @@
   description: 所沢市小手指で毎月開催
   tags:
   - Scratch
+- id: 287
+  order: '112089'
+  created_at: '2022-09-20'
+  name: 新所沢
+  prefecture_id: 11
+  url: https://coderdojoshintokorozawa.github.io/
+  logo: "/img/dojos/japan.png"
+  description: 埼玉県所沢市新所沢で毎月開催
+  tags:
+  - Scratch
+  - Unity
+  - Processing
+  - micro:bit
+  - Python
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
