@@ -720,6 +720,12 @@ body>footer a:hover {
   font-size: 1.5rem;
 }
 
+// twitter timeline
+.twitter-timeline-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 // Each Event: /events
 .event-region {
   padding: 50px 0 20px 0;
