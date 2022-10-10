@@ -11,7 +11,7 @@ CoderDojo の特徴は、オープンソースと呼ばれる文化に根付い�
 
 また、CoderDojo では統一したカリキュラムは採用していません。代わりに必要な時にメンターが相談に乗ったり、子ども同士で学び合うことを推奨しています。これは受動的に何かを教わることよりも、作りながら主体的に学ぶことに価値があると考えているからです。このため、子ども達が自発的な興味・関心を追究する「広場」のような場所として、CoderDojo が存在しています。
 
-<img alt="写真: CoderDojo 西宮・梅田における風景" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/coderdojo-kata_cover.png">
+<img alt="写真: CoderDojo 西宮・梅田における風景" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/coderdojo-kata_cover.webp">
 <div style="text-align:center">写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</div>
 
 
