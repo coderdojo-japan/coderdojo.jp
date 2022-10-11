@@ -8,7 +8,7 @@ CoderDojo は7〜17歳を主な対象とした非営利のプログラミング�
 
 <br>
 
-<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/coderdojo-kata_cover.webp" alt="写真: CoderDojo 西宮・梅田における風景" />
+<img class='lazyload' loading='lazy' src='/kata_cover_plain.min.webp' data-src="/kata_cover_plain.webp" alt="写真: CoderDojo 西宮・梅田における風景" />
 <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 
 <br>
