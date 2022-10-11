@@ -1320,6 +1320,19 @@
   - micro:bit
   - Hour of Code
   - HackforPlay
+- id: 288
+  order: '141097'
+  created_at: '2022-10-10'
+  name: 横浜師岡
+  prefecture_id: 14
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-morooka.connpass.com
+  description: 横浜市港北区の師岡町で毎月開催
+  tags:
+  - Scratch
+  - ScratchJr
+  - Minecraft
+  - Python
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
