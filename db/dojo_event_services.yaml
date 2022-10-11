@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 横浜師岡
+- dojo_id: 288
+  name: connpass
+  group_id: 12941
+  url: https://coderdojo-morooka.connpass.com
+
 # 新所沢
 - dojo_id: 287
   name: doorkeeper
