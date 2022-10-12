@@ -64,24 +64,24 @@
       %i.fad.fa-yin-yang
       CoderDojo についてもっと知る
 
-/
   %section#events.detail-introduction.text-center
   %h2 🆕 イベントのお知らせ
+  %ol.bxslider{style: "list-style: none; margin-left: -40px; margin-top: 30px;"}
+    %li
+      = link_to lazy_image_tag('dojocon_japan_2022.webp', alt: "DojoCon Japan 2022", style: "margin-bottom: 15px;"), "https://dojocon2022.coderdojo.jp/", target: "_blank", rel: "external noopener"
+
+  %p
+    11月27日に
+    %a{href: "https://dojocon2022.coderdojo.jp/", target: "_blank", rel: "external noopener"} DojoCon Japan
+    開催! 全国の CoderDojo 関係者に話してみませんか? 😆
+
+/
   %p.event-notice{style: "margin-top: 30px; margin-bottom: 60px;"}
     %a{href: "https://bit.ly/pokemon-special-workshop-in-kashiwa", target: "_blank", rel: "external noopener"} プログラミングでポケモンをうごかしてみよう
     %br
     %small
       5月16日 (日) 10am〜、オンライン開催
 
-/
-  %ol.bxslider{style: "list-style: none; margin-left: -40px; margin-top: 30px;"}
-    %li
-      = link_to lazy_image_tag('dojocon_japan_2020.png', alt: "DojoCon Japan 2020", style: "margin-bottom: 15px;"), "https://dojocon2020.coderdojo.jp/", target: "_blank", rel: "external noopener"
-
-  %p
-    12月27日に
-    %a{href: "https://dojocon2020.coderdojo.jp/", target: "_blank", rel: "external noopener"} DojoCon Japan 2020
-    オンライン開催! 早めにお申し込みください 😆🎫✨
 
 
 %section.dojos.text-center.grayscale-bg#dojos
