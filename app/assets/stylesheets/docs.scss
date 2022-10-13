@@ -123,3 +123,9 @@
 .doc > ol > li > ul {
   list-style: none;
 }
+
+// Sample Usecase: https://coderdojo.jp/docs/fundraising-methods
+// This style is defined by Bootstrap's _type.scss.
+.doc small::before {
+  content: none;
+}
