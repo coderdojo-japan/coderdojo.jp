@@ -53,6 +53,7 @@ Dojo での活動を広くお披露目する場を設け、その出席者に対
 
 ### その他の資金集めのオプション
 
+- - CoderDojo クラウドファンディング（[CAMPFIRE における事例](https://camp-fire.jp/projects/search?sort=density&word=CoderDojo)）
 - - CoderDojo ベイク・セール（手作りのお菓子を販売するバザー）
 - - CoderDojo コーヒー・モーニング
 - - ドレスダウンデー（カジュアルな服装で参加）
