@@ -2,7 +2,7 @@
 <center>(<a href="/docs/fundraising-guidelines_en">英語で読む</a>)</center>
 <br/>
 
-この記事は、各 Dojo が資金を集めるときの一般的なガイドラインです。資金集めに関する具体的な方法については[資金を募るときの活動事例](/docs/fundraising-methods)をお読みください。
+この記事は、子どものためのプログラミング道場「[CoderDojo](/)」で資金を集めるときの一般的なガイドラインです。資金集めに関する具体的な方法については[資金を募るときの活動事例](/docs/fundraising-methods)をお読みください。
 
 <blockquote>
   <small>※
