@@ -64,5 +64,10 @@ Dojo での活動を広くお披露目する場を設け、その出席者に対
 いずれの資金集めにおいても、[CoderDojo 憲章](/charter)に沿って、Dojo 参加者やその保護者が寄付に対する強制的なプレッシャーを感じないようにすることが大切です。皆さんの Dojo 運営のご参考になれば幸いです。
 <br>
 
-この文書は [CoderDojo Foundation](https://en.wikipedia.org/wiki/CoderDojo#CoderDojo_Foundation) の許諾のもと [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) で共有・公開されています。
+<blockquote>
+  <small>
+    この文書は <a href='https://en.wikipedia.org/wiki/CoderDojo#CoderDojo_Foundation'>CoderDojo Foundation</a> の許諾のもと <a href='https://creativecommons.org/licenses/by-nc/4.0/deed.ja'>CC BY-NC 4.0</a> で共有・公開されています。
+  </small>
+</blockquote>
+
 
