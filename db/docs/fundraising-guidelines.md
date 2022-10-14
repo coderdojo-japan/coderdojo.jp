@@ -33,4 +33,10 @@ CoderDojo 財団は、Dojo 運営に関する出費ができるかぎり０に�
 寄付者（会場スポンサーなど含む）の期待を一切無視すること
 <br/>
 
-この文書は [CoderDojo Foundation](https://en.wikipedia.org/wiki/CoderDojo#CoderDojo_Foundation) の許諾のもと [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ja) で共有・公開されています。
+<blockquote>
+  <small>
+    この文書は <a href='https://en.wikipedia.org/wiki/CoderDojo#CoderDojo_Foundation'>CoderDojo Foundation</a> の許諾のもと <a href='https://creativecommons.org/licenses/by-nc/4.0/deed.ja'>CC BY-NC 4.0</a> で共有・公開されています。
+  </small>
+</blockquote>
+
+
