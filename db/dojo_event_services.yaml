@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# たまち
+- dojo_id: 289
+  name: connpass
+  group_id: 13058
+  url: https://coderdojo-tamachi.connpass.com/
+
 # 横浜師岡
 - dojo_id: 288
   name: connpass

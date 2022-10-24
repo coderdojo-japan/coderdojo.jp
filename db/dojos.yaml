@@ -908,6 +908,20 @@
   - PHP
   - Java
   - Python
+- id: 289
+  order: '131032'
+  created_at: '2022-10-23'
+  name: たまち
+  prefecture_id: 13
+  logo: "/img/dojos/coderdojo.webp"
+  url: https://coderdojo-tamachi.connpass.com/
+  description: 港区JR田町駅周辺で毎月開催
+  tags:
+  - Scratch
+  - Hour of Code
+  - 電子工作
+  - Webアプリ開発
+  - スマホアプリ開発
 - id: 58
   order: '131041'
   is_active: false
