@@ -25,7 +25,7 @@ CoderDojo は7〜17歳を主な対象とした非営利のプログラミング�
 CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
 
 <div style="padding: 40px 0px;">
-  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/kata/coderdojo-zero.png" alt="写真: CoderDojo の運営者向けイベントの様子" /></a>
+  <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/kata/coderdojo-zero.webp" alt="写真: CoderDojo の運営者向けイベントの様子" /></a>
   <center>写真: CoderDojo の<a href="https://www.facebook.com/events/2197296287267893/">運営者向けイベント</a>の様子</center>
 </div>
 
