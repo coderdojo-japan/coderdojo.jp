@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 紫雲
+#- dojo_id: 290
+#  name: zen
+#  group_id: 
+#  url: https://zen.coderdojo.com/dojos/jp/takamatsu-kagawa-prefecture/shiun-kagawa
+
 # たまち
 - dojo_id: 289
   name: connpass
