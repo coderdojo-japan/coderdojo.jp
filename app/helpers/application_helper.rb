@@ -17,8 +17,11 @@ module ApplicationHelper
     if page_url.empty?
       # Set og:url with request param
       request.url
-    else
+    elsif page_url.starts_with? '/'
       # Set og:url with given param
+      'https://coderdojo.jp' + page_url
+    else
+      # 例: https://coderdojo.jp/...
       page_url
     end
   end
@@ -36,10 +39,16 @@ module ApplicationHelper
   end
 
   def meta_image(filepath)
-    base_url = Rails.env.development? ? 'http://localhost:3000/' : 'https://coderdojo.jp/'
+    base_url = Rails.env.development? ? 'http://localhost:3000' : 'https://coderdojo.jp'
     filepath = '/img/ogp-default.jpg' if filepath.blank?
-    filepath = filepath[1..]          if filepath.starts_with? '/'
-    base_url + filepath
+
+    if filepath.starts_with? 'http'
+      # 例: 'https://i.gyazo.com/...'
+      filepath
+    else
+      # 例: '/img/ogp-docs.jpeg'
+      base_url + filepath
+    end
   end
 
   def kata_description
