@@ -4820,3 +4820,9 @@
   event_id:
   participants: 2
   evented_at: 2022/09/04 10:00
+
+# 2022/10/01 - 2022/10/31
+- dojo_id: 83
+  event_id:
+  participants: 1
+  evented_at: 2022/10/02 10:00
