@@ -2398,6 +2398,20 @@
   - Scratch
   - Webサイト
   - Android
+- id: 291
+  order: '272124'
+  created_at: '2022-11-18'
+  name: 八尾@yotteco
+  prefecture_id: 27
+  logo: "/img/dojos/yao-yotteco.webp"
+  url: https://www.facebook.com/profile.php?id=100087493006122
+  description: 八尾市萱振町で毎月開催
+  tags:
+  - Flutter
+  - Scratch
+  - Roblox
+  - Python
+  - Minecraft
 - id: 72
   order: '272141'
   created_at: '2017-02-19'
