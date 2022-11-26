@@ -5,6 +5,7 @@ class DojosController < ApplicationController
       @dojo_data << {
         url:         dojo.url,
         name:        dojo.name,
+        logo:        "https://coderdojo.jp#{dojo.logo}",
         order:       dojo.order,
         prefecture:  dojo.prefecture.name,
         linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.name}）",
