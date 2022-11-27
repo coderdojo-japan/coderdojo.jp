@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 二本松
+- dojo_id: 292
+  name: doorkeeper
+  group_id: 13146
+  url: https://dojonihonmatsu.doorkeeper.jp/
+
 # 八尾@yotteco
 #- dojo_id: 291
 #  name: facebook
