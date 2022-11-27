@@ -97,7 +97,8 @@
     %a.btn-blue{href: events_path}<>
       %i.far.fa-calendar-alt
       近日開催から探す
-    %a.btn-blue{href: zen_url, target: '_blank', rel: 'external noopener'}<>
+    /%a.btn-blue{href: zen_url, target: '_blank', rel: 'external noopener'}<>
+    %a.btn-blue{href: 'https://map.coderdojo.jp/', target: '_blank', rel: 'external noopener'}<>
       %i.far.fa-map-marked
       地図情報から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
