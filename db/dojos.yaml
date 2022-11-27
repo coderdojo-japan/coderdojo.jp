@@ -297,6 +297,20 @@
   - ラズベリーパイ
   - Webサイト
   - Ruby
+- id: 292
+  order: '072109'
+  created_at: '2022-11-27'
+  name: 二本松
+  prefecture_id: 7
+  logo: "/img/dojos/nihonmatsu.webp"
+  url: https://coderdojo-nihonmatsu.com/
+  description: 二本松市で毎月開催
+  tags:
+  - Scratch
+  - Viscuit
+  - micro:bit
+  - Unity
+  - ゲーム開発
 - id: 149
   order: '072052'
   created_at: '2018-05-29'
