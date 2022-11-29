@@ -6,6 +6,8 @@
 
 一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。本ページでは、トップページに掲載されている Dojo 情報を更新する方法や、開発環境のセットアップ方法などをまとめています。
 
+<br>
+
 ## 開発に参加するには?
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
@@ -178,7 +180,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 現在提供中の API です。今後仕様が変更される可能性もあるため、本番環境で利用したい場合は yohei@coderdojo.jp までご連絡ください! 📮
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
-- Sitemap XML: https://coderdojo.jp/sitemap.xml
+- CoderDojo 一覧: https://coderdojo.jp/dojos.json
 - 近日開催の道場: https://coderdojo.jp/events.json
 
 ### Development History & Contributors
@@ -199,10 +201,14 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ## 5. License
 
+<details>
+  <summary><strong>Check out each license</strong></summary>
+
 This web application is developed with many other brilliant works!   
 Check out the followings if you are interested in. :wink:
 
-### About Scrivito
+
+<h3>Scrivito gem</h3>
 
 Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3.0, the author allows us to put MIT license. 😆✨
 
@@ -211,7 +217,7 @@ Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LG
 
 So, this application can be used and modified under the MIT License! 🆗
 
-### About Libraries and Icons
+<h3>Libraries & Icons</h3>
 
 The libraries like [RubyGems](https://rubygems.org/) used in this web application have their own licenses. Say, this website uses [Bootstrap](https://getbootstrap.jp/), created by Twitter licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
@@ -219,19 +225,19 @@ Also this website uses icons created by [Font Awesome](http://fontawesome.io/), 
 
 Thanks for their great works to make this app published! :sparkling_heart: 
 
-### About Texts in Kata
+<h3>Texts in Kata</h3>
 
 The texts in [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed) license. But the texts do NOT include images, slides, and external websites. Please make sure to check their licenses and/or contact its owner before using them.
 
-### About Logos and Photos
+<h3>Logos & Photos</h3>
 
 The images, such as logos and photos of [each dojo](http://coderdojo.jp/#dojos), are NOT published under the following License. Contact its owner, like the maintainer of linked external website, before using them. :relieved: 
 
-### About Source Codes
+<h3>Codes & Others<h3>
 
 The source codes, such as HTML/CSS/JavaScript and Ruby codes not declared before, are published under **[The MIT License](https://opensource.org/licenses/MIT)**. Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
 
-Copyright &copy; 2012-2022 [CoderDojo Japan Association](https://coderdojo.jp/)
+Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -239,3 +245,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+</details>
+
+Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan)
