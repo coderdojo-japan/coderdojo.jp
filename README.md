@@ -233,7 +233,7 @@ The texts in [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC
 
 The images, such as logos and photos of [each dojo](http://coderdojo.jp/#dojos), are NOT published under the following License. Contact its owner, like the maintainer of linked external website, before using them. :relieved: 
 
-<h3>Codes & Others<h3>
+<h3>Codes & Others</h3>
 
 The source codes, such as HTML/CSS/JavaScript and Ruby codes not declared before, are published under **[The MIT License](https://opensource.org/licenses/MIT)**. Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
 
