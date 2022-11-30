@@ -114,8 +114,8 @@ DojoCon Japan の要件ではありせんが、以下に DojoCon (本家) の要
 1. （提案者が）イベント設営のあらゆる側面を検討済みであるか
 1. カンファレンスがDojoConの在り方をさらに成長させる革新的なアイデアがあるか。
 
-### 参照元 {#reference}
+### 参考 {#reference}
 
-[https://coderdojo.com/event-selection-policy-and-methods/](https://coderdojo.com/event-selection-policy-and-methods/)
+[DojoCon Handbook](https://help.coderdojo.com/cdkb/s/article/DojoCon-Handbook)
 
 
