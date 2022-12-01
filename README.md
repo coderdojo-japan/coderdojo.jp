@@ -177,7 +177,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ### API (開発中)
 
-現在提供中の API です。今後仕様が変更される可能性もあるため、本番環境で利用したい場合は yohei@coderdojo.jp までご連絡ください! 📮
+現在提供中の API です。互換性を破壊する変更が今後起こる可能性もあるため、本番環境で利用したい場合は一度ローカルファイルなどに退避させて使うのがオススメです (利用例: [DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#gem-dojomap-%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E6%96%B9%E6%B3%95%E9%96%8B%E7%99%BA%E8%80%85%E5%90%91%E3%81%91)) 🗾
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
 - CoderDojo 一覧: https://coderdojo.jp/dojos.json
