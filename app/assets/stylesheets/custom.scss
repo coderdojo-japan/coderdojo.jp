@@ -69,6 +69,12 @@ section.kata p {
   }
 }
 
+/* Twitter Embedded Timeline */
+.twitter-timeline-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* Twemoji */
 img.emoji {
   height: 1em;
