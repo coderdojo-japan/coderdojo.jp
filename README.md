@@ -12,7 +12,7 @@
 
 CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援プログラム](https://coderdojo.jp/kata#support)をご利用することができます。[coderdojo.jp](https://coderdojo.jp) への掲載方法も載っていますので、詳細は [CoderDojo Kata](https://coderdojo.jp/kata#support) をご確認ください。
 
-[![CoderDojo Kata - 支援](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/public/img/kata_supports_ss.png?raw=true)](https://coderdojo.jp/kata#support)
+[![CoderDojo Kata - 支援](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/public/img/kata_support_ss.png?raw=true)](https://coderdojo.jp/kata#support)
 
 <br>
 
