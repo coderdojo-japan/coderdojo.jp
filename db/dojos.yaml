@@ -1565,6 +1565,19 @@
   - ラズベリーパイ
   - Python
   - JavaScript
+- id: 293
+  order: '160008'
+  created_at: '2022-12-04'
+  name: 舟橋
+  prefecture_id: 16
+  logo: "/img/dojos/funabashimura.webp"
+  url: https://sites.google.com/coderdojo.com/funahashi/
+  description: 舟橋村で毎月2回開催
+  tags:
+  - Scratch
+  - 電子工作
+  - Minecraft
+  - App Inventor
 - id: 267
   order: '162019'
   created_at: '2021-04-29'
