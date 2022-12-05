@@ -242,7 +242,9 @@ Also [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3
 
 So, this application's code can be simply forked, copied, and modified under the MIT License below! 🆗
 
-Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan)
+<hr>
+
+The MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
