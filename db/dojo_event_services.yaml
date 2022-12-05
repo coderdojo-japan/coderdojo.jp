@@ -21,10 +21,10 @@
   url: https://dojonihonmatsu.doorkeeper.jp/
 
 # 八尾@yotteco
-#- dojo_id: 291
-#  name: facebook
-#  group_id: 
-#  url: https://zen.coderdojo.com/dojos/jp/yao-osaka/ba1-wei3-yotteco
+- dojo_id: 291
+  name: facebook
+  group_id: 100087493006122
+  url: https://zen.coderdojo.com/dojos/jp/yao-osaka/ba1-wei3-yotteco
 
 # 紫雲
 #- dojo_id: 290
