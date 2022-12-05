@@ -6,9 +6,17 @@
 
 一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。本ページでは、トップページに掲載されている Dojo 情報を更新する方法や、開発環境のセットアップ方法などをまとめています。
 
+## :beginner: Dojo を掲載するには?
+
+CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援プログラム](https://coderdojo.jp/kata#support)をご利用することができます。[coderdojo.jp](https://coderdojo.jp) への掲載方法も載っていますので、詳細は [CoderDojo Kata](https://coderdojo.jp/kata#support) をご確認ください。
+
+[![CoderDojo Kata - 支援](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/public/img/kata_supports_ss.png?raw=true)](https://coderdojo.jp/kata#support)
+
 <br>
 
-## 開発に参加するには?
+<br>
+
+## :wrench: 開発に参加するには?
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
 
