@@ -96,7 +96,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-### Docker を利用したセットアップ方法
+### :whale: Docker を利用したセットアップ方法
 
 上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
 
@@ -107,7 +107,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-### CI/Deploy 構成
+### :rocket: CI/Deploy 構成
 
 [coderdojo.jp](https://coderdojo.jp/)  は現在、次の構成でテスト・デプロイされています。
 
@@ -128,7 +128,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 2. [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase) を使い、本番環境の安定性を高める
    - 例: Heroku デプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
 
-### CI で実行される各種 Rake タスクと概要
+### :gem: CI で実行される各種 Ruby スクリプト (Rake タスク)
 
 最新版は [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh) からご確認いただけます。
 
@@ -153,7 +153,7 @@ bundle exec rails podcasts:upsert
 ```
 
 
-### Development with Scrivito
+### :cloud: Development with Scrivito
 
 (:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
 
@@ -183,7 +183,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - [CoderDojo Japan の各種機能と実装について【2017年版】 - Qiita](https://qiita.com/yasulab/items/1d12e6b295c0a9e577f1)
 - [CoderDojo Japan のバックエンドを刷新しました【2016年】](https://coderdojo.jp/docs/post-backend-update-history)
 
-### API (開発中)
+### :construction: API (開発中)
 
 現在提供中の API です。互換性を破壊する変更が今後起こる可能性もあるため、本番環境で利用したい場合は一度ローカルファイルなどに退避させて使うのがオススメです! (利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme))
 
@@ -191,7 +191,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - CoderDojo 一覧: https://coderdojo.jp/dojos.json
 - 近日開催の道場: https://coderdojo.jp/events.json
 
-### Development History & Contributors
+### :scroll: Development History & Contributors
 
 - **2012:** CoderDojo Japan started in [Facebook Group](https://www.facebook.com/groups/coderdojo.jp/about/)
 - **2014:** coderdojo.jp was launched as ['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors)
@@ -215,17 +215,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 This web application is developed with many other brilliant works!   
 Check out the followings if you are interested in. :wink:
 
-
-<h3>Scrivito gem</h3>
-
-Although [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3.0, the author allows us to put MIT license. 😆✨
-
-> Sorry for the late reply, I wanted to confer with our team.   
-> There is no conflict in the licenses and you are welcome to use the MIT license.  
-
-So, this application can be used and modified under the MIT License! 🆗
-
-<h3>Libraries & Icons</h3>
+<h3>🎨 Libraries & Icons</h3>
 
 The libraries like [RubyGems](https://rubygems.org/) used in this web application have their own licenses. Say, this website uses [Bootstrap](https://getbootstrap.jp/), created by Twitter licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
@@ -233,17 +223,24 @@ Also this website uses icons created by [Font Awesome](http://fontawesome.io/), 
 
 Thanks for their great works to make this app published! :sparkling_heart: 
 
-<h3>Texts in Kata</h3>
+<h3>📝 Texts in Kata</h3>
 
 The texts in [Kata page](http://coderdojo.jp/kata) are published under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed) license. But the texts do NOT include images, slides, and external websites. Please make sure to check their licenses and/or contact its owner before using them.
 
-<h3>Logos & Photos</h3>
+<h3>☯️ Logos & Photos</h3>
 
 The images, such as logos and photos of [each dojo](http://coderdojo.jp/#dojos), are NOT published under the following License. Contact its owner, like the maintainer of linked external website, before using them. :relieved: 
 
-<h3>Codes & Others</h3>
+<h3>💎 Codes, Scrivito gem, and Others</h3>
 
 The source codes, such as HTML/CSS/JavaScript and Ruby codes not declared before, are published under **[The MIT License](https://opensource.org/licenses/MIT)**. Feel free to refer, copy, or share them. And contact `info@coderdojo.jp` if you find something unclear.
+
+Also [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3.0, but the author allows us to put MIT license. 😆✨
+
+> Sorry for the late reply, I wanted to confer with our team.   
+> There is no conflict in the licenses and you are welcome to use the MIT license.  
+
+So, this application's code can be simply forked, copied, and modified under the MIT License below! 🆗
 
 Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan)
 
