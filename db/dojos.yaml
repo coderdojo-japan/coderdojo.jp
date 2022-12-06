@@ -706,8 +706,8 @@
   - Minecraft
   - micro:bit
   - toio
-  - MESH
-  - 大学入試
+#  - MESH
+#  - 大学入試
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
