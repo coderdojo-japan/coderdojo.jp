@@ -1,8 +1,9 @@
 class DojosController < ApplicationController
   def index
     @dojo_data = []
-    Dojo.all.each do |dojo|
+    Dojo.order(id: :asc).all.each do |dojo|
       @dojo_data << {
+        id:          dojo.id,
         url:         dojo.url,
         name:        dojo.name,
         logo:        "https://coderdojo.jp#{dojo.logo}",
