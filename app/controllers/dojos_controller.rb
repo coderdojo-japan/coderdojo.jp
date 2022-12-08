@@ -8,6 +8,7 @@ class DojosController < ApplicationController
         name:        dojo.name,
         logo:        "https://coderdojo.jp#{dojo.logo}",
         order:       dojo.order,
+        is_active:   dojo.is_active,
         prefecture:  dojo.prefecture.name,
         linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.name}）",
       }
