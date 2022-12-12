@@ -22,7 +22,7 @@ class Podcast < ApplicationRecord
 
   def cover
     cover = Dir.glob("public/podcasts/#{self.id}.{jpg,png}")
-    cover.blank? ? nil: cover.first[7..]
+    cover.blank? ? nil : cover.first[6..]
   end
 
   def content
