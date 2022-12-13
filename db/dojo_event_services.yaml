@@ -732,13 +732,15 @@
   name: connpass
   group_id: 2617
   url: https://coderdojo-nara-ikoma.connpass.com/
-  # 奈良・生駒・田原本 のイベント収集サイトは共通
+  # 奈良・生駒・田原本・平群のイベント収集サイトは共通
   # - dojo_id: 36
   #   name: 生駒
   # - dojo_id: 169
   #   name: 明日香
   # - dojo_id: 177
-  #   name: 田原本
+  #   name: 田原本（非アクティブ）
+  # - dojo_id: 294
+  #   name: 平群
 
 - dojo_id: 37
   name: connpass
