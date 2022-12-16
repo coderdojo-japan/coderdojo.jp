@@ -5,6 +5,7 @@
 CoderDojo Zen で承認されたら、Dojo 情報を coderdojo.jp に掲載することができます。
 
 - 🗾 日本各地の道場: [https://coderdojo.jp/#dojos](/#dojos)
+- 🗺  地図で探す道場: [https://map.coderdojo.jp/](https://map.coderdojo.jp/)
 - 📅 近日開催の道場: [https://coderdojo.jp/events](/events)
 - 　<span style="color: grey; font-size: 80%; font-style: italic">(近日開催の道場は現在 <a href='https://connpass.com/' target='_blank' rel='noopener'>connpass</a> と <a href='https://www.doorkeeper.jp/' target='_blank' rel='noopener'>Doorkeeper</a> のみに対応しています)</span>
 
