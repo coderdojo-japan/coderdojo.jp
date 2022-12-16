@@ -36,16 +36,18 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 <br>
 
 
-## これまでの提携事例
+## CoderDojo の実績
 
-全国各地に CoderDojo コミュニティが広がり、中には大人の想像を超えて成長する子ども達も表出してきています。
+CoderDojo コミュニティは全国各地に広がり、[毎年1,000回以上のイベントが開催](/stats)され、延べ10,000人以上の子ども達が CoderDojo で楽しくプログラミングを学んでいます。CoderDojo を、Google や図書館などと組み合わせて学ぶ参加者もいます。
 
 <br>
 
 <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
-<center>写真: CoderDojo 参加者が<a href="https://jr.mitou.org/">未踏ジュニア</a>で発表している様子</center><br>
+<center>写真: CoderDojo コミュニティについて小学生 (当時) が発表していた様子</center><br>
 
-もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。これまでの提携事例については下記スライドをご参照ください。
+また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://twitter.com/yasulab/status/1369480254113259521)として認識されています。
+
+もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo についてまとめたスライド（下記）や [CoderDojo Japan が貴社のためにできること](#benefit)、[これまでの提携事例](#examples)や[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
 
 <br>
 
@@ -83,7 +85,19 @@ info@coderdojo.jp
 
 <br>
 
-さらに細かな事例については下記「よくある質問と回答」をご参照ください。
+さらに細かな事例については、下記の「[これまでの提携事例](#examples)」または「[よくある質問と回答](#faq)」をご参照ください。
+
+### 参考: これまでの提携事例（一部） {#examples}
+
+- - [プログラミングでポケモンを動かすワークショップが、全国の CoderDojo で実施可能に。 ](https://prtimes.jp/main/html/rd/p/000000003.000038935.html)
+- - [ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈](https://prtimes.jp/main/html/rd/p/000000007.000038935.html)
+- - [Minecraft カップ全国大会と連携し、CoderDojo 向け教育版マインクラフトのライセンス貸し出しプログラムを開始](https://news.coderdojo.jp/2022/05/31/partnership-with-minecraftcup/)
+- - [発売3周年のロボットトイ「toio」、CoderDojo 向けレンタルプログラム開始](https://prtimes.jp/main/html/rd/p/000000005.000038935.html)
+- - [全国の CoderDojo へ、Google より Scratch 書籍と AI プログラミング冊子を 1080 部寄贈](https://news.coderdojo.jp/2021/06/30/1080-presents-from-google-to-coderdojo/)
+- - [Geolonia の支援を得て、全国の CoderDojo が地図から探せる「DojoMap」を開発](https://prtimes.jp/main/html/rd/p/000000008.000038935.html)
+- - [日本青年会議所から CoderDojo へ、20台のロボットプログラミングキット寄贈](https://news.coderdojo.jp/2021/07/29/robot-programming-kits-from-jci/)
+- - [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/)
+
 
 <br>
 
