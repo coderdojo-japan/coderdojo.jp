@@ -27,9 +27,14 @@ CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち�
 
 一般社団法人 CoderDojo Japan と[パートナーシップ](https://coderdojo.jp/partnership)を結び、CoderDojo コミュニティと様々な連携に取り組むことも可能です。これまでにも、次のようなの取り組みがありました。
 
-- - [Google の支援を受け、スイッチエデュケーションと共同で Girls Initiative for CoderDojo キャンペーンを開始](https://news.coderdojo.jp/2020/07/13/girls-initiative-for-coderdojo/)
-- - [さくらインターネット、子ども向けプログラミング道場『CoderDojo』にサーバー100台を追加支援 ～さくらのクラウド計200台を無料提供～](https://news.coderdojo.jp/2020/03/25/200-servers-provided-by-sakura-internet/)
-- - [プログラミング学習のProgate、全国のCoderDojoへ法人プランの無料提供開始](https://news.coderdojo.jp/2018/10/29/%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0%e5%ad%a6%e7%bf%92%e3%81%aeprogate%e3%80%81%e5%85%a8%e5%9b%bd%e3%81%aecoderdojo%e3%81%b8%e6%b3%95%e4%ba%ba%e3%83%97%e3%83%a9%e3%83%b3/)
+- - [プログラミングでポケモンを動かすワークショップが、全国の CoderDojo で実施可能に。 ](https://prtimes.jp/main/html/rd/p/000000003.000038935.html)
+- - [ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈](https://prtimes.jp/main/html/rd/p/000000007.000038935.html)
+- - [Minecraft カップ全国大会と連携し、CoderDojo 向け教育版マインクラフトのライセンス貸し出しプログラムを開始](https://news.coderdojo.jp/2022/05/31/partnership-with-minecraftcup/)
+- - [発売3周年のロボットトイ「toio」、CoderDojo 向けレンタルプログラム開始](https://prtimes.jp/main/html/rd/p/000000005.000038935.html)
+- - [全国の CoderDojo へ、Google より Scratch 書籍と AI プログラミング冊子を 1080 部寄贈](https://news.coderdojo.jp/2021/06/30/1080-presents-from-google-to-coderdojo/)
+- - [Geolonia の支援を得て、全国の CoderDojo が地図から探せる「DojoMap」を開発](https://prtimes.jp/main/html/rd/p/000000008.000038935.html)
+- - [日本青年会議所から CoderDojo へ、20台のロボットプログラミングキット寄贈](https://news.coderdojo.jp/2021/07/29/robot-programming-kits-from-jci/)
+- - [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/)
 
 <br>
 
