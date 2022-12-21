@@ -19,6 +19,9 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '0 12 * * 5'
+  # Allows you to run this workflow manually from the Actions tab
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch:
 
 jobs:
   analyze:
