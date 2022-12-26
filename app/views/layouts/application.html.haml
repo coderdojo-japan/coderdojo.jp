@@ -1,11 +1,11 @@
 !!!
 %html{lang: 'ja'}
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{charset: "utf-8"}/
-    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
-    %meta{content: "width=device-width, initial-scale=1,\n\t\t minimum-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}/
-    %meta{content: "rfZAU6VfAqDrPGPHca_W7UZQqHrczs4pH_CiLw9M_zY", name: "google-site-verification"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width, initial-scale=1,\n\t\t minimum-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}
+    %meta{content: "rfZAU6VfAqDrPGPHca_W7UZQqHrczs4pH_CiLw9M_zY", name: "google-site-verification"}
 
     %title= full_title(yield(:title))
     = stylesheet_link_tag    'application',      'data-turbolinks-track' => true, media: 'all'
@@ -14,45 +14,45 @@
     = csrf_meta_tags
     = scrivito_head_tags if using_scrivito?
 
-    %meta{content: "715330868",                         property: "fb:admins"}/
-    %meta{content: "805184859580207",                   property: "fb:app_id"}/
-    %meta{content: "#{full_title(yield(:title))}",      property: "og:title"}/
-    %meta{content: "#{full_url(yield(:url))}",          property: "og:url"}/
-    %meta{content: "#{full_description(yield(:desc))}",     name: "description"}/
-    %meta{content: "#{full_description(yield(:desc))}", property: "og:description"}/
-    %meta{content: "website",                           property: "og:type"}/
-    %meta{content: "#{meta_image(yield(:meta_image))}", property: "og:image"}/
-    %meta{content: "image/png",                         property: "og:image:type"}/
-    %meta{content: "CoderDojo Japan",                   property: "og:site_name"}/
+    %meta{content: "715330868",                         property: "fb:admins"}
+    %meta{content: "805184859580207",                   property: "fb:app_id"}
+    %meta{content: "#{full_title(yield(:title))}",      property: "og:title"}
+    %meta{content: "#{full_url(yield(:url))}",          property: "og:url"}
+    %meta{content: "#{full_description(yield(:desc))}",     name: "description"}
+    %meta{content: "#{full_description(yield(:desc))}", property: "og:description"}
+    %meta{content: "website",                           property: "og:type"}
+    %meta{content: "#{meta_image(yield(:meta_image))}", property: "og:image"}
+    %meta{content: "image/png",                         property: "og:image:type"}
+    %meta{content: "CoderDojo Japan",                   property: "og:site_name"}
 
-    %meta{content: "summary_large_image",               name: "twitter:card"}/
-    %meta{content: "@CoderDojoJapan",                   name: "twitter:site"}/
-    %meta{content: "@CoderDojoJapan",                   name: "twitter:creator"}/
-    %meta{content: "#{full_title(yield(:title))}",      name: "twitter:title"}/
-    %meta{content: "#{full_description(yield(:desc))}", name: "twitter:description"}/
-    %meta{content: "#{meta_image(yield(:meta_image))}", name: "twitter:image"}/
-    %meta{content: "#{full_url(yield(:url))}",          name: "twitter:url"}/
+    %meta{content: "summary_large_image",               name: "twitter:card"}
+    %meta{content: "@CoderDojoJapan",                   name: "twitter:site"}
+    %meta{content: "@CoderDojoJapan",                   name: "twitter:creator"}
+    %meta{content: "#{full_title(yield(:title))}",      name: "twitter:title"}
+    %meta{content: "#{full_description(yield(:desc))}", name: "twitter:description"}
+    %meta{content: "#{meta_image(yield(:meta_image))}", name: "twitter:image"}
+    %meta{content: "#{full_url(yield(:url))}",          name: "twitter:url"}
 
-    %link{href: "/img/apple-icon-57x57.png",     rel: "apple-touch-icon", sizes: "57x57"}/
-    %link{href: "/img/apple-icon-60x60.png",     rel: "apple-touch-icon", sizes: "60x60"}/
-    %link{href: "/img/apple-icon-72x72.png",     rel: "apple-touch-icon", sizes: "72x72"}/
-    %link{href: "/img/apple-icon-76x76.png",     rel: "apple-touch-icon", sizes: "76x76"}/
-    %link{href: "/img/apple-icon-114x114.png",   rel: "apple-touch-icon", sizes: "114x114"}/
-    %link{href: "/img/apple-icon-120x120.png",   rel: "apple-touch-icon", sizes: "120x120"}/
-    %link{href: "/img/apple-icon-144x144.png",   rel: "apple-touch-icon", sizes: "144x144"}/
-    %link{href: "/img/apple-icon-152x152.png",   rel: "apple-touch-icon", sizes: "152x152"}/
-    %link{href: "/img/apple-icon-180x180.png",   rel: "apple-touch-icon", sizes: "180x180"}/
-    %link{href: "/img/android-icon-192x192.png", rel: "icon", sizes: "192x192", type: "image/png"}/
-    %link{href: "/img/favicon-16x16.png",        rel: "icon", sizes: "16x16",   type: "image/png"}/
-    %link{href: "/img/favicon-32x32.png",        rel: "icon", sizes: "32x32",   type: "image/png"}/
-    %link{href: "/img/favicon-96x96.png",        rel: "icon", sizes: "96x96",   type: "image/png"}/
-    %link{href: "/manifest.json",                rel: "manifest"}/
-    %link{color: "#1373ce", href: "/img/safari-pinned-tab.svg", rel: "mask-icon"}/
-    %meta{content: "#ffffff",                  name: "msapplication-TileColor"}/
-    %meta{content: "/img/ms-icon-144x144.png", name: "msapplication-TileImage"}/
-    %meta{content: "#ffffff",                  name: "theme-color"}/
+    %link{href: "/img/apple-icon-57x57.png",     rel: "apple-touch-icon", sizes: "57x57"}
+    %link{href: "/img/apple-icon-60x60.png",     rel: "apple-touch-icon", sizes: "60x60"}
+    %link{href: "/img/apple-icon-72x72.png",     rel: "apple-touch-icon", sizes: "72x72"}
+    %link{href: "/img/apple-icon-76x76.png",     rel: "apple-touch-icon", sizes: "76x76"}
+    %link{href: "/img/apple-icon-114x114.png",   rel: "apple-touch-icon", sizes: "114x114"}
+    %link{href: "/img/apple-icon-120x120.png",   rel: "apple-touch-icon", sizes: "120x120"}
+    %link{href: "/img/apple-icon-144x144.png",   rel: "apple-touch-icon", sizes: "144x144"}
+    %link{href: "/img/apple-icon-152x152.png",   rel: "apple-touch-icon", sizes: "152x152"}
+    %link{href: "/img/apple-icon-180x180.png",   rel: "apple-touch-icon", sizes: "180x180"}
+    %link{href: "/img/android-icon-192x192.png", rel: "icon", sizes: "192x192", type: "image/png"}
+    %link{href: "/img/favicon-16x16.png",        rel: "icon", sizes: "16x16",   type: "image/png"}
+    %link{href: "/img/favicon-32x32.png",        rel: "icon", sizes: "32x32",   type: "image/png"}
+    %link{href: "/img/favicon-96x96.png",        rel: "icon", sizes: "96x96",   type: "image/png"}
+    %link{href: "/manifest.json",                rel: "manifest"}
+    %link{color: "#1373ce", href: "/img/safari-pinned-tab.svg", rel: "mask-icon"}
+    %meta{content: "#ffffff",                  name: "msapplication-TileColor"}
+    %meta{content: "/img/ms-icon-144x144.png", name: "msapplication-TileImage"}
+    %meta{content: "#ffffff",                  name: "theme-color"}
 
-    %link{href: "https://fonts.googleapis.com/css?family=Fjalla+One", rel: "stylesheet", type: "text/css"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Fjalla+One", rel: "stylesheet", type: "text/css"}
     %script{src: "https://kit.fontawesome.com/82f32b9df5.js", crossorigin: "anonymous"}
 
     / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
