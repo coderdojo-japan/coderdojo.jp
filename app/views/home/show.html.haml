@@ -69,7 +69,9 @@
 /
   %hr
   %section#events.detail-introduction.text-center
-  %h2 🆕 イベントのお知らせ
+  %h2
+    %a{href: '#events'} 🆕
+    イベントのお知らせ
   %ol{style: "list-style: none; margin-left: -40px; margin-top: 30px;"}
     %li
       = link_to lazy_image_tag('dojocon_japan_2022.webp', alt: "DojoCon Japan 2022", style: "margin-bottom: 15px;"), "https://dojocon2022.coderdojo.jp/", target: "_blank", rel: "external noopener"
@@ -90,7 +92,9 @@
 
 %section.dojos.text-center.grayscale-bg#dojos
   %br
-  %h2{style: "color: dimgray;"} 🗾 日本各地の道場
+  %h2{style: "color: dimgray;"}
+    %a{href: '#dojos'} 🗾
+    日本各地の道場
   %br
   %p{style: "margin: 0 30px 20px 30px;"}
     近くの道場を探してみましょう！
@@ -123,7 +127,9 @@
 .text-center.grayscale-bg
   %section.detail-introduction.list
     %br
-    %h2#kata{style: "color: dimgray;"} 📚 もっと詳しく知る
+    %h2#kata{style: "color: dimgray;"}
+      %a{href: '#kata'} 📚
+      もっと詳しく知る
     %br
     %p
       %a{href: podcasts_path}🎧 Podcast
@@ -185,7 +191,9 @@
         資料集「Kata」を読む
 
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
-  %h2{style: "color: dimgray;"} 🤝 パートナー法人
+  %h2{style: "color: dimgray;"}
+    %a{href: '#partners'} 🤝
+    パートナー法人
   %p{style: "margin: 50px 0px 20px 0px;"}
     様々な法人が CoderDojo の取り組みを支援しています。
 
@@ -200,7 +208,9 @@
 .text-center.grayscale-bg{style: "padding-top: 20px; padding-bottom: 50px;"}
   %section.detail-introduction#news
     %br
-    %h2{style: "color: dimgray;"} 📰 ニュースレター購読
+    %h2{style: "color: dimgray;"}
+      %a{href: '#news'} 📰
+      ニュースレター購読
     %br
     %p
       最新情報はメールで受け取れます。
@@ -215,7 +225,9 @@
 
 %section.detail-introduction#contact{style: "padding-top: 30px;"}
   %br
-  %h2#faq.text-center{style: "color: dimgray;"} ✅ よくある質問と回答
+  %h2#faq.text-center{style: "color: dimgray;"}
+    %a{href: '#faq'} ✅
+    よくある質問と回答
   %br
 
   %ul{style: "list-style: none; margin-left: -30px;"}
@@ -265,7 +277,9 @@
 
 %section.detail-introduction.text-center
   %br
-  %h2#inquiry{style: "color: dimgray;"} 📮 お問い合わせ
+  %h2#inquiry{style: "color: dimgray;"}
+    %a{href: '#inquiry'} 📮
+    お問い合わせ
   %br
   %p
     お問い合わせの前に
