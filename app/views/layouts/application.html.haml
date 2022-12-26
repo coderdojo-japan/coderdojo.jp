@@ -55,14 +55,12 @@
     %link{href: "https://fonts.googleapis.com/css?family=Fjalla+One", rel: "stylesheet", type: "text/css"}
     %script{src: "https://kit.fontawesome.com/82f32b9df5.js", crossorigin: "anonymous"}
 
-    / Twemoji: https://twemoji.twitter.com/
-    %script{src: "https://twemoji.maxcdn.com/v/latest/twemoji.min.js", crossorigin: "anonymous" }
-
+    / Twemoji:  https://twemoji.twitter.com/
     / Lazyload: https://github.com/aFarkas/lazysizes
+    / Navbar controller: https://polyfill.io/v3/
+    %script{src: '/js/twemoji.min.js',   async: ''}
     %script{src: '/js/lazysizes.min.js', async: ''}
-
-    / Nav bar controller: https://polyfill.io/v3/
-    %script{src: '/js/polyfill.min.js', async: ''}
+    %script{src: '/js/polyfill.min.js',  async: ''}
 
     / DocSearch: https://docsearch.algolia.com/
     %link{href: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css", rel: "stylesheet"}
