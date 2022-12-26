@@ -41,29 +41,29 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 
 - **(1) 日本国内の「CoderDojo」の設立及び運営の支援**
    - 内容: [Kata](/kata), [DojoCast](/podcasts), [Docs](/docs), [Stats](/stats), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas) などの運営・開発をします
-   - 実績: [GitHub Organization](https://github.com/coderdojo-japan) の[コミットログ](https://github.com/coderdojo-japan/coderdojo.jp/commits/main)をご参照ください<br><br>
+   - 実績: [GitHub アカウント](https://github.com/coderdojo-japan) や [coderdojo.jp リポジトリ](https://github.com/coderdojo-japan/coderdojo.jp)からご確認いただけます<br><br>
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
-   - 内容: [パートナーシップ](/partnership)をご検討されている法人に営業・交渉をします
-   - 実績: [news.coderdojo.jp の『Press』タグ](https://news.coderdojo.jp/category/press/)をご参照ください<br><br>
+   - 内容: [パートナーシップ](/partnership)をご検討されている法人と協議・交渉をします
+   - 実績: [news.coderdojo.jp](https://news.coderdojo.jp) の[お知らせ](https://news.coderdojo.jp/category/news/)や[プレス](https://news.coderdojo.jp/category/press/)からご確認いただけます<br><br>
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
-   - 内容: CoderDojo 間の情報共有や、合同で開催するイベントの支援をします
-   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](https://dojocon2021.coderdojo.jp/) や [DecaDojo](https://peraichi.com/landing_pages/view/decadojo-okinawa/) の共催・後援など<br><br>
+   - 内容: CoderDojo 間の情報共有や、合同で開催するイベントを支援します
+   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](/docs/dojocon-japan-guidelines) の共催・後援など<br><br>
 - **(4) 国内外の「CoderDojo」に関する普及および゙広報に関する活動**
-   - 内容: News サイトや SNS、Podcastなどで CoderDojo 活動の周知を支援します
-   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Twitter](https://twitter.com/CoderDojoJapan) や [Facebook](https://www.facebook.com/coderdojo.jp)、[DojoCast](/podcasts) をご参照ください<br><br>
+   - 内容: News サイトや SNS、Podcast などで CoderDojo 活動の周知を支援します
+   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Facebook](https://www.facebook.com/coderdojo.jp) や [Twitter](https://twitter.com/CoderDojoJapan) アカウント、[DojoCast](/podcasts) をご参照ください<br><br>
 - **(5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有**
    - 内容: CoderDojo コミュニティで得られた知見をオープンに共有します
    - 実績: ラズパイ財団 CEOとのミートアップ、CoderDojo 共同設立者 (James, Bill) とのミートアップなど。詳細は [YouTube の合同セッション・イベントまとめ](https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA/playlists?view=50&sort=dd&shelf_id=6)をご参照ください<br><br>
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
-   - 実績: [問い合わせ対応](/#inquiry)、[決算書の作成](/financial-report)、[理事の募集](#call-for)、[CoderDojo Foundation](https://coderdojo.com/foundation/) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など <br><br>
+   - 実績: [決算書の作成](/financial-report)、[理事の募集](#call-for)、[問い合わせ対応](/#inquiry)、[CoderDojo Foundation](https://coderdojo.com/foundation/) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など <br><br>
 
 
-CoderDojo Japan が実施している上記活動、ならびに [CoderDojo Foundation や Raspberry Pi Foundation が行なっている活動](https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8//index.html)の一部はオープンになっているため、理事にならなくても活動に参画することができます。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[DojoLetterの編集](https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/)、[Webシステムの開発](https://github.com/coderdojo-japan)など)
+CoderDojo Japan が実施している上記活動、ならびに [CoderDojo Foundation や Raspberry Pi Foundation が行なっている活動](https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8/)の一部はオープンになっているため、<b>理事にならなくても参画できる活動は多い</b>です。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[DojoLetterの編集](https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/)、[Webシステムの開発](https://github.com/coderdojo-japan)など)
 
 <br>
 
-一方、パートナー法人と[連名でプレスリリースを出す](https://www.sakura.ad.jp/information/pressreleases/2020/03/25/1968203191/)など、アイデアの実現に向けて、相手方と秘密情報を共有・保持しながら動くこともあります。CoderDojo コミュニティを裏側からサポートする事業にご興味がある場合は、下記「[理事募集のお知らせ](#call-for)」をご確認ください。
+一方、パートナー法人と[連名でプレスリリースを出す](https://www.sakura.ad.jp/information/pressreleases/2020/03/25/1968203191/)場合など、取り組みの実現に向けて秘密情報を保持しながら動くこともあります。CoderDojo コミュニティを裏側からサポートする事業にご興味がある場合は、下記「[理事募集のお知らせ](#call-for)」をご確認ください。
 
 <div align="right" style="margin-top: 30px; margin-bottom: 50px;">
 一般社団法人 CoderDojo Japan<br>
