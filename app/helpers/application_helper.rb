@@ -74,7 +74,7 @@ module ApplicationHelper
 
     if options[:min] == true
       # Use minified image path: foo.png -> foo.min.png
-      image_tag(asset_path(source).split('.').join('.min.'),  options)
+      image_tag(asset_path(source.split('.').join('.min.')), options)
     elsif !options[:min].blank?
       # The minified path above can be overridden if path is given.
       image_tag(asset_path(options[:min]), options)
