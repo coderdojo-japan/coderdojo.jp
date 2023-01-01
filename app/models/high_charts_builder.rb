@@ -32,8 +32,8 @@ class HighChartsBuilder
         f.series(type: 'column', name: '開催回数', yAxis: 0, data: data[:increase_nums])
         f.series(type: 'line',   name: '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
-          { title: { text: '開催回数' }, tickInterval:  400, max: 2000 },
-          { title: { text: '累積合計' }, tickInterval: 1400, max: 7000, opposite: true }
+          { title: { text: '開催回数' }, tickInterval:  500, max: 2000 },
+          { title: { text: '累積合計' }, tickInterval: 2000, max: 8000, opposite: true }
         ]
         f.chart(width: 600, alignTicks: false)
         f.colors(["#F4C34F", "#BD2561"])
