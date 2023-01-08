@@ -549,6 +549,7 @@
   - Unity
 - id: 12
   order: '112089'
+  is_active: false
   created_at: '2015-12-01'
   name: 所沢
   prefecture_id: 11
