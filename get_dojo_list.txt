@@ -2,7 +2,9 @@
 # 本 TXT ファイルの以下にペースト後、get_dojo_list.rb を実行すると、
 # お知らせ記事などで使える HTML のリスト一覧が出力されます。
 #
-# 詳細: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
+# 実装例: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
+# 実行例: $ ./get_dojo_list.rb
+# 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
 CoderDojo 八戸
 CoderDojo 柏
