@@ -2134,6 +2134,7 @@
   - Scratch
 - id: 39
   order: '261009'
+  is_active: false
   created_at: '2016-03-01'
   name: 京都伏見
   prefecture_id: 26
