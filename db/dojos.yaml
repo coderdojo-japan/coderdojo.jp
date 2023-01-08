@@ -81,6 +81,7 @@
   - JavaScript
 - id: 259
   order: '032093'
+  is_active: false
   created_at: '2020-12-15'
   name: 一関平泉
   prefecture_id: 3
