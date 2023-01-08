@@ -10,7 +10,6 @@ class DojosController < ApplicationController
         order:       dojo.order,
         is_active:   dojo.is_active,
         prefecture:  dojo.prefecture.name,
-        linked_text: "<a href='#{dojo.url}'>#{dojo.name}</a>（#{dojo.prefecture.name}）",
       }
     end
 

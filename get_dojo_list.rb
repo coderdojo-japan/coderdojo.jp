@@ -11,9 +11,7 @@ require 'pry'
 # 詳細: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
 
 INPUT_TEXT = IO.readlines('./get_dojo_list.txt')
-DOJO_DB    = JSON.parse(Net::HTTP.get URI.parse('https://coderdojo.jp/dojos.json')).map do |data|
-  data.transform_keys!(&:to_sym)
-end
+DOJO_DB    = JSON.parse Net::HTTP.get(URI.parse 'https://coderdojo.jp/dojos.json'), symbolize_names: true
 
 # CoderDojo の名前を使って、Dojo 一覧からデータを検索
 result  = "<ul>\n"
@@ -60,7 +58,7 @@ INPUT_TEXT.each do |line|
 end
 
 dojo_list.sort_by!{ |dojo| dojo[:order] }
-result <<  dojo_list.map{ |dojo| "  <li>#{dojo[:linked_text]}</li>" }.join("\n")
+result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a>（#{dojo[:prefecture]}）</li>" }.join("\n")
 result << "\n</ul>\n"
 puts result
 
