@@ -8,8 +8,10 @@ class DojosController < ApplicationController
         name:        dojo.name,
         logo:        "https://coderdojo.jp#{dojo.logo}",
         order:       dojo.order,
+        counter:     dojo.counter,
         is_active:   dojo.is_active,
         prefecture:  dojo.prefecture.name,
+        created_at:  dojo.created_at,
       }
     end
 
