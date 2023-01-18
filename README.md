@@ -61,7 +61,7 @@ Kata 情報も、Dojo 情報と同様の方法で更新できます。
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
 <!--
-[Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。
+[Kata](https://coderdojo.jp/kata) や [Sotechsha](https://coderdojo.jp/sotechsha2) などのいくつかのページは、[Scrivito](https://scrivito.com/) と呼ばれる CMS (コンテンツ管理サービス) で運営しています。
 
 編集方法は下記の手順書をご参照してください。
 
