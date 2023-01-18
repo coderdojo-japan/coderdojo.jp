@@ -74,18 +74,18 @@ module UpcomingEvents
           provider ? "(#{provider})" : nil
         end
 
-        def idobata_hook_url
-          return @idobata_hook_url if defined?(@idobata_hook_url)
-          @idobata_hook_url = ENV['IDOBATA_HOOK_URL']
+        def slack_hook_url
+          return @slack_hook_url if defined?(@slack_hook_url)
+          @slack_hook_url = ENV['SLACK_HOOK_URL']
         end
 
         def notifierable?
-          idobata_hook_url.present?
+          slack_hook_url.present?
         end
 
         def notify(msg)
           $stdout.puts msg
-          puts `curl --data-urlencode "source=#{msg}" -s #{idobata_hook_url} -o /dev/null -w "idobata: %{http_code}"` if notifierable?
+          puts `curl -X POST -H 'Content-type: application/json' --data '{"text":"#{msg}"}' #{slack_hook_url} -o /dev/null -w "slack: %{http_code}"` if notifierable?
         end
       end
     end
