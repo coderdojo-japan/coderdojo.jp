@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 住吉
+- dojo_id: 297
+  name: connpass
+  group_id: 13322
+  url: https://coderdojo-sumiyoshi.connpass.com
+
 # 大船
 #- dojo_id: 296
 #  name: facebook

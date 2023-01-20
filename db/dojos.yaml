@@ -2277,6 +2277,17 @@
   tags:
   - Scratch
   - ラズベリーパイ
+- id: 297
+  order: '271209'
+  created_at: '2023-01-19'
+  name: 住吉
+  prefecture_id: 27
+  logo: "/img/dojos/japan.webp"
+  url: https://coderdojo-sumiyoshi.connpass.com
+  description: 大阪市住吉区で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 266
   order: '271217'
   created_at: '2021-04-25'
