@@ -520,7 +520,7 @@
   description: 館林市で不定期開催
   tags:
   - Scratch
-  - WEBサイト
+  - Webサイト
   - Hour of Code
 - id: 9
   order: '111007'
@@ -827,10 +827,10 @@
   description: 鎌ケ谷市で毎月開催
   tags:
   - Scratch
-  - EV3
+  - LEGO
   - micro:bit
   - Python
-  - WEBサイト
+  - Webサイト
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
@@ -2145,7 +2145,7 @@
   description: 京都市伏見区の小学校内で隔月開催
   tags:
   - Scratch
-  - WEBサイト
+  - Webサイト
   - Java
   - JavaScript
   is_private: true
