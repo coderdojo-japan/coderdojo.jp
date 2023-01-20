@@ -28,6 +28,9 @@ CoderDojo Zen での申請がまだお済みでない場合は、下記ページ
   - <br>
 1. 申請後もロゴ画像や説明文を更新できますので、まずは気軽にお申し込みください 📮✨
   - 🛠 [申請後に Dojo 情報を更新する方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp#readme)
+  - <br>
+1. ロゴ画像は CoderDojo を多くの人に知ってもらうための活動で使わせていただくことがあります 📣
+  - 🗺 [地図で CoderDojo を探す『DojoMap』 - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme)
 
 
 <br>
