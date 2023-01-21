@@ -148,8 +148,7 @@ module Statistics
         end
 
         def slack_hook_url
-          return @slack_hook_url if defined?(@slack_hook_url)
-          @slack_hook_url = ENV['SLACK_HOOK_URL']
+          @slack_hook_url ||= ENV['SLACK_HOOK_URL']
         end
 
         def notifierable?
