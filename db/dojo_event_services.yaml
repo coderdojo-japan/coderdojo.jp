@@ -15,10 +15,10 @@
   url: https://coderdojo-sumiyoshi.connpass.com
 
 # 大船
-#- dojo_id: 296
-#  name: facebook
-#  group_id: 
-#  url: https://www.facebook.com/CoderDojoOfuna/
+- dojo_id: 296
+  name: facebook
+  group_id: 10453213456789123
+  url: https://www.facebook.com/CoderDojoOfuna/
 
 # 田町@VMware
 #- dojo_id: 295
