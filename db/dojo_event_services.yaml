@@ -38,11 +38,15 @@
   group_id: 13146
   url: https://dojonihonmatsu.doorkeeper.jp/
 
-# 八尾@yotteco
-#- dojo_id: 291
-#  name: facebook
-#  group_id: 
-#  url: https://zen.coderdojo.com/dojos/jp/yao-osaka/ba1-wei3-yotteco
+# 八尾
+- dojo_id: 291 
+  name: facebook  # @yotteco イベントページなし
+  group_id: 100087493006122
+  url: https://www.facebook.com/profile.php?id=100087493006122
+# - dojo_id: 291 イベントサービスが別途用意されたら「@くまのみぎて」も追記する
+# name: 
+# group_id: 
+# url: 
 
 # 紫雲
 #- dojo_id: 290
