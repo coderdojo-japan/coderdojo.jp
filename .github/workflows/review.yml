@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: yasslab/review_request_notify@main
         with:
-          channel-id: ${{ secrets.CHANNEL_NAME }}
+          channel-id: coderdojo-news
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
