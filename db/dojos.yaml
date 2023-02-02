@@ -420,6 +420,7 @@
   - C言語
 - id: 176
   order: '082023'
+  is_active: false
   created_at: '2018-10-08'
   name: 日立
   prefecture_id: 8
