@@ -2635,6 +2635,7 @@
   - Webサイト
 - id: 230
   order: '282154'
+  is_active: false
   created_at: '2019-11-01'
   name: みき
   prefecture_id: 28
