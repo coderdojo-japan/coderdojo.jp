@@ -1289,9 +1289,9 @@
 
 # 松原
 - dojo_id: 202
-  name: facebook
-  group_id: 2109347109378340
-  url: https://www.facebook.com/coderdojomatsubara/
+  name: doorkeeper
+  group_id: 12077
+  url: https://coderdojo-matsubara.doorkeeper.jp/
 
 # 六ツ野
 - dojo_id: 203
