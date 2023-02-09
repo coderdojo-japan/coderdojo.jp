@@ -1,0 +1,125 @@
+<article>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div class='fontsize-bigger'>
+                    <ul data-scrivito-private-child-list-allowed-classes="null" data-scrivito-private-obj-description-for-editor="６章課題"></ul>
+                    <h1>６章課題</h1>
+                    <div>
+                        <h2>手裏剣が敵に当たったときに、消えるようにしてみよう</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>課題内容（書籍P.152）</b>
+                        </p>
+                        <p>いまのままだと手裏剣が敵にぶつかっても貫通してしまうよね。手裏剣が敵にぶつかったときに、手裏剣と敵が一緒に消えるようにしてみよう！</p>
+                        <p>かなり難しいから、腕を磨きたいニンジャはぜひ挑戦してみてね。</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>ヒント→</b>
+                            <b>「メッセージを送って待つ」</b>
+                            を使うことと、メッセージを受け取ったスプライトはどんな条件で消えればいいのかを考えてみること。
+                        </p>
+                        <p>がんばって考えてみてね！</p>
+                        <p>
+                            <br>
+                        </p>
+                    </div>
+                            <%= lazy_image_tag '/img/sotechsha/6/06_cover.png' %>
+                    <div>
+                        <div>
+                            <div>
+                                <p>
+                                    <span style="font-size: 16.8px;">
+                                        <br>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span style="font-size: 16.8px;">「しゅりけん」からメッセージを送る方法や、「てき」からメッセージを送る方法があるんだけど、みんなはもう「てき」に「しゅりけん」が触れたときのスクリプトを作ってあるわよね。そのスクリプトを利用して、「てき」からメッセージを送ったら、「しゅりけん」側でそのメッセージを受け取るようにしてみましょう。</span>
+                                    <br>
+                                </p>
+                                <p>
+                                    <span style="font-size: 16.8px;">
+                                        <br>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>タカシが最終的に作った「てき」のスクリプト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/6/06-01.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>敵のスクリプトにメッセージを追加</h3>
+                                <p>
+                                    <span style="font-size: 16.8px;">
+                                        「てき」のスクリプトに、
+                                        <b>「</b>
+                                    </span>
+                                    <span style="font-size: 16.8px;">
+                                        <b>あたったを送って待つ」というメッセージを作って、</b>
+                                    </span>
+                                    <span style="font-size: 16.8px;">
+                                        <b>「もし『しゅりけんに触れた</b>
+                                    </span>
+                                    <span style="font-size: 16.8px;">』</span>
+                                    <span style="font-size: 16.8px;">
+                                        <b>なら」</b>
+                                        の中に
+                                    </span>
+                                    <span style="font-size: 16.8px;">
+                                        追加しましょう。メーッセージを送ることで、
+                                        <b>「あたったを受け取ったとき」</b>
+                                        のブロックを使うとスクリプトを実行できるようなるよ。
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/6/06-02.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>手裏剣に新しくスクリプトを追加しよう</h3>
+                                <p>
+                                    「しゅりけん」のスクリプトに
+                                    <b>「あたったを受け取ったとき」</b>
+                                    ブロックを追加しましょう。「てき」と同じように、
+                                    <b>「もし〜なら」</b>
+                                    を使って、手裏剣が当たったときに
+                                    <b>「隠す」</b>
+                                    のブロックで消えるようにすれば完成。簡単でしょ。
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/6/06-03.png' %>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-muted text-right h5">更新日: 2016年12月21日</div>
+                    <div style='margin-left: 0px; padding-bottom: 30px;'></div>
+
+                    <%= render partial: 'shared/sitemap_sotechsha'%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
