@@ -87,7 +87,7 @@
   prefecture_id: 3
   url: https://www.facebook.com/CoderDojoIchinosekiHiraizumi
   logo: "/img/dojos/coderdojo.webp"
-  description: 一関市で不定期に開催
+  description: 一関市で不定期開催
   tags:
   - Scratch
   - ラズベリーパイ
@@ -1259,7 +1259,7 @@
   prefecture_id: 13
   url: https://coderdojo-kunitachi.connpass.com/
   logo: "/img/dojos/kunitachi.webp"
-  description: 国立市で不定期に開催
+  description: 国立市で不定期開催
   tags:
   - Scratch
   - Lua
@@ -1817,7 +1817,7 @@
   prefecture_id: 20
   logo: "/img/dojos/kiso.webp"
   url: https://coderdojo-kiso.connpass.com/
-  description: 南木曽町で不定期に開催
+  description: 南木曽町で不定期開催
   tags:
   - Scratch
   - Webサイト
@@ -2183,7 +2183,7 @@
   prefecture_id: 26
   logo: "/img/dojos/japan.webp"
   url: https://coderdojo-uji.blogspot.com/
-  description: 宇治市で2〜3ヶ月に1回開催
+  description: 宇治市で不定期開催
   tags:
   - Scratch
 - id: 250
@@ -3160,7 +3160,7 @@
   prefecture_id: 40
   logo: "/img/dojos/japan.webp"
   url: https://coderdojokitaq.connpass.com/
-  description: 北九州市で1〜2ヶ月に1回開催
+  description: 北九州市で不定期開催
   tags:
   - Scratch
   - Webサイト
