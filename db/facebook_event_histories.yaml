@@ -4994,3 +4994,13 @@
   event_id:
   participants: 0
   evented_at: 2022/12/04 10:00
+
+# 2023/01/01 - 2023/01/31
+- dojo_id: 83
+  event_id:
+  participants: 4
+  evented_at: 2023/01/08 10:00
+- dojo_id: 296
+  event_id:
+  participants: 0
+  evented_at: 2023/01/29 10:00
