@@ -34,7 +34,7 @@
   prefecture_id: 1
   url: https://www.npokuru2.net/coderdojo%E5%AE%A4%E8%98%AD
   logo: "/img/dojos/japan.webp"
-  description: 室蘭市で月1回開催
+  description: 室蘭市で毎月開催
   tags:
   - Scratch
   - 電子工作
@@ -463,7 +463,7 @@
   prefecture_id: 9
   logo: "/img/dojos/otawara.webp"
   url: https://www.facebook.com/CoderDojo%E3%81%8A%E3%81%8A%E3%81%9F%E3%82%8F%E3%82%89-190082468144048/
-  description: 大田原市で毎月1回程度開催
+  description: 大田原市で毎月開催
   tags:
   - Hour of Code
   - Scratch
@@ -477,7 +477,7 @@
   prefecture_id: 9
   logo: "/img/dojos/japan.webp"
   url: https://coder-dojo-nishinasuno.connpass.com/
-  description: 那須塩原市で毎月1回開催
+  description: 那須塩原市で毎月開催
   tags:
   - Scratch
   - Viscuit
@@ -703,7 +703,7 @@
   prefecture_id: 12
   logo: "/img/dojos/ichikawa-mama.webp"
   url: https://beyondbb.jp/CDmama/index.html
-  description: JR市川駅近辺で月1～2回開催
+  description: JR市川駅近辺で毎月1～2回開催
   tags:
   - Scratch
   - Python
@@ -760,7 +760,7 @@
   prefecture_id: 12
   logo: "/img/dojos/japan.webp"
   url: https://mamejuku.org/coderdojonoda/
-  description: 野田市で月1回程度開催
+  description: 野田市で毎月開催
   tags:
   - Scratch
 - id: 23
@@ -1052,7 +1052,7 @@
   prefecture_id: 13
   logo: "/img/dojos/suginami.webp"
   url: https://coderdojo-suginami.github.io/
-  description: 杉並区で月1回程度開催
+  description: 杉並区で毎月開催
   tags:
   - Scratch
   - Ruby
@@ -1089,7 +1089,7 @@
   prefecture_id: 13
   logo: "/img/dojos/itabashi.webp"
   url: https://coderdojo.sakuragawa.tokyo/
-  description: 板橋区で月1回程度開催
+  description: 板橋区で毎月開催
   tags:
   - Scratch
   - PHP
@@ -2434,7 +2434,7 @@
   prefecture_id: 27
   logo: "/img/dojos/coderdojo.webp"
   url: https://www.coderdojo-fujiidera-kashiwara.com
-  description: 柏原市で毎月1回開催
+  description: 柏原市で毎月開催
   tags:
   - Scratch
   - Webサイト
@@ -2739,7 +2739,7 @@
   prefecture_id: 29
   logo: "/img/dojos/japan.webp"
   url: https://coderdojo-asuka.github.io/
-  description: 明日香村で毎月1回開催
+  description: 明日香村で毎月開催
   tags:
   - Scratch
   - micro:bit
@@ -2753,7 +2753,7 @@
   prefecture_id: 29
   logo: "/img/dojos/japan.webp"
   url: https://coderdojo-tawaramoto.github.io/
-  description: 田原本町で毎月1回開催
+  description: 田原本町で毎月開催
   tags:
   - Scratch
   - micro:bit
@@ -3207,7 +3207,7 @@
   prefecture_id: 40
   logo: "/img/dojos/kashii.webp"
   url: https://coderdojo-kashii.connpass.com/
-  description: 福岡市東区で毎月1回不定期開催
+  description: 福岡市東区で毎月開催
   tags:
   - Viscuit
   - Minecraft
@@ -3302,7 +3302,7 @@
   prefecture_id: 41
   logo: "/img/dojos/saga.webp"
   url: https://peatix.com/group/10488940/view
-  description: 佐賀市で月1開催
+  description: 佐賀市で毎月開催
   tags:
   - Viscuit
   - Springin'
@@ -3332,7 +3332,7 @@
   prefecture_id: 42
   logo: "/img/dojos/japan.webp"
   url: https://www.facebook.com/CoderDojo%E9%95%B7%E5%B4%8E-395795824185849/
-  description: 長崎市で毎月1回開催
+  description: 長崎市で毎月開催
   tags:
   - Scratch
 - id: 178
