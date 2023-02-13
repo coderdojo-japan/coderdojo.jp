@@ -12,6 +12,7 @@ class DojosController < ApplicationController
         is_active:   dojo.is_active,
         prefecture:  dojo.prefecture.name,
         created_at:  dojo.created_at,
+        description: dojo.description,
       }
     end
 
