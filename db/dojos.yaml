@@ -72,7 +72,7 @@
   prefecture_id: 2
   logo: "/img/dojos/hachinohe.webp"
   url: https://coderdojo-hachinohe.aomori.jp/
-  description: 八戸市内で毎月第一日曜日に開催
+  description: 八戸市内で毎月第1日曜に開催
   tags:
   - Scratch
   - Webサイト
@@ -2592,7 +2592,7 @@
   prefecture_id: 28
   logo: "/img/dojos/himeji.webp"
   url: https://sites.google.com/site/himejicoderdojo/
-  description: 姫路市で第3土曜日に毎月開催
+  description: 姫路市で第3土曜に毎月開催
   tags:
   - Scratch
   - ラズベリーパイ
@@ -2934,7 +2934,7 @@
   prefecture_id: 33
   logo: "/img/dojos/tsuyama.webp"
   url: https://xn--coderdojo-ef6q138l.jp/
-  description: 津山市で毎月第2土曜日開催
+  description: 津山市で毎月第2土曜開催
   tags:
   - Scratch
   - Viscuit
