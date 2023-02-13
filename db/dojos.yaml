@@ -58,7 +58,7 @@
   prefecture_id: 1
   logo: "/img/dojos/ebetsu.webp"
   url: https://coderdojo-ebetsu.connpass.com/
-  description: 江別市で月に1回
+  description: 江別市で毎月開催
   tags:
   - Scratch
   - Python
@@ -1166,7 +1166,7 @@
   prefecture_id: 13
   logo: "/img/dojos/mitaka.webp"
   url: https://coderdojo-mitaka.connpass.com/
-  description: 三鷹周辺で月に1回程度開催
+  description: 三鷹周辺で毎月開催
   tags:
   - Scratch
 - id: 254
@@ -2108,7 +2108,7 @@
   prefecture_id: 24
   logo: "/img/dojos/yokkaichi.webp"
   url: https://www.facebook.com/CoderDojoYokkaichi/
-  description: 四日市市で月に１回開催
+  description: 四日市市で毎月開催
   tags:
   - Scratch
   - micro:bit
@@ -3264,7 +3264,7 @@
   prefecture_id: 40
   logo: "/img/dojos/nakama.webp"
   url: https://twitter.com/CoderdojoNakama
-  description: 中間市で2ヶ月に1回程度開催
+  description: 中間市で隔月開催
   tags:
   - Scratch
   - micro:bit
