@@ -473,7 +473,7 @@
 - id: 280
   order: '092134'
   created_at: '2022-03-09'
-  name: 西那須野@南コミュニティセンター
+  name: 西那須野
   prefecture_id: 9
   logo: "/img/dojos/japan.webp"
   url: https://coder-dojo-nishinasuno.connpass.com/
@@ -3250,7 +3250,7 @@
   prefecture_id: 40
   logo: "/img/dojos/japan.webp"
   url: https://coderdojo-hiyoshi.com/
-  description: 久留米市日吉校区コミュニティセンターで隔月開催
+  description: 久留米市日吉校区で隔月開催
   tags:
   - Scratch
   - Viscuit
