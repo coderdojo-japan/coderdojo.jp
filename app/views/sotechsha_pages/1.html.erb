@@ -1,0 +1,368 @@
+<article>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div class='fontsize-bigger'>
+                    <h1>１章課題</h1>
+                    <div>
+                        <h2>両手で両目を隠すようにプログラムするには？</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>課題内容（書籍P.58）</b>
+                        </p>
+                        <p>前ページのコラムで紹介したメッセージを使って、両手で両目を隠すようにプログラムしてみよう。</p>
+                        <p>スプライトを複製する必要があるよ。</p>
+                        <p>
+                            <br>
+                        </p>
+                    </div>
+                    <%= lazy_image_tag '/img/sotechsha/1/01_cover.png' %>
+                    <div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    <b>複製したスプライトのスクリプト</b>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image19.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <h3>模範解答</h3>
+                                <p>はじめに、コラムにある通り「目」「手1」「手2」のスクリプトを完成させよう（→P.56、57参照）。</p>
+                                <p>スプライト「手2」を「複製」のアイコンでクリックすると複製できるよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image04.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b></b>
+                                </p>
+                                <p>　↓　スタンプでクリックすると複製されるよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image06.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>両手の向きを左右対称にしたいので、まず、複製したスプライト「手3」のスプライト情報を開いて「回転の種類」を「左右のみ」にするよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image14.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>「動き」</b>
+                                    カテゴリの
+                                    <b>「90度に向ける」</b>
+                                    の値を「（-90）左」にして、
+                                    <b>「-90度に向ける」</b>
+                                    をクリックしよう。スプライトが左向きになるよ。
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image02.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>「手2」、「手3」をマウスでドラッグ＆ドロップして位置を調整しよう。これで両手で両目をかくすようになったよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image17.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    <h3>手のスプライトにさらに効果を入れてみよう</h3>
+                                    <p>ところで、「手2」、「手3」のスプライトは、コスチュームが2つあるよね。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image16.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    ここで2つのスプライトの
+                                    <b>「～を受け取ったとき」</b>
+                                    のスクリプトを次のように変えると、両目をかくすときに顔をなでるようになるよ。
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image00.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>ちょっとした動きを付けたしただけだけど、「クリックすると、見た目が変わる」ことがわかりやすくなったよね。このような効果を上手に入れていくことは、操作のわかりやすさや全体の親しみやすさ・楽しさを演出する上で重要なことなんだよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <h2>課題2：アイコンをクリックしたら着せかえができるようにするには？</h2>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>課題内容（書籍P.58）</b>
+                                    <br>
+                                </p>
+                                <p>これまでは着せかえをしたいスプライトを直接クリックすると、コスチュームが変わるようにしていたね。今度は服、まゆ、目、鼻それぞれに着せかえ用のアイコンを用意して、そのアイコンをクリックしたらコスチュームが変わるようにしてみよう。ここではメッセージを使うんだよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/01_cover02.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>目のスクリプト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image10.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    <b>目のアイコンのスクリプト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image07.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </div>
+                                <p>
+                                    <b>まゆのアイコンのスクリプト</b>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image12.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </div>
+                                <p>
+                                    <b>まゆのスクリプト</b>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image11.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>鼻のアイコンのスクリプト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image05.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>鼻のスクリプト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image15.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </div>
+                                <div>
+                                    <b>服のアイコンのスクリプト</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image01.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </div>
+                                <div>
+                                    <b>服のスクリプト</b>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image03.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <div>
+                                    <h3>模範解答</h3>
+                                    <p>まずはアイコンのスプライトをステージに読みこもう（→書籍P.35参照）。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image18.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>スプライト「アイコン-目」のスクリプトを作ろう。</p>
+                                <p>目をいれかえるには、「アイコン-目」をクリックしたときに「目1」にメッセージを送るようにスクリプトを書くんだ。</p>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>送るメッセージはどんな名前でもいいけど、分かりやすい名前をつけたほうがいいよ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image07.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>目のスクリプトも少しだけ変えるよ。</p>
+                                <p>アイコンがクリックされたときにスクリプトが実行されるように変えるんだ。</p>
+                                <p>
+                                    今回は
+                                    <b>「目いれかえ」</b>
+                                    というメッセージを受け取ったときに目が変わるようにするよ。
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image09.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    「アイコン-目」をクリックしたら目が入れかわるようになったかな？
+                                    <br>
+                                    <span style="font-size: 16.8px;">うまくできたら、服、まゆ、鼻も同じように変えられるようにしよう。</span>
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>もし、アイコンをクリックしたときに目や鼻がいっぺんにいれかわったら、作ったメッセージを見直そう。受け取るメッセージが同じスクリプトは、メッセージが送られたときに同時に実行されてしまうんだ。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image08.png' %>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>メッセージは、送る側と受け取る側とで、必ず名前をそろえる必要があることを覚えておこう。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha/1/image13.png' %>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-muted text-right h5">更新日: 2016年12月22日</div>
+                    <div style='margin-left: 0px; padding-bottom: 30px;'></div>
+
+                    <%= render partial: 'shared/sitemap_sotechsha'%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

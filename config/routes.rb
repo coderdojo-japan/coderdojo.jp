@@ -87,6 +87,9 @@ Rails.application.routes.draw do
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
+  get "/sotechsha"       => "sotechsha_pages#index"
+  get "/sotechsha/:page" => "sotechsha_pages#show"
+
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
   # See the documentation of 'scrivito_route' for a detailed description.
   scrivito_route '/',              using: 'homepage'
