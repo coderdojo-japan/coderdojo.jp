@@ -2866,6 +2866,7 @@
   - Ruby
 - id: 245
   order: '325015'
+  is_active: false
   created_at: '2020-03-10'
   name: 津和野
   prefecture_id: 32
