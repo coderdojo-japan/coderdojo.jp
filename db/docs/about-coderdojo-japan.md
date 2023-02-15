@@ -31,6 +31,12 @@
 
 <br>
 
+<img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' />
+
+<br>
+
+<br>
+
 ## 🤝 活動内容と実績 {#doing}
 
 <br>
