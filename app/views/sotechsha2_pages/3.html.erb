@@ -1,0 +1,248 @@
+<% provide :title, '３章課題 - CoderDojo Japan' %>
+<% provide :url,   'https://coderdojo.jp/sotechsha2/3' %>
+
+<article>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div class='fontsize-bigger'>
+                    <ul data-scrivito-private-child-list-allowed-classes="null" data-scrivito-private-obj-description-for-editor="３章課題"></ul>
+                    <h1>３章課題</h1>
+                    <div>
+                        <h2>アンサンブルにチャレンジしよう！</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>課題内容（書籍P.104）</b>
+                        </p>
+                        <p>いろんな音を同時に出せるということは、スクラッチの世界のなかで、ほかの人やコンピュータと合奏することもできるってことだね。ちょっとすごいと思わない？</p>
+                        <p>スクラッチは音楽データを再生することもできるんだ。だから、コンピュータには自分の好きな音楽を演奏してもらって、それに合わせてキーボードやマウスを操作して、楽器やドラムの音を出してみよう。</p>
+                        <p>
+                            音楽データは、「音」タブから追加して、
+                            <b>「音」</b>
+                            カテゴリーの
+                            <b>「～の音を鳴らす」</b>
+                            や
+                            <b>「終わるまで～の音を鳴らす」</b>
+                            を使って再生することができるよ。「音ライブラリー」のなかにいろんな曲があるから使ってみよう。
+                        </p>
+                    </div>
+                    <%= lazy_image_tag '/img/sotechsha2/3/03_cover.png', style: 'padding-top:-50px;'%>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    <b>新しく追加したスプライト</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a02.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    <b>Speakerのコード</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a03.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    &nbsp;
+                                    <b>Drums Tablaのコード</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a04.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    <b>Ripleyのコード</b>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a05.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    &nbsp;
+                                    <b>Dotのコード</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a06.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>模範解答</h3>
+                                <p>鍵盤のプログラムはそのまま使えば良いから、他の楽器やキャラクターを増やすと良いね。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>緑の旗を押した時にメロディーが自動で流れるようにしよう</h3>
+                                <p>まずは自動で流したい曲やメロディーを決めて、それをくり返し流せるようにしよう。スプライトの「音」タブに入っている音データを使うとカンタンだよ。</p>
+                                <p>今回は「Speaker」に入っているものを使ってみよう。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a07.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    曲やメロディーをくりかえし流し続けるには、コードを
+                                    <b>「ずっと」</b>
+                                    で囲むのを忘れないでね！
+                                </p>
+                                <p>
+                                    もし自作するなら、たとえば
+                                    <b>「音楽」</b>
+                                    カテゴリーのブロックを使ってこんな風にコードを書くことができるよ。実行するとどんな音が流れるかな。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a08.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>みんなでいっしょに演奏しよう</h3>
+                                <p>他の友達もいっしょに演奏できたら、もっとにぎやかで楽しそうだよね。鍵盤に使っているキー（A、S、D、W、E…など）以外でのキーやマウスで操作できるようにコードを書いていこう。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a05.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    でも、さいしょから用意されている以外の音データを使いたいときは、ライブラリーから選んだり、自分で録音したり、フリー素材をアップロードして使ったりすることもできるよ。
+                                    <br>
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a09.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>音データはスクラッチ上で編集することもできるんだ。いろいろためしてみてね。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a10.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <p>
+                                    <b>「～の音を鳴らす」</b>
+                                    で指定する音データは、数字を指定して選ぶこともできるんだ。指定できる数字は、左上に表示されている1以上の数だよ。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a11.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>例えば、6章で出てくる乱数（→書籍P.154参照）を使ってこんなことができるんだ。何が起こるか、実際に作ってためしてみよう。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a12.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>背景を変えて完成</h3>
+                                <p>最後に、みんなでワイワイにぎやかに合奏している感じを出すために、背景を変えよう。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/3/03-a13.png', style: 'padding-top:-50px;'%>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-muted text-right h5">更新日: 2019年05月21日</div>
+                    <div style='margin-left: 0px; padding-bottom: 30px;'></div>
+
+                    <%= render partial: 'shared/sitemap_sotechsha2'%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

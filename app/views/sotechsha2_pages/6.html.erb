@@ -1,0 +1,111 @@
+<% provide :title, '６章課題 - CoderDojo Japan' %>
+<% provide :url,   'https://coderdojo.jp/sotechsha2/5' %>
+
+<article>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div class='fontsize-bigger'>
+                    <ul data-scrivito-private-child-list-allowed-classes="null" data-scrivito-private-obj-description-for-editor="６章課題"></ul>
+                    <h1>６章課題</h1>
+                    <div>
+                        <h2>手裏剣が敵に当たったときに、消えるようにしてみよう</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>課題内容（書籍P.164）</b>
+                        </p>
+                        <p>いまのままだと手裏剣が敵にぶつかっても貫通してしまうよね。手裏剣が敵にぶつかったときに、手裏剣と敵が一緒に消えるようにしてみよう！</p>
+                        <p>かなり難しいから、腕を磨きたいニンジャはぜひ挑戦してみてね。</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>ヒント→「メッセージを送って待つ」を使うことと、メッセージを受け取ったスプライトはどんな条件で消えればいいのかを考えてみること。</p>
+                        <p>がんばって考えてみてね！</p>
+                    </div>
+                    <%= lazy_image_tag '/img/sotechsha2/6/06_cover.png'%>
+                    <div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>「しゅりけん」からメッセージを送る方法や、「てき」からメッセージを送る方法があるんだけど、みんなはもう「てき」に「しゅりけん」が触れたときのコードを作ってあるわよね。そのコードを利用して、「てき」からメッセージを送ったら、「しゅりけん」側でそのメッセージを受け取るようにしてみましょう。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>
+                                    <b>タカシが最終的に作った「てき」のコード</b>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/6/chapter6_1.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <h3>敵のコードにメッセージを追加</h3>
+                                <p>
+                                    「てき」のコードに、
+                                    <b>「あたったを送って待つ」</b>
+                                    というメッセージを作って、
+                                    <b>「もし『しゅりけんに触れた』なら」</b>
+                                    の中に追加しましょう。メーッセージを送ることで、
+                                    <b>「あたったを受け取ったとき」</b>
+                                    のブロックを使うとコードを実行できるようなるよ。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/6/chapter6_2.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <h3>手裏剣に新しくコードを追加しよう</h3>
+                                <p>
+                                    「しゅりけん」のコードに
+                                    <b>「あたったを受け取ったとき」</b>
+                                    ブロックを追加しましょう。「てき」と同じように、
+                                    <b>「もし〜なら」</b>
+                                    を使って、手裏剣が当たったときに
+                                    <b>「隠す」</b>
+                                    のブロックで消えるようにすれば完成。簡単でしょ。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <%= lazy_image_tag '/img/sotechsha2/6/chapter6_3.png', style: 'padding-top:-50px;'%>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-muted text-right h5">更新日: 2019年05月22日</div>
+                    <div style='margin-left: 0px; padding-bottom: 30px;'></div>
+
+                <%= render partial: 'shared/sitemap_sotechsha2'%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

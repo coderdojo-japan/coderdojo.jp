@@ -1,0 +1,212 @@
+<% provide :title, '２章課題 - CoderDojo Japan' %>
+<% provide :url,   'https://coderdojo.jp/sotechsha2/2' %>
+
+<article>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div class='fontsize-bigger'>
+                    <ul data-scrivito-private-child-list-allowed-classes="null" data-scrivito-private-obj-description-for-editor="２章課題"></ul>
+                    <h1>２章課題</h1>
+                    <div>
+                        <h2>五角形や六角形を描いてみよう</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <b>課題内容（書籍P.87</b>
+                            ）
+                        </p>
+                        <p>タカシくんが作らなかった、五角形や六角形を描くプログラムを作ってみよう。</p>
+                        <p>五角形は、方向を5回変えたときに360度回っていればいいんだから、360÷5を計算して、72度回転すればいいことがわかるね。だからコードはこうなるよ。</p>
+                    </div>
+                    <%= lazy_image_tag '/img/sotechsha2/2/image17.png', style: 'padding-top:-50px;'%>
+                    <div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image16.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    六角形は、実はタカシくんが途中まで描いていたね。気がついたかな?　69ページで三角形を描くのに失敗していたのが、ちょうど六角形の半分になっていることを確認してみよう。もう半分を描けばいいのだから、こうなるよ。
+                                    <br>
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image18.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image22.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b>
+                                        <br>
+                                    </b>
+                                </p>
+                                <h3>第4章を読みおえている人へ</h3>
+                                <p>五角形を描いたときに回転した72度は360÷5だったし、六角形を描いたときに回転した60度というのは360÷6だった。どっちもわり算のブロックでおきかえることができるね。そうしたときのコードを見てみよう。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image20.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <br>
+                                </div>
+                                <p>上のような形になるけれども、○で囲った2つにはいつも同じ数字がはいるね。こんなふうに同じ数字を繰り返して使うときも、変数を使うといいんだ。</p>
+                                <p>そうするとこんなふうになる。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image21.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>まだ、動かす歩数は調整しないといけないけど、これでずいぶん楽になったよね!</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <b style="color: inherit; font-family: inherit; font-size: 30px;">課題2：360度にならないように回転するとどうなるだろう？</b>
+                                    <br>
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    <b>課題内容（書籍P.88）</b>
+                                </p>
+                                <p>回転の合計が360度になるように移動すると、正三角形や正方形を描くことができた。</p>
+                                <p>では、360度ぴったりにならないような回転をするとどうなるんだろうか?</p>
+                                <p>
+                                    たとえば、
+                                    <b>「100歩動かす」</b>
+                                    や
+                                    <b>「100度回す」</b>
+                                        を繰り返したとき、何回繰り返したら元の場所にもどってくるだろうか?　元の場所にもどってきたとき、どんな図形が描かれているか確かめてみよう!
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>いつかは成功するかもしれないけれど、何回繰り返せばちょうどいいのかわからない場合、どうすればいいかな？</p>
+                                <p>いくつかやりかたがあるよ。</p>
+                                <p>
+                                    <br>
+                                </p>
+                                <h3>手で数える</h3>
+                                <p>
+                                    こういうコードを配置して、自分で
+                                    <b>「100歩動かす」</b>
+                                        と
+                                    <b>「100度回す」</b>
+                                        をクリックしてみてようすをみてみよう。何回繰り返したらいいかは自分で数えることになるね。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image14.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <h3>繰り返すを繰り返し試す</h3>
+                                <p>本で説明したような、こんなコードを作っておいて、繰り返す回数を少しずつふやしていって試してみることもできるね。</p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image13.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>
+                                    <b>答えは18回だ。</b>
+                                    18回繰り返すと、元の場所にもどってくるよ。
+                                </p>
+                                <p>こういう図形が描かれたね。</p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/charpter2_18.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image15.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>ほかにも、いろんな角度で試してみて、いろんな図形を描いてみよう。回転する角度は、1の位が5か0になるような数字にするといいよ。</p>
+                                <p>
+                                    <br>
+                                </p>
+                                <h3>第4章を読みおえている人へ</h3>
+                                <p>
+                                    元の方向（右向き）にもどったかどうかを、
+                                    <b>「もし〜なら」</b>
+                                    のブロックでチェックすることができるよ。
+                                </p>
+                                <p>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                           <%= lazy_image_tag '/img/sotechsha2/2/image19.png', style: 'padding-top:-50px;'%>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    <br>
+                                </p>
+                                <p>繰り返しの回数を決めなくても、こういうコードを書くといいんだ。</p>
+                                <p>元の方向にもどったときには、いつも元の場所にもどってくるんだろうか？　これもいろんな角度で試してみてね。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-muted text-right h5">更新日: 2019年05月23日</div>
+                    <div style='margin-left: 0px; padding-bottom: 30px;'></div>
+
+                    <%= render partial: 'shared/sitemap_sotechsha2'%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
