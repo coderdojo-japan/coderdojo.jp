@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
   def full_title(page_title)
-    page_title = @obj.display_title if page_title.empty? && @obj && !@obj.permalink.nil?
     if page_title.empty?
       "CoderDojo Japan - 子どものためのプログラミング道場" # Default title
     else
@@ -24,8 +23,6 @@ module ApplicationHelper
   end
 
   def full_description(description)
-    description = kata_description if @obj && @obj.permalink == "kata"
-
     # Default description
     # Outdated: "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WORLD_DOJOS}ヶ所で開催されています。"
     if description.empty?
