@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'rails_helper'
 
-RSpec.feature "Sotechsha", type: :feature, scrivito: true, retry: 3  do
+RSpec.feature "Sotechsha", type: :feature, retry: 3  do
 
   describe "GET /sotechsha/num" do
     scenario "Quizzes should be permalink" do

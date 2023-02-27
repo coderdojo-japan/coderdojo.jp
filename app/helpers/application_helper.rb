@@ -10,9 +10,6 @@ module ApplicationHelper
   end
 
   def full_url(page_url)
-    # When URL is composed by Scrivito
-    return "https://coderdojo.jp/#{@obj.permalink}" if @obj && !@obj.permalink.nil?
-
     # When URL is composed by Rails
     if page_url.empty?
       # Set og:url with request param
@@ -53,10 +50,6 @@ module ApplicationHelper
 
   def kata_description
     "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
-  end
-
-  def using_scrivito?
-    !@obj.nil?
   end
 
   def is_kata?
