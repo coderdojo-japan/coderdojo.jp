@@ -18,4 +18,3 @@ See [Gemfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/Gemfil
 - [coderdojo-tokyo/web](https://github.com/coderdojo-tokyo/web)
 - [Twitter Bootstrap](http://getbootstrap.com/)
 - [Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
-
