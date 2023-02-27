@@ -39,7 +39,14 @@ class StatsController < ApplicationController
               tickInterval: 40, max: 240
       f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
                data: tags.values.take(number_of_tags).reverse,
-               dataLabels: { enabled: true, y: 20, align: 'center' }
+               dataLabels: { 
+                enabled: true,
+                y: 20,
+                align: 'center', 
+                style: {
+                  textShadow: false
+                }
+               }
 
       f.chart width: 600, alignTicks: false
       f.colors ["#A0CEFB", "#A0CEFB"]
