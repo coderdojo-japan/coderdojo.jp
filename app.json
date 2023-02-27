@@ -6,7 +6,7 @@
   "repository": "https://github.com/coderdojo-japan/coderdojo.jp",
   "logo": "https://coderdojo.jp/logo.png",
   "addons": [
-    "logentries",
+    "logtail",
     "heroku-postgresql",
     "scheduler"
   ],
