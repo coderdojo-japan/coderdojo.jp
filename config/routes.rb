@@ -90,6 +90,9 @@ Rails.application.routes.draw do
   get "/sotechsha"       => "sotechsha_pages#index"
   get "/sotechsha/:page" => "sotechsha_pages#show"
 
+  get "/sotechsha2"       => "sotechsha2_pages#index"
+  get "/sotechsha2/:page" => "sotechsha2_pages#show"
+
   # Default Scrivito routes. Adapt them to change the routing of CMS objects.
   # See the documentation of 'scrivito_route' for a detailed description.
   scrivito_route '/',              using: 'homepage'
