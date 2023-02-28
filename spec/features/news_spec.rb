@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'rails_helper'
 
-RSpec.feature "News", type: :feature, scrivito: true do
+RSpec.feature "News", type: :feature do
   describe "GET /news/2016/12/12/new-backend" do
     scenario "Title should be formatted" do
       visit "/docs/post-backend-update-history"

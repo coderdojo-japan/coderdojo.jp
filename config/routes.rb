@@ -29,7 +29,6 @@ Rails.application.routes.draw do
   get "/docs/_calendar-kirie",    to: redirect('/calendar/kirie')
   get "/docs/_thanks",            to: redirect('/thanks')
 
-  get "/login",                   to: redirect('/login-8717e64efaf19d7d')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
   get "/brand",                   to: redirect('/docs/brand-guidelines')
   get "/calendar",                to: redirect('/calendar/yohei')
@@ -80,22 +79,13 @@ Rails.application.routes.draw do
   # Issue SSL Certification
   get "/.well-known/acme-challenge/:id" => "lets_encrypt#show"
 
-  # Sessions
-  get '/logout',       to: 'sessions#destroy'
-  resource :session, only: [:create, :destroy]
-
-  # Check development sent emails
-  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-
+  # CoderDojo Books from Sotechsha
   get "/sotechsha"       => "sotechsha_pages#index"
   get "/sotechsha/:page" => "sotechsha_pages#show"
 
   get "/sotechsha2"       => "sotechsha2_pages#index"
   get "/sotechsha2/:page" => "sotechsha2_pages#show"
 
-  # Default Scrivito routes. Adapt them to change the routing of CMS objects.
-  # See the documentation of 'scrivito_route' for a detailed description.
-  scrivito_route '/',              using: 'homepage'
-  scrivito_route '(/)(*slug-):id', using: 'slug_id'
-  scrivito_route '/*permalink',    using: 'permalink', format: false
+  # Check development sent emails
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

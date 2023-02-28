@@ -12,7 +12,6 @@
     = stylesheet_link_tag    'extension/header', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application',      'data-turbolinks-track' => true
     = csrf_meta_tags
-    = scrivito_head_tags if using_scrivito?
 
     %meta{content: "715330868",                         property: "fb:admins"}
     %meta{content: "805184859580207",                   property: "fb:app_id"}
@@ -70,7 +69,6 @@
     - flash.each do |message_type, message|
       %div{class: "alert alert-#{message_type}"}= message
     = yield
-    = scrivito_body_tags if using_scrivito?
     = render 'shared/footer'
 
     / at the end of the BODY

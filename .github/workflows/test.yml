@@ -45,23 +45,8 @@ jobs:
           bundle exec rails db:create
           bundle exec rails db:setup
 
-      - name: 🔧 Test with/without Scrivito
-        env:
-          SCRIVITO_EMAIL:    test@example.com
-          SCRIVITO_PASSWORD: testpassword
-          SCRIVITO_TENANT:   ${{ secrets.SCRIVITO_TENANT }}
-          SCRIVITO_API_KEY:  ${{ secrets.SCRIVITO_API_KEY }}
-        run: |
-          if [ '${{ github.actor }}' == *'dependabot'* ]; then
-            echo 'Run test without Scrivito with PR by Dependabot'
-            bundle exec rspec spec --tag ~@scrivito
-          elif [ '${{ github.event.pull_request.head.repo.full_name }}' != '${{ github.repository }}' ]; then
-            echo 'Run test without Scrivito with PR by ${{ github.actor }}'
-            bundle exec rspec spec --tag ~@scrivito
-          else
-            echo 'Run test with Scrivito by organization members'
-            bundle exec rspec spec
-          fi
+      - name: 🔧 Test
+        run: bundle exec rspec spec
 
   deploy:
     needs: test

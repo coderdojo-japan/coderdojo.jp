@@ -85,8 +85,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 - [Ruby](https://www.ruby-lang.org/ja/)
 - [Ruby on Rails](http://rubyonrails.org/)
 - [PostgreSQL](https://www.postgresql.jp/)
-- [Scrivito](https://scrivito.com/)
-  - (:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
+
 
 セットアップ方法の方法は次の通りです。
 
