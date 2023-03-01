@@ -37,7 +37,7 @@ gem 'koala'
 gem 'rack-user_agent'
 gem 'rack-attack'
 gem 'google_drive'
-gem 'lazy_high_charts'
+gem 'lazy_high_charts', "1.5.8"
 
 # For RSS feed
 gem 'ruby-mp3info', :require => 'mp3info'
