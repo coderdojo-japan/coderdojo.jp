@@ -191,7 +191,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - CoderDojo 一覧: https://coderdojo.jp/dojos.json
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme)
 - 近日開催の道場: https://coderdojo.jp/events.json
-  - 利用例: まだ無し (開発中)
+  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) ([関連 PR](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10)
 
 ### :scroll: Development History & Contributors
 
