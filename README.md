@@ -189,7 +189,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
   - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473)
 - CoderDojo 一覧: https://coderdojo.jp/dojos.json
-  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme))
+  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme)
 - 近日開催の道場: https://coderdojo.jp/events.json
   - 利用例: まだ無し (開発中)
 
