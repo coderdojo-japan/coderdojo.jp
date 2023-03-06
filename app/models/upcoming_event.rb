@@ -37,12 +37,12 @@ class UpcomingEvent < ApplicationRecord
 
     def for_dojo_map
       result = []
-      dojos_and_events = eager_load(dojo_event_service: :dojo)
+      list_of_dojo_and_events = eager_load(dojo_event_service: :dojo)
         .since(Time.zone.today)
         .merge(Dojo.default_order)
         .group_by { |event| event.dojo_event_service.dojo }
 
-      dojos_and_events.each do |dojo, events|
+      list_of_dojo_and_events.each do |dojo, events|
         event = events.sort_by(&:event_at).first
         result << {
           id:   dojo.id,
