@@ -14,9 +14,10 @@ class UpcomingEvent < ApplicationRecord
 
   class << self
     def group_by_prefecture
-      events_by_prefecture = eager_load(dojo_event_service: :dojo).since(Time.zone.today).
-        merge(Dojo.default_order).
-        group_by { |event| event.dojo_event_service.dojo.prefecture_id }
+      events_by_prefecture = eager_load(dojo_event_service: :dojo)
+        .since(Time.zone.today)
+        .merge(Dojo.default_order)
+        .group_by { |event| event.dojo_event_service.dojo.prefecture_id }
 
       result = {}
       Prefecture.order(:id).each do |prefecture|
@@ -24,6 +25,7 @@ class UpcomingEvent < ApplicationRecord
         next if events.blank?
         result[prefecture.name] = events.sort_by(&:event_at).map(&:catalog)
       end
+
       result
     end
 

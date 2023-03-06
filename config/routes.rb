@@ -69,7 +69,7 @@ Rails.application.routes.draw do
   #resources :pokemons,  only: %i(index create)
 
   # Upcoming Events
-  get "/events"  => "events#index"
+  get "/events" => "events#index"
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/docs/post-backend-update-history')
