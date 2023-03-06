@@ -6,7 +6,10 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @upcoming_events }
+      format.json {
+        # DojoMap: https://map.coderdojo.jp
+        render json: UpcomingEvent.for_dojo_map
+      }
     end
   end
 end

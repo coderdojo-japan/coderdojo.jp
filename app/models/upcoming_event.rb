@@ -34,6 +34,28 @@ class UpcomingEvent < ApplicationRecord
         merge(Dojo.default_order).
         where('event_title like(?)', "%#{keyword}%")
     end
+
+    def for_dojo_map
+      result = []
+      dojos_and_events = eager_load(dojo_event_service: :dojo)
+        .since(Time.zone.today)
+        .merge(Dojo.default_order)
+        .group_by { |event| event.dojo_event_service.dojo }
+
+      dojos_and_events.each do |dojo, events|
+        event = events.sort_by(&:event_at).first
+        result << {
+          id:   dojo.id,
+          name: dojo.name,
+          url:  dojo.url,
+          event_title: event[:event_title],
+          event_date:  event[:event_at],
+          event_url:   event[:event_url],
+        }
+      end
+
+      result
+    end
   end
 
   def catalog
