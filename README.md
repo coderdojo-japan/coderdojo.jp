@@ -182,13 +182,16 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - [CoderDojo Japan の各種機能と実装について【2017年版】 - Qiita](https://qiita.com/yasulab/items/1d12e6b295c0a9e577f1)
 - [CoderDojo Japan のバックエンドを刷新しました【2016年】](https://coderdojo.jp/docs/post-backend-update-history)
 
-### :construction: API (開発中)
+### :construction: API 一覧
 
-現在提供中の API です。互換性を破壊する変更が今後起こる可能性もあるため、本番環境で利用したい場合は一度ローカルファイルなどに退避させて使うのがオススメです! (利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme))
+現在提供中の API です。利用例のある API は互換性に配慮していて使いやすいです。**利用例の無い API は破壊的な変更を頻繁に入れていのでまだ使用はお控えください。**  本番環境で利用したい場合は一度ローカルファイルなどに退避させて使うのがオススメです!
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
+  - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473)
 - CoderDojo 一覧: https://coderdojo.jp/dojos.json
+  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme))
 - 近日開催の道場: https://coderdojo.jp/events.json
+  - 利用例: まだ無し (開発中)
 
 ### :scroll: Development History & Contributors
 
