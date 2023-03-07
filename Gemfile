@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.7.7'
 
-gem 'rails', '~> 5.2'
+gem 'rails', '~> 6.0'
 gem 'puma'
 gem "puma_worker_killer"
 gem 'pg'
