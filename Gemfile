@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.3'
+ruby '2.7.7'
 
 gem 'rails', '~> 5.2'
 gem 'puma'
@@ -37,7 +37,7 @@ gem 'koala'
 gem 'rack-user_agent'
 gem 'rack-attack'
 gem 'google_drive'
-gem 'lazy_high_charts'
+gem 'lazy_high_charts', "1.5.8"
 
 # For RSS feed
 gem 'ruby-mp3info', :require => 'mp3info'
