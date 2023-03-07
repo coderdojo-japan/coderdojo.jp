@@ -52,7 +52,7 @@ class Dojo < ApplicationRecord
           .where(created_at: period)
           .group('year')
           .order('year ASC')
-          .pluck("to_char(dojos.created_at, 'yyyy') AS year, COUNT(DISTINCT dojos.id)")
+          .pluck(Arel.sql("to_char(dojos.created_at, 'yyyy') AS year, COUNT(DISTINCT dojos.id)"))
       ]
     end
 
@@ -61,7 +61,7 @@ class Dojo < ApplicationRecord
         where(created_at: period)
           .group('year')
           .order('year ASC')
-          .pluck("to_char(created_at, 'yyyy') AS year, SUM(counter)")
+          .pluck(Arel.sql("to_char(created_at, 'yyyy') AS year, SUM(counter)"))
       ]
     end
   end
