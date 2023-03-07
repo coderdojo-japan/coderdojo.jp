@@ -48,6 +48,12 @@ gem 'sitemap_generator'
 # For Pokemon image file downloads
 gem 'aws-sdk-s3', '~> 1'
 
+# Following warning are displayed and for prevention
+# warning: already initialized constant Net::ProtocRetryError
+# https://github.com/ruby/net-imap/issues/16
+gem 'net-http'
+gem 'uri', '0.10.0'
+
 group :development do
   gem 'web-console'
   gem 'spring'
@@ -65,13 +71,12 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-stack_explorer'
   gem 'rake'
-  gem 'travis'
   gem 'minitest-retry'
   gem 'rspec-retry'
 
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 4.0'
   gem 'factory_bot_rails'
 
   gem 'dotenv-rails'
