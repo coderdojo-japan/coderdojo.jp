@@ -200,11 +200,11 @@
   group_id: 7653
   url: https://coderdojokibi.connpass.com/
 
-# 富山 未定
-# - dojo_id: 267
-#   name: facebook #イベントページなし
-#   group_id: ???
-#   url: https://www.facebook.com/groups/504322904195372/
+# 富山
+- dojo_id: 267
+  name: facebook
+  group_id: 100076265793239
+  url: https://www.facebook.com/coderdojo.toyama/
 
 # 東住吉
 - dojo_id: 266
@@ -226,7 +226,7 @@
 
 # 浦和@Urawa Minecraft Club
 - dojo_id: 263
-  name: facebook #イベントページなし
+  name: facebook
   group_id: 100038184130896
   url: https://www.facebook.com/urawaminecraftclub/
 
@@ -374,9 +374,13 @@
 
 # 名取
 - dojo_id: 85
-  name: facebook # connpass: https://coderdojonatori.connpass.com/
+  name: facebook # 限定公開になったか削除されているようです。
   group_id: 1379707208756830
-  url: https://www.facebook.com/coderdojonatori/events/ # 限定公開になったか削除されているようです。
+  url: https://www.facebook.com/coderdojonatori/events/
+- dojo_id: 85
+  name: connpass
+  group_id: 3720
+  url: https://coderdojonatori.connpass.com/
 
 # 登米
 - dojo_id: 4
@@ -605,9 +609,13 @@
 
 # 船橋
 - dojo_id: 86
-  name: facebook
+  name: facebook # connpass と併用（重複している場合はconnpass優先）
   group_id: 880706025404127
   url: https://www.facebook.com/coderdojofunabashi/events/
+- dojo_id: 86
+  name: connpass
+  group_id: 4078
+  url: https://coderdojofunabashi.connpass.com/
 
 # 木更津
 - dojo_id: 83
