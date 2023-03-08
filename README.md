@@ -173,7 +173,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
 - [DojoCast を Jekyll から Rails に移行しました](https://yasslab.jp/ja/posts/migrate-dojocast-from-jekyll-to-rails)
-- [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how-to-add-dojo.md)
+- [新規 Dojo の追加方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how_to_add_dojo.md)
 - [子どものためのプログラミング道場『CoderDojo』の Ruby/Rails 活用事例](https://speakerdeck.com/yasulab/case-study-of-how-coderdojo-japan-uses-ruby)
 - [CoderDojo を支える Rails CMS の活用事例 - Speaker Deck](https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo)
 - [2020年 coderdojo.jp 開発ふりかえり](https://note.com/yasslab/n/nb42fb058d4a0?magazine_key=m7ed183f728c3)
