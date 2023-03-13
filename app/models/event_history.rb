@@ -17,7 +17,7 @@ class EventHistory < ApplicationRecord
         where(evented_at: period)
           .group('year')
           .order('year ASC')
-          .pluck("to_char(evented_at, 'yyyy') AS year, COUNT(id)")
+          .pluck(Arel.sql("to_char(evented_at, 'yyyy') AS year, COUNT(id)"))
       ]
     end
 
@@ -26,7 +26,7 @@ class EventHistory < ApplicationRecord
         where(evented_at: period)
           .group('year')
           .order('year ASC')
-          .pluck("to_char(evented_at, 'yyyy') AS year, SUM(participants)")
+          .pluck(Arel.sql("to_char(evented_at, 'yyyy') AS year, SUM(participants)"))
       ]
     end
   end
