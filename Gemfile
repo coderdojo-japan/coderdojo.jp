@@ -23,6 +23,9 @@ gem 'rails-html-sanitizer', '~> 1.4.4'
 # For redirection
 gem 'rack-host-redirect'
 
+# Add RSS for podcasts
+gem 'rss'
+
 # For SSL and CORS
 gem 'secure_headers'
 
