@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/yasslab/dumper
+  revision: 1160175e1089e78887de89c21a303101cb56c096
+  specs:
+    dumper (1.7.2)
+      multipart-post (>= 1.1.5)
+      posix-spawn (>= 0.3.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -117,10 +125,6 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    dumper (1.7.3)
-      multi_json (>= 1.0)
-      multipart-post (>= 1.1.5)
-      posix-spawn (>= 0.3.6)
     erubi (1.12.0)
     execjs (2.8.1)
     factory_bot (6.2.1)
@@ -438,7 +442,7 @@ DEPENDENCIES
   capybara
   coffee-rails
   dotenv-rails
-  dumper
+  dumper!
   factory_bot_rails
   faraday
   faraday_middleware
