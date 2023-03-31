@@ -52,7 +52,7 @@ gem 'aws-sdk-s3', '~> 1'
 # warning: already initialized constant Net::ProtocRetryError
 # https://github.com/ruby/net-imap/issues/16
 gem 'net-http'
-gem 'uri', '0.10.0'
+gem 'uri', '0.10.0.1'
 
 group :development do
   gem 'web-console'

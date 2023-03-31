@@ -414,7 +414,7 @@ GEM
     uber (0.1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    uri (0.10.0)
+    uri (0.10.0.1)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -487,7 +487,7 @@ DEPENDENCIES
   spring
   stackprof
   uglifier
-  uri (= 0.10.0)
+  uri (= 0.10.0.1)
   web-console
 
 RUBY VERSION
