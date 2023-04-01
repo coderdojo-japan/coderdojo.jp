@@ -59,6 +59,7 @@ gem 'uri'
 
 group :development do
   gem 'web-console'
+  gem "solargraph"
   gem 'spring'
   gem 'listen'
   gem 'letter_opener_web'
