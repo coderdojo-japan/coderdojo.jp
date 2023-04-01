@@ -77,4 +77,15 @@ Rails.application.configure do
   # Add Mailer for notify signups
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :letter_opener_web
+
+  # Enable to edit on GitHub Codespaces && allow requests from our preview domain.
+  pf_domain = ENV['GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN']
+  config.action_dispatch.default_headers = {
+    'X-Frame-Options' => "ALLOW-FROM #{pf_domain}"
+  }
+
+  pf_host = "#{ENV['CODESPACE_NAME']}-3000.#{pf_domain}"
+  config.hosts << pf_host
+
+  config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
 end
