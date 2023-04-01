@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.7'
+ruby '3.0.5'
 
 gem 'rails', '~> 6.0'
 gem 'puma'
@@ -22,6 +22,9 @@ gem 'rails-html-sanitizer', '~> 1.4.4'
 
 # For redirection
 gem 'rack-host-redirect'
+
+# Add RSS for podcasts
+gem 'rss'
 
 # For SSL and CORS
 gem 'secure_headers'

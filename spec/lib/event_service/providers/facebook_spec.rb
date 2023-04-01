@@ -25,7 +25,7 @@ RSpec.describe EventService::Providers::Facebook do
       )
     end
 
-    subject { described_class.new.fetch_events(@params) }
+    subject { described_class.new.fetch_events(**@params) }
 
     it 'dojo_id: nil, since_at: nil, until_at: nil => all' do
       @params = {}

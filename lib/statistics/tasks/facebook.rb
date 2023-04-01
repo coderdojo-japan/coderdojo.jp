@@ -16,7 +16,7 @@ module Statistics
       def run
         @dojos.each do |dojo|
           dojo.dojo_event_services.for(:facebook).each do |dojo_event_service|
-            @client.fetch_events(@params.merge(dojo_id: dojo.id)).each do |e|
+            @client.fetch_events(**@params.merge(dojo_id: dojo.id)).each do |e|
               if e['event_id']
                 event_id = e['event_id']
                 event_url = "https://www.facebook.com/events/#{event_id}"

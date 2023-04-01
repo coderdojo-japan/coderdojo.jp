@@ -369,6 +369,8 @@ GEM
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
     rspec-support (3.9.4)
+    rss (0.2.9)
+      rexml
     ruby-mp3info (0.8.10)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -478,6 +480,7 @@ DEPENDENCIES
   rake
   rspec-rails (~> 4.0)
   rspec-retry
+  rss
   ruby-mp3info
   sass-rails (>= 5)
   secure_headers
@@ -491,7 +494,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 2.7.7p221
+   ruby 3.0.5p211
 
 BUNDLED WITH
    2.4.7
