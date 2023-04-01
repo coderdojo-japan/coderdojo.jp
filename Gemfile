@@ -88,3 +88,7 @@ end
 group :test do
   gem 'rails-controller-testing'
 end
+
+# Enable to edit on GitHub Codespaces
+# https://github.com/coderdojo-japan/coderdojo.jp/pull/1526
+gem 'mini_racer'
