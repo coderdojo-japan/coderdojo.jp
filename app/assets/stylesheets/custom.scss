@@ -311,6 +311,7 @@ h1,h2,h3,h4,h5,h6 { scroll-margin-top: 100px; }
     margin: 2% 3%;
     img {
       width: 100%;
+      border-radius: 0px;
       &:hover {
         cursor: pointer;
       }
