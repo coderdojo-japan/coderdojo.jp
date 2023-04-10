@@ -18,13 +18,13 @@
 
 <br>
 
-## 🏢 (一社) CoderDojo Japan オフィス
+## 🏢 打ち合わせ場所について
 
 <br>
 
 <p>
-  打ち合わせはオンラインでもオフラインでもどちらでも大丈夫です。オフラインの場合は下記の弊社オフィス、もしくは東京都近辺であれば伺うことも可能です 🏢🏃💨
-  <small>(ワクチンも<a href='/img/vaccinated_2022-10-14.jpg'>４度接種済み</a>となります）</small>
+  打ち合わせはオンライン・現地のどちらにも対応可能です。現地の場合は下記の弊社オフィス、もしくは都内であれば御社にお伺いすることも可能です 🏢🏃💨
+  <small>(ワクチンは<a href='/img/vaccinated_2022-10-14.jpg'>４度接種済み</a>となります）</small>
 </p>
 
 〒169-0075 東京都新宿区高田馬場1-28-10 三慶ビル4階 [CASE Shinjuku](https://case-shinjuku.com/access)
@@ -35,7 +35,7 @@
 
 <br><br>
 
-## 📜 活動紹介
+## 📜 活動紹介：法人提携例
 
 <br>
 
@@ -45,7 +45,12 @@
   <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
-<div align='center'>詳細は<a href='/partnership'>パートナーシップのご案内</a>をご参照ください。</div>
+<div align='center'>詳しくは以下の法人向けのご案内をご参照ください。</div>
+<div class='btn-cover' style='margin-top: 40px; margin-bottom: 100px;'>
+  <a class='btn-blue' href='/partnership'>
+    <i class='far fa-handshake'></i> 法人向けのご案内を見る
+  </a>
+</div>
 
 <br>
 
