@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# たかおか上市 @ 富山県
+- dojo_id:  299
+  name:     connpass
+  group_id: 13273
+  url: https://coderdojo-takaoka.connpass.com/
+
 # 上市 @ 富山県
 - dojo_id:  298
   name:     facebook

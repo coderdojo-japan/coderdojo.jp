@@ -1613,6 +1613,20 @@
   description: 富山市で毎月開催
   tags:
   - Scratch
+- id: 299
+  order: '162027'
+  created_at: '2023-04-28'
+  name: たかおか
+  prefecture_id: 16
+  logo: "/img/dojos/japan.webp"
+  url: https://coderdojo-takaoka.org/
+  description: 高岡市で第2・第4日曜に毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Minecraft
+  - 電子工作
+  - 3Dデザイン
 - id: 279
   order: '162060'
   created_at: '2022-03-01'
