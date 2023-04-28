@@ -72,7 +72,7 @@
   prefecture_id: 2
   logo: "/img/dojos/hachinohe.webp"
   url: https://coderdojo-hachinohe.aomori.jp/
-  description: 八戸市内で毎月第1日曜に開催
+  description: 八戸市内で第1日曜に開催
   tags:
   - Scratch
   - Webサイト
@@ -173,7 +173,7 @@
   prefecture_id: 4
   url: https://www.facebook.com/CoderDojo-Natori-1379707208756830
   logo: "/img/dojos/natori.webp"
-  description: 名取市で毎月第4土曜開催
+  description: 名取市で第4土曜に開催
   tags:
   - Scratch
   - Webサイト
@@ -189,7 +189,7 @@
   description: 登米市で毎月開催
   tags:
   - Scratch
-  - 3Dプリンタ
+  - 3Dプリンター
   - 3D CAD
   - Pepper
   - micro:bit
@@ -231,7 +231,7 @@
   - Minecraft
   - Webサイト
   - 電子工作
-  - 3Dプリンタ
+  - 3Dプリンター
 - id: 139
   order: '052035'
   is_active: false
@@ -278,7 +278,7 @@
   prefecture_id: 7
   logo: "/img/dojos/aizu.webp"
   url: https://coderdojoaizu.mystrikingly.com/
-  description: 会津若松市内で毎月第3土曜に開催
+  description: 会津若松市内で第3土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -780,7 +780,7 @@
   prefecture_id: 12
   url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=kashiwashounan
   logo: "/img/dojos/kashiwa-shounan.webp"
-  description: 柏市沼南で毎月第2土曜開催
+  description: 柏市沼南で第2土曜に開催
   tags:
   - Scratch
 - id: 112
@@ -790,7 +790,7 @@
   prefecture_id: 12
   url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=minamikashiwa
   logo: "/img/dojos/minami-kashiwa.webp"
-  description: 柏市光ヶ丘で毎月第3土曜開催
+  description: 柏市光ヶ丘で第3土曜に開催
   tags:
   - Scratch
 - id: 24
@@ -997,7 +997,7 @@
   prefecture_id: 13
   url: https://www.facebook.com/groups/295361057723820/
   logo: "/img/dojos/japan.webp"
-  description: 品川区五反田で毎月第3土曜開催
+  description: 品川区五反田で第3土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -1024,7 +1024,7 @@
   prefecture_id: 13
   logo: "/img/dojos/shibuya.webp"
   url: https://coderdojoshibuya.connpass.com/
-  description: 青山学院大学にて第2・第4土曜開催
+  description: 青山学院大学にて第2・第4土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -1620,7 +1620,7 @@
   prefecture_id: 16
   logo: "/img/dojos/japan.webp"
   url: https://coderdojo-takaoka.org/
-  description: 高岡市で第2・第4日曜に毎月開催
+  description: 高岡市で第2・第4日曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -1806,7 +1806,7 @@
   prefecture_id: 20
   url: https://coderdojo-ina.connpass.com/
   logo: "/img/dojos/japan.webp"
-  description: 伊那市で毎月第1第3水曜開催
+  description: 伊那市で第1・第3水曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -1895,7 +1895,7 @@
   prefecture_id: 21
   logo: "/img/dojos/japan.webp"
   url: https://coderdojotono.hatenablog.com/
-  description: 多治見市まなびパークで毎月第1・第3土曜開催
+  description: 多治見市まなびパークで第1・第3土曜に開催
   tags:
   - Scratch
 - id: 148
@@ -2019,7 +2019,7 @@
   prefecture_id: 23
   logo: "/img/dojos/anjo.webp"
   url: https://sites.google.com/coderdojo.com/anjo/
-  description: 安城市で毎月第3土曜開催
+  description: 安城市で第3土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -2111,7 +2111,7 @@
   prefecture_id: 23
   logo: "/img/dojos/shikatsu.webp"
   url: https://twitter.com/CoderDojoSikatu
-  description: 北名古屋市で毎月第2木曜開催
+  description: 北名古屋市で第2木曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -2438,7 +2438,7 @@
   prefecture_id: 27
   logo: "/img/dojos/daito.webp"
   url: https://coderdojodaito.mystrikingly.com/
-  description: 大東市で毎月第1土曜開催
+  description: 大東市で第1土曜に開催
   tags:
   - Scratch
   - micro:bit
@@ -2620,7 +2620,7 @@
   prefecture_id: 28
   logo: "/img/dojos/himeji.webp"
   url: https://sites.google.com/site/himejicoderdojo/
-  description: 姫路市で第3土曜に毎月開催
+  description: 姫路市で第3土曜に開催
   tags:
   - Scratch
   - ラズベリーパイ
@@ -2925,7 +2925,7 @@
   prefecture_id: 33
   logo: "/img/dojos/okayama.webp"
   url: https://www.coderdojo-konan.jp/
-  description: 岡山市南区で毎月第3日曜開催
+  description: 岡山市南区で第3日曜に開催
   tags:
   - Scratch
   - Unity
@@ -2963,7 +2963,7 @@
   prefecture_id: 33
   logo: "/img/dojos/tsuyama.webp"
   url: https://xn--coderdojo-ef6q138l.jp/
-  description: 津山市で毎月第2土曜開催
+  description: 津山市で第2土曜に開催
   tags:
   - Scratch
   - Viscuit
@@ -3090,7 +3090,7 @@
   prefecture_id: 35
   logo: "/img/dojos/coderdojo.webp"
   url: https://sites.google.com/view/coderdojonagato
-  description: 長門市しごとセンターで第4土曜開催
+  description: 長門市しごとセンターで第4土曜に開催
   tags:
   - ｍBot
   - Scratch
@@ -3116,7 +3116,7 @@
   prefecture_id: 36
   logo: "/img/dojos/miyoshi.webp"
   url: https://www.facebook.com/coderdojomiyoshi/
-  description: 三好市で毎月第2週開催
+  description: 三好市で第2週に開催
   tags:
   - Minecraft
 - id: 188
@@ -3334,7 +3334,7 @@
   description: 佐賀市で毎月開催
   tags:
   - Viscuit
-  - Springin'
+  - "Springin'"
   - Scratch
   - micro:bit
   - Minecraft
@@ -3497,7 +3497,7 @@
   - toio
   - micro:bit
   - Drone
-  - 3D Printer
+  - 3Dプリンター
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
@@ -3505,7 +3505,7 @@
   prefecture_id: 47
   logo: "/img/dojos/uruma.webp"
   url: https://coderdojo-uruma.hatenablog.com/
-  description: うるま市で毎月第2・第4土曜開催
+  description: うるま市で第2・第4土曜に開催
   tags:
   - Scratch
   - micro:bit
