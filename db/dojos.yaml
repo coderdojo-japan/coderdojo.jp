@@ -1938,6 +1938,20 @@
   - micro:bit
   - Mindstorms
   - IAIミニロボ
+- id: 300
+  order: '222119'
+  created_at: '2023-05-16'
+  name: 磐田
+  prefecture_id: 22
+  logo: "/img/dojos/japan.png"
+  url: https://coderdojo-iwata.connpass.com
+  description: 磐田市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
+  - JavaScript
+  - Python
 - id: 31
   order: '231002'
   created_at: '2014-10-20'
@@ -3334,7 +3348,7 @@
   description: 佐賀市で毎月開催
   tags:
   - Viscuit
-  - "Springin'"
+  - Springin'
   - Scratch
   - micro:bit
   - Minecraft
