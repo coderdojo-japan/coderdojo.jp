@@ -5044,3 +5044,21 @@
   event_id:
   participants: 4
   evented_at: 2023/03/12 10:00
+
+# 2023/04/01 - 2023/04/30
+- dojo_id: 25
+  event_id:
+  participants: 3
+  evented_at: 2023/04/09 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2023/04/02 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2023/04/23 10:00
+- dojo_id: 188
+  event_id:
+  participants: 1
+  evented_at: 2023/04/21 18:00
