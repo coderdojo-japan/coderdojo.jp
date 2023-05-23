@@ -3083,6 +3083,19 @@
   - Webサイト
   - アプリ開発
   - デザイン
+- id: 301
+  order: '352080'
+  created_at: '2023-05-22'
+  name: 岩国
+  prefecture_id: 35
+  logo: "/img/dojos/japan.webp"
+  url: https://coderdojo-iwakuni.connpass.com/
+  description: 岩国市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
+  - Python
 - id: 92
   order: '352101'
   created_at: '2017-06-19'
