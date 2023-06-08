@@ -8,6 +8,13 @@
 #  group_id: 
 #  url: 
 
+# ほんごう: 個人アカウントのため取得できない
+# https://connpass.com/event/281123/
+#- dojo_id: 302
+#  name: connpass
+#  group_id: 
+#  url: 
+
 # 岩国 イベントが追加されたら group_id を取得する
 # - dojo_id: 301
 #   name: connpass

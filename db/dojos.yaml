@@ -976,6 +976,19 @@
   description: 新宿区で毎月開催
   tags:
   - Scratch
+- id: 302
+  order: '131059'
+  created_at: 2023-06-08
+  name: ほんごう
+  prefecture_id: 13
+  logo: "/img/dojos/japan.webp"
+  url: https://twitter.com/coderdojo_hongo
+  description: 文京区本郷で毎月開催
+  tags:
+  - Scratch
+  - LEGO
+  - Minecraft
+  - Osmo
 - id: 173
   order: '131091'
   created_at: '2018-09-26'
