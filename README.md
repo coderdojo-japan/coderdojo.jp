@@ -190,10 +190,10 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
   - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473)
-- CoderDojo 一覧: https://coderdojo.jp/dojos.json
-  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme)
+- CoderDojo 一覧: https://coderdojo.jp/dojos.json (関連PR: [coderdojo.jp#387](https://github.com/coderdojo-japan/coderdojo.jp/pull/387))
+  - 利用例: [📰 DojoNews - GitHub](https://news.coderdojo.jp/category/news/) (関連PR: [coderdojo.jp#1433](https://github.com/coderdojo-japan/coderdojo.jp/pull/1433))
 - 近日開催の道場: https://coderdojo.jp/events.json
-  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) ([関連 PR](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
+  - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
 
 ### :scroll: Development History & Contributors
 
