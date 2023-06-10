@@ -41,7 +41,7 @@ Dojo 情報は次の手順で簡単に更新できます。
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
 3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
 4. 修正内容を確認し、問題なければ Create pull request をクリックする
-   - :yin_yang: Dojo のロゴ画像を追加/変更したい場合は Pull Request のコメント欄に画像を添付して頂けると助かります :relieved: ([対応例1](https://github.com/coderdojo-japan/coderdojo.jp/pull/1417) / [対応例2](https://github.com/coderdojo-japan/coderdojo.jp/pull/1418))
+   - :yin_yang: Dojo のロゴ画像を追加/変更したい場合は Pull Request のコメント欄に画像を添付して頂けると助かります :relieved: ([対応例1](https://github.com/coderdojo-japan/coderdojo.jp/pull/1537) / [対応例2](https://github.com/coderdojo-japan/coderdojo.jp/pull/1418) / [対応例3](https://github.com/coderdojo-japan/coderdojo.jp/pull/1417))
 
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
