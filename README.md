@@ -189,8 +189,8 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 現在提供中の API (開発中) です。利用例のある API は互換性を意識するため比較的使いやすいですが、予告なく破壊的な変更が行われるため、本番環境で利用したい場合は一度ローカルファイルなどに退避させてから使うのがオススメです!
 
 - Podcast RSS: https://coderdojo.jp/podcasts.rss
-  - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473)
-- CoderDojo 一覧: https://coderdojo.jp/dojos.json (関連PR: [coderdojo.jp#387](https://github.com/coderdojo-japan/coderdojo.jp/pull/387))
+  - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473) (関連PR: [coderdojo.jp#387](https://github.com/coderdojo-japan/coderdojo.jp/pull/387))
+- CoderDojo 一覧: https://coderdojo.jp/dojos.json
   - 利用例: [📰 DojoNews - GitHub](https://news.coderdojo.jp/category/news/) (関連PR: [coderdojo.jp#1433](https://github.com/coderdojo-japan/coderdojo.jp/pull/1433))
 - 近日開催の道場: https://coderdojo.jp/events.json
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
