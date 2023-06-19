@@ -714,7 +714,7 @@
 	  <li>
 	    <h4 id='coderdojo-japan-champions'>
 	      CoderDojo Japan Champions
-	      <small>(提供: <a href="/about-coderdojo-japan">CoderDojo Japan</a>)</small>
+	      <small>(提供: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)</small>
 	    </h4>
 	    <p>日本全国の Dojo 代表者限定の非公開 Facebook グループもあります。このグループでは運営に関する相談や、運営者向けの非公開情報などを共有しています。Dojo が承認されたら<a href="https://www.facebook.com/groups/coderdojo.jp.champions/"><strong>コチラ</strong></a>からお気軽に申請してください。</p>
 	    <br>
@@ -722,7 +722,7 @@
 	  <li>
 	    <h4 id='coderdojo-promotion'>
 	      coderdojo.jp と近日開催の道場への掲載
-	      <small>(提供: <a href='/about-coderdojo-japan'>CoderDojo Japan</a>)</small>
+	      <small>(提供: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)</small>
 	    </h4>
 	    <p>希望する Dojo は、いつでも <%= link_to 'coderdojo.jp に掲載', dojos_path  %>することができます。また、<a href="https://www.doorkeeper.jp/">Doorkeeper</a> や <a href="https://connpass.com/">connpass</a> でイベントを管理・作成している場合は、<%= link_to '近日開催の道場', events_path %>からイベントが自動的に周知されるようになります。準備ができたら<b><%= link_to 'コチラ', signup_path %></b>から申請してください! 😸</p>
 	    <br>
@@ -842,11 +842,11 @@
 	  </li>
 	  <li>
 	    <h4 id='doc-fundrasing-methods'><%= link_to '資金を募るときの活動事例', doc_path('fundraising-methods') %></h4>
-	    <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
+	    <p>by <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %></p>
 	  </li>
 	  <li>
 	    <h4 id='doc-fundraising-guidelines'><%= link_to '資金を募るときのガイドライン', doc_path('fundraising-guidelines') %></h4>
-	    <p>by <%= link_to 'CoderDojo Japan', root_path %></p>
+	    <p>by <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %></p>
 	  </li>
 	  <li>
 	    <h4 id='doc-for-contribution'><a href="https://www.slideshare.net/y3sei/dojoconjapan2018workshopcontribute-by-hikari">自分にできる貢献の仕方を見つけよう</a></h4>
@@ -910,15 +910,15 @@
 	  </li>
 	  <li>
 	    <h4 id='doc-recommended-practice'><%= link_to '推奨活動ガイドライン', doc_path('recommended-practice') %></h4>
-	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %></p>
 	  </li>
 	  <li>
 	    <h4 id='doc-nameing-guidelines'><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></h4>
-	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %></p>
 	  </li>
 	  <li>
 	    <h4 id='doc-regional-license'><%= link_to 'CoderDojo 地域ライセンス契約書 (日英併記)', doc_path('regional-license') %></h4>
-	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', root_path %></p>
+	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %> & <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %></p>
 	  </li>
 	  <li>
 	    <h4 id='doc-create-a-dojo'><%= link_to '地元でCoderDojoを始める', foundation_url('/ja-JP/start-a-dojo/') %></h4>
@@ -949,7 +949,7 @@
 	  </li>
 	</ul>
 	<br>
-	<h4>日本語リソース <span style="font-weight: normal; font-size: 14px;">(運営: CoderDojo Japan)</span></h4>
+	<h4>日本語リソース <span style="font-weight: normal; font-size: 14px;">(運営: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)</span></h4>
 	<ul>
 	  <li>
 	    <p><%= link_to 'DojoCast', podcasts_path %> (Podcast)</p>
@@ -1047,7 +1047,7 @@
 	  </li>
 	  <li>
 	    <h4 id='q-kata-abroad'>Q. 海外の CoderDojo に参加してみることはできますか?</h4>
-	    <p>CoderDojo コミュニティには地域ごとに <a href='/about-coderdojo-japan'>CoderDojo Japan</a> のような公式法人（Regional Body）があります。公式法人がある地域は CoderDojo が比較的活発な地域となっていますので、下記ページから興味ある地域の公式法人にコンタクトしてみると良いかもしれません。</p>
+	    <p>CoderDojo コミュニティには地域ごとに <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %> のような公式法人（Regional Body）があります。公式法人がある地域は CoderDojo が比較的活発な地域となっていますので、下記ページから興味ある地域の公式法人にコンタクトしてみると良いかもしれません。</p>
 	    <p><b><a href="https://coderdojo.com/regional-bodies/">☯️ CoderDojo Regional Bodies - CoderDojo</a></b></p>
 	    <br>
 	  </li>
