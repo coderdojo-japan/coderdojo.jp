@@ -40,11 +40,26 @@ rake statistics:aggregation[-,-,]
 
 追加した dojo のみ 2018 年 1 月分から connpass イベントを収集したいときは、期間と dojo_id (仮に xxx とします) を指定して以下のように実行する。
 ```
-rake statistics:aggregation[201801,201910,connpass,xxx] 
+bundle exec rails statistics:aggregation[201801,201910,connpass,xxx] 
 ```
 
 それぞれ引数の省略が可能。
 例) provider を絞らない場合
 ```
-rake statistics:aggregation[201801,201910,,xxx] 
+bundle exec rails statistics:aggregation[201801,201910,,xxx] 
+```
+
+## 本番環境で実行しているコマンド
+
+統計情報ページの更新: https://coderdojo.jp/stats
+```
+# Daily at 1:00 AM UTC（毎週１回）
+$ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
+```
+
+近日開催ページの更新: https://coderdojo.jp/events
+```
+# Daily at 9:00 PM UTC（毎日１回）
+$ bundle exec rails upcoming_events:aggregation
+
 ```
