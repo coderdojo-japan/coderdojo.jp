@@ -79,6 +79,8 @@ provider が指定されたとき、指定プロバイダに対してのみ集�
 
 + provider には、connpass, doorkeeper, facebook が指定可能。ただし、現時点で facebook は収集対象外のため処理を skip する。
 
+## 本番環境で実行しているコマンド
+
 近日開催ページの更新: https://coderdojo.jp/events
 ```
 # Daily at 9:00 PM UTC（毎日１回）
