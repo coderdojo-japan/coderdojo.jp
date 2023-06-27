@@ -61,5 +61,4 @@ $ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 ```
 # Daily at 9:00 PM UTC（毎日１回）
 $ bundle exec rails upcoming_events:aggregation
-
 ```
