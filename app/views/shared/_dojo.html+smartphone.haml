@@ -8,7 +8,7 @@
         - if not dojo.counter == 1
           %span.dojo-counter{'data-toggle' => 'tooltip', 'data-placement' => 'bottom',
                                'data-original-title' => '道場数'}= dojo.counter
-      %span.dojo-desciption
+      %span.dojo-description
         = dojo.description
         - if dojo.is_private
           = link_to 'Private', doc_path('private-dojo'), class: 'dojo-private'
