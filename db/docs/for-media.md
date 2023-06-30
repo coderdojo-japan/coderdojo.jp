@@ -21,7 +21,7 @@
 
 <br>
 
-一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を交わして利用許諾を受けた[公式法人の１つ](https://coderdojo.com/regional-bodies/)です。CoderDojo 憲章に則って運営している各 Dojo と、基本的に同じ立ち位置となります。
+一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を交わして利用許諾を受けた[公式法人の１つ](https://coderdojo.com/en/partner-network)です。CoderDojo 憲章に則って運営している各 Dojo と、基本的に同じ立ち位置となります。
 
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 <small>
