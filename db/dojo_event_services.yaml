@@ -203,11 +203,11 @@
   group_id: 11894
   url: https://coderdojo-kashiwara.doorkeeper.jp/
 
-# 長門: Google Form -> Connpass https://twitter.com/tego_nagatocity/status/1597062256394522624
-#- dojo_id:  270
-#  name:     connpass
-#  group_id: ???
-#  url:      ???
+# 長門
+- dojo_id: 270
+  name: connpass
+  group_id: 13193
+  url: https://coderdojonagato.connpass.com/
 
 # さが
 - dojo_id: 269
