@@ -3,7 +3,7 @@
     .panel.panel-default
       .panel-heading{id: "heading#{index}", role: "tab"}
         %h4.panel-title
-          %a{"data-parent" => "#accordion", "data-toggle" => "collapse",
+          %a{"data-toggle" => "collapse",
              href: "##{"collapse#{index}"}", role: "button"}
             %i.fa.fa-chevron-right{"aria-hidden" => "true"}
             = region
@@ -22,5 +22,3 @@
       $(this).parent().find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-right");
     });
   });
-
-
