@@ -11,3 +11,16 @@
       .panel-collapse.collapse{id: "collapse#{index}", role: "tabpanel"}
         .panel-body.grayscale-bg.dojo-flex
           = render partial: 'shared/dojo', collection: dojos
+
+:javascript
+  $(document).ready(function() {
+    $('.collapse').on('shown.bs.collapse', function() {
+      $(this).parent().find(".fa-chevron-right").removeClass("fa-chevron-right").addClass("fa-chevron-down");
+    });
+  
+    $('.collapse').on('hidden.bs.collapse', function() {
+      $(this).parent().find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+    });
+  });
+
+
