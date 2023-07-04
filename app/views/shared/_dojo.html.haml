@@ -10,7 +10,7 @@
   %ul.tags
     - dojo.tags.each do |tag|
       %li= tag
-  %p.dojo-desciption
+  %p.dojo-description
     = dojo.description
     - if dojo.is_private
       = link_to 'Private', doc_path('private-dojo'), class: 'dojo-private'
