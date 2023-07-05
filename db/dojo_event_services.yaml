@@ -1332,7 +1332,7 @@
   url: https://coderdojo-matsubara.doorkeeper.jp/
 
 # 六ツ野
-- dojo_id: 203
+- dojo_id: 203 # 限定公開になったか削除されているようです。
   name: facebook
   group_id: 1821472277930255
   url: https://www.facebook.com/CoderDojo.Mutsuno/
