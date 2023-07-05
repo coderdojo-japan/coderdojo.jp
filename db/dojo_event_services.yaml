@@ -8,24 +8,23 @@
 #  group_id: 
 #  url: 
 
-# ほんごう: 個人アカウントのため取得できない
-# https://connpass.com/event/281123/
-#- dojo_id: 302
-#  name: connpass
-#  group_id: 
-#  url: 
+# ほんごう
+- dojo_id: 302
+  name: connpass
+  group_id: 13821
+  url: https://coderdojo-hongo.connpass.com/
 
-# 岩国 イベントが追加されたら group_id を取得する
-# - dojo_id: 301
-#   name: connpass
-#   group_id:
-#   url:
+# 岩国
+- dojo_id: 301
+  name: connpass
+  group_id: 13747
+  url: https://coderdojo-iwakuni.connpass.com/
 
-# 磐田 イベントが追加されたら group_id を取得する
-# - dojo_id: 300
-#   name: connpass
-#   group_id: 
-#   url: https://coderdojo-iwata.connpass.com
+# 磐田
+- dojo_id: 300
+  name: connpass
+  group_id: 13678
+  url: https://coderdojo-iwata.connpass.com
 
 # たかおか上市 @ 富山県
 - dojo_id:  299
@@ -1333,7 +1332,7 @@
   url: https://coderdojo-matsubara.doorkeeper.jp/
 
 # 六ツ野
-- dojo_id: 203
+- dojo_id: 203 # 限定公開になったか削除されているようです。
   name: facebook
   group_id: 1821472277930255
   url: https://www.facebook.com/CoderDojo.Mutsuno/
