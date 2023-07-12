@@ -1200,11 +1200,17 @@
   group_id: 227758594569000
   url: https://www.facebook.com/coderdojo.fukuoka.kurume.suwano/events/
 
-# 品川御殿山
+# 品川御殿山(v2)
 - dojo_id: 173
   name: connpass
   group_id: 6440
   url: https://coderdojo-shinagawa-gotenyama.connpass.com/
+
+# 品川御殿山(v1)
+#- dojo_id: 173
+#  name: connpass
+#  group_id: 640
+#  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
 
 # 三鷹
 - dojo_id: 174
