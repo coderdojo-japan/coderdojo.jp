@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 鶴岡
+- dojo_id: 303
+  name: connpass
+  group_id: 13809
+  url: https://coderdojo-tsuruoka.connpass.com/
+
 # ほんごう
 - dojo_id: 302
   name: connpass
