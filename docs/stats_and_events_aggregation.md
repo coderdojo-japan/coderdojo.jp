@@ -1,4 +1,4 @@
-# rake statistics:aggregation[from,to,provider,dojo_id]
+# $ rails statistics:aggregation[from,to,provider,dojo_id]
 
 ## 概要
 
@@ -24,7 +24,7 @@ dojo_id が指定されたとき、指定 Dojo に対してのみ集計を行う
 + from, to を共に省略した場合、前週一週間分の履歴を集計する。
 + 全期間(2012年以降前日まで)を集計する場合、from/to 共に '-' を指定する。
 ```
-rake statistics:aggregation[-,-,]
+rails statistics:aggregation[-,-,]
 ```
 + from/to に期間を指定する場合、それぞれ以下の形式で指定可能。
 ```
@@ -59,7 +59,7 @@ $ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 
 <br>
 
-# rake upcoming_events:aggregation[provider]
+# $ rails upcoming_events:aggregation[provider]
 
 ## 概要
 
@@ -77,7 +77,10 @@ $ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 
 provider が指定されたとき、指定プロバイダに対してのみ集計を行う。
 
-+ provider には、connpass, doorkeeper, facebook が指定可能。ただし、現時点で facebook は収集対象外のため処理を skip する。
+- provider には、connpass, doorkeeper, facebook が指定可能。ただし、現時点で facebook は収集対象外のため処理を skip する。
+- `$ bundle exec rails upcoming_events:aggregation\[connpass\]
+- `$ bundle exec rails upcoming_events:aggregation\[doorkeeper\]
+- `$ bundle exec rails upcoming_events:aggregation\[facebook\] # NOT available provider for now due to API.
 
 ## 本番環境で実行しているコマンド
 
