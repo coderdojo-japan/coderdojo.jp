@@ -14,6 +14,8 @@ module EventService
 
         # NOTE: yyyymm, yyyymmdd は文字列を要素とする配列(Array[String])で指定
         def fetch_events(series_id:, yyyymm: nil, yyyymmdd: nil)
+          series_id = series_id.join(',') if series_id.is_a?(Array)
+
           params = {
             series_id: series_id,
             start: 1,
