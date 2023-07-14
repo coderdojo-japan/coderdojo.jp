@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_07_132540) do
+ActiveRecord::Schema.define(version: 2023_07_14_141908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -100,6 +100,10 @@ ActiveRecord::Schema.define(version: 2023_03_07_132540) do
     t.integer "participants", null: false
     t.string "event_title", null: false
     t.datetime "event_end_at", null: false
+    t.datetime "event_update_at"
+    t.string "address"
+    t.string "place"
+    t.integer "limit"
     t.index ["dojo_event_service_id"], name: "index_upcoming_events_on_dojo_event_service_id"
     t.index ["service_name", "event_id"], name: "index_upcoming_events_on_service_name_and_event_id", unique: true
   end
