@@ -54,7 +54,11 @@ class UpcomingEvent < ApplicationRecord
           event_end_at: event[:event_end_at],
           event_url:    event[:event_url],
           prefecture:   dojo.prefecture.name,
-          participants: event[:participants]
+          participants: event[:participants],
+          event_update_at: event[:event_update_at],
+          address:      event[:address],
+          place:        event[:place],
+          limit:        event[:limit]
         }
       end
 
