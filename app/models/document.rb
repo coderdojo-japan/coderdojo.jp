@@ -80,7 +80,7 @@ class Document
   end
 
   def content
-    @content ||= exists? ? File.read(path) : ''
+    @content ||= self.exists? ? File.read(self.path) : ''
   end
 
   private
