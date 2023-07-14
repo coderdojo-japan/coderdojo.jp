@@ -203,6 +203,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - DB テーブル: [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb)
 - Dojo データ: [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
 - Event データ (の情報取得元): [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
+  - :memo: １つの Dojo が複数のイベント管理サービスを使う事例もあるため `Dojo has_many DojoEventServices` となっています。
 
 ### :scroll: Development History & Contributors
 
