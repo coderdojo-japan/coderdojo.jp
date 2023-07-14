@@ -57,7 +57,7 @@ class Document
 
   def exists?
     return false if path.include? "\u0000"
-    File.exists?(path)
+    Document.all.map(&:filename).include?(filename)
   end
 
   def title
