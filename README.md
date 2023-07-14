@@ -95,7 +95,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-<!--
+
 ### :whale: Docker を利用したセットアップ方法
 
 上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
@@ -106,7 +106,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ターミナルから `$ docker-compose exec rails bin/setup` を実行します
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
--->
+
 
 ### :rocket: CI/Deploy 構成
 
