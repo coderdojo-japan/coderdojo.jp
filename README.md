@@ -198,7 +198,11 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
   - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [coderdojo.jp#1547](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
 
-なお本サイト内 DB の各テーブル情報は [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb) からご確認いただけます。
+なお本サイト内 DB の各テーブルおよびそのデータ（一般公開部分のみ）は、以下のファイルからご確認いただけます。
+
+- DB テーブル: [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb)
+- Dojo データ: [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
+- Event データ (の情報取得元): [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
 
 ### :scroll: Development History & Contributors
 
