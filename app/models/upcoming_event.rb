@@ -45,12 +45,16 @@ class UpcomingEvent < ApplicationRecord
       list_of_dojo_and_events.each do |dojo, events|
         event = events.sort_by(&:event_at).first
         result << {
-          id:   dojo.id,
-          name: dojo.name,
-          url:  dojo.url,
-          event_title: event[:event_title],
-          event_date:  event[:event_at],
-          event_url:   event[:event_url],
+          id:           dojo.id,
+          name:         dojo.name,
+          url:          dojo.url,
+          event_id:     event[:id],
+          event_title:  event[:event_title],
+          event_date:   event[:event_at],
+          event_end_at: event[:event_end_at],
+          event_url:    event[:event_url],
+          prefecture:   dojo.prefecture.name,
+          participants: event[:participants]
         }
       end
 
