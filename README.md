@@ -95,6 +95,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
+<!--
 ### :whale: Docker を利用したセットアップ方法
 
 上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
@@ -105,6 +106,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. ターミナルから `$ docker-compose exec rails bin/setup` を実行します
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
+-->
 
 ### :rocket: CI/Deploy 構成
 
@@ -114,7 +116,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 - Deploy: Heroku + [Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)
 - 関連PR: [:octocat: replace travis with github actions and heroku integration](https://github.com/coderdojo-japan/coderdojo.jp/pull/1315)
 
-各コミットが push される度に CI が動きます。本家ブランチにコミットされ、CI が pass すると、Heroku 側でデプロイ前/デプロイ後の各種スクリプトが実行されます
+各コミットが push される度に CI が動きます。`main` ブランチに新しいコミットが追加され、CI が pass すると、Heroku 側でデプロイ前/デプロイ後の各種スクリプトが実行されます。
 
 - テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/.github/workflows/test.yml)
 - デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
@@ -194,6 +196,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - 利用例: [📰 DojoNews - GitHub](https://news.coderdojo.jp/category/news/) (関連PR: [coderdojo.jp#1433](https://github.com/coderdojo-japan/coderdojo.jp/pull/1433))
 - **Event API: https://coderdojo.jp/events.json**
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
+  - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
 
 なお本サイト内 DB の各テーブル情報は [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb) からご確認いただけます。
 
