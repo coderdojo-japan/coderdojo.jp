@@ -19,7 +19,11 @@ module UpcomingEvents
                              event_url:    e['event_url'],
                              event_at:     Time.zone.parse(e['started_at']),
                              event_end_at: Time.zone.parse(e['ended_at']),
-                             participants: e['accepted'])
+                             participants: e['accepted'],
+                             event_update_at: Time.zone.parse(e['updated_at']),
+                             address:      e['address'],
+                             place:        e['place'],
+                             limit:        e['limit'])
             end
           end
         end
