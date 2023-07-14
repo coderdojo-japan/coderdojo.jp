@@ -196,7 +196,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - 利用例: [📰 DojoNews - GitHub](https://news.coderdojo.jp/category/news/) (関連PR: [coderdojo.jp#1433](https://github.com/coderdojo-japan/coderdojo.jp/pull/1433))
 - **Event API: https://coderdojo.jp/events.json**
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
-  - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
+  - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [coderdojo.jp#1547](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
 
 なお本サイト内 DB の各テーブル情報は [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb) からご確認いただけます。
 
