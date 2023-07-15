@@ -35,34 +35,47 @@ class UpcomingEvent < ApplicationRecord
         where('event_title like(?)', "%#{keyword}%")
     end
 
-    def for_dojo_map
+    def for_dojo_map(all_events = false)
       result = []
       list_of_dojo_and_events = eager_load(dojo_event_service: :dojo)
         .since(Time.zone.today)
         .merge(Dojo.default_order)
         .group_by { |event| event.dojo_event_service.dojo }
-
+    
       list_of_dojo_and_events.each do |dojo, events|
-        event = events.sort_by(&:event_at).first
-        result << {
-          id:           dojo.id,
-          name:         dojo.name,
-          url:          dojo.url,
-          event_id:     event[:id],
-          event_title:  event[:event_title],
-          event_date:   event[:event_at],
-          event_end_at: event[:event_end_at],
-          event_url:    event[:event_url],
-          prefecture:   dojo.prefecture.name,
-          participants: event[:participants],
-          event_update_at: event[:event_update_at],
-          address:      event[:address],
-          place:        event[:place],
-          limit:        event[:limit]
-        }
+        sorted_events = events.sort_by(&:event_at)
+        if all_events
+          sorted_events.each do |event|
+            result << build_event_hash(dojo, event)
+          end
+        else
+          event = sorted_events.first
+          result << build_event_hash(dojo, event)
+        end
       end
-
+    
       result
+    end
+    
+    private
+    
+    def build_event_hash(dojo, event)
+      {
+        id:           dojo.id,
+        name:         dojo.name,
+        url:          dojo.url,
+        event_id:     event[:id],
+        event_title:  event[:event_title],
+        event_date:   event[:event_at],
+        event_end_at: event[:event_end_at],
+        event_url:    event[:event_url],
+        prefecture:   dojo.prefecture.name,
+        participants: event[:participants],
+        event_update_at: event[:event_update_at],
+        address:      event[:address],
+        place:        event[:place],
+        limit:        event[:limit]
+      }
     end
   end
 
