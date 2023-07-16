@@ -4,7 +4,13 @@ RSpec.shared_context 'Use stub connection of Faraday' do
       f.response :json, :content_type => /\bjson$/
       f.adapter :test, Faraday::Adapter::Test::Stubs.new do |stub|
         # connpass
-        stub.get('/event/') { connpass_response }
+        stub.get('/event/') do |env|
+          if env.params["series_id"] == '9876,9877'
+            multiple_series_ids_response
+          else
+            connpass_response
+          end
+        end
 
         # doorkeeper
         stub.get('/events') { doorkeeper_response }
@@ -21,22 +27,22 @@ end
 RSpec.shared_context 'Use stubs for Connpass' do
   include_context 'Use stub connection of Faraday'
 
+  # response for multiple series_ids 9876 and 9877
+  let(:multiple_series_ids_response) do
+    [
+      200,
+      { 'Content-Type' => 'application/json' },
+      '{"results_returned": 2, "events": [{"event_url": "https://coderdojo-okutama.connpass.com/event/12345/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama.connpass.com/", "id": 9876, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12345, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"},{"event_url": "https://coderdojo-okutama.connpass.com/event/12346/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama2.connpass.com/", "id": 9877, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12346, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"}], "results_start": 200, "results_available": 518}'
+    ]
+  end
+
+  # response for single series_id 9876, and for search
   let(:connpass_response) do
-    if Thread.current[:series_ids] == [9876]
-      # response for single series_id 9876
-      [
-        200,
-        { 'Content-Type' => 'application/json' },
-        '{"results_returned": 1, "events": [{"event_url": "https://coderdojo-okutama.connpass.com/event/12345/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama.connpass.com/", "id": 9876, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12345, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"}], "results_start": 200, "results_available": 518}'
-      ]
-    else
-      # response for multiple series_ids 9876 and 9877
-      [
-        200,
-        { 'Content-Type' => 'application/json' },
-        '{"results_returned": 2, "events": [{"event_url": "https://coderdojo-okutama.connpass.com/event/12345/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama.connpass.com/", "id": 9876, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12345, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"},{"event_url": "https://coderdojo-okutama.connpass.com/event/12346/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama2.connpass.com/", "id": 9877, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12346, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"}], "results_start": 200, "results_available": 518}'
-      ]
-    end
+    [
+      200,
+      { 'Content-Type' => 'application/json' },
+      '{"results_returned": 1, "events": [{"event_url": "https://coderdojo-okutama.connpass.com/event/12345/", "event_type": "participation", "owner_nickname": "nalabjp", "series": {"url": "https://coderdojo-okutama.connpass.com/", "id": 9876, "title": "CoderDojo series"}, "updated_at": "2017-04-29T14:59:30+09:00", "lat": "35.801763000000", "started_at": "2017-05-07T10:00:00+09:00", "hash_tag": "CoderDojo", "title": "CoderDojo title", "event_id": 12345, "lon": "139.087656000000", "waiting": 2, "limit": 10, "owner_id": 2525, "owner_display_name": "nalabjp", "description": "CoderDojo description", "address": "Okutama-cho Tokyo", "catch": "CoderDojo catch", "accepted": 10, "ended_at": "2017-05-07T12:00:00+09:00", "place": "Tokyo"}], "results_start": 200, "results_available": 518}'
+    ]
   end
 end
 
