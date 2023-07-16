@@ -10,13 +10,18 @@
   %br
   %h1 📅 近日開催の道場
   %br
-  %p{style: "margin: 0 30px 40px 0px;"}
+  %p{style: "margin: 0 30px 40px 0px; line-height: 2.0em;"}
     　☯️ 開催予定のイベントをチェックしよう! 
     %br
     　（🗾
     \ 
     %a{href: 'https://map.coderdojo.jp'}<> 地図から探す
-    こともできます）
+    \ 
+    \/
+    \ 🗓
+    \ 
+    %a{href: 'https://bit.ly/coderdojo-calendar-by-each-region'}<> カレンダー連携
+    ）
 
   - unless @pokemon_events.blank?
     %p.event-notice{style: "margin-top: 30px; margin-bottom: 60px;"}
