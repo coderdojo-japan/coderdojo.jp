@@ -1,5 +1,5 @@
 <% provide :title, @title + ' - DojoCast' %>
-<% provide :desc,  strip_tags(@episode.description).gsub("\n", " ") %>
+<% provide :desc,  strip_tags(@content.lines.first).strip %>
 <% provide :url,   @url %>
 <% provide :meta_image,  @episode.cover %>
 
