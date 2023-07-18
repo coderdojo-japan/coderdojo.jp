@@ -1,6 +1,7 @@
 class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
   DIR_PATH        = 'public/podcasts'
+  WDAY2JAPANESE   = %w(日 月 火 水 木 金 土)
 
   validates :title,          presence: true
   validates :content_size,   presence: true

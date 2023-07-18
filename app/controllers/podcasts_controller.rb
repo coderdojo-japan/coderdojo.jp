@@ -22,6 +22,7 @@ class PodcastsController < ApplicationController
     redirect_to root_url unless @episode.exists?
 
     @title   = @episode.title.split('-').last
+    @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
     @content = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
     @url     = request.url
   end

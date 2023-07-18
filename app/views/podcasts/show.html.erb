@@ -1,5 +1,5 @@
 <% provide :title, @title + ' - DojoCast' %>
-<% provide :desc,  strip_tags(@episode.description).delete("\n") %>
+<% provide :desc,  strip_tags(@episode.description).gsub("\n", " ") %>
 <% provide :url,   @url %>
 <% provide :meta_image,  @episode.cover %>
 
@@ -10,6 +10,16 @@
   .toc  { display: table-cell; font-color: white; text-align: center; }
   .next { display: table-cell; font-color: white; text-align: right;  }
   .nav a:link, .nav a:visited { color: white; }
+
+  h1#title    { margin-top:  30px; margin-bottom: 20px; text-align: center; }
+  .episode h2 { margin-top: 100px; }
+  .episode-cover {
+    margin: 30px auto;
+    @media screen and (min-width: 640px) {
+      max-width: 70%;
+    }
+  }
+  .episode-cover img { margin-bottom: 20px;}
 </style>
 
 <div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
