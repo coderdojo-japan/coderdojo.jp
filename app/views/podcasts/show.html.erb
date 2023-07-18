@@ -1,5 +1,5 @@
 <% provide :title, @title + ' - DojoCast' %>
-<% provide :desc,  strip_tags(@episode.description).delete("\n") %>
+<% provide :desc,  strip_tags(@content.lines.first).strip %>
 <% provide :url,   @url %>
 <% provide :meta_image,  @episode.cover %>
 
@@ -10,6 +10,16 @@
   .toc  { display: table-cell; font-color: white; text-align: center; }
   .next { display: table-cell; font-color: white; text-align: right;  }
   .nav a:link, .nav a:visited { color: white; }
+
+  h1#title    { margin-top:  30px; margin-bottom: 20px; text-align: center; }
+  .episode h2 { margin-top: 100px; }
+  .episode-cover {
+    margin: 30px auto;
+    @media screen and (min-width: 640px) {
+      max-width: 70%;
+    }
+  }
+  .episode-cover img { margin-bottom: 20px;}
 </style>
 
 <div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
@@ -33,11 +43,14 @@
 
 <div class="container" style="line-height: 1.9em; margin-bottom: -100px;">
   <section class="doc" style="padding: 50px 0px 50px 0px;">
-    <iframe class="lazyload" src="https://anchor.fm/coderdojo-japan/embed/episodes/<%= @episode.permalink %>" width="100%" scrolling="no" frameborder="yes"></iframe>
-    <br />
+    <div class='episode'>
+      <h1 id='title'>📻 <%= @title %></h1>
+      <div style='text-align: center; margin-bottom: 60px;'>収録日: <%= @date %></div>
 
-    <h1 id='title'>📻 <%= @title %></h1>
-    <%= raw @content %>
+      <iframe class="lazyload" src="https://anchor.fm/coderdojo-japan/embed/episodes/<%= @episode.permalink %>" width="100%" scrolling="no" frameborder="yes" style='margin-bottom: 30px;'></iframe>
+
+      <%= raw @content %>
+    </div>
   </section>
 
   <div style="margin-bottom: 40px;">

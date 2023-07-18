@@ -1,6 +1,7 @@
 class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
   DIR_PATH        = 'public/podcasts'
+  WDAY2JAPANESE   = %w(日 月 火 水 木 金 土)
 
   validates :title,          presence: true
   validates :content_size,   presence: true
@@ -16,7 +17,8 @@ class Podcast < ApplicationRecord
   end
 
   def exists?(offset: 0)
-    return false if path.include?("\u0000")
+    return false if self.path.include?("\u0000")
+    return false if (self.id + offset).zero?
     File.exists?("#{DIR_PATH}/#{id + offset}.md")
   end
 
