@@ -142,15 +142,12 @@ img.emoji {
 }
 
 /* 改行位置の調整 */
-
 .ignore-pc {
   display: none;
 }
-
 .ignore-sp {
   display: inline;
 }
-
 @media screen and (max-width: 640px) {
   .ignore-pc {
     display: inline;
@@ -160,6 +157,7 @@ img.emoji {
   }
 }
 
+/* Googleスライド・YouTube動画の調整 */
 .home-point-slides {
   position: relative;
   overflow: hidden;
@@ -167,7 +165,6 @@ img.emoji {
   padding-bottom: 50%;
   padding-top: 65px;
 }
-
 .home-point-slides iframe {
   width: 100%;
   height: 100%;
@@ -175,7 +172,6 @@ img.emoji {
   top: 0;
   left: 0;
 }
-
 .home-point-thumbnail {
   img {
     opacity: 0.97;
@@ -185,7 +181,6 @@ img.emoji {
   }
 
 }
-
 .home-point-video {
   position: relative;
   margin-bottom: 30px;
@@ -193,7 +188,6 @@ img.emoji {
   /* 16:9 Aspect Ratio */
   padding-top: 25px;
 }
-
 .home-point-video iframe {
   position: absolute;
   top: 0;
@@ -202,6 +196,7 @@ img.emoji {
   height: 100% !important;
 }
 
+/* 各種 heading の調整 */
 .headline {
   color: white;
   background: #2275CA;
