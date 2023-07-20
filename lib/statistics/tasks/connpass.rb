@@ -14,24 +14,25 @@ module Statistics
       end
 
       def run
-        @dojos.each do |dojo|
-          dojo.dojo_event_services.for(:connpass).each do |dojo_event_service|
-            @client.fetch_events(**@params.merge(series_id: dojo_event_service.group_id)).each do |e|
-              next unless e.dig('series', 'id').to_s == dojo_event_service.group_id
-        
-              EventHistory.create!(dojo_id: dojo.id,
-                                   dojo_name: dojo.name,
-                                   service_name: dojo_event_service.name,
-                                   service_group_id: dojo_event_service.group_id,
-                                   event_id: e['event_id'],
-                                   event_url: e['event_url'],
-                                   participants: e['accepted'],
-                                   evented_at: Time.zone.parse(e['started_at']))
-            end
-          end
+        group_ids = @dojos.flat_map do |dojo|
+          dojo.dojo_event_services.for(:connpass).pluck(:group_id)
+        end
+      
+        @client.fetch_events(**@params.merge(series_id: group_ids)).each do |e|
+          dojo_event_service = DojoEventService.find_by(group_id: e.dig('series', 'id').to_s)
+          next unless dojo_event_service
+      
+          EventHistory.create!(dojo_id: dojo_event_service.dojo_id,
+                               dojo_name: dojo_event_service.dojo.name,
+                               service_name: dojo_event_service.name,
+                               service_group_id: dojo_event_service.group_id,
+                               event_id: e['event_id'],
+                               event_url: e['event_url'],
+                               participants: e['accepted'],
+                               evented_at: Time.zone.parse(e['started_at']))
         end
       end
-
+      
       private
 
       def build_params(period)

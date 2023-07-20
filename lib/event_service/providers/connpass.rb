@@ -14,6 +14,8 @@ module EventService
 
         # NOTE: yyyymm, yyyymmdd は文字列を要素とする配列(Array[String])で指定
         def fetch_events(series_id:, yyyymm: nil, yyyymmdd: nil)
+          series_id = series_id.join(',') if series_id.is_a?(Array)
+
           params = {
             series_id: series_id,
             start: 1,
@@ -33,6 +35,8 @@ module EventService
 
           param_period_patern.each do |param_period|
             loop do
+              # connpass は https://connpass.com/robots.txt を守らない場合は、アクセス制限を施すので、下記の sleep を入れるようにした https://connpass.com/about/api/
+              sleep 5
               part = @client.get('event/', params.merge(param_period))
 
               break if part['results_returned'].zero?

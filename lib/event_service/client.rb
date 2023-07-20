@@ -23,9 +23,6 @@ module EventService
 
         f.adapter  Faraday.default_adapter
       end
-      # TODO: According to the report by users, the following code fails to aggregate data for  /events page.
-      # connpass は https://connpass.com/robots.txt を守らない場合は、アクセス制限を施すので、下記の sleep を入れるようにした https://connpass.com/about/api/
-      #sleep 5 if endpoint.include?(EventService::Providers::Connpass::ENDPOINT)
     end
   end
 end
