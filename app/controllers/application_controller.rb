@@ -13,22 +13,4 @@ class ApplicationController < ActionController::Base
   def set_request_variant
     request.variant = request.device_variant
   end
-
-  def render_403(e)
-    render template: 'errors/403', status: 403,
-                                   layout: 'application',
-                             content_type: 'text/html'
-  end
-
-  def render_404(e)
-    render template: 'errors/404', status: 404,
-                                   layout: 'application',
-                             content_type: 'text/html'
-  end
-
-  def render_500(e)
-    render template: 'errors/500', status: 500,
-                                   layout: 'application',
-                             content_type: 'text/html'
-  end
 end
