@@ -20,6 +20,10 @@ gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'rails-html-sanitizer', '~> 1.4.4'
 
+# For handling error
+# https://github.com/yuki24/rambulance
+gem 'rambulance'
+
 # For redirection
 gem 'rack-host-redirect'
 
