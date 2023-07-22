@@ -8,13 +8,6 @@ class ApplicationController < ActionController::Base
 
   before_action :set_request_variant
 
-  # NOTE: rescue_from methods are evaluated from **bottom to up**
-  if Rails.env.production?
-    rescue_from Exception,                      with: :render_500
-    rescue_from ActiveRecord::RecordNotFound,   with: :render_404
-    rescue_from ActionController::RoutingError, with: :render_404
-  end
-
   private
 
   def set_request_variant
