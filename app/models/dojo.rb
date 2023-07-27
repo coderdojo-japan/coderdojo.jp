@@ -27,7 +27,7 @@ class Dojo < ApplicationRecord
 
   class << self
     def load_attributes_from_yaml
-      YAML.load_file(DOJO_INFO_YAML_PATH)
+      YAML.unsafe_load_file(DOJO_INFO_YAML_PATH)
     end
 
     def dump_attributes_to_yaml(attributes)
