@@ -26,7 +26,7 @@ RSpec.describe 'DojoCast:', podcast: true do
 
     let(:task) { 'podcasts:upsert' }
 
-    xit 'successfuly fetch from Anchor.fm RSS' do
+    it 'successfuly fetch from Anchor.fm RSS' do
       allow_any_instance_of(Podcast).to receive(:id).and_return(
         [
           { 'id'            => 123456001,
@@ -57,9 +57,9 @@ RSpec.describe 'DojoCast:', podcast: true do
       expect(first_track.title).to          eq('001 - 日本の CoderDojo の成り立ち')
       expect(first_track.description).to    start_with('jishiha')
       expect(first_track.content_size).to   eq(22887860)
-      expect(first_track.duration).to       eq('00:47:37')
-      expect(first_track.permalink).to      eq('999-title')
-      expect(first_track.permalink_url).to  eq('https://anchor.fm/coderdojo-japan/999-title')
+      expect(first_track.duration).to       eq('2857')      # eq('00:47:37')
+      expect(first_track.permalink).to      eq('001----CoderDojo-euhits') # eq('999-title')
+      expect(first_track.permalink_url).to  eq('https://anchor.fm/coderdojo-japan/episodes/001----CoderDojo-euhits')
       expect(first_track.published_date).to eq('2017-03-25'.to_date)
     end
 

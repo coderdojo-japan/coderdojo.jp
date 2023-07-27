@@ -24,7 +24,7 @@ RSpec.describe 'dojos' do
     let(:task) { 'dojos:update_db_by_yaml' }
 
     it '単純追加' do
-      allow(YAML).to receive(:load_file).and_return([
+      allow(YAML).to receive(:unsafe_load_file).and_return([
         { 'order'         => '152064',
           'created_at'    => '2018-02-17',
           'name'          => '新発田',
@@ -59,7 +59,7 @@ RSpec.describe 'dojos' do
     end
 
     it '単純更新' do
-      allow(YAML).to receive(:load_file).and_return([
+      allow(YAML).to receive(:unsafe_load_file).and_return([
         @dojo_1.attributes.keep_if { |k,v| %w(id order prefecture_id logo url description tags).include?(k) }.merge('name' => 'dojo_1(mod)')
       ])
 
@@ -81,7 +81,7 @@ RSpec.describe 'dojos' do
       end
 
       it '指定なし ⇒ アクティブ' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base
         ])
 
@@ -100,7 +100,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'true 指定 ⇒ アクティブ' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base.merge('is_active' => true)
         ])
 
@@ -119,7 +119,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'false 指定 ⇒ 非アクティブ' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base.merge('is_active' => false)
         ])
 
@@ -143,7 +143,7 @@ RSpec.describe 'dojos' do
       end
 
       it '指定なし ⇒ 非プライベート' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base
         ])
 
@@ -162,7 +162,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'true 指定 ⇒ プライベート' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base.merge('is_private' => true)
         ])
 
@@ -180,7 +180,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'false 指定 ⇒ 非プライベート' do
-        allow(YAML).to receive(:load_file).and_return([
+        allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base.merge('is_private' => false)
         ])
 
