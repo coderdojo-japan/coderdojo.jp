@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 大府共和
+- dojo_id: 304
+  name: connpass
+  group_id: 11904
+  url: https://coderdojo-obu-t.connpass.com/
+
 # 鶴岡
 - dojo_id: 303
   name: connpass
