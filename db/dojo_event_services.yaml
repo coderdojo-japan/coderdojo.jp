@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 足利（栃木）
+- dojo_id: 306
+  name: connpass
+  group_id: 13916
+  url: https://coderdojo-ashikaga.connpass.com/
+
 # 西神（せいしん）
 #- dojo_id: 305
 #  name: zen
