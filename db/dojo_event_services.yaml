@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 西神（せいしん）
+#- dojo_id: 305
+#  name: zen
+#  group_id: 
+#  url: https://coderdojo.com/ja-JP/dojos/jp/kobe-hyogo/seishin
+
 # 大府共和
 - dojo_id: 304
   name: connpass
