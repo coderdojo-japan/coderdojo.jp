@@ -15,10 +15,10 @@
   url: https://coderdojo-ashikaga.connpass.com/
 
 # 西神（せいしん）
-#- dojo_id: 305
-#  name: zen
-#  group_id: 
-#  url: https://coderdojo.com/ja-JP/dojos/jp/kobe-hyogo/seishin
+- dojo_id: 305
+  name: connpass
+  group_id: 13966
+  url: https://coderdojoseishin.connpass.com/
 
 # 大府共和
 - dojo_id: 304
