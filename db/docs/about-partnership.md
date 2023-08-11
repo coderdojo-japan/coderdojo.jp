@@ -25,7 +25,6 @@
   blockquote small {
     line-height:  2.0em;
   }
-
 </style>
 
 
