@@ -1,17 +1,43 @@
-# 🤝 パートナーシップのご案内
-<br>
+# 🤝 パートナーシップのご案内 {#top}
+
 本パートナーシップにご興味を持って頂きありがとうございます。本ページでは CoderDojo の活動状況をご紹介させて頂きながら、貴社で行われている事業と継続的にご協力していけないかをご提案させて頂いております。
 
-## CoderDojo とは?
+<style type="text/css">
+  section.doc h1 {
+    margin-bottom: 40px;
+    line-height:  2.0em;
+  }
+  section.doc h2,
+  section.doc h3 {
+    padding-top:   40px;
+    margin-bottom: 20px;
+    line-height:  2.0em;
+  }
+
+  section.doc p {
+    line-height:  2.0em;
+  }
+
+  h2#faq {
+    text-align: center;
+  }
+
+  blockquote small {
+    line-height:  2.0em;
+  }
+
+</style>
+
+
+## ☯️ CoderDojo とは？ {#coderdojo-is}
 
 CoderDojo は7〜17歳を主な対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は日本各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上開催されており、延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達がプログラミングを学んでいます。
 
-<br>
-
-<img class='lazyload' loading='lazy' src='/kata_cover_plain.min.webp' data-src="/kata_cover_plain.webp" alt="写真: CoderDojo 西宮・梅田における風景" />
-<center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
-
-<br>
+<div style="padding: 40px 0px;">
+  <img class='lazyload' loading='lazy' alt="写真: CoderDojo 西宮・梅田における風景"
+   src='/kata_cover_plain.min.webp' data-src="/kata_cover_plain.webp" />
+  <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
+</div>
 
 [CoderDojoの普及](https://jp.quora.com/CoderDojo%E3%81%AF%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%81%97%E3%81%A6%E5%BA%83%E3%81%BE%E3%81%A3%E3%81%A6%E3%81%84%E3%81%8D%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%81%8B)に伴い、個人だけでなく法人とも連携しやすい状況にしていくため、2016年に公式日本法人「[一般社団法人CoderDojo Japan](/about-coderdojo-japan)」が設立されました。公式日本法人では、[{{ NUM_OF_PARTNERSHIPS }}社のパートナー法人](/#partners)と連携し、全国のCoderDojoに対して[様々な支援プログラム](/kata#support)を提供しています。
 
@@ -20,7 +46,8 @@ CoderDojo は7〜17歳を主な対象とした非営利のプログラミング�
   <center>図: パートナー法人の年次推移 (<a href='https://news.coderdojo.jp/category/press/'>最近の提携事例</a>)</center>
 </div>
 
-## CoderDojo の特徴
+
+## 👥 CoderDojo の特徴 {#coderdojo-community}
 
 CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
 
@@ -33,42 +60,58 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 
 これは受け身で何かを教わることよりも、創りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する『広場』のような場所となっています。
 
-<br>
 
-
-## CoderDojo の実績
+## 📊 CoderDojo の実績 {#coderdojo-stats}
 
 CoderDojo コミュニティは全国各地に広がり、[毎年1,000回以上のイベントが開催](/stats)され、延べ10,000人以上の子ども達が CoderDojo で楽しくプログラミングを学んでいます。CoderDojo を、Google や図書館などと組み合わせて学ぶ参加者もいます。
 
-<br>
-
-<a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
-<center>写真: CoderDojo コミュニティについて小学生 (当時) が発表していた様子</center><br>
+<div style="padding: 40px 0px;">
+  <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
+  <center>写真: CoderDojo コミュニティについて小学生 (当時) が発表していた様子</center>
+</div>
 
 また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://twitter.com/yasulab/status/1369480254113259521)として認識されています。
 
-もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo についてまとめたスライド（下記）や [CoderDojo Japan が貴社のためにできること](#benefit)、[これまでの提携事例](#examples)や[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
+もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo についてまとめたスライド（下記）や [CoderDojo Japan が貴社のためにできること](#support)、[これまでの提携事例](#examples)や[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
 
-<br>
+<div style="padding: 40px 0px;">
+  <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+  <center><a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan" target='_blank' rel='external noopener'>スライド資料を見る <i class='far fa-external-link'></i></a></center>
+</div>
 
-<script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<center><a href="https://speakerdeck.com/coderdojojapan/partnership-with-coderdojo-japan" target='_blank' rel='external noopener'>スライド資料を見る <i class='far fa-external-link'></i></a></center>
+上記はあくまで提携の一例ですので「こういった提携もできますか？」といったご相談にも対応しております。草案の時点でも大丈夫ですので、まずは気軽にご連絡いただけると嬉しいです。
 
-<br>  
-
-上記はあくまで提携の一例ですので「こういった提携もできますか?」といったご相談にも対応しております。草案の時点でも大丈夫ですので、まずは気軽にご連絡いただけると嬉しいです。
-
-<br>
-
-<div align="right">
+<div align="right" style='pading-top: 30px;'>
 一般社団法人 CoderDojo Japan<br>
 代表理事 安川 要平<br>
 info@coderdojo.jp
 </div>
 
-<br>
+<div class="btn-cover" style="margin-top: 50px; margin-bottom: 80px;">
+  <a class="btn-blue" href="/#inquiry">
+    <i class="fad fa-envelope" aria-hidden="true"></i>
+    お問い合わせフォームを見る
+  </a>
+</div>
 
-### 参考: CoderDojo Japan にできること {#benefit}
+<hr>
+
+<h2 id='faq' style='padding-top: 30px; padding-bottom: 30px;'>
+  <i class='fad fa-messages-question'></i>
+  よくある質問と回答
+</h2>
+
+以下、よくある質問と回答を Q&A 形式でまとめてあります。パートナーシップをご検討する際のご参考になれば嬉しいです。
+
+### Q. CoderDojo Japan はパートナー法人に対してどんなサポートが可能ですか？ {#support}
+
+[一般社団法人 CoderDojo Japan](/about-coderdojo-japan) では、以下 `A:` のご支援の対価として、`B:` や `C:` に記載するサポートが可能です。(※)
+
+<blockquote>
+  <small>※
+    あくまで具体例であるため、両社の合意に基づいて、以下に限らず柔軟な対応が可能です。
+  </small>
+</blockquote>
 
 - `A:` 単発の支援、継続的なご支援のいずれにも対応しています。
   - 資金によるご支援の場合、月額３万円または年額３０万円をお願いしております
@@ -77,17 +120,16 @@ info@coderdojo.jp
 - `B:` CoderDojo Japan が運営する SNS などで貴社事業を周知できます (事前審査あり、周知回数は応相談)
   - 例1: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
   - 例2: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
-  - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](https://coderdojo.jp/podcasts/23) <br><br>
+  - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](/podcasts/23) <br><br>
 - `C:` CoderDojo Japan 公式Webサイトのトップページに、ロゴ画像を掲載できます
 
 <img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
-<center>図: <a href="https://coderdojo.jp/#partners">公式Webサイト</a>に掲載するパートナー紹介例</center>
+<center>図: <a href='/#partners'>公式Webサイト</a>に掲載するパートナー紹介例</center>
 
-<br>
 
-さらに細かな事例については、下記の「[これまでの提携事例](#examples)」または「[よくある質問と回答](#faq)」をご参照ください。
+### Q. これまでにどんな提携事例がありましたか？ {#examples}
 
-### 参考: これまでの提携事例（一部） {#examples}
+以下は、これまでにパートナー法人と CoderDojo Japan が提携した具体例の一部です。
 
 - - [プログラミングでポケモンを動かすワークショップが、全国の CoderDojo で実施可能に。 ](https://prtimes.jp/main/html/rd/p/000000003.000038935.html)
 - - [ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈](https://prtimes.jp/main/html/rd/p/000000007.000038935.html)
@@ -98,36 +140,61 @@ info@coderdojo.jp
 - - [日本青年会議所から CoderDojo へ、20台のロボットプログラミングキット寄贈](https://news.coderdojo.jp/2021/07/29/robot-programming-kits-from-jci/)
 - - [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/)
 
+他の提携事例については [news.coderdojo.jp](https://news.coderdojo.jp/category/press/) からご確認いただけます。ご参考になれば幸いです。
 
-<br>
 
-## よくある質問と回答 {#faq}
+### Q. お問い合わせ後、どんな流れで話が進みますか？ {#flow}
+お問い合わせ後は、以下の流れでパートナー法人の締結に向けて話を進めていきます。
 
-### Q. 道場数の推移や開催回数の推移などの統計情報はありますか?
+1. [フォーム](/#inquiry)にて検討している旨をお問い合わせください。もしご希望の提携案などが既にあれば、その旨も合わせてご連絡いただけると幸いです。（無くてももちろん大丈夫です）
+1. オンラインまたは都内オフィスなどで、打ち合わせの日程を調整いたします。
+1. 打ち合わせ当日、御社のご希望と、弊社ができることに齟齬がないか確認いたします。必要に応じて、弊社の方からも、より良い形のご提案などもさせていただきます。
+1. 確認または提案させていただいた内容について御社内でご検討いただき、問題なければ具体的な手続きに向けて進めていきます。「想定していた内容では無かった」などあれば、この時点でお断りしていただいても大丈夫です。
+1. 各種手続きが進みましたら、情報公開日を定め、プレスリリースなどで情報を一般公開いたします。
+   - [プレスリリースの例を見る](#examples)
+
+<blockquote>
+  <small>※
+    上記は具体的な流れの一例となります。提携の内容によっては、より細かく手続きを確認する場合もあります。例えば以下の提携では、日本・イギリスの国境を跨いだ提携であったため、さらに細かな手続きを踏んでプレスリリースに至りました。<br>
+    <br>
+    例: <a href='https://prtimes.jp/main/html/rd/p/000000007.000038935.html'>ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈</a>
+  </small>
+</blockquote>
+
+
+
+### Q. 道場数の推移や開催回数の推移などの統計情報はありますか？ {#stats}
 はい、あります。下記ページより CoderDojo Japan が把握している統計情報を公開しています。
 
 統計情報 - CoderDojo Japan
-[https://coderdojo.jp/stats](https://coderdojo.jp/stats)
-<br>
+[https://coderdojo.jp/stats](/stats)
 
-### Q. CoderDojo Japan の Facebook グループでイベントを紹介できますか？
-はい、上記「<a href='#benefit'>CoderDojo Japan にできること</a>」の `B:` に記載されている通り、パートナー法人の方に限りイベントや製品に関する投稿ができます。投稿される場合は info@coderdojo.jp までお気軽にご相談ください。
+
+### Q. CoderDojo Japan の Facebook グループで周知できますか？ {#facebook}
+はい、上記「[CoderDojo Japan にできること](#support)」の `B:` に記載されている通り、パートナー法人の方で、CoderDojo コミュニティにとって役立つ情報であるという事前審査を通った場合、投稿ができます。周知・PR に関する投稿には事前審査がありますので、info@coderdojo.jp までお気軽にご相談ください。
 
 - 📮 パートナー法人による、Facebook グループへの投稿例
   - 例1: [未踏社団から、未踏ジュニア最終成果報告会のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/1821539831292741)
   - 例2: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
   - 例3: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
 
-<br>
 
-### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか?
+### Q. 各 CoderDojo の運営者に連絡をする手段はありますか？ {#communications}
+CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で周知することが可能です。(上記「[CoderDojo Japan にできること](#support)」の `B` に該当します)
+
+CoderDojo Japan Champions - Facebook Group (非公開)
+[https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
+
+
+
+### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか？ {#financial-report}
 はい、一般社団法人 CoderDojo Japan の決算書も公開しています。こちらもご参考になれば ;)
 
 決算報告書 - CoderDojo Japan
-[https://coderdojo.jp/financial-report](https://coderdojo.jp/financial-report)
-<br>
+[https://coderdojo.jp/financial-report](/financial-report)
 
-### Q. 製品・サービスによる支援を検討しています。条件はありますか?
+
+### Q. 製品・サービスによる支援を検討しています。条件はありますか？ {#goods}
 CoderDojo コミュニティから望まれている内容で、かつ、全国の CoderDojo に対して一律にご提供できる場合に、製品・サービスによるパートナーシップを検討させていただいております。
 
 例: さくらインターネットが「さくらのクラウド」を無料提供
@@ -135,54 +202,53 @@ CoderDojo コミュニティから望まれている内容で、かつ、全国�
 
 例: YassLab 株式会社によるWeb開発支援の事例紹介 (スライド資料)
 [https://speakerdeck.com/yasulab/growing-up-together-with-community](https://speakerdeck.com/yasulab/growing-up-together-with-community)
-<br>
 
-### Q. 製品による支援を検討していますが、すべての道場への発送は厳しいです。何か良い方法はありますか?
+
+### Q. 製品による支援を検討していますが、すべての道場への発送は厳しいです。何か良い方法はありますか？ {#goods-example}
 はい、CoderDojo 向けに一律に応募する機会を提供し、応募があった中から一定の道場に提供するという方法があります。下記の例をご参考にしていただけると幸いです。
 
-例: 株式会社Cygamesと一般社団法人 CoderDojo Japan、PC寄贈に関するパートナーシップを締結。全国160ヶ所の道場を対象にPCを寄贈
-[https://prtimes.jp/main/html/rd/p/000000474.000005593.html](https://prtimes.jp/main/html/rd/p/000000474.000005593.html)
+- - 例: [株式会社Cygamesと一般社団法人 CoderDojo Japan、PC寄贈に関するパートナーシップを締結。全国160ヶ所の道場を対象にPCを寄贈](https://prtimes.jp/main/html/rd/p/000000474.000005593.html)
+- - 例: [Salesforce から CoderDojo コミュニティへ、179 台のモニターを寄贈 (※)](https://www.facebook.com/coderdojo.jp/posts/788200171391137)
 
-例: Salesforce から CoderDojo コミュニティへ、179 台のモニターを寄贈 (※)
-[https://www.facebook.com/coderdojo.jp/posts/788200171391137](https://www.facebook.com/coderdojo.jp/posts/788200171391137)
+<blockquote>
+  <small>※
+    Salesforce の事例は個別の寄贈・提供であるため、継続的なパートナーシップではありません。CoderDojo Japan では個別の寄贈・提供にも対応しています。
+  </small>
+</blockquote>
 
-※ Salesforce の例は[単発の提供](#term-of-partnership)のため、継続的なパートナーシップを締結した訳ではありません。
 
-<br>
 
-### Q. 製品による支援を検討していますが、継続的な提供は難しいです。パートナーシップを結ぶことはできますか?
+
+### Q. 製品による支援を検討していますが、継続的な提供は難しいです。パートナーシップを結ぶことはできますか？ {#goods-limited}
 はい、単発の支援の場合、<b>期間限定のパートナーシップ</b>をご提案しております。下記の例をご参考にしていただけると幸いです。
 
 例: MakeblockからCoderDojoへ、新製品のWi-Fi付きシングルボードを200台提供 (※)
 [https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/](https://news.coderdojo.jp/2019/05/10/makeblock-halocode-and-coderdojo-japan/)
 
-※上記の例では約3,000円×200台（配送手続き込）を換算し、5月10日〜7月31日の期間限定パートナーシップとなりました。
+<blockquote>
+  <small>※
+    上記の例では約3,000円×200台（配送手続き込）を換算し、5月10日〜7月31日の期間限定パートナーシップとなりました。
+    <br>
+    ※
+    配送手続きを CoderDojo Japan 側で代行したり、換算金額に価格によっては期間限定パートナーシップの対象外となることもありますので、あらかじめご了承ください。
+  </small>
+</blockquote>
 
-※ 配送手続きを CoderDojo Japan 側で代行したり、換算金額に価格によっては期間限定パートナーシップの対象外となることもありますので、あらかじめご了承ください。
+
 
 PR例: 014 - Highlights of Shenzhen @ Makeblock 本社 (深セン)    
 [https://coderdojo.jp/podcasts/14](https://coderdojo.jp/podcasts/14)
 
-<br>
 
-### Q. 他のパートナーシップの事例を教えてくれませんか?
+### Q. 他のパートナーシップの事例を教えてくれませんか？ {#examples-more}
 
 上記の他にも、次のようなパートナーシップがあります。
 
-例: プログラミング学習のProgate、CoderDojo Japanと提携
-[https://prtimes.jp/main/html/rd/p/000000045.000015015.html](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
-
-例: フェイスブックジャパンがCoderDojoのコミュニティ運営をサポート
-[https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/](https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/)
-
-例: CoderDojo Japanとみんなのコード、 プログラミング教育に関するパートナーシップを締結
-[https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/](https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/)
-
-<br>
+- - 例: [プログラミング学習のProgate、CoderDojo Japanと提携](https://prtimes.jp/main/html/rd/p/000000045.000015015.html)
+- - 例: [フェイスブックジャパンがCoderDojoのコミュニティ運営をサポート](https://news.coderdojo.jp/2018/10/12/press-support-facebook-coupon/)
+- - 例: [CoderDojo Japanとみんなのコード、 プログラミング教育に関するパートナーシップを締結](https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/)
 
 提携に合わせて公式ハッシュタグを用意したり、既存のハッシュタグを使って広く様々な周知を促す事例もあります。こちらもご参考になれば幸いです。
-
-<br>
 
 **ハッシュタグ例: [#MakeblockHaloCoderDojo](https://twitter.com/hashtag/MakeblockHaloCoderDojo)**
 
@@ -197,23 +263,19 @@ PR例: 014 - Highlights of Shenzhen @ Makeblock 本社 (深セン)
 
 <br>
 
-これまでの提携事例については、下記のプレス記事まとめページをご参照ください。
+他の提携事例については、下記のプレス記事まとめページをご参照ください。
 [https://news.coderdojo.jp/category/press/](https://news.coderdojo.jp/category/press/)
 
 
-<br>
-
-### Q. 各 CoderDojo の運営者に連絡をする手段はありますか?
-CoderDojo Japan Champions という非公開グループがあります。現在はパートナーの方々が加入・投稿できる仕組みにはなっておりませんが、内容を事前審査した上で代理で周知することが可能です。(上記 `B` に該当)
-
-CoderDojo Japan Champions - Facebook Group (非公開)
-[https://facebook.com/groups/coderdojo.jp.champions](https://facebook.com/groups/coderdojo.jp.champions)
-
-<br>
-
-### Q. パートナーシップの期間はどのように決まりますか? {#term-of-partnership}
+### Q. パートナーシップの期間はどのように決まりますか？ {#term-of-partnership}
 資金や製品、サービスなどによる支援・提供が**継続的に**行われている期間を、パートナーシップの存続期間としています。詳しくは下記ページをご参照ください。
 
 パートナーシップの存続期間について - CoderDojo Japan   
-[https://coderdojo.jp/docs/term-of-partnership](https://coderdojo.jp/docs/term-of-partnership)
-<br>
+[https://coderdojo.jp/docs/term-of-partnership](/docs/term-of-partnership)
+
+<div class="btn-cover" style="margin-top: 50px; margin-bottom: 50px;">
+  <a class="btn-blue" href="/#inquiry">
+    <i class="fad fa-envelope" aria-hidden="true"></i>
+    お問い合わせフォームを見る
+  </a>
+</div>
