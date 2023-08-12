@@ -1,4 +1,4 @@
-# ☯️ 一般社団法人 CoderDojo Japan について
+# ☯️ 一般社団法人 CoderDojo Japan について {#top}
 
 一般社団法人 CoderDojo Japan では、全国{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上ある非営利のプログラミング道場「CoderDojo」の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。
 
@@ -56,7 +56,7 @@
 
 ## 🤝 活動内容と実績 {#works}
 
-CoderDojo Japan では、定款に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、次の活動を実施しています。
+CoderDojo Japan では、[上記の定款](#top)に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、次の活動を実施しています。
 
 <br>
 
