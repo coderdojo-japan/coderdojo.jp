@@ -61,7 +61,7 @@ CoderDojo Japan では、[上記の定款](#top)に定められた事業内容�
 <br>
 
 - **(1) 日本国内の「CoderDojo」の設立及び運営の支援**
-   - 内容: [Kata](/kata), [DojoCast](/podcasts), [Docs](/docs), [Stats](/stats), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas) などの運営・開発をします
+   - 内容: [Kata](/kata), [Stats](/stats), [Docs](/docs), [DojoCast](/podcasts), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas), [DojoMap](https://github.com/coderdojo-japan/map.coderdojo.jp) などの運営・開発をします
    - 実績: [GitHub アカウント](https://github.com/coderdojo-japan) や [coderdojo.jp リポジトリ](https://github.com/coderdojo-japan/coderdojo.jp)からご確認いただけます<br><br>
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
    - 内容: [パートナーシップ](/partnership)をご検討されている法人と協議・交渉をします
