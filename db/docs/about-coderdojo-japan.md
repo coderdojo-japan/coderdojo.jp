@@ -36,7 +36,7 @@
 
 <br>
 
-本ページでは、一般社団法人 CoderDojo Japan が運営する上記事業の活動内容と、理事への参画方法などについてまとめています。
+本ページでは、一般社団法人 CoderDojo Japan が運営する上記事業の活動内容や、設立経緯などについてまとめています。
 
 <div class='btn-cover' style="margin: 20px auto;">
   <a class='btn-blue' href='#works'>
