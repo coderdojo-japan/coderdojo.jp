@@ -48,11 +48,11 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 - order: '472018'
   created_at: '2019-06-15'
   name: 那覇
-  counter: 1                     # 省略化。連名道場のときに使います (後述)
+  counter: 1                       # 省略化。連名道場のときに使います (後述)
   prefecture_id: 47
-  logo: "/img/dojos/japan.png"   #  ロゴがあれば naha.png として追加
+  logo: "/img/dojos/default.webp"  #  ロゴがあれば naha.webp として追加
   url: https://coderdojo-naha.doorkeeper.jp/
-  description: 那覇市で毎月開催     # 県名や開催頻度などの用語を適宜統一
+  description: 那覇市で毎月開催    # 県名や開催頻度などの用語を適宜統一
   tags:
   - Scratch
   - Webサイト
