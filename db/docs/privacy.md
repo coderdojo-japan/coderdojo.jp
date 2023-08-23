@@ -82,7 +82,7 @@
 当社では、個人情報の取得に関する変更、利用目的の変更、またはその他プライバシーポリシーを変更した際には、当社Webサイト（[coderdojo.jp](/)）への掲載または電子メールなどにより利用者に通知するものといたします。
 
 - これまでの主な変更履歴
-- - [2023年08月]() - [Cookie の使用](#cookie)や Google Analytics の無効化方法、変更履歴などついて、より具体的に記載しました。
+- - [2023年08月](https://github.com/coderdojo-japan/coderdojo.jp/commit/5db29f0e0737e45011c84489c386a30eec4a871c) - [Cookie の使用](#cookie)や Google Analytics の無効化方法、変更履歴などついて、より具体的に記載しました。
 - - [2022年04月](https://github.com/coderdojo-japan/coderdojo.jp/commit/b3982f5f172637db334c24ea4ad3d796bfbddfe2) - [個人情報保護法の改正](https://www.ppc.go.jp/personalinfo/minaoshi/)に伴い、[個人情報の訂正・削除](#report)などの請求権を明確化しました。
 - - [2020年06月](https://github.com/coderdojo-japan/coderdojo.jp/commit/aaaffa23a3b62bed345f656e0d5d959e9eb82983) - Google Analytics などの [Cookie 使用](#cookie)について、より具体的に記載しました。
 - - [2017年10月](https://github.com/coderdojo-japan/coderdojo.jp/commit/69a85d580b432370ae28d342e89d4f370e58d77f) - CoderDojo 関係者向け募集実施の際にも本ポリシーを適用できるよう改定しました。
