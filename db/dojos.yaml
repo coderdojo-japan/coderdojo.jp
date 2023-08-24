@@ -931,6 +931,7 @@
   - micro:bit
 - id: 97
   order: '131016'
+  is_active: false
   created_at: '2017-08-16'
   name: 末広町
   prefecture_id: 13
