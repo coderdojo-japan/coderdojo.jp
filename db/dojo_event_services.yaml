@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 末広町@アミュレット（東京）
+- dojo_id: 307
+  name: connpass
+  group_id: 8400
+  url: https://coderdojo-ashikaga.connpass.com/
+
 # 足利（栃木）
 - dojo_id: 306
   name: connpass
