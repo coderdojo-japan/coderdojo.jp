@@ -13,6 +13,19 @@
   name: connpass
   group_id: 8400
   url: https://coderdojo-ashikaga.connpass.com/
+#
+# NOTE: 同じ connpass ID のため付け替え処理を実行
+# $ DojoEventService.find_by(group_id: 8400).update(dojo_id: 307)
+#
+# 末広町: Get inactive @ 2023年8月23日
+#- dojo_id: 97
+#  name: facebook # 第6回から connpass でも運用
+#  group_id: 333403467110518
+#  url: https://www.facebook.com/coderdojosuehirocho/events/
+#- dojo_id: 97
+#  name: connpass
+#  group_id: 8400
+#  url: https://coderdojosuehirocho.connpass.com/
 
 # 足利（栃木）
 - dojo_id: 306
@@ -1066,16 +1079,6 @@
   name: connpass
   group_id: 5606
   url: https://coderdojo-hikari.connpass.com/
-
-# 末広町
-- dojo_id: 97
-  name: facebook # 第6回から connpass でも運用
-  group_id: 333403467110518
-  url: https://www.facebook.com/coderdojosuehirocho/events/
-- dojo_id: 97
-  name: connpass
-  group_id: 8400
-  url: https://coderdojosuehirocho.connpass.com/
 
 # 松戸
 - dojo_id: 114
