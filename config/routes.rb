@@ -77,7 +77,8 @@ Rails.application.routes.draw do
   get "/news/2016/12/12/new-backend",     to: redirect('/docs/post-backend-update-history')
 
   # Issue SSL Certification
-  get "/.well-known/acme-challenge/:id" => "lets_encrypt#show"
+  get "/.well-known/acme-challenge/:id" => "static_pages#lets_encrypt"
+  get "/.well-known/security.txt"       => "static_pages#security"
 
   # CoderDojo Books from Sotechsha
   get "/sotechsha"       => "sotechsha_pages#index"
