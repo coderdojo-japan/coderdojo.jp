@@ -1,3 +1,5 @@
 Contact: mailto:info@coderdojo.jp
 Expires: 2033-12-31T14:59:00.000Z
 Preferred-Languages: ja, en
+Policy: https://coderdojo.jp/privacy
+Hiring: https://coderdojo.jp/about-coderdojo-japan
