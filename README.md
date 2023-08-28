@@ -191,7 +191,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ### 🤝 API
 
-現在提供中の API の一覧です。利用例のある API は互換性を意識して開発されるため、比較的使いやすいです。ただし予告なく破壊的な変更が行われる可能性もあるため、あらかじめご了承いただけると幸いです 🚧
+現在提供中の API 一覧です。利用例のある API は互換性を意識して開発されるため、比較的使いやすいです。ただし予告なく破壊的な変更が行われる可能性もあるため、あらかじめご了承いただけると幸いです 🚧
 
 - **Podcast API: https://coderdojo.jp/podcasts.rss**
   - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473) (関連PR: [coderdojo.jp#387](https://github.com/coderdojo-japan/coderdojo.jp/pull/387))
