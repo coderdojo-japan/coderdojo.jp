@@ -49,6 +49,8 @@ INPUT_TEXT.each do |line|
       .gsub('minami-kashiwa', '南柏')
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
       .gsub('町田',           'まちだ')
+      .gsub('小平',           'こだいら')
+      .gsub('吉備岡山',       '吉備')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
   end
 

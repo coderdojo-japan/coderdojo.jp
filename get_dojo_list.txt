@@ -6,8 +6,30 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
-CoderDojo 八戸
-CoderDojo 柏
-CoderDojo 名古屋
-CoderDojo 五反田
-CoderDojo 稲城
+前橋
+瑞穂
+大船
+長門
+奈良
+吉祥寺
+西宮・梅田
+尾張
+瑞穂
+師勝
+名古屋
+住吉
+倉敷
+吉備岡山
+西尾
+瀬戸
+富山
+猪名川
+船橋
+小平
+市川
+生駒
+福山大門
+久留米
+春日
+日進
+せんなん
