@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 新代田（東京）
+#- dojo_id: 308
+#  name: peatix # 非対応（Peatix はまだ API を提供していないため）
+#  group_id: 
+#  url: https://coderdojoshindaita.peatix.com/
+
 # 末広町@アミュレット（東京）
 - dojo_id: 307
   name: connpass
