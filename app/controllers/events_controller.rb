@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     @url             = request.url
     @upcoming_events = UpcomingEvent.group_by_prefecture
     @pokemon_events  = UpcomingEvent.group_by_keyword('ポケモン').order(event_at: :ASC)
-    all_events = params[:all_events] == 'true'
+    all_events       = params[:all_events].eql?('true')
 
     respond_to do |format|
       format.html
