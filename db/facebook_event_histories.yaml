@@ -5086,3 +5086,31 @@
   event_id:
   participants: 0
   evented_at: 2023/06/25 10:00
+
+# 2023/07/01 - 2023/07/31
+- dojo_id: 296
+  event_id:
+  participants: 2
+  evented_at: 2023/07/16 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2023/07/02 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2023/07/30 10:00
+
+# 2023/08/01 - 2023/08/31
+- dojo_id: 296
+  event_id:
+  participants: 2
+  evented_at: 2023/08/20 10:00
+- dojo_id: 83
+  event_id:
+  participants: 3
+  evented_at: 2023/08/06 10:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2023/08/17 10:00
