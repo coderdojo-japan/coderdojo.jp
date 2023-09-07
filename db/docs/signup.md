@@ -9,12 +9,23 @@ CoderDojo Zen で承認されたら、Dojo 情報を coderdojo.jp に掲載す�
 - 📅 近日開催の道場: [https://coderdojo.jp/events](/events)
 - 　<span style="color: grey; font-size: 80%; font-style: italic">(近日開催の道場は現在 <a href='https://connpass.com/' target='_blank' rel='noopener'>connpass</a> と <a href='https://www.doorkeeper.jp/' target='_blank' rel='noopener'>Doorkeeper</a> のみに対応しています)</span>
 
-<div style="margin-top: 30px; text-align: center;">図: coderdojo.jp への掲載例</div>
-<a href='/#dojos'><img class="lazyload" loading='lazy' src='/spinner.svg' data-src='/img/signup-example.png' alt='Dojo 情報の掲載例'></a>
+<div style="margin-top: 30px; text-align: center;">図1: 日本各地の道場 (<a href='/#dojos'>coderdojo.jp/#dojos</a>) への掲載例</div>
+<a href='/#dojos'><img class="lazyload" loading='lazy' src='/spinner.svg' data-src='/img/cover_dojos.png' alt='CoderDojo 情報の掲載例'></a>
+
+<div style="margin-top: 30px; text-align: center;">図2: DojoMap (<a href='https://map.coderdojo.jp/'>map.coderdojo.jp</a>) への掲載例</div>
+<a href='https://map.coderdojo.jp/'><img class="lazyload" loading='lazy' src='/spinner.svg' data-src='/img/cover_dojomap.png' alt='DojoMap の掲載例'></a>
+
+
+CoderDojo Japan への掲載申請が承認されると、[パートナー法人](/#partners)が提供する[すべての CoderDojo 向け支援プログラム](/kata#support)にお申し込みできるようになります。
+
+- 🎁️ パートナー法人の各援プログラム: [https://coderdojo.jp/kata#support](/kata#support)
+
+<br>
 
 CoderDojo Zen での申請がまだお済みでない場合は、下記ページを参考に Dojo 申請をお願いします。
 
 - ☯️ CoderDojo を立ち上げる: [https://coderdojo.jp/kata#startup](/kata#startup)
+
 
 <br>
 
