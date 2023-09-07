@@ -15,6 +15,7 @@ CoderDojo Zen で承認されたら、Dojo 情報を coderdojo.jp に掲載す�
 <div style="margin-top: 30px; text-align: center;">図2: DojoMap (<a href='https://map.coderdojo.jp/'>map.coderdojo.jp</a>) への掲載例</div>
 <a href='https://map.coderdojo.jp/'><img class="lazyload" loading='lazy' src='/spinner.svg' data-src='/img/cover_dojomap.png' alt='DojoMap の掲載例'></a>
 
+<br>
 
 CoderDojo Japan への掲載申請が承認されると、[パートナー法人](/#partners)が提供する[すべての CoderDojo 向け支援プログラム](/kata#support)にお申し込みできるようになります。
 
