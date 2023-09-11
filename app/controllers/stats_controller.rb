@@ -22,14 +22,15 @@ class StatsController < ApplicationController
     # 道場タグ分布
     @dojo_tag_chart  = LazyHighCharts::HighChart.new('graph') do |f|
       number_of_tags = 10
-      f.title(text: "CoderDojo タグ分布 (上位#{number_of_tags})")
+      f.title(text: "CoderDojo タグ分布 (上位 #{number_of_tags})")
 
-      # TODO: Use 'tally' method when using Ruby 2.7.0 or higher
+      # Use 'tally' method when using Ruby 2.7.0 or higher
       # cf. https://twitter.com/yasulab/status/1154566199511941120
-      tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
+      #tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
+      tags = Dojo.active.map(&:tags).flatten.tally
 
       # Add tags for multiple dojos: https://github.com/coderdojo-japan/coderdojo.jp/issues/992
-      Dojo.where('counter > 1').each do |dojo|
+      Dojo.active.where('counter > 1').each do |dojo|
         dojo.tags.each {|tag| tags[tag] += (dojo.counter - 1) }
       end
       tags = tags.sort_by{|key, value| value}.reverse.to_h
@@ -39,10 +40,10 @@ class StatsController < ApplicationController
               tickInterval: 40, max: 240
       f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
                data: tags.values.take(number_of_tags).reverse,
-               dataLabels: { 
+               dataLabels: {
                 enabled: true,
                 y: 20,
-                align: 'center', 
+                align: 'center',
                 style: {
                   textShadow: false
                 }
