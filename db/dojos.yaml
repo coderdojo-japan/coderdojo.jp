@@ -1800,6 +1800,7 @@
   - Mindstorms
 - id: 195
   order: 192074
+  is_active: false
   created_at: '2019-02-03'
   name: 韮崎
   prefecture_id: 19
