@@ -106,10 +106,10 @@
   url: https://www.facebook.com/CoderDojoOfuna/
 
 # 田町@VMware
-#- dojo_id: 295
-#   name: zen
-#   group_id:
-#   url: https://zen.coderdojo.com/dojos/jp/minato-tokyo/tamachi-vmware
+- dojo_id: 295
+  name: connpass
+  group_id: 13115
+  url: https://coderdojo-tamachi-vmware.connpass.com/
 
 # 舟橋 未定
 #- dojo_id: 293
