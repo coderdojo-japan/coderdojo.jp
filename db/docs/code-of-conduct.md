@@ -47,5 +47,5 @@
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
 連絡先: info@coderdojo.jp<br>
-最終更新日: 2017/09/03
+<a href='https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/code-of-conduct.md'>【変更履歴を見る】</a>
 </div>
