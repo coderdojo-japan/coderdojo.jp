@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 豊中南（大阪）
+- dojo_id: 310
+  name: connpass
+  group_id: 14111
+  url: https://toyonaka-minami.connpass.com/
+
 # 黒部（富山）
 #- dojo_id: 309
 #  name: ???
