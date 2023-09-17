@@ -17,6 +17,15 @@
       Active/Inactive
     \ 
     の判断などの用途で使われています。
+    %br
+    %small
+      (
+      %a{href: events_path }<>
+        近日開催
+      のデータは含まず、
+      %a{href: stats_path }<>
+        過去開催
+      のデータを使っています)
 
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{border: '1'}
@@ -24,7 +33,7 @@
         %th{style: 'padding: 10px; text-align: center;'}
           %small 道場名
         %th{style: 'padding: 10px; text-align: center;'}
-          %small 開催日
+          %small 直近の開催日
       - @latest_event_by_dojos.each do |dojo|
         %tr
           %td{style: 'padding: 1px 10px 1px 10px; text-align: right;'}

@@ -50,7 +50,6 @@ Rails.application.routes.draw do
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
 
-  get '/dojos/recent'     => 'dojos#recent'
   resources :dojos,    only: %i(index) # Only API: GET /dojos.json
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
@@ -69,8 +68,9 @@ Rails.application.routes.draw do
   #resources :stats,  only: %i(show)
   #resources :pokemons,  only: %i(index create)
 
-  # Upcoming Events
-  get "/events" => "events#index"
+  # Upcoming Events & Latest Events
+  get '/events'        => 'events#index'
+  get '/events/latest' => 'events#latest'
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/docs/post-backend-update-history')
