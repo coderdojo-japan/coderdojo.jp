@@ -24,30 +24,4 @@ class DojosController < ApplicationController
       format.html { redirect_to root_url(anchor: 'dojos') }
     end
   end
-
-  def recent
-    @url = request.url
-    @latest_event_by_dojos = []
-    Dojo.active.each do |dojo|
-      if dojo.event_histories.empty?
-        @latest_event_by_dojos << {
-          name: dojo.name,
-          url:  dojo.url,
-          event_at: '2000-01-23',
-          event_url: nil
-        }
-      else
-        @latest_event_by_dojos << {
-          name: dojo.name,
-          url:  dojo.url,
-          event_at:  dojo.event_histories.last.evented_at.strftime("%Y-%m-%d"),
-          event_url: dojo.event_histories.last.event_url.include?('dummy.url') ?
-            "https://www.facebook.com/#{dojo.event_histories.last.service_group_id}/events" :
-            dojo.event_histories.last.event_url
-        }
-      end
-    end
-
-    @latest_event_by_dojos.sort_by!{|dojo| dojo[:event_at]}
-  end
 end
