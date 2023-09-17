@@ -2468,6 +2468,18 @@
   - Scratch
   - Minecraft
   - micro:bit
+- id: 310
+  order: '272035'
+  created_at: '2023-09-17'
+  name: 豊中南
+  prefecture_id: 27
+  logo: "/img/dojos/toyonaka-minami.webp"
+  url: https://toyonaka-minami.connpass.com/
+  description: 豊中市大黒町で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - 電子工作
 - id: 286
   order: '272043'
   created_at: '2022-08-28'
