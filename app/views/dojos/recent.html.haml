@@ -1,0 +1,38 @@
+- provide(:title, '道場情報 - 直近の開催日まとめ')
+- provide(:desc,  '道場別の直近開催日をまとめたページです。')
+- provide(:url,   @url)
+- provide(:meta_image,  "/img/ogp-events.jpeg")
+
+%section.cover
+  = lazy_image_tag '/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', min: true
+
+%section#events.text-center{style: "margin-bottom: 100px;"}
+  %br
+  %h1 ☯️ 道場別の直近の開催日まとめ
+  %br
+  %p{style: "margin: 0 0px 40px 10px; line-height: 2.0em;"}
+    主にデータ分析や
+    \ 
+    %a{href: '/signup#terms-of-use'}<>
+      Active/Inactive
+    \ 
+    の判断などの用途で使われています。
+
+  %div{style: "margin-top: 20px;", align: 'center' }
+    %table{border: '1'}
+      %tr
+        %th{style: 'padding: 10px; text-align: center;'}
+          %small 道場名
+        %th{style: 'padding: 10px; text-align: center;'}
+          %small 開催日
+      - @latest_event_by_dojos.each do |dojo|
+        %tr
+          %td{style: 'padding: 1px 10px 1px 10px; text-align: right;'}
+            %small
+              %a{href: dojo[:url]}= dojo[:name]
+          %td{style: 'padding: 1px 10px 1px 10px;'}
+            %small
+            - if dojo[:event_url].nil?
+              = dojo[:event_at]
+            - else
+              %a{href: dojo[:event_url]}= dojo[:event_at]
