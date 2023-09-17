@@ -50,6 +50,7 @@ Rails.application.routes.draw do
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
 
+  get '/dojos/recent'     => 'dojos#recent'
   resources :dojos,    only: %i(index) # Only API: GET /dojos.json
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
