@@ -8,8 +8,8 @@ class EventHistory < ApplicationRecord
   validates :participants, presence: true
   validates :evented_at,   presence: true
 
-  scope :for,   ->(service) { where(service_name: service) }
-  scope :within, ->(period) { where(evented_at: period) }
+  scope :for,    -> (service) { where(service_name: service) }
+  scope :within, -> (period)  { where(evented_at: period)    }
 
   class << self
     def annual_count(period)
