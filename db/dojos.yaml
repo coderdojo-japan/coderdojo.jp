@@ -402,6 +402,7 @@
   - IslayTouch
 - id: 203
   order: '082210'
+  is_active: false
   created_at: '2019-02-23'
   name: 六ツ野
   prefecture_id: 8
