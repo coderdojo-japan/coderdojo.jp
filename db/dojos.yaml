@@ -805,7 +805,7 @@
   created_at: '2018-01-27'
   name: 柏沼南
   prefecture_id: 12
-  url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=kashiwashounan
+  url: https://www.coderdojo-kashiwa.com/
   logo: "/img/dojos/kashiwa-shounan.webp"
   description: 柏市沼南で第2土曜に開催
   tags:
@@ -815,7 +815,7 @@
   created_at: '2017-09-26'
   name: 南柏
   prefecture_id: 12
-  url: https://www.coderdojo-kashiwa.com/dojoInfo.php?dojo=minamikashiwa
+  url: https://www.coderdojo-kashiwa.com/
   logo: "/img/dojos/minami-kashiwa.webp"
   description: 柏市光ヶ丘で第3土曜に開催
   tags:
