@@ -18,8 +18,10 @@ class EventsController < ApplicationController
     @url = request.url
     @latest_event_by_dojos = []
     Dojo.active.each do |dojo|
-      if dojo.event_histories.empty?
+      latest_event = dojo.event_histories.newest.first
+      if latest_event.nil?
         @latest_event_by_dojos << {
+          id:   dojo.id,
           name: dojo.name,
           url:  dojo.url,
           event_at: '2000-01-23',
@@ -27,16 +29,18 @@ class EventsController < ApplicationController
         }
       else
         @latest_event_by_dojos << {
+          id:   dojo.id,
           name: dojo.name,
           url:  dojo.url,
-          event_at:  dojo.event_histories.last.evented_at.strftime("%Y-%m-%d"),
-          event_url: dojo.event_histories.last.event_url.include?('dummy.url') ?
-            "https://www.facebook.com/#{dojo.event_histories.last.service_group_id}/events" :
-            dojo.event_histories.last.event_url
+          event_at:  latest_event.evented_at.strftime("%Y-%m-%d"),
+          event_url: latest_event.event_url.include?('dummy.url') ?
+            "https://www.facebook.com/#{latest_event.service_group_id}/events" :
+            latest_event.event_url
         }
       end
     end
 
-    @latest_event_by_dojos.sort_by!{|dojo| dojo[:event_at]}
+    # Sort by older events first && older Dojo ID first if same event date.
+    @latest_event_by_dojos.sort_by!{ |dojo| [dojo[:event_at], dojo[:id]] }
   end
 end
