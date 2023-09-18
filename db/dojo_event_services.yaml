@@ -8,6 +8,12 @@
 #  group_id: 
 #  url: 
 
+# 柏の葉（千葉）
+#- dojo_id: 311
+#  name: 独自システム
+#  group_id:
+#  url: https://www.coderdojo-kashiwa.com/
+
 # 豊中南（大阪）
 - dojo_id: 310
   name: connpass
