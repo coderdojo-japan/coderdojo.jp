@@ -11,8 +11,6 @@ class StatsController < ApplicationController
 
   # GET /stats[.json]
   def show
-    @url                 = request.url
-
     # 2012年1月1日〜2022年12月31日までの集計結果
     period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2022).end_of_year
     stats         = Stat.new(period)
