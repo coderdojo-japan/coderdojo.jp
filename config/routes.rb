@@ -50,14 +50,14 @@ Rails.application.routes.draw do
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
 
+  resources :dojos,    only: %i(index) # GET /dojos.json returns dojo data as JSON
   resources :docs,     only: %i(index show)
-  resources :dojos,    only: %i(index)     # GET /dojos.json returns dojos info
-  get '/dojos/count',    to: 'dojos#count' # GET /dojos/count returns active dojo numbers
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
 
   get  "/podcast",         to: redirect('/podcasts')
   get  "/podcasts/feed"    => "podcasts#feed"
+  get  '/stats.json'       => "stats#api"
   get  "/stats"            => "stats#show"
   get  "/pokemon"          => "pokemons#new"
   post "/pokemon"          => "pokemons#create"

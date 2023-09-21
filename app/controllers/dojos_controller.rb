@@ -1,4 +1,6 @@
 class DojosController < ApplicationController
+
+  # GET /dojos[.json]
   def index
     @dojo_data = []
     Dojo.order(order: :asc).all.each do |dojo|
@@ -17,16 +19,10 @@ class DojosController < ApplicationController
     end
 
     respond_to do |format|
-      format.json  { render json: @dojo_data }
-
       # No corresponding View for now.
       # Only for API: GET /dojos.json
       format.html { redirect_to root_url(anchor: 'dojos') }
+      format.json { render json: @dojo_data }
     end
-  end
-
-  # GET /dojos/count
-  def count
-    render plain: Dojo.active_dojos_count
   end
 end
