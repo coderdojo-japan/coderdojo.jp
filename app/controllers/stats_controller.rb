@@ -1,13 +1,4 @@
 class StatsController < ApplicationController
-  # GET /stats.json
-  def api
-    # NOTE: Prototype. Need to do refactoring.
-    @stats_data = [
-      active_dojos: Dojo.active_dojos_count,
-    ]
-
-    render json: @stats_data
-  end
 
   # GET /stats[.json]
   def show
@@ -111,3 +102,12 @@ end
     #       %td= num
     #     /%td= @participants.values.sum
 
+  # NOTE: Rough draft. Need to be reconsidered.
+  # GET /stats.json
+  #def api
+  #  @stats_data = [
+  #    active_dojos: Dojo.active_dojos_count,
+  #  ]
+  #
+  #  render json: @stats_data
+  #end

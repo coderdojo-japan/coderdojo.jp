@@ -57,7 +57,6 @@ Rails.application.routes.draw do
 
   get  "/podcast",         to: redirect('/podcasts')
   get  "/podcasts/feed"    => "podcasts#feed"
-  get  '/stats.json'       => "stats#api"
   get  "/stats"            => "stats#show"
   get  "/pokemon"          => "pokemons#new"
   post "/pokemon"          => "pokemons#create"
