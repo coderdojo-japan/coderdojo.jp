@@ -24,4 +24,9 @@ class DojosController < ApplicationController
       format.html { redirect_to root_url(anchor: 'dojos') }
     end
   end
+
+  # GET /dojos/count
+  def count
+    render plain: Dojo.active_dojos_count
+  end
 end
