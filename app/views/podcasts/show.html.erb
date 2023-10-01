@@ -22,26 +22,9 @@
   .episode-cover img { margin-bottom: 20px;}
 </style>
 
-<div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
-  <p class="nav prev">
-    <% if @episode.exists?(offset: -1) %>
-      <%= link_to '&larr; prev'.html_safe, podcast_path(@episode.id - 1) %>
-    <% else %>
-      <%= link_to '&larr; Top'.html_safe, podcasts_path %>
-    <% end %>
-  </p>
-  <p class="nav toc" >
-    <a href="/podcasts">DojoCast</a></p>
-  <p class="nav next">
-    <% if @episode.exists?(offset: +1) %>
-      <%= link_to 'next &rarr;'.html_safe, podcast_path(@episode.id + 1) %>
-    <% else %>
-      <%= link_to 'Top &rarr;'.html_safe, podcasts_path %>
-    <% end %>
-  </p>
-</div>
+<%= render 'podcasts/navigation' %>
 
-<div class="container" style="line-height: 1.9em; margin-bottom: -100px;">
+<div class="container" style="line-height: 1.9em;">
   <section class="doc" style="padding: 50px 0px 50px 0px;">
     <div class='episode'>
       <h1 id='title'>📻 <%= @title %></h1>
@@ -59,9 +42,11 @@
     <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
   </div>
   
-  <section class="text-center list" style="padding-top: 50px; margin-left: -10px;">
+  <section class="text-center list" style='margin-bottom: 30px;'>
     <%= render 'shared/social_buttons' %>
   </section>
 </div>
+
+<%= render 'podcasts/navigation' %>
 
 <%= render 'shared/introduce_podcast_apps' %>
