@@ -23,7 +23,22 @@ class PodcastsController < ApplicationController
 
     @title   = @episode.title.split('-').last.strip
     @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
-    @content = Kramdown::Document.new(@episode.content, input: 'GFM').to_html
+    @content = Kramdown::Document.new(
+                                  self.convert_shownote(@episode.content),
+                                  input: 'GFM').to_html
     @url     = request.url
+  end
+
+  private
+
+  def convert_shownote(content)
+    shownote = <<~HTML
+      <h2 id='shownote'>
+        <a href='#shownote'><i class="fa-solid fa-message-pen" style='color: #2275ca;'></i></a>
+        Shownote − 話したこと
+      </h2>
+    HTML
+
+    content.gsub(/(#+) Shownote/i, shownote)
   end
 end
