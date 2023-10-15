@@ -2571,6 +2571,7 @@
   - Python
 - id: 135
   order: '272183'
+  is_active: false
   created_at: '2018-03-13'
   name: 大東
   prefecture_id: 27
