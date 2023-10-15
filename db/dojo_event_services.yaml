@@ -525,6 +525,70 @@
   group_id: 8974
   url: https://coderdojo-miki.connpass.com/
 
+# ナカマ
+- dojo_id: 229
+  name: facebook
+  group_id: 527759921000353
+  url: https://www.facebook.com/CoderDojoNAKAMA/
+
+# 昭島（たまみらとイベント収集サイトが共通のためこちらでの収集はなし）
+# - dojo_id: 228
+#   name: connpass
+#   group_id: 8204
+#   url: https://coderdojo-tamamira.connpass.com/
+
+# 戸田公園
+- dojo_id: 227
+  name: connpass
+  group_id: 8487
+  url: https://corderdojo-todakoen.connpass.com/
+
+# 伊予
+- dojo_id: 226
+  name: connpass
+  group_id: 8962
+  url: https://coderdojo-iyo.connpass.com/
+
+# 浜田
+- dojo_id: 225
+  name: facebook # 第4回からは connpass
+  group_id: 2402320846481133
+  url: https://www.facebook.com/CoderDojoHamada/
+- dojo_id: 225
+  name: connpass
+  group_id: 9168
+  url: https://coderdojohamada.connpass.com/
+
+# しまね
+# - dojo_id: 224
+#   name: google
+#   group_id:
+#   url:
+
+# 三春
+# - dojo_id: 223
+#   name: line
+#   group_id:
+#   url: https://www.coderdojo-miharu.com/events-entry
+
+# 三の丸
+- dojo_id: 222
+  name: facebook
+  group_id: 2325334674450862
+  url: https://www.facebook.com/CoderDojo3nomaru/
+
+# たまみら
+- dojo_id: 221
+  name: connpass
+  group_id: 8204
+  url: https://coderdojo-tamamira.connpass.com/
+
+# あしや
+- dojo_id: 220
+  name: doorkeeper
+  group_id: 10406
+  url: https://coderdojo-ashiya.doorkeeper.jp/
+
 ###################
 
 # 滝沢
@@ -1594,68 +1658,3 @@
 # 印西：Google Form
 # - dojo_id: 219
 #   url: https://inzai.coderdojo.chiba.jp/
-
-# あしや
-- dojo_id: 220
-  name: doorkeeper
-  group_id: 10406
-  url: https://coderdojo-ashiya.doorkeeper.jp/
-
-# たまみら
-- dojo_id: 221
-  name: connpass
-  group_id: 8204
-  url: https://coderdojo-tamamira.connpass.com/
-
-# 三の丸
-- dojo_id: 222
-  name: facebook
-  group_id: 2325334674450862
-  url: https://www.facebook.com/CoderDojo3nomaru/
-
-# 三春 (グループが作成されたら追加する)
-# - dojo_id: 223
-#   name: connpass
-#   group_id:
-#   url:
-
-# しまね
-# - dojo_id: 224
-#   name: google
-#   group_id:
-#   url:
-
-# 浜田
-- dojo_id: 225
-  name: facebook # 第4回からは connpass
-  group_id: 2402320846481133
-  url: https://www.facebook.com/CoderDojoHamada/
-- dojo_id: 225
-  name: connpass
-  group_id: 9168
-  url: https://coderdojohamada.connpass.com/
-
-# 伊予
-- dojo_id: 226
-  name: connpass
-  group_id: 8962
-  url: https://coderdojo-iyo.connpass.com/
-
-# 戸田公園
-- dojo_id: 227
-  name: connpass
-  group_id: 8487
-  url: https://corderdojo-todakoen.connpass.com/
-
-# 昭島
-# たまみらとイベント収集サイトが共通のためこちらでの収集はなし
-# - dojo_id: 228
-#   name: connpass
-#   group_id: 8204
-#   url: https://coderdojo-tamamira.connpass.com/
-
-# ナカマ
-- dojo_id: 229
-  name: facebook
-  group_id: 527759921000353
-  url: https://www.facebook.com/CoderDojoNAKAMA/
