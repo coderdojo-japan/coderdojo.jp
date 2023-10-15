@@ -589,6 +589,124 @@
   group_id: 10406
   url: https://coderdojo-ashiya.doorkeeper.jp/
 
+# 印西：Google Form
+#- dojo_id: 219
+#  url: https://inzai.coderdojo.chiba.jp/
+
+# 犬山
+- dojo_id: 218
+  name: doorkeeper
+  group_id: 10271
+  url: https://coderdojo-inuyama.doorkeeper.jp/
+
+# 師勝
+- dojo_id: 217
+  name: connpass
+  group_id: 7824
+  url: https://coderdojo-shikatsu.connpass.com/
+
+# 那覇
+- dojo_id: 216
+  name: doorkeeper
+  group_id: 10300
+  url: https://coderdojo-naha.doorkeeper.jp/
+
+# 大石田@PCチャレンジ倶楽部
+- dojo_id: 215
+  name: facebook #イベントページなし
+  group_id: 2253119258233423
+  url: https://www.facebook.com/DojoPcc/
+
+# 一宮
+- dojo_id: 214
+  name: connpass
+  group_id: 8197
+  url: https://coderdojo-ichinomiya.connpass.com/
+
+# Blank ID
+#- dojo_id: 213
+#  name:
+#  group_id:
+#  url:
+
+# 調布@電気通信大学
+- dojo_id: 212
+  name: connpass
+  group_id: 7924
+  url: https://volunteer-r.connpass.com/
+
+# 島根県大田市仁摩町宅野 (石見 / Iwami)
+# - dojo_id: 211
+#   name: zen
+#   group_id:
+#   url: https://zen.coderdojo.com/dojos/jp/ren2-mo2-ting3/iwami-takuno
+
+# 久地
+- dojo_id: 210
+  name: connpass
+  group_id: 6907
+  url: https://coderdojo-kuji.connpass.com/
+
+# 石垣
+- dojo_id: 209
+  name: facebook
+  group_id: 789235144765295
+  url: https://www.facebook.com/CoderDojo.Ishigaki/
+
+# 小机
+- dojo_id: 208
+  name: connpass
+  group_id: 7500
+  url: https://coderdojo-kozukue.connpass.com/
+
+# 日吉 (福岡県久留米市)
+- dojo_id: 207
+  name: connpass
+  group_id: 7561
+  url: https://coderdojo-hiyoshi.connpass.com/
+
+# 吹田
+- dojo_id: 206
+  name: doorkeeper
+  group_id: 10019
+  url: https://coderdojo-suita.doorkeeper.jp/
+
+# 浦添（Google フォーム）
+#- dojo_id: 205
+#  name:
+#  group_id:
+#  url: http://www.coderdojo-urasoe.com/?p=5242
+
+# 武蔵村山 (Private)
+#- dojo_id: 204
+#  name:
+#  group_id:
+#  url:
+
+# 六ツ野
+- dojo_id: 203 # 限定公開になったか削除されているようです。
+  name: facebook
+  group_id: 1821472277930255
+  url: https://www.facebook.com/CoderDojo.Mutsuno/
+
+# 松原
+- dojo_id: 202
+  name: doorkeeper
+  group_id: 12077
+  url: https://coderdojo-matsubara.doorkeeper.jp/
+
+# 宮古
+#- dojo_id: 201
+#  name:
+#  group_id:
+#  url: https://www.facebook.com/CoderDojoMiyako/
+
+# 岐阜
+- dojo_id: 200
+  name: connpass
+  group_id: 9330
+  url: https://coderdojo-gifu.connpass.com/
+
 ###################
 
 # 滝沢
@@ -1566,95 +1684,3 @@
   name: connpass
   group_id: 8377
   url: https://koza.connpass.com/
-
-# 岐阜
-- dojo_id: 200
-  name: connpass
-  group_id: 9330
-  url: https://coderdojo-gifu.connpass.com/
-
-# 松原
-- dojo_id: 202
-  name: doorkeeper
-  group_id: 12077
-  url: https://coderdojo-matsubara.doorkeeper.jp/
-
-# 六ツ野
-- dojo_id: 203 # 限定公開になったか削除されているようです。
-  name: facebook
-  group_id: 1821472277930255
-  url: https://www.facebook.com/CoderDojo.Mutsuno/
-
-- dojo_id: 206
-  name: doorkeeper
-  group_id: 10019
-  url: https://coderdojo-suita.doorkeeper.jp/
-
-# 日吉(福岡県久留米市)
-- dojo_id: 207
-  name: connpass
-  group_id: 7561
-  url: https://coderdojo-hiyoshi.connpass.com/
-
-- dojo_id: 208
-  name: connpass
-  group_id: 7500
-  url: https://coderdojo-kozukue.connpass.com/
-
-# 石垣
-- dojo_id: 209
-  name: facebook
-  group_id: 789235144765295
-  url: https://www.facebook.com/CoderDojo.Ishigaki/
-
-# 久地
-- dojo_id: 210
-  name: connpass
-  group_id: 6907
-  url: https://coderdojo-kuji.connpass.com/
-
-# 島根県大田市仁摩町宅野 (石見 / Iwami)
-# - dojo_id: 211
-#   name: zen
-#   group_id:
-#   url: https://zen.coderdojo.com/dojos/jp/ren2-mo2-ting3/iwami-takuno
-
-# 調布@電気通信大学
-- dojo_id: 212
-  name: connpass
-  group_id: 7924
-  url: https://volunteer-r.connpass.com/
-
-# 一宮
-- dojo_id: 214
-  name: connpass
-  group_id: 8197
-  url: https://coderdojo-ichinomiya.connpass.com/
-
-# 大石田@PCチャレンジ倶楽部
-- dojo_id: 215
-  name: facebook #イベントページなし
-  group_id: 2253119258233423
-  url: https://www.facebook.com/DojoPcc/
-
-# 那覇
-- dojo_id: 216
-  name: doorkeeper
-  group_id: 10300
-  url: https://coderdojo-naha.doorkeeper.jp/
-
-# 師勝
-- dojo_id: 217
-  name: connpass
-  group_id: 7824
-  url: https://coderdojo-shikatsu.connpass.com/
-
-# 犬山
-- dojo_id: 218
-  name: doorkeeper
-  group_id: 10271
-  url: https://coderdojo-inuyama.doorkeeper.jp/
-
-# 印西：Google Form
-# - dojo_id: 219
-#   url: https://inzai.coderdojo.chiba.jp/
