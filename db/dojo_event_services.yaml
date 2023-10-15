@@ -843,6 +843,71 @@
 #  group_id:
 #  url:
 
+# 港北NT
+- dojo_id: 179
+  name: connpass
+  group_id: 6645
+  url: https://coderdojo-kohokunt.connpass.com/
+
+# 熊本
+- dojo_id: 178
+  name: connpass
+  group_id: 6175
+  url: https://coderdojokumamoto.connpass.com/
+
+# 田原本
+#- dojo_id: 177
+#  name:
+#  group_id:
+#  url:
+
+# 日立
+#- dojo_id: 176
+#  name:
+#  group_id:
+#  url:
+
+# 松本 (Google Form)
+#- dojo_id: 175
+#  name:
+#  group_id:
+#  url:
+
+# 三鷹
+- dojo_id: 174
+  name: connpass
+  group_id: 6562
+  url: https://coderdojo-mitaka.connpass.com/
+
+# 品川御殿山 (v2)
+- dojo_id: 173
+  name: connpass
+  group_id: 6440
+  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
+# 品川御殿山 (v1: IDが誤って640と設定されていた)
+#- dojo_id: 173
+#  name: connpass
+#  group_id: 640
+#  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
+
+# 諏訪野＠ギャランドゥ
+- dojo_id: 172
+  name: facebook
+  group_id: 227758594569000
+  url: https://www.facebook.com/coderdojo.fukuoka.kurume.suwano/events/
+
+# Blank ID
+#- dojo_id: 171
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 170
+#  name:
+#  group_id:
+#  url:
+
 ###################
 
 # 滝沢
@@ -1673,41 +1738,7 @@
   group_id: 5748
   url: https://coderdojokoga.connpass.com/
 
-- dojo_id: 178
-  name: connpass
-  group_id: 6175
-  url: https://coderdojokumamoto.connpass.com/
-
 - dojo_id: 165
   name: doorkeeper
   group_id: 9790
   url: https://coderdojo-kitakata.doorkeeper.jp/
-
-# 諏訪野＠ギャランドゥ
-- dojo_id: 172
-  name: facebook
-  group_id: 227758594569000
-  url: https://www.facebook.com/coderdojo.fukuoka.kurume.suwano/events/
-
-# 品川御殿山(v2)
-- dojo_id: 173
-  name: connpass
-  group_id: 6440
-  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
-
-# 品川御殿山(v1)
-#- dojo_id: 173
-#  name: connpass
-#  group_id: 640
-#  url: https://coderdojo-shinagawa-gotenyama.connpass.com/
-
-# 三鷹
-- dojo_id: 174
-  name: connpass
-  group_id: 6562
-  url: https://coderdojo-mitaka.connpass.com/
-
-- dojo_id: 179
-  name: connpass
-  group_id: 6645
-  url: https://coderdojo-kohokunt.connpass.com/
