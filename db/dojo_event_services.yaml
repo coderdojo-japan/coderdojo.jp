@@ -1349,9 +1349,7 @@
 #  group_id: 
 #  url: 
 
-###################
-
-# 南紀田辺
+# 南紀田辺 (Google Form)
 - dojo_id: 99
   name: facebook
   group_id: 773267359523217
@@ -1369,11 +1367,23 @@
   group_id: 402271523520911
   url: https://www.facebook.com/CoderDojo.Kaizu
 
+# Blank ID
+#- dojo_id: 95
+#  name:
+#  group_id:
+#  url:
+
 # 諏訪湖
 - dojo_id: 94
   name: facebook
   group_id: 104207190171589
   url: https://www.facebook.com/CoderDojoSuwako/events/
+
+# Blank ID
+#- dojo_id: 93
+#  name:
+#  group_id:
+#  url:
 
 # 光
 - dojo_id: 92
@@ -1473,6 +1483,14 @@
   group_id: 9993
   url: https://coderdojo-konan.doorkeeper.jp/
 
+# Blank ID
+#- dojo_id: 80
+#  name:
+#  group_id:
+#  url:
+
+###################
+
 # 会津 (peatix -> doorkeeper)
 - dojo_id: 79
   name: doorkeeper
@@ -1569,6 +1587,12 @@
   name: connpass
   group_id: 3316
   url: https://coderdojo-sapporo.connpass.com
+
+# Blank ID
+#- dojo_id: 63
+#  name:
+#  group_id:
+#  url:
 
 # 伊勢
 - dojo_id: 62
@@ -1756,6 +1780,12 @@
   group_id: 8735
   url: https://coderdojo-toyohashi.doorkeeper.jp
 
+# Blank ID
+#- dojo_id: 29
+#  name:
+#  group_id:
+#  url:
+
 - dojo_id: 28
   name:
   group_id:
@@ -1925,4 +1955,16 @@
   name: connpass
   group_id: 6681
   url: https://coderdojo-mizuho.connpass.com
+
+# Blank ID
+#- dojo_id: 1
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 0
+#  name:
+#  group_id:
+#  url:
 
