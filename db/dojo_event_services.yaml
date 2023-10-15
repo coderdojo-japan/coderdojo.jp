@@ -123,7 +123,7 @@
   group_id: 13115
   url: https://coderdojo-tamachi-vmware.connpass.com/
 
-# 平群（奈良・生駒・平群で共通管理のため省略）
+# 平群（奈良・生駒・田原本・平群・明日香のイベント収集サイトは共通のため省略）
 #- dojo_id: 294
 #  name: ??
 #  group_id: ??
@@ -855,7 +855,7 @@
   group_id: 6175
   url: https://coderdojokumamoto.connpass.com/
 
-# 田原本
+# 田原本（奈良・生駒・田原本・平群・明日香のイベント収集サイトは共通のため省略）
 #- dojo_id: 177
 #  name:
 #  group_id:
@@ -907,6 +907,13 @@
 #  name:
 #  group_id:
 #  url:
+
+# 明日香（奈良・生駒・田原本・平群・明日香のイベント収集サイトは共通のため省略）
+#- dojo_id: 169
+#  name:
+#  group_id:
+#  url:
+
 
 ###################
 
@@ -1357,20 +1364,13 @@
   group_id: 4052
   url: https://coderdojo-nagaokakyo.doorkeeper.jp
 
-# 奈良
+# 奈良（奈良・生駒・田原本・平群・明日香のイベント収集サイトは共通）
 - dojo_id: 35
   name: connpass
   group_id: 2617
   url: https://coderdojo-nara-ikoma.connpass.com/
-  # 奈良・生駒・田原本・平群のイベント収集サイトは共通
   # - dojo_id: 36
   #   name: 生駒
-  # - dojo_id: 169
-  #   name: 明日香
-  # - dojo_id: 177
-  #   name: 田原本（非アクティブ）
-  # - dojo_id: 294
-  #   name: 平群
 
 - dojo_id: 37
   name: connpass
