@@ -1060,6 +1060,7 @@
   - 映像制作
 - id: 185
   order: '131091'
+  is_active: false
   created_at: '2018-11-20'
   name: 五反田
   prefecture_id: 13
