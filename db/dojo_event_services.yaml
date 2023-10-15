@@ -465,6 +465,12 @@
   group_id: 10943
   url: https://coderdojo-kyoto-shijo.doorkeeper.jp/
 
+# 松山
+- dojo_id: 239
+  name: doorkeeper
+  group_id: 11241
+  url: https://coderdojo-matsuyama.doorkeeper.jp/
+
 # 新座志木
 - dojo_id: 238
   name: doorkeeper
