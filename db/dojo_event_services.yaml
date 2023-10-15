@@ -1831,11 +1831,11 @@
   group_id: 238346276578113
   url: https://www.facebook.com/coderdojowakaba.mitsuwadai/events/
 
-# 流山
+# 流山 (NOTE: CoderDojo 以外のイベントが入る可能性あり。現状では CoderDono のみのため登録しています)
 - dojo_id: 24
-  name: google
-  group_id:
-  url:
+  name: connpass
+  group_id: 5131
+  url: https://codefornagareyama.connpass.com/
 
 # 柏
 - dojo_id: 23
