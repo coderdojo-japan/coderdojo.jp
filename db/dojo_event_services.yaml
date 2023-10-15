@@ -1210,13 +1210,13 @@
   group_id: 9491
   url: https://coderdojo-ochanomizu.doorkeeper.jp/
 
-# 長崎
+# 長崎 (Inactive)
 #- dojo_id: 120
 #  name:
 #  group_id:
 #  url:
 
-# 西神戸
+# 西神戸 (Inactive)
 #- dojo_id: 119
 #  name:
 #  group_id:
@@ -1239,6 +1239,12 @@
   name: doorkeeper
   group_id: 9482
   url: https://coderdojo-abeno.doorkeeper.jp/
+
+# 大山 (Inactive)
+#- dojo_id: 115
+#  name:
+#  group_id:
+#  url:
 
 # 松戸
 - dojo_id: 114
@@ -1264,19 +1270,18 @@
   group_id: 1507281716025249
   url: https://www.facebook.com/coderdojomiyoshi/events/
 
-###################
-
+# せんなん
 - dojo_id: 110
   name: connpass
   group_id: 4516
   url: https://coderdojo-sennan.connpass.com/
 
-# 滝沢
+# 滝沢：2022/04以降 doorkeeper で運用
 - dojo_id: 109
-  name: kokucheese
+  name:
   group_id:
   url: http://kokucheese.com/main/host/codoMe/
-- dojo_id: 109 #2022/04以降 doorkeeper で運用
+- dojo_id: 109
   name: doorkeeper
   group_id: 12365
   url: https://coderdojo-takizawa.doorkeeper.jp/
@@ -1293,8 +1298,9 @@
   group_id: 4288
   url: https://coderdojoktm.connpass.com
 
+# 宜野湾 (Google Form)
 - dojo_id: 106
-  name: owned
+  name:
   group_id:
   url:
 
@@ -1316,9 +1322,9 @@
   group_id: 693901040807095
   url: https://www.facebook.com/CDTokushima/
 
-# 福岡
+# 福岡 (第4回からは connpass で運用)
 - dojo_id: 102
-  name: facebook # 第4回からは connpass
+  name: facebook
   group_id: 495711777474589
   url: https://www.facebook.com/CoderDojoFukuoka/events/
 - dojo_id: 102
@@ -1326,17 +1332,24 @@
   group_id: 5138
   url: https://coderdojo-fukuoka.connpass.com/
 
-# 東大阪 (近畿) と合同開催のため八尾の集計は不要
+# 東大阪 (大阪) と合同開催のため八尾の集計は不要
 # - dojo_id: 101
 #   name: connpass
 #   group_id: 2777
 #   url: https://coderdojo-higashiosaka.connpass.com/
 
-# 恵庭
+# 恵庭 (2023年6月よりconnpassで運用)
+# TODO: グループではなく個人アカウントのため group_id が取得できない (null が返ってくる)
 - dojo_id: 100
   name: facebook
   group_id: 223141421550880
   url: https://www.facebook.com/CoderDojoEniwa/
+#- dojo_id: 100
+#  name: connpass
+#  group_id: 
+#  url: 
+
+###################
 
 # 南紀田辺
 - dojo_id: 99
@@ -1744,7 +1757,7 @@
   url: https://coderdojo-toyohashi.doorkeeper.jp
 
 - dojo_id: 28
-  name: kokucheese
+  name:
   group_id:
   url: http://kokucheese.com/main/host/CoderDojo+福井/
 
