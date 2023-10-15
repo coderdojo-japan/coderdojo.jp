@@ -483,17 +483,23 @@
   group_id: 7630
   url: https://coderdojo-ina.connpass.com/
 
-# 本山
-- dojo_id: 234
-  name: connpass
-  group_id: 8841
-  url: https://coderdojo-motoyama.connpass.com/
+# 法隆寺
+#- dojo_id: 236
+#  name:
+#  group_id:
+#  url:
 
 # 稲沢正明寺
 - dojo_id: 235
   name: peatix
   group_id:
   url: https://coderdojo-shomeiji.peatix.com/
+
+# 本山
+- dojo_id: 234
+  name: connpass
+  group_id: 8841
+  url: https://coderdojo-motoyama.connpass.com/
 
 # 足立
 - dojo_id: 233
@@ -519,9 +525,7 @@
   group_id: 8974
   url: https://coderdojo-miki.connpass.com/
 
-
 ###################
-
 
 # 滝沢
 - dojo_id: 109
