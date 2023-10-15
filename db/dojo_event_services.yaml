@@ -914,6 +914,120 @@
 #  group_id:
 #  url:
 
+# Blank ID
+#- dojo_id: 168
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 167
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 166
+#  name:
+#  group_id:
+#  url:
+
+# 喜多方
+- dojo_id: 165
+  name: doorkeeper
+  group_id: 9790
+  url: https://coderdojo-kitakata.doorkeeper.jp/
+
+# Blank ID
+#- dojo_id: 164
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 163
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 162
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 161
+#  name:
+#  group_id:
+#  url:
+
+# Blank ID
+#- dojo_id: 160
+#  name:
+#  group_id:
+#  url:
+
+# 土気（とけ）
+#- dojo_id: 159
+#  name:
+#  group_id:
+#  url:
+
+# 成田
+#- dojo_id: 158
+#  name:
+#  group_id:
+#  url:
+
+# 酒々井
+#- dojo_id: 157
+#  name:
+#  group_id:
+#  url:
+
+# 古河
+- dojo_id: 156
+  name: connpass
+  group_id: 5748
+  url: https://coderdojokoga.connpass.com/
+
+# うるま (Google Form)
+#- dojo_id: 155
+#  name:
+#  group_id:
+#  url:
+
+# 鴨居
+- dojo_id: 154
+  name: connpass
+  group_id: 5910
+  url: https://coderdojo-kamoi.connpass.com/
+
+# 多摩センター
+- dojo_id: 153
+  name: doorkeeper
+  group_id: 9608
+  url: https://63a4ffa19c713218e96b7e2037.doorkeeper.jp/
+
+# やちまた
+#- dojo_id: 152
+#  name:
+#  group_id:
+#  url:
+
+# 若葉若松 (Google Form)
+#- dojo_id: 151
+#  name:
+#  group_id:
+#  url:
+
+# 倉敷
+- dojo_id: 150
+  name: connpass
+  group_id: 5751
+  url: https://cd-kurashiki.connpass.com/
+
 
 ###################
 
@@ -1715,30 +1829,3 @@
   name: doorkeeper
   group_id: 9703
   url: https://coderdojo-shirakawa.doorkeeper.jp/
-
-# 倉敷
-- dojo_id: 150
-  name: connpass
-  group_id: 5751
-  url: https://cd-kurashiki.connpass.com/
-
-# 多摩センター
-- dojo_id: 153
-  name: doorkeeper
-  group_id: 9608
-  url: https://63a4ffa19c713218e96b7e2037.doorkeeper.jp/
-
-- dojo_id: 154
-  name: connpass
-  group_id: 5910
-  url: https://coderdojo-kamoi.connpass.com/
-
-- dojo_id: 156
-  name: connpass
-  group_id: 5748
-  url: https://coderdojokoga.connpass.com/
-
-- dojo_id: 165
-  name: doorkeeper
-  group_id: 9790
-  url: https://coderdojo-kitakata.doorkeeper.jp/
