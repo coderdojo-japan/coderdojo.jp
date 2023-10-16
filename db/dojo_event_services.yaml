@@ -3,17 +3,28 @@
 # https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how_to_add_dojo.md
 
 ### コピペ用テンプレート
-# Dojo名
+# Dojo名 (+ 必要であればココにコメントを書く)
 #- dojo_id: 
 #  name: connpass or doorkeeper
 #  group_id: 
 #  url: 
+#
+# 【NOTE】
+# connpass でも doorkeeper でも無い場合は、
+# コメントアウトした状態で追記してください。
+# （あとで現状を把握したりい、以降に対応しやすくするため）
+#
+# 他サービス (Facebook API) 対応を検討していた時期があったため、
+# `facebook` などが書かれているデータもありますが、現在は非対応です。
+# 現在は connpass と doorkeeper のみ対応しています。
+
 
 ### 以下、Dojo 情報まとめ ###
 
 # 柏の葉（千葉）
+# 現在実験的に connpass に移行中。ただしグループアカウントではないため登録できない。
 #- dojo_id: 311
-#  name: 独自システム
+#  name:
 #  group_id:
 #  url: https://www.coderdojo-kashiwa.com/
 
@@ -25,24 +36,24 @@
 
 # 黒部（富山）
 #- dojo_id: 309
-#  name: ???
+#  name:
 #  group_id: 
-#  url:  ???
+#  url:
 
-# 新代田（東京）
+# 新代田（東京）。Peatix から connpass に移行。Peatix は API を提供していないため非対応。
 - dojo_id: 308
-  name: connpass # 非対応（Peatix はまだ API を提供していないため）
+  name: connpass
   group_id: 14103
   url: https://coder-dojo-shindaita.connpass.com/
 
 # 末広町@アミュレット（東京）
+# NOTE: `dojo_id: 97` と同じ connpass ID のため付け替え処理を実行
+# $ DojoEventService.find_by(group_id: 8400).update(dojo_id: 307)
 - dojo_id: 307
   name: connpass
   group_id: 8400
   url: https://coderdojo-ashikaga.connpass.com/
-#
-# NOTE: `dojo_id: 97` と同じ connpass ID のため付け替え処理を実行
-# $ DojoEventService.find_by(group_id: 8400).update(dojo_id: 307)
+
 
 # 足利（栃木）
 - dojo_id: 306
