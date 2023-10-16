@@ -16,8 +16,8 @@
 3. 最新版の PDF にアクセスし、申請内容と一致する全国地方公共団体コードを確認する
 4. `db/dojos.yaml` ファイルを開き、全国地方公共団体コードの近い値（隣接する Dojo）のデータを見つける
 5. 同じ全国地方公共団体コードがあれば同コードの直後に、初のコードであれば `order` の昇順で適した場所を探す
-6. 下記「[データの読み方](#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9%E7%94%B3%E8%AB%8B%E5%86%85%E5%AE%B9%E3%81%A8%E5%AF%BE%E5%BF%9C%E4%BE%8B)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) に追加する
-7. 下記「[統計システムへの追加](#%E7%B5%B1%E8%A8%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E8%BF%BD%E5%8A%A0)」を参考に、イベント管理サービスを [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) に追加する
+6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) に追加する
+7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
 
 参考 PR: [coderdojo-japan/coderdojo.jp#1449](https://github.com/coderdojo-japan/coderdojo.jp/pull/1449)
@@ -121,28 +121,26 @@ https://coderdojo.jp/stats
 集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。   
 このため、新規 Dojo を追加する際は、集計対象にも追加をお願いします。
 
-集計対象は `db/dojo_event_services.yaml` で管理していますので、ここに追記してください
+集計対象は [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) で管理しています。以下のように追記してください。
 
 ```yaml
-- dojo_id: 131
-  name: facebook
-  group_id: 209274086317393
-  url: https://www.facebook.com/CoderDojoTottori/
+# 田町@VMware
+- dojo_id: 295
+  name: connpass
+  group_id: 13115
+  url: https://coderdojo-tamachi-vmware.connpass.com/
 ```
 
 |yaml|内容|
 |:---|:---|
 | `dojo_id` | 該当する Dojo の id |
-| `name` | 設定するイベント管理サービスの名前 (connpass, facebook, doorkeeper) |
+| `name` | 設定するイベント管理サービスの名前 (connpass, doorkeeper) |
 | `group_id` | イベント管理ページの id |
 | `url` | イベント管理ページの URL |
 
-### イベントページサービスごとの `group_id` の取得方法
+### 各イベント管理サービスの `group_id` の取得方法
 
-- Facebook
-  1. [lookup-id](https://lookup-id.com/#)、または [findmyfbid](https://findmyfbid.com/) へ
-  2. 当該 Facebook ページの URL を入力すると `group_id` が確認できます
-- connpass
+- `connpass` の場合は [Connpass API](https://connpass.com/about/api/) に対応します
   1. connpass のイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
   2. イベントのページを表示します (どのイベントでもOK)
   3. イベントページの URL をコピーします
@@ -158,7 +156,7 @@ https://coderdojo.jp/stats
   $ brew install jq
   ```
   
-- Doorkeeper
+- `doorkeeper` の場合は [Doorkeeper API](https://www.doorkeeper.jp/developer/api?locale=en) に対応します
   1. connpassと 同様に、Doorkeeper のイベントページの url から event ID を確認します (https://coderdojo-suita.doorkeeper.jp/events/90704 だと `90704`)
   2. 以下のコマンドで上記の event ID を指定すると `group_id` (group) を得ることができます
   

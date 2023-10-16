@@ -1,12 +1,15 @@
-# 本ファイルの取り扱い方は下記ページをご参照ください
+# 降順に並べています。新しい Dojo 情報は「最上部」に追加してください。
+# 他、詳細は本ファイルの取り扱い方は下記ページをご参照ください
 # https://github.com/coderdojo-japan/coderdojo.jp/blob/main/docs/how_to_add_dojo.md
 
-## 以下、コピペ用テンプレート
+### コピペ用テンプレート
 # Dojo名
 #- dojo_id: 
 #  name: connpass or doorkeeper
 #  group_id: 
 #  url: 
+
+### 以下、Dojo 情報まとめ ###
 
 # 柏の葉（千葉）
 #- dojo_id: 311
