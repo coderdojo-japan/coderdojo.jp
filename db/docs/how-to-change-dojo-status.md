@@ -27,11 +27,9 @@
 ## CoderDojo Zen にログインできなくなった場合
 
 1. 何らかの原因により、アカウントが一時的に凍結されている可能性があります。
-1. CoderDojo に承認されると入れる [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) のアカウントをお持ち **ではない** 場合は、[CoderDojo Foundation のヘルプページ](https://coderdojo.com/ja-JP/help)の下部にあるお問い合わせページより、お問い合わせください。
-   - [DeepL](https://www.deepl.com/ja/translator)などのツールで日英翻訳してお問い合わせすると、スムーズに CoderDojo Foundation とやりとりできます。
-   - 返信には数日〜数週間お待ちいただくことがあります。以下の Slack アカウントをお持ちの場合は、即日返信が返ってくることもあるので、Slack からのお問い合わせがオススメです。
-1. [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) のアカウントをお持ちの場合は、同 Slack にある `#foundation-support` チャンネルで質問をすると、詳しい状況をご確認いただけます。
+1. [CoderDojo に承認されると登録できる](/kata#support-programs)ようになる [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) のアカウントをお持ちの場合は、同 Slack にある `#foundation-support` チャンネルで質問をすると、詳しい状況をご確認いただけます。
   ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
+1. [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) のアカウントをお持ちではない場合は、[CoderDojo Foundation のヘルプページ](https://coderdojo.com/ja-JP/help)の下部にあるお問い合わせフォームより、お問い合わせください。（[DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです。）
 
 <br>
 

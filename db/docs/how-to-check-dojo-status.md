@@ -26,7 +26,7 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 
 - **B. 申請はしたけど、地図上に表示されなかった場合**
   - CoderDojo の現在の状態が『審査中』になっている可能性があります。
-  - [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) にある `#foundation-support` チャンネルで質問をすると、審査チームから詳しい状況をご確認できます。([DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです）
+  - [CoderDojo Global Slack](https://coderdojo.com/ja-JP/coderdojo-global-slack) にある `#foundation-support` チャンネルで質問をすると、審査チームから詳しい状況をご確認できます。（[DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです）
     ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
 
 <br>
