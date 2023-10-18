@@ -1956,11 +1956,16 @@
   group_id: 497400593610071
   url: https://www.facebook.com/coderdojo.hibarigaoka/
 
-# さいたま（埼玉）
+# さいたま（埼玉）- 2023/10/14 に Doorkeeper -> connpass に変更依頼。
+# 記録保持のため、他の Dojo と同様に Doorkeeper のデータも保持しています。
 - dojo_id: 9
   name: doorkeeper
   group_id: 5238
   url: https://coderdojo.doorkeeper.jp
+- dojo_id: 9
+  name: connpass
+  group_id: 13974
+  url: https://coderdojo-saitama.connpass.com/
 
 # 守谷
 - dojo_id: 8
