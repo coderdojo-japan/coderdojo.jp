@@ -3322,6 +3322,7 @@
   - OSS
 - id: 234
   order: '372081'
+  is_active: false
   created_at: '2019-11-26'
   name: 本山
   prefecture_id: 37
