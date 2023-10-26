@@ -2604,6 +2604,7 @@
   - ラズベリーパイ
 - id: 108
   order: '272205'
+  is_active: false
   created_at: '2017-09-06'
   name: みのお
   prefecture_id: 27
