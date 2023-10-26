@@ -425,11 +425,12 @@
   - Islay
 - id: 222
   order: '082015'
+  is_active: false
   created_at: '2019-07-23'
   name: 三の丸
   prefecture_id: 8
   logo: "/img/dojos/sannomaru.webp"
-  url: https://www.facebook.com/CoderDojo%E4%B8%89%E3%81%AE%E4%B8%B8-2325334674450862/
+  url: https://www.facebook.com/CoderDojo3nomaru
   description: 水戸市で毎月開催
   tags:
   - Scratch
