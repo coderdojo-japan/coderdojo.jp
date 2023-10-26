@@ -1369,6 +1369,7 @@
   - micro:bit
 - id: 204
   order: '132233'
+  is_active: false
   created_at: '2019-02-26'
   name: 武蔵村山
   prefecture_id: 13
