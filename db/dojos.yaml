@@ -1879,6 +1879,7 @@
   - LEGO
 - id: 232
   order: '202037'
+  is_active: false
   created_at: '2019-11-10'
   name: 上田
   prefecture_id: 20
