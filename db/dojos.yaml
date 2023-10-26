@@ -1933,6 +1933,7 @@
   - Ruby
 - id: 87
   order: '202207'
+  is_active: false
   created_at: '2017-05-11'
   name: 安曇野
   prefecture_id: 20
