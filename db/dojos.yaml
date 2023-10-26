@@ -618,6 +618,7 @@
   - Python
 - id: 11
   order: '112097'
+  is_active: false
   created_at: '2015-05-13'
   name: 飯能
   prefecture_id: 11
