@@ -2782,11 +2782,12 @@
   - Java
 - id: 50
   order: '282014'
+  is_active: false
   created_at: '2016-03-22'
   name: 姫路
   prefecture_id: 28
   logo: "/img/dojos/himeji.webp"
-  url: https://sites.google.com/site/himejicoderdojo/
+  url: https://www.facebook.com/groups/himeji.coderdojo/
   description: 姫路市で第3土曜に開催
   tags:
   - Scratch
