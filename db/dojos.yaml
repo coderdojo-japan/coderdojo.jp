@@ -656,6 +656,7 @@
   - Unity
 - id: 238
   order: '112305'
+  is_active: false
   created_at: '2020-02-03'
   name: 新座志木
   prefecture_id: 11
