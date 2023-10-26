@@ -1220,6 +1220,7 @@
   - Arduino
 - id: 221
   order: '132021'
+  is_active: false
   created_at: '2019-07-08'
   name: たまみら
   prefecture_id: 13
