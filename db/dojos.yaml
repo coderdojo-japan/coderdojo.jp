@@ -787,6 +787,7 @@
   - Scratch
 - id: 283
   order: '122084'
+  is_active: false
   created_at: '2022-04-21'
   name: 野田
   prefecture_id: 12
