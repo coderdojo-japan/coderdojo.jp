@@ -1441,6 +1441,7 @@
   - Hour of Code
 - id: 208
   order: '141097'
+  is_active: false
   created_at: '2019-03-08'
   name: 小机
   prefecture_id: 14
