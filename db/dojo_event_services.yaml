@@ -203,7 +203,8 @@
 #  group_id: ??
 #  url: ??
 
-# 木曽
+# 木曽: 2023年3月よりconnpass募集からGoogle Formに移行
+# https://coderdojo-kiso.connpass.com/event/266722/
 - dojo_id: 282
   name: connpass
   group_id: 12110
