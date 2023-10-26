@@ -2358,6 +2358,7 @@
   - Scratch
 - id: 250
   order: '262129'
+  is_active: false
   created_at: '2020-06-27'
   name: 京丹後
   prefecture_id: 26
