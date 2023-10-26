@@ -1277,6 +1277,7 @@
   - RPA
 - id: 228
   order: '132071'
+  is_active: false
   created_at: '2019-10-11'
   name: 昭島
   prefecture_id: 13
