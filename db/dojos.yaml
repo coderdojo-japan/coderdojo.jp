@@ -1197,6 +1197,7 @@
   - Scratch
 - id: 14
   order: '132012'
+  is_active: false
   created_at: '2015-06-22'
   name: 八王子
   prefecture_id: 13
