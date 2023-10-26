@@ -3494,6 +3494,7 @@
   - Minecraft
 - id: 191
   order: '402214'
+  is_active: false
   created_at: '2019-01-04'
   name: 太宰府
   prefecture_id: 40
