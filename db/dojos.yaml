@@ -1119,6 +1119,7 @@
   - デザイン
 - id: 15
   order: '131148'
+  is_active: false
   created_at: '2016-07-20'
   name: 中野
   prefecture_id: 13
