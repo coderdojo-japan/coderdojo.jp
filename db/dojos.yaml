@@ -3453,6 +3453,7 @@
   - Mindstorms
 - id: 207
   order: '402036'
+  is_active: false
   created_at: '2019-03-05'
   name: 日吉
   prefecture_id: 40
