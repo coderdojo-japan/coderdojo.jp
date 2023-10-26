@@ -488,6 +488,7 @@
   - Webサイト
 - id: 242
   order: '092100'
+  is_active: false
   created_at: '2020-02-20'
   name: おおたわら
   prefecture_id: 9
