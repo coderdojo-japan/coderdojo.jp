@@ -2452,6 +2452,7 @@
   - Webサイト
 - id: 266
   order: '271217'
+  is_active: false
   created_at: '2021-04-25'
   name: 東住吉
   prefecture_id: 27
