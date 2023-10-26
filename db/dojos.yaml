@@ -460,6 +460,7 @@
   - 電子工作
 - id: 246
   order: '092011'
+  is_active: false
   created_at: '2020-03-11'
   name: 宇都宮
   prefecture_id: 9
