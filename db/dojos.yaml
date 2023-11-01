@@ -717,6 +717,19 @@
   tags:
   - Scratch
   - Viscuit
+- id: 312
+  order: '121003'
+  created_at: '2023-11-01'
+  name: 稲毛海岸
+  prefecture_id: 12
+  logo: "/img/dojos/inagekaigan.webp"
+  url: https://coderdojo-inagekaigan.connpass.com/
+  description: 千葉市の稲毛海岸駅付近で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - M5Stack
+  - ラズベリーパイ
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
