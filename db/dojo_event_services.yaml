@@ -21,6 +21,12 @@
 
 ### 以下、Dojo 情報まとめ ###
 
+# 稲毛海岸（千葉）
+- dojo_id: 312
+  name: connpass
+  group_id: 14168
+  url: https://coderdojo-inagekaigan.connpass.com/
+
 # 柏の葉（千葉）
 # 現在実験的に connpass に移行中。ただしグループアカウントではないため登録できない。
 #- dojo_id: 311
