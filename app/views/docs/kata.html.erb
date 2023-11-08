@@ -29,7 +29,10 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 fontsize-bigger">
 
 	<!-- Migrated contents from Scrivito (= scrivito_tag :div, @obj, :body) -->
-	<h2 id="README" class="headline headline-kata" style='margin-top: 60px;'>✅ はじめに</h2>
+	<h2 id="README" class="headline headline-kata" style='margin-top: 60px;'>
+	  <a href='#README'>✅</a>
+	  はじめに
+	</h2>
 
 	<p>本ページでは、全国の CoderDojo が制作した<strong><a href='#learn'>教材・学習コンテンツ</a></strong>や、腕試しにちょうど良い<strong><a href="#challenge">大会・コンテスト情報</a></strong>などをまとめています。また、CoderDojo を<strong><a href="#startup">立ち上げる</a></strong>方法や、CoderDojo を対象とした<strong><a href="#support">支援プログラム</a></strong>、よくある質問と回答（<strong><a href="#faq">FAQ</a></strong>）についてもまとめています。</p>
 
@@ -44,13 +47,19 @@
 	  </a>
 	</div>
 
-	<h3 id='coderdojo'>CoderDojo とは? ☯️</h3>
+	<h3 id='coderdojo'>
+	  <a href='#coderdojo'>☯️</a>
+	  CoderDojo とは?
+	</h3>
 	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
 	<%= lazy_image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
 	
-	<h3 id='welcome'>まずは何から？ 🔰</h3>
+	<h3 id='welcome'>
+	  <a href='#welcome'>🔰</a>
+	  まずは何から？
+	</h3>
 	<p>初めての方を対象としたスライド資料やインタビュー動画があります。動画では CoderDojo の雰囲気も掴めてオススメです。</p>
 	<ul style='margin: 30px auto;'>
 	  <li>
@@ -69,10 +78,16 @@
 
 	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本の道場一覧', dojos_path %></a>や<%= link_to '近日開催の道場', events_path %>、もしくは<%= link_to '地図情報（DojoMap）', 'https://map.coderdojo.jp/' %> から最寄りの道場を探してみましょう!</p>
 
-	<h3 id='details'>もっと詳しく知りたい人へ 🧐</h3>
+	<h3 id='details'>
+	  <a href='#details'>🧐</a>
+	  もっと詳しく知りたい人へ
+	</h3>
 	<p>CoderDojo は書籍・新聞、Webメディアでも紹介されています。CoderDojo について紹介している記事や書籍を新しい順でご紹介します。興味のあるトピックがあればぜひ読んでみてください。</p>
 
-	<h4 id='newspapers' style='margin-top: 40px;'>📰 新聞・書籍</h4>
+	<h4 id='newspapers' style='margin-top: 40px;'>
+	  <a href='#newspapers'>📰</a>
+	  新聞・書籍
+	</h4>
 	<ul>
 	  <li>
 	    <p><a href="https://takadanobaba.keizai.biz/headline/883/">教育用コンピューター「micro:bit」1500台、全国の「コーダー道場」に寄贈 - 高田馬場経済新聞</a></p>
@@ -145,7 +160,10 @@
 	  </li>
 	</ul>
 
-	<h4 id='press-releases' style='margin-top: 40px;'>📜 Webメディア・プレスリリース</h4>
+	<h4 id='press-releases' style='margin-top: 40px;'>
+	  <a href='#press-releases'>📜</a>
+	  Webメディア・プレスリリース
+	</h4>
 	<ul>
 	  <li>
 	    <p><a href="https://prtimes.jp/main/html/rd/p/000000007.000038935.html">ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈</a></p>
@@ -199,13 +217,19 @@
 	<br>
 	<p>上記の他にも、一般社団法人 CoderDojo Japan が発表したプレスリリースや公式ニュースレターもあります。詳細は <%= link_to 'news.coderdojo.jp', news_url %> をご参照ください 📰</p>
 
-	<h2 id="learn" class="headline headline-kata">📚 学ぶ</h2>
+	<h2 id="learn" class="headline headline-kata">
+	  <a href='#learn'>📚</a>
+	  学ぶ
+	</h2>
 	<%= lazy_image_tag('/kata/learn.webp', alt: 'CoderDojo 梅田の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>CoderDojo は日本各地で<%= link_to '毎年 1,000 回以上', stats_path %>開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
 	<p>CoderDojo 関係者が制作した教材を中心にまとめてみたので、参加者や運営者、メンターなどのご参考になれば嬉しいです。</p>
 
-	<h3 id='learn-scratch'>🐱 Scratch 資料</h3>
+	<h3 id='learn-scratch'>
+	  <a href='#learn-scratch'>🐱</a>
+	  Scratch 資料
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='scratch-account'><a href="https://coderdojoowari.org/news/make-scratch-account/">【動画】Scratch アカウントの作成方法</a></h4>
@@ -269,7 +293,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='learn-microbit'>🎮 micro:bit 資料</h3>
+	<h3 id='learn-microbit'>
+	  <a href='#learn-microbit'>🎮</a>
+	  micro:bit 資料
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='microbit-curling'><a href="https://docs.google.com/presentation/d/1VQcY4dmkCata4YV0XyloHuf0_fbSirB9AEOQcj-NZcQ/edit">micro:bit カーリング ワークショップ</a></h4>
@@ -305,7 +332,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='learn-minecraft'>🛠 マインクラフト</h3>
+	<h3 id='learn-minecraft'>
+	  <a href='#learn-minecraft'>🛠</a>
+	  マインクラフト
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='learn-minecraft-cup-interview-0'><a href="https://minecraftcup.com/news/782/">Minecraftカップ取り組み事例：CoderDojo名護</a></h4>
@@ -337,7 +367,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='learn-basics'>🤖 電子工作、Web制作など</h3>
+	<h3 id='learn-basics'>
+	  <a href='#learn-basics'>🤖</a>
+	  電子工作、Web制作など
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='design-zoom'><a href="https://docs.google.com/presentation/d/e/2PACX-1vTuTnuBEH8X6Dyw6KrfuCkH2yeJA0_90_OkCddDAgCcChxMOfOOMReNixLVmIBkItkLKJXEG9b8hoCp/pub?loop=false">Zoomの使い方 - はじめてのWeb会議の参加方法</a></h4>
@@ -378,7 +411,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='learn-design'>🎨 イラスト、音声素材など</h3>
+	<h3 id='learn-design'>
+	  <a href='#learn-design'>🎨</a>
+	  イラスト、音声素材など
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='design-ninja-fuma'><a href='https://coderdojo-nishinomiya.info/coderdojo-nishinomiya-umeda-fuma/'>忍者イラスト「風魔 (ふうま)」について</a> (<a href='https://youtu.be/TWw1iokCXlk?t=437'>使用例</a>)</h4>
@@ -406,7 +442,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='learn-workshop'>👥 ワークショップ資料</h3>
+	<h3 id='learn-workshop'>
+	  <a href='#learn-workshop'>👥</a>
+	  ワークショップ資料
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='workshop-pokemon'><a href="/pokemon/workshop">プログラミングでポケモンをうごかしてみよう</a></h4>
@@ -434,14 +473,20 @@
 	  </li>
 	</ul>
 
-	<h2 id="challenge" class="headline headline-kata">🏆 腕試し</h2>
+	<h2 id="challenge" class="headline headline-kata">
+	  <a href='#challenge'>🏆</a>
+	  腕試し
+	</h2>
 	<%= lazy_image_tag('/kata/challenge.webp', alt: 'DojoCon Japan の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>プログラミングはやればやるほど日に日に力がついていきます。「プログラミングに少し慣れたかな」と感じたら、腕試しのつもりで<a href='#challenge-contents'>コンテスト</a>や<a href='#challenge-grants'>支援プログラム</a>に挑戦してみてはいかがでしょうか?</p>
 	<p>空手や柔道に大会があるように、プログラミング界隈にも全国の応募者が毎年「ワザ」を磨き合う場があります。海外のコンテストであれば、世界中の同世代と学び合う機会もあります 🤝✨</p>
 	<p>腕試しはワザを磨く近道です。以下のリストが「次の一歩」を踏み出すご参考になれば嬉しいです! 🏃💨</p>
 
-	<h3 id='challenge-contents'>🏅 コンテスト</h3>
+	<h3 id='challenge-contents'>
+	  <a href='#challenge-contents'>🏅</a>
+	  コンテスト
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='coolest-projects'><a href="https://coolestprojects.org/">Coolest Projects</a></h4>
@@ -535,7 +580,10 @@
 	  </li>
 	</ul>
 
-	<h3 id='challenge-grants'>🎫 支援プログラム</h3>
+	<h3 id='challenge-grants'>
+	  <a href='#challenge-grants'>🎫</a>
+	  支援プログラム
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='kuma-foundation'><a href="https://kuma-foundation.org/">クマ財団</a></h4>
@@ -587,14 +635,20 @@
 	  </li>
 	</ul>
 
-	<h2 id='startup' class="headline headline-kata">☯️ 立ち上げる</h2>
+	<h2 id='startup' class="headline headline-kata">
+	  <a href='#startup'>☯️</a>
+	  立ち上げる
+	</h2>
 	<%= lazy_image_tag('/kata/startup.webp', alt: 'CoderDojo 調布の様子', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>CoderDojo の参加者が自由に作品を創れるように、<strong>CoderDojo という「場」そのものを創ることもできます。</strong></p>
 	<p>とはいえ誰でも今すぐ名乗れるわけではありません。<a href="https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja">「CoderDojo」という国際商標</a>を使うためのルールを確認し、認可を得る必要があります。例えば CoderDojo では性別や人種を理由に参加拒否したり、参加者から料金を徴収することができません。もし会場費が掛かる場合であっても、募金やスポンサーなどで費用を工面する必要があります。</p>
 	<p>本項では CoderDojo の立ち上げに当たって、皆さんが感じる不安や懸念をなるべく払拭できるように、立ち上げまでの流れや、資金を工面する方法、申請に必要な情報、承認後に得られる<a href="#support">法人からの支援</a>などを説明していきます。</p>
 
-	<h3 id='startup-first-step'>🐾 立ち上げの最初の一歩</h3>
+	<h3 id='startup-first-step'>
+	  <a href='#startup-first-step'>🐾</a>
+	  立ち上げの最初の一歩
+	</h3>
 	<p>最初に CoderDojo の基本となるルール「CoderDojo 憲章」の内容を確認しましょう!</p>
 	<ul>
 	  <li><strong><%= link_to 'CoderDojo 憲章を見る', charter_path %></strong></li>
@@ -618,7 +672,10 @@
 	<br>
 	<p>具体的なイメージが掴めたら、準備・申請の手続きを進めていきましょう!</p>
 
-	<h3 id='startup-flowchart'>☯️ Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span></h3>
+	<h3 id='startup-flowchart'>
+	  <a href='#startup-flowchart'>☯️</a>
+	  Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span>
+	</h3>
 	<%= lazy_image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート', min: true) %>
 	<span><small>上記の流れに沿って立ち上げた事例の紹介記事もあります。</small></span>
 	<ul style="margin-bottom: 50px;">
@@ -626,7 +683,10 @@
 	  <li><small><a href='https://note.com/yuletideboy/n/nd3a0f463952e'>新規CoderDojoを申請してからZenのリストに掲載されるまで</a> @ <a href='https://twitter.com/Coderdojo_Hongo'>CoderDojoほんごう</a></small></li>
 	</ul>
 
-	<h3 id='startup-create-account'>🆕 アカウント登録から、申請までの流れ</h3>
+	<h3 id='startup-create-account'>
+	  <a href='#startup-create-account'>🆕</a>
+	  アカウント登録から、申請までの流れ
+	</h3>
 	<p>CoderDojo の申請には、大きく分けて次の3つのステップがあります。</p>
 	<ol style="margin: 30px auto;">
 	  <li>
@@ -687,7 +747,10 @@
 	<p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
 
 
-	<h2 id='support' class="headline headline-kata">🤝 支援・資料</h2>
+	<h2 id='support' class="headline headline-kata">
+	  <a href='#support'>🤝</a>
+	  支援・資料
+	</h2>
 	<%= lazy_image_tag('/kata/support.webp', alt: 'CoderDojo in Minecraft', min: true, style: 'margin-bottom: 30px') %>
 
 	<p><a href="/kata#startup">CoderDojo を立ち上げ</a>、承認された Dojo がスムーズに運営できるように、様々な支援・資料が用意されています。CoderDojo 運営者を対象とした<a href='#support-programs'>パートナー法人による支援</a>や、CoderDojo 関係者が作成した<a href='#support-docs'>運営者向け資料</a>が皆さんの Dojo 運営に役立てば嬉しいです 😌💖</p>
@@ -703,7 +766,10 @@
 	  </a>
 	</div>
 
-	<h3 id='support-programs' style='padding-top: 80px;'>🎁 パートナー法人からの支援</h3>
+	<h3 id='support-programs' style='padding-top: 80px;'>
+	  <a href='#support-programs'>🎁</a>
+	  パートナー法人からの支援
+	</h3>
 	<ul>
 	  <li>
 	    <h4 id='coderdojo-global-slack'>
@@ -830,7 +896,10 @@
 	<p>一般社団法人 CoderDojo Japan では様々な企業・団体との連携を承っています。全国の CoderDojo との協力・提携に興味ありましたら、下記ページをご参照してください。</p>
 	<p><strong><%= link_to '🤝 パートナーシップのご案内 - CoderDojo Japan', doc_path('about-partnership') %></strong></p>
 
-	<h3 id='support-docs' style='padding-top: 80px;'>📚 Dojo 運営者向け資料まとめ</h3>
+	<h3 id='support-docs' style='padding-top: 80px;'>
+	  <a href='#support-docs'>📚</a>
+	  Dojo 運営者向け資料まとめ
+	</h3>
 	<p><a href='#support-programs'>法人からの支援</a>だけでなく、CoderDojo コミュニティが CoderDojo コミュニティのために制作した資料もあります。皆さんの Dojo 運営にお役立てください 😉</p>
 	<br>
 	<ul>
@@ -960,16 +1029,37 @@
 	    <h4 id='doc-create-a-dojo'><%= link_to '地元で CoderDojo を始める', foundation_url('/ja-JP/start-a-dojo/') %></h4>
 	    <p>by <%= link_to 'CoderDojo Foundation', foundation_url %></p>
 	  </li>
+	  <li>
+	    <h4 id='doc-decadojo'><%= link_to 'DecaDojo', 'https://decadojo.coderdojo.jp/' %> <small>(地域の CoderDojo カンファレンス)</small></h4>
+	    <p>by 地域の有志の CoderDojo</p>
+	  </li>
+	  <li>
+	    <h4 id='doc-dojocon-japan'><%= link_to 'DojoCon Japan', 'https://dojocon.coderdojo.jp/' %> <small>(全国の CoderDojo カンファレンス)</small></h4>
+	    <p>by 全国の有志の CoderDojo</a>
+	  </li>
 	</ul>
 	<br>
 
-	<h3 id='references'>🌐 他、関連リソース</h3>
+	<h3 id='references'>
+	  <a href='#references'>📚</a>
+	  他、公式リソースなど
+	</h3>
 	<p>CoderDojo は国際的なコミュニティで、海外でも大きな輪が広がっています。ぜひ国内外の CoderDojo と繋がってみてください。</p>
 	<br>
-	<h4>英語リソース <span style="font-weight: normal; font-size: 14px;">(運営: CoderDojo Foundation)</span></h4>
+	<h4 id='references-english'>
+	  <a href='#references-english'>🌐</a>
+	  英語の公式リソース
+	  <span style="font-weight: normal; font-size: 14px;">
+	    (運営: <%= link_to 'CoderDojo Foundation', foundation_url('/en') %>)
+	  </span>
+	</h4>
 	<ul>
 	  <li>
-	    <p><%= link_to 'Webサイト', foundation_url('/') %> (coderdojo.com)</p>
+	    <p><%= link_to 'Web サイト', foundation_url('/en') %> (coderdojo.com)</p>
+	  </li>
+	  <li>
+	    <p><a href="https://help.coderdojo.com/">Help ページ</a> (気になる用語を検索して探せます。例: <a href='https://help.coderdojo.com/cdkb/s/global-search/Safeguarding'>Safeguarding</a>)</p>
+	    
 	  </li>
 	  <li>
 	    <p><%= link_to '世界の道場', zen_url %> (CoderDojo Zen)</p>
@@ -985,16 +1075,26 @@
 	  </li>
 	</ul>
 	<br>
-	<h4>日本語リソース <span style="font-weight: normal; font-size: 14px;">(運営: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)</span></h4>
+
+	<h4 id='references-japanese'>
+	  <a href='#references-japanese'>🗾</a>
+	  日本語の公式リソース
+	  <span style="font-weight: normal; font-size: 14px;">
+	    (運営: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)
+	  </span>
+	</h4>
 	<ul>
 	  <li>
-	    <p><%= link_to 'DojoCast', podcasts_path %> (Podcast)</p>
+	    <p><%= link_to 'DojoMap', 'https://map.coderdojo.jp/' %> (地図から Dojo を探す)</p>
 	  </li>
 	  <li>
-	    <p><%= link_to 'DojoLetter', news_path %> (Newsletter)</p>
+	    <p><%= link_to 'DojoCast', podcasts_path %> (対談形式の Podcast)</p>
 	  </li>
 	  <li>
-	    <p><%= link_to 'DojoChannel', 'https://www.youtube.com/CoderDojoJapan' %> (YouTube)</p>
+	    <p><%= link_to 'DojoLetter', news_path %> (毎月発刊の Newsletter)</p>
+	  </li>
+	  <li>
+	    <p><%= link_to 'CoderDojo Japan', 'https://youtube.com/CoderDojoJapan' %> (YouTube)</p>
 	  </li>
 	  <li>
 	    <p><%= link_to 'CoderDojo Japan', 'https://twitter.com/CoderDojoJapan' %> (Twitter)</p>
@@ -1007,7 +1107,10 @@
 	  </li>
 	</ul>
 
-	<h2 id='faq' class="headline headline-kata">📑 FAQ</h2>
+	<h2 id='faq' class="headline headline-kata">
+	  <a href='#faq'>📑</a>
+	  FAQ
+	</h2>
 	<%= lazy_image_tag('/kata/faq.webp', alt: '統計情報：参加者数の推移', min: true, style: 'margin-bottom: 30px;') %>
 
 	<p>よくある質問を本項にまとめています。ご参考になれば幸いです 😸</p>
@@ -1094,7 +1197,10 @@
 	</ul>
 	<br>
 
-	<h3 id='license'>✅ ライセンス</h3>
+	<h3 id='license'>
+	  <a href='#license'>✅</a>
+	  ライセンス
+	</h3>
 	<p>本ページの内容は「<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">表示 - 非営利 - 継承 4.0 国際 (CC BY-NC-SA 4.0)</a>」のもとで自由に共有・翻案することができます。詳細は <a href='https://github.com/coderdojo-japan/coderdojo.jp#5-license'>GitHub の README</a>をご参照ください。</p>
 	<p>本ページのリンク先のコンテンツについては、各コンテンツの著作権およびライセンスに従ってください。</p>
 	<br>
