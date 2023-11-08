@@ -1093,6 +1093,16 @@
   - micro:bit
   - Music Blocks
   - Swift
+- id: 313
+  order: '131113'
+  created_at: '2023-11-07'
+  name: 平和島
+  prefecture_id: 13
+  url: https://coderdojo-heiwajima.connpass.com/
+  logo: "/img/dojos/heiwajima.webp"
+  description: 大田区平和島で毎月開催
+  tags:
+  - Scratch
 - id: 17
   order: '131121'
   is_active: false
