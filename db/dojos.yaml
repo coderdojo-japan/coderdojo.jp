@@ -2838,6 +2838,20 @@
   - Scratch
   - Webサイト
   - Arduino
+- id: 314
+  order: '282031'
+  created_at: '2023-11-12'
+  name: 藤江
+  prefecture_id: 28
+  logo: "/img/dojos/fujie.webp"
+  url: https://note.com/coderdojofujie/
+  description: 明石市で不定期開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Swift
+  - JavaScript
+  - Python
 - id: 146
   order: '282057'
   created_at: '2018-04-24'
