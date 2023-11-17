@@ -21,6 +21,13 @@
 
 ### 以下、Dojo 情報まとめ ###
 
+# 新宿 (東京) - connpass の個人アカウントのため登録できない。グループアカウントにする必要がある。
+# cf. https://help.connpass.com/organizers/group
+#- dojo_id: 315
+#  name: connpass
+#  group_id: ???
+#  url: https://coderdojo-nishishinjuku.connpass.com/
+
 # 藤江 (兵庫)
 #- dojo_id: 314
 #  name: note
