@@ -1052,6 +1052,20 @@
   description: 新宿区で毎月開催
   tags:
   - Scratch
+- id: 315
+  order: '131041'
+  created_at: '2023-11-16'
+  name: 新宿
+  prefecture_id: 13
+  logo: "/img/dojos/default.webp"
+  url: https://connpass.com/user/coderdojo_okubo/open/
+  description: 新宿区で毎月開催
+  tags:
+  - Scratch
+  - Python
+  - Webサイト
+  - Arduino
+  - 電子工作
 - id: 302
   order: '131059'
   created_at: 2023-06-08
