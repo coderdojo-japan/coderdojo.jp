@@ -2,6 +2,18 @@ class StatsController < ApplicationController
 
   # GET /stats[.json]
   def show
+
+    # GET /stats.json
+    # NOTE: Draft API that returns required-to-share data upon requests from other repos.
+    if request.url.end_with? '.json'
+      @stats_data = [
+        active_dojos:   Dojo.active_dojos_count,
+      ]
+
+      render json: @stats_data
+      return
+    end
+
     # 2012年1月1日〜2022年12月31日までの集計結果
     period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2022).end_of_year
     stats         = Stat.new(period)
@@ -102,12 +114,3 @@ end
     #       %td= num
     #     /%td= @participants.values.sum
 
-  # NOTE: Rough draft. Need to be reconsidered.
-  # GET /stats.json
-  #def api
-  #  @stats_data = [
-  #    active_dojos: Dojo.active_dojos_count,
-  #  ]
-  #
-  #  render json: @stats_data
-  #end
