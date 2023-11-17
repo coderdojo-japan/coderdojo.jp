@@ -6,9 +6,9 @@ class StatsController < ApplicationController
     # GET /stats.json
     # NOTE: Draft API that returns required-to-share data upon requests from other repos.
     if request.url.end_with? '.json'
-      @stats_data = [
+      @stats_data = {
         active_dojos:   Dojo.active_dojos_count,
-      ]
+      }
 
       render json: @stats_data
       return
