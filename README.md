@@ -193,13 +193,15 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 現在提供中の API 一覧です。利用例のある API は互換性を意識して開発されるため、比較的使いやすいです。ただし予告なく破壊的な変更が行われる可能性もあるため、あらかじめご了承いただけると幸いです 🚧
 
-- **Podcast API: https://coderdojo.jp/podcasts.rss**
+- **Podcasts API: https://coderdojo.jp/podcasts.rss**
   - 利用例: [📻 Apple Podcasts - DojoCast](https://podcasts.apple.com/us/podcast/dojocast/id1458122473) (関連PR: [coderdojo.jp#387](https://github.com/coderdojo-japan/coderdojo.jp/pull/387))
-- **Dojo API: https://coderdojo.jp/dojos.json**
+- **Dojos API: https://coderdojo.jp/dojos.json**
   - 利用例: [📰 DojoNews - GitHub](https://news.coderdojo.jp/category/news/) (関連PR: [coderdojo.jp#1433](https://github.com/coderdojo-japan/coderdojo.jp/pull/1433))
-- **Event API: https://coderdojo.jp/events.json**
+- **Events API: https://coderdojo.jp/events.json**
   - 利用例: [🗾 DojoMap - GitHub](https://github.com/coderdojo-japan/map.coderdojo.jp#readme) (関連PR: [map.coderdojo.jp#10](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/10))
   - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [coderdojo.jp#1547](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
+- **Stats API: https://coderdojo.jp/stats.json**
+  - 利用例: [☯️ DojoCon Japan](https://github.com/coderdojo-japan/dojocon.coderdojo.jp#readme) (関連PR: [dojocon.coderdojo.jp#1](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/pull/1))
 
 なお本サイト内 DB の各テーブルおよびそのデータ（一般公開部分のみ）は、以下のファイルからご確認いただけます。
 
