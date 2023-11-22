@@ -202,6 +202,8 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [coderdojo.jp#1547](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
 - **Stats API: https://coderdojo.jp/stats.json**
   - 利用例: [☯️ DojoCon Japan](https://github.com/coderdojo-japan/dojocon.coderdojo.jp#readme) (関連PR: [dojocon.coderdojo.jp#1](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/pull/1))
+  - 利用例: [☯️ DecaDojo](https://github.com/coderdojo-japan/decadojo.coderdojo.jp#readme) (関連PR: [dojocon.coderdojo.jp#18](https://github.com/coderdojo-japan/decadojo.coderdojo.jp/pull/18))
+  - 利用例: [:octocat: GitHub - CoderDojo Japan](https://github.com/coderdojo-japan) ([関連コミット](https://github.com/coderdojo-japan/.github/compare/f2ef92..231027))
 
 なお本サイト内 DB の各テーブルおよびそのデータ（一般公開部分のみ）は、以下のファイルからご確認いただけます。
 
