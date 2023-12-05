@@ -1936,6 +1936,20 @@
   tags:
   - Scratch
   - micro:bit
+- id: 316
+  order: '202053'
+  created_at: '2023-12-05'
+  name: 飯田
+  prefecture_id: 20
+  url: https://coderdojoiida.github.io/
+  logo: "/img/dojos/default.webp"
+  description: 飯田市で第2土曜開催
+  tags:
+  - Scratch
+  - micro.bit
+  - Webサイト
+  - Minecraft
+  - M5Stack
 - id: 94
   order: '202061'
   is_active: false
