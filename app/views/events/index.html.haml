@@ -25,7 +25,11 @@
 
   - unless @pokemon_events.blank?
     %p.event-notice{style: "margin-top: 30px; margin-bottom: 60px;"}
-      🆕 ポケモン・ワークショップ開催中！
+      🆕
+      \ 
+      %a{href: pokemon_workshop_path }<>
+        ポケモン・ワークショップ
+      開催中！
       %br
       - @pokemon_events.each do |event|
         %a{href: "##{event.dojo_event_service.dojo.prefecture.name}"}
