@@ -5124,3 +5124,25 @@
   event_id:
   participants: 4
   evented_at: 2023/09/03 10:00
+
+# 2023/10/01 - 2023/10/31
+- dojo_id: 296
+  event_id:
+  participants: 4
+  evented_at: 2023/10/22 10:00
+- dojo_id: 269
+  event_id:
+  participants: 5
+  evented_at: 2023/10/09 13:00
+- dojo_id: 131
+  event_id:
+  participants: 0
+  evented_at: 2023/10/01 10:00
+- dojo_id: 83
+  event_id:
+  participants: 5
+  evented_at: 2023/10/1 10:00
+- dojo_id: 25
+  event_id:
+  participants: 8
+  evented_at: 2023/10/29 10:00
