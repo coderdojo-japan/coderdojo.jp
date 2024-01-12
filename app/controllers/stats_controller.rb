@@ -14,8 +14,8 @@ class StatsController < ApplicationController
       return
     end
 
-    # 2012年1月1日〜2022年12月31日までの集計結果
-    period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2022).end_of_year
+    # 2012年1月1日〜2023年12月31日までの集計結果
+    period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2023).end_of_year
     stats         = Stat.new(period)
 
     # 推移グラフ
@@ -113,4 +113,3 @@ end
     #     - @participants.each_value do |num|
     #       %td= num
     #     /%td= @participants.values.sum
-
