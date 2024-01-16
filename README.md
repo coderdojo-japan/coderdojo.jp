@@ -33,8 +33,9 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 3. 新機能の開発やデザインを改善する場合 ([» 詳細を見る](#3-新機能の開発やデザインを改善する))
    - 必要なもの: Ruby on Rails + PostgreSQL などの各種開発環境
 
-**ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨 
 
+> [!TIP]
+> **ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨 
 
 
 <div id='howto-update-dojo'></div>
@@ -53,7 +54,9 @@ Dojo 情報は次の手順で簡単に更新できます。
 
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
-https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
+
+> [!NOTE]
+> https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
 
 <div id='howto-update-kata'></div>
@@ -112,6 +115,8 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
 <div id='howto-develop-docker'></div>
 
+<br>
+
 ### :whale: Docker を利用したセットアップ方法
 
 上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
@@ -128,6 +133,8 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 
 
 <div id='howto-develop-ci'></div>
+
+<br>
 
 ### :rocket: CI/Deploy 構成
 
@@ -149,6 +156,11 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
    - 例: デプロイ関連のログは [Heroku Activity Logs](https://dashboard.heroku.com/apps/coderdojo-japan/activity) に集約させ、誰でもアクセスできる状態にしない
 2. [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase) を使い、本番環境の安定性を高める
    - 例: Heroku デプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
+
+
+<div id='howto-develop-tasks'></div>
+
+<br>
 
 ### :gem: CI で実行される各種 Ruby スクリプト (Rake タスク)
 
