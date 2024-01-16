@@ -252,6 +252,8 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 <div id='history'></div>
 
+<br>
+
 ### :scroll: Development History & Contributors
 
 - **2012:** CoderDojo Japan started in [Facebook Group](https://www.facebook.com/groups/coderdojo.jp/about/)
