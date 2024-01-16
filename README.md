@@ -266,6 +266,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - **2016-now:** [coderdojo.jp](https://coderdojo.jp/) is sustainably maintained and developed by [YassLab Inc.](https://yasslab.jp/)
   - CoderDojo Japan has been incorporated and approved [@YassLab](https://github.com/YassLab) team as one of official partners for [tons of works](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors).
   - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval from CDJ board members. See [#References](#他開発に関する資料) and contributions (['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors), ['web'](https://github.com/coderdojo-japan/web/graphs/contributors), and ['coderdojo.jp'](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors)) for their continuous efforts on development.
+  <br><br>
   [![YassLab Logo](https://yasslab.jp/img/logos/800x200.png)](https://yasslab.jp/)
 
 
@@ -280,3 +281,4 @@ This web application is developed with many other brilliant works! :sparkling_he
 You can check out them and our works with associated licenses from [LICENSE.md](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/LICENSE.md). :wink:
 
 Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
+
