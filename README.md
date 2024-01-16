@@ -282,3 +282,4 @@ You can check out them and our works with associated licenses from [LICENSE.md](
 
 Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
 
+[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/coderdojo-japan_mix-cover.webp)](https://coderdojo.jp/)
