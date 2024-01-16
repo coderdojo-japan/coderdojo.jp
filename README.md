@@ -34,8 +34,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
    - 必要なもの: Ruby on Rails + PostgreSQL などの各種開発環境
 
 
-> [!TIP]
-> **ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨 
+**ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨 
 
 
 <div id='howto-update-dojo'></div>
@@ -224,6 +223,8 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 
 <div id='api'></div>
+
+<br>
 
 ### 🤝 API
 
