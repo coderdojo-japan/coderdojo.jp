@@ -1,4 +1,4 @@
-[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/cover_rounded.png)](https://coderdojo.jp/)
+[![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/cover_rounded.webp)](https://coderdojo.jp/)
 
 # CoderDojo Japan
 
@@ -281,5 +281,7 @@ This web application is developed with many other brilliant works! :sparkling_he
 You can check out them and our works with associated licenses from [LICENSE.md](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/LICENSE.md). :wink:
 
 Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
+
+<br>
 
 [![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/coderdojo-japan_mix-cover.webp)](https://coderdojo.jp/)
