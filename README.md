@@ -26,11 +26,11 @@ CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
 
-1. Dojo 情報を更新する場合 ([» 詳細を見る](#1-dojo-情報を更新する))
+1. Dojo 情報を更新する場合 ([» 詳細を見る](#howto-update-dojo))
    - 必要なもの: ブラウザ + GitHub アカウント
-2. [CoderDojo Kata](https://coderdojo.jp/kata) を更新する場合 ([» 詳細を見る](#2-kata-情報を更新する))
+2. [CoderDojo Kata](https://coderdojo.jp/kata) を更新する場合 ([» 詳細を見る](#howto-update-kata))
    - 必要なもの: ブラウザ + GitHub アカウント
-3. 新機能の開発やデザインを改善する場合 ([» 詳細を見る](#3-新機能の開発やデザインを改善する))
+3. 新機能の開発やデザインを改善する場合 ([» 詳細を見る](#howto-develop))
    - 必要なもの: Ruby on Rails + PostgreSQL などの各種開発環境
 
 
