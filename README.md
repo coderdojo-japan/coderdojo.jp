@@ -6,6 +6,9 @@
 
 一般社団法人 CoderDojo Japan の公式サイトです。[Ruby on Rails](http://rubyonrails.org/) で実装されています。本ページでは、トップページに掲載されている Dojo 情報を更新する方法や、開発環境のセットアップ方法などをまとめています。
 
+
+<div id='signup'></div>
+
 <br>
 
 ## :beginner: Dojo を掲載するには?
@@ -13,6 +16,9 @@
 CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援プログラム](https://coderdojo.jp/kata#support)をご利用することができます。[coderdojo.jp](https://coderdojo.jp) への掲載方法も載っていますので、詳細は [CoderDojo Kata](https://coderdojo.jp/kata#support) をご確認ください。
 
 [![CoderDojo Kata - 支援](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/public/img/kata_support_ss.png?raw=true)](https://coderdojo.jp/kata#support)
+
+
+<div id='howto'></div>
 
 <br>
 
@@ -31,6 +37,8 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 
 
 
+<div id='howto-update-dojo'></div>
+
 <br>
 
 ## 1. Dojo 情報を更新する
@@ -46,6 +54,9 @@ Dojo 情報は次の手順で簡単に更新できます。
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
 https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
+
+
+<div id='howto-update-kata'></div>
 
 <br>
 
@@ -76,6 +87,9 @@ CMS を利用している背景や技術仕様などについては次のスラ�
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 -->
 
+
+<div id='howto-develop'></div>
+
 <br>
 
 ## 3. 新機能の開発やデザインを改善する
@@ -96,6 +110,8 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
 
+<div id='howto-develop-docker'></div>
+
 ### :whale: Docker を利用したセットアップ方法
 
 上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
@@ -110,6 +126,8 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
+
+<div id='howto-develop-ci'></div>
 
 ### :rocket: CI/Deploy 構成
 
@@ -173,6 +191,9 @@ CMS enables wider people to contribute to editing contents, but on the other han
 We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are not required in development. If you find any problem that needs them report it to [GitHub Issues](https://github.com/coderdojo-japan/coderdojo.jp/issues).
 -->
 
+
+<div id='howto-develop-docs'></div>
+
 <br>
 
 ## 4. 他、開発に関する資料
@@ -188,6 +209,9 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - [2018年 運用目線で見る coderdojo.jp 開発](https://yasslab.jp/ja/news/coderdojo-japan-2018)
 - [CoderDojo Japan の各種機能と実装について【2017年版】 - Qiita](https://qiita.com/yasulab/items/1d12e6b295c0a9e577f1)
 - [CoderDojo Japan のバックエンドを刷新しました【2016年】](https://coderdojo.jp/docs/post-backend-update-history)
+
+
+<div id='api'></div>
 
 ### 🤝 API
 
@@ -212,6 +236,9 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - Event データ (の情報取得元): [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
   - :memo: １つの Dojo が複数のイベント管理サービスを使う事例もあるため [`Dojo has_many DojoEventServices`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/app/models/dojo.rb) となっています。
 
+
+<div id='history'></div>
+
 ### :scroll: Development History & Contributors
 
 - **2012:** CoderDojo Japan started in [Facebook Group](https://www.facebook.com/groups/coderdojo.jp/about/)
@@ -225,6 +252,10 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - CoderDojo Japan has been incorporated and approved [@YassLab](https://github.com/YassLab) team as one of official partners for [tons of works](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors).
   - From then on, [YassLab Inc.](https://yasslab.jp/) maintains and develops [coderdojo.jp](https://coderdojo.jp/) with official approval from CDJ board members. See [#References](#他開発に関する資料) and contributions (['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors), ['web'](https://github.com/coderdojo-japan/web/graphs/contributors), and ['coderdojo.jp'](https://github.com/coderdojo-japan/coderdojo.jp/graphs/contributors)) for their continuous efforts on development.
   [![YassLab Logo](https://yasslab.jp/img/logos/800x200.png)](https://yasslab.jp/)
+
+
+
+<div id='license'></div>
 
 <br>
 
