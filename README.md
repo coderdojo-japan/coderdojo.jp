@@ -1,6 +1,6 @@
 [![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/cover_rounded.webp)](https://coderdojo.jp/)
 
-# CoderDojo Japan
+# :yin_yang:️ CoderDojo Japan 公式Webサイトへようこそ！
 
 [![Build Status](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/test.yml/badge.svg)](https://github.com/coderdojo-japan/coderdojo.jp/actions)
 
