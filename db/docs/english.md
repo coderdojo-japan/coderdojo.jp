@@ -1,5 +1,7 @@
 # ☯️  CoderDojo Japan Association
 
+This page explains about the CoderDojo community, the community in Japan, and the CoderDojo Japan Association. Hope this page is helpful, especially for English speakers.
+
 <div style="padding: 0px 0px;">
   <a href='https://map.coderdojo.jp/'>
     <img class="lazyload" loading='lazy' alt='CoderDojo Map in Japan'
