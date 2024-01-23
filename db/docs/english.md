@@ -72,6 +72,15 @@ With the big support from partners we keep contributing to the CoderDojo communi
    src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
 </a>
 
+## 📚 References {#references}
+
+- For more information, see the following articles on CoderDojo Japan Association.
+  - [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
+  - [CoderDojo - Our National Partners](https://coderdojo.com/en/partner-network#our-national-partners)
+  - [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
+  - [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)
+  - [CoderDojo - Co-founder of CoderDojo Japan](https://coderdojo.com/2016/03/30/coderdojo-heroes-yohei-yasukawa-co-founder-of-coderdojo-japan/)
+  - [CoderDojo - What’s happening at DojoCon Japan 2017](https://coderdojo.com/2017/11/02/whats-happening-at-dojocon-japan-2017/)
 
 <style type="text/css">
   section.doc h1 {
