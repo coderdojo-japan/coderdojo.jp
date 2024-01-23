@@ -38,6 +38,7 @@ Rails.application.routes.draw do
 
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
+  get "/english"          => "docs#show", id: 'english'
   get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
 
