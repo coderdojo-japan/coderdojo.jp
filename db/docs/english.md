@@ -55,7 +55,7 @@ As the CoderDojo community in Japan grew, the demand from companies to support t
 
 <div style="padding: 10px 0px;">
   <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
-   src='/spinner.svg' data-src='coderdojo-japan-2016_rect.png' />
+   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
 </div>
 
 <br>

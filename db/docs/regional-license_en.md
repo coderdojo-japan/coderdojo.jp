@@ -1,8 +1,19 @@
 # 🌐 CoderDojo Regional License
 <center><small>(本契約書は、契約当時の写しとなります。<a href="regional-license">日本語の訳文を読む</a>)</small></center>
-<br/>
 
-Note: The below license agreement will be entered into with all registered regional or national CoderDojo charities. The license agreement will be used as a basic MOU (Memorandum Of Understanding) which will be entered into with associations or informal groups representing a region.
+<div style="padding: 30px 0px;">
+  <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
+   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
+</div>
+
+<blockquote>
+  <p style="font-size: 80%">
+    📝
+    Note: The below license agreement will be entered into with all registered regional or national CoderDojo charities. The license agreement will be used as a basic MOU which will be entered into with associations or informal groups representing a region.
+  </p>
+</blockquote>
+
+<br>
 
 ## Regional License for Japan
 
