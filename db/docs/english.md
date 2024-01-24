@@ -43,7 +43,7 @@ Like in other countires, the CoderDojo community in Japan has been growing stead
 
 <div>
   <script defer class="speakerdeck-embed" data-slide="1" data-id="cbe1df65074d4777a19c5f15c5bf93e9" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-  <center>Slides presented at <a href='https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/'>Scratch Conference Europe</a></center>
+  <center>📜 Slides presented at <a href='https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/'>Scratch Conference Europe</a></center>
 </div>
 
 <br>
