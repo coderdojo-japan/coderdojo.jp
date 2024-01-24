@@ -1,6 +1,6 @@
 # ☯️  CoderDojo Japan Association
 
-This page provides information about the [CoderDojo community](#about), [its growth in Japan](#japan), and the [CoderDojo Japan Association](#association). We hope this page will be particularly helpful for English speakers.
+This page provides information about the [CoderDojo community](#about), [its growth in Japan](#japan), and the [CoderDojo Japan Association](#association). We hope this page will be helpful for English speakers.
 
 <div style="padding-top: 30px;">
   <a href='https://map.coderdojo.jp/'>
