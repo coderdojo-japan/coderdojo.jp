@@ -60,12 +60,22 @@ As the CoderDojo community in Japan grew, the demand from companies to support t
 
 <br>
 
-Since incorporated, as one of [the official national partners](https://coderdojo.com/en/partner-network), we have continued to build good relationships with corporate partners. There are now 25 partners such as [The Pokémon Foundation](https://www.pokemon-foundation.or.jp/news/5/) and [Micro:bit Educational Foundation](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/).
+Since incorporated, as one of [the official national partners](https://coderdojo.com/en/partner-network), we have continued to build good relationships with corporate partners. There are now 25+ partners such as [The Pokémon Foundation](https://www.pokemon-foundation.or.jp/news/5/) and [Micro:bit Educational Foundation](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/).
 
-<div style="padding: 10px 0px;">
-  <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
-   src='/spinner.svg' data-src='coderdojo-japan-partners.png' />
+<div style="padding: 20px 0px;">
+  <a href='https://www.pokemon-foundation.or.jp/news/5/'>
+    <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
+     src='/spinner.svg' data-src='/coderdojo-japan-partners.png' />
+  </a>
 </div>
+
+<div style="padding: 20px 0px;">
+  <a href='/podcasts/30'>
+    <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
+     src='/spinner.svg' data-src='/podcasts/30.png' />
+  </a>
+</div>
+
 
 <br>
 
