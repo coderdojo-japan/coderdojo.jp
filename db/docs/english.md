@@ -10,7 +10,7 @@ This page explains about the CoderDojo community, the community in Japan, and th
 </div>
 
 
-## ☯️ What is CoderDojo? {#about}
+## [☯️](#about) What is CoderDojo? {#about}
 
 [CoderDojo](https://coderdojo.com/en/about) is the community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)) in 2011, it gradually spreads out all over the world. And it is now over 100 countries, including Japan. 🗾
 
@@ -22,7 +22,7 @@ This page explains about the CoderDojo community, the community in Japan, and th
 
 <br>
 
-## 🗾 CoderDojo in Japan {#japan}
+## [🗾](#japan) CoderDojo community in Japan {#japan}
 
 In the early days of CoderDojo, when its size was less than 10 countries and 100 dojos, the first dojo was born in [OpenSource Cafe](https://medium.com/opensource-cafe) in 2012.
 
@@ -46,6 +46,8 @@ As well as other countires the CoderDojo community in Japan gradually grows year
 </div>
 
 <br>
+
+## [🏢](#association) CoderDojo Japan Association {#association}
 
 With the grow of CoderDojo community in Japan, demands from companies to support the community are also increased. To meet the demands, with [the approval of CoderDojo Foundation](/docs/regional-license_en), we founded the CoderDojo Japan Association in 2016.
 
@@ -72,7 +74,7 @@ With the big support from partners we keep contributing to the CoderDojo communi
    src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
 </a>
 
-## 📚 References {#references}
+## [📚](#references) References {#references}
 
 For more information, see the following articles on CoderDojo Japan Association.
 
@@ -85,7 +87,7 @@ For more information, see the following articles on CoderDojo Japan Association.
 
 
 
-## 📺 Casual Meetup with Guests {#meetups}
+## [📺](#meetups) Casual Meetup with Guests {#meetups}
 
 We sometimes host guests from overseas in our co-working and shared-office space in Tokyo, [CASE Shinjuku](https://case-shinjuku.com/english). Here are the past meetups that you can look back on [YouTube](https://www.youtube.com/coderdojojapan).
 
