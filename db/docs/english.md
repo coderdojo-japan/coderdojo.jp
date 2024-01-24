@@ -96,12 +96,13 @@ With substantial support from our partners, we continue to contribute to the Cod
 
 ## [<i class="fa-solid fa-books"></i>](#references) References {#references}
 
-For more detailed information, please refer to the following reports and articles on the CoderDojo Japan Association.
+For more detailed information, please refer to the following reports, articles, and videos on the CoderDojo community in Japan.
 
 - 🤝 [Social Contribution Activities (2021-2023) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/2021-2023.html)
 - 🤝 [micro:bit - Children add tech to creative problem-solving in Japan](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/)
 - 📻 [Podcast#12 - The 1st CoderDojo and the Global Vision](/podcasts/12)
 - 📻 [Podcast#10 - Programming is Beyond a Job For Me](/podcasts/10)
+- 📺 [YouTube - Getting Creative with Scratch (Scratch Foundation)](https://www.youtube.com/watch?v=0nHAUzV3VHw)
 - 📰 [Nikkei Asia - Kids are coding it for themselves (Facebook)](https://www.facebook.com/nikkeiasia/photos/a.208198422599445/321410134611606)
 - 📰 [The Nation - Free coding sessions to move Pokemon characters surges in popularity](https://www.nationthailand.com/international/40005112)
 - ☯️ [CoderDojo - CoderDojo and Raspberry Pi Join Forces](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/)
