@@ -54,8 +54,10 @@ Like in other countires, the CoderDojo community in Japan has been growing stead
 As the CoderDojo community in Japan grew, the demand from companies to support the community also increased. To meet this demand, and with [the approval of the CoderDojo Foundation](/docs/regional-license_en), we founded the CoderDojo Japan Association in 2016.
 
 <div style="padding: 10px 0px;">
-  <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
-   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
+  <a href='/docs/regional-license_en'>
+    <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
+     src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
+  </a>
 </div>
 
 <br>
