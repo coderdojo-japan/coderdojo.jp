@@ -60,7 +60,7 @@ As the CoderDojo community in Japan grew, the demand from companies to support t
 
 <br>
 
-Since incorporated, as one of [official national partners](https://coderdojo.com/en/partner-network), we continue building good relationship with corporate partners, and there are now 25 partners including [The Pokémon Foundation](https://www.pokemon-foundation.or.jp/news/5/).
+Since incorporated, as one of [the official national partners](https://coderdojo.com/en/partner-network), we have continued to build good relationships with corporate partners. There are now 25 partners such as [The Pokémon Foundation](https://www.pokemon-foundation.or.jp/news/5/) and [Micro:bit Educational Foundation](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/).
 
 <div style="padding: 10px 0px;">
   <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
@@ -69,7 +69,7 @@ Since incorporated, as one of [official national partners](https://coderdojo.com
 
 <br>
 
-With the big support from partners we keep contributing to the CoderDojo community in Japan and the world. If you would like to drop by a dojo nearby, check the following map to find out. And if you are thiking to support dojos in Japan on behalf of companies, feel free to contact `info@coderdojo.jp` with any ideas for the community. Thanks for reading!! 🙏✨
+With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map below to find one. Additionally, if you represent a company interested in supporting dojos in Japan, feel free to contact us at `info@coderdojo.jp` with any ideas for the community. Thanks for reading! 🙏✨
 
 <a href='https://map.coderdojo.jp/'>
   <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
@@ -79,12 +79,13 @@ With the big support from partners we keep contributing to the CoderDojo communi
 
 ## [<i class="fa-solid fa-books"></i>](#references) References {#references}
 
-For more information, see the following reports/articles on CoderDojo Japan Association.
+For more detailed information, please refer to the following reports and articles on the CoderDojo Japan Association.
 
 - 🤝 [Social Contribution Activities (2021-2023) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/2021-2023.html)
 - 🤝 [micro:bit - Children add tech to creative problem-solving in Japan](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/)
 - 📻 [Podcast#12 - The 1st CoderDojo and the Global Vision](/podcasts/12)
 - 📻 [Podcast#10 - Programming is Beyond a Job For Me](/podcasts/10)
+- ☯️ [CoderDojo - CoderDojo and Raspberry Pi Join Forces](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/)
 - ☯️ [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
 - ☯️ [CoderDojo - Our National Partners](https://coderdojo.com/en/partner-network#our-national-partners)
 - ☯️ [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
@@ -95,7 +96,7 @@ For more information, see the following reports/articles on CoderDojo Japan Asso
 
 ## [<i class="fa-brands fa-youtube"></i>](#meetups) Casual Meetup with Guests {#meetups}
 
-We sometimes host guests from overseas in our co-working and shared-office space in Tokyo, [CASE Shinjuku](https://case-shinjuku.com/english). Here are the past meetups that you can look back on [YouTube](https://www.youtube.com/coderdojojapan).
+We occasionally host guests from overseas at our co-working and shared-office space, [CASE Shinjuku](https://case-shinjuku.com/english), in Tokyo. You can look back on our past meetups on [YouTube](https://www.youtube.com/coderdojojapan).
 
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
