@@ -69,12 +69,17 @@ Since incorporated, as one of [the official national partners](https://coderdojo
 
 <br>
 
-With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map below to find one. Additionally, if you represent a company interested in supporting dojos in Japan, feel free to contact us at `info@coderdojo.jp` with any ideas for the community. Thanks for reading! 🙏✨
+With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map named [DojoMap](https://map.coderdojo.jp/) below to find one. Additionally, if you represent a company interested in supporting dojos in Japan, feel free to contact us at `info@coderdojo.jp` with any ideas for the community. Thanks for reading! 🙏✨
 
 <a href='https://map.coderdojo.jp/'>
   <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
    src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
 </a>
+<center>
+  <a href='https://map.coderdojo.jp/'>
+    &#8811; Check out DojoMap
+  </a>
+</center>
 
 
 ## [<i class="fa-solid fa-books"></i>](#references) References {#references}
