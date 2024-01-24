@@ -15,8 +15,8 @@ This page explains about the CoderDojo community, the community in Japan, and th
 [CoderDojo](https://coderdojo.com/en/about) is the community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)) in 2011, it gradually spreads out all over the world. And it is now over 100 countries, including Japan. 🗾
 
 <div class="home-point-video">
-  <iframe width="100%" class='lazyload' frameborder="0"
-   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  <iframe class='lazyload' frameborder="0"
+   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
    data-src="https://www.youtube.com/embed/7XQOVKd-vVI?rel=0" allowfullscreen></iframe>
 </div>
 
@@ -74,13 +74,52 @@ With the big support from partners we keep contributing to the CoderDojo communi
 
 ## 📚 References {#references}
 
-- For more information, see the following articles on CoderDojo Japan Association.
-  - [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
-  - [CoderDojo - Our National Partners](https://coderdojo.com/en/partner-network#our-national-partners)
-  - [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
-  - [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)
-  - [CoderDojo - Co-founder of CoderDojo Japan](https://coderdojo.com/2016/03/30/coderdojo-heroes-yohei-yasukawa-co-founder-of-coderdojo-japan/)
-  - [CoderDojo - What’s happening at DojoCon Japan 2017](https://coderdojo.com/2017/11/02/whats-happening-at-dojocon-japan-2017/)
+For more information, see the following articles on CoderDojo Japan Association.
+
+- - [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
+- - [CoderDojo - Our National Partners](https://coderdojo.com/en/partner-network#our-national-partners)
+- - [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
+- - [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)
+- - [CoderDojo - Co-founder of CoderDojo Japan](https://coderdojo.com/2016/03/30/coderdojo-heroes-yohei-yasukawa-co-founder-of-coderdojo-japan/)
+- - [CoderDojo - What’s happening at DojoCon Japan 2017](https://coderdojo.com/2017/11/02/whats-happening-at-dojocon-japan-2017/)
+
+
+
+## 📺 Casual Meetup with Guests {#meetups}
+
+We sometimes host guests from overseas in our co-working and shared-office space in Tokyo, [CASE Shinjuku](https://case-shinjuku.com/english). Here are the past meetups that you can look back on [YouTube](https://www.youtube.com/coderdojojapan).
+
+<div class="home-point-video">
+  <iframe class='lazyload' frameborder="0"
+   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0"
+   allowfullscreen></iframe>
+</div>
+
+<div class="home-point-video">
+  <iframe src="https://www.youtube.com/embed/2Ub1Ny87hl0?list=PL94GDfaSQTmL1ne3U8tRoz9IavydP7onH" title="Penang Science Cluster Meets CoderDojo Japan by Aimy Lee (Talk) - Code Club &amp; CoderDojo meetup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="home-point-video">
+  <iframe src="https://www.youtube.com/embed/8NoL2uRk0PY?list=PL94GDfaSQTmK6xzLNsBMx8gkKrT2HiZ9D&start=60" title="The 1st CoderDojo and the Global Vision - @liaonet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="home-point-video">
+  <iframe  src="https://www.youtube.com/embed/2YxzgzGonD0?list=PL94GDfaSQTmJZFLMQ3YH9CE2liETLi0Uq" title="Meetup with Zach, founder of Hack Club" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="home-point-video">
+  <iframe src="https://www.youtube.com/embed/Kvc6KhOzHmY?list=PL94GDfaSQTmLpQpm8R7nHpwVKFNLdnZFU" title="Ross &amp; James (1/5): CoderDojo A Global Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+
+<div class='text-center' style='margin-top: 0px; margin-left: -17px;'>
+  <div class='g-ytsubscribe'
+   data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default">
+    <script src='https://apis.google.com/js/platform.js'></script>
+  </div>
+</div>
+
 
 <style type="text/css">
   section.doc h1 {
