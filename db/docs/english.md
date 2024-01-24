@@ -102,6 +102,8 @@ For more detailed information, please refer to the following reports and article
 - 🤝 [micro:bit - Children add tech to creative problem-solving in Japan](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/)
 - 📻 [Podcast#12 - The 1st CoderDojo and the Global Vision](/podcasts/12)
 - 📻 [Podcast#10 - Programming is Beyond a Job For Me](/podcasts/10)
+- 📰 [Nikkei Asia - Kids are coding it for themselves (Facebook)](https://www.facebook.com/nikkeiasia/photos/a.208198422599445/321410134611606)
+- 📰 [The Nation - Free coding sessions to move Pokemon characters surges in popularity](https://www.nationthailand.com/international/40005112)
 - ☯️ [CoderDojo - CoderDojo and Raspberry Pi Join Forces](https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/)
 - ☯️ [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
 - ☯️ [CoderDojo - Our National Partners](https://coderdojo.com/en/partner-network#our-national-partners)
