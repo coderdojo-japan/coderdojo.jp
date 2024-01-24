@@ -12,7 +12,7 @@ This page provides information about the [CoderDojo community](#about), [its gro
 
 ## [<i class="fa-solid fa-yin-yang"></i>️](#about) What is CoderDojo? {#about}
 
-[CoderDojo](https://coderdojo.com/en/about) is the community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)) in 2011, it gradually spreads out all over the world. And it is now over 100 countries, including Japan. 🗾
+[CoderDojo](https://coderdojo.com/en/about) is a global community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo session took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)), in 2011, it has gradually expanded worldwide. Now, CoderDojo is present inover 100 countries, including Japan. 🗾
 
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
@@ -25,7 +25,7 @@ This page provides information about the [CoderDojo community](#about), [its gro
 
 ## [🗾](#japan) CoderDojo community in Japan {#japan}
 
-In the early days of CoderDojo, when its size was less than 10 countries and 100 dojos, the first dojo was born in [OpenSource Cafe](https://medium.com/opensource-cafe) in 2012.
+In the early days of CoderDojo, when it was present in fewer than 10 countries with around 100 dojos, the first Japanese dojo session took place at [OpenSource Cafe](https://medium.com/opensource-cafe) in 2012.
 
 <div style="padding: 10px 0px;">
   <img class='lazyload' loading='lazy' alt="Photo of the 1st dojo session in OpenSource Cafe"
@@ -34,7 +34,7 @@ In the early days of CoderDojo, when its size was less than 10 countries and 100
 
 <br>
 
-As well as other countires the CoderDojo community in Japan gradually grows year by year, next to next, and it is finally reaching to 200+ active dojos (see details in the slides below).
+Like in other countires, the CoderDojo community in Japan has been growing steadily year after year. It is now reaching 200 active dojos (see details in the slides below).
 
 <div style="padding: 10px 0px;">
   <img class='lazyload' loading='lazy' alt="How the CoderDojo community spreads out in Japan"
@@ -51,7 +51,7 @@ As well as other countires the CoderDojo community in Japan gradually grows year
 
 ## [<i class="fa-solid fa-badge-check"></i>](#association) CoderDojo Japan Association {#association}
 
-With the grow of CoderDojo community in Japan, demands from companies to support the community are also increased. To meet the demands, with [the approval of CoderDojo Foundation](/docs/regional-license_en), we founded the CoderDojo Japan Association in 2016.
+As the CoderDojo community in Japan grew, the demand from companies to support the community also increased. To meet this demand, and with [the approval of the CoderDojo Foundation](/docs/regional-license_en), we founded the CoderDojo Japan Association in 2016.
 
 <div style="padding: 10px 0px;">
   <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
