@@ -17,7 +17,7 @@ This page provides information about the [CoderDojo community](#about), [its gro
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/7XQOVKd-vVI?rel=0" allowfullscreen></iframe>
+   data-src="https://www.youtube.com/embed/7XQOVKd-vVI?rel=0&cc_load_policy=1&cc_lang_pref=en" allowfullscreen></iframe>
 </div>
 
 <br>
@@ -118,24 +118,24 @@ We occasionally host guests from overseas at our co-working and shared-office sp
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0"
+   data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0&cc_load_policy=1&cc_lang_pref=en"
    allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/2Ub1Ny87hl0?list=PL94GDfaSQTmL1ne3U8tRoz9IavydP7onH" title="Penang Science Cluster Meets CoderDojo Japan by Aimy Lee (Talk) - Code Club &amp; CoderDojo meetup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/2Ub1Ny87hl0?list=PL94GDfaSQTmL1ne3U8tRoz9IavydP7onH&cc_load_policy=1&cc_lang_pref=en" title="Penang Science Cluster Meets CoderDojo Japan by Aimy Lee (Talk) - Code Club &amp; CoderDojo meetup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/8NoL2uRk0PY?list=PL94GDfaSQTmK6xzLNsBMx8gkKrT2HiZ9D&start=60" title="The 1st CoderDojo and the Global Vision - @liaonet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/8NoL2uRk0PY?list=PL94GDfaSQTmK6xzLNsBMx8gkKrT2HiZ9D&start=60&cc_load_policy=1&cc_lang_pref=en" title="The 1st CoderDojo and the Global Vision - @liaonet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe  src="https://www.youtube.com/embed/2YxzgzGonD0?list=PL94GDfaSQTmJZFLMQ3YH9CE2liETLi0Uq" title="Meetup with Zach, founder of Hack Club" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe  src="https://www.youtube.com/embed/2YxzgzGonD0?list=PL94GDfaSQTmJZFLMQ3YH9CE2liETLi0Uq&cc_load_policy=1&cc_lang_pref=en" title="Meetup with Zach, founder of Hack Club" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/Kvc6KhOzHmY?list=PL94GDfaSQTmLpQpm8R7nHpwVKFNLdnZFU" title="Ross &amp; James (1/5): CoderDojo A Global Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/Kvc6KhOzHmY?list=PL94GDfaSQTmLpQpm8R7nHpwVKFNLdnZFU&cc_load_policy=1&cc_lang_pref=en" title="Ross &amp; James (1/5): CoderDojo A Global Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 
