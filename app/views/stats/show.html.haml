@@ -15,7 +15,10 @@
     %br.ignore-sp<>
     全国の活動状況を把握したい場面などでご活用ください。
 
-  %h2#graph{style: "margin-top: 70px; color: #333333;"} 📊 推移グラフ
+  %h2#graph{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#graph'}<
+      📊
+    推移グラフ
   %div{align: 'center'}
     = high_chart_globals(@high_charts_globals)
 
@@ -31,7 +34,10 @@
     %p{style: 'margin: 40px auto;'}  
       = high_chart("annual_participants",    @annual_participants_chart)
 
-  %h2#data{style: "margin-top: 70px; color: #333333;"} 🆕 最新データ
+  %h2#latest{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#latest'}<
+      🆕
+    最新データ
   %p
     #{Time.current.year}年のデータも含めた
     %br<>
@@ -51,7 +57,10 @@
     %br
     = high_chart("dojo_tag_chart", @dojo_tag_chart)
 
-  %h2#howto{style: "margin-top: 70px; color: #333333;"} ✅ 集計方法と集計対象について
+  %h2#howto{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#howto'}<
+      📝
+    集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
     %li 参加者数はユニーク数ではなく延べ数です。
     %li 集計対象は API などで集計可能な道場です。
@@ -82,7 +91,10 @@
             %small= num
 
 
-  %h2#map{style: "margin-top: 70px; color: #333333;"} 🗾 地域別の道場数
+  %h2#map{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#map'}<
+      🗾
+    地域別の道場数
   .japan-map
     /%p#japan-map-text{style: "margin: 20px auto; font-size: 140%;"} 名前: 道場数
     #japan-map-container
@@ -94,7 +106,10 @@
   / NOTE: Always show dojos with accordion style to compact
   = render partial: 'shared/dojos_stats', locals: { regions_and_dojos: @regions_and_dojos }
 
-  %h2#prefectures{style: "margin-top: 70px; color: #333333;"} 🗾 都道府県別の道場数
+  %h2#prefectures{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#prefectures'}<
+      ✅
+    都道府県別の道場数
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{border: '1'}
       %tr
@@ -115,7 +130,10 @@
             %td{style: 'padding: 0px;'}
               %small= count
 
-  %h2#references{style: "margin-top: 70px; color: #333333;"} 📚 関連リンク
+  %h2#references{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#references'}<
+      📚
+    関連リンク
   %ul
     %li
       %a{href: "https://github.com/coderdojo-japan/coderdojo.jp/issues?q=label%3A%E7%B5%B1%E8%A8%88%E6%83%85%E5%A0%B1+is%3Aclosed"} 統計情報に関する『これまで』の開発 - GitHub
