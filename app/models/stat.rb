@@ -25,6 +25,7 @@ class Stat
   end
 
   def annual_dojos_chart
+    # MEMO: トップページの道場数と一致するように Active Dojo を集計対象としている
     HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period))
   end
 
