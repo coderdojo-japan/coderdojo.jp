@@ -173,7 +173,7 @@ info@coderdojo.jp
 はい、上記「[CoderDojo Japan にできること](#support)」の `B:` に記載されている通り、パートナー法人の方で、CoderDojo コミュニティにとって役立つ情報であるという事前審査を通った場合、投稿ができます。周知・PR に関する投稿には事前審査がありますので、info@coderdojo.jp までお気軽にご相談ください。
 
 - 📮 パートナー法人による、Facebook グループへの投稿例
-  - 例1: [未踏社団から、未踏ジュニア最終成果報告会のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/1821539831292741)
+  - 例1: [未踏社団から、未踏ジュニア成果報告会のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/1821539831292741)
   - 例2: [Google から、「おうちでCS」プログラムのお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/2848628431917204/)
   - 例3: [さくらのクラウド×マイクラ運用の登壇者募集のお知らせ](https://www.facebook.com/groups/coderdojo.jp/posts/4042430899203612/)
 
