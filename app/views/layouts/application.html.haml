@@ -1,5 +1,5 @@
 !!!
-%html{lang: 'ja'}
+%html{lang: "#{page_lang(yield(:lang))}"}
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{charset: "utf-8"}
@@ -32,6 +32,8 @@
     %meta{content: "#{meta_image(yield(:meta_image))}", name: "twitter:image"}
     %meta{content: "#{full_url(yield(:url))}",          name: "twitter:url"}
 
+    %link{href: "https://coderdojo.jp/",         rel: "alternate", hreflang: "ja"}
+    %link{href: "https://coderdojo.jp/english",  rel: "alternate", hreflang: "en"}
     %link{href: "/img/apple-icon-57x57.png",     rel: "apple-touch-icon", sizes: "57x57"}
     %link{href: "/img/apple-icon-60x60.png",     rel: "apple-touch-icon", sizes: "60x60"}
     %link{href: "/img/apple-icon-72x72.png",     rel: "apple-touch-icon", sizes: "72x72"}

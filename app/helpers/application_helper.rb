@@ -45,6 +45,10 @@ module ApplicationHelper
     end
   end
 
+  def page_lang(lang)
+    lang.empty? ? 'ja' : lang
+  end
+
   def kata_description
     "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
   end

@@ -33,6 +33,8 @@ class DocsController < ApplicationController
     case @doc.filename
     when 'about-partnership' then
       @doc.description = '法人向けの CoderDojo 説明ページです。提携・連携をご検討する際にご活用ください。これまでの提携事例や統計情報、社内稟議用のスライド資料などがまとまっています。'
+    when 'english' then
+      @lang = 'en'
     end
   end
 end
