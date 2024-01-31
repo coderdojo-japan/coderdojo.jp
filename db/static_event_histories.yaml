@@ -4,237 +4,242 @@
 #   participants: 9
 
 ---
+
+# MEMO: Add new data first (Sort by newest to oldest)
+
+
+# ID 13: CoderDojo Kodaira
 - dojo_id: 13
-  evented_at: 2014/06/01 14:00
+  evented_at: 2018/01/24 18:30
   participants: 3
 - dojo_id: 13
-  evented_at: 2014/06/14 16:00
-  participants: 1
+  evented_at: 2018/01/10 18:30
+  participants: 3
 - dojo_id: 13
-  evented_at: 2014/06/18 15:00
+  evented_at: 2017/12/27 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2017/12/13 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2017/11/22 18:30
   participants: 2
 - dojo_id: 13
-  evented_at: 2014/06/29 15:00
-  participants: 1
-- dojo_id: 13
-  evented_at: 2014/07/05 14:30
-  participants: 1
-- dojo_id: 13
-  evented_at: 2014/08/02 14:30
-  participants: 0
-- dojo_id: 13
-  evented_at: 2015/07/09 19:30
-  participants: 1
-- dojo_id: 13
-  evented_at: 2015/07/22 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2015/08/19 18:30
-  participants: 2
-- dojo_id: 13
-  evented_at: 2015/09/09 18:30
-  participants: 4
-- dojo_id: 13
-  evented_at: 2015/09/30 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2015/10/14 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2015/10/28 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2015/11/11 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2015/11/25 18:30
-  participants: 4
-- dojo_id: 13
-  evented_at: 2015/12/09 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2015/12/12 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2015/12/26 13:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2016/01/13 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2016/01/27 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2016/02/10 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/02/24 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2016/03/09 18:30
-  participants: 4
-- dojo_id: 13
-  evented_at: 2016/03/23 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2016/03/27 17:20
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/04/11 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2016/04/27 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/05/11 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/05/25 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/06/04 13:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2016/06/15 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2016/06/29 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2016/07/13 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2016/07/27 18:30
-  participants: 8
-- dojo_id: 13
-  evented_at: 2016/08/10 18:30
-  participants: 4
-- dojo_id: 13
-  evented_at: 2016/08/20 14:00
-  participants: 4
-- dojo_id: 13
-  evented_at: 2016/08/31 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2016/09/14 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2016/09/28 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2016/10/12 18:30
-  participants: 2
-- dojo_id: 13
-  evented_at: 2016/10/26 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2016/11/09 18:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2016/11/30 18:30
-  participants: 8
-- dojo_id: 13
-  evented_at: 2016/12/10 14:15
-  participants: 18
-- dojo_id: 13
-  evented_at: 2016/12/14 18:30
-  participants: 11
-- dojo_id: 13
-  evented_at: 2016/12/21 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/01/11 18:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2017/01/25 18:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2017/02/08 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2017/02/22 18:30
-  participants: 12
-- dojo_id: 13
-  evented_at: 2017/03/08 18:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2017/03/20 14:00
-  participants: 12
-- dojo_id: 13
-  evented_at: 2017/03/22 18:30
-  participants: 12
-- dojo_id: 13
-  evented_at: 2017/04/12 18:30
-  participants: 12
-- dojo_id: 13
-  evented_at: 2017/04/16 14:00
-  participants: 11
-- dojo_id: 13
-  evented_at: 2017/04/26 18:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2017/05/10 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/05/26 18:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2017/06/14 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/06/18 13:30
-  participants: 2
-- dojo_id: 13
-  evented_at: 2017/06/28 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/07/12 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/07/12 18:30
-  participants: 9
-- dojo_id: 13
-  evented_at: 2017/07/22 13:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2017/08/20 13:30
-  participants: 10
-- dojo_id: 13
-  evented_at: 2017/08/23 18:30
-  participants: 3
-- dojo_id: 13
-  evented_at: 2017/08/30 18:30
-  participants: 5
-- dojo_id: 13
-  evented_at: 2017/09/13 18:30
-  participants: 7
-- dojo_id: 13
-  evented_at: 2017/09/18 13:30
-  participants: 6
-- dojo_id: 13
-  evented_at: 2017/09/27 18:30
-  participants: 2
-- dojo_id: 13
-  evented_at: 2017/10/11 18:30
+  evented_at: 2017/11/08 18:30
   participants: 5
 - dojo_id: 13
   evented_at: 2017/10/25 18:30
   participants: 5
 - dojo_id: 13
-  evented_at: 2017/11/08 18:30
+  evented_at: 2017/10/11 18:30
   participants: 5
 - dojo_id: 13
-  evented_at: 2017/11/22 18:30
+  evented_at: 2017/09/27 18:30
   participants: 2
 - dojo_id: 13
-  evented_at: 2017/12/13 18:30
+  evented_at: 2017/09/18 13:30
   participants: 6
 - dojo_id: 13
-  evented_at: 2017/12/27 18:30
+  evented_at: 2017/09/13 18:30
   participants: 7
 - dojo_id: 13
-  evented_at: 2018/01/10 18:30
+  evented_at: 2017/08/30 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2017/08/23 18:30
   participants: 3
 - dojo_id: 13
-  evented_at: 2018/01/24 18:30
+  evented_at: 2017/08/20 13:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2017/07/22 13:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2017/07/12 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2017/07/12 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2017/06/28 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2017/06/18 13:30
+  participants: 2
+- dojo_id: 13
+  evented_at: 2017/06/14 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2017/05/26 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2017/05/10 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2017/04/26 18:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2017/04/16 14:00
+  participants: 11
+- dojo_id: 13
+  evented_at: 2017/04/12 18:30
+  participants: 12
+- dojo_id: 13
+  evented_at: 2017/03/22 18:30
+  participants: 12
+- dojo_id: 13
+  evented_at: 2017/03/20 14:00
+  participants: 12
+- dojo_id: 13
+  evented_at: 2017/03/08 18:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2017/02/22 18:30
+  participants: 12
+- dojo_id: 13
+  evented_at: 2017/02/08 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2017/01/25 18:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2017/01/11 18:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2016/12/21 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2016/12/14 18:30
+  participants: 11
+- dojo_id: 13
+  evented_at: 2016/12/10 14:15
+  participants: 18
+- dojo_id: 13
+  evented_at: 2016/11/30 18:30
+  participants: 8
+- dojo_id: 13
+  evented_at: 2016/11/09 18:30
+  participants: 10
+- dojo_id: 13
+  evented_at: 2016/10/26 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2016/10/12 18:30
+  participants: 2
+- dojo_id: 13
+  evented_at: 2016/09/28 18:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2016/09/14 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2016/08/31 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2016/08/20 14:00
+  participants: 4
+- dojo_id: 13
+  evented_at: 2016/08/10 18:30
+  participants: 4
+- dojo_id: 13
+  evented_at: 2016/07/27 18:30
+  participants: 8
+- dojo_id: 13
+  evented_at: 2016/07/13 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/06/29 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2016/06/15 18:30
+  participants: 9
+- dojo_id: 13
+  evented_at: 2016/06/04 13:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2016/05/25 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/05/11 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/04/27 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/04/11 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2016/03/27 17:20
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/03/23 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2016/03/09 18:30
+  participants: 4
+- dojo_id: 13
+  evented_at: 2016/02/24 18:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2016/02/10 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2016/01/27 18:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2016/01/13 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2015/12/26 13:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2015/12/12 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2015/12/09 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2015/11/25 18:30
+  participants: 4
+- dojo_id: 13
+  evented_at: 2015/11/11 18:30
+  participants: 6
+- dojo_id: 13
+  evented_at: 2015/10/28 18:30
+  participants: 7
+- dojo_id: 13
+  evented_at: 2015/10/14 18:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2015/09/30 18:30
+  participants: 5
+- dojo_id: 13
+  evented_at: 2015/09/09 18:30
+  participants: 4
+- dojo_id: 13
+  evented_at: 2015/08/19 18:30
+  participants: 2
+- dojo_id: 13
+  evented_at: 2015/07/22 18:30
+  participants: 3
+- dojo_id: 13
+  evented_at: 2015/07/09 19:30
+  participants: 1
+- dojo_id: 13
+  evented_at: 2014/08/02 14:30
+  participants: 0
+- dojo_id: 13
+  evented_at: 2014/07/05 14:30
+  participants: 1
+- dojo_id: 13
+  evented_at: 2014/06/29 15:00
+  participants: 1
+- dojo_id: 13
+  evented_at: 2014/06/18 15:00
+  participants: 2
+- dojo_id: 13
+  evented_at: 2014/06/14 16:00
+  participants: 1
+- dojo_id: 13
+  evented_at: 2014/06/01 14:00
   participants: 3
