@@ -1,6 +1,11 @@
 module EventService
   module Providers
     class Facebook
+      # This does NOT call Facebook API but loading static event data.
+      # (Same algorithm as 'static_yaml' but data structure seems Facebook compatible?)
+      # You can load data from the following YAML file by exec (on Zsh):
+      #
+      # $ bundle exec rails statistics:aggregation\[-,-,facebook\]
       YAML_FILE = Rails.root.join('db', 'facebook_event_histories.yaml')
 
       def fetch_events(dojo_id: nil, since_at: nil, until_at: nil)
