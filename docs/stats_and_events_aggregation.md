@@ -49,6 +49,16 @@ bundle exec rails statistics:aggregation[201801,201910,connpass,xxx]
 bundle exec rails statistics:aggregation[201801,201910,,xxx] 
 ```
 
+[`db/static_event_histories.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yaml) にある YAML データを更新する
+
+```
+# 全ての期間を更新する (Zshの場合)
+bundle exec rails statistics:aggregation\[-,-,static_yaml\]
+
+# 特定の期間を更新する (Zshの場合)
+bundle exec rails statistics:aggregation\[202301,202401,static_yaml\]
+```
+
 ## 本番環境で実行しているコマンド
 
 統計情報ページの更新: https://coderdojo.jp/stats
@@ -77,10 +87,10 @@ $ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 
 provider が指定されたとき、指定プロバイダに対してのみ集計を行う。
 
-- provider には、connpass, doorkeeper, facebook が指定可能。ただし、現時点で facebook は収集対象外のため処理を skip する。
-- `$ bundle exec rails upcoming_events:aggregation\[connpass\]
-- `$ bundle exec rails upcoming_events:aggregation\[doorkeeper\]
-- `$ bundle exec rails upcoming_events:aggregation\[facebook\] # NOT available provider for now due to API.
+- provider には `connpass`, `doorkeeper`, `facebook`, `static_yaml` が指定可能。ただし現時点では `facebook` は収集対象外のため処理を skip する。
+- `$ bundle exec rails upcoming_events:aggregation\[connpass\]`
+- `$ bundle exec rails upcoming_events:aggregation\[doorkeeper\]`
+- `$ bundle exec rails upcoming_events:aggregation\[facebook\] # NOT available provider for now due to API.`
 
 ## 本番環境で実行しているコマンド
 
