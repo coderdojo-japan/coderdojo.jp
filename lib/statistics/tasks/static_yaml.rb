@@ -9,24 +9,25 @@ module Statistics
 
       def initialize(dojos, _date)
         @client = EventService::Providers::StaticYaml.new
-        @dojos = dojos
+        @dojos  = dojos
       end
 
       def run
-        dojos_hash = @dojos.index_by(&:id)
         @client.fetch_events.each do |e|
-          dojo = dojos_hash[e['dojo_id'].to_i]
-          next unless dojo
+          this_dojo = Dojo.find(e['dojo_id'])
+          event_id  = Time.zone.parse(e['evented_at']).to_i.to_s
+          event_url = e['event_url'] || "https://example.com/#{event_id}"
+          #pp e['evented_at'] + " | " + EventHistory.count.to_s + " | " + event_url
 
-          event_id = "#{SecureRandom.uuid}"
-
-          EventHistory.create!(dojo_id: dojo.id,
-                               dojo_name: dojo.name,
-                               service_name: self.class.name.demodulize.underscore,
-                               event_id: event_id,
-                               event_url: "https://dummy.url/#{event_id}",
-                               participants: e['participants'],
-                               evented_at: Time.zone.parse(e['evented_at']))
+          EventHistory.create!(
+            dojo_id:      this_dojo.id,
+            dojo_name:    this_dojo.name,
+            service_name: self.class.name.demodulize.underscore,
+            event_id:     event_id,
+            event_url:    event_url, # MEMO: Required to be UNIQUE.
+            participants: e['participants'],
+            evented_at:   Time.zone.parse(e['evented_at']),
+          )
         end
       end
     end
