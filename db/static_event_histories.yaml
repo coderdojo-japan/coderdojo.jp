@@ -1,14 +1,21 @@
-# example
-# - dojo_id: 80
-#   evented_at: 2018/1/10
-#   participants: 9
-
 ---
 
 # MEMO: Add new data first (Sort by newest to oldest)
+#
+# [Template]
+# - dojo_id:
+#   event_url: 
+#   evented_at: 
+#   participants: 
 
+# ID 79: CoderDojo 会津 as 福島でかドージョー２０２３
+- dojo_id:      79
+  event_url:    https://coderdojoaizu.mystrikingly.com/blog/022a718f541
+  evented_at:   2023/06/18 10:00
+  participants: 203
 
 # ID 13: CoderDojo Kodaira
+# Stats: https://docs.google.com/spreadsheets/d/1a6MOaif5-tIsOeKbNEB0p_TreRoMODbLmpRl0qz-54Q/edit?usp=sharing
 - dojo_id: 13
   evented_at: 2018/01/24 18:30
   participants: 3
@@ -54,9 +61,6 @@
 - dojo_id: 13
   evented_at: 2017/07/22 13:30
   participants: 3
-- dojo_id: 13
-  evented_at: 2017/07/12 18:30
-  participants: 9
 - dojo_id: 13
   evented_at: 2017/07/12 18:30
   participants: 9
