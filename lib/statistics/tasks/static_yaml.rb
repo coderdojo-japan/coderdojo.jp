@@ -17,15 +17,15 @@ module Statistics
       def run
         @client.fetch_events.each do |e|
           this_dojo = Dojo.find(e['dojo_id'])
-          event_id  = Time.zone.parse(e['evented_at']).to_i.to_s
-          event_url = e['event_url'] || "https://example.com/#{event_id}"
-          #pp e['evented_at'] + " | " + EventHistory.count.to_s + " | " + event_url
+          event_id  = e['event_url'].split('/').last ||  Time.zone.parse(e['evented_at']).to_i.to_s
+          event_url = e['event_url']                 || "https://example.com/#{event_id}"
+          pp e['evented_at'] + " | " + EventHistory.count.to_s + " | " + event_url
 
           EventHistory.create!(
             dojo_id:      this_dojo.id,
             dojo_name:    this_dojo.name,
             service_name: self.class.name.demodulize.underscore,
-            event_id:     event_id,
+            event_id:     event_id,  # MEMO: Required to be UNIQUE.
             event_url:    event_url, # MEMO: Required to be UNIQUE.
             participants: e['participants'],
             evented_at:   Time.zone.parse(e['evented_at']),
