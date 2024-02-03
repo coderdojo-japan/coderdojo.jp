@@ -9,7 +9,7 @@ module Statistics
 
       def initialize(dojos, period)
         @client = EventService::Providers::Connpass.new
-        @dojos = dojos
+        @dojos  = dojos
         @params = build_params(period)
       end
 
@@ -17,27 +17,27 @@ module Statistics
         group_ids = @dojos.flat_map do |dojo|
           dojo.dojo_event_services.for(:connpass).pluck(:group_id)
         end
-      
+
         @client.fetch_events(**@params.merge(series_id: group_ids)).each do |e|
           dojo_event_service = DojoEventService.find_by(group_id: e.dig('series', 'id').to_s)
           next unless dojo_event_service
-      
-          EventHistory.create!(dojo_id: dojo_event_service.dojo_id,
-                               dojo_name: dojo_event_service.dojo.name,
-                               service_name: dojo_event_service.name,
+
+          EventHistory.create!(dojo_id:          dojo_event_service.dojo_id,
+                               dojo_name:        dojo_event_service.dojo.name,
+                               service_name:     dojo_event_service.name,
                                service_group_id: dojo_event_service.group_id,
-                               event_id: e['event_id'],
-                               event_url: e['event_url'],
+                               event_id:     e['event_id'],
+                               event_url:    e['event_url'],
                                participants: e['accepted'],
-                               evented_at: Time.zone.parse(e['started_at']))
+                               evented_at:   Time.zone.parse(e['started_at']))
         end
       end
-      
+
       private
 
       def build_params(period)
         yyyymmdd = []
-        yyyymm = []
+        yyyymm   = []
 
         st_date = period.first
         ed_date = period.last
@@ -55,7 +55,7 @@ module Statistics
 
         {
           yyyymmdd: yyyymmdd,
-          yyyymm: yyyymm
+          yyyymm:   yyyymm
         }
       end
     end

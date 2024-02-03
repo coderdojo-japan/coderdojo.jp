@@ -9,7 +9,7 @@ module Statistics
 
       def initialize(dojos, period)
         @client = EventService::Providers::Doorkeeper.new
-        @dojos = dojos
+        @dojos  = dojos
         @params = build_params(period)
       end
 
@@ -18,15 +18,15 @@ module Statistics
           dojo.dojo_event_services.for(:doorkeeper).each do |dojo_event_service|
             @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id)).each do |e|
               next unless e['group'].to_s == dojo_event_service.group_id
-        
-              EventHistory.create!(dojo_id: dojo.id,
-                                   dojo_name: dojo.name,
-                                   service_name: dojo_event_service.name,
+
+              EventHistory.create!(dojo_id:          dojo.id,
+                                   dojo_name:        dojo.name,
+                                   service_name:     dojo_event_service.name,
                                    service_group_id: dojo_event_service.group_id,
-                                   event_id: e['id'],
-                                   event_url: e['public_url'],
+                                   event_id:     e['id'],
+                                   event_url:    e['public_url'],
                                    participants: e['participants'],
-                                   evented_at: Time.zone.parse(e['starts_at']))
+                                   evented_at:   Time.zone.parse(e['starts_at']))
             end
           end
         end

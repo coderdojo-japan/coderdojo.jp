@@ -2,8 +2,8 @@ module Statistics
   class Aggregation
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
-      @provider = args[:provider]
-      @dojo_id = args[:dojo_id].to_i if args[:dojo_id].present? && /\A\d+\Z/.match?(args[:dojo_id])
+      @provider  = args[:provider]
+      @dojo_id   = args[:dojo_id].to_i if args[:dojo_id].present? && /\A\d+\Z/.match?(args[:dojo_id])
 
       dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
