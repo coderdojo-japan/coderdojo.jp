@@ -1,6 +1,8 @@
 module Statistics
   module Tasks
     class StaticYaml
+      # MEMO: Duck Typing (COOL!!)
+      #       This method is called as general provider in `lib/statistics/aggregation.rb`
       def self.delete_event_histories(_period, dojo_id)
         histories = EventHistory.for(:static_yaml)
         histories = histories.where(dojo_id: dojo_id) if dojo_id

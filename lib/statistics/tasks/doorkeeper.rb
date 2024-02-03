@@ -1,6 +1,8 @@
 module Statistics
   module Tasks
     class Doorkeeper
+      # MEMO: Duck Typing (COOL!!)
+      #       This method is called as general provider in `lib/statistics/aggregation.rb`
       def self.delete_event_histories(period, dojo_id)
         histories = EventHistory.for(:doorkeeper).within(period)
         histories = histories.where(dojo_id: dojo_id) if dojo_id
