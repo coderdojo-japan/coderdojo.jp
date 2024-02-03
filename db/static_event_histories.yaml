@@ -11,6 +11,8 @@
 # TODO: There are many dojos that manage their event other than Connpass/Doorkeeper. (It's of course fine!)
 # If you want to aggregate them, visit the following URL and add their data to this YAML file like below.
 # https://coderdojo.jp/events/latest
+# https://dojocon-japan.doorkeeper.jp/events/past
+# https://coderdojo-japan.doorkeeper.jp/events/past
 
 # ID 35: CoderDojo 奈良 as DojoCon Japan 2023
 - dojo_id:      35
