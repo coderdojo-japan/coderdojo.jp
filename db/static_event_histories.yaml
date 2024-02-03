@@ -7,6 +7,10 @@
 #   event_url: 
 #   evented_at: 
 #   participants: 
+#
+# TODO: There are many dojos that manage their event other than Connpass/Doorkeeper. (It's of course fine!)
+# If you want to aggregate them, visit the following URL and add their data to this YAML file like below.
+# https://coderdojo.jp/events/latest
 
 # ID 79: CoderDojo 会津 as 福島でかドージョー２０２３
 - dojo_id:      79
