@@ -12,6 +12,41 @@
 # If you want to aggregate them, visit the following URL and add their data to this YAML file like below.
 # https://coderdojo.jp/events/latest
 
+# ID 35: CoderDojo 奈良 as DojoCon Japan 2023
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160563 # 入場チケット
+  evented_at:   2023-08-27 10:00
+  participants: 143
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160564 # 同伴者１
+  evented_at:   2023-08-27 10:00
+  participants: 47
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160565 # 同伴者２
+  evented_at:   2023-08-27 10:00
+  participants: 21
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160566 # 同伴者３
+  evented_at:   2023-08-27 10:00
+  participants: 4
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160567 # 同伴者４
+  evented_at:   2023-08-27 10:00
+  participants: 0
+#- dojo_id:      35
+#  event_url:    https://dojocon-japan.doorkeeper.jp/events/160568 # 個人スポンサー (重複するためコメントのみ)
+#  evented_at:   2023-08-27 10:00
+#  participants: 15
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/160596 # toio
+  evented_at:   2023-08-27 13:20
+  participants: 12
+- dojo_id:      35
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/161149 # HackforPlay
+  evented_at:   2023-08-27 15:00
+  participants: 10
+
+
 # ID 79: CoderDojo 会津 as 福島でかドージョー２０２３
 - dojo_id:      79
   event_url:    https://coderdojoaizu.mystrikingly.com/blog/022a718f541
