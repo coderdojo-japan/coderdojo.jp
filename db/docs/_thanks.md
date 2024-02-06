@@ -6,7 +6,7 @@
 
 返信が無い場合は、お手数をおかけしますが以下の資料やリンク先をご参照いただけると幸いです 🙇
 
-<nr>
+<br>
 
 <h2 style="margin-bottom: 20px;">☯️ CoderDojo とは？</h2>
 
@@ -47,9 +47,11 @@ CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち�
 
 <br>
 
-<h2 style="margin-bottom: 20px;">✉️ 他、何かあれば</h2>
+<h2 style="margin-bottom: 20px;">✅ 他、関連リンク</h2>
 
-上記の他、返信をお待ちの間に何かありましたら info@coderdojo.jp までお気軽にご連絡ください 😌✨
+- 📺 [YouTube - CoderDojo とは?](https://www.youtube.com/playlist?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e)
+- 🌐 [English - CoderDojo Japan Association](/english)
+- ☯️ [English - CoderDojo Foundation](https://coderdojo.com/en)
 
 <br>
 
