@@ -85,13 +85,18 @@ class StatsController < ApplicationController
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
     @annual_dojos_whole = stats.annual_sum_total_of_dojo_inactive_included
     @annual_dojos_ratio = {}
-    (@period_start..@period_end).each do |year|
+    @period_range = @period_start..@period_end
+    @period_range.each do |year|
       ratio = @annual_dojos_whole[year.to_s].zero? ?
         'NaN' :
         (Rational(@annual_dojos_table[year.to_s], @annual_dojos_whole[year.to_s]).to_f * 100).round(1).to_s
 
       @annual_dojos_ratio[year.to_s] = ratio
     end
+
+    # 割合に応じた開催数と参加数の見込み
+    @annual_events_table       = stats.annual_count_of_event_histories
+    @annual_participants_table = stats.annual_sum_of_participants
 
     # 日本各地の道場
     @data_by_region = []

@@ -76,17 +76,17 @@
     %b Dojos
   %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
-  #transition-table{align: 'center', style: 'margin-top: 30px;'}
+  #howto-aggregate{align: 'center', style: 'margin-top: 30px;'}
     %b 集計対象の道場数と集計割合の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th{style: 'font-weight: normal;'}
           %small
             %b 西暦
-        - @annual_dojos_table.keys.each do |year|
+        - @period_range.each do |year|
           %th{style: 'font-weight: normal;'}
             %b
-              %small &rsquo;#{year[2..]}
+              %small &rsquo;#{year.to_s[2..]}
       %tr{style: 'text-align: center;'}
         %td
           %small 集計数
@@ -106,8 +106,51 @@
             %span{style: 'font-size: x-small'}<> [%]
         - @annual_dojos_ratio.each_value do |num|
           %td
-            %small= num
+            %small= num.eql?('100.0') ? '100' : num
     %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
+
+  #howto-estimate{align: 'center', style: 'margin-top: 30px;'}
+    %b 割合に応じた開催回数と参加者数の見込み
+    %table.compact{style: 'margin-top: 10px;', border: '1'}
+      %tr
+        %th{style: 'font-weight: normal;'}
+          %small
+            %b 西暦
+        - @period_range.each do |year|
+          %th{style: 'font-weight: normal;'}
+            %b
+              %small &rsquo;#{year.to_s[2..]}
+      %tr{style: 'text-align: center;'}
+        %td
+          %small
+            係数
+            %span{style: 'font-size: x-small'}<> [倍]
+        - @annual_dojos_ratio.each_value do |num|
+          %td
+            %small= num.eql?('100.0') ? '100' : num
+      %tr{style: 'text-align: center;'}
+        %td
+          %small
+            開催
+            %span{style: 'font-size: x-small'}<> (見込)
+        - @annual_events_table.each_value.with_index(@period_start) do |num, year|
+          %td
+            %small= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
+            /%small= num
+            /%small= Rational(@annual_dojos_ratio[year.to_s], 100)
+      %tr{style: 'text-align: center;'}
+        %td
+          %small
+            参加
+            %span{style: 'font-size: x-small'}<> (見込)
+        - @annual_participants_table.each_value.with_index(@period_start) do |num, year|
+          %td
+            %small= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
+    %span{style: 'font-size: 10px;'}
+      - year = @period_end.to_s
+      ※
+      #{year}年の参加見込の計算例: #{@annual_participants_table[year]} / 0.#{@annual_dojos_ratio[year].remove('.')} = #{Rational(@annual_participants_table[year], Rational(@annual_dojos_ratio[year], 100)).to_i}
+      %small (小数点以下は切り捨て)
 
 
   %h2#map{style: "margin-top: 70px; color: #333333;"}
