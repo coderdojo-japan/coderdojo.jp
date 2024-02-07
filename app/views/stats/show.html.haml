@@ -80,72 +80,65 @@
     %b 集計対象の道場数と集計割合の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
-        %th{style: 'font-weight: normal;'}
-          %small
-            %b 西暦
+        %th
+          %span.table-head 西暦
         - @period_range.each do |year|
-          %th{style: 'font-weight: normal;'}
-            %b
-              %small &rsquo;#{year.to_s[2..]}
+          %th
+            %span.table-head &rsquo;#{year.to_s[2..]}
       %tr{style: 'text-align: center;'}
         %td
-          %small 集計数
+          %span.table-head 集計数
         - @annual_dojos_table.each_value do |num|
           %td
-            %small= num
+            %span.table-item= num
       %tr{style: 'text-align: center;'}
         %td
-          %small 総道場
+          %span.table-head 総道場
         - @annual_dojos_whole.each_value do |num|
           %td
-            %small= num
+            %span.table-item= num
       %tr{style: 'text-align: center;'}
         %td
-          %small
-            割合
-            %span{style: 'font-size: x-small'}<> [%]
+          %span.table-head 割合
+          %span.table-label<> [%]
         - @annual_dojos_ratio.each_value do |num|
           %td
-            %small= num.eql?('100.0') ? '100' : num
+            %span.table-item= num.eql?('100.0') ? '100' : num
     %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
   #howto-estimate{align: 'center', style: 'margin-top: 30px;'}
     %b 割合に応じた開催回数と参加者数の見込み
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
-        %th{style: 'font-weight: normal;'}
-          %small
-            %b 西暦
+        %th
+          %span.table-head<> 西暦
         - @period_range.each do |year|
-          %th{style: 'font-weight: normal;'}
+          %th
             %b
-              %small &rsquo;#{year.to_s[2..]}
+              %span.table-head &rsquo;#{year.to_s[2..]}
       %tr{style: 'text-align: center;'}
         %td
-          %small
-            係数
-            %span{style: 'font-size: x-small'}<> [倍]
+          %span.table-head<> 割合
+          %span.table-label<> [%]
         - @annual_dojos_ratio.each_value do |num|
           %td
-            %small= num.eql?('100.0') ? '100' : num
+            %span.table-item= num.eql?('100.0') ? '100' : num
       %tr{style: 'text-align: center;'}
         %td
-          %small
-            開催
-            %span{style: 'font-size: x-small'}<> (見込)
+          %span.table-head<> 開催
+          %span.table-label<> (見込)
         - @annual_events_table.each_value.with_index(@period_start) do |num, year|
           %td
-            %small= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
-            /%small= num
-            /%small= Rational(@annual_dojos_ratio[year.to_s], 100)
+            %span.table-item= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
+            /%span.table-item== num
+            /%span.table-item== Rational(@annual_dojos_ratio[year.to_s], 100)
       %tr{style: 'text-align: center;'}
         %td
-          %small
-            参加
-            %span{style: 'font-size: x-small'}<> (見込)
+          %span.table-head<> 参加
+          %span.table-label<> (見込)
         - @annual_participants_table.each_value.with_index(@period_start) do |num, year|
           %td
-            %small= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
+            %span.table-item= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i
     %span{style: 'font-size: 10px;'}
       - year = @period_end.to_s
       ※
@@ -204,6 +197,11 @@
     %li
       %a{href: "https://docs.google.com/spreadsheets/d/17-M-qv5c0MdE_ZIFk566I2CGCIDHFkQwXWiunDXCGVw/edit#gid=354377216"} 日本の CoderDojo (Zen & Japan) - Spreadsheet
 %br/
+
+:css
+  span.table-head  { font-size: x-small }
+  span.table-label { font-size: 7px }
+  span.table-item  { font-size: xx-small }
 
 :javascript
   $(function(){
