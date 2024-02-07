@@ -2,13 +2,18 @@
 
 <img class='lazyload' loading='lazy' style='margin: 40px auto;width:120px;display:block;border-radius:0;' src='/spinner.svg' data-src='/img/mail-icon.png' alt='お問い合わせありがとうございます' />
 
-お問い合わせありがとうございます！ボランティアで対応しているため返信が無いこともあります 🙇
-
-返信が無い場合は、お手数をおかけしますが以下の資料やリンク先をご参照いただけると幸いです ✅
+<blockquote>
+  <p style="font-size: 80%">
+    お問い合わせありがとうございます！ボランティアで対応しているため返信が無いこともあります 🙇
+    <span class='ignore-sp'><br><br></span>
+    返信が無い場合は、お手数をおかけしますが<a href='#about'>以下の資料</a>や <a href='#faq'>FAQ</a> をご参照いただけると幸いです ✅
+  </p>
+</blockquote>
 
 <br>
 
-<h2 style="margin-bottom: 20px;">☯️ CoderDojo とは？</h2>
+
+## [<i class="fa-solid fa-yin-yang"></i>️](#about) CoderDojo とは？ {#about}
 
 CoderDojo については下記スライドにまとめられております。ぜひご一読ください。
 
@@ -18,14 +23,33 @@ CoderDojo については下記スライドにまとめられております。�
   </div>
 </div>
 
-CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち上げ方](/kata#startup)、[よくある質問と回答](/kata#faq)については下記ページをご参照ください。
 
-📖️ CoderDojo Kata - 道場情報まとめ    
-[https://coderdojo.jp/kata](https://coderdojo.jp/kata)
+### [<i class="fa-solid fa-messages-question"></i>️](#faq) よくある質問と回答 {#faq}
+
+- **Q. CoderDojo ってなんですか? どんな雰囲気?**
+- A. [上記のスライド](#about)や [YouTube 動画](https://www.youtube.com/playlist?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e)にまとまってます! ぜひチェックしてみてください 😆✨
+
+- **Q. 初めてです。どうしたらよいですか?**
+- A. [全国の道場](/#dojos)から興味のある道場を探し、開催情報を調べてみましょう 🔍💨
+
+- **Q. 直近の開催情報はありますか?**
+- A. はい! [近日開催の道場](/events)からご確認いただけます 🗓🆕
+
+- **Q. 道場を立ち上げてみたいです。**
+- A. ありがとうございます! [Kata](/kata#startup) という資料集のページに詳細があるので[コチラ](/kata#startup)をぜひ! 📚✅
+
+
+<div class='btn-cover' style='margin-top: 40px; margin-bottom: 100px;'>
+  <a class='btn-blue' href='/kata#faq' style='padding-left: 18px; padding-right: 18px;'>
+    <i class='far fa-comment-check'></i>
+    他の質問と回答を見る
+  </a>
+</div>
 
 <br>
 
-<h2 style="margin-bottom: 20px;">🤝 法人のご担当者さまへ</h2>
+
+## [<i class="fa-solid fa-handshake"></i>️](#partnership) 法人のご担当者さまへ {#partnership}
 
 一般社団法人 CoderDojo Japan と[パートナーシップ](https://coderdojo.jp/partnership)を結び、CoderDojo コミュニティと様々な連携に取り組むことも可能です。これまでにも、次のようなの取り組みがありました。
 
@@ -42,14 +66,21 @@ CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち�
 
 もしご興味ありましたら、下記ページから詳細をご参照ください。
 
-🤝 パートナーシップのご案内   
-[https://coderdojo.jp/partnership](https://coderdojo.jp/partnership)
+<div class='btn-cover' style='margin-top: 40px; margin-bottom: 100px;'>
+  <a class='btn-blue' href='/partnership' style='padding-left: 18px; padding-right: 18px;'>
+    <i class='far fa-handshake'></i>
+    法人向けパートナーシップの詳細を見る
+  </a>
+</div>
 
 <br>
 
-<h2 style="margin-bottom: 20px;">✅ 他、関連リンク</h2>
+
+## [<i class="fa-solid fa-badge-check"></i>️](#references) 他、関連リンク {#references}
 
 - 📺 [YouTube - CoderDojo とは?](https://www.youtube.com/playlist?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e)
+- 📺 [YouTube - CoderDojo Japan](https://www.youtube.com/CoderDojoJapan)
+- 🏢 [一般社団法人 CoderDojo Japan について](/about-coderdojo-japan)
 - 🌐 [English - CoderDojo Japan Association](/english)
 - ☯️ [English - CoderDojo Foundation](https://coderdojo.com/en)
 
@@ -57,5 +88,5 @@ CoderDojo に関する[詳しい情報](/kata#README)や、CoderDojo の[立ち�
 
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
-連絡先: info@coderdojo.jp
+<a href='/'>https://coderdojo.jp</a>
 </div>
