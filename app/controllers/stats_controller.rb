@@ -88,7 +88,7 @@ class StatsController < ApplicationController
     @period_range = @period_start..@period_end
     @period_range.each do |year|
       ratio = @annual_dojos_whole[year.to_s].zero? ?
-        'NaN' :
+        '100.0' :
         (Rational(@annual_dojos_table[year.to_s], @annual_dojos_whole[year.to_s]).to_f * 100).round(1).to_s
 
       @annual_dojos_ratio[year.to_s] = ratio
