@@ -70,25 +70,46 @@
     %br
     集計対象の道場数は次のとおりです。
   %p{style: 'margin-top: 10px; margin-bottom: -5px;'}
-    %b= @aggregated_dojos
+    %b= @annual_dojos_table[@period_end.to_s]
+    %b /
+    %b= @annual_dojos_whole[@period_end.to_s]
     %b Dojos
-  %span{style: 'font-size: 10px;'} （非アクティブな道場の過去の活動記録も含まれています）
+  %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
-  %div{align: 'center', id: 'transition-table', style: 'margin-top: 30px;'}
-    %b 集計対象となっている道場数の推移
+  #transition-table{align: 'center', style: 'margin-top: 30px;'}
+    %b 集計対象の道場数と集計割合の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th{style: 'font-weight: normal;'}
-          %small 西暦
+          %small
+            %b 西暦
         - @annual_dojos_table.keys.each do |year|
           %th{style: 'font-weight: normal;'}
-            %small= year
+            %b
+              %small &rsquo;#{year[2..]}
       %tr{style: 'text-align: center;'}
         %td
-          %small 道場数
+          %small 集計数
         - @annual_dojos_table.each_value do |num|
           %td
             %small= num
+      %tr{style: 'text-align: center;'}
+        %td
+          %small 総道場
+        - @annual_dojos_whole.each_value do |num|
+          %td
+            %small= num
+      %tr{style: 'text-align: center;'}
+        %td
+          %small
+            割合
+            %span{style: 'font-size: x-small'}<> [%]
+        - (@period_start..@period_end).each do |year|
+          - ratio = (Rational(@annual_dojos_table[year.to_s], @annual_dojos_whole[year.to_s]).to_f * 100).round(1)
+          %td
+            %small
+              = ratio == 100 ? '100' : ratio
+    %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
 
   %h2#map{style: "margin-top: 70px; color: #333333;"}

@@ -10,6 +10,13 @@ class Stat
     @annual_sum_total_of_aggregatable_dojo = year_hash_template.merge!(hash).each.with_object({}) {|(k, v), h| h[k] = (h.values.last || 0) + v }
   end
 
+  def annual_sum_total_of_dojo_inactive_included
+    return @annual_sum_total_of_dojo_inactive_included if defined?(@annual_sum_total_of_dojo_inactive_included)
+
+    hash = Dojo.annual_count(@period)
+    @annual_sum_total_of_dojo_inactive_included = year_hash_template.merge!(hash).each.with_object({}) {|(k, v), h| h[k] = (h.values.last || 0) + v }
+  end
+
   def annual_count_of_event_histories
     return @annual_count_of_event_histories if defined?(@annual_count_of_event_histories)
 

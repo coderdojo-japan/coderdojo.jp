@@ -15,7 +15,9 @@ class StatsController < ApplicationController
     end
 
     # 2012年1月1日〜2023年12月31日までの集計結果
-    period        = Time.zone.local(2012).beginning_of_year..Time.zone.local(2023).end_of_year
+    @period_start = 2012
+    @period_end   = 2023
+    period        = Time.zone.local(@period_start).beginning_of_year..Time.zone.local(@period_end).end_of_year
     stats         = Stat.new(period)
 
     # 推移グラフ
@@ -74,10 +76,14 @@ class StatsController < ApplicationController
     #   d.dojo_event_services.any? ? (d.counter-1) : 0 # Remove itself from counting
     # end.sum
     # @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id') + joint_dojo_counter
-    @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id')
+    #
+    # MEMO: 色々不要!! 以下の *_table/whole の最新の値を出せば良いだけだった!!
+    # @dojos_aggregated        = DojoEventService.count('DISTINCT dojo_id')
+    # @dojos_included_inactive = stats.annual_sum_total_of_dojo_inactive_included
 
-    # 集計対象となっている道場数の推移
+    # 「集計対象となっている道場数 / 非集計対象含む道場数」の推移
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
+    @annual_dojos_whole = stats.annual_sum_total_of_dojo_inactive_included
 
     # 日本各地の道場
     @data_by_region = []
