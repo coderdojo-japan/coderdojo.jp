@@ -98,6 +98,7 @@ With substantial support from our partners, we continue to contribute to the Cod
 
 For more detailed information, please refer to the following reports, articles, and videos on the CoderDojo community in Japan.
 
+- 🤝 [Social Contribution Activities (2024-2026) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/index.html)
 - 🤝 [Social Contribution Activities (2021-2023) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/2021-2023.html)
 - 🤝 [micro:bit - Children add tech to creative problem-solving in Japan](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/)
 - 📻 [Podcast#12 - The 1st CoderDojo and the Global Vision](/podcasts/12)
