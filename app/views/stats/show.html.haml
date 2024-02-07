@@ -104,11 +104,9 @@
           %small
             割合
             %span{style: 'font-size: x-small'}<> [%]
-        - (@period_start..@period_end).each do |year|
-          - ratio = (Rational(@annual_dojos_table[year.to_s], @annual_dojos_whole[year.to_s]).to_f * 100).round(1)
+        - @annual_dojos_ratio.each_value do |num|
           %td
-            %small
-              = ratio == 100 ? '100' : ratio
+            %small= num
     %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
 

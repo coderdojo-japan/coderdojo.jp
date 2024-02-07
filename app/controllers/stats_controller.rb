@@ -84,6 +84,14 @@ class StatsController < ApplicationController
     # 「集計対象となっている道場数 / 非集計対象含む道場数」の推移
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
     @annual_dojos_whole = stats.annual_sum_total_of_dojo_inactive_included
+    @annual_dojos_ratio = {}
+    (@period_start..@period_end).each do |year|
+      ratio = @annual_dojos_whole[year.to_s].zero? ?
+        'NaN' :
+        (Rational(@annual_dojos_table[year.to_s], @annual_dojos_whole[year.to_s]).to_f * 100).round(1).to_s
+
+      @annual_dojos_ratio[year.to_s] = ratio
+    end
 
     # 日本各地の道場
     @data_by_region = []
