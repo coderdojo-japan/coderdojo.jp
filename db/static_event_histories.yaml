@@ -14,6 +14,58 @@
 # https://dojocon-japan.doorkeeper.jp/events/past
 # https://coderdojo-japan.doorkeeper.jp/events/past
 
+# ID 194: CoderDojo 三次 - https://www.facebook.com/dojo.miyoshi/past_hosted_events
+# MEMO: データ追加のサンプルとして2023年のイベント情報を入れてみています。
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/359085903440917/
+  evented_at: 2023-12-10 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1471449153718967/
+  evented_at: 2023-11-12 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1368309153758697/
+  evented_at: 2023-10-08 14:00
+  participants: 2
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/844786050591435/
+  evented_at: 2023-09-10 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/232521136412961/
+  evented_at: 2023-08-13 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/223437327265541/
+  evented_at: 2023-07-09 14:00
+  participants: 2
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/813719757016084/
+  evented_at: 2023-06-11 14:00
+  participants: 2
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/221248460533919/
+  evented_at: 2023-05-14 14:00
+  participants: 2
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/786230553001403/
+  evented_at: 2023-04-09 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1219610398697914/
+  evented_at: 2023-03-12 14:00
+  participants: 3
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/6423370784342888/
+  evented_at: 2023-02-12 14:00
+  participants: 2
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1868908516802455/
+  evented_at: 2023-01-08 14:00
+  participants: 2
+
+
 # ID 35: CoderDojo 奈良 as DojoCon Japan 2023
 - dojo_id:      35
   event_url:    https://dojocon-japan.doorkeeper.jp/events/160563 # 入場チケット
