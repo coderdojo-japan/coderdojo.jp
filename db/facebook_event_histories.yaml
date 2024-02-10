@@ -1,3 +1,11 @@
+##########################
+##  !!DO NOT USE THIS!! ##
+##########################
+#
+# This is outdated and will be removed.
+# Use `db/static_event_histories.yaml` instead:
+# https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yaml
+#
 # example
 # - dojo_id: 80
 #   event_id: 12345678 (省略可)
