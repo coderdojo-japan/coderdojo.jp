@@ -5,6 +5,9 @@ module Statistics
       @provider  = args[:provider]
       @dojo_id   = args[:dojo_id].to_i if args[:dojo_id].present? && /\A\d+\Z/.match?(args[:dojo_id])
 
+      # TODO: internal service が動いてなさそう? 現在 CI/CD で実行されている
+      # $ rails statistics:aggregation 実行時に以下のコマンドも実行されるようにしたい。
+      # $ rails statistics:aggregation\[-,-,static_yaml\]
       dojos = fetch_dojos(@provider)
       @externals = dojos[:externals]
       @internals = dojos[:internals]
