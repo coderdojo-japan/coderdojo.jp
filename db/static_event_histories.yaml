@@ -11,9 +11,13 @@
 # TODO: There are many dojos that manage their event other than Connpass/Doorkeeper. (It's of course fine!)
 # If you want to aggregate them, visit the following URL and add their data to this YAML file like below.
 # https://coderdojo.jp/events/latest
-# https://dojocon-japan.doorkeeper.jp/events/past
+#
+# TODO: CoderDojo Japan と DojoCon Japan の Dojo データを作成し、
+# その dojo_id にそれぞれのイベントのデータを紐付けられるか検討する。
+# （位置情報などはどうする...? Inactive にする???）
 # https://coderdojo-japan.doorkeeper.jp/events/past
-
+# https://dojocon-japan.doorkeeper.jp/events/past
+#
 # ID 194: CoderDojo 三次 - https://www.facebook.com/dojo.miyoshi/past_hosted_events
 # MEMO: データ追加のサンプルとして2023年のイベント情報を入れてみています。
 - dojo_id: 194
