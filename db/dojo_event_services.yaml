@@ -17,6 +17,11 @@
 # 他サービス (Facebook API) 対応を検討していた時期があったため、
 # `facebook` などが書かれているデータもありますが、現在は非対応です。
 # 現在は connpass と doorkeeper のみ対応しています。
+#
+# Facebook イベント含む他のイベント情報については、
+# `db/static_event_histories.yaml` のコメントに従ってデータを入力してください。
+# https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yaml
+
 
 
 ### 以下、Dojo 情報まとめ ###
