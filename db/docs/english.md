@@ -89,7 +89,7 @@ With substantial support from our partners, we continue to contribute to the Cod
 </a>
 <center>
   <a href='https://map.coderdojo.jp/'>
-    &#8811; Check out DojoMap
+    &raquo; Check out DojoMap
   </a>
 </center>
 
