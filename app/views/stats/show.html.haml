@@ -104,10 +104,47 @@
         - @annual_dojos_ratio.each_value do |num|
           %td
             %span.table-item= num.eql?('100.0') ? '100' : num
-    %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
+    %span{style: 'font-size: 10px;'}
+      ※
+      非アクティブになった道場も含まれています
+
+  #howto-table{align: 'center', style: 'margin-top: 30px;'}
+    %b 開催回数と参加者数の推移表
+    %table.compact{style: 'margin-top: 10px;', border: '1'}
+      %tr
+        %th
+          %span.table-head<> 西暦
+        - @period_range.each do |year|
+          %th
+            %b
+              %span.table-head &rsquo;#{year.to_s[2..]}
+      %tr{style: 'text-align: center;'}
+        %td
+          %span.table-head<> 割合
+          %span.table-label<> [%]
+        - @annual_dojos_ratio.each_value do |num|
+          %td
+            %span.table-item= num.eql?('100.0') ? '100' : num
+      %tr{style: 'text-align: center;'}
+        %td
+          %span.table-head<> 開催
+          %span.table-label<> (集計)
+        - @annual_events_table.each_value.with_index(@period_start) do |num, year|
+          %td
+            %span.table-item= num
+      %tr{style: 'text-align: center;'}
+        %td
+          %span.table-head<> 参加
+          %span.table-label<> (集計)
+        - @annual_participants_table.each_value.with_index(@period_start) do |num, year|
+          %td
+            %span.table-item= num
+    %span{style: 'font-size: 10px;'}
+      ※
+      本ページ上部にある推移グラフを表にしたデータです
 
   #howto-estimate{align: 'center', style: 'margin-top: 30px;'}
-    %b 割合に応じた開催回数と参加者数の見込み
+    %b 開催回数と参加者数の見込み
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
