@@ -12,5 +12,9 @@ CoderDojo の代表者は、別の代表者を追加登録後、自分自身の�
 4. 共同代表者のメールアドレスを入力し、「主宰」(Champion) として招待します
    <img alt='CoderDojo Zen - Invite Champion' src='/img/zen-invite-champion.png' /><br><br>
 5. 最後に、旧代表者のアイコンをクリックし、「Change Role」または「削除」を実行します
-
+   <br>
+   
 無事に交代できると、追加された新しい代表者が当該 Dojo を管理できるようになります。   
+
+<br>
+ 
