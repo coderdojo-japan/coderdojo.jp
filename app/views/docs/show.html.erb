@@ -1,0 +1,23 @@
+<!-- Google replaces Emojis with whitespace when indexing. -->
+<!-- So we need to remove the emoji letter from OGP title. -->
+
+<% provide :title, @doc.title[2..-1] %>
+<% provide :desc,  @doc.description  %>
+<% provide :url,   @url              %>
+<% provide :lang,  @lang             %>
+
+<div class='container' style='line-height: 1.9em;'>
+  <section class='doc' style='padding: 50px 0px 100px 0px;'>
+    <%= raw @content %>
+  </section>
+
+  <div style="margin-bottom: 40px;">
+    <p style="color: #5F5F5F"><small><a href='/docs'>&laquo; 資料一覧に戻る</a></small></p>
+  </div>
+
+  <section class="text-center list" style='margin-bottom: 30px;'>
+    <%= render 'shared/social_buttons' %>
+  </section>
+</div>
+
+
