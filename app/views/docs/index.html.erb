@@ -1,0 +1,34 @@
+<% provide :title, strip_tags(@title) %>
+<% provide :desc,  strip_tags(@desc)  %>
+<% provide :url,   @url %>
+<% provide :meta_image, "/img/ogp-docs.jpeg" %>
+
+<div class='container'>
+  <section class='docs' style='padding: 50px 0px;'>
+    <h2 class='text-center'><%= @title.html_safe %></h2>
+
+    <p class='text-center' style='padding-bottom: 50px;'>
+      <%= @desc.html_safe %>
+      <br>
+      初めての方は
+      <b><%= link_to 'Kata', kata_path %></b>
+      をご参照ください。
+    </p>
+    
+    <ul>
+      <% @docs.each do |doc| %>
+	<li><%= link_to doc.title, doc.url %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <div style="margin-bottom: 40px;">
+    <p style="color: #5F5F5F"><small><a href='https://www.youtube.com/CoderDojoJapan'>YouTube</a> にも資料があります! 📺✨</small></p>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCal5GuoCDCMDQe07w69TuJA" data-layout="full" data-count="default"></div>
+  </div>
+
+  <section class="text-center list" style='margin-bottom: 30px;'>
+    <%= render 'shared/social_buttons' %>
+  </section>
+</div>
