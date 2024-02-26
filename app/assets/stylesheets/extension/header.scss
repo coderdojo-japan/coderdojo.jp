@@ -201,10 +201,10 @@ body {
   border-radius: 0;
 }
 .collapse > .navbar-nav > li.search-li {
-  position: static;
-  &::before, &::after {
-    display: none;
-  }
+  // position: static;
+  // &::before, &::after {
+  //  display: none;
+  // }
   @media only screen and (max-width: 768px) {
     display: none;
   }
