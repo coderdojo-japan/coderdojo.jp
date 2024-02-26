@@ -77,7 +77,7 @@ body {
 .nav > .navbar-dd-p {
   &> a {
     display: inline-block;
-    padding-right: 0;
+    padding-right: 0 !important;
   }
   &:hover > .navbar-dd {
     display: block;
@@ -109,11 +109,11 @@ body {
     display: block;
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
+    border-left:  5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 6px solid #fff;
     color: #fff;
-    margin-right: 15px;
+    margin-right: 8px;
   }
 }
 @media only screen and (max-width:990px) {

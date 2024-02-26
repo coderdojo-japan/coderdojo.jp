@@ -13,32 +13,49 @@
     #bs-example-navbar-collapse-1.collapse#header-nav-toggle.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li= link_to '全国の道場',     '/#dojos'
-        %li= link_to '近日開催の道場', '/events'
         %li= link_to 'パートナー法人', '/#partners'
-        %li= link_to '統計情報',       '/stats'
-        %li= link_to 'News',           '/#news'
         %li.navbar-dd-p
-          = link_to 'Kata',            '/kata'
+          = link_to '最近の活動',      '/#timeline'
           %span.navbar-dd-l
           %ul.navbar-dd
-            %li= link_to 'はじめに',   '/kata#README'
-            %li= link_to '学ぶ',       '/kata#learn'
-            %li= link_to '腕試し',     '/kata#challenge'
-            %li= link_to '立ち上げる', '/kata#startup'
-            %li= link_to '支援・資料', '/kata#support'
-            %li= link_to 'FAQ',        '/kata#faq'
-            %li= link_to 'English',    '/english', hreflang: 'en'
+            %li= link_to '☯️ SNS',     '/#timeline'
+            %li= link_to '📰 News',    'https://news.coderdojo.jp/'
+            %li= link_to '📻 Podcast', '/podcasts'
+            %li= link_to '📺 YouTube', '/youtube'
+            %li= link_to '📚 その他',  '/#kata'
+        %li.navbar-dd-p
+          = link_to '道場を探す',      '/#dojos'
+          %span.navbar-dd-l
+          %ul.navbar-dd
+            %li= link_to '一覧から探す',   '/#dojos'
+            %li= link_to '日付から探す',   '/events'
+            %li= link_to '地図から探す',   'https://map.coderdojo.jp/'
+        %li.navbar-dd-p
+          = link_to '資料を探す',      '/kata'
+          %span.navbar-dd-l
+          %ul.navbar-dd
+            %li= link_to 'はじめに',     '/kata#README'
+            %li= link_to '学ぶ',         '/kata#learn'
+            %li= link_to '腕試し',       '/kata#challenge'
+            %li= link_to '立ち上げる',   '/kata#startup'
+            %li= link_to '運営向け支援', '/kata#support'
+            %li= link_to '法人向け資料', '/partnership'
+            %li= link_to '統計情報',     '/stats'
+            %li= link_to '資料集',       '/docs'
+            %li= link_to 'お問い合わせ', '/#contact'
+            %li= link_to 'English',      '/english', hreflang: 'en'
 
         / DocSearch: https://github.com/algolia/docsearch-configs/blob/master/configs/coderdojo.json
         %li.search-li
           %label.search-label{for: 'search'}
-            %img.search-icon{alt: '検索', src: '/img/search.svg'}
+            %img.search-icon{alt: '検索アイコン', src: '/img/search.svg'}
+            検索で探す
           = check_box_tag :search, "検索アイコン", false, class: 'search-checkbox', onclick: 'focusSearchBox()'
           %div.search
-            %input#searchbox{placeholder: "資料を検索", type: "text"}
+            %input#searchbox{placeholder: "例: コンテスト、教材", type: "text"}
             #hits
             #pagination
-        %li= link_to 'お問い合わせ',   '/#contact'
+
 
 :javascript
   function focusSearchBox() {
