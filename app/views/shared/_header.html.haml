@@ -27,23 +27,33 @@
           = link_to '道場を探す',      '/#dojos'
           %span.navbar-dd-l
           %ul.navbar-dd
-            %li= link_to '☯️  一覧から',   '/#dojos'
-            %li= link_to '📅 日付から',   '/events'
-            %li= link_to '🗾 地図から',   'https://map.coderdojo.jp/'
+            / %li= link_to '☯️  一覧から',   '/#dojos'
+            %li
+              = link_to '/#dojos' do
+                ☯️  一覧から
+                %span.ignore-pc<> 探す
+            %li
+              = link_to '/events' do
+                📅 日付から
+                %span.ignore-pc<> 探す
+            %li
+              = link_to 'https://map.coderdojo.jp/' do
+                🗾 地図から
+                %span.ignore-pc<> 探す
         %li.navbar-dd-p
           = link_to '資料を探す',      '/kata'
           %span.navbar-dd-l
           %ul.navbar-dd
-            %li= link_to 'はじめに',     '/kata#README'
-            %li= link_to '学ぶ',         '/kata#learn'
-            %li= link_to '腕試し',       '/kata#challenge'
-            %li= link_to '立ち上げる',   '/kata#startup'
-            %li= link_to '運営向け支援', '/kata#support'
-            %li= link_to '法人向け資料', '/partnership'
-            %li= link_to '統計情報',     '/stats'
-            %li= link_to '資料集',       '/docs'
-            %li= link_to 'お問い合わせ', '/#contact'
-            %li= link_to 'English',      '/english', hreflang: 'en'
+            %li= link_to '🔰 はじめに', '/kata#README'
+            %li= link_to '🎓 学ぶ',     '/kata#learn'
+            %li= link_to '🏆 腕試し',   '/kata#challenge'
+            %li= link_to '☯️ 立ち上げ',  '/kata#startup'
+            %li= link_to '🎁 運営支援', '/kata#support'
+            %li= link_to '🤝 法人向け', '/partnership'
+            %li= link_to '📊 統計情報', '/stats'
+            %li= link_to '📚 資料集',   '/docs'
+            %li= link_to '📩 連絡する', '/#contact'
+            %li= link_to '🌏 English',  '/english', hreflang: 'en'
 
         / DocSearch: https://github.com/algolia/docsearch-configs/blob/master/configs/coderdojo.json
         %li.search-li
