@@ -28,7 +28,7 @@
 </style>
 
 
-## ☯️ CoderDojo とは？ {#coderdojo-is}
+## [☯️](#coderdojo-is) CoderDojo とは？ {#coderdojo-is}
 
 CoderDojo は7〜17歳を主な対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では{{ NUM_OF_COUNTRIES }}カ国・{{ NUM_OF_WORLD_DOJOS }}の道場、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。CoderDojo は日本各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上開催されており、延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達がプログラミングを学んでいます。
 
@@ -42,11 +42,14 @@ CoderDojo は7〜17歳を主な対象とした非営利のプログラミング�
 
 <div style="padding: 40px 0px;">
   <a href="/stats"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners.png" alt="写真: パートナー法人の年次推移" /></a>
-  <center>図: パートナー法人の年次推移 (<a href='https://news.coderdojo.jp/category/press/'>最近の提携事例</a>)</center>
+  <center>
+    図: パートナー法人の年次推移
+    <br class='ignore-pc'>
+    (<a href='https://news.coderdojo.jp/category/press/'>&raquo; 最近の提携事例を見る</a>)</center>
 </div>
 
 
-## 👥 CoderDojo の特徴 {#coderdojo-community}
+## [👥](#coderdojo-community) CoderDojo の特徴 {#coderdojo-community}
 
 CoderDojo の特徴は、様々な業界で働いている方々が協力し合う多様な非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
 
@@ -60,7 +63,7 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 これは受け身で何かを教わることよりも、創りながら主体的に学ぶことに価値があると考えているからです。このため多くの CoderDojo は、子ども達自身の興味・関心を追究する『広場』のような場所となっています。
 
 
-## 📊 CoderDojo の実績 {#coderdojo-stats}
+## [📊](#coderdojo-stats) CoderDojo の実績 {#coderdojo-stats}
 
 CoderDojo コミュニティは全国各地に広がり、[毎年1,000回以上のイベントが開催](/stats)され、延べ10,000人以上の子ども達が CoderDojo で楽しくプログラミングを学んでいます。CoderDojo を、Google や図書館などと組み合わせて学ぶ参加者もいます。
 
@@ -69,9 +72,16 @@ CoderDojo コミュニティは全国各地に広がり、[毎年1,000回以上�
   <center>写真: CoderDojo コミュニティについて小学生 (当時) が発表していた様子</center>
 </div>
 
-また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://twitter.com/yasulab/status/1369480254113259521)として認識されています。
+<div class="btn-cover" style="margin-top: 0px; margin-bottom: 80px;">
+  <a class="btn-blue" href="/stats">
+    📊 CoderDojo の統計情報を見る
+  </a>
+</div>
 
-もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。CoderDojo についてまとめたスライド（下記）や [CoderDojo Japan が貴社のためにできること](#support)、[これまでの提携事例](#examples)や[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
+
+また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://twitter.com/yasulab/status/1369480254113259521)として認識されています。もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
+
+CoderDojo についてまとめたスライド（下記）だけでなく、 [CoderDojo Japan が貴社のためにできること](#support)や[これまでの提携事例](#examples)、[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
 
 <div style="padding: 40px 0px;">
   <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
@@ -96,7 +106,7 @@ info@coderdojo.jp
 <hr>
 
 <h2 id='faq' style='padding-top: 30px; padding-bottom: 30px;'>
-  <i class='fad fa-messages-question'></i>
+  <a href='#faq'><i class='fad fa-messages-question'></i></a>
   よくある質問と回答
 </h2>
 
