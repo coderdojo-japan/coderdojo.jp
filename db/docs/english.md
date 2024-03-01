@@ -122,6 +122,13 @@ We occasionally host guests from overseas at our co-working and shared-office sp
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   data-src="https://www.youtube.com/embed/KqtRuCdVFws?start=803&rel=0&cc_load_policy=1&cc_lang_pref=en"
+   allowfullscreen></iframe>
+</div>
+
+<div class="home-point-video">
+  <iframe class='lazyload' frameborder="0"
+   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
    data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0&cc_load_policy=1&cc_lang_pref=en"
    allowfullscreen></iframe>
 </div>
