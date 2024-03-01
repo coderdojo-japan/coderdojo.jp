@@ -1460,9 +1460,9 @@
 
 # さくら
 - dojo_id: 89
-  name:
-  group_id:
-  url:
+  name: connpass
+  group_id: 14657
+  url: https://coderdojosakura.connpass.com/
 
 # 甲府（第２回からは connpass で運用）
 - dojo_id: 88
