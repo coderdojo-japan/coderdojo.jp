@@ -943,7 +943,7 @@
   - 映像制作
 - id: 158
   order: '122303'
-  is_active: false
+  is_active: true # Re-active @ 2024/03/16 https://twitter.com/KEITAROinNRT/status/1768837516835352825
   created_at: '2018-11-17'
   name: 成田
   prefecture_id: 12
