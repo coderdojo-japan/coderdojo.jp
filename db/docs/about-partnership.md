@@ -196,11 +196,11 @@ CoderDojo Japan Champions - Facebook Group (非公開)
 
 
 
-### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか？ {#financial-report}
+### Q. 一般社団法人 CoderDojo Japan の決算書は見れますか？ {#finances}
 はい、一般社団法人 CoderDojo Japan の決算書も公開しています。こちらもご参考になれば ;)
 
 決算報告書 - CoderDojo Japan
-[https://coderdojo.jp/financial-report](/financial-report)
+[https://coderdojo.jp/finances](/finances)
 
 
 ### Q. 製品・サービスによる支援を検討しています。条件はありますか？ {#goods}
