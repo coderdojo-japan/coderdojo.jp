@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   #get "/docs/charter_en",        to: redirect('/charter_en')
   #get "/docs/styleguides",       to: redirect('/styleguides')
   #get "/docs/about-partnership", to: redirect('/partnership')
-  #get "/docs/financial-report",  to: redirect('/financial-report')
   #get "/docs/privacy",           to: redirect('/privacy')
   #get "/docs/teikan",            to: redirect('/teikan')
   #get "/docs/signup",            to: redirect('/signup')
@@ -24,7 +23,10 @@ Rails.application.routes.draw do
   get "/about-coderdojo"          => "docs#show", id: 'about-coderdojo'
 
   get "/docs/thanks",             to: redirect('/thanks')
+  get "/docs/financial-report",   to: redirect('/finances')
+  get "/docs/finances",           to: redirect('/finances')
   get "/docs/for-media",          to: redirect('/for-media')
+
   get "/docs/_calendar-yohei",    to: redirect('/calendar/yohei')
   get "/docs/_calendar-kirie",    to: redirect('/calendar/kirie')
   get "/docs/_thanks",            to: redirect('/thanks')
@@ -42,9 +44,11 @@ Rails.application.routes.draw do
   get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
 
+  get "/financial-report",      to: redirect('/finances')
+  get "/finances"         => "docs#show", id: 'finances'
+
   get "/partner",         to: redirect('/partnership')
   get "/partnership"      => "docs#show", id: 'about-partnership'
-  get "/financial-report" => "docs#show", id: 'financial-report'
   get "/privacy"          => "docs#show", id: 'privacy'
   get "/teikan"           => "docs#show", id: 'teikan'
   get "/signup"           => "docs#show", id: 'signup'
