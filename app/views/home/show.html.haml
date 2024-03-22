@@ -185,27 +185,13 @@
       をお読みください。
     %div.kata
       = link_to lazy_image_tag('/kata_cover.webp', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'), '/kata'
-    .btn-cover{style: 'margin-top: 20px; margin-bottom: 100px;'}
+    .btn-cover{style: 'margin-top: 20px; margin-bottom: 0px;'}
       %a.btn-blue{href: kata_path}<>
         %i.far.fa-books
         資料集「Kata」を読む
 
-%section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
-  %h2{style: "color: dimgray;"}
-    %a{href: '#partners'} 🤝
-    パートナー法人
-  %p{style: "margin: 50px 0px 20px 0px;"}
-    様々な法人が CoderDojo の取り組みを支援しています。
-
-  = render partial: 'shared/partners'
-  .btn-cover{style: 'margin-top: 40px; margin-bottom: 100px;'}
-    %a.btn-blue{href: partnership_path}<>
-      %i.far.fa-handshake
-      法人向け資料を読む
-
-
 / Start with 'div' not 'section' due to grayscale-bg area
-.text-center.grayscale-bg{style: "padding-top: 20px; padding-bottom: 50px;"}
+.text-center.grayscale-bg{style: "padding-top: 40px; padding-bottom: 50px;"}
   %section.detail-introduction#news
     %br
     %h2{style: "color: dimgray;"}
@@ -222,6 +208,20 @@
       %a.btn-blue{href: dojoletter_url, target: '_blank', rel: 'noopener'}<>
         %i.far.fa-newspaper
         過去の配信を読む
+      
+%section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
+  %h2{style: "color: dimgray;"}
+    %a{href: '#partners'} 🤝
+    パートナー法人
+  %p{style: "margin: 50px 0px 20px 0px;"}
+    様々な法人が CoderDojo の取り組みを支援しています。
+
+  = render partial: 'shared/partners'
+  .btn-cover{style: 'margin-top: 40px; margin-bottom: 100px;'}
+    %a.btn-blue{href: partnership_path}<>
+      %i.far.fa-handshake
+      法人向け資料を読む
+
 
 %section.detail-introduction#contact{style: "padding-top: 30px;"}
   %br
