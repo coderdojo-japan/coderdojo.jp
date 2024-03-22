@@ -19,6 +19,7 @@
 - [一般社団法人 CoderDojo Japan について](/about-coderdojo-japan)
 - [一般社団法人 CoderDojo Japan 定款](/teikan)
 - [パートナーシップのご案内（法人向け）](/partnership)
+- [CoderDojo Japan Association (for English speakers)](/english)
 
 
 <br>
