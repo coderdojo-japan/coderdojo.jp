@@ -62,7 +62,7 @@ INPUT_TEXT.each do |line|
 end
 
 dojo_list.sort_by!{ |dojo| dojo[:order] }
-result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a>（#{dojo[:prefecture]}）</li>" }.join("\n")
+result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a><small>（#{dojo[:prefecture]}）</small></li>" }.join("\n")
 result << "\n</ul>\n"
 puts result
 
