@@ -14,7 +14,8 @@ INPUT_TEXT = IO.readlines('./get_dojo_list.txt')
 DOJO_DB    = JSON.parse Net::HTTP.get(URI.parse 'https://coderdojo.jp/dojos.json'), symbolize_names: true
 
 # CoderDojo の名前を使って、Dojo 一覧からデータを検索
-result  = "<ul>\n"
+result    = '<h3>☯️ 寄贈先の CoderDojo 一覧<small>（カッコ内は都道府県名となります）</small></h3>'
+result   << "\n\n<ul>\n"
 dojo_name = ''
 dojo_list = []
 not_found = []
