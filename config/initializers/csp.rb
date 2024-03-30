@@ -3,7 +3,7 @@ SecureHeaders::Configuration.default do |config|
            *.google-analytics.com *.googleapis.com *.google.com *.gstatic.com
            *.facebook.net *.facebook.com *.twitter.com *.mailchimp.com
            *.hatena.ne.jp *.st-hatena.com *.line-scdn.net *.mixlr.com
-           *.slidesharecdn.com *.slideshare.net *.unpkg.com *.jsdelivr.net)
+           *.slidesharecdn.com *.slideshare.net *.jsdelivr.net)
   config.csp = {
     report_only:      false,
     preserve_schemes: true, # default: false
