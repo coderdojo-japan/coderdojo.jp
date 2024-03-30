@@ -2,8 +2,7 @@ SecureHeaders::Configuration.default do |config|
   src = %w(* 'unsafe-inline' 'unsafe-eval' data:
            *.google-analytics.com *.googleapis.com *.google.com *.gstatic.com
            *.facebook.net *.facebook.com *.twitter.com *.mailchimp.com
-           *.hatena.ne.jp *.st-hatena.com *.line-scdn.net *.mixlr.com
-           *.slidesharecdn.com *.slideshare.net *.jsdelivr.net)
+           *.hatena.ne.jp *.st-hatena.com *.line-scdn.net *.jsdelivr.net)
   config.csp = {
     report_only:      false,
     preserve_schemes: true, # default: false
