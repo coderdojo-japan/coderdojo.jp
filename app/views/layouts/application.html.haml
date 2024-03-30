@@ -57,11 +57,14 @@
     %script{src: "https://kit.fontawesome.com/82f32b9df5.js", crossorigin: "anonymous"}
 
     / Twemoji:  https://twemoji.twitter.com/
-    / Lazyload: https://github.com/aFarkas/lazysizes
-    / Navbar controller: https://polyfill.io/v3/
-    %script{src: 'https://unpkg.com/twemoji@latest/dist/twemoji.min.js', crossorigin: 'anonymous'}
+    %script{src: 'https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js', crossorigin: 'anonymous'}
+    / %script{src: 'https://unpkg.com/twemoji@latest/dist/twemoji.min.js', crossorigin: 'anonymous'}
     / %script{src: '/js/twemoji.min.js',   async: ''}
+    
+    / Lazyload: https://github.com/aFarkas/lazysizes
     %script{src: '/js/lazysizes.min.js', async: ''}
+    
+    / Navbar controller: https://polyfill.io/v3/
     %script{src: '/js/polyfill.min.js',  async: ''}
 
     / DocSearch: https://docsearch.algolia.com/
