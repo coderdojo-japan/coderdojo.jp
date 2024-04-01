@@ -20,7 +20,7 @@
 4. 「現在の状態」を「アクティブ」に変更し、更新する
 5. 『[参加するDojoを探す](https://zen.coderdojo.com/find)』機能で、道場が表示されることを確認する
 
-以上で Dojo の現在の状態を「アクティブ」に変更することができます。もし Dojo の継続的な活動が難しくなった場合は、[CoderDojo の運営が難しくなったときのガイドライン](https://coderdojo.jp/docs/how-to-suspend-your-dojo) を参照してください ;)
+以上で Dojo の現在の状態を「アクティブ」に変更することができます。もし Dojo の継続的な活動が難しくなった場合は、[CoderDojo の運営が難しくなったときのガイドライン](/docs/how-to-suspend-your-dojo) を参照してください ;)
 
 <br>
 
