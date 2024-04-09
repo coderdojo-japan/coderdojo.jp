@@ -61,7 +61,9 @@ module UpcomingEvents
     class Notifier
       class << self
         def notify_success(provider)
-          notify("近日開催イベント情報#{provider_info(provider)}を収集しました")
+          # NOTE: UNIX 哲学に沿って、成功時は何も表示せず失敗時 (notify_failure) のみ通知する
+          #       https://ja.wikipedia.org/wiki/UNIX哲学#:~:text=沈黙のルール
+          # notify("近日開催イベント情報#{provider_info(provider)}を収集しました")
         end
 
         def notify_failure(provider, exception)
