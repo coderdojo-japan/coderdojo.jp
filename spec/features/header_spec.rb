@@ -16,7 +16,7 @@ RSpec.feature "ヘッダー", type: :feature do
     end
     scenario "Kataに飛ぶ" do
       all(:link_or_button, 'Kata').first.click
-      expect(page).to have_selector 'h1', text:'CoderDojo Kata'
+      expect(page).to have_selector 'h1', text:'📚 Kata'
     end
   end
 end
