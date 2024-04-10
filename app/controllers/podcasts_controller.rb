@@ -19,7 +19,10 @@ class PodcastsController < ApplicationController
 
   def show
     @episode = Podcast.find_by(id: params[:id])
-    redirect_to root_url unless @episode.exists?
+    if @episode.nil?
+      flash[:warning] = '該当する番組が見つかりませんでした 💦'
+      return redirect_to podcasts_path
+    end
 
     @title   = @episode.title.split('-').last.strip
     @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
