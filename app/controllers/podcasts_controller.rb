@@ -34,7 +34,8 @@ class PodcastsController < ApplicationController
   def convert_shownote(content)
     shownote = <<~HTML
       <h2 id='shownote'>
-        <a href='#shownote'><i class="fa-solid fa-message-pen" style='color: #2275ca;'></i></a>
+        <!--<a href='#shownote'><i class="fa-solid fa-message-pen" style='color: #2275ca;'></i></a>-->
+        <a href='#shownote'>🎤</a>
         Shownote − 話したこと
       </h2>
     HTML
