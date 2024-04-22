@@ -910,9 +910,9 @@
 
 # 松本 (Google Form)
 #- dojo_id: 175
-#  name:
-#  group_id:
-#  url:
+#  name: doorkeeper
+#  group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
+#  url: https://coderdojo-matsumoto.doorkeeper.jp/
 
 # 三鷹
 - dojo_id: 174
@@ -1274,6 +1274,10 @@
   name: connpass
   group_id: 4692
   url: https://coderdojo-tachikawa.connpass.com/
+# - dojo_id: 118
+#   name: doorkeeper
+#   group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
+#   url: https://coderdojotachikawa.doorkeeper.jp/
 
 # 阿倍野
 - dojo_id: 116
