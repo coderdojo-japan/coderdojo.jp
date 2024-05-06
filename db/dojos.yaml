@@ -2353,13 +2353,13 @@
   - Minecraft
 - id: 62
   order: '242039'
-  is_active: false
+  is_active: true  # Re-activated @ 2024年5月6日 (月曜)
   created_at: '2016-12-22'
   name: 伊勢
   prefecture_id: 24
   logo: "/img/dojos/ise.webp"
   url: https://coderdojo-ise.jimdofree.com/
-  description: 伊勢市で不定期開催
+  description: 伊勢市で毎月開催
   tags:
   - Scratch
   - micro:bit
