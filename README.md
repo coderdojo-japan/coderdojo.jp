@@ -34,7 +34,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
    - 必要なもの: Ruby on Rails + PostgreSQL などの各種開発環境
 
 
-**ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨 
+**ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨
 
 
 <div id='howto-update-dojo'></div>
@@ -78,14 +78,14 @@ Kata 情報も、Dojo 情報と同様の方法で更新できます。
 
 編集方法は下記の手順書をご参照してください。
 
-:scroll: Kata の編集方法 - esa   
+:scroll: Kata の編集方法 - esa
 https://esa-pages.io/p/sharing/7542/posts/213/bc0e68f705b7298ae5e0.html
 
 Kata の編集には CoderDojo Japan のアカウントが必要です。アカウントを発行したい場合は [@yasulab](https://twitter.com/yasulab) までご連絡ください。
 
 CMS を利用している背景や技術仕様などについては次のスライド資料にまとめています。もし興味あればお気軽にご参照ください :wink:
 
-:scroll: CoderDojo を支える Rails CMS の活用事例 - Speaker Deck   
+:scroll: CoderDojo を支える Rails CMS の活用事例 - Speaker Deck
 https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 -->
 
@@ -125,8 +125,8 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 1. 本リポジトリを fork 後、clone します
 1. `.env.sample` をコピーして `.env` にリネームします
 1. `.env`に、環境変数`DOORKEEPER_API_TOKEN=<生成したPublic API Access Token>` を追記します
-1. ターミナルから `$ docker-compose up` を実行します
-1. ターミナルから `$ docker-compose exec rails bin/setup` を実行します
+1. ターミナルから `$ docker compose up` を実行します
+1. ターミナルから `$ docker compose exec rails bin/setup` を実行します
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
@@ -277,7 +277,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 ## 5. License
 
-This web application is developed with many other brilliant works! :sparkling_heart:   
+This web application is developed with many other brilliant works! :sparkling_heart:
 You can check out them and our works with associated licenses from [LICENSE.md](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/LICENSE.md). :wink:
 
 Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
