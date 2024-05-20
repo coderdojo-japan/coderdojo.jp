@@ -3822,8 +3822,18 @@
   created_at: '2012-07-09'
   name: 南風原
   prefecture_id: 47
-  logo: "/img/dojos/haebaru.webp"
+  logo: "/img/dojos/haebaru_2022.webp"
   url: https://coderdojo-haebaru.doorkeeper.jp/
-  description: 島尻郡南風原町で不定期開催
+  description: 島尻郡南風原町で不定期開催（次の2024年の南風原とは別のDojo ID in Zen）
   tags:
   - Scratch
+- order: '473502'
+  created_at: '2024-05-19'
+  name: 南風原
+  prefecture_id: 47
+  logo: "/img/dojos/haebaru.webp"
+  url: https://www.facebook.com/coderdojo.haebaru
+  description: 島尻郡南風原町で不定期開催（次の2024年の南風原とは別のDojo ID in Zen）
+  tags:
+  - Scratch
+  - micro:bit
