@@ -3827,7 +3827,8 @@
   description: 島尻郡南風原町で不定期開催（次の2024年の南風原とは別のDojo ID in Zen）
   tags:
   - Scratch
-- order: '473502'
+- id: 318
+  order: '473502'
   created_at: '2024-05-19'
   name: 南風原
   prefecture_id: 47
