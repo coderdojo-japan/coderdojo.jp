@@ -25,6 +25,13 @@
 
 
 ### 以下、Dojo 情報まとめ ###
+### (dojos.yaml の追加順) ###
+
+# 南風原 (Reboot as a new dojo in Zen)
+#- dojo_id: 318
+#  name: facebook
+#  group_id:
+#  url: https://www.facebook.com/coderdojo.haebaru
 
 # 仙台若林
 - dojo_id: 317
