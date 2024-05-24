@@ -3,8 +3,8 @@ module EventService
     class_attribute :debug
     self.debug = false
 
-    def initialize(endpoint, &block)
-      @conn = connection_for(endpoint, &block)
+    def initialize(endpoint, proxy: nil, &block)
+      @conn = connection_for(endpoint, proxy, &block)
     end
 
     def get(path, params)
@@ -13,8 +13,8 @@ module EventService
 
     private
 
-    def connection_for(endpoint)
-      Faraday.new(endpoint) do |f|
+    def connection_for(endpoint, proxy)
+      Faraday.new(endpoint, proxy: proxy) do |f|
         f.response :logger if self.class.debug
         f.response :json, :content_type => /\bjson$/
         f.response :raise_error
