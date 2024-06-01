@@ -5,7 +5,7 @@ module EventService
         # NOTE: 期間は ym or ymd パラメータで指定(複数指定可能)、未指定時全期間が対象
 
         def initialize
-          @client = EventService::Client.new(ENDPOINT)
+          @client = EventService::Client.new(ENDPOINT, proxy: ENV['FIXIE_URL'])
         end
 
         def search(keyword:)
