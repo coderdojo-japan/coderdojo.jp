@@ -1,10 +1,17 @@
 #!/bin/sh
+ENV_FILE=".env"
+
+if [ ! -f "$ENV_FILE" ]; then
+    echo "$ENV_FILE が見つかりません"
+    exit 1
+fi
+
+source "$ENV_FILE"
+
 if [ $# -eq 0 ]
 then
     echo "Usage: c-search [CONNPASS_EVENT_URL | CONNPASS_EVENT_ID]"
 else
-    id=`echo $1 | sed -e 's/[^0-9]//g'`
-    curl -sL "connpass.com/api/v1/event/?event_id=${id}" | jq ".events[].series.id"
+    id=$(echo $1 | sed -e 's/[^0-9]//g')
+    curl -x "$FIXIE_URL" -sL "https://connpass.com/api/v1/event/?event_id=${id}" | jq ".events[].series.id"
 fi
-
-
