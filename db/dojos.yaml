@@ -1017,6 +1017,16 @@
   - PHP
   - Java
   - Python
+- id: 319
+  order: '131024'
+  created_at: '2024-06-02'
+  name: 日本橋
+  prefecture_id: 13
+  logo: "/img/dojos/coderdojo.webp"
+  url: https://coderdojonihonbashi.wixsite.com/main
+  description: 中央区で隔月開催
+  tags:
+  - Scratch
 - id: 289
   order: '131032'
   created_at: '2022-10-23'

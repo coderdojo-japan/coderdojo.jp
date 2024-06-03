@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 日本橋
+#- dojo_id: 319
+#  name: connpass
+#  group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
+#  url: https://coderdojo-nihonbashi.connpass.com/
+
 # 南風原 (Reboot as a new dojo in Zen)
 #- dojo_id: 318
 #  name: facebook
