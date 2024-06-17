@@ -3175,17 +3175,19 @@
   - Ruby
 - id: 245
   order: '325015'
-  is_active: false
+  is_active: true  # Re-activated @ 2024年6月17日 (月曜)
   created_at: '2020-03-10'
   name: 津和野
   prefecture_id: 32
   logo: "/img/dojos/tsuwano.webp"
-  url: https://coderdojo-tsuwano.doorkeeper.jp/
+  url: https://coderdojo-tsuwano.com/
   description: 鹿足郡津和野町で隔月開催
   tags:
   - Scratch
+  - micro:bit
   - Webサイト
-  - 電子工作
+  - Minecraft
+  - ラズベリーパイ
 - id: 78
   order: '325058'
   is_active: false
