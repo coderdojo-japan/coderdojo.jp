@@ -7,9 +7,7 @@
 一般社団法人 CoderDojo Japan の公式サイトです。プログラミング言語『[Ruby](https://www.google.com/search?q=Ruby)』と、Rubyを活用したフレームワーク『[Ruby on Rails](https://www.google.com/search?q=Rails)』で開発されています。本ページでは、トップページに掲載されている Dojo 情報を更新する方法や、開発環境のセットアップ方法などをまとめています。
 
 
-<div id='signup'></div>
-
-<br>
+<div id='signup'></div><br>
 
 ## :beginner: Dojo を掲載するには?
 
@@ -18,9 +16,7 @@ CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援
 [![CoderDojo Kata - 支援](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/public/img/kata_support_ss.png?raw=true)](https://coderdojo.jp/kata#support)
 
 
-<div id='howto'></div>
-
-<br>
+<div id='howto'></div><br>
 
 ## :wrench: 開発に参加するには?
 
@@ -37,9 +33,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 **ちょっとした情報更新や文言修正であればブラウザだけで参加できる**のが特徴で、それぞれの手順は以下の通りです ✨📝💨
 
 
-<div id='howto-update-dojo'></div>
-
-<br>
+<div id='howto-update-dojo'></div><br>
 
 ## 1. Dojo 情報を更新する
 
@@ -58,9 +52,7 @@ Dojo 情報は次の手順で簡単に更新できます。
 > https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
 
-<div id='howto-update-kata'></div>
-
-<br>
+<div id='howto-update-kata'></div><br>
 
 ## 2. Kata 情報を更新する
 
@@ -90,9 +82,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 -->
 
 
-<div id='howto-develop'></div>
-
-<br>
+<div id='howto-develop'></div><br>
 
 ## 3. 新機能の開発やデザインを改善する
 
@@ -112,9 +102,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
 
-<div id='howto-develop-docker'></div>
-
-<br>
+<div id='howto-develop-docker'></div><br>
 
 ### :whale: Docker を利用したセットアップ方法
 
@@ -130,10 +118,7 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
-
-<div id='howto-develop-ci'></div>
-
-<br>
+<div id='howto-develop-ci'></div><br>
 
 ### :rocket: CI/Deploy 構成
 
@@ -157,9 +142,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
    - 例: Heroku デプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
 
 
-<div id='howto-develop-tasks'></div>
-
-<br>
+<div id='howto-develop-tasks'></div><br>
 
 ### :gem: CI で実行される各種 Ruby スクリプト (Rake タスク)
 
@@ -203,9 +186,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 -->
 
 
-<div id='howto-develop-docs'></div>
-
-<br>
+<div id='howto-develop-docs'></div><br>
 
 ## 4. 他、開発に関する資料
 
@@ -222,9 +203,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 - [CoderDojo Japan のバックエンドを刷新しました【2016年】](https://coderdojo.jp/docs/post-backend-update-history)
 
 
-<div id='api'></div>
-
-<br>
+<div id='api'></div><br>
 
 ### 🤝 API
 
@@ -250,9 +229,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
   - :memo: １つの Dojo が複数のイベント管理サービスを使う事例もあるため [`Dojo has_many DojoEventServices`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/app/models/dojo.rb) となっています。
 
 
-<div id='history'></div>
-
-<br>
+<div id='history'></div><br>
 
 ### :scroll: Development History & Contributors
 
@@ -271,9 +248,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 
 
-<div id='license'></div>
-
-<br>
+<div id='license'></div><br>
 
 ## 5. License
 
