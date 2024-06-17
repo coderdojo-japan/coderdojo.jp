@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 長野
+- dojo_id: 320
+  name: connpass
+  group_id: 15002
+  url: https://coderdojo-nagano.connpass.com/
+
 # 日本橋
 #- dojo_id: 319
 #  name: connpass

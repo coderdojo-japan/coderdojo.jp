@@ -1935,6 +1935,19 @@
   - Scratch
   - Webサイト
   - デザイン
+- id: 320
+  order: '202011'
+  created_at: '2024-06-17'
+  name: 長野
+  prefecture_id: 20
+  url: https://coderdojo-nagano.connpass.com
+  logo: "/img/dojos/default.webp"
+  description: 長野市で隔月で開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Minecraft
+  - Python
 - id: 175
   order: '202029'
   created_at: '2018-10-05'
