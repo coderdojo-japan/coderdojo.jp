@@ -1,12 +1,12 @@
 #!/bin/sh
-ENV_FILE=".env"
+ENVRC_FILE=".envrc"
 
-if [ ! -f "$ENV_FILE" ]; then
-    echo "$ENV_FILE が見つかりません"
+if [ ! -f "$ENVRC_FILE" ]; then
+    echo "$ENVRC_FILE が見つかりません"
     exit 1
 fi
 
-source "$ENV_FILE"
+source "$ENVRC_FILE"
 
 if [ -z "$FIXIE_URL" ]; then
     echo "FIXIE_URL が設定されていません"
