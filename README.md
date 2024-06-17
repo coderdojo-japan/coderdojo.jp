@@ -102,6 +102,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
 
+<!--
 <div id='howto-develop-docker'></div><br>
 
 ### :whale: Docker を利用したセットアップ方法
@@ -117,6 +118,8 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 1. ターミナルから `$ docker compose exec rails bin/setup` を実行します
 1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
+-->
+  
 
 <div id='howto-develop-ci'></div><br>
 
