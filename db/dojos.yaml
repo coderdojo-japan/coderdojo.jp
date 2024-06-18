@@ -957,7 +957,8 @@
   - 映像制作
 - id: 158
   order: '122303'
-  is_active: true # Re-active @ 2024/03/16 https://twitter.com/KEITAROinNRT/status/1768837516835352825
+  note: 'Re-actived @ 2024/03/16 https://twitter.com/KEITAROinNRT/status/1768837516835352825'
+  is_active: true
   created_at: '2018-11-17'
   name: 成田
   prefecture_id: 12
@@ -1181,7 +1182,8 @@
   - JavaScript
 - id: 19
   order: '131130'
-  is_active: true # Re-activated @ 2024/04/01
+  is_active: true
+  note: 'Re-activated @ 2024/04/01'
   created_at: '2020-01-30'
   name: 渋谷
   prefecture_id: 13
@@ -2387,7 +2389,8 @@
   - Minecraft
 - id: 62
   order: '242039'
-  is_active: true  # Re-activated @ 2024年5月6日 (月曜)
+  is_active: true
+  note: 'Re-activated @ 2024年5月6日 (月曜)'
   created_at: '2016-12-22'
   name: 伊勢
   prefecture_id: 24
@@ -3186,7 +3189,8 @@
   - Ruby
 - id: 245
   order: '325015'
-  is_active: true  # Re-activated @ 2024年6月17日 (月曜)
+  is_active: true
+  note: 'Re-activated @ 2024年6月17日 (月曜)'
   created_at: '2020-03-10'
   name: 津和野
   prefecture_id: 32
