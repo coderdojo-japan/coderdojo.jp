@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 蒲田
+#- dojo_id: 321
+#  name: connpass
+#  group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
+#  url: https://coderdojo-kamata.connpass.com/
+
 # 長野
 - dojo_id: 320
   name: connpass

@@ -1133,12 +1133,23 @@
   - Swift
 - id: 313
   order: '131113'
+  is_active: false
   created_at: '2023-11-07'
   name: 平和島
   prefecture_id: 13
   url: https://coderdojo-heiwajima.connpass.com/
   logo: "/img/dojos/heiwajima.webp"
   description: 大田区平和島で毎月開催
+  tags:
+  - Scratch
+- id: 321
+  order: '131113'
+  created_at: '2024-06-10'
+  name: 蒲田
+  prefecture_id: 13
+  url: https://coderdojo-kamata.connpass.com/
+  logo: "/img/dojos/default.webp"
+  description: 大田区蒲田で不定期開催
   tags:
   - Scratch
 - id: 17
