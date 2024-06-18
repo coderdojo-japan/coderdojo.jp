@@ -32,14 +32,15 @@ namespace :dojos do
       d.name          = dojo['name']
       d.counter       = dojo['counter'] || 1
       d.email         = ''
-      d.order         = dojo['order'] || search_order_number(dojo['name'])
       d.description   = dojo['description']
       d.logo          = dojo['logo']
       d.tags          = dojo['tags']
+      d.note          = dojo['note'] || '' # For internal comments for developers
       d.url           = dojo['url']
       d.created_at    = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at    = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
+      d.order         = dojo['order'] || search_order_number(dojo['name'])
       d.is_active     = dojo['is_active'].nil? ? true : dojo['is_active']
       d.is_private    = dojo['is_private'].nil? ? false : dojo['is_private']
 
