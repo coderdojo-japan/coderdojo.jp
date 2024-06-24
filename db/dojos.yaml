@@ -1486,6 +1486,7 @@
   - Scratch
 - id: 126
   order: '141038'
+  is_active: false
   created_at: '2018-02-02'
   name: 戸部
   prefecture_id: 14
