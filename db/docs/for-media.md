@@ -15,13 +15,13 @@
 
 ## 1. CoderDojo はそれぞれ独立しています {#coderdojo-guidance}
 
-『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)となっていて、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)時にその利用許諾を受け、それぞれが独立して運営しています。
+『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)となっていて、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)時にその使用許諾を受け、それぞれが独立して運営しています。
 
 [![CoderDojo に対する誤解](/img/coderdojo-guidance-1.png)](/#welcome)
 
 <br>
 
-一般社団法人 CoderDojo Japan も、[ライセンス契約](/docs/regional-license)を交わして利用許諾を受けた[公式法人の１つ](https://coderdojo.com/en/partner-network)です。CoderDojo 憲章に則って運営している各 Dojo と、基本的に同じ立ち位置となります。
+一般社団法人 CoderDojo Japan は、CoderDojo に関する[ライセンス契約](/docs/regional-license)を交わして設立された[公式法人の１つ](https://coderdojo.com/en/partner-network)です。公式法人であるという事実を除けば、CoderDojo 憲章に則って運営している各 Dojo と、基本的に同じ立ち位置となります。
 
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 <small>
