@@ -58,9 +58,22 @@ CoderDojo Zen での申請がまだお済みでない場合は、下記ページ
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq3k4q52gQgxf6emeqF9TYBXl_SxzhT87CUUoIc4uKNw2EYQ/viewform?embedded=true" width="100%" height="2400" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+<iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSeq3k4q52gQgxf6emeqF9TYBXl_SxzhT87CUUoIc4uKNw2EYQ/viewform?embedded=true" width="100%" height="2600" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+
+<style>
+  iframe { height: 2650px; }   /* Default height for desktop    */
+  /* Height adjustment for tablets
+  @media (max-width: 768px) {
+    iframe { height: 1000px; }
+  }
+  */
+  @media (max-width: 480px) { /* Height adjustment for mobile devices */
+    iframe { height: 3200px; }
+  }
+</style>
+
+<blockquote><center><small>「送信」ボタン押下後、画面が真っ白になったらページ上部にスクロールしてください。</small></center></blockquote>
 
 <style>
   small::before { content: '' !important };
 </style>
-<blockquote><center><small>✅ 「送信」ボタン押下後、画面が真っ白になったらページ上部にスクロールしてください。</small></center></blockquote>
