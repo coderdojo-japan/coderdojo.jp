@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 狛江
+- dojo_id: 322
+  name: connpass
+  group_id: 14718
+  url: https://coderdojo-komae.connpass.com/
+
 # 蒲田
 #- dojo_id: 321
 #  name: connpass
