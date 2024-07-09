@@ -6,14 +6,14 @@
 ### 目次
 
 <ul>
-  <li><a href='#coderdojo-guidance'>1. CoderDojo はそれぞれ独立しています</a></li>
-  <li><a href='#coderdojo-in-writing'>2. 道場またはクラブと表記しています</a></li>
-  <li><a href='#how-to-download'>3. ロゴ画像のダウンロード方法について</a></li>
+  <li><a href='#coderdojo-guidance'>☯️ 1. CoderDojo はそれぞれ独立しています</a></li>
+  <li><a href='#coderdojo-in-writing'>🌐 2. 道場またはクラブと表記しています</a></li>
+  <li><a href='#how-to-download'>📥 3. ロゴ画像のダウンロード方法について</a></li>
 </ul>
 
 <br>
 
-## 1. CoderDojo はそれぞれ独立しています {#coderdojo-guidance}
+## [☯️](#coderdojo-guidance) 1. CoderDojo はそれぞれ独立しています {#coderdojo-guidance}
 
 『CoderDojo』は[国際商標](https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja)となっていて、全国の CoderDojo は[立ち上げ](https://coderdojo.jp/kata#startup)時にその使用許諾を受け、それぞれが独立して運営しています。
 
@@ -26,9 +26,9 @@
 [![CoderDojo は「憲章」を中心としたコミュニティ](/img/coderdojo-guidance-2.png)](/#welcome)
 <small>
   ※
-  CoderDojo 憲章の[詳細を読む](/charter)。<br>
+  [CoderDojo 憲章を見る](/charter)<br>
   ※
-  CoderDojo Japan の[役割と活動実績を読む](/about-coderdojo-japan)。
+  [CoderDojo Japan の活動実績を見る](/about-coderdojo-japan)
 </small>
 <br>
 
@@ -41,12 +41,16 @@ CoderDojo は上記の仕組みで回っていて、それぞれが決定権を�
 
 詳細はガイダンス資料をご参照ください。
 
-詳細を見る → [CoderDojo ガイダンス資料](/#welcome)
+<small>
+  ※
+  [CoderDojo ガイダンス資料を見る](/#welcome)
+</small>
+
 
 <br>
 
 
-## 2. 道場またはクラブと表記しています {#coderdojo-in-writing}
+## [🌐](#coderdojo-in-writing) 2. 道場またはクラブと表記しています {#coderdojo-in-writing}
 
 一般社団法人 CoderDojo Japan では、CoderDojo を説明する場面で「プログラミング道場」または「プログラミングクラブ」という表記を使っています。
 
@@ -66,16 +70,23 @@ CoderDojo は上記の仕組みで回っていて、それぞれが決定権を�
 
 詳細はブランドガイドラインをご参照ください。
 
-詳細を見る → [CoderDojo ブランドガイドライン](/docs/brand-guidelines)
+<small>
+  ※
+  [CoderDojo ブランドガイドラインを見る](/docs/brand-guidelines)
+</small>
 
 <br>
 
-## 3. ロゴ画像のダウンロード方法について {#how-to-download}
+## [📥](#how-to-download) 3. ロゴ画像のダウンロード方法について {#how-to-download}
 
 一般社団法人 CoderDojo Japan のロゴ画像データは下記ページから公開しています。メディア掲載時に必要な場面などありましたら、お気軽にご活用ください。
 
-[CoderDojo Japan 公開ロゴ - Google Drive](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)    
+<br>
 
+<center>
+  <a href='https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing'>CoderDojo Japan 公開ロゴ (Google Drive) を見る</a>
+</center>
+  
 [![CoderDojo Japan ロゴデータ一式](/img/for-press.png)](https://drive.google.com/drive/folders/18DdLgn5rExU7FnERoLjaQIJjG3VObVH7?usp=sharing)
 
 
