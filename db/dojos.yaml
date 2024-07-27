@@ -1153,6 +1153,7 @@
   description: 大田区蒲田で不定期開催
   tags:
   - Scratch
+  - Webサイト
 - id: 17
   order: '131121'
   is_active: false
