@@ -95,6 +95,9 @@ module ApplicationHelper
     'https://news.coderdojo.jp' + path
   end
 
+  def decadojo_url; 'https://decadojo.coderdojo.jp'; end
+  def dojocon_url;  'https://dojocon.coderdojo.jp';  end
+
   def dojoletter_url()
     'https://news.coderdojo.jp/category/DojoLetterバックナンバー'
   end
