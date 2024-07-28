@@ -57,8 +57,8 @@
     %br
     = high_chart("dojo_tag_chart", @dojo_tag_chart)
 
-  %h2#howto{style: "margin-top: 70px; color: #333333;"}
-    %a{href: '#howto'}<
+  %h2#table{style: "margin-top: 70px; color: #333333;"}
+    %a{href: '#table'}<
       📝
     集計方法と集計対象について
   %ul{style: 'list-style: none; margin-left: -10px;'}
@@ -76,8 +76,10 @@
     %b Dojos
   %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
-  #howto-aggregate{align: 'center', style: 'margin-top: 30px;'}
-    %b 集計対象の道場数と集計割合の推移
+  #table-target{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+    %b
+      %a{href: '#table-target'} 🔍
+      集計対象と集計割合の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
@@ -108,8 +110,10 @@
       ※
       非アクティブになった道場も含まれています
 
-  #howto-table{align: 'center', style: 'margin-top: 30px;'}
-    %b 開催回数と参加者数の推移表
+  #table-actual{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+    %b
+      %a{href: '#table-actual'} ☯️
+      開催回数と参加者数の推移
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
@@ -141,10 +145,13 @@
             %span.table-item= num
     %span{style: 'font-size: 10px;'}
       ※
-      本ページ上部にある推移グラフを表にしたデータです
+      %a{href: '#graph'}<> 冒頭の推移グラフ
+      を表にしたデータです
 
-  #howto-estimate{align: 'center', style: 'margin-top: 30px;'}
-    %b 開催回数と参加者数の見込み
+  #table-estimate{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+    %b
+      %a{href: '#table-estimate'} 💭
+      開催回数と参加者数の見込み
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
