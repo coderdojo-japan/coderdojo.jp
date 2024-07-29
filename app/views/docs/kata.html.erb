@@ -53,7 +53,7 @@
 	  <a href='#coderdojo'>☯️</a>
 	  CoderDojo とは?
 	</h3>
-	<p>CoderDojo は、7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドから始まり、世界では<%= Dojo::NUM_OF_COUNTRIES %>カ国・<%= Dojo::NUM_OF_WORLD_DOJOS %>以上の道場、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。CoderDojo は全国各地で定期的に開催されており、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が毎年楽しみながら様々な作品を創っています。</p>
+	<p>CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<%= link_to '国際的な非営利活動', dojomap_url('/world'), style: "white-space: nowrap;" %>で、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。全国各地で定期的に開催され、<%= link_to '延べ10,000人以上', stats_path %>の子ども達が楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
 	<%= lazy_image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
