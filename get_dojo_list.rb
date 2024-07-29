@@ -14,7 +14,7 @@ INPUT_TEXT = IO.readlines('./get_dojo_list.txt')
 DOJO_DB    = JSON.parse Net::HTTP.get(URI.parse 'https://coderdojo.jp/dojos.json'), symbolize_names: true
 
 # CoderDojo の名前を使って、Dojo 一覧からデータを検索
-result    = '<h3>☯️ 寄贈先の CoderDojo 一覧<small>（カッコ内は都道府県名となります）</small></h3>'
+result    = '<h3>🎁️ 寄贈先の CoderDojo 一覧<small style="white-space: nowrap;">（カッコ内は都道府県名となります）</small></h3>'
 result   << "\n\n<ul>\n"
 dojo_name = ''
 dojo_list = []
@@ -47,6 +47,7 @@ INPUT_TEXT.each do |line|
       .gsub('kodaira',        'こだいら')
       .gsub('toke',           '土気')
       .gsub('anjo',           '安城')
+      .gsub('yabuki',         '矢吹')
       .gsub('nagareyama',     '流山')
       .gsub('minami-kashiwa', '南柏')
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.

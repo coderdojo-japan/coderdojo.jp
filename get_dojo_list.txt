@@ -6,27 +6,8 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
-CoderDojo八戸
-CorderDojo たまち
-CoderDojo多摩センター
-CoderDojo武蔵小杉
-CoderDojo横浜師岡
-CoderDojo大船
-CoderDojoTOKE
-CoderDojo市川
-CoderDojo市川真間
-CoderDojo南柏
-CoderDojo 前橋
-CoderDojo磐田
-CoderDojo 豊橋
-Coderdojo 天白
-CoderDojo岐阜
-CoderDojo 恵那
-CoderDojo伊勢
-CoderDojo三次
-CoderDojo松山
-CoderDojo富山
-CoderDojo たかおか
-CoderDojoとなみ
+CoderDojo南風原
+CoderDojo 久留米
+CoderDojo 加西
 CoderDojo Tsuruoka
-CoderDojo 春日
+CoderDojo Yabuki 
