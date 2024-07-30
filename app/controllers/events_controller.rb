@@ -17,9 +17,12 @@ class EventsController < ApplicationController
   def latest
     @url = request.url
     @latest_event_by_dojos = []
+    @active_dojos_verified = [
+      '和歌山', '市川真間', '泉', '石垣', '南紀田辺', '三好', '市川', 'ひばりヶ丘', '伊勢',
+    ]
     Dojo.active.each do |dojo|
       latest_event = dojo.event_histories.newest.first
-      if latest_event.nil?
+      if @active_dojos_verified.include?(dojo.name) or latest_event.nil?
         @latest_event_by_dojos << {
           id:   dojo.id,
           name: dojo.name,
