@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get "/docs/_thanks",            to: redirect('/thanks')
 
   get "/redirects/202407",        to: redirect('https://www.facebook.com/groups/coderdojo.jp.champions/posts/7788378511253707/')
+  get "/redirects/interface",     to: redirect('/')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
   get "/brand",                   to: redirect('/docs/brand-guidelines')
   get "/calendar",                to: redirect('/calendar/yohei')
