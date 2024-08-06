@@ -53,10 +53,10 @@
   url: https://coderdojo-nagano.connpass.com/
 
 # 日本橋
-#- dojo_id: 319
-#  name: connpass
-#  group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
-#  url: https://coderdojo-nihonbashi.connpass.com/
+- dojo_id: 319
+  name: connpass
+  group_id: 14409
+  url: https://coderdojo-nihonbashi.connpass.com/
 
 # 南風原 (Reboot as a new dojo in Zen)
 #- dojo_id: 318
