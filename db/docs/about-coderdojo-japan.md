@@ -54,7 +54,7 @@
 <img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' />
 
 
-## 🤝 活動内容と実績 {#works}
+## [🤝](#works) 活動内容と実績 {#works}
 
 CoderDojo Japan では、[上記の定款](#top)に定められた事業内容にしたがって、提携している[パートナー法人](/#partners)とともに、次の活動を実施しています。
 
@@ -94,7 +94,7 @@ info@coderdojo.jp
 
 
 
-## 📜 法人設立から現在までの経緯 {#history}
+## [📜](#history) 法人設立から現在までの経緯 {#history}
 
 一般社団法人 CoderDojo Japan は、CoderDojo Foundation の承認にもと、[@yasulab](https://twitter.com/yasulab) と [@tkc49](https://twitter.com/tkc49) によって[2016年に設立](https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html)されました。前項で列挙した設立後の活動も高く評価され、国際的なモデル事例の１つとして CoderDojo Foundation の公式記事「[Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)」としても紹介されています。
 
@@ -133,7 +133,7 @@ info@coderdojo.jp
 </a>
 
 
-## 👥 理事募集について {#next}
+## [👥](#next) 理事募集について {#next}
 
 2020年7月をもって共同設立者である [@tkc49](https://twitter.com/tkc49) さんが理事役から相談役に移ったため、それに伴って新たな理事募集を行っています。隔週の定例ミーティング参加などは任意となるものの、理事以外の意見を求めたい場面で相談対応をしていただいたり、[@tkc49](https://twitter.com/tkc49) さん主導で始まった [news.coderdojo.jp](https://news.coderdojo.jp) の運用などにも引き続き関わっていただいております。
 
@@ -150,7 +150,7 @@ info@coderdojo.jp
 <a href="/podcasts/19"><img class="lazyload" data-src="/img/DojoCast_019_shownote.png" /></a>
 
 
-## 📑 よくある質問と回答 {#faq}
+## [📑](#faq) よくある質問と回答 {#faq}
 以下、これまでにいただいた質問を含め、よくある質問と回答 Q&A 形式でまとめています。ご参考になれば幸いです。
 
 ### Q. ミーティングはありますか?
@@ -182,7 +182,7 @@ info@coderdojo.jp
 
 <br>
 
-## ✅ 応募概要、応募の流れ
+## [✅](#flow) 応募概要、応募の流れ {#flow}
 
 1. **情報の取り扱い:** 応募内容は[プライバシーポリシー](/privacy)にしたがって管理され、一般公開されることはありません ㊙️
 1. **募集人数:** １名。応募〆切はなく、随時募集となります。興味あればお気軽にご連絡ください 👤
@@ -190,7 +190,7 @@ info@coderdojo.jp
 1. **応募後の流れ:** いただいた応募内容を拝見させていただき、さらに詳しい内容をインタビューで伺わせていただくことがあります。結果にかかわらず、１ヶ月以内にすべての応募者にメールにて返信いたします 📩
 
 
-## 📮 応募フォーム
+## [📮](#apply) 応募フォーム {#apply}
 
 <div style="padding-top: 10px; padding-bottom: 50px;">応募〆切: <s>2020年8月31日</s> 特になし (随時募集)</div>
 
