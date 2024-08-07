@@ -68,7 +68,7 @@ CoderDojo Japan では、[上記の定款](#top)に定められた事業内容�
    - 実績: [news.coderdojo.jp](https://news.coderdojo.jp) の[お知らせ](https://news.coderdojo.jp/category/news/)や[プレス](https://news.coderdojo.jp/category/press/)からご確認いただけます<br><br>
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
    - 内容: CoderDojo 間の情報共有や、合同で開催するイベントを支援します
-   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DojoCon Japan](/docs/dojocon-japan-guidelines) の開催サポートなど<br><br>
+   - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DecaDojo](https://decadojo.coderdojo.jp/) や [DojoCon Japan](https://dojocon.coderdojo.jp/) の開催サポートなど<br><br>
 - **(4) 国内外の「CoderDojo」に関する普及および゙広報に関する活動**
    - 内容: News サイトや SNS、Podcast などで CoderDojo 活動の周知を支援します
    - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Facebook](https://www.facebook.com/coderdojo.jp) や [Twitter](https://twitter.com/CoderDojoJapan) アカウント、[DojoCast](/podcasts) をご参照ください<br><br>
