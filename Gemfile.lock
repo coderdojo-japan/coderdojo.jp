@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/yasslab/dumper
-  revision: 1160175e1089e78887de89c21a303101cb56c096
-  specs:
-    dumper (1.7.2)
-      multipart-post (>= 1.1.5)
-      posix-spawn (>= 0.3.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -288,7 +280,6 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.3)
-    posix-spawn (0.3.15)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -498,7 +489,6 @@ DEPENDENCIES
   capybara
   coffee-rails
   dotenv-rails
-  dumper!
   factory_bot_rails
   faraday
   faraday_middleware
