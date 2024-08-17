@@ -5,7 +5,6 @@ gem 'rails', '~> 6.1'
 gem 'puma'
 gem "puma_worker_killer"
 gem 'pg'
-gem 'dumper', git: 'https://github.com/yasslab/dumper' # For database backup
 gem 'bootsnap'
 
 gem 'coffee-rails'
