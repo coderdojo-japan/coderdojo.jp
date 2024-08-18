@@ -300,6 +300,19 @@
   - micro:bit
   - Java
   - ラズベリーパイ
+- id: 325
+  order: '062081'
+  created_at: '2024-08-17'
+  name: 村山
+  prefecture_id: 6
+  logo: "/img/dojos/murayama.webp"
+  url: https://coderdojo-murayama.connpass.com/
+  description: 村山市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Unity
+  - Minecraft
 - id: 215
   order: '063410'
   is_active: false
