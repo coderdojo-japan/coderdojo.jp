@@ -263,9 +263,9 @@
   order: '062014'
   is_active: false
   created_at: '2017-03-28'
-  name: 山形
+  name: 山形@2017
   prefecture_id: 6
-  logo: "/img/dojos/yamagata.webp"
+  logo: "/img/dojos/yamagata_2017.webp"
   url: https://zen.coderdojo.com/dojo/jp/ri4-ben3-shan1-xing2-xian4-shan1-xing2-shi4/yamagata
   description: 山形市で毎月開催
   tags:
@@ -273,6 +273,19 @@
   - センサー
   - ロボット
   - AI
+- id: 324
+  order: '062014'
+  created_at: '2024-08-17'
+  name: 山形
+  prefecture_id: 6
+  logo: "/img/dojos/yamagata.webp"
+  url: https://coderdojo-yamagata.connpass.com/
+  description: 山形市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Unity
+  - Minecraft
 - id: 303
   order: '062031'
   created_at: '2023-07-12'
