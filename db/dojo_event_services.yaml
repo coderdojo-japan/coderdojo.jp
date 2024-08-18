@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 山形@2024 (同名のInactive Dojoが2017にある)
+# TODO: イベントが立ったら group_id を追加する
+#- dojo_id: 324
+#  name: connpass
+#  group_id: 14718
+#  url: https://coderdojo-yamagata.connpass.com/
+
 # なかもず（中百舌鳥）
 # TODO: イベントが立ったら group_id を追加する
 #- dojo_id: 323
