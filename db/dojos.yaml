@@ -658,11 +658,12 @@
   - Python
 - id: 11
   order: '112097'
-  is_active: false
+  note: Re-activated @ 2024-08-19 https://www.facebook.com/groups/coderdojo.jp/posts/8010099192436743/
+  is_active: true
   created_at: '2015-05-13'
   name: 飯能
   prefecture_id: 11
-  url: https://www.facebook.com/CoderDojoHanno
+  url: https://coderdojohanno.com/
   logo: "/img/dojos/hanno.webp"
   description: 飯能市で毎月開催
   tags:
