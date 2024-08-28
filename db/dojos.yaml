@@ -1057,6 +1057,17 @@
   description: 中央区で隔月開催
   tags:
   - Scratch
+- id: 326
+  order: '131024'
+  created_at: '2024-08-27'
+  name: 晴海
+  prefecture_id: 13
+  logo: "/img/dojos/harumi.webp"
+  url: https://coderdojo-harumi.connpass.com/
+  description: 中央区晴海で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 289
   order: '131032'
   created_at: '2022-10-23'
