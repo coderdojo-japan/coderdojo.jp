@@ -28,11 +28,10 @@
 ### (dojos.yaml の追加順) ###
 
 # 晴海
-# TODO: イベントが立ったら group_id を追加する
-#- dojo_id: 326
-#  name: connpass
-#  group_id:
-#  url: https://coderdojo-harumi.connpass.com/
+- dojo_id: 326
+  name: connpass
+  group_id: 15319
+  url: https://coderdojo-harumi.connpass.com/
 
 # 村山
 # TODO: イベントが立ったら group_id を追加する
