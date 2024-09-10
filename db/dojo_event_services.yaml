@@ -46,11 +46,10 @@
   url: https://coderdojo-yamagata.connpass.com/
 
 # なかもず（中百舌鳥）
-# TODO: イベントが立ったら group_id を追加する
-#- dojo_id: 323
-#  name: connpass
-#  group_id: ???
-#  url: https://coderdojo-nakamozu.connpass.com/
+- dojo_id: 323
+  name: connpass
+  group_id: 15213
+  url: https://coderdojo-nakamozu.connpass.com/
 
 # 狛江
 - dojo_id: 322
