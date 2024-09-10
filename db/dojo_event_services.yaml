@@ -34,11 +34,10 @@
   url: https://coderdojo-harumi.connpass.com/
 
 # 村山
-# TODO: イベントが立ったら group_id を追加する
-#- dojo_id: 325
-#  name: connpass
-#  group_id:
-#  url: https://coderdojo-murayama.connpass.com/
+- dojo_id: 325
+  name: connpass
+  group_id: 15315
+  url: https://coderdojo-murayama.connpass.com/
 
 # 山形 (同名のInactive Dojoを「山形@2017」に変更した)
 # TODO: イベントが立ったら group_id を追加する
