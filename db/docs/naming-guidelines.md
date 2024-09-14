@@ -62,7 +62,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 <br>
 
 - Q. 住所に無い地域名でも道場名に使うことはできますか?
-- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/%E6%B3%95%E9%9A%86%E5%AF%BA%E9%A7%85)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 柏沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、**市区町村より小さい単位の地域名であれば大丈夫**です。
+- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/法隆寺駅)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 柏沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、**市区町村より小さい単位の地域名であれば大丈夫**です。
 
 <br>
 
@@ -71,7 +71,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 
 <br>
 
-- Q. 他の都道府県に[同一名称の市区町村名](https://ja.wikipedia.org/wiki/%E5%90%8C%E4%B8%80%E5%90%8D%E7%A7%B0%E3%81%AE%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91%E4%B8%80%E8%A6%A7)がある場合、避けたほうがよいですか?
+- Q. 他の都道府県に[同一名称の市区町村名](https://ja.wikipedia.org/wiki/同一名称の市区町村一覧)がある場合、避けたほうがよいですか?
 - A. coderdojo.jp では `道場名 (都道府県名)` といった形で掲載しているため、名称が重なることはありません。とはいえ参加者が混同する可能性もありますので、もし可能であれば[より小さい単位の地域名](#faq)を使ったり、上記の[既に道場がある場合](#existing-dojo)を参考にご対応していただけると嬉しいです。
 
 
