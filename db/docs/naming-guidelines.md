@@ -17,17 +17,18 @@
 
 <br>
 
-CoderDojo の名前は、`道場名@スポンサー名` または `道場名@会場名` といった形で名前を付け加えることができます。例えば五反田にある CoderDojo では、[freee 株式会社](https://www.freee.co.jp/)が会場を提供しているため、[CoderDojo 五反田 @freee](https://coderdojo-gotanda.doorkeeper.jp/events/past) といった名前を使っています。
+CoderDojo の名前には、`道場名 @ スポンサー名` または `道場名 @ 会場名` といった形で名前を付け加えることができます。例えば五反田にある CoderDojo では、[freee 株式会社](https://www.freee.co.jp/)が会場を提供していたため [CoderDojo 五反田 @freee](https://coderdojo-gotanda.doorkeeper.jp/events/103000) と命名しました。
 
 <br>
 
 [![CoderDojo 五反田 @freee](/img/coderdojo-gotanda-at-freee.jpg)](https://coderdojo-gotanda.doorkeeper.jp/events/104292)
 
+<blockquote style='margin-left: 16px;'>
+  ✅ スポンサーによっては『名前を付け加えないで欲しい』といった場面もあります。道場名にスポンサー名を付け加えたいときは、<strong>事前にスポンサーから許諾を得ておく</strong>とスムーズです。
+</blockquote>
+
 <br>
 
-なお、スポンサーによっては『名前を付け加えないで欲しい』といった場面もありますので、道場名にスポンサー名を付け加えるときは、事前にスポンサーから許諾を得ておくようお願い致します。
-
-<br>
 
 ## 同じ市区町村内に既に道場がある場合 {#existing-dojo}
 
@@ -43,7 +44,7 @@ CoderDojo の名前は、`道場名@スポンサー名` または `道場名@会
 
 <!--同様にして、渋谷区内にも『[CoderDojo 渋谷](https://coderdojoshibuya.connpass.com/)』と『[CoderDojo 渋谷@みらい区](https://peatix.com/group/7202018)』がありますが、それぞれ別々のチームによって運営されています。-->
 
-同じ市区町村内または地域名で活動したい場合は、既に活動している CoderDojo 運営者に連絡するとスムーズです。連絡先は[トップページ](/#dojos)に掲載しているリンク先、もしくは [CoderDojo Zen](https://zen.coderdojo.com/) から検索して見つけることができます。
+同じ市区町村内または地域名で活動したい場合は、既に活動している CoderDojo 運営者に連絡するとスムーズです。連絡先は[全国の道場一覧](/#dojos)にあるリンク先、もしくは [🗺 DojoMap](https://map.coderdojo.jp/) から検索して見つけることができます。
 
 <br>
 
@@ -61,7 +62,7 @@ CoderDojo の名前は、`道場名@スポンサー名` または `道場名@会
 <br>
 
 - Q. 住所に無い地域名でも道場名に使うことはできますか?
-- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/%E6%B3%95%E9%9A%86%E5%AF%BA%E9%A7%85)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 柏沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、市区町村より小さい単位の地域名であれば大丈夫です。
+- A. はい、例えば[法隆寺駅](https://ja.wikipedia.org/wiki/%E6%B3%95%E9%9A%86%E5%AF%BA%E9%A7%85)近辺で活動する [CoderDojo 法隆寺](https://zen.coderdojo.com/dojos/jp/nai4-liang2-xian4-sheng1-ju1-jun4-sheng1-ju1-jun4/horyujinararohasuraiburar)や、柏市内の[沼南地域](https://ja.wikipedia.org/wiki/%E6%B2%BC%E5%8D%97%E7%94%BA)で活動する [CoderDojo 柏沼南](https://www.facebook.com/CoderDojoKashiwaShounan/)のように、**市区町村より小さい単位の地域名であれば大丈夫**です。
 
 <br>
 
