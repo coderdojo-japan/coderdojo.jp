@@ -33,7 +33,7 @@
        style="width: 100%; margin: 30px -10px; padding: 0px 0px;" data-src="/docs/tobitate-coderdojo-2.webp" loading="lazy" src="/spinner.svg"/>
 </a>
 
-### [&raquo; スライド資料を見る](https://www.docswell.com/s/tuntun19/5MXX8X-DojoCon2024/1)
+### [&raquo; スライド資料を見る](https://www.docswell.com/s/tuntun19/5MXX8X-DojoCon2024/1) / [&raquo; 文部科学省の紹介ページを見る](https://tobitate-mext.jasso.go.jp/zukan/detail-2999)
 
 <br>
 
@@ -45,3 +45,4 @@
 - 公式Web:  [https://tobitate-mext.jasso.go.jp/index.html](https://tobitate-mext.jasso.go.jp/index.html)
 - 高校向け: [https://tobitate-mext.jasso.go.jp/hs/program/tech/index.html](https://tobitate-mext.jasso.go.jp/hs/program/tech/index.html)
 - 大学向け: [https://tobitate-mext.jasso.go.jp/univ/program/tech/](https://tobitate-mext.jasso.go.jp/univ/program/tech/)
+- 留学事例: [https://tobitate-mext.jasso.go.jp/zukan/detail-2999](https://tobitate-mext.jasso.go.jp/zukan/detail-2999)
