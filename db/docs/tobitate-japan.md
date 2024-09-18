@@ -1,6 +1,6 @@
 # ✈️ トビタテ！留学JAPAN / CoderDojo 留学
 
-<a href='https://map.coderdojo.jp/world'>
+<a href='#example'>
   <img class="lazyload img-responsive center-block" alt="CoderDojo 留学 - Supported by トビタテ！留学 JAPAN"
        style="width: 90%; margin: 50px auto;" data-src="/docs/tobitate-coderdojo-1.webp" loading="lazy" src="/spinner.svg"/>
 </a>
