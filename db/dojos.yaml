@@ -3164,6 +3164,16 @@
   description: 和歌山市で毎月開催
   tags:
   - Scratch
+- id: 327
+  order: '302040'
+  created_at: '2024-09-19'
+  name: 和歌山有田
+  prefecture_id: 30
+  logo: "/img/dojos/default.webp"
+  url: https://www.facebook.com/people/CoderDojo和歌山有田/61564929375960/
+  description: 有田市で毎月開催
+  tags:
+  - Scratch
 - id: 99
   order: '302066'
   created_at: '2017-09-06'
