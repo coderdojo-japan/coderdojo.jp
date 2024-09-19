@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 和歌山有田
+#- dojo_id: 327
+#  name: facebook
+#  group_id: 
+#  url: https://www.facebook.com/people/CoderDojo和歌山有田/61564929375960/
+
 # 晴海
 - dojo_id: 326
   name: connpass
