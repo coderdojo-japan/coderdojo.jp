@@ -1,23 +1,23 @@
 source 'https://rubygems.org'
 ruby '3.1.6'
 
-gem 'rails', '~> 6.1'
-gem 'puma'
-gem "puma_worker_killer"
-gem 'pg'
 gem 'bootsnap'
+gem 'pg'
+gem 'puma'
+gem 'puma_worker_killer'
+gem 'rails', '~> 7.0'
 
 gem 'coffee-rails'
 gem 'jbuilder'
 gem 'jquery-rails'
 
-gem 'simple_grid_rails'
-gem "bootstrap-sass"
-gem 'sass-rails', '>= 5'
-gem 'uglifier'
+gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'rails-html-sanitizer', '~> 1.4.4'
+gem 'sass-rails', '>= 5'
+gem 'simple_grid_rails'
+gem 'uglifier'
 
 # For handling error
 # https://github.com/yuki24/rambulance
@@ -39,14 +39,14 @@ gem 'kramdown-parser-gfm'
 gem 'faraday'
 gem 'faraday_middleware'
 
-gem 'koala'
-gem 'rack-user_agent'
-gem 'rack-attack'
 gem 'google_drive'
-gem 'lazy_high_charts', "1.5.8"
+gem 'koala'
+gem 'lazy_high_charts', '1.5.8'
+gem 'rack-attack'
+gem 'rack-user_agent'
 
 # For RSS feed
-gem 'ruby-mp3info', :require => 'mp3info'
+gem 'ruby-mp3info', require: 'mp3info'
 
 # For Sitemap (Google Search Console)
 gem 'sitemap_generator'
@@ -61,30 +61,30 @@ gem 'net-http'
 gem 'uri'
 
 group :development do
-  gem 'web-console'
-  gem "solargraph"
-  gem 'spring'
-  gem 'listen'
-  gem 'letter_opener_web'
-  gem 'stackprof',  require: false
   gem 'flamegraph', require: false
-  gem 'memory_profiler',    require: false
+  gem 'letter_opener_web'
+  gem 'listen'
+  gem 'memory_profiler', require: false
   gem 'rack-mini-profiler', require: false
+  gem 'solargraph'
+  gem 'spring'
+  gem 'stackprof', require: false
+  gem 'web-console'
 end
 
 group :development, :test do
-  gem 'pry-rails'
+  gem 'minitest-retry'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'rake'
-  gem 'minitest-retry'
   gem 'rspec-retry'
 
-  gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'rspec-rails', '~> 4.0'
   gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0'
+  gem 'selenium-webdriver'
 
   gem 'dotenv-rails'
 end
