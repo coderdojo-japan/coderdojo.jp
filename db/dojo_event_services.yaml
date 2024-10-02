@@ -1341,10 +1341,10 @@
   name: connpass
   group_id: 4692
   url: https://coderdojo-tachikawa.connpass.com/
-# - dojo_id: 118
-#   name: doorkeeper
-#   group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
-#   url: https://coderdojotachikawa.doorkeeper.jp/
+- dojo_id: 117
+   name: doorkeeper
+   group_id: 16821
+   url: https://coderdojotachikawa.doorkeeper.jp/
 
 # 阿倍野
 - dojo_id: 116
