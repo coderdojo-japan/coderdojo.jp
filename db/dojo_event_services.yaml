@@ -1342,9 +1342,9 @@
   group_id: 4692
   url: https://coderdojo-tachikawa.connpass.com/
 - dojo_id: 117
-   name: doorkeeper
-   group_id: 16821
-   url: https://coderdojotachikawa.doorkeeper.jp/
+  name: doorkeeper
+  group_id: 16821
+  url: https://coderdojotachikawa.doorkeeper.jp/
 
 # 阿倍野
 - dojo_id: 116
