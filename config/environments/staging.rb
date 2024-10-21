@@ -32,7 +32,6 @@ Rails.application.configure do
   #config.assets.quiet = true
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = Sprockets::UglifierCompressor.new(comments: :copyright)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
