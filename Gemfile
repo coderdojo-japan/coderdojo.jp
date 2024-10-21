@@ -21,7 +21,9 @@ gem 'uglifier'
 
 # For handling error
 # https://github.com/yuki24/rambulance
-gem 'rambulance'
+# Using patch gem due to NameError: uninitialized constant ApplicationHelper
+# https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
+gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
 
 # For redirection
 gem 'rack-host-redirect'
