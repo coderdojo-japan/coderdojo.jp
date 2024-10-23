@@ -269,7 +269,7 @@ GEM
     multipart-post (2.4.1)
     net-http (0.4.1)
       uri
-    net-imap (0.4.14)
+    net-imap (0.4.17)
       date
       net-protocol
     net-pop (0.1.2)
