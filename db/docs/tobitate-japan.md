@@ -1,13 +1,15 @@
 # ✈️ トビタテ！留学JAPAN / CoderDojo 留学
 
-<a href='#example'>
-  <img class="lazyload img-responsive center-block" alt="CoderDojo 留学 - Supported by トビタテ！留学 JAPAN"
-       style="width: 90%; margin: 50px auto;" data-src="/docs/tobitate-coderdojo-1.webp" loading="lazy" src="/spinner.svg"/>
-</a>
+<br>
 
 トビタテ！留学JAPAN「日本代表プログラム」は、返済不要の奨学金や研修等を通して学生の留学を支援する奨学金制度です。
 
 高校生・高専生・大学生を対象とした文科省主催の取り組みで、返済不要の奨学金や研修など通して **好きなこと** で留学ができるプログラムです。
+
+<a href='#example'>
+  <img class="lazyload img-responsive center-block" alt="CoderDojo 留学 - Supported by トビタテ！留学 JAPAN"
+       style="width: 90%; margin: 50px auto;" data-src="/docs/tobitate-coderdojo-1.webp" loading="lazy" src="/spinner.svg"/>
+</a>
 
 <br>
 

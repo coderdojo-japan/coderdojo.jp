@@ -26,8 +26,9 @@ class DocsController < ApplicationController
       @doc.content.gsub! "{{ NUM_OF_PARTNERSHIPS }}", Dojo::NUM_OF_PARTNERSHIPS
     end
 
-    @content = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
-    @url     = request.url
+    @content    = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
+    @url        = request.url
+    @meta_image = Nokogiri::HTML.parse(@content).at("//img")&.attribute('data-src')&.value || "/img/ogp-docs.jpeg"
 
     # Add here if you want to optimize meta description.
     case @doc.filename
