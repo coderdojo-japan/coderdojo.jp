@@ -932,8 +932,6 @@
   - micro:bit
   - Python
   - Webサイト
-  #- toio
-  #- toioプレイグラウンド
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
