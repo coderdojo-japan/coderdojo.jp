@@ -1465,6 +1465,20 @@
   - micro:bit
   - toio
   - マルチメディア
+- id: 328
+  order: '132128'
+  created_at: '2024-10-29'
+  name: 日野
+  prefecture_id: 13
+  url: https://coderdojo-hino.connpass.com/
+  logo: "/img/dojos/hino.webp"
+  description: 日野市で毎月開催
+  tags:
+  - Scratch
+  - Python
+  - micro:bit
+  - ラズベリーパイ
+  - Arduino
 - id: 275
   order: '132152'
   is_active: false
