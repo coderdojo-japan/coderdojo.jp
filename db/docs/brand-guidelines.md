@@ -47,4 +47,22 @@
 <img alt="Logo Examples 2/3" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-examples-2.png">
 <img alt="Logo Examples 3/3" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-examples-3.png">
 
+<br>
+
+上記のほか、本Webサイトのトップページにも様々なロゴ画像が掲載されております。こちらも合わせてご参考になれば幸いです。
+
+<div style="margin-top: 30px; text-align: center;">図: 日本各地の道場 (<a href='/#dojos'>coderdojo.jp/#dojos</a>) への掲載例</div>
+<a href='/#dojos'>
+  <img class="lazyload" loading='lazy' alt='CoderDojo ロゴの例'
+   src='/spinner.svg' data-src='/img/cover_dojos.png'>
+</a>
+
+<div class='btn-cover' style="margin: 20px auto;">
+  <a class='btn-blue' href='/#dojos'>
+    <!--<i class='far fa-yin-yang'></i>-->
+    🗾
+    日本各地の道場ロゴを見る
+  </a>
+</div>
+
 
