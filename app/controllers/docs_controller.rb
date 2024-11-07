@@ -29,6 +29,13 @@ class DocsController < ApplicationController
     @content    = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
     @url        = request.url
     @meta_image = Nokogiri::HTML.parse(@content).at("//img")&.attribute('data-src')&.value || "/img/ogp-docs.jpeg"
+    if @meta_image.end_with? '.webp'
+      # .webp -> .jpg
+      # .webp -> .png
+      @meta_image.gsub!('.webp', '.jpg')  if File.exists? "public/#{@meta_image[0..-6]}.jpg"
+      @meta_image.gsub!('.webp', '.jpeg') if File.exists? "public/#{@meta_image[0..-6]}.jpeg"
+      @meta_image.gsub!('.webp', '.png')  if File.exists? "public/#{@meta_image[0..-6]}.png"
+    end
 
     # Add here if you want to optimize meta description.
     case @doc.filename
