@@ -14,13 +14,13 @@ To enable this it is up to CoderDojo Champions to take certain necessary steps a
 
 This document details a set of guiding principles that the CoderDojo Foundation recommends all individual Dojos meet. The principles set out in this document may be amended at any stage through a consultation process with the Community or Advisory Committee.
 
-> ⚠️ **本 RP は[2014年時点のアーカイブ版](https://web.archive.org/web/20150702063648/https://coderdojo.com/news/2014/06/04/coderdojo-recommended-practice/)となり、最新版ではない点にご注意ください。[&raquo; 議事録を読む](https://www.facebook.com/legacy/notes/635280273252042/)**
-
 ```
 Open Consultation Period
 
 As you may know, the CoderDojo Foundation is inviting the entire global CoderDojo Community for an Open Consultation Period (11th of June 2014 to the 13th of July 2014 at 12 midnight) during which they can give their feedback on Recommended Practice. We are happy to announce that this period has officially started and is open until the 13th of July 2014. During this time any Dojo can submit feedback, or arrange a call with the CoderDojo Foundation team to discuss their thoughts. The Foundation is committed to the CoderDojo community and value their input greatly on this matter which is why we are having this Open Consultation Period.
 ```
+
+> ⚠️ **本 RP は[2014年時点のアーカイブ版](https://web.archive.org/web/20150702063648/https://coderdojo.com/news/2014/06/04/coderdojo-recommended-practice/)となり、最新版ではない点にご注意ください。[&raquo; 議事録を読む](https://www.facebook.com/legacy/notes/635280273252042/)**
 
 
 ## What is the Recommended Practice?
