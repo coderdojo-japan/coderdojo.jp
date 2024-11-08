@@ -14,7 +14,7 @@ To enable this it is up to CoderDojo Champions to take certain necessary steps a
 
 This document details a set of guiding principles that the CoderDojo Foundation recommends all individual Dojos meet. The principles set out in this document may be amended at any stage through a consultation process with the Community or Advisory Committee.
 
-> ⚠️ **本 RP は[2014年6月時点のアーカイブ版](https://web.archive.org/web/20150702063648/https://coderdojo.com/news/2014/06/04/coderdojo-recommended-practice/)となり、最新版ではない点にご注意ください。[&raquo; 議事録を読む](https://www.facebook.com/legacy/notes/635280273252042/)**
+> ⚠️ **本 RP は[2014年時点のアーカイブ版](https://web.archive.org/web/20150702063648/https://coderdojo.com/news/2014/06/04/coderdojo-recommended-practice/)となり、最新版ではない点にご注意ください。[&raquo; 議事録を読む](https://www.facebook.com/legacy/notes/635280273252042/)**
 
 ```
 Open Consultation Period
