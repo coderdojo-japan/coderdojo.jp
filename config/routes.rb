@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/about-coderdojo-japan"    => "docs#show", id: 'about-coderdojo-japan'
   get "/about-coderdojo"          => "docs#show", id: 'about-coderdojo'
 
+  get "/docs/brand-guidelines",   to: redirect('/brand')
   get "/docs/thanks",             to: redirect('/thanks')
   get "/docs/financial-report",   to: redirect('/finances')
   get "/docs/finances",           to: redirect('/finances')
@@ -34,12 +35,12 @@ Rails.application.routes.draw do
   get "/redirects/202407",        to: redirect('https://www.facebook.com/groups/coderdojo.jp.champions/posts/7788378511253707/')
   get "/redirects/interface",     to: redirect('/')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
-  get "/brand",                   to: redirect('/docs/brand-guidelines')
   get "/calendar",                to: redirect('/calendar/yohei')
   get "/calendar/yohei"   => "docs#show", id: '_calendar-yohei'
   get "/calendar/kirie"   => "docs#show", id: '_calendar-kirie'
   get "/thanks"           => "docs#show", id: '_thanks'
 
+  get "/brand"            => "docs#show", id: 'brand-guidelines'
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
   get "/english"          => "docs#show", id: 'english'

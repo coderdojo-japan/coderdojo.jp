@@ -925,7 +925,7 @@
   prefecture_id: 12
   logo: "/img/dojos/kamagaya.webp"
   url: https://cd-kamagaya.com/
-  description: 鎌ケ谷市で毎月開催
+  description: 鎌ケ谷市で毎月第4日曜に開催
   tags:
   - Scratch
   - LEGO
@@ -1463,6 +1463,20 @@
   - micro:bit
   - toio
   - マルチメディア
+- id: 328
+  order: '132128'
+  created_at: '2024-10-29'
+  name: 日野
+  prefecture_id: 13
+  url: https://coderdojo-hino.connpass.com/
+  logo: "/img/dojos/hino.webp"
+  description: 日野市で毎月開催
+  tags:
+  - Scratch
+  - Python
+  - micro:bit
+  - ラズベリーパイ
+  - Arduino
 - id: 275
   order: '132152'
   is_active: false
@@ -3162,6 +3176,16 @@
   logo: "/img/dojos/wakayama.webp"
   url: https://www.facebook.com/coderdojo.wakayama/
   description: 和歌山市で毎月開催
+  tags:
+  - Scratch
+- id: 327
+  order: '302040'
+  created_at: '2024-09-19'
+  name: 和歌山有田
+  prefecture_id: 30
+  logo: "/img/dojos/default.webp"
+  url: https://www.facebook.com/people/CoderDojo和歌山有田/61564929375960/
+  description: 有田市で毎月開催
   tags:
   - Scratch
 - id: 99

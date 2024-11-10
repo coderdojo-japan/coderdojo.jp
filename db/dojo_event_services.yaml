@@ -27,6 +27,18 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 日野
+- dojo_id: 328
+  name: connpass
+  group_id: 15409
+  url: https://coderdojo-hino.connpass.com/
+
+# 和歌山有田
+#- dojo_id: 327
+#  name: facebook
+#  group_id: 
+#  url: https://www.facebook.com/people/CoderDojo和歌山有田/61564929375960/
+
 # 晴海
 - dojo_id: 326
   name: connpass
@@ -1335,10 +1347,10 @@
   name: connpass
   group_id: 4692
   url: https://coderdojo-tachikawa.connpass.com/
-# - dojo_id: 118
-#   name: doorkeeper
-#   group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
-#   url: https://coderdojotachikawa.doorkeeper.jp/
+- dojo_id: 117
+  name: doorkeeper
+  group_id: 16821
+  url: https://coderdojotachikawa.doorkeeper.jp/
 
 # 阿倍野
 - dojo_id: 116

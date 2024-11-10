@@ -2,7 +2,7 @@
 
 <br><br>
 
-一般社団法人 CoderDojo Japan が運営する Facebook グループ『[CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp)』(以下、本グループ) のガイドラインです。『これは投稿しても大丈夫かな?』と気になったときにご活用していただけると嬉しいです。
+一般社団法人 CoderDojo Japan が運営する Facebook グループ ([CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp) や [Champions](https://www.facebook.com/groups/coderdojo.jp.champions) など。以下、本グループ) のガイドラインです。『これは投稿しても大丈夫かな?』と気になったときにご活用していただけると嬉しいです。
 
 <br>
 
