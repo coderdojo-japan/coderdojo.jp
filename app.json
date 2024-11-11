@@ -32,5 +32,5 @@
   "scripts": {
       "postdeploy": "bundle exec rails db:schema:load && bundle exec rails db:seed && bundle exec rails dojos:update_db_by_yaml && bundle exec rails dojo_event_services:upsert && bundle exec rails assets:precompile RAILS_ENV=staging"
   },
-  "stack": "heroku-20"
+  "stack": "heroku-22"
 }
