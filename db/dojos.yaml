@@ -1963,7 +1963,8 @@
   - Webサイト
 - id: 88
   order: '192015'
-  is_active: false
+  is_active: true
+  note: Re-activated @ 2024年11月15日 (金曜)
   created_at: '2017-05-29'
   name: 甲府
   prefecture_id: 19
@@ -1972,9 +1973,8 @@
   description: 甲府市で毎月開催
   tags:
   - Scratch
-  - micro:bit
-  - ラズベリーパイ
-  - Mindstorms
+  - Hour of Code
+  - 電子工作
 - id: 195
   order: 192074
   is_active: false
