@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 平野 @ YOZORA LABO
+# TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
+#- dojo_id: 329
+#  name: connpass
+#  group_id: ???
+#  url: https://yozoralabo.connpass.com/
+
 # 日野
 - dojo_id: 328
   name: connpass
