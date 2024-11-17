@@ -2656,6 +2656,18 @@
   - ラズベリーパイ
   - 電子工作
   - プログラミング言語
+- id: 329
+  order: '271268'
+  created_at: '2024-11-17'
+  name: 平野@YOZORA LABO
+  prefecture_id: 27
+  logo: "/img/dojos/hirano.webp"
+  url: https://coderdojo-hirano.com/
+  description: 平野区で毎月開催
+  tags:
+  - Scratch
+  - Webサイト
+  - Minecraft
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
