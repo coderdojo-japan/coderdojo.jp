@@ -35,7 +35,7 @@
 
 色々な理由で継続が難しくなる場合があります。何らかの事情で支援・提供が難しくなった場合は、お気軽にご連絡ください。
 
-**JetBrains 社の例:**
+**JetBrains 社とのパートナー解消の例:**
 
 > Please note that some of the rules of our [Open Source Support Program](https://www.jetbrains.com/buy/opensource/) have changed. Most importantly, **if there is a commercial company or an organization that sponsors your OS project, i.e. if the developers are employed to work on the OS project, we will no longer be able to provide you with free licenses.**
 
