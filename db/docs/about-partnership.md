@@ -79,7 +79,7 @@ CoderDojo コミュニティは全国各地に広がり、[毎年1,000回以上�
 </div>
 
 
-また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://twitter.com/yasulab/status/1369480254113259521)として認識されています。もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
+また CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に根付いていて、それぞれが活発に活動していることが注目され、IPA (情報処理推進機構) からも[社会インフラの１つ](https://www.ipa.go.jp/jinzai/mitou/brochure2021/infrastructure.html#:~:text=CoderDojo)として認識されています。もし CoderDojo コミュニティへの支援を通して貴社も何か得られるものがあれば、継続的に協力しあえる関係が築けるかもしれません。
 
 CoderDojo についてまとめたスライド（下記）だけでなく、 [CoderDojo Japan が貴社のためにできること](#support)や[これまでの提携事例](#examples)、[よくある質問と回答](#faq)などもありますので、提携を検討する際のご参考になれば幸いです。
 
