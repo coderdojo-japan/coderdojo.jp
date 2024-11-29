@@ -35,9 +35,12 @@ Rails.application.routes.draw do
   get "/redirects/202407",        to: redirect('https://www.facebook.com/groups/coderdojo.jp.champions/posts/7788378511253707/')
   get "/redirects/interface",     to: redirect('/')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
-  get "/calendar",                to: redirect('/calendar/yohei')
-  get "/calendar/yohei"   => "docs#show", id: '_calendar-yohei'
-  get "/calendar/kirie"   => "docs#show", id: '_calendar-kirie'
+  get "/calendar",                to: redirect('/calendars')
+  get "/calendars",               to: redirect('/calendars/yohei')
+  get "/calendar/yohei",          to: redirect('/calendars/yohei')
+  get "/calendar/kirie",          to: redirect('/calendars/kirie')
+  get "/calendars/yohei"  => "docs#show", id: '_calendar-yohei'
+  get "/calendars/kirie"  => "docs#show", id: '_calendar-kirie'
   get "/thanks"           => "docs#show", id: '_thanks'
 
   get "/brand"            => "docs#show", id: 'brand-guidelines'
