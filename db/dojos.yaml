@@ -2229,6 +2229,20 @@
   - micro:bit
   - Mindstorms
   - IAIミニロボ
+- id: 330
+  order: '222071'
+  created_at: '2024-12-09'
+  name: 富士宮
+  prefecture_id: 22
+  logo: "/img/dojos/fujinomiya.webp"
+  url: https://coderdojo-fujinomiya.site/
+  description: 富士宮市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
+  - Minecraft
+  - Unity
 - id: 300
   order: '222119'
   created_at: '2023-05-16'
