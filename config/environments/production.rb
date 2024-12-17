@@ -92,9 +92,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Redirect if not in correct domains
-  config.middleware.use Rack::HostRedirect, {
-    %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
-  }
+  #config.middleware.use Rack::HostRedirect, {
+  #  %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
+  #}
 
   # Mailer settings
   config.action_mailer.delivery_method       = :smtp
