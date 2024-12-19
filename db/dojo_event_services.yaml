@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 品川港南
+# TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
+#- dojo_id: 331
+#  name: ???
+#  group_id: ???
+#  url: https://x.com/coderdojo_konan
+
 # 平野 @ YOZORA LABO
 # TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
 #- dojo_id: 329
