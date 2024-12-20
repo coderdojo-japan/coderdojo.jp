@@ -119,12 +119,13 @@ info@coderdojo.jp
 
 <br>
 
+<!--
 ### 10周年記念のメッセージ動画
 <div class="home-point-video">
   <iframe width="560" height="315" class='lazyload' frameborder="0"
    data-src="https://www.youtube.com/embed/SrakeakMlys?rel=0&start=488" allowfullscreen></iframe>
 </div>
-
+-->
 
 
 ### ケンブリッジ大学で日本の活動を共有している写真
