@@ -70,11 +70,9 @@ result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</
 result << "\n</ul>\n"
 puts result
 
-#binding.irb
-# 検索して見つからなかった Dojo 一覧があれば出力
-if not_found.any?
-  puts ''
-  puts '--- NOTE ---'
-  puts "道場数: #{dojo_list.count}"
-  not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
-end
+# 見つからなかった Dojo 等あれば出力
+puts ''
+puts '--- NOTE ---'
+puts "道場数: #{dojo_list.count}"
+not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
+
