@@ -66,13 +66,14 @@ INPUT_TEXT.each do |line|
 end
 
 dojo_list.sort_by!{ |dojo| dojo[:order] }
-result <<  dojo_list.map{ |dojo| "#{dojo[:is_active]}  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a><small>（#{dojo[:prefecture]}）</small></li>" }.join("\n")
+result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a><small>（#{dojo[:prefecture]}）</small></li>" }.join("\n")
 result << "\n</ul>\n"
 puts result
 
 #binding.irb
 # 検索して見つからなかった Dojo 一覧があれば出力
 if not_found.any?
+  puts ''
   puts '--- NOTE ---'
   puts "道場数: #{dojo_list.count}"
   not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
