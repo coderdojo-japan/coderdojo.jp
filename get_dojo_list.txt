@@ -6,8 +6,53 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
+CoderDojo 麹町@アドバンスト・ソフト
+CoderDojo HARUMI
+CoderDojo 品川港南
+CoderDojo 古河
+CoderDojo 立川
+CoderDojo青梅
+CoderDojo 木更津
+CoderDojo稲毛海岸
+CoderDojo鎌ケ谷
+CodeDojo西那須野
+CoderDojo 喜多方
+CoderDojo前橋
+CoderDojo 長野
+CoderDojo 富士宮
+CoderDojo 静岡
+CoderDojo浜松
+CoderDojo 豊橋
+CoderDojo 瑞穂
+CoderDojo師勝
+CoderDojo 尾張
+CoderDojo 稲沢正明寺
+CoderDojo岐阜
+CoderDojo伊勢
+CoderDojo なかもず
+CoderDojo 奈良・生駒
+CoderDojo南紀田辺
+CoderDojo 淡路島
+CoderDojo 鳥取
+CoderDojo 吉備
+CoderDojo 岡南
+CoderDojo 福山大門
+CoderDojo 光
+CoderDojo松山
+CoderDojo伊予
+CoderDojo 福岡
+CoderDojoさが
+CoderDojo久留米
 CoderDojo南風原
-CoderDojo 久留米
-CoderDojo 加西
-CoderDojo Tsuruoka
+‪CoderDojo浦添
+CoderDojo 名護
+CoderDojo 富山
+CoderDojoとなみ
 CoderDojo Yabuki 
+CoderDojo仙台若林
+CoderDojo徳島
+CoderDojo 山形
+CoderDojo Tsuruoka (鶴岡)
+CoderDojo 札幌
+CoderDojo滝沢
+CoderDojo八戸

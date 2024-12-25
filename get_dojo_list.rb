@@ -26,6 +26,7 @@ INPUT_TEXT.each do |line|
 
   # Delete prefix like 'CoderDojo', fix 表記揺れ, etc.
   dojo_name = line
+    .gsub(/codedojo/i,    '')
     .gsub(/coderdojo/i,   '')
     .gsub(/corderdojo/i,  '')        # 時々ある Typo
     .gsub(/コーダー道場/, '')
@@ -52,6 +53,7 @@ INPUT_TEXT.each do |line|
       .gsub('minami-kashiwa', '南柏')
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
       .gsub('tsuruoka',       '鶴岡')
+      .gsub('harumi',         '晴海')
       .gsub('町田',           'まちだ')
       .gsub('小平',           'こだいら')
       .gsub('吉備岡山',       '吉備')
