@@ -2,7 +2,6 @@
 
 require 'net/http'
 require 'json'
-require 'pry'
 
 # Google Spreadsheet などから対象となった Dojo 名の列をコピーし、
 # get_dojo_list.txt にペースト後、本スクリプトを実行すると、
@@ -39,10 +38,10 @@ INPUT_TEXT.each do |line|
     .split('、').first               # Ex: 東大阪、八尾
     .strip
 
-  # Search dojo data by its KANJI name from DOJO_DB
-  dojo_data = DOJO_DB.find do |dojo|
-    binding.pry if dojo_name.nil?
-    dojo[:name].start_with? dojo_name.downcase
+  # Search dojo data by its KANJI name from DOJO_DB (including inactive dojos).
+  # MEMO: Use `.reverse` to find a latest dojo in case of overriding inactive dojo's name.
+  found_dojo = DOJO_DB.reverse.find do |dojo|
+    dojo[:name] == dojo_name.downcase
       .gsub('ishigaki',       '石垣')
       .gsub('hitachinaka',    'ひたちなか')
       .gsub('kodaira',        'こだいら')
@@ -56,23 +55,25 @@ INPUT_TEXT.each do |line|
       .gsub('harumi',         '晴海')
       .gsub('町田',           'まちだ')
       .gsub('小平',           'こだいら')
+      .gsub('八戸',           '八戸@吹上')
       .gsub('吉備岡山',       '吉備')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
   end
 
-  dojo_data.nil? ?
-    not_found << dojo_name :
-    dojo_list << dojo_data
+  (found_dojo && found_dojo[:is_active]) ?
+    dojo_list << found_dojo :
+    not_found << dojo_name
 end
 
 dojo_list.sort_by!{ |dojo| dojo[:order] }
-result <<  dojo_list.map{ |dojo| "  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a><small>（#{dojo[:prefecture]}）</small></li>" }.join("\n")
+result <<  dojo_list.map{ |dojo| "#{dojo[:is_active]}  <li><a href='#{dojo[:url]}'>#{dojo[:name]}</a><small>（#{dojo[:prefecture]}）</small></li>" }.join("\n")
 result << "\n</ul>\n"
 puts result
 
+#binding.irb
 # 検索して見つからなかった Dojo 一覧があれば出力
 if not_found.any?
   puts '--- NOTE ---'
   puts "道場数: #{dojo_list.count}"
-  not_found.each {|dojo_name| puts "Not found: #{dojo_name}" }
+  not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
 end

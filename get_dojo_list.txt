@@ -30,7 +30,8 @@ CoderDojo 稲沢正明寺
 CoderDojo岐阜
 CoderDojo伊勢
 CoderDojo なかもず
-CoderDojo 奈良・生駒
+CoderDojo 奈良
+CoderDojo 生駒
 CoderDojo南紀田辺
 CoderDojo 淡路島
 CoderDojo 鳥取
@@ -50,7 +51,7 @@ CoderDojo 富山
 CoderDojoとなみ
 CoderDojo Yabuki 
 CoderDojo仙台若林
-CoderDojo徳島
+CoderDojo登米
 CoderDojo 山形
 CoderDojo Tsuruoka (鶴岡)
 CoderDojo 札幌
