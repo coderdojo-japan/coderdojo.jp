@@ -73,7 +73,7 @@ dojo_list.sort_by!{ |dojo| dojo[:order] }
 #result << "\n</ul>\n"
 
 # 掲載方式 v2（表形式）e.g. https://news.coderdojo.jp/2024/12/25/box-japan-to-coderdojo/
-result << "<table style='margin: auto; border-collapse: separate; border-spacing: 20px; table-layout: fixed; width: 80%;'>\n"
+result << "<table style='margin: auto; border-collapse: separate; border-spacing: 20px; table-layout: fixed; width: 98%;'>\n"
 result << "  <tbody>\n"
 dojo_list.each_with_index do |dojo, i|p
   result << "    <tr>\n"  if i%3 == 0
@@ -81,7 +81,7 @@ dojo_list.each_with_index do |dojo, i|p
       <td style='text-align: center; width: 33%;'>
         <a href='#{dojo[:url]}'>
           <img src='#{dojo[:logo].gsub('.webp', '.png')}' width='100px'/><br>
-          <span style='font-weight: bolder;'>#{dojo[:name]}<small>（#{dojo[:prefecture]}）</small></span>
+          <span style='font-weight: bolder;'>#{dojo[:name]}<br><small> (#{dojo[:prefecture]})</small></span>
         </a>
       </td>
   DOJO_HTML
