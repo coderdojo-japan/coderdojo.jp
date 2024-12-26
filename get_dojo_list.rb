@@ -93,8 +93,8 @@ result << "</table>"
 puts result
 
 # デバッグ用コード -- 見つからなかった Dojo 等あれば出力
-#puts ''
-#puts '--- NOTE ---'
-#puts "道場数: #{dojo_list.count}"
-#not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
+puts ''
+puts '--- NOTE ---'
+puts "道場数: #{dojo_list.count}"
+not_found.each {|dojo_name| puts "Not-found or In-active: #{dojo_name}" }
 

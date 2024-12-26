@@ -30,6 +30,7 @@ CoderDojo 稲沢正明寺
 CoderDojo岐阜
 CoderDojo伊勢原
 CoderDojo なかもず
+CoderDojo堺
 CoderDojo 奈良
 CoderDojo 生駒
 CoderDojo南紀田辺
