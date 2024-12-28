@@ -30,6 +30,8 @@
   - Unity
 - id: 253
   order: '012050'
+  is_active: false
+  note: https://www.facebook.com/search/top/?q=coderdojo室蘭
   created_at: '2020-09-10'
   name: 室蘭
   prefecture_id: 1
