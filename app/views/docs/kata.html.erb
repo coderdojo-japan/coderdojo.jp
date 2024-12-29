@@ -898,8 +898,8 @@
 	  <li><small><a href='https://note.com/yuletideboy/n/nd3a0f463952e'>新規CoderDojoを申請してからZenのリストに掲載されるまで</a> @ <a href='https://twitter.com/Coderdojo_Hongo'>CoderDojoほんごう</a></small></li>
 	</ul>
 
-	<h3 id='startup-create-account'>
-	  <a href='#startup-create-account'>🆕</a>
+	<h3 id='startup-steps'>
+	  <a href='#startup-steps'>🆕</a>
 	  アカウント登録から、申請までの流れ
 	</h3>
 	<p>CoderDojo の申請には、大きく分けて次の3つのステップがあります。</p>
@@ -923,16 +923,24 @@
 	    </p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
-		📝
+		※
 		<a href='https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'>CoderDojo 財団と Raspberry Pi 財団の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。
 	      </p>
 	    </blockquote>
 	  </li>
 
 	  <li>
-	    <p>アカウント作成後、作成したアカウントで <%= link_to 'CoderDojo Zen にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
+	    <p>アカウント作成後、作成したアカウントで統合クラブ登録・管理サイト <%= link_to 'Code Club にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
+	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	      <p>
+		📝
+		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> (Code Club コミュニティ) で新規クラブの登録・管理を行っています。
+		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 30px auto 30px'), 'https://codeclub.org/en/our-partners' %>
+	      </p>
+	    </blockquote>
 	    <br>
 	  </li>
+
 	  <li>
 	    <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br>
 	      <small><strong>✔︎ ページ最下部から言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</small>
