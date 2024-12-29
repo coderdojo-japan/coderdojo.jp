@@ -4,8 +4,8 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 
 ## Dojo が承認されているか確認する方法
 
-1. CoderDojo Zen の『[参加するDojoを探す](https://zen.coderdojo.com/find)』ページに行きます
-2. 運営している Dojo 名で、検索する (検索例: 『[柏](https://zen.coderdojo.com/find?q=%E6%9F%8F&p=1)』)
+1. Code Club の『[Find a Code Club](https://codeclub.org/find)』ページに行きます
+2. 運営している Dojo 名で、検索する (検索例: 『[柏](https://codeclub.org/find?search=%E6%9F%8F)』)
 3. 運営している Dojo が承認されていれば、地図上に道場が表示されます
 
 　
@@ -26,7 +26,7 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 
 - **B. 申請はしたけど、地図上に表示されなかった場合**
   - CoderDojo の現在の状態が『審査中』になっている可能性があります。
-  - [Global Community Slack](https://coderdojo.jp/kata#global-community-slack) にある `#foundation-support` チャンネルで質問をすると、審査チームから詳しい状況をご確認できます。（[DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです）
+  - [Global Community Slack](https://coderdojo.jp/kata#global-community-slack) にある `#support` チャンネルで質問をすると、審査チームから詳しい状況をご確認できます。（[DeepLで日英翻訳](https://www.deepl.com/ja/translator)するとスムーズです）
     ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
 
 <br>
