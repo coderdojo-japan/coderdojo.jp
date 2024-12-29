@@ -112,12 +112,41 @@
       地図情報から探す
   = render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos }
 
-%section#timeline.text-center{style: 'margin-bottom: 50px;'}
+/ Start with 'div' not 'section' due to grayscale-bg area
+/.text-center.grayscale-bg{style: "padding-top: 40px; padding-bottom: 50px;"}
+/  %section.detail-introduction#news
+%section#news.detail-introduction.text-center.list{style: 'margin: 30px auto 50px;'}
+  %h2{style: "color: dimgray;"}
+    %a{href: '#news'} 📰
+    最近の CoderDojo
   %br
+    
+  %ul.list{style: "list-style: none;"}
+    %li
+      %a{href: 'https://news.coderdojo.jp/2024/12/25/box-japan-to-coderdojo/'} 🎄 128台のノート PC 寄贈、Box Japan から CoderDojo へ
+    %li
+      %a{href: 'https://news.coderdojo.jp/2024/12/10/dojoletter-vol-78-2024%e5%b9%b410%e6%9c%88%e5%8f%b7/'} 📰 DojoLetter Vol.78 2024年10月号
+    %li
+      %a{href: 'https://news.coderdojo.jp/2024/11/11/dojoletter-vol-77-2024%e5%b9%b409%e6%9c%88%e5%8f%b7/'} 📰 DojoLetter Vol.77 2024年09月号
+  %p{style: 'margin-top: 30px;'}
+    最新情報はメールで受け取れます。
+    %br.ignore-pc<>
+    %small
+      (毎月配信)
+  = render partial: 'shared/newsletter'
+  .btn-cover{style: 'margin-top: 40px;'}
+    %a.btn-blue{href: news_url}<>
+      %i.far.fa-newspaper
+      過去の記事を読む
+
+/%section#timeline.text-center{style: 'margin-bottom: 50px;'}
+/
   %h3.text-center{style: 'margin-bottom: 30px;'}
     %a{href: "https://x.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20コーダー道場%20lang%3Aja"}
       %i.fab.fa-x-twitter
-      最近の CoderDojo
+      最近の CoderDojo    
+    %br
+/
   .twitter-timeline-wrap
     %a.twitter-timeline{href: "https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw",
                         'data-lang' => "ja", "data-dnt" => "true",
@@ -185,24 +214,6 @@
         %i.far.fa-books
         資料集「Kata」を読む
 
-/ Start with 'div' not 'section' due to grayscale-bg area
-.text-center.grayscale-bg{style: "padding-top: 40px; padding-bottom: 50px;"}
-  %section.detail-introduction#news
-    %br
-    %h2{style: "color: dimgray;"}
-      %a{href: '#news'} 📰
-      ニュースレター購読
-    %br
-    %p
-      最新情報はメールで受け取れます。
-      %br.ignore-pc<>
-      %small
-        (毎月配信)
-    = render partial: 'shared/newsletter'
-    .btn-cover{style: 'margin-top: 40px;'}
-      %a.btn-blue{href: dojoletter_url}<>
-        %i.far.fa-newspaper
-        過去の配信を読む
       
 %section.detail-introduction.partners_logo.text-center#partners{style: "padding-top: 50px;"}
   %h2{style: "color: dimgray;"}
