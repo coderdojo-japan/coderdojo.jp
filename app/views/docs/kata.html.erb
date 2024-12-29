@@ -891,6 +891,7 @@
 	</blockquote>
 
 	<%= lazy_image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート', min: true) %>
+	<br><br>
 	<span><small>上記の流れに沿って立ち上げた事例の紹介記事もあります。</small></span>
 	<ul style="margin-bottom: 50px;">
 	  <li><small><a href='https://dojocon2022.coderdojo.jp/session/coderdojo-tamachi/'>誰でもできる！CoderDojoを立ち上げてみよう！</a>(<a href='https://bit.ly/lets-start-coderdojo'>スライド資料</a>) @ <a href='https://twitter.com/dojoTamachi'>CoderDojoたまち</a></small></li>
@@ -918,12 +919,16 @@
 	  <li>
 	    <p>まずは CoderDojo を申請するために、Raspberry Pi アカウント (※) を作成します</p>
 	    <p><strong>・</strong><a href="https://my.raspberrypi.org/signup">アカウント登録フォーム</a><br>
-	      　13歳以上の場合は「13 and over」をクリックしてください。<br>
-	      <br>
-	      <small>※
-	      <a href='https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/'>CoderDojo と Raspberry Pi の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。</small></p>
-	    <br>
+	      　13歳以上の場合は <code>I'm 13 or older</code> をクリックしてください。<br>
+	    </p>
+	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	      <p>
+		📝
+		<a href='https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'>CoderDojo 財団と Raspberry Pi 財団の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。
+	      </p>
+	    </blockquote>
 	  </li>
+
 	  <li>
 	    <p>アカウント作成後、作成したアカウントで <%= link_to 'CoderDojo Zen にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
 	    <br>
