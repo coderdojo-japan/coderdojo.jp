@@ -2,7 +2,7 @@
 
 <br>
 
-CoderDojo Zen で承認されたら、Dojo 情報を coderdojo.jp に掲載することができます。
+Code Club で承認されたら、Dojo 情報を coderdojo.jp に掲載することができます。
 
 - 🗾 日本各地の道場: [https://coderdojo.jp/#dojos](/#dojos)
 - 🗺  地図で探す道場: [https://map.coderdojo.jp/](https://map.coderdojo.jp/)
@@ -29,7 +29,7 @@ CoderDojo Japan への掲載申請が承認されると、[パートナー法人
 
 <br>
 
-CoderDojo Zen での申請がまだお済みでない場合は、下記ページを参考に Dojo 申請をお願いします。
+Code Club での申請がまだお済みでない場合は、下記ページを参考に Dojo 申請をお願いします。
 
 - ☯️ CoderDojo を立ち上げる: [https://coderdojo.jp/kata#startup](/kata#startup)
 
@@ -41,8 +41,8 @@ CoderDojo Zen での申請がまだお済みでない場合は、下記ページ
 1. 文字数やタグ数に上限があるため、申請内容を一部変更して掲載する場合があります 🙏
   - ✅ 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
   - <br>
-1. Zen で非アクティブとなった場合、もしくは１年以上開催されていない場合は非表示になります 😴
-  - 📜️ [CoderDojo Zen の状態を確認する方法 - CoderDojo Japan](/docs/how-to-check-dojo-status)
+1. Code Club で非アクティブとなった場合、もしくは１年以上開催されていない場合は非表示になります 😴
+  - 📜️ [Code Club の状態を確認する方法 - CoderDojo Japan](/docs/how-to-check-dojo-status)
   - <br>
 1. 申請後もロゴ画像や説明文を更新できますので、まずは気軽にお申し込みください 📮✨
   - 🛠 [申請後に Dojo 情報を更新する方法 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp#readme)
