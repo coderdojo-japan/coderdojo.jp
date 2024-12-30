@@ -955,7 +955,7 @@
 	    </blockquote>
 	  </li>
 	  <li>
-	    <p>ログイン後、表示される内容にしたがって、立ち上げる CoderDojo に関する情報を入力していきます。</p>
+	    <p>ログイン後、まずは立ち上げる CoderDojo の開催地に関する情報を入力していきます。</p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝 より安全に運営できるよう、開催する国（Country）や開催する場所（Venue）などの情報を入力すると、<code>Safeguarding</code> と呼ばれる協力者の入力欄が表示されます。詳細は以下のページ（英語）からご確認いただけます。<br>
@@ -983,26 +983,31 @@
 	    </blockquote>
 	  </li>
 	  <li>
-	    <p>同意すると、Dojo 立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
-	    <p><small><strong>✔︎ </strong>チェック項目には、連絡先を設定したか、ボランティアに当てはあるか、安全性を考慮しているかなどがあります。申請時にすべての情報を完璧に揃える必要はありません! 運営に役立つチェックリストとしてご活用ください 📑</small></p>
-	    <br>
-	  </li>
-	  <li>
-	    <p>最後に、登録する道場名などの情報を入力していきます (<a href="/img/how-to-name-a-dojo.png">参考画面</a>)</p>
-	    <p><small>️<strong>✔︎ </strong> 「道場名」には <code>地域名</code> または <code>地域名 @ スポンサー名</code> を入力できます。日本語でも OK で、例えば <code>諏訪湖</code> や <code>中央林間</code>、<code>五反田 @ freee</code> と入力すると<a href='https://zen.coderdojo.com/find'>道場検索システム (CoderDojo Zen)</a> からも日本語で表示されるようになります。なお、CoderDojo であることを明確にするため<strong>「CoderDojo」という接頭語があると良い</strong>です。詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください。</small></p>
-	    <br>
-	  </li>
-	  <li>
-	    <p>以上で CoderDojo の申請手続きは完了です! 👏</p>
-	    <p><small>️<strong>✔︎ </strong> 後日、CoderDojo Foundation からメールが届きます (<a href="https://esa-pages.io/p/sharing/7542/posts/140/2963352d1fa7db71f1e6.html">メールの例</a>)。無事に承認されると <%= link_to '道場検索システム (CoderDojo Zen)', zen_url %> でも表示されるようになります。詳細は「<strong><%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %></strong>」をご参照ください。</small></p>
-	    <br>
+	    <p>その後は表示される内容にしたがって、具体的な開催地域の情報や、立ち上げる道場名に関する情報などを１つずつ入力していきます。</p>
+	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	      <p>
+		📝
+		「道場名」には <code>地域名</code> または <code>地域名 @ スポンサー名</code> を入力できます。日本語でも大丈夫です（例: <a href='https://coderdojochofu.hatenablog.jp/'><code>CoderDojo 調布</code></a> や <a href='https://coderdojo-nishinomiya.info/'><code>CoderDojo 西宮・梅田</code></a>、<a href='https://coderdojo-kojimachi.connpass.com/'><code>CoderDojo 麹町@アドバンスト・ソフト</code></a>)。<br>
+		<br>
+		なおクラブ登録・管理サイト「Code Club」には CoderDojo 以外のクラブもあるため、CoderDojo であることを明確にするため<strong>「CoderDojo」という接頭語があると良い</strong>です。詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください。<br>
+		<br>
+		またこのステップで入力した開催地の情報が、CoderDojo の地図アプリ「<a href='https://map.coderdojo.jp/'>DojoMap</a>」などでも活用されています。
+		<%= link_to lazy_image_tag('/img/dojomap_rect.webp', alt: 'CoderDojo の地図アプリ「DojoMap」のスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://map.coderdojo.jp/' %>
+	      </p>
+	    </blockquote>
 	  </li>
 	</ol>
-	<p>もし分からないことがあれば、<a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> やお近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者（各 Dojo の代表者）に聞いてみるのもオススメです 😉</p>
+	<p><strong>お疲れ様でした!</strong> 以上で CoderDojo の申請手続きは完了です! 👏✨</p>
 	<br>
-	<p><small><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中」と判断されるのでご注意ください。</small></p>
+	<p>申請が無事に受理されると、財団 (Foundation) からメールが届きます。その後、申請内容が審査され、無事に承認されると CoderDojo として活動できるようになります。(参考: <%= link_to 'CoderDojo が承認されているかの確認方法', doc_path('how-to-check-dojo-status') %>)</p>
 	<br>
-	<p><strong>お疲れ様でした!</strong> 👏✨ 以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
+	<p>もし分からないことがあれば、全国の CoderDojo 関係者が集まる <a href="https://www.facebook.com/groups/coderdojo.jp/">Facebook Group</a> や、お近くの Dojo 運営者にご相談ください ☯️ 🏃💨 実際に申請したことのある経験者（各 Dojo の代表者）に聞いてみるのもオススメです 😉</p>
+	<br>
+	<blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	  <p><strong>✍️ NOTE:</strong> 申請が無事受理されると、毎年11月〜12月ごろに年度調査アンケートのメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/">「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中 (Inactive)」と判断されるのでご注意ください。</p>
+	</blockquote>
+	<br>
+	<p>以上で一連の手続きは終わりになります。Dojo として承認されたら、次の項目「<strong><a href="/kata#support">支援</a></strong>」でまとめている各種プログラムに申請することができます。皆さんの CoderDojo 運営の一助になれば嬉しいです! 😸</p>
 
 
 	<h2 id='support' class="headline headline-kata">
