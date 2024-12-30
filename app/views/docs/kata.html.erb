@@ -955,8 +955,32 @@
 	    </blockquote>
 	  </li>
 	  <li>
-	    <p>入力後、<%= link_to 'CoderDojo 憲章', zen_url('/charter') %>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
-	    <br>
+	    <p>ログイン後、表示される内容にしたがって、立ち上げる CoderDojo に関する情報を入力していきます。</p>
+	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	      <p>
+		📝 より安全に運営できるよう、開催する国（Country）や開催する場所（Venue）などの情報を入力すると、<code>Safeguarding</code> と呼ばれる協力者の入力欄が表示されます。詳細は以下のページ（英語）からご確認いただけます。<br>
+		<ul>
+		  <li>
+		    <a href='https://help.coderdojo.com/cdkb/s/article/What-is-a-Safeguarding-Sponsor'>What is a Safeguarding Sponsor?</a>
+		    <small>(安全保護スポンサーとは何ですか？)</small>
+		  </li>
+		  <li>
+		    <a href='https://www.raspberrypi.org/safeguarding/'>Safeguarding Policy</a>
+		    <small>("Japanese Resources" をクリックすると日本語版が読めます)</small>
+		  </li>
+		  <li>
+		    <a href='https://projects.raspberrypi.org/ja-JP/projects/safeguarding-module/'>Safeguarding Module</a>
+		    <small>(ボランティアのための子ども安全保護ガイド)</small>
+		  </li>
+		  <li>
+		    <a href='https://raspberrypi.my.salesforce.com/sfc/p/#4J000000GeqW/a/8d000000PGbW/TH92cMY9bA.gvpWJx0xXME.cFddNiDAEZ0rG4ciel00'>Code of Behaviour</a>
+		    <small>(ボランティアのための子ども安全保護チェックリスト)</small>
+		  </li>
+		</ul>
+		
+		<%= lazy_image_tag('/kata/startup-application.webp', alt: '新規クラブ登録の初期画面', style: 'margin: 30px auto 20px') %>
+	      </p>
+	    </blockquote>
 	  </li>
 	  <li>
 	    <p>同意すると、Dojo 立ち上げ時のチェック項目が表示されます。１つずつ確認しながら進めてください (<a href="/img/how-to-start-a-dojo.png">参考画面</a>)</p>
