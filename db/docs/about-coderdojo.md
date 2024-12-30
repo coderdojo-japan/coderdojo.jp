@@ -12,7 +12,7 @@ CoderDojo は、子どものためのプログラミング道場です。2011年
 <br>
 
 <a href='https://map.coderdojo.jp/'><img alt="写真: 地図から Dojo を探す「DojoMap」" class='lazyload' loading='lazy' src='/spinner.svg' data-src='/img/dojomap_rect.webp'></a>
-<div style="text-align:center">写真: <a href='https://map.coderdojo.jp/'>DojoMap</a>」の様子</div>
+<div style="text-align:center">写真: 「<a href='https://map.coderdojo.jp/'>DojoMap</a>」の様子</div>
 
 <br>
 
