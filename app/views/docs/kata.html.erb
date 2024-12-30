@@ -913,39 +913,46 @@
 	  <li>立ち上げる CoderDojo の情報を入力し、申請する</li>
 	</ol>
 
-	<p>本セクションでは「アカウントはまだ持っていない」という状態から、CoderDojo 申請までの流れをまとめています。既にアカウントをお持ちの場合、以下の 2. から読み進めてください。</p>
+	<p>本セクションでは「アカウントはまだ持っていない」という状態から、CoderDojo 申請までの流れをまとめています。また各ステップの補足情報は「📝」でまとめています。</p>
 	<br>
 	<ol>
 	  <li>
-	    <p>まずは CoderDojo を申請するために、Raspberry Pi アカウント (※) を作成します</p>
+	    <p>まずは CoderDojo の申請に必要な Raspberry Pi アカウントを作成します</p>
 	    <p><strong>・</strong><a href="https://my.raspberrypi.org/signup">アカウント登録フォーム</a><br>
 	      　13歳以上の場合は <code>I'm 13 or older</code> をクリックしてください。<br>
 	    </p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
-		※
+		📝
 		<a href='https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'>CoderDojo 財団と Raspberry Pi 財団の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。
+		<%= link_to lazy_image_tag('/kata/coderdojo-and-raspi.webp', alt: 'Photo of "CoderDojo and Raspberry Pi Join Forces"', style: 'margin: 30px auto 20px'), 'https://www.google.com/search?q=CoderDojo+and+Raspberry+Pi+Join+Forces' %>
 	      </p>
 	    </blockquote>
 	  </li>
 
 	  <li>
-	    <p>アカウント作成後、作成したアカウントで統合クラブ登録・管理サイト <%= link_to 'Code Club にログイン', zen_url('/login') %>してください (ログイン済みの場合は不要です)</p>
+	    <p>アカウント作成後、クラブ登録・管理サイト「<%= link_to 'Code Club', 'https://codeclub.org/en/coderdojo-community' %>」に行きます。</p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝
 		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> (Code Club コミュニティ) で新規クラブの登録・管理を行っています。
-		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 30px auto 30px'), 'https://codeclub.org/en/our-partners' %>
+		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/our-partners' %>
 	      </p>
 	    </blockquote>
 	    <br>
 	  </li>
 
 	  <li>
-	    <p>ログイン後、画面上部にある「<%= link_to '道場を始める (Create a Dojo)', zen_url('/dashboard/start-dojo') %>」ボタンをクリックし、必要な情報を入力していきます。<br>
-	      <small><strong>✔︎ ページ最下部から言語を切り替えられます。</strong>日本語や英語にも対応しているので、お好きな言語に切り替えてください。</small>
-	    </p>
-	    <br>
+	    <p>その後、ページ内にある <code>Run a club</code>
+	      →
+	      <code>Start a club</code> の順にリンクをクリックし、先ほど作成した Raspberry Pi アカウントでログインします。</p>
+	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+	      <p>
+		📝
+		現在は英語での情報のみとなりますが、翻訳作業などが完了次第、日本語を含む各言語にも対応されていく予定です。
+		<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>
+	      </p>
+	    </blockquote>
 	  </li>
 	  <li>
 	    <p>入力後、<%= link_to 'CoderDojo 憲章', zen_url('/charter') %>に同意するかどうかを尋ねられます。内容をよくご確認していただき、問題なければ同意して次に進んでください。</p>
