@@ -12,24 +12,35 @@
         ダウンロード
       = lazy_image_tag '/img/pokemon_scratch.png', alt: 'ポケモン・ワークショップのカバー画像', min: true, style: "padding-bottom: 50px; border-radius: 4px;"
 
-    %p 『プログラミングでポケモンをうごかしてみよう』のワークショップで使うポケモン素材です。    
     %p
-      利用規約は、
-      %b<> 保護者の方が参加者と一緒に
-      ご確認いただくようお願い致します。
+      『
+      %a{href: pokemon_workshop_path}<> プログラミングでポケモンをうごかしてみよう
+      』のワークショップで使うポケモン素材です。
+    /%p
+    /  利用規約は、
+    /  %b<> 保護者の方が参加者と一緒に
+    /  ご確認いただくようお願い致します。
+
+    %blockquote{style: 'border: 1px solid black; padding: .5em 1.5em; margin: 1em 0 1.5em; margin: 50px auto 50px;'}
+      %p{style: 'font-weight: bolder;'}
+        🆕
+        本ワークショップは、2024年度にダウンロード版からオンライン版に移行しました。CoderDojo 運営者の方で本ワークショップ実施予定の方は
+        %a{href: kata_path(anchor: 'pokemon')} Kata
+        に記載されているリンク先から詳細をご確認ください。
+
     = form_with url: pokemon_path, class: 'form' do |f|
       .field
         = f.label       :email, "メールアドレス"
-        = f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: example@gmail.com'
+        = f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: example@gmail.com', disabled: true
       .field
         = f.label      :parent_name, "保護者の名前"
-        = f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場'
+        = f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場', disabled: true
       .field
         = f.label      :participant_name, "参加者の名前"
-        = f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
+        = f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子', disabled: true
       .field
         = f.label      :dojo_name, "道場名"
-        = f.text_field :dojo_name, autofocus: true, required: true, class: "form__field", placeholder: '例: CoderDojo 柏'
+        = f.text_field :dojo_name, autofocus: true, required: true, class: "form__field", placeholder: '例: CoderDojo 柏', disabled: true
       .form__terms
         %h2.form__h2 ポケモン素材の利用規約
         %p
@@ -48,10 +59,10 @@
           %li
             %small 本素材の著作権その他一切の権利は、株式会社ポケモンまたは株式会社ポケモンに権利を許諾した第三者に帰属しています。本素材または本素材を使った作品の頒布、譲渡、公衆送信、貸与、リース、輸出、再許諾などはできません。
       .field
-        = f.check_box :term_of_use, required: true,             style: "display:inline"
+        = f.check_box :term_of_use, required: true, disabled: true, style: "display:inline"
         = f.label     :term_of_use, "上記の利用規約（全文）に同意する", style: "display:inline"
 
-      = f.submit "申し込む", class: "form__submit"
+      = f.submit "申し込む", class: "form__submit", disabled: true
 
       %p.pokemon-notes
         Scratchは、Scratch財団がMITメディアラボのライフロング・キンダーガーテン・グループの協力により開発しているプロジェクトです。
