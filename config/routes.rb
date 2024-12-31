@@ -66,13 +66,14 @@ Rails.application.routes.draw do
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
 
-  get  "/podcast",         to: redirect('/podcasts')
-  get  "/podcasts/feed"    => "podcasts#feed"
-  get  "/stats"            => "stats#show"
-  get  "/pokemon"          => "pokemons#new"
-  post "/pokemon"          => "pokemons#create"
-  get  "/pokemon/download" => "pokemons#show"
-  get  "/pokemon/workshop" => "pokemons#workshop"
+  get "/podcast",         to: redirect('/podcasts')
+  get "/podcasts/feed"    => "podcasts#feed"
+  get "/stats"            => "stats#show"
+  get "/pokemon"          => "pokemons#new"
+  #post "/pokemon"          => "pokemons#create"
+  #get  "/pokemon/download" => "pokemons#show"
+  get "/pokemon/download", to: redirect('/pokemon')
+  get "/pokemon/workshop"  => "pokemons#workshop"
 
   # TODO: Need to investigate why the following code calls Scrivito.
   #       Hotfix with the code above that works correctly.
