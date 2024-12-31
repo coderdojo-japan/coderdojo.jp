@@ -23,6 +23,8 @@ CoderDojo では、次の手続きで Dojo 名を変更することができま�
 
 📝 *NOTE: [coderdojo.jp](https://coderdojo.jp/) に掲載している Dojo 名を変更する場合は、[Dojo 情報やドキュメントの修正](https://github.com/coderdojo-japan/coderdojo.jp#1-dojo-%E6%83%85%E5%A0%B1%E3%82%84%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E4%BF%AE%E6%AD%A3) をご参照ください。*
 
+<div id='example'></div>
+
 <br>
 
 ## 変更例: CoderDojo 広島 → CoderDojo 紙屋町
