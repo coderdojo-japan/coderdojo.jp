@@ -14,9 +14,9 @@ class StatsController < ApplicationController
       return
     end
 
-    # 2012年1月1日〜2023年12月31日までの集計結果
+    # 2012年1月1日〜2024年12月31日までの集計結果
     @period_start = 2012
-    @period_end   = 2023
+    @period_end   = 2024
     period        = Time.zone.local(@period_start).beginning_of_year..Time.zone.local(@period_end).end_of_year
     stats         = Stat.new(period)
 
