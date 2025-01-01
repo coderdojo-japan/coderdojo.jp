@@ -14,17 +14,25 @@ RSpec.describe Statistics::Aggregation do
   end
 
   describe '.run' do
+    let(:yaml_provider) { instance_double(EventService::Providers::StaticYaml) }
+
     before do
       d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
       d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
       create(:dojo_event_service, dojo_id: d1.id, name: :connpass, group_id: 9876)
       create(:dojo_event_service, dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
+
+      create(:dojo, id: 194, name: 'Dojo194', email: 'info@dojo194.com', description: 'CoderDojo194', tags: %w(CoderDojo194), url: 'https://dojo194.com')
+      allow(EventService::Providers::StaticYaml).to receive(:new).and_return(yaml_provider)
+      allow(yaml_provider).to receive(:fetch_events).and_return([
+        { 'dojo_id' => 194, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
+      ])
     end
 
     subject { Statistics::Aggregation.new(from: Time.zone.today.prev_month.strftime('%Y%m')).run }
 
     it do
-      expect{ subject }.to change{ EventHistory.count }.from(0).to(2)
+      expect{ subject }.to change{ EventHistory.count }.from(0).to(3)
     end
   end
 
@@ -94,7 +102,7 @@ RSpec.describe Statistics::Aggregation do
                 ['201808',     '2018-08-01'.to_date],
                 ['2018/09',    '2018-09-01'.to_date],
                 ['2018-10',    '2018-10-01'.to_date]]
-        
+
         list.each do |d|
           expect(sa.send(:date_from, d[0])).to eq(d[1])
         end
