@@ -19,7 +19,36 @@
 # https://dojocon-japan.doorkeeper.jp/events/past
 #
 # ID 194: CoderDojo 三次 - https://www.facebook.com/dojo.miyoshi/past_hosted_events
-# MEMO: データ追加のサンプルとして2023年のイベント情報を入れてみています。
+# MEMO: データ追加のサンプルとして2023〜2024年のイベント情報を入れてみています。
+#       「興味あり」はカウントせず、「参加者」のみをカウントしています。
+#
+# 2024
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/436353945837073/
+  evented_at: 2024-06-09 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1550750222136890/
+  evented_at: 2024-05-12 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/967674081399396/
+  evented_at: 2024-04-14 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/800050015495383/
+  evented_at: 2024-03-10 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1581483302667332/
+  evented_at: 2024-02-11 14:00
+  participants: 1
+- dojo_id: 194
+  event_url: https://www.facebook.com/events/1072946490568386/
+  evented_at: 2024-01-14 14:00
+  participants: 1
+
+# 2023
 - dojo_id: 194
   event_url: https://www.facebook.com/events/359085903440917/
   evented_at: 2023-12-10 14:00
