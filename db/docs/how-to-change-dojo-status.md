@@ -2,6 +2,18 @@
 <br>
 運営している CoderDojo がアクティブかどうか気になったことはありませんか? 本ページでは、そういった状況になったときの確認方法と、アクティブにする方法をまとめています。
 
+<br>
+
+<blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、毎年11月〜12月ごろに<b>数クリックで終わる年次調査アンケート</b>のメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/" target='_blank'>「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中 (Inactive)」と判断されるのでご注意ください。<br>
+    <br>
+    <small>※
+      参加者やその保護者が「最寄りの Dojo を見つけたけど今は活動してないみたい... 😭」となってしまうのを未然に防ぐため、お手数ですがご協力いただけると幸いです 🙇
+    </small>
+  </p>
+</blockquote>
+
+
 ## Dojo の現在の状態を確認する
 
 1. クラブ登録・管理サイト (<a href='https://codeclub.org/en/coderdojo-community'>Code Club</a>) の『[Find a club](https://codeclub.org/find)』ページに行きます
