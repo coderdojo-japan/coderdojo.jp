@@ -69,6 +69,50 @@
   evented_at: 2023-01-08 14:00
   participants: 2
 
+# ID 268: CoderDojo 吉備 as DojoCon Japan 2024
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/176163 # 入場チケット
+  evented_at:   2024-09-15 10:00
+  participants: 114
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/176169 # 同伴者１
+  evented_at:   2024-09-15 10:00
+  participants: 20
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/176171 # 同伴者２
+  evented_at:   2024-09-15 10:00
+  participants: 5
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/176202 # 同伴者３
+  evented_at:   2024-09-15 10:00
+  participants: 1
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/176203 # 同伴者４
+  evented_at:   2024-09-15 10:00
+  participants: 0
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/177221 # マイクラ
+  evented_at:   2024-09-15 10:00
+  participants: 8
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/177223 # CoderDojo WS
+  evented_at:   2024-09-15 10:00
+  participants: 2
+- dojo_id:      268
+  event_url:    https://dojocon-japan.doorkeeper.jp/events/177222 # M5Stack
+  evented_at:   2024-09-15 10:00
+  participants: 6
+
+# NOTE: 懇親会は Stats の利用シーンの性質と合わないかもなので一旦除外
+#- dojo_id:      268
+#  event_url:    https://dojocon-japan.doorkeeper.jp/events/177349 # 懇親会
+#  evented_at:   2024-09-15 10:00
+#  participants: 40
+#- dojo_id:      268
+#  event_url:    https://dojocon-japan.doorkeeper.jp/events/177350 # 懇親会 LT
+#  evented_at:   2024-09-15 10:00
+#  participants: 7
+
 
 # ID 35: CoderDojo 奈良 as DojoCon Japan 2023
 - dojo_id:      35
@@ -104,6 +148,12 @@
   evented_at:   2023-08-27 15:00
   participants: 10
 
+# ID 248: CoderDojo 矢吹 (共催） as やぶきプログラミングフェス with DecaDojo (2024)
+# 開催レポート: https://coderdojoshirakawa.hateblo.jp/entry/2024/07/20/220134
+- dojo_id:      248
+  event_url:    https://coderdojoshirakawa.hateblo.jp/entry/2024/07/20/220134
+  evented_at:   2024/06/15 13:00
+  participants: 100
 
 # ID 79: CoderDojo 会津 as 福島でかドージョー２０２３
 - dojo_id:      79
