@@ -76,10 +76,21 @@
     %b Dojos
   %span{style: 'font-size: 10px;'} （非アクティブになった道場も含まれています）
 
-  #table-target{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+
+  :css
+    .table-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* iOSでのスムーズスクロール */
+      max-width: 99%; /* 横幅を画面サイズに合わせる */
+      margin: auto 5px;
+    }
+
+  %div#table-target{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
     %b
       %a{href: '#table-target'} 🔍
       集計対象と集計割合の推移
+
+  %div.table-container
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
@@ -110,10 +121,13 @@
       ※
       非アクティブになった道場も含まれています
 
-  #table-actual{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+
+  %div#table-actual{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
     %b
       %a{href: '#table-actual'} ☯️
       開催回数と参加者数の推移
+
+  %div.table-container
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
@@ -148,10 +162,11 @@
       %a{href: '#graph'}<> 冒頭の推移グラフ
       を表にしたデータです
 
-  #table-estimate{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
+  %div#table-estimate{align: 'center', style: 'margin-top: 50px; scroll-margin-top: 80px;'}
     %b
       %a{href: '#table-estimate'} 💭
       開催回数と参加者数の見込み
+  %div.table-container
     %table.compact{style: 'margin-top: 10px;', border: '1'}
       %tr
         %th
@@ -239,7 +254,7 @@
     %li
       %a{href: "https://bit.ly/coderdojo-japan-stats-future-works"} 統計情報に関する『これから』の開発 - GitHub
     %li
-      %a{href: "https://bit.ly/coderdojo-japan-stats-data-sheet"} 日本の CoderDojo (財団 & Japan) - Spreadsheet
+      %a{href: "https://bit.ly/coderdojo-japan-stats-data-sheet"} 日本の CoderDojo (財団&Japan) - Spreadsheet
 %br/
 
 :css
