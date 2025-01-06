@@ -5,7 +5,7 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 ## Dojo が承認されているか確認する方法
 
 1. クラブ登録・管理サイト (<a href='https://codeclub.org/en/coderdojo-community'>Code Club</a>) の『[Find a club](https://codeclub.org/find)』ページに行きます
-2. 運営している Dojo 名で、検索する (検索例: 『[柏](https://codeclub.org/find?search=%E6%9F%8F)』)
+2. 運営している Dojo 名で、検索する (検索例: 『[こだいら](https://codeclub.org/find?search=こだいら)』)
 3. 運営している Dojo が承認されていれば、リストに道場が表示されます
 
 <br>
