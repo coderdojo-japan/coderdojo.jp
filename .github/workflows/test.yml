@@ -40,6 +40,25 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: 📦 Setup Playwright
+        run: |
+          # Setup Playwright driver
+          APP_ROOT=${GITHUB_WORKSPACE}
+          PLAYWRIGHT_VERSION=$(bundle exec ruby -e 'require "playwright"; puts Playwright::COMPATIBLE_PLAYWRIGHT_VERSION.strip')
+          DRIVER_URL="https://playwright.azureedge.net/builds/driver/playwright-$PLAYWRIGHT_VERSION-linux.zip"
+          DRIVER_DIR="$APP_ROOT/playwright-drivers"
+          mkdir -p "$DRIVER_DIR"
+          cd "$DRIVER_DIR"
+          wget -q "$DRIVER_URL" -O playwright.zip
+          unzip -o playwright.zip
+          rm playwright.zip
+
+          # Install Playwright globally
+          npm install -g playwright
+
+          # Install Playwright Chromium browser with dependencies
+          playwright install --with-deps chromium
+
       - name: 🧪 Prepare DB
         run: |
           bundle exec rails db:create
@@ -47,6 +66,8 @@ jobs:
 
       - name: 🔧 Test
         run: bundle exec rspec spec
+        env:
+          PLAYWRIGHT_DRIVER_PATH: ${{ github.workspace }}/playwright-drivers/package/cli.js
 
   deploy:
     needs: test

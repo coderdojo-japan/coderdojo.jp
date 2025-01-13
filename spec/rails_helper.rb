@@ -55,4 +55,32 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
+
+  # Default driver is rack_test
+  Capybara.default_driver = :rack_test
+
+  # Register Selenium WebDriver driver
+  # Capybara.register_driver :selenium do |app|
+  #   Capybara::Selenium::Driver.new(
+  #     app,
+  #     browser: :chrome,
+  #     options: Selenium::WebDriver::Chrome::Options.new(args: %w[headless disable-gpu no-sandbox])
+  #   )
+  # end
+
+  # Register Playwright driver
+  Capybara.register_driver :playwright do |app|
+    cli_path = ENV['PLAYWRIGHT_DRIVER_PATH'] || File.expand_path('playwright-drivers/package/cli.js', Rails.root)
+    Capybara::Playwright::Driver.new(
+      app,
+      headless: true,
+      browser_type: :chromium,
+      playwright_cli_executable_path: cli_path
+    )
+  end
+
+  # Use Selenium driver for feature specs
+  config.before(:each, type: :feature) do
+    Capybara.current_driver = :playwright
+  end
 end

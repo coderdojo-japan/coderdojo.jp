@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+APP_ROOT=$(dirname "$(dirname "$(readlink -f "$0")")")
+PLAYWRIGHT_VERSION=$(bundle exec ruby -e 'require "playwright"; puts Playwright::COMPATIBLE_PLAYWRIGHT_VERSION.strip')
+DRIVER_URL="https://playwright.azureedge.net/builds/driver/playwright-$PLAYWRIGHT_VERSION-linux.zip"
+DRIVER_DIR="$APP_ROOT/playwright-drivers"
+
+echo "== Setting up Playwright driver =="
+
+mkdir -p "$DRIVER_DIR"
+
+cd "$DRIVER_DIR"
+echo "Downloading Playwright driver from $DRIVER_URL..."
+wget -q "$DRIVER_URL" -O playwright.zip
+echo "Extracting Playwright driver..."
+unzip -o playwright.zip
+rm playwright.zip
+
+echo "Playwright driver setup completed. Driver is available in $DRIVER_DIR."

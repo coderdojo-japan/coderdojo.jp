@@ -87,6 +87,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 4.0'
   gem 'selenium-webdriver'
+  gem 'capybara-playwright-driver'
 
   gem 'dotenv-rails'
 end

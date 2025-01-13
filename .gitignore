@@ -36,3 +36,4 @@ public/assets/*
 
 # rspec
 spec/examples.txt
+playwright-drivers

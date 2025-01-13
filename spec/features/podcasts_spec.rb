@@ -4,7 +4,7 @@ RSpec.feature 'Podcasts', type: :feature do
   describe 'GET documents' do
     scenario 'Podcast index should be exist' do
       visit '/podcasts'
-      expect(page).to have_http_status(:success)
+      expect(page).to have_selector('h1', text: 'DojoCast')
     end
 
     scenario 'Charter should be exist' do
@@ -16,10 +16,10 @@ RSpec.feature 'Podcasts', type: :feature do
 
       visit "/podcasts/#{@podcast.id}"
       target = '← Top'
-      expect(page).to have_http_status(:success)
+      expect(page).to have_selector('.episode h1#title')
       expect(page).to have_link target, href: '/podcasts'
       click_link target, match: :first
-      expect(page).to have_http_status(:success)
+      expect(page).to have_selector('h1', text: 'DojoCast')
     end
 
     scenario 'Load doc file with absolute path' do
@@ -30,10 +30,10 @@ RSpec.feature 'Podcasts', type: :feature do
 
       visit  "/podcasts/#{@podcast.id}"
       target = 'DojoCast'
-      expect(page).to have_http_status(:success)
+      expect(page).to have_selector('.episode h1#title')
       expect(page).to have_link target, href: '/podcasts'
       click_link target, match: :first
-      expect(page).to have_http_status(:success)
+      expect(page).to have_selector('h1', text: 'DojoCast')
     end
   end
 end
