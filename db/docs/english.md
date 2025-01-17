@@ -14,10 +14,11 @@ This page provides information about the [CoderDojo community](#about), [its gro
 
 [CoderDojo](https://coderdojo.com/en/about) is a global community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo session took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)), in 2011, it has gradually expanded worldwide. Now, CoderDojo is present in over 100 countries, including Japan. 🗾
 
+### [<i class="fa-brands fa-youtube"></i>️](#about-pv) English video with Japanese subtitles {#about-pv}
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/7XQOVKd-vVI?rel=0&cc_load_policy=1&cc_lang_pref=en" allowfullscreen></iframe>
+   data-src="https://www.youtube.com/embed/GjdRWcdw-N4?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e&cc_load_policy=1&cc_lang_pref=en&rel=0" allowfullscreen></iframe>
 </div>
 
 <br>
