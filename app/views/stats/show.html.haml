@@ -225,6 +225,8 @@
     %a{href: '#prefectures'}<
       ✅
     都道府県別の道場数
+    %div{style: 'padding-top: 10px; font-size: smaller;'}
+      = "(#{@data_by_prefecture_count} / #{Prefecture.count})"
   %div{style: "margin-top: 20px;", align: 'center' }
     %table{border: '1'}
       %tr

@@ -115,6 +115,7 @@ class StatsController < ApplicationController
     Prefecture.order(:id).each do |p|
       @data_by_prefecture[p.name] = Dojo.active.where(prefecture_id: p.id).sum(:counter)
     end
+    @data_by_prefecture_count = @data_by_prefecture.select{|k,v| v>0}.count
   end
 end
 
