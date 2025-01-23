@@ -3634,6 +3634,18 @@
   - Scratch
   - toio
   - Webサイト
+- id: 332
+  order: '394289'
+  created_at: '2025-01-22'
+  name: 黒潮町
+  prefecture_id: 39
+  logo: "/img/dojos/default.webp"
+  url: https://www.facebook.com/coderdojo.kuroshio
+  description: 黒潮町で毎月開催
+  tags:
+  - Scratch
+  - Mindstorms
+  - Unity
 - id: 144
   order: '401005'
   is_active: false
