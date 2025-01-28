@@ -11,7 +11,7 @@ DojoCast に新しい Podcast を追加する方法 (2020/07/26現在)
 3. **Rake タスクを実行し、Podcasts テーブルに Anchor.fm のトラックデータを取り込む**
 
    ```
-   $ bundle exec rake podcasts:upsert
+   bundle exec rake podcasts:upsert
    ```
 
 4. **Markdown で Podcast のページを作成する**
