@@ -2,6 +2,7 @@ class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
   DIR_PATH        = 'public/podcasts'
   WDAY2JAPANESE   = %w(日 月 火 水 木 金 土)
+  TIMESTAMP_REGEX = /-\s((\d:)?\d{1,}:\d{2})/
 
   validates :title,          presence: true
   validates :content_size,   presence: true

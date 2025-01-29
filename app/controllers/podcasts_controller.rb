@@ -45,7 +45,9 @@ class PodcastsController < ApplicationController
     HTML
 
     content.gsub!(/(#+) Shownote/) { shownote }
-    content.gsub!(/-\s((\d:)?\d{1,}:\d{2})/) do
+    return content unless content.match?(Podcast::TIMESTAMP_REGEX)
+
+    content.gsub!(Podcast::TIMESTAMP_REGEX) do
         t = $1
         t = (t.size ==  '0:00'.size) ?   '0' + t : t
         t = (t.size == '00:00'.size) ? '00:' + t : t
