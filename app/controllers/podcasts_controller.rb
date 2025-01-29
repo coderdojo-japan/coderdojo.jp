@@ -38,7 +38,8 @@ class PodcastsController < ApplicationController
     shownote = <<~HTML
       <h2 id='shownote'>
         <a href='#shownote'>🎤</a>
-        Shownote − 話したこと
+        Shownote
+        <small>(話したこと)</small>
       </h2>
     HTML
 
