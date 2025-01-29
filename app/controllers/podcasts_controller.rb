@@ -24,7 +24,6 @@ class PodcastsController < ApplicationController
       return redirect_to podcasts_path
     end
 
-    @youtube = @episode.content.match(/watch\?v=((\w)*)/)[1]
     @url     = request.url
     @title   = @episode.title.split('-').last.strip
     @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
@@ -36,6 +35,8 @@ class PodcastsController < ApplicationController
   private
 
   def convert_shownote(content)
+    youtube_id = @episode.content.match(/watch\?v=((\w)*)/)[1]
+
     shownote = <<~HTML
       <h2 id='shownote'>
         <a href='#shownote'>🎤</a>
@@ -52,7 +53,7 @@ class PodcastsController < ApplicationController
         t = (t.size ==  '0:00'.size) ?   '0' + t : t
         t = (t.size == '00:00'.size) ? '00:' + t : t
         t = Time.parse(t).seconds_since_midnight.to_i
-        "- [#{$1}](https://youtu.be/#{@youtube}?t=#{t}) &nbsp; "
+        "- [#{$1}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
     end
   end
 end
