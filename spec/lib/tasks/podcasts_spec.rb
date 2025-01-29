@@ -26,7 +26,7 @@ RSpec.describe 'DojoCast:', podcast: true do
 
     let(:task) { 'podcasts:upsert' }
 
-    # TODO: This test fails depending on what returns from API, should work offline.
+    # TODO: This test is flaky -- fails depending on what returns from API, should work offline.
     xit 'successfuly fetch from Anchor.fm RSS' do
       allow_any_instance_of(Podcast).to receive(:id).and_return(
         [
