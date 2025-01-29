@@ -35,8 +35,6 @@ class PodcastsController < ApplicationController
   private
 
   def convert_shownote(content)
-    youtube_id = @episode.content.match(/watch\?v=((\w)*)/)[1]
-
     shownote = <<~HTML
       <h2 id='shownote'>
         <a href='#shownote'>🎤</a>
@@ -44,10 +42,11 @@ class PodcastsController < ApplicationController
         <small>(話したこと)</small>
       </h2>
     HTML
-
     content.gsub!(/(#+) Shownote/) { shownote }
-    return content unless content.match?(Podcast::TIMESTAMP_REGEX)
 
+    return content unless content.match?(Podcast::YOUTUBE_ID_REGEX)
+    return content unless content.match?(Podcast::TIMESTAMP_REGEX)
+    youtube_id = @episode.content.match(Podcast::YOUTUBE_ID_REGEX)[1]
     content.gsub!(Podcast::TIMESTAMP_REGEX) do
         t = $1
         t = (t.size ==  '0:00'.size) ?   '0' + t : t
