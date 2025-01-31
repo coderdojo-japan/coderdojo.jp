@@ -51,7 +51,14 @@ class PodcastsController < ApplicationController
         t = $1
         t = (t.size ==  '0:00'.size) ?   '0' + t : t
         t = (t.size == '00:00'.size) ? '00:' + t : t
-        t = Time.parse(t).seconds_since_midnight.to_i
+
+        #t = Time.parse(t).seconds_since_midnight.to_i
+        # This format should be faster than above:
+        #   ?t=01:23:45
+        #   ?t=01h23m45s
+        t[2] = 'h'
+        t[5] = 'm'
+        t   << 's'
         "- [#{$1}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
     end
   end
