@@ -15,7 +15,7 @@ RSpec.feature 'Podcasts', type: :feature do
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
 
       visit "/podcasts/#{@podcast.id}"
-      target = '← Top'
+      target = '&laquo; Top'
       expect(page).to have_http_status(:success)
       expect(page).to have_link target, href: '/podcasts'
       click_link target, match: :first
