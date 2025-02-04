@@ -3837,6 +3837,19 @@
   description: 長崎市で毎月開催
   tags:
   - Scratch
+- id: 333
+  order: '422011'
+  created_at: '2025-02-04'
+  name: 野母崎
+  prefecture_id: 42
+  logo: "/img/dojos/nomozaki.webp"
+  url: https://note.com/trachodon
+  description: 長崎市野母崎で週1回、出張可
+  tags:
+  - Scratch
+  - Minecraft
+  - Webサイト
+  - 電子工作
 - id: 178
   order: '431001'
   is_active: true
