@@ -27,6 +27,11 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+#- dojo_id: 333
+#  name: 野母崎 
+#  group_id: ???
+#  url: https://note.com/trachodon
+
 # 黒潮町
 # TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
 #- dojo_id: 332
