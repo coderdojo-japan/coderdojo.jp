@@ -41,6 +41,7 @@ INPUT_TEXT.each do |line|
   # MEMO: Use `.reverse` to find a latest dojo in case of overriding inactive dojo's name.
   found_dojo = DOJO_DB.reverse.find do |dojo|
     dojo[:name] == dojo_name.downcase
+      .gsub('aizu',           '会津')
       .gsub('ishigaki',       '石垣')
       .gsub('hitachinaka',    'ひたちなか')
       .gsub('kodaira',        'こだいら')
