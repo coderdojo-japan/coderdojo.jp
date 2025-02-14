@@ -38,6 +38,17 @@ CoderDojo を立ち上げようとしたとき、申請した Dojo が承認さ�
 
 <br>
 
+<blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
+  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、毎年11月〜12月ごろに<b>数クリックで終わる年次調査アンケート</b>のメール（英語）が届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/" target='_blank'>「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「活動停止中 (Inactive)」と判断されるのでご注意ください。<br>
+    <br>
+    <small>※
+      参加者やその保護者が「最寄りの Dojo を見つけたけど今は活動してないみたい... 😭」となってしまうのを未然に防ぐため、お手数ですがご協力いただけると幸いです 🙇
+    </small>
+  </p>
+</blockquote>
+
+<br>
+
 - **D. 上記のいずれにも該当していない場合**
   - CoderDojo Japan が把握していない状態になっているかもしれません。
   - お手数ですが、下記の連絡先までご連絡をお願い致します。
