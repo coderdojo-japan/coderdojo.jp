@@ -1,8 +1,8 @@
 class Dojo < ApplicationRecord
   NUM_OF_COUNTRIES    = "100"
   NUM_OF_WORLD_DOJOS  = "2,000"
-  NUM_OF_TOTAL_EVENTS = "1,000"
-  NUM_OF_TOTAL_NINJAS = "10,000"
+  NUM_OF_TOTAL_EVENTS = "1,100"
+  NUM_OF_TOTAL_NINJAS = "7,000"
   NUM_OF_PARTNERSHIPS = "25"
   DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yaml')
 
