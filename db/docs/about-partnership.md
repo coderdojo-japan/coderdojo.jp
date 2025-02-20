@@ -139,7 +139,7 @@ CoderDojo コミュニティは{{ NUM_OF_JAPAN_DOJOS }}以上の地域に広が�
 
 <br>
 
-下記では CoderDojo との提携について紹介するスライドや、 [CoderDojo Japan が貴社のためにできること](#support)、[各提携の詳細](#examples)、[よくある質問と回答](#faq)などをまとめておきました。これから提携を検討する際のご参考になれば幸いです。
+下記では CoderDojo について紹介するスライドや、 [CoderDojo Japan が貴社のためにできること](#support)、[各提携の詳細](#examples)、[よくある質問と回答](#faq)などをまとめておきました。これから提携を検討する際のご参考になれば幸いです。
 
 <div style="padding: 40px 0px;">
   <script async class="speakerdeck-embed" data-id="054962244c9f48aa8d2697abfafdba2c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
