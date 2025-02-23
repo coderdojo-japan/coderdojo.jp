@@ -36,7 +36,7 @@
 - dojo_id: 332
   name: connpass
   group_id: 15976
-  url: https://www.facebook.com/coderdojo.kuroshio
+  url: https://coderdojo-kuroshio.connpass.com/
 
 # 品川港南
 # TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
