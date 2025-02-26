@@ -151,7 +151,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 
 最新版は [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh) からご確認いただけます。
 
-```
+```console
 # データベースのマイグレーション
 bundle exec rails db:migrate
 
@@ -169,6 +169,18 @@ bundle exec rails dojo_event_services:upsert
 
 # ポッドキャスト「DojoCast」のデータを反映するタスク
 bundle exec rails podcasts:upsert
+```
+
+### ⏰ 定期的に実行されるスクリプト (Heroku Scheduler)
+
+以下のコマンドは上記 CI とは関係なく、定期的に実行されます。
+
+```console
+# 【毎日】近日開催のイベント収集 (Daily at 9:00 PM UTC)
+$ bundle exec rails upcoming_events:aggregation
+
+# 【毎週】統計情報ページ用のデータ収集 (Daily at 1:00 AM UTC)
+$ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 ```
 
 
