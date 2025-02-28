@@ -1,4 +1,4 @@
-# 📧 CoderDojo のメールアドレス<br>を取得する方法
+# 📧 CoderDojo のメールアドレス<br>を取得する手順
 <br>
 CoderDojo として正式に承認されると `道場名@coderdojo.com` というメールアドレスが発行でき、時間制限の無い [Google Meet](https://apps.google.com/intl/ja/meet/) など、一部の [Google Workspace](https://workspace.google.co.jp/intl/ja/) の機能がご利用いただけます。<small>(提供: <a href='https://codeclub.org/en/coderdojo-community'>CoderDojo Foundation</a>)</small>
 
