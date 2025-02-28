@@ -8,6 +8,8 @@ CoderDojo として正式に承認されると `道場名@coderdojo.com` とい�
 
 ## メールアドレス取得の手順 {#instructions}
 
+<br>
+
 - **A. 📮 お問い合わせフォームから日本語で申請する**
   1. (もしまだ承認されていない場合) [Kata に記載されている手順](/kata#startup)に沿って、CoderDojo の立ち上げ申請を進める
   2. クラブ登録・管理サイト (<a href='https://codeclub.org/en/coderdojo-community'>Code Club</a>) の[お問い合わせページ](https://codeclub.org/ja/help#contact-form)に行く
