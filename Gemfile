@@ -19,6 +19,12 @@ gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
 
+# Specify to 1.3.4 to prevent error
+# TODO: This can be removed on Rails 7.1
+# https://github.com/rails/rails/issues/54260
+# https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
+gem 'concurrent-ruby', '1.3.4'
+
 # For handling error
 # https://github.com/yuki24/rambulance
 # Using patch gem due to NameError: uninitialized constant ApplicationHelper
