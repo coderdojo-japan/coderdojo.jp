@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
-
+ActiveRecord::Schema[7.0].define(version: 2024_06_18_025325) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -21,8 +20,8 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.integer "name", null: false
     t.string "url"
     t.string "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["dojo_id"], name: "index_dojo_event_services_on_dojo_id"
   end
 
@@ -34,8 +33,8 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.string "logo", default: "/logo.png"
     t.string "url", default: "#"
     t.text "tags"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "prefecture_id"
     t.boolean "is_active", default: true, null: false
     t.boolean "is_private", default: false, null: false
@@ -51,9 +50,9 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.string "event_id", null: false
     t.string "event_url", null: false
     t.integer "participants", null: false
-    t.datetime "evented_at", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "evented_at", precision: nil, null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["dojo_id"], name: "index_event_histories_on_dojo_id"
     t.index ["evented_at", "dojo_id"], name: "index_event_histories_on_evented_at_and_dojo_id"
     t.index ["service_name", "event_id"], name: "index_event_histories_on_service_name_and_event_id", unique: true
@@ -67,8 +66,8 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.string "duration", null: false
     t.string "permalink", null: false
     t.string "permalink_url", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.date "published_date", null: false
     t.index ["enclosure_url"], name: "index_podcasts_on_enclosure_url", unique: true
   end
@@ -80,8 +79,8 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.string "dojo_name", null: false
     t.text "presigned_url"
     t.string "download_key"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["download_key"], name: "index_pokemons_on_download_key", unique: true
   end
 
@@ -96,12 +95,12 @@ ActiveRecord::Schema[6.1].define(version: 2024_06_18_025325) do
     t.integer "dojo_event_service_id", null: false
     t.string "event_id", null: false
     t.string "event_url", null: false
-    t.datetime "event_at", null: false
+    t.datetime "event_at", precision: nil, null: false
     t.string "service_name", null: false
     t.integer "participants", null: false
     t.string "event_title", null: false
-    t.datetime "event_end_at", null: false
-    t.datetime "event_update_at"
+    t.datetime "event_end_at", precision: nil, null: false
+    t.datetime "event_update_at", precision: nil
     t.string "address"
     t.string "place"
     t.integer "limit"
