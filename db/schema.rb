@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_18_025325) do
+ActiveRecord::Schema[7.0].define(version: 2025_03_15_124619) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -89,6 +89,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_18_025325) do
     t.string "region"
     t.index ["name"], name: "index_prefectures_on_name", unique: true
     t.index ["region"], name: "index_prefectures_on_region"
+  end
+
+  create_table "stretch3s", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "parent_name", null: false
+    t.string "participant_name", null: false
+    t.string "dojo_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "upcoming_events", force: :cascade do |t|

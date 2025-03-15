@@ -1,0 +1,74 @@
+- provide(:title, 'Stretch3 x OpenAI Azure for Non-profit プログラム申請')
+- provide(:desc,  'Stretch3 から OpenAI の API を呼び出せる拡張機能 ChatGPT2Scratch を API キー不要で利用するための申請フォームです。')
+- provide(:url,         '/stretch3')
+- provide(:meta_image,  '/img/stretch3_openai.webp')
+
+.container
+  %section.introduction{style: "padding: 50px 0px;"}
+    %div.text-center
+      %h1{style: "line-height: 1.4em;"}
+        Stretch3 x OpenAI
+        %br
+        Azure for Non-profit プログラム申請
+      .stretch3-eyecatch-container
+        = lazy_image_tag '/img/stretch3_openai.webp',
+                         alt: 'ポケモン・ワークショップのカバー画像',
+                         min: true,
+                         class: 'stretch3-eyecatch',
+                         style: 'box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);'
+    %p
+      Stretch3 は自作の拡張機能を使えるように改造した Scratch です。
+    %p
+      この申請フォームは OpenAI の Chat API を呼び出す拡張機能 ChatGPT2Scratch を
+      %br
+      API キー不要で利用出来るようにするための申請フォームです。
+      %br
+      これにより本来有料の Chat API を無料で利用できます。
+    %p
+      利用規約は、
+      %b<> 保護者の方が参加者と一緒に
+      ご確認いただくようお願い致します。
+
+    = form_with model: @stretch3, url: stretch3_path, class: 'form' do |f|
+      .field
+        = f.label       :email, "メールアドレス"
+        = f.email_field :email, required: true, autocomplete: "email", class: "form__field", placeholder: '例: example@gmail.com'
+      .field
+        = f.label      :parent_name, "保護者の名前"
+        = f.text_field :parent_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場'
+      .field
+        = f.label      :participant_name, "参加者の名前"
+        = f.text_field :participant_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
+      .field
+        = f.label      :dojo_name, "道場名"
+        = f.text_field :dojo_name, required: true, class: "form__field", placeholder: '例: CoderDojo 柏'
+      .form__terms
+        %h2.form__h2 利用規約
+        %ul
+          %li
+            %small
+              = link_to 'https://learn.microsoft.com/ja-jp/azure/ai-services/responsible-use-of-ai-overview', target: '_blank' do
+                Azure AI サービスにおける AI の責任ある使用
+              に従うことy
+          %li
+            %small
+              %b<> 事前に保護者から同意を得ること
+              %br
+              (参考: #{link_to '文部科学省 - 生成AIの利活用に関するガイドライン','https://www.mext.go.jp/a_menu/other/mext_02412.html', target: '_blank'})
+          %li
+            %small CoderDojo 以外の用途で使う場合は、一般社団法人 CoderDojo Japan からの書面による許諾を事前に得るようお願いします。
+        %p
+          %small
+            ※ 本サービスは Azure AI の利用上限に達した場合、または上記事項への違反で使用できなくなった場合などの理由により、予告なく無効化される場合もあります。あらかじめご了承いただけると幸いです。
+      .field.text-center
+        = f.check_box :term_of_use, required: true
+        = f.label     :term_of_use, "上記の利用規約に同意する", style: "display:inline"
+
+      = f.submit "申し込んで利用開始する", class: "form__submit"
+      .text-center
+        %small 送信後、Stretch3 のページへ移動します。
+
+      %p.stretch3-notes
+        Scratchは、Scratch財団がMITメディアラボのライフロング・キンダーガーテン・グループの協力により開発しているプロジェクトです。
+        %a{href: "https://scratch.mit.edu", rel: "noopener", target: "_blank"}<> scratch.mit.edu
+        \ から自由に入手できます。
