@@ -2,7 +2,7 @@
 
 <br><br>
 
-[CoderDojo を立ち上げる](/kata#startup)手順に沿って進めていくと、『道場名』の入力欄が出てきます。CoderDojo は日本国内だけで{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上あるため、『道場名』の欄に大きな地域名 (地方名や都道府県名など) を入力せず、 `市区町村名` または小さい粒度の地域名 (駅名など) を入力していただけると嬉しいです。
+[CoderDojo を立ち上げる](/kata#startup)手順に沿って進めていくと、『道場名』の入力欄が出てきます。CoderDojo は[日本国内だけで{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上ある](https://map.coderdojo.jp/)ため、『道場名』の欄に大きな地域名 (地方名や都道府県名など) を入力せず、 `市区町村名` または小さい粒度の地域名 (駅名など) を入力していただけると嬉しいです。
 
 - 🆗 好ましい例: `CoderDojo 札幌東`, `CoderDojo 下北沢`, `CoderDojo 五反田` など
 - 🆖 避けたい例: `CoderDojo 北海道`, `CoderDojo 東京都`, `CoderDojo アジア` など
