@@ -27,8 +27,15 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 小田原
+- dojo_id: 334
+  name: connpass
+  group_id: 15944
+  url: https://coderdojo-odawara.connpass.com/
+
+# 野母崎
 #- dojo_id: 333
-#  name: 野母崎 
+#  name: ???
 #  group_id: ???
 #  url: https://note.com/trachodon
 
