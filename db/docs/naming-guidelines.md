@@ -13,7 +13,7 @@
 
 <br>
 
-## スポンサー名や会場名を加えることもできます {#with-sponsor}
+## [🏢](#with-sponsor) スポンサー名や会場名を加えることもできます {#with-sponsor}
 
 <br>
 
@@ -30,7 +30,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 <br>
 
 
-## 同じ市区町村内に既に道場がある場合 {#existing-dojo}
+## [☯️](#dojo-friends) 同じ市区町村内に既に道場がある場合 {#dojo-friends}
 
 <br>
 
@@ -57,7 +57,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 連絡先: info@coderdojo.jp
 </div>
 
-## よくある質問と回答 {#faq}
+## [💭](#faq) よくある質問と回答 {#faq}
 
 <br>
 
