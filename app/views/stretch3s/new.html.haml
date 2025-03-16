@@ -1,0 +1,100 @@
+- provide(:title, 'Stretch3 × AI 拡張ブロックの利用申請')
+- provide(:desc,  'Stretch3 から OpenAI API を呼び出せる拡張機能「ChatGPT2Scratch」が、全国の CoderDojo でご活用いただけるための利用申請フォームです。')
+- provide(:url,         '/stretch3')
+- provide(:meta_image,  '/img/stretch3_cover.webp')
+
+:css
+  .stretch3-notes {
+    margin-top: 100px;
+    font-size: 11.8px;
+    line-height: 1.7em;
+    color: #909090;
+  }
+  .stretch3-eyecatch {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+.container
+  %section.introduction{style: "padding: 50px 0px;"}
+    %div.text-center
+      %h1{style: "line-height: 1.4em; margin-bottom: 50px;"}
+        Stretch3 × AI
+        %br.ignore-pc
+        利用申請フォーム
+      = lazy_image_tag '/img/stretch3_cover.webp',
+                       alt: 'AI 拡張ブロック利用例のスクリーンショット画像',
+                       min: true,
+                       class: 'stretch3-eyecatch',
+                       style: 'box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);'
+    %p{style: 'margin-top: 70px;'}
+      Stretch3 内にある AI 拡張ブロックの利用申請フォームです。
+      %small<>
+        (
+        %a{href: '#'}<> &raquo; 詳細を見る
+        )
+    /
+      %p
+      この申請フォームは OpenAI の Chat API を呼び出す拡張機能 ChatGPT2Scratch を
+      %br
+      API キー不要で利用出来るようにするための申請フォームです。
+      %br
+      これにより本来有料の Chat API を無料で利用できます。
+    %p{style: 'margin-bottom: 50px;'}
+      利用規約は、
+      %b<> 保護者の方が参加者と一緒に
+      %br.ignore-pc
+      ご確認いただくようお願い致します。
+
+    = form_with model: @stretch3, url: stretch3_path, class: 'form' do |f|
+      .field
+        = f.label       :email, "メールアドレス"
+        = f.email_field :email, required: true, autocomplete: "email", class: "form__field", placeholder: '例: coderdojo@example.com'
+      .field
+        = f.label      :parent_name, "保護者の名前"
+        = f.text_field :parent_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場'
+      .field
+        = f.label      :participant_name, "参加者の名前"
+        = f.text_field :participant_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
+      .field
+        = f.label      :dojo_name, "道場名"
+        = f.text_field :dojo_name, required: true, class: "form__field", placeholder: '例: CoderDojo 柏'
+      .form__terms
+        %h2.form__h2 利用規約
+        %ol
+          %li
+            %small
+              %a{href: 'https://learn.microsoft.com/ja-jp/azure/ai-services/responsible-use-of-ai-overview', target: '_blank'}
+                Azure AI サービスにおける AI の責任ある使用
+                %small
+                  %small
+                    %i.far.fa-external-link
+              に従うこと
+          %li
+            %small
+              %b<> 事前に保護者から同意を得ること
+              %br
+              (参考:
+              %a{href: 'https://www.mext.go.jp/a_menu/other/mext_02412.html', target: '_blank'}
+                文部科学省 - 生成AIの利活用に関するガイドライン
+                %small
+                  %small
+                    %i.far.fa-external-link
+              )
+          %li
+            %small
+              CoderDojo 以外で利用する場合は、一般社団法人 CoderDojo Japan からの書面による許諾を事前に得るようお願いします。
+        %p
+          %pre{style: 'white-space: pre-wrap; margin-bottom: 30px; color: #505050;'}
+            ※ 本サービスは Azure AI の利用上限に達した場合、または上記規約に違反した場合などの理由により、予告なく利用が停止される場合もあります。あらかじめご了承いただけると幸いです。
+      .field.text-center
+        = f.check_box :term_of_use, required: true
+        = f.label     :term_of_use, "上記の利用規約に同意する", style: "display:inline"
+
+      = f.submit "同意して利用を始める", class: "form__submit"
+      .text-center{style: 'color: gray;'}
+        %small
+          %small
+            %b
+              ※
+              ボタン押下後、Stretch3 のページへ移動します
