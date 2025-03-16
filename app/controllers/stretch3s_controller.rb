@@ -16,6 +16,6 @@ class Stretch3sController < ApplicationController
   private
 
   def stretch3_params
-    params.require(:stretch3).permit(:email, :parent_name, :participant_name, :dojo_name)
+    params.require(:stretch3).except(:term_of_use).permit(:email, :parent_name, :participant_name, :dojo_name)
   end
 end
