@@ -1995,6 +1995,7 @@
   order: '172014'
   created_at: '2016-11-24'
   name: 金沢
+  note: 開催中? （要確認）
   prefecture_id: 17
   logo: "/img/dojos/default.webp"
   url: https://hackforplay-company.weebly.com/coderdojo-kanazawa.html
