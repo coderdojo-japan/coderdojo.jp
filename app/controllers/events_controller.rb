@@ -27,6 +27,7 @@ class EventsController < ApplicationController
         @latest_event_by_dojos << {
           id:   dojo.id,
           name: dojo.name,
+          note: dojo.note,
           url:  dojo.url,
           event_at: '2000-01-23',
           event_url: nil
@@ -35,6 +36,7 @@ class EventsController < ApplicationController
         @latest_event_by_dojos << {
           id:   dojo.id,
           name: dojo.name,
+          note: dojo.note,
           url:  dojo.url,
           event_at:  latest_event.evented_at.strftime("%Y-%m-%d"),
           event_url: latest_event.event_url.include?('dummy.url') ?

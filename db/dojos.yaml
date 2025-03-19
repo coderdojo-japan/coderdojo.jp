@@ -805,6 +805,7 @@
   - toio
 - id: 86
   order: '122041'
+  note: Forms 管理に移行
   created_at: '2017-05-16'
   name: 船橋
   prefecture_id: 12

@@ -41,9 +41,11 @@
     %table{border: '1'}
       %tr
         %th{style: 'padding: 10px; text-align: center;'}
-          %small 道場名
+          %small ☯️ 道場名
         %th{style: 'padding: 10px; text-align: center;'}
-          %small 直近の開催日
+          %small 🗓 直近の開催日
+        %th{style: 'padding: 10px; text-align: center;'}
+          %small 📝 ノート
       - @latest_event_by_dojos.each do |dojo|
         %tr
           %td{style: 'padding: 1px 10px 1px 10px; text-align: right;'}
@@ -55,3 +57,6 @@
               = dojo[:event_at]
             - else
               %a{href: dojo[:event_url]}= dojo[:event_at]
+          %td{style: 'padding: 1px 10px 1px 10px; text-align: left;'}
+            %small
+              %span{title: "#{dojo[:note]}"}= dojo[:note]&.truncate(30)
