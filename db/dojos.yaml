@@ -1168,6 +1168,8 @@
   - 電子工作
 - id: 302
   order: '131059'
+  is_active: false
+  note: Last session was 2023/08/29
   created_at: 2023-06-08
   name: ほんごう
   prefecture_id: 13
