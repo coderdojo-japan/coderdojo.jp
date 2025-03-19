@@ -1334,6 +1334,7 @@
   - micro:bit
 - id: 233
   order: '131211'
+  is_active: false
   note: Last session was 2023/10/29 as of 2024/07/30
   created_at: '2019-11-19'
   name: 足立
