@@ -27,7 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
-# 小田原
+# 神楽坂（東京都新宿区）
+- dojo_id: 335
+  name: connpass
+  group_id: 16057
+  url: https://coderdojokagurazaka.connpass.com/
+
+# 小田原（神奈川県）
 - dojo_id: 334
   name: connpass
   group_id: 15944
