@@ -3608,6 +3608,7 @@
   - Minecraft
 - id: 188
   order: '363421'
+  note: 独自サービスでイベント管理 https://www.in-kamiyama.jp/events
   created_at: '2018-12-13'
   name: 神山
   prefecture_id: 36
