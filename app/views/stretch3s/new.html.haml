@@ -42,7 +42,7 @@
       これにより本来有料の Chat API を無料で利用できます。
     %p{style: 'margin-bottom: 50px;'}
       利用規約は、
-      %b<> 保護者が参加者と一緒に
+      %b<> 保護者が利用者と一緒に
       %br.ignore-pc<>
       ご確認いただくようお願い致します。
 
@@ -54,7 +54,7 @@
         = f.label      :parent_name, "保護者の名前"
         = f.text_field :parent_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場'
       .field
-        = f.label      :participant_name, "参加者の名前"
+        = f.label      :participant_name, "利用者の名前"
         = f.text_field :participant_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
       .field
         = f.label      :dojo_name, "道場名"
@@ -72,7 +72,7 @@
               に従うこと
           %li
             %small
-              %b<> 事前に保護者から同意を得ること
+              %b<> 利用者は、事前に保護者から同意を得ること
               %br
               (参考:
               %a{href: 'https://www.mext.go.jp/a_menu/other/mext_02412.html', target: '_blank'}
