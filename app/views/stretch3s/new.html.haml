@@ -1,5 +1,5 @@
-- provide(:title, 'Stretch3 × AI 拡張ブロックの利用申請')
-- provide(:desc,  'Stretch3 から OpenAI API を呼び出せる拡張機能「ChatGPT2Scratch」が、全国の CoderDojo でご活用いただけるための利用申請フォームです。')
+- provide(:title, 'Stretch3 × AI 拡張ブロックの利用申請 (試験運用中)')
+- provide(:desc,  'Stretch3 の AI 拡張ブロックが、全国の CoderDojo でご活用いただけるための利用申請フォームです。試験運用中で、いただいたフィードバックなどを踏まえて予告なく変更が行われる可能性があります。')
 - provide(:url,         '/stretch3')
 - provide(:meta_image,  '/img/stretch3_cover.png')
 
@@ -22,6 +22,8 @@
         Stretch3 × AI
         %br.ignore-pc
         利用申請フォーム
+        %br
+        %small (試験運用中)
       = lazy_image_tag '/img/stretch3_cover.webp',
                        alt: 'AI 拡張ブロック利用例のスクリーンショット画像',
                        min: true,
@@ -74,10 +76,15 @@
             %small
               %b<> 利用者は、事前に保護者から同意を得ること
               %br
-              (参考:
-              %a{href: 'https://www.mext.go.jp/a_menu/other/mext_02412.html', target: '_blank'}
-                文部科学省 - 生成AIの利活用に関するガイドライン
-                %small
+              %small
+                (参考:
+                %a{href: 'https://www.mext.go.jp/content/20241226-mxt_shuukyo02-000030823_002.pdf', target: '_blank'}
+                  文科省 - 生成AIの利活用に関するガイドライン (概要)
+                  %small
+                    %i.far.fa-external-link
+                \/
+                %a{href: 'https://www.mext.go.jp/a_menu/other/mext_02412.html', target: '_blank'}
+                  詳細を見る
                   %small
                     %i.far.fa-external-link
               )
