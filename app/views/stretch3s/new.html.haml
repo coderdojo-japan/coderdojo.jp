@@ -85,7 +85,9 @@
               CoderDojo 以外で利用する場合は、一般社団法人 CoderDojo Japan からの書面による許諾を事前に得るようお願いします。
         %p
           %pre{style: 'white-space: pre-wrap; margin-bottom: 30px; color: #505050;'}
-            ※ 本サービスは Azure AI の利用上限に達した場合、または上記規約に違反した場合などの理由により、予告なく利用が停止される場合もあります。あらかじめご了承いただけると幸いです。
+            ※ 本サービスは Azure AI の利用上限に達した場合、または上記規約に違反した場合などの理由により、予告なく利用が停止される場合もあります。あらかじめご了承いただけると幸いです。また
+            %a{href: '/privacy', target: '_blank'}<> プライバシーポリシー
+            の確認・同意も合わせてお願い致します。
       .field.text-center
         = f.check_box :term_of_use, required: true
         = f.label     :term_of_use, "上記の利用規約に同意する", style: "display:inline"
