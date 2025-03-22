@@ -34,13 +34,6 @@
         (
         %a{href: '#'}<> &raquo; 詳細を見る
         )
-    /
-      %p
-      この申請フォームは OpenAI の Chat API を呼び出す拡張機能 ChatGPT2Scratch を
-      %br
-      API キー不要で利用出来るようにするための申請フォームです。
-      %br
-      これにより本来有料の Chat API を無料で利用できます。
     %p{style: 'margin-bottom: 50px;'}
       利用規約は、
       %b<> 保護者が利用者と一緒に
@@ -59,7 +52,7 @@
         = f.text_field :participant_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子'
       .field
         = f.label      :dojo_name, "道場名"
-        = f.text_field :dojo_name, required: true, class: "form__field", placeholder: '例: CoderDojo 柏'
+        = f.text_field :dojo_name, required: true, class: "form__field", placeholder: '例: CoderDojo 瀬戸'
       .form__terms
         %h2.form__h2 利用規約
         %ol
