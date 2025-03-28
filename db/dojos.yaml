@@ -4053,6 +4053,19 @@
   - micro:bit
   - Webサイト
   - Python
+- id: 336
+  order: '473111'
+  created_at: '2025-03-28'
+  name: 恩納@OIST
+  prefecture_id: 47
+  logo: "/img/dojos/default.webp"
+  url: https://coderdojo-nago.connpass.com/
+  description: OIST（沖縄科学技術大学院大学）で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - toio
+  - 3Dプリンター
 - id: 57
   order: '473251'
   created_at: '2016-12-19'
