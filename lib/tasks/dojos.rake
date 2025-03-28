@@ -57,7 +57,7 @@ namespace :dojos do
 
   # YAML にある各 Dojo データが有効かどうか検証し、無効なら raise する
   def raise_if_invalid_dojo(dojo)
-    # order は必ず６桁になる https://www.soumu.go.jp/denshijiti/code.html
+    # order は６桁で、String として格納される（左ゼロ詰めに対応するため）
     invalid_order = <<~ERROR_MESSAGE
     全国地方公共団体コード (order) は必ず６桁のコード (String) になります。内容を再度ご確認ください。
     https://www.soumu.go.jp/denshijiti/code.html
