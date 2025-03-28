@@ -106,8 +106,8 @@ module ApplicationHelper
     'https://map.coderdojo.jp' + path
   end
 
-  def foundation_url(path='/foundation/')
-    'https://coderdojo.com' + path
+  def foundation_url
+    'https://speakerdeck.com/helloworldfoundation'
   end
 
   def zen_url(path='/find')
