@@ -16,9 +16,9 @@ RSpec.describe 'dojos' do
 
   describe 'dojos:update_db_by_yaml' do
     before :each do
-      @dojo_1 = create(:dojo, name: 'dojo_1', prefecture_id: 14, order: '14201', created_at: '2019-01-04', tags: %w(Scratch ラズベリーパイ))
-      @dojo_2 = create(:dojo, name: 'dojo_2', prefecture_id: 12, order: '12204', created_at: '2019-02-01', tags: %w(Scratch))
-      @dojo_3 = create(:dojo, name: 'dojo_3', prefecture_id: 34, order: '34209', created_at: '2019-03-01', tags: %w(Scratch Webサイト))
+      @dojo_1 = create(:dojo, name: 'dojo_1', prefecture_id: 14, order: '142010', created_at: '2019-01-04', tags: %w(Scratch ラズベリーパイ))
+      @dojo_2 = create(:dojo, name: 'dojo_2', prefecture_id: 12, order: '122040', created_at: '2019-02-01', tags: %w(Scratch))
+      @dojo_3 = create(:dojo, name: 'dojo_3', prefecture_id: 34, order: '342090', created_at: '2019-03-01', tags: %w(Scratch Webサイト))
     end
 
     let(:task) { 'dojos:update_db_by_yaml' }
