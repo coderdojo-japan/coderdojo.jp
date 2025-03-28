@@ -27,7 +27,12 @@ namespace :dojos do
   task update_db_by_yaml: :environment do
     dojos = Dojo.load_attributes_from_yaml
 
+    # DB 反映する前に YAML データをチェックする
+    # https://railsguides.jp/error_reporting.html
+
     dojos.each do |dojo|
+      raise_if_invalid_dojo(dojo)
+
       d = Dojo.find_or_initialize_by(id: dojo['id'])
       d.name          = dojo['name']
       d.counter       = dojo['counter'] || 1
@@ -49,6 +54,21 @@ namespace :dojos do
   end
 
   Rake::Task['dojos:update_db_by_yaml'].enhance(['postgresql:reset_pk_sequence'])
+
+  # YAML にある各 Dojo データが有効かどうか検証し、無効なら raise する
+  def raise_if_invalid_dojo(dojo)
+    # order は必ず６桁になる https://www.soumu.go.jp/denshijiti/code.html
+    invalid_order = <<~ERROR_MESSAGE
+    全国地方公共団体コード (order) は必ず６桁のコード (String) になります。内容を再度ご確認ください。
+    https://www.soumu.go.jp/denshijiti/code.html
+
+    Invalid Dojo: #{dojo}
+
+    ERROR_MESSAGE
+
+    raise invalid_order if not dojo['order'].size.equal? 6
+    raise invalid_order if not dojo['order'].is_a? String
+  end
 
   # search order number for google spred sheets
   # 'yamlファイルのnameからorderの値を生成します'

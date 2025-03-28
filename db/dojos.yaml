@@ -2030,7 +2030,7 @@
   - Hour of Code
   - 電子工作
 - id: 195
-  order: 192074
+  order: '192074'
   is_active: false
   created_at: '2019-02-03'
   name: 韮崎
@@ -2045,7 +2045,7 @@
   - Python
   - Processing
 - id: 196
-  order: 192091
+  order: '192091'
   is_active: false
   created_at: '2019-02-03'
   name: 北杜
@@ -2233,7 +2233,7 @@
   - LEGO
   - micro:bit
 - id: 197
-  order: 212041
+  order: '212041'
   is_active: false
   created_at: '2019-02-03'
   name: 東濃
