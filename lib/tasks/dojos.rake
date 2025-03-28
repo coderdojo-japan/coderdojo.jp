@@ -40,8 +40,8 @@ namespace :dojos do
       d.created_at    = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at    = Time.zone.now
       d.prefecture_id = dojo['prefecture_id']
-      d.order         = dojo['order'] || search_order_number(dojo['name'])
-      d.is_active     = dojo['is_active'].nil? ? true : dojo['is_active']
+      d.order         = dojo['order'] || search_order_number_by(dojo['name'])
+      d.is_active     = dojo['is_active'].nil?  ? true  : dojo['is_active']
       d.is_private    = dojo['is_private'].nil? ? false : dojo['is_private']
 
       d.save!
@@ -52,7 +52,7 @@ namespace :dojos do
 
   # search order number for google spred sheets
   # 'yamlファイルのnameからorderの値を生成します'
-  def search_order_number(pre_city)
+  def search_order_number_by(pre_city)
 
     if /(?<city>.+)\s\(.+\)/ =~ pre_city
       table = CSV.table(Rails.root.join('db','city_code.csv'), { :converters => nil })
