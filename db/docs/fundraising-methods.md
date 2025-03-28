@@ -49,7 +49,7 @@ Dojo 運営者は、寄付が必要な理由を保護者に伝えた上で、貢
   <small>※
     なお日本国内では賛助会員のスタイルを採る Dojo が多い傾向にあります。<br>
     <br>
-    各 Dojo の賛助会員の例を見る →
+    各 Dojo の賛助会員の募集例を見る →
     <a href='https://www.google.com/search?q=CoderDojo+賛助会員'>Google 検索 - CoderDojo 賛助会員</a>
   </small>
 </blockquote>
@@ -77,7 +77,7 @@ Dojo での活動を広くお披露目する場を設け、その出席者に対
 
 <blockquote>
   <small>※
-    各 Dojo の助成金の例を見る → 
+    各 Dojo の助成金の採択例を見る → 
     <a href='https://www.google.com/search?q=CoderDojo+助成金'>Google 検索 - CoderDojo 助成金</a>
   </small>
 </blockquote>
