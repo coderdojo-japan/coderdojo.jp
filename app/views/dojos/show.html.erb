@@ -14,28 +14,28 @@
   </h1>
   <br>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
-    <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する公開されている統計情報をまとめたページです。
+    <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する<br class='ignore-pc'>公開されている統計情報をまとめたページです。
     <br><br>
     <% if @event_histories.any? %>
     <small>
       ※
-      <a href="<%= events_path %>">近日開催</a>のデータは含まず、<a href="<%= stats_path %>">過去開催</a>のデータを使っています。
+      <%= link_to '近日開催', events_path %>は含まず、<%= link_to '過去開催', stats_path %>のデータを使っています
       <br>
       ※
-      下記データは <code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> で JSON に変換できます。
+      下記表は <code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> で JSON に変換できます
       <br>
       ※
-      下記データは <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます。
+      下記表は <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます
     </small>
     <% end %>
   </p>
 
   <div style="margin-top: 20px;" align="center">
     <% if @event_histories.any? %>
-    <table border="1">
+    <table border="1"
       <tr>
         <th style="padding: 10px; text-align: center;">
-          <small>☯️
+          <small>☯️<br class='ignore-pc'>
 	    開催日
 	  </small>
         </th>
@@ -61,7 +61,7 @@
           <td style="padding: 1px 10px 1px 10px; text-align: left;">
             <small>
 	      <a href='<%= event[:event_url] %>'>
-		<span title="<%= event[:event_url] %>"><%= event[:event_url] %></span>
+		<span title="<%= event[:event_url] %>"><%= event[:event_url].gsub('https://', '').chomp('/') %></span>
 	      </a>
             </small>
           </td>
