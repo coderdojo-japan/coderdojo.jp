@@ -14,14 +14,14 @@
   </h1>
   <br>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
-    CoderDojo <%= @dojo[:name] %>に関する公開されている統計情報をまとめたページです。
+    <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する公開されている統計情報をまとめたページです。
     <br><br>
     <small>
       ※
       <a href="<%= events_path %>">近日開催</a>のデータは含まず、<a href="<%= stats_path %>">過去開催</a>のデータを使っています。
       <br>
       ※
-      より詳細データは<code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> でご確認いただけます。
+      下記データは <code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> で JSON に変換できます。
       <br>
       ※
       下記データは <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます。

@@ -30,11 +30,11 @@ class DojosController < ApplicationController
   def show
     @dojo = Dojo.find(params[:id])
     @event_histories = @dojo.event_histories.order(evented_at: :DESC)
-      .select(:id, :dojo_id, :dojo_name, :service_name, :event_id, :event_url, :participants, :evented_at)
+      .select(:evented_at, :participants, :event_url)
 
     respond_to do |format|
       format.html
-      format.json { render json: @event_histories }
+      format.json { render json: @event_histories.as_json(except: [:id]) }
       format.csv  { send_data render_to_string, type: :csv }
     end
   end
