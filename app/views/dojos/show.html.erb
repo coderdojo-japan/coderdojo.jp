@@ -10,7 +10,7 @@
 <section id="events" class="text-center" style="margin-bottom: 100px;">
   <br>
   <h1>☯️
-    CoderDojo <%= @dojo.name %> の統計情報<br><small>（公開情報のみ掲載）</small>
+    CoderDojo <%= @dojo.name %> - 統計情報<br><small>（公開情報のみ掲載）</small>
   </h1>
   <br>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
@@ -55,7 +55,7 @@
           <td style="padding: 1px 10px 1px 10px; text-align: right;">
             <small><%= event[:evented_at].strftime("%F") %></small>
           </td>
-          <td style="padding: 1px 10px 1px 10px;">
+          <td style="padding: 1px 10px 1px 10px; text-align: right;">
             <small><%= event[:participants] %></small>
           </td>
           <td style="padding: 1px 10px 1px 10px; text-align: left;">
