@@ -30,22 +30,37 @@
     <% end %>
   </p>
 
+  <style type="text/css">
+    td.url-cell {
+      /* URL 用のセルにクラスを付けておく想定 */
+      white-space: normal;           /* 改行を許可 */
+      word-wrap: break-word;         /* 古めのブラウザ向け */
+      overflow-wrap: break-word;     /* 新しめのブラウザ向け */
+      word-break: break-all;         /* 英数字が続く場合の保険 (必要に応じて) */
+    }
+  </style>
   <div style="margin-top: 20px;" align="center">
     <% if @event_histories.any? %>
-    <table border="1"
+    <table border="1" style="table-layout: auto;">
       <tr>
         <th style="padding: 10px; text-align: center;">
-          <small>☯️<br class='ignore-pc'>
+          <small>
+	    ☯️
+	    <br class='ignore-pc'>
 	    開催日
 	  </small>
         </th>
         <th style="padding: 10px; text-align: center;">
-          <small>👥
+          <small>
+	    👥
+	    <br class='ignore-pc'>
 	    参加数
 	  </small>
         </th>
         <th style="padding: 10px; text-align: center;">
-          <small>📝
+          <small>
+	    📝
+	    <br class='ignore-pc'>
 	    URL
 	  </small>
         </th>
@@ -58,7 +73,7 @@
           <td style="padding: 1px 10px 1px 10px; text-align: right;">
             <small><%= event[:participants] %></small>
           </td>
-          <td style="padding: 1px 10px 1px 10px; text-align: left;">
+          <td class="url-cell" style="padding: 1px 10px 1px 10px; text-align: left;">
             <small>
 	      <a href='<%= event[:event_url] %>'>
 		<span title="<%= event[:event_url] %>"><%= event[:event_url].gsub('https://', '').chomp('/') %></span>
