@@ -29,7 +29,7 @@ class DojosController < ApplicationController
   # GET /dojos/:id
   def show
     @dojo = Dojo.find(params[:id])
-    @event_histories = @dojo.event_histories.order(:evented_at)
+    @event_histories = @dojo.event_histories.order(evented_at: :DESC)
       .select(:id, :dojo_id, :dojo_name, :service_name, :event_id, :event_url, :participants, :evented_at)
 
     respond_to do |format|
