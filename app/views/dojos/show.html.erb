@@ -21,8 +21,10 @@
       <a href="<%= events_path %>">近日開催</a>のデータは含まず、<a href="<%= stats_path %>">過去開催</a>のデータを使っています。
       <br>
       ※
-      より詳細データは<code><%= link_to dojo_path(@dojo) + '.json', dojo_url(@dojo) + ".json" %></code> でご確認いただけます。
+      より詳細データは<code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> でご確認いただけます。
       <br>
+      ※
+      下記データは <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます。
     </small>
   </p>
 

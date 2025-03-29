@@ -35,6 +35,7 @@ class DojosController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @event_histories }
+      format.csv  { send_data render_to_string, type: :csv }
     end
   end
 end
