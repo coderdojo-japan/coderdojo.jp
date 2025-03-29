@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
 
-  resources :dojos,    only: %i(index) # GET /dojos.json returns dojo data as JSON
+  resources :dojos,    only: %i(index show) # GET /dojos.json returns dojo data as JSON
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)

@@ -25,4 +25,15 @@ class DojosController < ApplicationController
       format.json { render json: @dojo_data }
     end
   end
+
+  # GET /dojos/:id
+  def show
+    @dojo = Dojo.find(params[:id])
+    @event_histories = @dojo.event_histories.order(:evented_at)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @event_histories }
+    end
+  end
 end
