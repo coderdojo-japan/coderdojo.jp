@@ -15,49 +15,56 @@
   <br>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
     <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する<br class='ignore-pc'>公開されている統計情報をまとめたページです。
-    <br><br>
+
     <% if @event_histories.any? %>
-    <small>
-      ※
-      <%= link_to '近日開催', events_path %>は含まず、<%= link_to '過去開催', stats_path %>のデータを使っています
-      <br>
-      ※
-      下記表は <code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> で JSON に変換できます
-      <br>
-      ※
-      下記表は <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます
-    </small>
+      <div class='form__terms list'>
+	<ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
+	  <li><%= link_to '近日開催', events_path %>は含まず、<%= link_to '過去開催', stats_path %>のデータを使っています</li>
+	  <li>下記表は <code><%= link_to dojo_path(@dojo, format: :json), dojo_url(@dojo, format: :json) %></code> で JSON に変換できます</li>
+	  <li>下記表は <code><%= link_to dojo_path(@dojo, format: :csv),  dojo_url(@dojo, format: :csv) %></code> で CSV に変換できます</li>
+	</ul>
+      </div>
     <% end %>
   </p>
 
   <style type="text/css">
+    /* URL 用のセルにクラスを付けておく想定 */
+    table { table-layout: auto; }
+    td {
+      padding: 1px 10px 1px 10px;
+      text-align: right;
+    }
     td.url-cell {
-      /* URL 用のセルにクラスを付けておく想定 */
-      white-space: normal;           /* 改行を許可 */
-      word-wrap: break-word;         /* 古めのブラウザ向け */
+      white-space:   normal;         /* 改行を許可 */
+      word-wrap:     break-word;     /* 古めのブラウザ向け */
       overflow-wrap: break-word;     /* 新しめのブラウザ向け */
-      word-break: break-all;         /* 英数字が続く場合の保険 (必要に応じて) */
+      word-break:    break-all;      /* 英数字が続く場合の保険 (必要に応じて) */
+      text-align:    left;
+    }
+    th {
+      padding: 10px;
+      text-align: center;
     }
   </style>
   <div style="margin-top: 20px;" align="center">
     <% if @event_histories.any? %>
-    <table border="1" style="table-layout: auto;">
+    <table border="1">
       <tr>
-        <th style="padding: 10px; text-align: center;">
+        <th>
           <small>
 	    ☯️
 	    <br class='ignore-pc'>
 	    開催日
 	  </small>
         </th>
-        <th style="padding: 10px; text-align: center;">
+        <th>
           <small>
 	    👥
 	    <br class='ignore-pc'>
 	    参加数
 	  </small>
         </th>
-        <th style="padding: 10px; text-align: center;">
+        <th>
           <small>
 	    📝
 	    <br class='ignore-pc'>
@@ -67,13 +74,13 @@
       </tr>
       <% @event_histories.each do |event| %>
         <tr>
-          <td style="padding: 1px 10px 1px 10px; text-align: right;">
+          <td>
             <small><%= event[:evented_at].strftime("%F") %></small>
           </td>
-          <td style="padding: 1px 10px 1px 10px; text-align: right;">
+          <td>
             <small><%= event[:participants] %></small>
           </td>
-          <td class="url-cell" style="padding: 1px 10px 1px 10px; text-align: left;">
+          <td class="url-cell">
             <small>
 	      <a href='<%= event[:event_url] %>'>
 		<span title="<%= event[:event_url] %>"><%= event[:event_url].gsub('https://', '').chomp('/') %></span>
