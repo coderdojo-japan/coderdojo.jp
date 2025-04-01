@@ -6,7 +6,7 @@
 
 <br>
 
-- 関連記事: [👥 Facebook グループの投稿を見逃さない方法](/docs/facebook-group-notifications)
+- 関連記事: [👥 Facebook グループ投稿を見逃さない方法](/docs/facebook-group-notifications)
 
 <br>
 

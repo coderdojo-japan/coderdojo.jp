@@ -1,4 +1,4 @@
-# 👥 Facebook グループの投稿を<br class='ignore-sp'>見逃さない方法
+# 👥 Facebook グループ投稿を<br class='ignore-sp'>見逃さない方法
 
 <br><br>
 
