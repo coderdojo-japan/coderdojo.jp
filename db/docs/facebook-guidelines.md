@@ -6,6 +6,10 @@
 
 <br>
 
+- 関連記事: [👥 Facebook グループの投稿を見逃さない方法](/docs/facebook-group-notifications)
+
+<br>
+
 ## [☯️](#coderdojo) CoderDojo に関する投稿 {#coderdojo}
 
 本グループでは CoderDojo に関する投稿を受け付けています。
