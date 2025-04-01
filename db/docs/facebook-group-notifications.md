@@ -22,8 +22,8 @@ Facebook グループの通知 (お知らせ) を受け取る頻度は、各参�
 
 このため、以下の方法でお知らせ設定を「すべての投稿」にしておくと、当該グループに投稿があった場合に必ず通知が来るように設定できます。
 
-1. 当該 Facebook グループに行き<br>例: [CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp) グループ、[Champions](https://www.facebook.com/groups/coderdojo.jp.champions) グループ<br><br>
-2. 画面右にある `...` をクリックし、`お知らせを管理` をクリックする<br>![お知らせ管理](https://i.gyazo.com/e82f620bbb368bf5ee282e27fa9eeb8f.png)<br><br>
+1. 当該 Facebook グループに行く<br>例: [CoderDojo Japan](https://www.facebook.com/groups/coderdojo.jp) グループ、[Champions](https://www.facebook.com/groups/coderdojo.jp.champions) グループ<br><br>
+2. 画面右にある `...` をクリックし、`お知らせを管理` をクリックする<br>![お知らせ管理](https://i.gyazo.com/5a810cc00b26e938f9bc04dac4dea962.png)<br><br>
 3. アプリ内通知を `すべての投稿` にし、右下の `保存` ボタンをクリックする<br>![お知らせの設定](https://i.gyazo.com/db7bb67684aaea089bbd9f8aac953885.png)
 
 <br>
