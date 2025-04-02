@@ -36,7 +36,7 @@
 
       <iframe class="lazyload" src="https://anchor.fm/coderdojo-japan/embed/episodes/<%= @episode.permalink %>" width="100%" scrolling="no" frameborder="yes" style='margin-bottom: 30px;'></iframe>
 
-      <%= raw @content %>
+      <%= raw Rinku.auto_link(@content) %>
     </div>
   </section>
 
