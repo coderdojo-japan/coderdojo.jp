@@ -1,0 +1,92 @@
+<% provide(:title, '道場情報 - 直近の開催日まとめ') %>
+<% provide(:desc, '道場別の直近開催日をまとめたページです。') %>
+<% provide(:url, @url) %>
+<% provide(:meta_image, '/img/ogp-events.jpeg') %>
+
+<section class="cover">
+  <%= lazy_image_tag('/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', min: true) %>
+</section>
+
+<section id="events" class="text-center" style="margin-bottom: 100px;">
+  <br />
+  <h1>☯️ 道場別の直近の開催日まとめ</h1>
+  <br />
+  <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
+    主にデータ分析や
+    <a href="/signup#terms-of-use">Active/Inactive</a>
+    の判断などの用途で使われています。<br /><br />
+
+    <small>
+      ※
+      <%= link_to '近日開催', events_path %>
+      のデータは含まず、
+      <%= link_to '過去開催', stats_path %>
+      のデータを使っています。<br />
+      ※
+      <code>2000-01-23</code>
+      は個別にイベント管理している Dojo となります。<br />
+      ※
+      <code>📝 ノート</code>
+      は確認時のメモです。on-mouse で全文が見れます。
+    </small>
+  </p>
+
+  <style type="text/css">
+    /* URL 用のセルにクラスを付けておく想定 */
+    table { table-layout: auto; }
+    td {
+      padding: 1px 10px 1px 10px;
+      text-align: right;
+    }
+    td.url-cell {
+      white-space:   normal;         /* 改行を許可 */
+      word-wrap:     break-word;     /* 古めのブラウザ向け */
+      overflow-wrap: break-word;     /* 新しめのブラウザ向け */
+      word-break:    break-all;      /* 英数字が続く場合の保険 (必要に応じて) */
+      text-align:    left;
+    }
+    th {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+
+  <div style="margin-top: 20px;" align="center">
+    <table border="1">
+      <tr>
+        <th>
+          <small>☯️ 道場名</small>
+        </th>
+        <th>
+          <small>🗓 直近の開催日</small>
+        </th>
+        <th>
+          <small>📝 ノート</small>
+        </th>
+      </tr>
+      <% @latest_event_by_dojos.each do |dojo| %>
+        <tr>
+          <td>
+            <small>
+              <a href="<%= dojo[:url] %>"><%= dojo[:name] %></a>
+            </small>
+          </td>
+          <td>
+            <small>
+              <% if dojo[:event_url].nil? %>
+                <%= dojo[:event_at] %>
+              <% else %>
+                <a href="<%= dojo[:event_url] %>"><%= dojo[:event_at] %></a>
+              <% end %>
+            </small>
+          </td>
+          <td class="url-cell">
+            <small>
+              <span title="<%= dojo[:note] %>"><%= raw Rinku.auto_link(dojo[:note]) %></span>
+            </small>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</section>
