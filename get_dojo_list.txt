@@ -6,49 +6,157 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
-CoderDojo末広町@アミュレット
-CoderDojo新代田
-CoderDojo 立川
-CoderDojo横浜師岡
-CoderDojo厚木
-CoderDojo伊勢原
-CoderDojoTOKE
-CoderDojo市川
-CoderDojo 柏
-CoderDojo 前橋
-CoderDojo 富士宮
-CoderDojo 磐田
-coderdojo豊橋
-CoderDojo　天白
-CoderDojo日進
-CoderDojo 瑞穂
+CoderDojo 古河
 CoderDojo師勝
-CoderDojo 尾張
-CoderDojo犬山
-CoderDojo瀬戸
-CoderDojo岐阜
-CoderDojo伊勢
-CoderDojo大東
-CoderDojoせんなん
-CoderDojo なかもず
-CoderDojo 宇治
-CoderDojo生駒
-CoderDojo 和歌山
-CoderDojo加西
-CoderDojo 岡南
-CoderDojo津山
+Coderdojo 大船
+CoderDojo名古屋
 CoderDojo 福山大門
-CoderDojo 光
-CoderDojo松山
-CoderDojo伊予
-CoderDojoさが
-CoderDojo久留米
-CoderDojo 富山
+CoderDojo武蔵小杉
+CoderDojo猪名川
+CoderDojo さいたま
+CoderDojo神山
+CoderDojo岩国
+CoderDojo大府
 CoderDojoとなみ
-CoderDojo Aizu
-CoderDojo Yabuki 
-CoderDojo Tsuruoka(鶴岡)
+CoderDojo末広町@アミュレット
+CoderDojo伊勢
+CoderDojo津山
+CoderDojo磐田
+CoderDojo加西
+CoderDojo 長野
+CoderDojo名護
+CoderDojo 小田原
+CoderDojo 麹町@アドバンスト・ソフト
+CoderDojo 南風原
+CoderDojo 小田原
+CoderDojoまちだ
+CoderDojo富谷
+コーダードージョー長門
+CoderDojo 那覇
+CoderDojo 南紀田辺
+CoderDojo 恵那
+CoderDojo岐阜
+CoderDojo 品川港南
+CoderDojo松山
+CoderDojo 富山
+CoderDojo 上市
+CoderDojo 香椎
+CoderDojo 松戸
+CoderDojo柏
+CoderDojo流山
+CoderDojo 岡南
+CoderDojo 倉敷
+CoderDojo 天白
 CoderDojo 札幌
-CoderDojo滝沢
-CoderDojo 恵庭
-CoderDojo 江別
+CoderDojo 高岡
+CoderDojo 平野
+CoderDojo久留米
+CoderDojo 宇治
+CoderDojo 和歌山
+CoderDojo 滑川
+CoderDojo稲毛海岸
+CoderDojo 和歌山有田
+CoderDojo 富士宮
+CoderDojo なかもず
+CoderDojo枚方
+CoderDojo 横浜師岡
+CoderDojo神戸
+CoderDojo市川真間
+CoderDojo 南風原
+CoderDojoせんなん
+CoderDojo八戸
+CoderDojo Aizu
+CoderDojo松本
+CodeDojo Tokushima
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

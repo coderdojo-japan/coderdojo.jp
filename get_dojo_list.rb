@@ -28,6 +28,7 @@ INPUT_TEXT.each do |line|
     .gsub(/coderdojo/i,   '')
     .gsub(/corderdojo/i,  '')        # 時々ある Typo
     .gsub(/コーダー道場/, '')
+    .gsub(/コーダードージョー/, '')
     .gsub('‪',            '')
     .gsub('　',           '')
     .gsub('＠',           '@')
@@ -53,9 +54,12 @@ INPUT_TEXT.each do |line|
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
       .gsub('tsuruoka',       '鶴岡')
       .gsub('harumi',         '晴海')
+      .gsub('tokushima',      '徳島')
+      .gsub('高岡',           'たかおか')
       .gsub('町田',           'まちだ')
       .gsub('小平',           'こだいら')
       .gsub('八戸',           '八戸@吹上')
+      .gsub('平野',           '平野@YOZORA LABO')
       .gsub('吉備岡山',       '吉備')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
   end
