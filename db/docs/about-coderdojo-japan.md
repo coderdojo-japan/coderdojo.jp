@@ -104,7 +104,7 @@ info@coderdojo.jp
 
 <br>
 
-その後、2017年からは [@kiriem_](https://twitter.com/kiriem_) さんも新たに理事として参画し、[パートナー法人](/#partners)と共に上記活動を継続的に実施しています。また日本国内だけでなく、CoderDojo Foundation を始め[世界中の公式法人](https://coderdojo.com/en/partner-network)とも連携し、日本における活動事例やノウハウを世界中にも発信しています。
+その後、2017年からは [@kiriem_](https://twitter.com/kiriem_) さんも新たに理事として参画し、[パートナー法人](/#partners)と共に上記活動を継続的に実施しています。また日本国内だけでなく、CoderDojo Foundation を始め[世界中の公式法人](https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan)とも連携し、日本における活動事例やノウハウを世界中にも発信しています。
 
 
 ### 日本の活動を取り上げてもらった投稿例
