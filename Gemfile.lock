@@ -390,6 +390,7 @@ GEM
     reverse_markdown (3.0.0)
       nokogiri
     rexml (3.4.1)
+    rinku (2.0.6)
     rspec-core (3.13.3)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
@@ -559,6 +560,7 @@ DEPENDENCIES
   rails-html-sanitizer (~> 1.4.4)
   rake
   rambulance!
+  rinku
   rspec-rails (~> 4.0)
   rspec-retry
   rss

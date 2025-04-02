@@ -53,6 +53,9 @@ gem 'lazy_high_charts', '1.5.8'
 gem 'rack-attack'
 gem 'rack-user_agent'
 
+# For Auto Link
+gem 'rinku'
+
 # For RSS feed
 gem 'ruby-mp3info', require: 'mp3info'
 
