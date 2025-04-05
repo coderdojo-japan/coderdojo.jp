@@ -22,6 +22,123 @@
 # MEMO: データ追加のサンプルとして2023〜2024年のイベント情報を入れてみています。
 #       「興味あり」はカウントせず、「参加者」のみをカウントしています。
 #
+
+# 2025
+# ...
+# - dojo_id:
+#   event_url: 
+#   evented_at: 
+#   participants: 
+
+# 2023/01..2025/04 CoderDojo佐賀 https://www.facebook.com/CoderDojoSAGA
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1DTRLhfars/
+  evented_at: 2025-03-16 10:00
+  participants: 17
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/16Eer4o3uE/
+  evented_at: 2025-01-26 10:00
+  participants: 12
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1X8jPES4BY/
+  evented_at: 2024-11-24 10:00
+  participants: 14
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/169wp35ae4/
+  evented_at: 2024-10-27 10:00
+  participants: 15
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1959tvS9cu/
+  evented_at: 2024-10-13 10:00
+  participants: 37
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1NNjbaj8Ab/
+  evented_at: 2024-09-22 10:00
+  participants: 22
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/164rhjhGKt/
+  evented_at: 2024-08-25 10:00
+  participants: 17
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/19sPGdnSvK/
+  evented_at: 2024-07-28 10:00
+  participants: 21
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/12H1H9hph84/
+  evented_at: 2024-07-23 10:00
+  participants: 15
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/12HNV3UiDQc/
+  evented_at: 2024-06-23 10:00
+  participants: 21
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/15GPXftZp6/
+  evented_at: 2024-05-26 10:00
+  participants: 15
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1AMAvGSBku/
+  evented_at: 2024-04-21 10:00
+  participants: 22
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/12KNMCoGDPy/
+  evented_at: 2024-03-17 10:00
+  participants: 21
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/12GfYvZgmLV/
+  evented_at: 2024-02-25 10:00
+  participants: 16
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/18pehMiN7L/
+  evented_at: 2024-01-28 10:00
+  participants: 23
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1JQRLdoEGH/
+  evented_at: 2023-12-17 10:00
+  participants: 17
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1DgfuFDUTj/
+  evented_at: 2023-11-19 10:00
+  participants: 13
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1HMbpxc2jm/
+  evented_at: 2023-10-22 10:00
+  participants: 7
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1HNN9aCxpa/
+  evented_at: 2023-09-19 10:00
+  participants: 24
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1AARSPjk5B/
+  evented_at: 2023-08-27 10:00
+  participants: 36
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1Ds84MeUh7/
+  evented_at: 2023-08-19 10:00
+  participants: 43
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1Xy2X28Dpq/
+  evented_at: 2023-06-25 10:00
+  participants: 15
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/169GJcvdT4/
+  evented_at: 2023-05-28 10:00
+  participants: 13
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1A8vDECPSH/
+  evented_at: 2023-04-23 10:00
+  participants: 15
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/18fDCAPebz/
+  evented_at: 2023-03-26 10:00
+  participants: 9
+- dojo_id:  269
+  event_url: https://www.facebook.com/share/p/1E3zPQdrDy/
+  evented_at: 2023-02-26 10:00
+  participants: 9
+# TODO: 2022..
+
+
+
 # 2024
 - dojo_id: 194
   event_url: https://www.facebook.com/events/436353945837073/
