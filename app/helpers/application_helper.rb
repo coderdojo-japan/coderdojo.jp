@@ -26,7 +26,7 @@ module ApplicationHelper
     # Default description
     # Outdated: "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、世界では#{Dojo::NUM_OF_COUNTRIES}ヶ国・#{Dojo::NUM_OF_WORLD_DOJOS}ヶ所で開催されています。"
     if description.empty?
-      "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、毎年#{Dojo::NUM_OF_TOTAL_EVENTS}回以上のイベントが日本各地で開催されています。"
+      "CoderDojo は子どものためのプログラミング道場です。全国に#{Dojo.active_dojos_count}ヶ所以上あり、毎年#{Dojo::NUM_OF_ANNUAL_EVENTS}回以上のイベントが日本各地で開催されています。"
     else
       description
     end

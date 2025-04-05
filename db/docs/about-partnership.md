@@ -40,7 +40,7 @@ CoderDojo は、主に7〜17歳を対象とした子どものためのプログ�
   <center>図: 地図から Dojo を探す「<a href='https://map.coderdojo.jp/'>DojoMap</a>」</center>
 </div>
 
-日本国内では[毎年{{ NUM_OF_TOTAL_EVENTS }}回以上のイベントが開催](/stats)され、年間で延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達が CoderDojo に参加しています。各イベントの運営はプログラマーやデザイナー、学生や教員など、多様な方々の協力によって支えられています。
+日本国内では[毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上のイベントが開催](/stats)され、年間で延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達が CoderDojo に参加しています。各イベントの運営はプログラマーやデザイナー、学生や教員など、多様な方々の協力によって支えられています。
 
 
 <div style="margin: 40px auto 40px;">
@@ -98,7 +98,7 @@ CoderDojo コミュニティは日本でも2012年から少しずつ広がって
 </div>
 
 
-CoderDojo は全国各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上、累計10,000回以上のイベントが開催されています。
+CoderDojo は全国各地で毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上、累計10,000回以上のイベントが開催されています。
 
 <div style="margin: 40px auto 40px;">
   <img class='lazyload' loading='lazy' alt="図: Dojo 開催回数の年次推移"
@@ -106,7 +106,7 @@ CoderDojo は全国各地で毎年{{ NUM_OF_TOTAL_EVENTS }}回以上、累計10,
   <center>図: Dojo 開催回数の年次推移</center>
 </div>
 
-年間では延べ{{ NUM_OF_TOTAL_NINJAS }}人以上の子ども達が参加し、これまでの累計の延べ参加者数は61,000人になります。
+年間では延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達が参加し、これまでの累計の延べ参加者数は61,000人になります。
 
 <div style="margin: 40px auto 40px;">
   <img class='lazyload' loading='lazy' alt="図: Dojo 参加者数の年次推移"
