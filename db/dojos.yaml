@@ -807,7 +807,7 @@
   - toio
 - id: 86
   order: '122041'
-  note: Forms 管理に移行
+  note: Active - Forms 管理に移行 - https://funabashi.coderdojo.chiba.jp/
   created_at: '2017-05-16'
   name: 船橋
   prefecture_id: 12
@@ -3613,7 +3613,7 @@
   - Minecraft
 - id: 188
   order: '363421'
-  note: 独自サービスでイベント管理 https://www.in-kamiyama.jp/events
+  note: Active - 独自サービスでイベント管理 https://www.in-kamiyama.jp/events
   created_at: '2018-12-13'
   name: 神山
   prefecture_id: 36
@@ -3841,11 +3841,12 @@
   - micro:bit
 - id: 269
   order: '412015'
+  note: Active - peatix でイベント管理 https://peatix.com/group/10488940
   created_at: '2021-05-03'
   name: さが
   prefecture_id: 41
   logo: "/img/dojos/saga.webp"
-  url: https://peatix.com/group/10488940/view
+  url: https://peatix.com/group/10488940
   description: 佐賀市で毎月開催
   tags:
   - Viscuit
