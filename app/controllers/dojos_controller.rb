@@ -2,13 +2,13 @@ class DojosController < ApplicationController
 
   # GET /dojos[.json]
   def index
-    @dojo_data = []
+    @dojos = []
     Dojo.order(order: :asc).all.each do |dojo|
-      @dojo_data << {
+      @dojos << {
         id:          dojo.id,
         url:         dojo.url,
         name:        dojo.name,
-        logo:        "https://coderdojo.jp#{dojo.logo}",
+        logo:        root_url + dojo.logo[1..],
         order:       dojo.order,
         counter:     dojo.counter,
         is_active:   dojo.is_active,
@@ -21,8 +21,8 @@ class DojosController < ApplicationController
     respond_to do |format|
       # No corresponding View for now.
       # Only for API: GET /dojos.json
-      format.html { redirect_to root_url(anchor: 'dojos') }
-      format.json { render json: @dojo_data }
+      format.html # => app/views/dojos/index.html.erb
+      format.json { render json: @dojos }
     end
   end
 
