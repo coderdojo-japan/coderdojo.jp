@@ -98,19 +98,19 @@ CoderDojo コミュニティは日本でも2012年から少しずつ広がって
 </div>
 
 
-CoderDojo は全国各地で毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上、累計10,000回以上のイベントが開催されています。
+CoderDojo は全国各地で毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上、累計{{ NUM_OF_TOTAL_EVENTS }}回以上のイベントが開催されています。
 
 <div style="margin: 40px auto 40px;">
   <img class='lazyload' loading='lazy' alt="図: Dojo 開催回数の年次推移"
-       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-2.png" />
+       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-2.webp" />
   <center>図: Dojo 開催回数の年次推移</center>
 </div>
 
-年間では延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達が参加し、これまでの累計の延べ参加者数は61,000人になります。
+年間では延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達が参加し、これまでの累計の延べ参加者数は{{ NUM_OF_TOTAL_NINJAS }}人になります。
 
 <div style="margin: 40px auto 40px;">
   <img class='lazyload' loading='lazy' alt="図: Dojo 参加者数の年次推移"
-       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-3.png" />
+       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-3.webp" />
   <center>図: Dojo 参加者数の年次推移</center>
 </div>
 

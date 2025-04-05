@@ -19,11 +19,11 @@ class DocsController < ApplicationController
 
     if @doc.content.include? "NUM_OF_"
       @doc.content.gsub! "{{ NUM_OF_JAPAN_DOJOS }}",   Dojo.active_dojos_count.to_s
-      @doc.content.gsub! "{{ NUM_OF_WORLD_DOJOS }}",   Dojo::NUM_OF_WORLD_DOJOS
-      @doc.content.gsub! "{{ NUM_OF_COUNTRIES }}",     Dojo::NUM_OF_COUNTRIES
+      @doc.content.gsub! "{{ NUM_OF_PARTNERSHIPS }}",  Dojo::NUM_OF_PARTNERSHIPS
       @doc.content.gsub! "{{ NUM_OF_ANNUAL_EVENTS }}", Dojo::NUM_OF_ANNUAL_EVENTS
       @doc.content.gsub! "{{ NUM_OF_ANNUAL_NINJAS }}", Dojo::NUM_OF_ANNUAL_NINJAS
-      @doc.content.gsub! "{{ NUM_OF_PARTNERSHIPS }}",  Dojo::NUM_OF_PARTNERSHIPS
+      @doc.content.gsub! "{{ NUM_OF_TOTAL_EVENTS }}",  Dojo::NUM_OF_TOTAL_EVENTS
+      @doc.content.gsub! "{{ NUM_OF_TOTAL_NINJAS }}",  Dojo::NUM_OF_TOTAL_NINJAS
     end
 
     @content    = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
