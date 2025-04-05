@@ -18,8 +18,8 @@
     <br>
     <div class='form__terms list'>
       <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
-	<li><%= link_to '近日開催', events_path %>は含まず、<%= link_to '過去開催', stats_path %>のデータを使っています</li>
-	<li>現在は活動停止中 (Inactive) の道場も含まれています</li>
+	<li>現在は活動停止中 (In-active) の道場も表示されています</li>
+	<li>道場名をクリックすると個別の統計データが確認できます</li>
 	<li>下記表は <code><%= link_to dojos_path(format: :json), dojos_path(format: :json) %></code> で JSON に変換できます</li>
       </ul>
     </div>
@@ -53,7 +53,7 @@
           <small>
 	    ☯️
 	    <br class='ignore-pc'>
-	    Dojo 名 / ID
+	    道場名 (ID 番号)
 	  </small>
         </th>
         <th>
@@ -97,10 +97,9 @@
       <% end %>
     </table>
 
-    <div style='margin-top: 60px;'><a href='#top'>&uarr; 上に戻る</a></div>
     <p>
-      <pre style='white-space: pre-wrap; margin-top: 60px; margin-bottom: 30px; color: #505050;'>
-	本ページにある統計情報は、現在 <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</pre>
+      <pre style='white-space: pre-wrap; margin-top: 60px; color: #505050;'>本ページにある統計情報は現在、<br class='ignore-pc'><a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</pre>
     </p>
+    <div style='margin-top: 30px;'><a href='#top'>&uarr; 上に戻る</a></div>
   </div>
 </section>

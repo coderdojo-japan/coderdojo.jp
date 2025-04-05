@@ -93,14 +93,12 @@
       <% end %>
     </table>
     <% else %>
-      <p>
-	<pre style='white-space: pre-wrap; margin-bottom: 30px; color: #505050;'>
-	本サイトには <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する統計情報は登録されていません。<br>
-	統計情報は現在 <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</pre>
-      </p>
+    <p>
+      <pre style='white-space: pre-wrap; margin-top: 60px; margin-bottom: 30px; color: #505050;'>本サイトには <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する統計情報は登録されていません。<br>統計情報は現在 <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</pre>
+    </p>
     <% end %>
 
-    <div style='margin-top: 60px;'>
+    <div style='margin-top: 30px;'>
       <small><%= link_to raw("&raquo; 他の Dojo 一覧を見る"), dojos_path %></small>
     </div>
   </div>
