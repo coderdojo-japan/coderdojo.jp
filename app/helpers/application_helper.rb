@@ -78,11 +78,6 @@ module ApplicationHelper
     end
   end
 
-  # NOTE: Delete this helper to avoid overriding when /dojos routing is added.
-  def dojos_path(options={anchor: 'dojos'})
-    root_path(options)
-  end
-
   def welcome_path(options={anchor: 'welcome'})
     root_path(options)
   end
