@@ -1,0 +1,401 @@
+<% provide(:title, '統計情報') %>
+<% provide(:desc,  'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。') %>
+<% provide(:url,   stats_url) %>
+<% provide(:meta_image, '/img/ogp-stats.jpeg') %>
+
+<!-- jQuery Japan Map -->
+<script type="text/javascript" src="/js/jquery.japan-map.js"></script>
+
+<section id="top" style="padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;">
+  <%= lazy_image_tag 'stats_cover.png', alt: 'Cover photo for CoderDojo Stats' %>
+</section>
+
+<section class="stats text-center">
+  <h1>統計情報</h1>
+  <div style="margin: 30px 36px 0;">
+    本ページでは CoderDojo の統計情報をまとめています。<br class="ignore-sp">全国の活動状況を把握したい場面などでご活用ください。
+  </div>
+
+  <h2 id="graph" style="margin-top: 70px; color: #333333;">
+    <a href="#graph">📊</a>
+    推移グラフ
+  </h2>
+  <div align="center">
+    <%= high_chart_globals(@high_charts_globals) %>
+
+    <!-- 道場数の推移 -->
+    <p style="margin: 40px auto;"><%= high_chart("annual_dojos", @annual_dojos_chart) %></p>
+
+    <!-- 開催回数の推移 -->
+    <p style="margin: 40px auto;"><%= high_chart("annual_event_histories", @annual_event_histories_chart) %></p>
+
+    <!-- 参加者数 -->
+    <p style="margin: 40px auto;"><%= high_chart("annual_participants", @annual_participants_chart) %></p>
+  </div>
+
+  <h2 id="latest" style="margin-top: 70px; color: #333333;">
+    <a href="#latest">🆕</a>
+    最新データ
+  </h2>
+
+  <p><%= Time.current.year %>年のデータも含めた<br>最新の統計情報 <small>(実測値)</small> は次のとおりです。</p>
+  <div style="margin-top: 20px;" align="center">
+    <table border="1" style="margin-top: 4px;">
+      <tr>
+        <th>掲載中の道場数</th>
+        <th>累計開催回数</th>
+        <th>累計参加者数</th>
+      </tr>
+      <tr class="text-center">
+        <td><%= @sum_of_dojos %></td>
+        <td><%= @sum_of_events %></td>
+        <td><%= @sum_of_participants %></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="tag" style="margin-top: 20px;" align="center">
+    <br>
+    <%= high_chart("dojo_tag_chart", @dojo_tag_chart) %>
+  </div>
+
+  <h2 id="table" style="margin-top: 70px; color: #333333;">
+    <a href="#table">📝</a>
+    集計方法と集計対象について
+  </h2>
+  <ul style="list-style: none; margin-left: -10px;">
+    <li>参加者数はユニーク数ではなく延べ数です。</li>
+    <li>集計対象は API などで集計可能な道場です。</li>
+  </ul>
+  <p style="margin-top: 10px;">
+    毎週月曜朝10時に集計をしています。
+    <br>
+    集計対象の道場数は次のとおりです。
+  </p>
+  <p style="margin-top: 10px; margin-bottom: -5px;">
+    <b><%= @annual_dojos_table[@period_end.to_s] %></b> /
+    <b><%= @annual_dojos_whole[@period_end.to_s] %></b> Dojos
+  </p>
+  <span style="font-size: 10px;">（非アクティブになった道場も含まれています）</span>
+
+  <style>
+    .table-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* iOSでのスムーズスクロール */
+      max-width: 99%; /* 横幅を画面サイズに合わせる */
+      margin: auto 5px;
+    }
+  </style>
+
+  <div id="table-target" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
+    <b>
+      <a href="#table-target">🔍</a>
+      集計対象と集計割合の推移
+    </b>
+  </div>
+  <div class="table-container" align="center">
+    <table class="compact" border="1" style="margin-top: 10px;">
+      <tr>
+        <th>
+          <span class="table-head">西暦</span>
+        </th>
+        <% @period_range.each do |year| %>
+          <th>
+            <span class="table-head">’<%= year.to_s[2..] %></span>
+          </th>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">集計数</span>
+        </td>
+        <% @annual_dojos_table.each_value do |num| %>
+          <td>
+            <span class="table-item"><%= num %></span>
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">総道場</span>
+        </td>
+        <% @annual_dojos_whole.each_value do |num| %>
+          <td>
+            <span class="table-item"><%= num %></span>
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">割合</span>
+          <span class="table-label">[%]</span>
+        </td>
+        <% @annual_dojos_ratio.each_value do |num| %>
+          <td>
+            <span class="table-item">
+              <%= (num.eql?('100.0') ? '100' : num) %>
+            </span>
+          </td>
+        <% end %>
+      </tr>
+    </table>
+    <span style="font-size: 10px;">
+      ※ 非アクティブになった道場も含まれています
+    </span>
+  </div>
+
+  <div id="table-actual" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
+    <b>
+      <a href="#table-actual">☯️</a>
+      開催回数と参加者数の推移
+    </b>
+  </div>
+  <div class="table-container" align="center">
+    <table class="compact" border="1" style="margin-top: 10px;">
+      <tr>
+        <th>
+          <span class="table-head">西暦</span>
+        </th>
+        <% @period_range.each do |year| %>
+          <th>
+            <b>
+              <span class="table-head">’<%= year.to_s[2..] %></span>
+            </b>
+          </th>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">割合</span>
+          <span class="table-label">[%]</span>
+        </td>
+        <% @annual_dojos_ratio.each_value do |num| %>
+          <td>
+            <span class="table-item">
+              <%= num.eql?('100.0') ? '100' : num %>
+            </span>
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">開催</span>
+          <span class="table-label">(集計)</span>
+        </td>
+        <% @annual_events_table.each_value.with_index(@period_start) do |num, year| %>
+          <td>
+            <span class="table-item"><%= num %></span>
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">参加</span>
+          <span class="table-label">(集計)</span>
+        </td>
+        <% @annual_participants_table.each_value.with_index(@period_start) do |num, year| %>
+          <td>
+            <span class="table-item"><%= num %></span>
+          </td>
+        <% end %>
+      </tr>
+    </table>
+    <span style="font-size: 10px;">
+      ※ <a href="#graph">冒頭の推移グラフ</a> を表にしたデータです
+    </span>
+  </div>
+
+  <div id="table-estimate" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
+    <b>
+      <a href="#table-estimate">💭</a>
+      開催回数と参加者数の見込み
+    </b>
+  </div>
+  <div class="table-container" align="center">
+    <table class="compact" border="1" style="margin-top: 10px;">
+      <tr>
+        <th>
+          <span class="table-head">西暦</span>
+        </th>
+        <% @period_range.each do |year| %>
+          <th>
+            <b>
+              <span class="table-head">’<%= year.to_s[2..] %></span>
+            </b>
+          </th>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">割合</span>
+          <span class="table-label">[%]</span>
+        </td>
+        <% @annual_dojos_ratio.each_value do |num| %>
+          <td>
+            <span class="table-item">
+              <%= num.eql?('100.0') ? '100' : num %>
+            </span>
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">開催</span>
+          <span class="table-label">(見込)</span>
+        </td>
+        <% @annual_events_table.each_value.with_index(@period_start) do |num, year| %>
+          <td>
+            <span class="table-item">
+              <%= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i %>
+            </span>
+            <!--
+            <span class="table-item"><%= num %></span>
+            <span class="table-item"><%= Rational(@annual_dojos_ratio[year.to_s], 100) %></span>
+            -->
+          </td>
+        <% end %>
+      </tr>
+      <tr style="text-align: center;">
+        <td>
+          <span class="table-head">参加</span>
+          <span class="table-label">(見込)</span>
+        </td>
+        <% @annual_participants_table.each_value.with_index(@period_start) do |num, year| %>
+          <td>
+            <span class="table-item">
+              <%= Rational(num, Rational(@annual_dojos_ratio[year.to_s], 100)).to_i %>
+            </span>
+          </td>
+        <% end %>
+      </tr>
+    </table>
+    <span style="font-size: 10px;">
+      <% year = @period_end.to_s %>
+      ※ <%= year %>年の参加見込の計算例:
+      <%= @annual_participants_table[year] %> / 0.<%= @annual_dojos_ratio[year].remove('.') %>
+      = <%= Rational(@annual_participants_table[year], Rational(@annual_dojos_ratio[year], 100)).to_i %>
+      <small>(小数点以下は切り捨て)</small>
+    </span>
+  </div>
+
+  <h2 id="map" style="margin-top: 70px; color: #333333;">
+    <a href="#map">🗾</a>
+    地域別の道場数
+  </h2>
+  <div class="japan-map">
+    <!-- 
+    <p id="japan-map-text" style="margin: 20px auto; font-size: 140%;">
+      名前: 道場数
+    </p>
+    -->
+    <div id="japan-map-container"></div>
+  </div>
+  <div style="margin-top: 0px; margin-bottom: 60px;" align="center">
+    <p>
+      <a href="<%= dojomap_url %>">&raquo; 地図データを見る</a><br>
+      <a href="<%= dojos_path  %>">&raquo; 個別データを見る</a><br>
+    </p>
+  </div>
+
+  <!-- NOTE: Always show dojos with accordion style to compact -->
+  <%= render partial: 'shared/dojos_stats', locals: { regions_and_dojos: @regions_and_dojos } %>
+
+  <h2 id="prefectures" style="margin-top: 70px; color: #333333;">
+    <a href="#prefectures">✅</a>
+    都道府県別の道場数
+    <div style="padding-top: 10px; font-size: smaller;">
+      <%= "(#{@data_by_prefecture_count} / #{Prefecture.count})" %>
+    </div>
+  </h2>
+  <div style="margin-top: 20px;" align="center">
+    <table border="1">
+      <tr>
+        <th style="padding: 10px;">
+          <small>都道府県名</small>
+        </th>
+        <th style="padding: 10px;">
+          <small>道場数</small>
+        </th>
+      </tr>
+      <% @data_by_prefecture.each_with_index do |(prefecture, count), index| %>
+        <tr>
+          <% if count == 0 %>
+            <td style="background-color: gainsboro; padding: 0px;">
+              <small><%= prefecture %></small>
+            </td>
+            <td style="background-color: gainsboro; padding: 0px;">
+              <small><%= count %></small>
+            </td>
+          <% else %>
+            <td style="padding: 0px;">
+              <small><%= prefecture %></small>
+            </td>
+            <td style="padding: 0px;">
+              <small><%= count %></small>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <h2 id="references" style="margin-top: 70px; color: #333333;">
+    <a href="#references">📚</a>
+    関連リンク
+  </h2>
+  <ul>
+    <li>
+      <a href="https://bit.ly/coderdojo-japan-stats-past-works">
+        統計情報に関する『これまで』の開発 - GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://bit.ly/coderdojo-japan-stats-future-works">
+        統計情報に関する『これから』の開発 - GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://bit.ly/coderdojo-japan-stats-data-sheet">
+        日本の CoderDojo (財団&Japan) - Spreadsheet
+      </a>
+    </li>
+  </ul>
+  <br>
+</section>
+
+<style>
+  span.table-head  { font-size: x-small; }
+  span.table-label { font-size: 7px; }
+  span.table-item  { font-size: xx-small; }
+</style>
+
+<script>
+  $(function(){
+    var areas      = JSON.parse('<%= @data_by_region.to_json.gsub(/&quot;/, "\"") %>');
+    var dataByPref = JSON.parse('<%= @data_by_prefecture.to_json.gsub(/&quot;/, "\"") %>');
+
+    $("#japan-map-container").japanMap({
+      // NOTE: Tweak stats_controller if you want to tweak map colors
+      areas: areas,
+      selection: "prefecture",
+      borderLineWidth: 0.1,
+      drawsBoxLine: false,
+      movesIslands: true,
+      showsAreaName: true,
+      showsPrefectureName: false,
+      prefectureNameType: "short",
+      width: 651,
+      font: "Hiragino Kaku Gothic Pro",
+      fontSize: 12,
+      fontColor: "white",
+      fontShadowColor: "#444455",
+      onSelect: function(data){
+        // This code is used for tapping by Mobile devices
+        $("#japan-map-text").html(data.name + ": " + dataByPref[data.name]);
+      },
+      onHover: function(data){
+        $("#japan-map-text").html(data.name + ": " + dataByPref[data.name]);
+      }
+    });
+  });
+</script>
