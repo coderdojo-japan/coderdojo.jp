@@ -53,7 +53,7 @@
 	  <a href='#coderdojo'>☯️</a>
 	  CoderDojo とは?
 	</h3>
-	<p>CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<%= link_to '国際的な非営利活動', dojomap_url('/world'), style: "white-space: nowrap;" %>で、日本には<%= link_to "#{@dojo_count}以上", dojos_path %>の道場があります。全国各地で<%= link_to "毎年#{Dojo::NUM_OF_ANNUAL_EVENTS}回以上", stats_path %>開催され、<%= link_to "年間#{Dojo::NUM_OF_ANNUAL_NINJAS}人以上", stats_path %>の子ども達が楽しみながら様々な作品を創っています。</p>
+	<p>CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<%= link_to '国際的な非営利活動', dojomap_url('/world'), style: "white-space: nowrap;" %>で、日本には<%= link_to "#{@dojo_count}以上", root_path(anchor: 'dojos') %>の道場があります。全国各地で<%= link_to "毎年#{Dojo::NUM_OF_ANNUAL_EVENTS}回以上", stats_path %>開催され、<%= link_to "年間#{Dojo::NUM_OF_ANNUAL_NINJAS}人以上", stats_path %>の子ども達が楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
 	<%= lazy_image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
@@ -84,7 +84,7 @@
 	  <iframe class='lazyload' loading='lazy' width="813" height="457" src="https://www.youtube.com/embed/5Q3r4XQflFs?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e" title="あなたが CoderDojo に来る理由は何ですか？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</div>
 
-	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本の道場一覧', dojos_path %></a>や<%= link_to '近日開催の道場', events_path %>、もしくは<%= link_to '地図情報（DojoMap）', dojomap_url %> から最寄りの道場を探してみましょう!</p>
+	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本の道場一覧', root_path(anchor: 'dojos') %></a>や<%= link_to '近日開催の道場', events_path %>、もしくは<%= link_to '地図情報（DojoMap）', dojomap_url %> から最寄りの道場を探してみましょう!</p>
 
 	<div class='btn-cover' style="margin-top: 20px; margin-bottom: 100px;">
 	  <%= link_to '/event', class: 'btn-blue' do %>
@@ -1073,7 +1073,7 @@
 	      coderdojo.jp と近日開催の道場への掲載
 	      <small>(提供: <%= link_to 'CoderDojo Japan', doc_path('about-coderdojo-japan') %>)</small>
 	    </h4>
-	    <p>希望する Dojo は、いつでも <%= link_to 'coderdojo.jp に掲載', dojos_path  %>することができます。また、<a href="https://www.doorkeeper.jp/">Doorkeeper</a> や <a href="https://connpass.com/">connpass</a> でイベントを管理・作成している場合は、<%= link_to '近日開催の道場', events_path %>からイベントが自動的に周知されるようになります。準備ができたら<b><%= link_to 'コチラ', signup_path %></b>から申請してください! 😸</p>
+	    <p>希望する Dojo は、いつでも <%= link_to 'coderdojo.jp に掲載', root_path(anchor: 'dojos')  %>することができます。また、<a href="https://www.doorkeeper.jp/">Doorkeeper</a> や <a href="https://connpass.com/">connpass</a> でイベントを管理・作成している場合は、<%= link_to '近日開催の道場', events_path %>からイベントが自動的に周知されるようになります。準備ができたら<b><%= link_to 'コチラ', signup_path %></b>から申請してください! 😸</p>
 	    <br>
 	  </li>
 	  <li>
