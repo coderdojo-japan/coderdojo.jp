@@ -1,0 +1,421 @@
+<div id="top" class="title text-center">
+  <i class="cd cd-logo"></i>
+  <h1>CoderDojo Japan</h1>
+  <p>子どものためのプログラミング道場</p>
+  <br>
+</div>
+
+<section class="cover">
+  <%= lazy_image_tag '/coderdojo-japan_cover.webp', alt: 'CoderDojo Japan カバー画像', min: true %>
+</section>
+
+<section class="introduction text-center list">
+  <p>CoderDojo は子どものためのプログラミング道場です。2011年にアイルランドから始まった<%= link_to '国際的な非営利活動', dojomap_url('/world'), style: "white-space: nowrap;" %>で、日本には<b><%= @dojo_count %></b>以上の道場があります。</p>
+
+  <p style='margin-top: 40px;'>CoderDojo で学べる内容は道場ごとに様々で、例えば次のような内容です。</p>
+
+  <ul>
+    <li>Scratch, micro:bit, Webサイト</li>
+    <li>Raspberry Pi, Minecraft</li>
+    <li>Python, Ruby, JavaScript</li>
+    <li>Viscuit, PHP, 電子工作など</li>
+  </ul>
+
+  <p style='margin: 20px auto;'>内容も規模もそれぞれ異なりますが、どの道場でも主体的に学ぶ姿勢が大切です。</p>
+
+  <p id="welcome">
+    詳細は次のスライドをお読みください。
+  </p>
+  <div class="text-center">
+    <div class="home-point-slides">
+      <iframe
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        scrolling="no"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSfSoYY3Iw6o0DL4Ki6-JNhgIOb61pktNZMRAYQZ4QdvORYb5ryBmOshmoDwe6M1BA8O-_-dzXOTReP/embed?start=false&loop=false"
+        width="595"
+        height="350">
+      </iframe>
+    </div>
+    <div style="margin-bottom:5px; color: grey;">
+      スライドが見えない場合は<a href="https://bit.ly/coderdojo-guidance-2021" title="CoderDojo ガイダンス <一般・ボランティア向け資料>">コチラ</a>
+    </div>
+  </div>
+  <p id="youtube" style="margin-top: 60px;">
+    CoderDojo の様子については、
+    <br class="ignore-pc">
+    次の動画や記事をぜひ！😆
+  </p>
+
+  <div class="home-point-thumbnail" style="margin-top: 30px; margin-bottom: 30px;">
+    <%= link_to(
+      lazy_image_tag('/video-thumbnail.webp', alt: 'あなたが CoderDojo に来る理由は何ですか？', min: true),
+      'https://www.youtube.com/watch?v=5Q3r4XQflFs&list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e&index=1'
+    ) %>
+  </div>
+  <!--
+  <div class="home-point-video">
+    <iframe
+      allowfullscreen=""
+      frameborder="0"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/gLDue2xb1j8?rel=0">
+    </iframe>
+  </div>
+  -->
+  <ul style="margin-bottom:30px;">
+    <li>
+      <a href="http://bakemono.jp/reading/blog/web/2256/">CoderDojoとは? 運営者に話を聞いてみた!</a>
+      <small>(バケモノ.jp)</small>
+    </li>
+    <li>
+      <a href="http://ict-enews.net/zoomin/17coderdojo/">CoderDojoをはじめてみませんか</a>
+      <small>(ICT教育ニュース)</small>
+    </li>
+    <li>
+      <a href="https://takadanobaba.keizai.biz/column/1/">CoderDojo Japan 特集インタビュー</a>
+      <small>(高田馬場経済新聞)</small>
+    </li>
+  </ul>
+
+  <div class="text-center" style="margin-top: 0px; margin-left: -17px;">
+    <div
+      class="g-ytsubscribe"
+      data-channelid="UCal5GuoCDCMDQe07w69TuJA"
+      data-layout="full"
+      data-count="default"
+    ></div>
+    <script src="https://apis.google.com/js/platform.js"></script>
+  </div>
+  <br>
+  <%= render partial: 'shared/social_buttons' %>
+
+  <div class="btn-cover" style="margin-bottom: 40px;">
+    <a class="btn-blue" href="<%= kata_path(anchor: 'coderdojo') %>">
+      <i class="fad fa-yin-yang"></i>
+      CoderDojo について
+      <br class="ignore-pc">
+      もっと知る
+    </a>
+  </div>
+</section>
+
+<!-- 以下のイベントお知らせ部分は HAML でコメントアウトされているため、HTMLコメントで残しています
+<hr>
+<section id="events" class="detail-introduction text-center">
+  <h2>
+    <a href="#events">🆕</a>
+    イベントのお知らせ
+  </h2>
+  <ol style="list-style: none; margin-left: -40px; margin-top: 30px;">
+    <li>
+      <%= link_to(
+        lazy_image_tag('dojocon_japan_2022.webp', alt: 'DojoCon Japan 2022', style: 'margin-bottom: 15px;'),
+        'https://dojocon2022.coderdojo.jp/'
+      ) %>
+    </li>
+  </ol>
+  <p style="margin-bottom: 30px;">
+    11月27日に
+    <a href="https://dojocon2022.coderdojo.jp/">DojoCon Japan</a>
+    開催! 全国のCoderDojo関係者と話してみませんか? 😆✨
+  </p>
+</section>
+<p class="event-notice" style="margin-top: 30px; margin-bottom: 60px;">
+  <a href="https://bit.ly/pokemon-special-workshop-in-kashiwa">
+    プログラミングでポケモンをうごかしてみよう
+  </a>
+  <br>
+  <small>5月16日 (日) 10am〜、オンライン開催</small>
+</p>
+-->
+
+<!-- %section.dojos.text-center.grayscale-bg#dojos -->
+<section id="dojos" class="dojos text-center grayscale-bg">
+  <br>
+  <h2 style="color: dimgray;">
+    <a href="#dojos">🗾</a>
+    日本各地の道場
+  </h2>
+  <br>
+  <p style="margin: 0 30px 20px 30px;">
+    近くの道場を探してみましょう！
+    <br class="ignore-sp">
+    参加方法は各道場のWebサイトに記載されています
+  </p>
+  <div class="btn-cover" style="margin-bottom: 40px;">
+    <a class="btn-blue" href="<%= events_path %>">
+      <i class="far fa-calendar-alt"></i>
+      近日開催から探す
+    </a>
+    <!--
+    <a class="btn-blue" href="<%= zen_url %>"></a>
+    -->
+    <a class="btn-blue" href="<%= dojomap_url %>">
+      <i class="far fa-map-marked"></i>
+      地図情報から探す
+    </a>
+  </div>
+  <%= render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos } %>
+</section>
+
+<!--
+  以下の .text-center.grayscale-bg は HAML 上でコメントアウトされているため、HTMLコメントで残しています
+  <div class="text-center grayscale-bg" style="padding-top: 40px; padding-bottom: 50px;">
+    <section class="detail-introduction" id="news">
+      ...
+    </section>
+  </div>
+-->
+
+<!-- %section#news.detail-introduction.text-center.list -->
+<section id="news" class="detail-introduction text-center list" style="margin: 30px auto 50px;">
+  <h2 style="color: dimgray;">
+    <a href="#news">📰</a>
+    最近の CoderDojo
+  </h2>
+  <br>
+  <ul class="list" style="list-style: none;">
+    <li>
+      <a href="https://news.coderdojo.jp/2025/02/14/coderdojo-de-nyaicecode/">
+        🎲 ダイス×プログラミング『ニャイス！コード』を75台寄贈
+      </a>
+    </li>
+    <li>
+      <a href="https://news.coderdojo.jp/2025/02/10/dojoletter-vol-80-2024%e5%b9%b412%e6%9c%88%e5%8f%b7/">
+        📰 DojoLetter Vol.80 2024年12月号
+      </a>
+    </li>
+    <li>
+      <a href="https://news.coderdojo.jp/2025/01/14/dojoletter-vol-79-2024%e5%b9%b411%e6%9c%88%e5%8f%b7/">
+        📰 DojoLetter Vol.79 2024年11月号
+      </a>
+    </li>
+    <li>
+      <a href="https://news.coderdojo.jp/2024/12/25/box-japan-to-coderdojo/">
+        🎄 128台のノート PC 寄贈、Box Japan から CoderDojo へ
+      </a>
+    </li>
+    <li>
+      <a href="https://news.coderdojo.jp/2024/12/10/dojoletter-vol-78-2024%e5%b9%b410%e6%9c%88%e5%8f%b7/">
+        📰 DojoLetter Vol.78 2024年10月号
+      </a>
+    </li>
+  </ul>
+  <p style="margin-top: 30px;">
+    最新情報はメールで受け取れます。
+    <br class="ignore-pc">
+    <small>(毎月配信)</small>
+  </p>
+  <%= render partial: 'shared/newsletter' %>
+  <div class="btn-cover" style="margin-top: 40px;">
+    <a class="btn-blue" href="<%= news_url %>">
+      <i class="far fa-newspaper"></i>
+      過去の記事を読む
+    </a>
+  </div>
+</section>
+
+<!--
+  以下も HAML 上でコメントアウトされている「最近の CoderDojo (Twitter タイムライン)」部分です
+  <section id="timeline" class="text-center" style="margin-bottom: 50px;">
+    <h3 class="text-center" style="margin-bottom: 30px;">
+      <a href="https://x.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20コーダー道場%20lang%3Aja">
+        <i class="fab fa-x-twitter"></i>
+        最近の CoderDojo
+      </a>
+      <br>
+    </h3>
+    <div class="twitter-timeline-wrap">
+      <a class="twitter-timeline"
+         href="https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw"
+         data-lang="ja" data-dnt="true"
+         data-chrome="noheader nofooter noborders"
+         data-width="500"
+         data-tweet-limit="5">
+         @CoderDojoJapan のタイムライン
+      </a>
+      <script async="" await="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </section>
+-->
+
+<!-- .text-center.grayscale-bg に包まれた %section.detail-introduction.list -->
+<div class="text-center grayscale-bg">
+  <section class="detail-introduction list">
+    <h2 id="kata" style="color: dimgray; margin-top: 60px;">
+      <a href="#kata">📚</a>
+      もっと詳しく知る
+    </h2>
+    <br>
+    <p>
+      <a href="<%= podcasts_path %>">🎧 Podcast</a>
+      や
+      <a href="https://www.youtube.com/CoderDojoJapan">📺 YouTube</a>
+      など、様々な方法で CoderDojo の最新情報を発信しています。お好みの方法で最新情報をキャッチしてみよう！
+    </p>
+    <ul style="list-style: none;">
+      <li>
+        <a href="<%= kata_path %>">📑 Kata (型)</a>
+        <span style="font-size: 65%;">(Wiki)</span>
+      </li>
+      <li>
+        <a href="<%= podcasts_path %>">🎧 DojoCast</a>
+        <span style="font-size: 65%;">(Podcast)</span>
+      </li>
+      <li>
+        <a href="<%= news_path %>">📰 DojoLetter</a>
+        <span style="font-size: 65%;">(Newsletter)</span>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/CoderDojoJapan">📺 DojoChannel</a>
+        <span style="font-size: 65%;">(YouTube)</span>
+      </li>
+      <li>
+        <a href="https://x.com/CoderDojoJapan">📣 CoderDojo Japan</a>
+        <span style="font-size: 65%;">(Twitter)</span>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/groups/coderdojo.jp">👥 CoderDojo Japan</a>
+        <span style="font-size: 65%;">(Facebook)</span>
+      </li>
+      <li>
+        <a href="<%= foundation_url %>">🌐 CoderDojo Foundation</a>
+        <span style="font-size: 65%;">(海外)</span>
+      </li>
+    </ul>
+    <br>
+    <p>
+      <a href="<%= kata_path %>">📑 Kata</a> では運営に役立つ情報を、
+      <a href="https://twitter.com/CoderDojoJapan">📣 Twitter</a> では最近の活動状況を、<a href="<%= foundation_url %>">🌐 CoderDojo Foundation</a> では海外の雰囲気を知ることができます。
+    </p>
+    <br>
+    <p>
+      『地元で道場を立ち上げてみたい』『道場向けの各種支援を知りたい』という場合は <a href="<%= kata_path %>">📑 Kata</a> の<a href="<%= kata_path(anchor: 'startup') %>">『立ち上げる』</a>や<a href="<%= kata_path(anchor: 'support') %>">『支援』</a>をお読みください。
+    </p>
+    <div class="kata">
+      <%= link_to(
+        lazy_image_tag('/kata_cover.webp', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'),
+        '/kata'
+      ) %>
+    </div>
+    <div class="btn-cover" style="margin-top: 20px; margin-bottom: 50px;">
+      <a class="btn-blue" href="<%= kata_path %>"><i class="far fa-books"></i> 資料集「Kata」を読む</a>
+    </div>
+  </section>
+</div>
+
+<section id="partners" class="detail-introduction partners_logo text-center" style="padding-top: 50px;">
+  <h2 style="color: dimgray;">
+    <a href="#partners">🤝</a>
+    パートナー法人
+  </h2>
+  <p style="margin: 50px 0px 20px 0px;">
+    様々な法人が CoderDojo の取り組みを支援しています。
+  </p>
+  <%= render partial: 'shared/partners' %>
+  <div class="btn-cover" style="margin-top: 40px; margin-bottom: 100px;">
+    <a class="btn-blue" href="<%= partnership_path %>">
+      <i class="far fa-handshake"></i>
+      法人向け資料を読む
+    </a>
+  </div>
+</section>
+
+<!-- %section.detail-introduction#contact -->
+<section id="contact" class="detail-introduction" style="padding-top: 30px;">
+  <br>
+  <h2 id="faq" class="text-center" style="color: dimgray;">
+    <a href="#faq">✅</a>
+    よくある質問と回答
+  </h2>
+  <br>
+  <ul style="list-style: none; margin-left: -30px;">
+    <li>
+      <p>
+	Q．CoderDojo ってなんですか?<br>
+        A．<a href="<%= welcome_path %>">📜 イラスト付きスライド</a>があるので、ぜひチェックしてみてください 👀
+      </p>
+    </li>
+    <li>
+      <p>
+        Q．CoderDojo ってどんな雰囲気?<br>
+        A．<a href="#youtube">📺 YouTube 動画</a>を用意しました！よければご視聴ください 😆
+      </p>
+    </li>
+    <li>
+      <p>
+        Q．初めてです。どうしたらよい?<br>
+        A．<a href="<%= root_path(anchor: 'dojos') %>">🗾 全国の道場</a>から興味のある道場を探し、開催情報を調べてみましょう 🔍
+      </p>
+    </li>
+    <li>
+      <p>
+        Q．直近の開催情報はありますか？<br>
+        A．<a href="<%= events_path %>">📅 近日開催の道場</a>から直近の開催情報をご確認いただけます ✅
+      </p>
+    </li>
+    <li>
+      <p>
+        Q．道場を立ち上げてみたいです。<br>
+        A．<a href="<%= kata_path(anchor: 'startup') %>">📚 Kata</a> に資料があります！運営に関わってみたい方はぜひ! 🤝
+      </p>
+    </li>
+  </ul>
+  <div class="btn-cover" style="margin-top: 40px;">
+    <a class="btn-blue"  style="padding-left: 18px; padding-right: 18px;" href="<%= kata_path(anchor: 'faq') %>">
+      <i class="far fa-comment-check"></i>
+      他の質問と回答を見る
+    </a>
+  </div>
+</section>
+
+<section class="detail-introduction text-center">
+  <br>
+  <h2 id="inquiry" style="color: dimgray;">
+    <a href="#inquiry">📮</a>
+    お問い合わせ
+  </h2>
+  <br>
+  <p>
+    お問い合わせの前に<a href="#faq">よくある質問と回答</a>をご確認いただけると幸いです 📨
+    <br><br>
+  </p>
+
+  <!-- Contact Form via Wufoo -->
+  <div id="wufoo-qkjthoy0qpuvg9" style="margin-top: -10px;">
+    <a href="https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9">問い合わせフォーム</a>
+  </div>
+  <script>
+    var qkjthoy0qpuvg9;(function(d, t) {
+      var s = d.createElement(t), options = {
+        'userName':'yasslab',
+        'formHash':'qkjthoy0qpuvg9',
+        'autoResize':true,
+        'height':'497',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'show',
+        'ssl':true
+      };
+      s.src = (('https:' == d.location.protocol) ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+      s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try {
+          qkjthoy0qpuvg9 = new WufooForm();
+          qkjthoy0qpuvg9.initialize(options);
+          qkjthoy0qpuvg9.display();
+        } catch (e) {}
+      };
+      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+      par.insertBefore(s, scr);
+    })(document, 'script');
+  </script>
+  <br><br>
+</section>
