@@ -1,0 +1,129 @@
+<% provide(:title,      '近日開催の道場まとめ') %>
+<% provide(:desc,       '近日開催のイベント情報をまとめています。') %>
+<% provide(:url,        @url) %>
+<% provide(:meta_image, '/img/ogp-events.jpeg') %>
+
+<section class="cover">
+  <%= lazy_image_tag '/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', min: true %>
+</section>
+
+<section id="events" class="text-center">
+  <br>
+  <h1>📅 近日開催の道場</h1>
+  <br>
+  <p style="margin: 0 30px 40px 0px; line-height: 2.0em;">
+    ☯️ 開催予定のイベントをチェックしよう!
+    <br>
+    （🗾<a href="<%= dojomap_url %>">地図から探す</a>
+    / 🗓 <a href="https://bit.ly/coderdojo-calendar-by-each-region">カレンダー連携</a> ）
+  </p>
+
+  <!-- 
+     <h2>🆕 イベントのお知らせ</h2>
+     <p class='event-notice' style="margin-top: 30px; margin-bottom: 60px;">
+       <a href='https://coderdojo-japan.doorkeeper.jp/events/176828'>☯️
+       CoderDojo 共同発起人『Bill Liao』さんとの懇親会 - 8月31日 (土) 🌾
+       </a>
+     </p>
+  -->
+
+  <% unless @pokemon_events.blank? %>
+    <p class="event-notice" style="margin-top: 30px; margin-bottom: 60px;">
+      🆕
+      <a href="<%= pokemon_workshop_path %>">ポケモン・ワークショップ</a>
+      開催中！
+      <br>
+      <% @pokemon_events.each do |event| %>
+        <a href="##<%= event.dojo_event_service.dojo.prefecture.name %>">
+          <small>
+            <%= event.event_at.strftime('%-m月%d日 %H:%M〜') %> @ <%= event.dojo_event_service.dojo.name %>
+          </small>
+        </a>
+        <br>
+      <% end %>
+    </p>
+  <% end %>
+
+  <div id="event-list" class="grayscale-bg">
+    <% @upcoming_events.each do |prefecture, events| %>
+    <div id="<%= prefecture %>">
+      <h2 class="event-region">
+        <a href="#<%= prefecture %>" style="color: black;"><%= prefecture %></a>
+      </h2>
+
+      <ul class="event-ul">
+      <% events.each do |event| %>
+        <li class="event">
+          <header>
+          <% if event[:event_title].include?('オンライン') || event[:event_title].include?('リモート') %>
+            <div class="event-ribbon"><span>オンライン</span></div>
+          <% end %>
+          <p class="event-date"><%= l(event[:event_date]) %></p>
+          <p class="event-at"  ><%= event[:event_at].strftime('%k:%M') %></p>
+          </header>
+
+          <p>
+            <a class="event-url" href="<%= event[:event_url] %>">
+              <span><%= event[:event_title] %></span>
+            </a>
+            <span>(<%= event[:dojo_name] %>)</span>
+            <% if event[:event_title].include?('ポケモン') %>
+              <div class="event-tag-pokemon-cover">
+                <span class="event-tag-pokemon">ポケモン</span>
+              </div>
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+
+</section>
+
+<section id="dojos" class="dojos text-center">
+  <br>
+  <h3 id="howto" style="margin-top: 60px; font-weight: bold;">
+    <a href="#howto">☯️</a>
+    掲載道場について
+  </h3>
+  <p style="margin: 0 30px 40px 0px;">
+    <a href="/">coderdojo.jp</a>
+    に掲載申請されていて、かつ、
+    <br>
+    <a href="https://www.doorkeeper.jp/">Doorkeeper</a>
+    または
+    <a href="https://connpass.com/">connpass</a>
+    を使っている
+    <br>
+    道場を掲載しています (
+    <a href="<%= signup_path %>">掲載申請はコチラ</a>
+    )
+  </p>
+
+  <h3 id="references" style="margin-top: 60px; font-weight: bold;">
+    <a href="#references">🛠</a>
+    関連リンク
+  </h3>
+  <ul style="list-style: none; margin-left: -40px; margin-bottom: 40px;">
+    <li>
+      <a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/258">
+        直近の Dojo 開催情報を表示したい #258
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/375">
+        イベント履歴収集スクリプトの改修 #375
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/393">
+        Facebook Events にも対応したい #393
+      </a>
+    </li>
+  </ul>
+  <br>
+</section>
+
+<br><br>
