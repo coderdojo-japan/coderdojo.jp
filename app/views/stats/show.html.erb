@@ -20,17 +20,18 @@
     <a href="#graph">📊</a>
     推移グラフ
   </h2>
+
+  <style>
+    /* 中央寄せにする */
+    .chart-wrapper { margin: 40px auto; }
+  </style>
   <div align="center">
     <%= high_chart_globals(@high_charts_globals) %>
 
-    <!-- 道場数の推移 -->
-    <p style="margin: 40px auto;"><%= high_chart("annual_dojos", @annual_dojos_chart) %></p>
-
-    <!-- 開催回数の推移 -->
-    <p style="margin: 40px auto;"><%= high_chart("annual_event_histories", @annual_event_histories_chart) %></p>
-
-    <!-- 参加者数 -->
-    <p style="margin: 40px auto;"><%= high_chart("annual_participants", @annual_participants_chart) %></p>
+    <!-- 道場数、開催数、参加数の推移グラフ -->
+    <div class='chart-wrapper'><%= high_chart("annual_dojos",           @annual_dojos_chart) %></div>
+    <div class='chart-wrapper'><%= high_chart("annual_event_histories", @annual_event_histories_chart) %></div>
+    <div class='chart-wrapper'><%= high_chart("annual_participants",    @annual_participants_chart) %></div>
   </div>
 
   <h2 id="latest" style="margin-top: 70px; color: #333333;">

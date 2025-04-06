@@ -1,4 +1,6 @@
 class HighChartsBuilder
+  HIGH_CHARTS_WIDTH = 600
+
   class << self
     def global_options
       LazyHighCharts::HighChartGlobals.new do |f|
@@ -18,7 +20,7 @@ class HighChartsBuilder
           { title: { text: '増加数' },   tickInterval: 15, max: 75 },
           { title: { text: '累積合計' }, tickInterval: 50, max: 250, opposite: true }
         ]
-        f.chart(width: 600, alignTicks: false)
+        f.chart(width: HIGH_CHARTS_WIDTH, alignTicks: false)
         f.colors(["#A0D3B5", "#505D6B"])
       end
     end
@@ -35,7 +37,7 @@ class HighChartsBuilder
           { title: { text: '開催回数' }, tickInterval:  500, max: 2000 },
           { title: { text: '累積合計' }, tickInterval: 3000, max: 12000, opposite: true }
         ]
-        f.chart(width: 600, alignTicks: false)
+        f.chart(width: HIGH_CHARTS_WIDTH, alignTicks: false)
         f.colors(["#F4C34F", "#BD2561"])
       end
     end
@@ -52,7 +54,7 @@ class HighChartsBuilder
           { title: { text: '参加者数' }, tickInterval: 2500,  max: 12500 },
           { title: { text: '累積合計' }, tickInterval: 14000, max: 64000, opposite: true }
         ]
-        f.chart(width: 600, alignTicks: false)
+        f.chart(width: HIGH_CHARTS_WIDTH, alignTicks: false)
         f.colors(["#EF685E", "#35637D"])
       end
     end
