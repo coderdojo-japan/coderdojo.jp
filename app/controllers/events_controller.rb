@@ -26,7 +26,7 @@ class EventsController < ApplicationController
 
       link_in_note = dojo.note.match(URI.regexp)
       date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2})/) # YYYY-MM-DD
-      last_session_link = link_in_note.nil? ? dojo_path(dojo.id) : link_in_note
+      last_session_link = link_in_note.nil? ? dojo_path(dojo.id) : link_in_note.to_s
       last_session_date = date_in_note.nil? ? dojo.created_at    : Time.zone.parse(date_in_note.to_s)
       @latest_event_by_dojos << {
         id:   dojo.id,
@@ -38,12 +38,12 @@ class EventsController < ApplicationController
         # 過去のイベント開催データが無ければ、note 内にある日付または掲載日を表示
         event_at:  latest_event.nil? ?
           last_session_date.strftime("%Y-%m-%d") :
-          latest_event.evented_at.strftime("%Y-%m-%d"),
+          (latest_event.evented_at < last_session_date) ? last_session_date.strftime("%Y-%m-%d") : latest_event.evented_at.strftime("%Y-%m-%d"),
 
         # 過去のイベント開催データが無ければ、note 内にあるリンクまたは個別統計ページを表示
         event_url: latest_event.nil? ?
-          last_session_link.to_s :
-          latest_event.event_url
+          last_session_link :
+          (latest_event.evented_at < last_session_date) ? last_session_link : latest_event.event_url
       }
     end
 
