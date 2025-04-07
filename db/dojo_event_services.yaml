@@ -717,11 +717,11 @@
   group_id: 9168
   url: https://coderdojohamada.connpass.com/
 
-# しまね
-# - dojo_id: 224
-#   name: google
-#   group_id:
-#   url:
+# 大田・邑南、他（島根県内の一部の Dojo が合同で開催）
+- dojo_id: 224
+  name: connpass
+  group_id: 12587
+  url: https://iwapro.connpass.com/
 
 # 三春
 # - dojo_id: 223
