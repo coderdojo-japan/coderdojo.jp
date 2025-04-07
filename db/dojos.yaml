@@ -494,7 +494,7 @@
   - Islay
 - id: 8
   order: '082244'
-  note: 'Active for years.'
+  note: 'Active - 2025-04-05 http://coderdojo-moriya.com/archives/5011'
   created_at: '2016-07-12'
   name: 守谷
   prefecture_id: 8
@@ -1111,6 +1111,7 @@
   - Webサイト
 - id: 331
   order: '131032'
+  note: 'Active - 2025-03-09 に開催 https://note.com/coderdojo_konan/n/n63193aa2048c'
   created_at: '2024-12-19'
   name: 品川港南
   prefecture_id: 13

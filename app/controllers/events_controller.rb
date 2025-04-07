@@ -24,18 +24,23 @@ class EventsController < ApplicationController
     Dojo.active.each do |dojo|
       latest_event = dojo.event_histories.newest.first
 
+      link_in_note = dojo.note.match(URI.regexp)
+      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2})/) # YYYY-MM-DD
+      last_session_link = link_in_note.nil? ? dojo_path(dojo.id) : link_in_note
+      last_session_date = date_in_note.nil? ? dojo.created_at    : Time.zone.parse(date_in_note.to_s)
       @latest_event_by_dojos << {
         id:   dojo.id,
         name: dojo.name,
         note: dojo.note,
         url:  dojo.url,
+        has_event_histories: latest_event.nil?,
 
-        # 過去のイベント開催データが無ければ、大体として掲載日を入力
+        # 過去のイベント開催データが無ければ、note 内にある日付または掲載日を表示
         event_at:  latest_event.nil? ?
-          dojo.created_at.strftime("%Y-%m-%d") :
+          last_session_date.strftime("%Y-%m-%d") :
           latest_event.evented_at.strftime("%Y-%m-%d"),
         event_url: latest_event.nil? ?
-          nil :
+          last_session_link.to_s :
           latest_event.event_url
       }
     end
