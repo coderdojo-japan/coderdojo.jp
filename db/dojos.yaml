@@ -296,14 +296,14 @@
   name: 鶴岡
   prefecture_id: 6
   logo: "/img/dojos/tsuruoka.webp"
-  url: https://coderdojo-tsuruoka.connpass.com/
+  url: http://www.coderdojo-tsuruoka.com/
   description: 鶴岡市で毎月開催
   tags:
   - Scratch
-  - Webサイト
+  - Minecraft
   - micro:bit
   - Java
-  - ラズベリーパイ
+  - Webサイト
 - id: 325
   order: '062081'
   created_at: '2024-08-17'
