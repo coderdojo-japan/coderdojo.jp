@@ -75,12 +75,19 @@
           <td>
             <small>
               <% if dojo[:event_url].nil? %>
-                <span><%= dojo[:event_at] %></span>
+		<!-- 別サービスでイベント管理している Dojo で、"Active" の確認が無い場合はハイライトする -->
+                <span class=<%= 'expired' if !dojo[:note].include?('Active') %>>
+		  <%= link_to dojo[:event_at], dojo_path(dojo[:id]) %>
+		</span>
               <% elsif dojo[:event_at] <= Time.current.prev_year && !dojo[:note].include?('Active') %>
-		<!-- １年以上開催が確認できていない Dojo で、"Active" の確認が無い場合はハイライトする -->
-		<span class='expired'><a href="<%= dojo[:event_url] %>"><%= dojo[:event_at] %></a></span>
+		<!-- 過去１年間イベント開催していない Dojo で、"Active" の確認が無い場合はハイライトする -->
+		<span class='expired'>
+		  <%= link_to dojo[:event_at], dojo[:event_url] %>
+		</span>
               <% else %>
-                <span><a href="<%= dojo[:event_url] %>"><%= dojo[:event_at] %></a></span>
+                <span>
+		  <%= link_to dojo[:event_at], dojo[:event_url] %>
+		</span>
               <% end %>
             </small>
           </td>
