@@ -29,8 +29,8 @@ class EventsController < ApplicationController
           name: dojo.name,
           note: dojo.note,
           url:  dojo.url,
-          event_at: '2000-01-23',
-          event_url: nil
+          event_at:  dojo.created_at.strftime("%Y-%m-%d"),
+          event_url: nil,
         }
       else
         @latest_event_by_dojos << {
