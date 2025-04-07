@@ -1000,7 +1000,7 @@
   - 映像制作
 - id: 158
   order: '122303'
-  note: Re-actived @ 2024-03-16 https://twitter.com/KEITAROinNRT/status/1768837516835352825
+  note: '2024-09-21 https://x.com/KEITAROinNRT/status/1837328724599189598'
   is_active: true
   created_at: '2018-11-17'
   name: 成田
@@ -2026,7 +2026,7 @@
 - id: 88
   order: '192015'
   is_active: true
-  note: Re-activated @ 2024年11月15日 (金曜)
+  note: 'Re-activated @ 2024-11-15 https://www.facebook.com/share/p/1a51trhzQo/'
   created_at: '2017-05-29'
   name: 甲府
   prefecture_id: 19
@@ -2539,12 +2539,12 @@
 - id: 62
   order: '242039'
   is_active: true
-  note: Re-activated @ 2024年5月6日 (月曜)
+  note: '2025-03-16 https://www.instagram.com/p/DG990t1PjEk/?img_index=1'
   created_at: '2016-12-22'
   name: 伊勢
   prefecture_id: 24
   logo: "/img/dojos/ise.webp"
-  url: https://coderdojo-ise.jimdofree.com/
+  url: https://www.instagram.com/coderdojo.ise/
   description: 伊勢市で毎月開催
   tags:
   - Scratch
@@ -3382,7 +3382,7 @@
 - id: 245
   order: '325015'
   is_active: true
-  note: Re-activated @ 2024年6月17日 (月曜)
+  note: '2024-06-23 https://coderdojo-tsuwano.connpass.com/event/322734/'
   created_at: '2020-03-10'
   name: 津和野
   prefecture_id: 32
