@@ -83,7 +83,7 @@
 		</span>
               <% else %>
 		<!-- 別サービスでイベント管理している Dojo で、"Active" マークが無い場合はハイライトする -->
-		<!-- 別サービスでイベント管理している Dojo の場合、note にある日付とリンクで分岐処理する -->
+		<!-- 別サービスでイベント管理している Dojo なら、note にある日付とリンクがあれば表示する -->
                 <span class=<%= 'expired' if dojo[:event_at] <= Time.current.prev_year && !dojo[:note].include?('Active') %>>
 		  <%= link_to dojo[:event_at], dojo[:event_url] %>
 		</span>
@@ -92,7 +92,7 @@
           </td>
           <td class="url-cell">
             <small>
-              <span title="<%= dojo[:note] %>"><%= raw Rinku.auto_link(dojo[:note]) %></span>
+              <span title="<%= dojo[:note] %>"><%= raw Addressable::URI.unescape(Rinku.auto_link(dojo[:note])) %></span>
             </small>
           </td>
         </tr>
