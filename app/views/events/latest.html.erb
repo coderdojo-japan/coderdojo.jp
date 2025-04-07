@@ -77,12 +77,13 @@
           <td>
             <small>
               <% if dojo[:has_event_histories] %>
-		<!-- 過去１年間イベント開催していない Dojo で、"Active" の確認が無い場合はハイライトする -->
+		<!-- 過去１年間イベント開催していない Dojo で、"Active" マークが無い場合はハイライトする -->
 		<span class=<%= 'expired' if dojo[:event_at] <= Time.current.prev_year && !dojo[:note].include?('Active') %>>
 		  <%= link_to dojo[:event_at], dojo[:event_url] %>
 		</span>
               <% else %>
-		<!-- 別サービスでイベント管理している Dojo で、"Active" の確認が無い場合はハイライトする -->
+		<!-- 別サービスでイベント管理している Dojo で、"Active" マークが無い場合はハイライトする -->
+		<!-- 別サービスでイベント管理している Dojo の場合、note にある日付とリンクで分岐処理する -->
                 <span class=<%= 'expired' if dojo[:event_at] <= Time.current.prev_year && !dojo[:note].include?('Active') %>>
 		  <%= link_to dojo[:event_at], dojo[:event_url] %>
 		</span>

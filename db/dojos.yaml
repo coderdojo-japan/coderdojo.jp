@@ -43,7 +43,7 @@
   - 電子工作
 - id: 100
   order: '012319'
-  note: 'Last session was 2024-07-21 https://www.facebook.com/CoderDojoEniwa/posts/pfbid0SfrehQRyN9LS78ewt6y2coxHiKhvy1ddg77zCBhZoKyqBD4MYrK8XH9FhKDBJXF2l'
+  note: '2024-07-21 https://www.facebook.com/CoderDojoEniwa/posts/pfbid0SfrehQRyN9LS78ewt6y2coxHiKhvy1ddg77zCBhZoKyqBD4MYrK8XH9FhKDBJXF2l'
   created_at: '2017-09-20'
   name: 恵庭
   prefecture_id: 1
@@ -1961,6 +1961,7 @@
   - LEGO
 - id: 257
   order: '162086'
+  note: '2024-12-07 https://coderdojo-tonami.org/event/weekly-188th/'
   created_at: '2020-11-13'
   name: となみ
   prefecture_id: 16
@@ -3044,7 +3045,7 @@
   - 電子工作
 - id: 48
   order: '281107'
-  note: 'Active for years.'
+  note: 'Active - 2025-03-08 https://www.facebook.com/CoderDojoKobe/posts/pfbid02oraVjAR3BVbVnK7eGhTMrjBSEWEnTassxb9fkx3kTWajccUNDXx8s359HYs6tX6Vl'
   created_at: '2016-09-28'
   name: 神戸
   prefecture_id: 28
@@ -3261,11 +3262,12 @@
   - Viscuit
 - id: 47
   order: '302015'
+  note: 'Active for years - 2025-03-16 https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604'
   created_at: '2016-11-01'
   name: 和歌山
   prefecture_id: 30
   logo: "/img/dojos/wakayama.webp"
-  url: https://www.facebook.com/coderdojo.wakayama/
+  url: https://coderdojo-wakayama.hatenablog.com/
   description: 和歌山市で毎月開催
   tags:
   - Scratch
@@ -3281,7 +3283,7 @@
   - Scratch
 - id: 99
   order: '302066'
-  note: 'Active for years.'
+  note: 'Active for years. https://coderdojo-nanki-tanabe.jimdofree.com/%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A-%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95/'
   created_at: '2017-09-06'
   name: 南紀田辺
   prefecture_id: 30
@@ -3920,6 +3922,7 @@
   - Python
 - id: 55
   order: '454419'
+  note: 'Active for years - 2025-04-13 https://x.com/YoseiIto/status/1889435600337641670'
   created_at: '2016-09-15'
   name: 宮崎
   prefecture_id: 45
@@ -3959,6 +3962,7 @@
   - micro:bit
 - id: 106
   order: '472051'
+  note: '2020-08-16 から浦添と合同でイベント開催? https://www.facebook.com/coderdojo.ginowan/posts/pfbid0wKhwQAbNXcoEfEwZc9e1CxqKB7dfNZ8xmhZFf6SpxRC99vYWdrVGwBr7Y3W1GkxVl'
   created_at: '2017-09-20'
   name: 宜野湾
   prefecture_id: 47
@@ -4104,7 +4108,7 @@
   - Scratch
 - id: 318
   order: '473502'
-  note: 'Active - Reports are here https://note.com/code_for_haebaru/m/mb9902e30b85a'
+  note: '2025-03-24 https://note.com/code_for_haebaru/n/n2823cfb85bbc?magazine_key=mb9902e30b85a'
   created_at: '2024-05-19'
   name: 南風原
   prefecture_id: 47

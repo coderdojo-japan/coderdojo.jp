@@ -39,6 +39,8 @@ class EventsController < ApplicationController
         event_at:  latest_event.nil? ?
           last_session_date.strftime("%Y-%m-%d") :
           latest_event.evented_at.strftime("%Y-%m-%d"),
+
+        # 過去のイベント開催データが無ければ、note 内にあるリンクまたは個別統計ページを表示
         event_url: latest_event.nil? ?
           last_session_link.to_s :
           latest_event.event_url
