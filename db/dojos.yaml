@@ -43,10 +43,11 @@
   - 電子工作
 - id: 100
   order: '012319'
+  note: 'Last session was 2024-07-21 https://www.facebook.com/CoderDojoEniwa/posts/pfbid0SfrehQRyN9LS78ewt6y2coxHiKhvy1ddg77zCBhZoKyqBD4MYrK8XH9FhKDBJXF2l'
   created_at: '2017-09-20'
   name: 恵庭
   prefecture_id: 1
-  url: https://coderdojo-eniwa.fathercomputer.com/
+  url: https://www.facebook.com/CoderDojoEniwa/
   logo: "/img/dojos/eniwa.webp"
   description: 恵庭市で月2回開催
   tags:
