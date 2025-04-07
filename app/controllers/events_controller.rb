@@ -15,35 +15,29 @@ class EventsController < ApplicationController
   end
 
   def latest
-    @url = request.url
+    # 現在はノートで細かな確認ができるため不要? (念のため残しています)
+    # @active_dojos_verified = [
+    #  '和歌山', '市川真間', '泉', '石垣', '南紀田辺', '三好', '市川', 'ひばりヶ丘', '伊勢',
+    #  '徳島', '柏', '富山', 'ももち', '木曽', '熊本'
+    # ]
     @latest_event_by_dojos = []
-    @active_dojos_verified = [
-      '和歌山', '市川真間', '泉', '石垣', '南紀田辺', '三好', '市川', 'ひばりヶ丘', '伊勢',
-      '徳島', '柏', '富山', 'ももち', '木曽', '熊本'
-    ]
     Dojo.active.each do |dojo|
       latest_event = dojo.event_histories.newest.first
-      if @active_dojos_verified.include?(dojo.name) or latest_event.nil?
-        @latest_event_by_dojos << {
-          id:   dojo.id,
-          name: dojo.name,
-          note: dojo.note,
-          url:  dojo.url,
-          event_at:  dojo.created_at.strftime("%Y-%m-%d"),
-          event_url: nil,
-        }
-      else
-        @latest_event_by_dojos << {
-          id:   dojo.id,
-          name: dojo.name,
-          note: dojo.note,
-          url:  dojo.url,
-          event_at:  latest_event.evented_at.strftime("%Y-%m-%d"),
-          event_url: latest_event.event_url.include?('dummy.url') ?
-            "https://www.facebook.com/#{latest_event.service_group_id}/events" :
-            latest_event.event_url
-        }
-      end
+
+      @latest_event_by_dojos << {
+        id:   dojo.id,
+        name: dojo.name,
+        note: dojo.note,
+        url:  dojo.url,
+
+        # 過去のイベント開催データが無ければ、大体として掲載日を入力
+        event_at:  latest_event.nil? ?
+          dojo.created_at.strftime("%Y-%m-%d") :
+          latest_event.evented_at.strftime("%Y-%m-%d"),
+        event_url: latest_event.nil? ?
+          nil :
+          latest_event.event_url
+      }
     end
 
     # Sort by older events first && older Dojo ID first if same event date.
