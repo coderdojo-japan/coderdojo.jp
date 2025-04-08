@@ -59,7 +59,7 @@ CoderDojoの普及に伴い、個人だけでなく法人とも連携しやす�
   <center>
     図: パートナー法人の年次推移
     <br class='ignore-pc'>
-    <small>(<a href='https://news.coderdojo.jp/category/press/'>&raquo; 最近の提携事例を見る</a>)</small>
+    <small>(<a href='https://news.coderdojo.jp/'>&raquo; 最近の提携事例を見る</a>)</small>
   </center>
 </div>
 
@@ -207,7 +207,7 @@ info@coderdojo.jp
 - - [日本青年会議所から CoderDojo へ、20台のロボットプログラミングキット寄贈](https://news.coderdojo.jp/2021/07/29/robot-programming-kits-from-jci/)
 - - [子ども向けプログラミング道場を推進する一般社団法人 CoderDojo Japan をさくらインターネットが支援、「さくらのクラウド」を無料提供](https://www.sakura.ad.jp/information/pressreleases/2017/07/20/90191/)
 
-他の提携事例については [news.coderdojo.jp](https://news.coderdojo.jp/category/press/) からご確認いただけます。ご参考になれば幸いです。
+他の提携事例については [news.coderdojo.jp](https://news.coderdojo.jp/) からご確認いただけます。ご参考になれば幸いです。
 
 
 ### Q. お問い合わせ後、どんな流れで話が進みますか？ {#flow}
@@ -330,8 +330,8 @@ PR例: 014 - Highlights of Shenzhen @ Makeblock 本社 (深セン)
 
 <br>
 
-他の提携事例については、下記のプレス記事まとめページをご参照ください。
-[https://news.coderdojo.jp/category/press/](https://news.coderdojo.jp/category/press/)
+他の提携事例については、下記ページからご確認いただけます。
+[https://news.coderdojo.jp/](https://news.coderdojo.jp/)
 
 
 ### Q. パートナーシップの期間はどのように決まりますか？ {#term-of-partnership}
