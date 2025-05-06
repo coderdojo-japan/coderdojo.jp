@@ -114,7 +114,7 @@ class StatsController < ApplicationController
           active_dojos: @sum_of_dojos,  # Required by other repos
           total_events: @sum_of_events,
           total_ninjas: @sum_of_participants,
-          active_dojos_by_region: @data_by_prefecture,
+          active_dojos_by_prefecture: @data_by_prefecture,
         }
       }
     end
