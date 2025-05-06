@@ -2,18 +2,6 @@ class StatsController < ApplicationController
 
   # GET /stats[.json]
   def show
-
-    # GET /stats.json
-    # NOTE: Draft API that returns required-to-share data upon requests from other repos.
-    if request.url.end_with? '.json'
-      @stats_data = {
-        active_dojos:   Dojo.active_dojos_count,
-      }
-
-      render json: @stats_data
-      return
-    end
-
     # 2012年1月1日〜2024年12月31日までの集計結果
     @period_start = 2012
     @period_end   = 2024
@@ -116,6 +104,20 @@ class StatsController < ApplicationController
       @data_by_prefecture[p.name] = Dojo.active.where(prefecture_id: p.id).sum(:counter)
     end
     @data_by_prefecture_count = @data_by_prefecture.select{|k,v| v>0}.count
+
+    respond_to do |format|
+      # No corresponding View for now.
+      # Only for API: GET /dojos.json
+      format.html # => app/views/stats/show.html.erb
+      format.json { render json: {
+          # NOTE: Add JSON data upon requests
+          active_dojos: @sum_of_dojos,  # Required by other repos
+          total_events: @sum_of_events,
+          total_ninjas: @sum_of_participants,
+          active_dojos_by_region: @data_by_prefecture,
+        }
+      }
+    end
   end
 end
 
