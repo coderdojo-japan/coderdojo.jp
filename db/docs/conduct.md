@@ -1,6 +1,6 @@
 # 💖 行動規範ガイドライン
 <br>
-本規範は、別段の定めがある場合を除き、一般社団法人 CoderDojo Japan (以下、当社) が [GitHub Organization](https://github.com/coderdojo-japan) から公開しているあらゆるリポジトリに適用されます。本規範の内容は更新されることがあり、更新された際は、本ページより公表いたします。本規範の変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/code-of-conduct.md) よりご確認できます。
+本規範は、別段の定めがある場合を除き、一般社団法人 CoderDojo Japan (以下、当社) が [GitHub Organization](https://github.com/coderdojo-japan) から公開しているあらゆるリポジトリに適用されます。本規範の内容は更新されることがあり、更新された際は、本ページより公表いたします。本規範の変更履歴は [GitHub](https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/conduct.md) よりご確認できます。
 
 -----
 
@@ -30,5 +30,5 @@
 <div align="right">
 一般社団法人 CoderDojo Japan<br>
 連絡先: info@coderdojo.jp<br>
-<a href='https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/code-of-conduct.md'>【変更履歴を見る】</a>
+<a href='https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/conduct.md'>【変更履歴を見る】</a>
 </div>
