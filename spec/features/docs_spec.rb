@@ -18,8 +18,8 @@ RSpec.feature "Docs", type: :feature do
     scenario "Load doc file with absolute path" do
       visit "#{docs_path}/"
       expect(page).to have_http_status(:success)
-      expect(page).to have_link 'コントリビューター行動規範', href: "/docs/code-of-conduct"
-      click_link 'コントリビューター行動規範'
+      expect(page).to have_link '行動規範ガイドライン', href: "/docs/conduct"
+      click_link '行動規範ガイドライン'
       expect(page).to have_http_status(:success)
     end
   end
