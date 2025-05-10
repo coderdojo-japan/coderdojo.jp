@@ -5,20 +5,32 @@
 
 CoderDojo に興味を持って頂きありがとうございます。本資料では CoderDojo の活動内容と連携事例をご紹介しています。様々な組織との継続的な連携に際し、ご参考にして頂ければ幸いです。
 
+<br>
+
+<img alt="CoderDojo Japan のカバー画像" class='lazyload' loading='lazy' src='/coderdojo-japan_cover.min.webp' data-src="/coderdojo-japan_cover.webp">
+
 ## ☯️ CoderDojo とは?
 
-CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<a href='https://map.coderdojo.jp/world' style='white-space: nowrap;'>国際的な非営利活動</a>で、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。全国各地で定期的に開催され、<a href='/stats' style='white-space: nowrap;'>延べ10,000人以上</a>の子ども達が楽しみながら様々な作品を創っています。
+CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<a href='https://map.coderdojo.jp/world' style='white-space: nowrap;'>国際的な非営利活動</a>で、日本には{{ NUM_OF_JAPAN_DOJOS }}以上の道場があります。全国各地で[毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上のイベント](/stats)が開催され、[年間で延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達](/stats)が楽しみながら様々な作品を創っています。
 
 <br>
 
 <a href='https://map.coderdojo.jp/'><img alt="写真: 地図から Dojo を探す「DojoMap」" class='lazyload' loading='lazy' src='/spinner.svg' data-src='/img/dojomap_rect.webp'></a>
-<div style="text-align:center">参考: 日本各地にある CoderDojo の様子 (詳細: <a href='https://map.coderdojo.jp/'>DojoMap</a>)</div>
+<div style="text-align:center">参考: 日本各地にある CoderDojo の様子 (引用元: <a href='https://map.coderdojo.jp/'>DojoMap</a>)</div>
 
 <br>
 
-CoderDojo の特徴は、オープンソースと呼ばれる文化に根付いた非営利のコミュニティである点です。例えば PHP や Perl, Python, Ruby といったプログラミングのコミュニティが横断的に関わっており、中には業界の第一線で活躍される方々にもご協力していただいております。現在はさらに、エンジニアやデザイナーだけでなく、各地域の保護者や学生などにも広がりを見せています。
+CoderDojo の特徴の１つは、幅広い分野の方々によって支えられている非営利のコミュニティである点です。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。
 
-また、CoderDojo では統一したカリキュラムは採用していません。代わりに必要な時にメンターが相談に乗ったり、子ども同士で学び合うことを推奨しています。これは受動的に何かを教わることよりも、作りながら主体的に学ぶことに価値があると考えているからです。このため、子ども達が自発的な興味・関心を追究する「広場」のような場所として、CoderDojo が存在しています。
+<br>
+
+<img alt="写真: CoderDojo を支える方々の懇親会" class='lazyload' loading='lazy' src='/kata/coderdojo-zero.min.webp' data-src="/kata/coderdojo-zero.webp">
+<div style="text-align:center">写真: CoderDojo を支える方々の懇親会の様子</div>
+
+
+<br>
+
+また、CoderDojo では統一したカリキュラムは採用していません。代わりに必要な時にメンターが相談に乗ったり、子ども同士で学び合うことを推奨しています。作りながら主体的に学ぶ参加者も多く、子ども達にとって自発的な興味・関心を追究する「場」の１つになっています。
 
 <br>
 
@@ -45,6 +57,8 @@ Scratchを使ったカリキュラムを作成するサポートを行いまし�
 CoderDojo と教育委員会が共催して、プログラミングイベントを開催しました。CoderDojo Kashiwa が主催した ScratchDay 2017 in Kashiwa では、教育委員会の先生方にご登壇いただき、柏市の目指すプログラミング教育についてのクロストークを行いました。また、8月に教育委員会が主催した「かしわプログラミングフェスタ」では、CoderDojo Kashiwa がワークショップを行いました。
 
 CoderDojo Kashiwa と柏市教育委員会の連携について更に詳しく知りたい場合は、次のサイトを御覧ください。 <a href="https://coderdojo-kashiwa.com/project/kashiwaprogram/">https://coderdojo-kashiwa.com/project/kashiwaprogram/ </a>
+
+<br>
 
 ## 🏫 教育行政と CoderDojo
 
