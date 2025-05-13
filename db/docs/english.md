@@ -1,6 +1,6 @@
-# ☯️  CoderDojo Japan Association
+# [☯️](#readme)  CoderDojo Japan Association {#readme}
 
-This page provides information about the [CoderDojo community](#about), [its growth in Japan](#japan), and the [CoderDojo Japan Association](#association). We hope this page will be helpful for English speakers.
+This page briefly explains about [the CoderDojo community](#about), [its growth in Japan](#japan), and [the CoderDojo Japan Association](#association). We hope this page will be helpful, especially for those who are not familiar with the CoderDojo community yet. 😉
 
 <div style="padding-top: 30px;">
   <a href='https://map.coderdojo.jp/'>
@@ -8,13 +8,14 @@ This page provides information about the [CoderDojo community](#about), [its gro
      src='/spinner.svg' data-src='/img/dojomap_rect.webp' >
   </a>
 </div>
+<div style="text-align:center">Figure: Dojos in Japan (Source: <a href='https://map.coderdojo.jp/'>DojoMap</a>)</div>
 
 
 ## [<i class="fa-solid fa-yin-yang"></i>️](#about) What is CoderDojo? {#about}
 
-[CoderDojo](https://coderdojo.com/en/about) is a global community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo session took place in [Cork, Ireland](https://en.wikipedia.org/wiki/Cork_(city)), in 2011, it has gradually expanded worldwide. Now, CoderDojo is present in over 100 countries, including Japan. 🗾
+[CoderDojo](https://codeclub.org/en/coderdojo-community) is a global community of free, volunteer-led, community-based computer clubs for kids and teens. Since the first dojo session took place in [Cork, Ireland](#meetups) in 2011, it has gradually [expanded worldwide](https://map.coderdojo.jp/world), including Japan. 🗾
 
-### [<i class="fa-brands fa-youtube"></i>️](#about-pv) English video with Japanese subtitles {#about-pv}
+### [<i class="fa-brands fa-youtube"></i>️](#video) English 1-minute video with Japanese subtitles {#video}
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -24,7 +25,7 @@ This page provides information about the [CoderDojo community](#about), [its gro
 <br>
 
 
-## [🗾](#japan) CoderDojo community in Japan {#japan}
+## [🗾](#japan) The CoderDojo community in Japan {#japan}
 
 In the early days of CoderDojo, when it was present in fewer than 10 countries with around 100 dojos, the first Japanese dojo session took place at [OpenSource Cafe](https://medium.com/opensource-cafe) in 2012.
 
@@ -123,32 +124,44 @@ We occasionally host guests from overseas at our co-working and shared-office sp
 
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
-   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/KqtRuCdVFws?start=803&rel=0&cc_load_policy=1&cc_lang_pref=en"
+   data-src="https://www.youtube.com/embed/8NoL2uRk0PY?list=PL94GDfaSQTmK6xzLNsBMx8gkKrT2HiZ9D&start=60&cc_load_policy=1&cc_lang_pref=en" title="The 1st CoderDojo and the Global Vision - @liaonet"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
    allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/KqtRuCdVFws?start=803&rel=0&cc_load_policy=1&cc_lang_pref=en"
    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0&cc_load_policy=1&cc_lang_pref=en"
    allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/2Ub1Ny87hl0?list=PL94GDfaSQTmL1ne3U8tRoz9IavydP7onH&cc_load_policy=1&cc_lang_pref=en" title="Penang Science Cluster Meets CoderDojo Japan by Aimy Lee (Talk) - Code Club &amp; CoderDojo meetup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/PrS2g795yZY?list=PL94GDfaSQTmKosrkjpooz71nwWJbguLWJ&rel=0&cc_load_policy=1&cc_lang_pref=en"
+   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/8NoL2uRk0PY?list=PL94GDfaSQTmK6xzLNsBMx8gkKrT2HiZ9D&start=60&cc_load_policy=1&cc_lang_pref=en" title="The 1st CoderDojo and the Global Vision - @liaonet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/2Ub1Ny87hl0?list=PL94GDfaSQTmL1ne3U8tRoz9IavydP7onH&cc_load_policy=1&cc_lang_pref=en" title="Penang Science Cluster Meets CoderDojo Japan by Aimy Lee (Talk) - Code Club &amp; CoderDojo meetup"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe  src="https://www.youtube.com/embed/2YxzgzGonD0?list=PL94GDfaSQTmJZFLMQ3YH9CE2liETLi0Uq&cc_load_policy=1&cc_lang_pref=en" title="Meetup with Zach, founder of Hack Club" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/2YxzgzGonD0?list=PL94GDfaSQTmJZFLMQ3YH9CE2liETLi0Uq&cc_load_policy=1&cc_lang_pref=en" title="Meetup with Zach, founder of Hack Club"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   allowfullscreen></iframe>
 </div>
 
 <div class="home-point-video">
-  <iframe src="https://www.youtube.com/embed/Kvc6KhOzHmY?list=PL94GDfaSQTmLpQpm8R7nHpwVKFNLdnZFU&cc_load_policy=1&cc_lang_pref=en" title="Ross &amp; James (1/5): CoderDojo A Global Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/Kvc6KhOzHmY?list=PL94GDfaSQTmLpQpm8R7nHpwVKFNLdnZFU&cc_load_policy=1&cc_lang_pref=en" title="Ross &amp; James (1/5): CoderDojo A Global Movement"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   allowfullscreen></iframe>
 </div>
 
 
