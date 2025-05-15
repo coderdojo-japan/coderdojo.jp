@@ -897,15 +897,15 @@
 	  Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span>
 	</h3>
 
+	<%= lazy_image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート', min: true) %>
+	<br>
 	<blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 2em 0em'>
 	  <p>
 	    📝
-	    <b>2024年9月より、CoderDojo の登録・管理サイト『Zen』が、『Code Club』に変わりました。</b>以下の各資料にある『Zen』の部分は『Code Club』に読み替えて進めていただけると幸いです。<a href='https://x.com/yasulab/status/1839166770118062509'>&raquo; 詳細を見る</a>
+	    <b>2024年9月より、CoderDojo の登録・管理サイト『Zen』が、『Code Club』に変わりました。</b>以下の各資料にある『Zen』の部分は『Code Club』に読み替えて進めていただけると幸いです。
 	  </p>
 	</blockquote>
 
-	<%= lazy_image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート', min: true) %>
-	<br><br>
 	<span><small>上記の流れに沿って立ち上げた事例の紹介記事もあります。</small></span>
 	<ul style="margin-bottom: 50px;">
 	  <li><small><a href='https://dojocon2022.coderdojo.jp/session/coderdojo-tamachi/'>誰でもできる！CoderDojoを立ち上げてみよう！</a>(<a href='https://bit.ly/lets-start-coderdojo'>スライド資料</a>) @ <a href='https://twitter.com/dojoTamachi'>CoderDojoたまち</a></small></li>
@@ -938,38 +938,28 @@
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝
-		<a href='https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'>CoderDojo 財団と Raspberry Pi 財団の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事（英語）</a>をご参照ください。
+		<a href='https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'>CoderDojo 財団と Raspberry Pi 財団の合併</a>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事 (英語)</a> からご確認いただけます。
 		<%= link_to lazy_image_tag('/kata/coderdojo-and-raspi.webp', alt: 'Photo of "CoderDojo and Raspberry Pi Join Forces"', style: 'margin: 30px auto 20px'), 'https://www.google.com/search?q=CoderDojo+and+Raspberry+Pi+Join+Forces' %>
 	      </p>
 	    </blockquote>
 	  </li>
 
 	  <li>
-	    <p>アカウント作成後、クラブ登録・管理サイト「<%= link_to 'Code Club', 'https://codeclub.org/en/coderdojo-community' %>」に行きます。</p>
+	    <p>アカウント作成後、クラブ登録・管理サイト「<a href='https://codeclub.org/ja/p/cd-japan'>Code Club</a>」に行き、先ほど作成した Raspberry Pi アカウントでログインします。</p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝
-		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> (Code Club コミュニティ) で新規クラブの登録・管理を行っています。
-		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/our-partners' %>
+		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> <span style='font-size: smaller'>(Code Club コミュニティ)</span> で新規クラブ登録・管理を行っています。
+
+		<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>
+		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 10px auto 20px'), 'https://codeclub.org/en/our-partners' %>
 	      </p>
 	    </blockquote>
 	    <br>
 	  </li>
 
 	  <li>
-	    <p>その後、ページ内にある <code>Run a club</code>
-	      →
-	      <code>Start a club</code> の順にリンクをクリックし、先ほど作成した Raspberry Pi アカウントでログインします。</p>
-	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
-	      <p>
-		📝
-		現在は英語での情報のみとなりますが、翻訳作業などが完了次第、日本語を含む各言語にも対応されていく予定です。
-		<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>
-	      </p>
-	    </blockquote>
-	  </li>
-	  <li>
-	    <p>ログイン後、まずは立ち上げる CoderDojo の開催地に関する情報を入力していきます。</p>
+	    <p>無事ログインできたら、画面の指示に従って、立ち上げる CoderDojo に関する情報を入力していきます。</p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝 より安全に運営できるよう、開催する国（Country）や開催する場所（Venue）などの情報を入力すると、<code>Safeguarding</code> と呼ばれる協力者の入力欄が表示されます。詳細は以下のページ（英語）からご確認いただけます。<br>
@@ -991,8 +981,7 @@
 		    <small>(ボランティアのための子ども安全保護チェックリスト)</small>
 		  </li>
 		</ul>
-		
-		<%= lazy_image_tag('/kata/startup-application.webp', alt: '新規クラブ登録の初期画面', style: 'margin: 30px auto 20px') %>
+		<%= lazy_image_tag('/kata/startup-application.webp', alt: '新規クラブ登録の初期画面', style: 'margin: 10px auto 20px') %>
 	      </p>
 	    </blockquote>
 	  </li>
