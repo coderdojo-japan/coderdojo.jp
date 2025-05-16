@@ -6,7 +6,7 @@ CoderDojo として正式に承認されると `道場名@coderdojo.com` とい�
 
 <br>
 
-## メールアドレス取得の手順 {#instructions}
+## [📥](#instructions) メールアドレス取得の手順 {#instructions}
 
 <br>
 
@@ -43,6 +43,21 @@ CoderDojo として正式に承認されると `道場名@coderdojo.com` とい�
 
 <br>
 
-皆さんの CoderDojo 運営のご参考になれば嬉しいです! (＞人＜ )✨
+### [📲️](#tips) ２段階認証のススメ {#tips}
+
+なお[上記の手順](#instructions)で取得したメールアドレスでは、セキュリティ向上のため、**[２段階認証](https://www.google.com/search?q=２段階認証)の設定が強く推奨**されています。
+
+例えば２段階認証をせずにパスワード再設定などを試みると、不正アクセス防止などの理由によりログインできなくなることもありますので、**メールアドレスを取得したら早めに[２段階認証](https://www.google.com/search?q=２段階認証)の設定**していただくようお願いいたします。 ([&raquo; 詳細を見る](https://www.facebook.com/share/p/19WsqfTdui/))
+
+<br>
+
+以上、皆さんの CoderDojo 運営のご参考になれば嬉しいです! (＞人＜ )✨
+
+
+<br>
+
+
+
+
 
 
