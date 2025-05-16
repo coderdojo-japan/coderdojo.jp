@@ -19,11 +19,11 @@ RSpec.describe Podcast, :type => :model do
 
     context 'offset 省略' do
       before :each do
-        allow(File).to receive(:exists?) { false }
+        allow(File).to receive(:exist?) { false }
       end
 
       it 'ファイルあり ⇒ true' do
-        allow(File).to receive(:exists?).with("public/podcasts/#{@podcast.id}.md") { true }
+        allow(File).to receive(:exist?).with("public/podcasts/#{@podcast.id}.md") { true }
 
         expect(@podcast.exists?).to eq(true)
       end
@@ -35,11 +35,11 @@ RSpec.describe Podcast, :type => :model do
 
     context 'offset 指定' do
       before :each do
-        allow(File).to receive(:exists?) { false }
+        allow(File).to receive(:exist?) { false }
       end
 
       it 'ファイルあり ⇒ true' do
-        allow(File).to receive(:exists?).with("public/podcasts/#{@podcast.id + 1}.md") { true }
+        allow(File).to receive(:exist?).with("public/podcasts/#{@podcast.id + 1}.md") { true }
 
         expect(@podcast.exists?(offset: 1)).to eq(true)
       end
