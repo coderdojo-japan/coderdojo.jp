@@ -13,7 +13,6 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem 'haml-rails'
 gem 'rails-html-sanitizer', '~> 1.4.4'
 gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
