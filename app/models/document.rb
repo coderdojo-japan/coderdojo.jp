@@ -1,7 +1,7 @@
 class Document
   attr_reader :id, :filename
-  DIR_PATH = 'db/docs'
-  URL_PATH = 'docs'
+  DIR_PATH = 'public/docs'
+  URL_PATH = '/docs'
 
   class << self
     def all
@@ -33,7 +33,7 @@ class Document
       return "2020-02-02T12:34:56+09:00" unless Rails.env.production?
 
       # Call GitHub API in Production
-      uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=db/docs/&per_page=1")
+      uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=public/docs/&per_page=1")
       json = Net::HTTP.get(uri)
       data = JSON.parse(json)
 
@@ -52,7 +52,7 @@ class Document
   end
 
   def url
-    "/#{URL_PATH}/#{self.filename}"
+    "#{URL_PATH}/#{self.filename}"
   end
 
   def exists?
