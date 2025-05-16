@@ -16,24 +16,24 @@
   </h2>
 
   <h2>
-    <a href="http://news.coderdojo.jp/" target="_blank" rel="external noopener">
+    <%= link_to news_url do %>
       <i class="fa fa-newspaper-o fa-3x fa-fw" aria-hidden="true" title="News"></i>
-    </a>
-    <a href="https://www.facebook.com/coderdojo.jp/">
+    <% end %>
+    <%= link_to "https://www.facebook.com/coderdojo.jp/" do %>
       <i class="fa fa-facebook fa-3x fa-fw" aria-hidden="true" title="Facebook"></i>
-    </a>
-    <a href="https://twitter.com/CoderDojoJapan">
+    <% end %>
+    <%= link_to "https://twitter.com/CoderDojoJapan" do %>
       <i class="fa fa-twitter fa-3x fa-fw" aria-hidden="true" title="Twitter"></i>
-    </a>
-    <a href="https://www.youtube.com/CoderDojoJapan">
+    <% end %>
+    <%= link_to "https://www.youtube.com/CoderDojoJapan" do %>
       <i class="fa fa-youtube fa-3x fa-fw" aria-hidden="true" title="YouTube"></i>
-    </a>
-    <a href="/podcasts">
+    <% end %>
+    <%= link_to podcasts_path do %>
       <i class="fa fa-podcast fa-3x fa-fw" aria-hidden="true" title="Podcast"></i>
-    </a>
-    <a href="/english">
+    <% end %>
+    <%= link_to english_path do %>
       <i class="fa fa-globe fa-3x fa-fw" aria-hidden="true" title="English"></i>
-    </a>
+    <% end %>
   </h2>
 
   <p style="margin-bottom: 30px;">
