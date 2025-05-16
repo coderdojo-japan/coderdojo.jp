@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.1.6'
+ruby '3.2.8'
 
 gem 'bootsnap'
 gem 'pg'
