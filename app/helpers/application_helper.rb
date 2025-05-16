@@ -77,16 +77,11 @@ module ApplicationHelper
     end
   end
 
-  def welcome_path(options={anchor: 'welcome'})
-    root_path(options)
-  end
+  def welcome_path(options={anchor: 'welcome'}); root_path(options); end
+  def news_path   (options={anchor: 'news'});    root_path(options); end
 
-  def news_path(options={anchor: 'news'})
-    root_path(options)
-  end
-
-  def news_url(path='/'); 'https://news.coderdojo.jp' + path; end
-  def dojomap_url(path='/'); 'https://map.coderdojo.jp' + path; end
+  def news_url   (path='/'); 'https://news.coderdojo.jp' + path; end
+  def dojomap_url(path='/'); 'https://map.coderdojo.jp'  + path; end
   def zen_url(path='/find'); 'https://zen.coderdojo.com' + path; end
 
   def decadojo_url;   'https://decadojo.coderdojo.jp'; end
