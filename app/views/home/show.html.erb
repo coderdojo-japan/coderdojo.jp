@@ -203,7 +203,19 @@
     <br class="ignore-pc">
     <small>(毎月配信)</small>
   </p>
-  <%= render partial: 'shared/newsletter' %>
+  
+  <div id="mc_embed_signup">
+    <form id="mc-embedded-subscribe-form" class="validate" action="https://coderdojo.us17.list-manage.com/subscribe/post?u=39a5824e42ab56ec44bb4e84e&amp;id=097dfa6a14" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+      <div id="mc_embed_signup_scroll">
+	<input id="mce-EMAIL" type="email" name="EMAIL" class="email" placeholder="your@example.com">
+	<div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input tabindex="-1" name="b_39a5824e42ab56ec44bb4e84e_097dfa6a14" type="text" value="">
+	</div>
+	<input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="購読する">
+      </div>
+    </form>
+  </div> 
+  
   <div class="btn-cover" style="margin-top: 40px;">
     <a class="btn-blue" href="<%= news_url %>">
       <i class="far fa-newspaper"></i>
