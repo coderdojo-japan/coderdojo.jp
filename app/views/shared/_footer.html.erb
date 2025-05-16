@@ -1,0 +1,55 @@
+<footer id="footer" class="footer-bottom text-center">
+  <h2 style="line-height: 30px;">
+    <a class="footer-link" href="/" title="トップページに戻ります">Top</a>
+    | <a class="footer-link" href="/kata"  title="道場情報まとめ「Kata」を見る">Kata</a>
+    | <a class="footer-link" href="/#news" title="最近のニュース「DojoLetter」を見る">News</a>
+    | <a class="footer-link" href="/docs"  title="公式資料まとめ「Docs」を見る">資料</a>
+    | <a class="footer-link" href="/charter" title="CoderDojo 憲章を見る">憲章</a>
+    | <a class="footer-link" href="/stats"   title="CoderDojo の統計データを見る">統計</a>
+    | <a class="footer-link" href="/sotechsha2" title="CoderDojo Japan 公式ブックを見る">書籍</a>
+    | <a class="footer-link" href="<%= dojomap_url %>" title="地図から探せる「DojoMap」を見る">地図</a>
+    | <a class="footer-link" href="/privacy" title="プライバシーポリシーを見る">Privacy</a>
+    | <a class="footer-link" href="/podcasts" title="ポッドキャスト番組「DojoCast」を見る">Podcast</a>
+    | <a class="footer-link" href="<%= decadojo_url %>" title="CoderDojo の地域カンファレンス「DecaDojo」を見る">DecaDojo</a>
+    | <a class="footer-link" href="<%= dojocon_url %>"  title="CoderDojo の全国カンファレンス「DojoCon Japan」を見る">DojoCon</a>
+    | <a class="footer-link" href="/english" hreflang="en" title="Read CoderDojo Japan's website in English">English</a>
+  </h2>
+
+  <h2>
+    <%= link_to news_url do %>
+      <i class="fa fa-newspaper-o fa-3x fa-fw" aria-hidden="true" title="News"></i>
+    <% end %>
+    <%= link_to facebook_page_url do %>
+      <i class="fa fa-facebook fa-3x fa-fw" aria-hidden="true" title="Facebook"></i>
+    <% end %>
+    <%= link_to twitter_url do %>
+      <i class="fa fa-twitter fa-3x fa-fw" aria-hidden="true" title="Twitter"></i>
+    <% end %>
+    <%= link_to youtube_url do %>
+      <i class="fa fa-youtube fa-3x fa-fw" aria-hidden="true" title="YouTube"></i>
+    <% end %>
+    <%= link_to podcasts_path do %>
+      <i class="fa fa-podcast fa-3x fa-fw" aria-hidden="true" title="Podcast"></i>
+    <% end %>
+    <%= link_to english_path do %>
+      <i class="fa fa-globe fa-3x fa-fw" aria-hidden="true" title="English"></i>
+    <% end %>
+  </h2>
+
+  <p style="margin-bottom: 30px;">
+    本サイトのソースコードは<br class="ignore-pc">
+    <a class="footer-link" href="https://github.com/coderdojo-japan/coderdojo.jp">GitHub</a>
+    上で公開されています。
+  </p>
+  <p style="font-size: 90%; color: #DDDDDD;">
+    Copyright &copy;
+    <a href="/about-coderdojo-japan" style="color: #DDDDDD; text-decoration: none;">
+      一般社団法人 CoderDojo Japan
+    </a>
+    <br>
+    新宿区高田馬場1-28-10 三慶ビル4F
+    <a href="https://case-shinjuku.com/" style="color: #DDDDDD; text-decoration: none;">
+      ケイス新宿
+    </a>
+  </p>
+</footer> 

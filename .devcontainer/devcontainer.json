@@ -32,7 +32,7 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "app/views/home/show.html.haml"
+        "app/views/home/show.html.erb"
       ]
     },
     "vscode": {

@@ -77,34 +77,21 @@ module ApplicationHelper
     end
   end
 
-  def welcome_path(options={anchor: 'welcome'})
-    root_path(options)
-  end
+  def welcome_path(options={anchor: 'welcome'}); root_path(options); end
+  def news_path   (options={anchor: 'news'});    root_path(options); end
 
-  def news_path(options={anchor: 'news'})
-    root_path(options)
-  end
+  def news_url   (path='/'); 'https://news.coderdojo.jp' + path; end
+  def dojomap_url(path='/'); 'https://map.coderdojo.jp'  + path; end
+  def zen_url(path='/find'); 'https://zen.coderdojo.com' + path; end
 
-  def news_url(path='/')
-    'https://news.coderdojo.jp' + path
-  end
+  def decadojo_url;   'https://decadojo.coderdojo.jp'; end
+  def dojocon_url;    'https://dojocon.coderdojo.jp';  end
+  def dojoletter_url; 'https://news.coderdojo.jp/category/DojoLetterバックナンバー'; end
+  def foundation_url; 'https://speakerdeck.com/helloworldfoundation'; end
 
-  def decadojo_url; 'https://decadojo.coderdojo.jp'; end
-  def dojocon_url;  'https://dojocon.coderdojo.jp';  end
+  def facebook_group_url; 'https://www.facebook.com/groups/coderdojo.jp'; end
+  def facebook_page_url;  'https://www.facebook.com/coderdojo.jp'; end
+  def twitter_url;        'https://twitter.com/CoderDojoJapan'; end
+  def youtube_url;        'https://youtube.com/CoderDojoJapan'; end
 
-  def dojoletter_url()
-    'https://news.coderdojo.jp/category/DojoLetterバックナンバー'
-  end
-
-  def dojomap_url(path='/')
-    'https://map.coderdojo.jp' + path
-  end
-
-  def foundation_url
-    'https://speakerdeck.com/helloworldfoundation'
-  end
-
-  def zen_url(path='/find')
-    'https://zen.coderdojo.com' + path
-  end
 end
