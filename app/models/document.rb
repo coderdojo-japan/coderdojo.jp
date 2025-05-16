@@ -1,7 +1,7 @@
 class Document
   attr_reader :id, :filename
-  DIR_PATH = 'db/docs'
-  URL_PATH = 'docs'
+  DIR_PATH = 'public/docs'
+  URL_PATH = '/docs'
 
   class << self
     def all
@@ -52,7 +52,7 @@ class Document
   end
 
   def url
-    "/#{URL_PATH}/#{self.filename}"
+    "#{URL_PATH}/#{self.filename}"
   end
 
   def exists?
