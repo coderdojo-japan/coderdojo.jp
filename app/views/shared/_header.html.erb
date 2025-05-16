@@ -1,0 +1,100 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="header">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+              data-target="#header-nav-toggle" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-header-logos">
+        <%= link_to lazy_image_tag('/img/header-logo.png',  alt: 'CoderDojo logo',  min: true), '/', id: "header-logo" %>
+        <%= link_to lazy_image_tag('/img/header-brand.png', alt: 'CoderDojo brand', min: true), '/', id: "header-brand" %>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="header-nav-toggle">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '全国の道場',     '/#dojos'    %></li>
+        <li><%= link_to 'パートナー法人', '/#partners' %></li>
+        <li class="navbar-dd-p">
+          <%= link_to '最近の活動', '/#news' %>
+          <span class="navbar-dd-l"></span>
+          <ul class="navbar-dd">
+            <li><%= link_to '📰 News',    '/#news'    %></li>
+            <li><%= link_to '📻 Podcast', '/podcasts' %></li>
+            <li><%= link_to '📺 YouTube', '/youtube'  %></li>
+            <li><%= link_to '📚 その他',  '/#kata'    %></li>
+          </ul>
+        </li>
+        <li class="navbar-dd-p">
+          <%= link_to '道場を探す', '/#dojos' %>
+          <span class="navbar-dd-l"></span>
+          <ul class="navbar-dd">
+            <li>
+              <%= link_to '/#dojos' do %>
+                ☯️  一覧から<span class="ignore-pc">探す</span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '/events' do %>
+                📅 日付から<span class="ignore-pc">探す</span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to dojomap_url do %>
+                🗾 地図から<span class="ignore-pc">探す</span>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-dd-p">
+          <%= link_to '資料を探す', '/kata' %>
+          <span class="navbar-dd-l"></span>
+          <ul class="navbar-dd">
+            <li><%= link_to '🔰 はじめに', '/kata#README'    %></li>
+            <li><%= link_to '📰 メディア', '/kata#media'     %></li>
+            <li><%= link_to '🎓 学ぶ',     '/kata#learn'     %></li>
+            <li><%= link_to '🏆 腕試し',   '/kata#challenge' %></li>
+            <li><%= link_to '☯️ 立ち上げ',  '/kata#startup'   %></li>
+            <li><%= link_to '🎁 運営支援', '/kata#support'   %></li>
+            <li><%= link_to '✅ FAQ',      '/kata#faq'       %></li>
+            <li><%= link_to '🤝 法人向け', '/partnership'    %></li>
+            <li><%= link_to '📊 統計情報', '/stats'          %></li>
+            <li><%= link_to '📚 資料集',   '/docs'           %></li>
+            <li><%= link_to '📩 連絡する', '/#contact'       %></li>
+            <li><%= link_to '🌏 English',  '/english', hreflang: 'en' %></li>
+          </ul>
+        </li>
+
+        <li class="search-li">
+          <label class="search-label" for="search">
+            <img class="search-icon" alt="検索アイコン" src="/img/search.svg">
+            検索で探す
+          </label>
+          <%= check_box_tag :search, "検索アイコン", false, class: 'search-checkbox', onclick: 'focusSearchBox()' %>
+          <div class="search">
+            <input id="searchbox" placeholder="例: コンテスト、教材" type="text">
+            <div id="hits"></div>
+            <div id="pagination"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<% content_for :javascript do %>
+  <script>
+    function focusSearchBox() {
+      document.getElementById("searchbox").focus();
+    };
+
+    document.addEventListener('click', (e) => {
+      if(e.target.closest('#header-nav-toggle') || !e.target.closest('#header-nav-toggle')) {
+        const element = document.getElementById('header-nav-toggle')
+        element.classList.remove('in');
+      }
+    })
+  </script>
+<% end %> 
