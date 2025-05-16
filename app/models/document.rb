@@ -33,7 +33,7 @@ class Document
       return "2020-02-02T12:34:56+09:00" unless Rails.env.production?
 
       # Call GitHub API in Production
-      uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=db/docs/&per_page=1")
+      uri  = URI.parse("https://api.github.com/repos/coderdojo-japan/coderdojo.jp/commits?path=public/docs/&per_page=1")
       json = Net::HTTP.get(uri)
       data = JSON.parse(json)
 

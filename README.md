@@ -48,7 +48,7 @@ Dojo 情報は次の手順で簡単に更新できます。
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
 > [!NOTE]
-> https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
+> https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[public/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
 
 <div id='howto-update-kata'></div><br>
