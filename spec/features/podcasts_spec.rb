@@ -9,8 +9,8 @@ RSpec.feature 'Podcasts', type: :feature do
 
     scenario 'Charter should be exist' do
       @podcast = create(:podcast)
-      allow(@podcast).to receive(:exists?) { true }
-      allow(@podcast).to receive(:exists?).with(offset: -1) { false }
+      allow(@podcast).to receive(:exist?) { true }
+      allow(@podcast).to receive(:exist?).with(offset: -1) { false }
       allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
 
@@ -25,7 +25,7 @@ RSpec.feature 'Podcasts', type: :feature do
 
     scenario 'Load doc file with absolute path' do
       @podcast = create(:podcast)
-      allow(@podcast).to receive(:exists?) { true }
+      allow(@podcast).to receive(:exist?) { true }
       allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
 

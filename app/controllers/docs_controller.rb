@@ -15,7 +15,7 @@ class DocsController < ApplicationController
 
   def show
     @doc = Document.new(params[:id])
-    redirect_to root_url unless @doc.exists?
+    redirect_to root_url unless @doc.exist?
 
     if @doc.content.include? "NUM_OF_"
       @doc.content.gsub! "{{ NUM_OF_JAPAN_DOJOS }}",   Dojo.active_dojos_count.to_s

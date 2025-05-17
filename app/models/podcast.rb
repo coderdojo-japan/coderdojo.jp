@@ -18,7 +18,7 @@ class Podcast < ApplicationRecord
     "#{DIR_PATH}/#{id}.md"
   end
 
-  def exists?(offset: 0)
+  def exist?(offset: 0)
     return false if self.path.include?("\u0000")
     return false if (self.id + offset).zero?
     File.exist?("#{DIR_PATH}/#{id + offset}.md")
@@ -30,6 +30,6 @@ class Podcast < ApplicationRecord
   end
 
   def content
-    exists? ? File.read(path) : ''
+    exist? ? File.read(path) : ''
   end
 end
