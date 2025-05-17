@@ -55,13 +55,13 @@ class Document
     "#{URL_PATH}/#{self.filename}"
   end
 
-  def exists?
+  def exist?
     return false if path.include? "\u0000"
     Document.all.map(&:filename).include?(filename)
   end
 
   def title
-    return '' unless self.exists?
+    return '' unless self.exist?
     @title ||=
       ActionController::Base.helpers.strip_tags(
         Kramdown::Document.new(self.get_first_paragraph, input: 'GFM').to_html
@@ -69,7 +69,7 @@ class Document
   end
 
   def description
-    return '' unless self.exists?
+    return '' unless self.exist?
     @desc ||=
       ActionController::Base.helpers.strip_tags(
         Kramdown::Document.new(self.get_second_paragraph, input: 'GFM').to_html
@@ -80,7 +80,7 @@ class Document
   end
 
   def content
-    @content ||= self.exists? ? File.read(self.path) : ''
+    @content ||= self.exist? ? File.read(self.path) : ''
   end
 
   private

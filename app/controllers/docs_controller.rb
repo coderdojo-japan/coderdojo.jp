@@ -15,7 +15,7 @@ class DocsController < ApplicationController
 
   def show
     @doc = Document.new(params[:id])
-    redirect_to root_url unless @doc.exists?
+    redirect_to root_url unless @doc.exist?
 
     if @doc.content.include? "NUM_OF_"
       @doc.content.gsub! "{{ NUM_OF_JAPAN_DOJOS }}",   Dojo.active_dojos_count.to_s
@@ -32,9 +32,9 @@ class DocsController < ApplicationController
     if @meta_image.end_with? '.webp'
       # .webp -> .jpg
       # .webp -> .png
-      @meta_image.gsub!('.webp', '.jpg')  if File.exists? "public/#{@meta_image[0..-6]}.jpg"
-      @meta_image.gsub!('.webp', '.jpeg') if File.exists? "public/#{@meta_image[0..-6]}.jpeg"
-      @meta_image.gsub!('.webp', '.png')  if File.exists? "public/#{@meta_image[0..-6]}.png"
+      @meta_image.gsub!('.webp', '.jpg')  if File.exist? "public/#{@meta_image[0..-6]}.jpg"
+      @meta_image.gsub!('.webp', '.jpeg') if File.exist? "public/#{@meta_image[0..-6]}.jpeg"
+      @meta_image.gsub!('.webp', '.png')  if File.exist? "public/#{@meta_image[0..-6]}.png"
     end
 
     # Add here if you want to optimize meta description.
