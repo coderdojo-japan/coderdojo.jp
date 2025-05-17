@@ -3,7 +3,7 @@ class DojosController < ApplicationController
   # GET /dojos[.json]
   def index
     @dojos = []
-    Dojo.order(order: :asc).all.each do |dojo|
+    Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
       @dojos << {
         id:          dojo.id,
         url:         dojo.url,
