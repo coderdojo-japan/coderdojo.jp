@@ -32,5 +32,17 @@ module CoderdojoJp
 
     # Default I18n locale
     config.i18n.default_locale = :ja
+
+    # セキュリティヘッダーの設定
+    config.action_dispatch.default_headers = {
+      "X-Frame-Options" => "SAMEORIGIN",
+      "X-XSS-Protection" => "0",
+      "X-Content-Type-Options" => "nosniff",
+      "X-Permitted-Cross-Domain-Policies" => "none",
+      "Referrer-Policy" => "strict-origin-when-cross-origin"
+    }
+
+    # HTML5サニタイザーの使用
+    config.action_view.sanitizer_vendor = Rails::HTML::Sanitizer.best_supported_vendor
   end
 end
