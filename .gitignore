@@ -36,3 +36,6 @@ public/assets/*
 
 # rspec
 spec/examples.txt
+
+# Credentials
+/config/master.key
