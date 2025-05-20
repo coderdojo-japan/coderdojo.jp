@@ -1,6 +1,13 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://coderdojo.jp"
 
+# Configure search engines to ping (exclude Google as it's deprecated)
+SitemapGenerator::Sitemap.ping_search_engines = true
+SitemapGenerator::Sitemap.search_engines = {
+  'bing' => 'http://www.bing.com/ping?siteMap=%s',
+  # Google を非推奨になったため除外: https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping
+}
+
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
