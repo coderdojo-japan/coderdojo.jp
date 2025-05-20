@@ -600,7 +600,7 @@ DEPENDENCIES
   rake
   rambulance!
   rinku
-  rspec-rails (~> 5.0)
+  rspec-rails (~> 5.1.2)
   rspec-retry
   rss
   ruby-mp3info

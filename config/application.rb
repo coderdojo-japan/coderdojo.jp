@@ -44,5 +44,8 @@ module CoderdojoJp
 
     # HTML5サニタイザーの使用
     config.action_view.sanitizer_vendor = Rails::HTML::Sanitizer.best_supported_vendor
+
+    # Fixture paths
+    config.fixture_paths = [Rails.root.join('spec/fixtures')]
   end
 end
