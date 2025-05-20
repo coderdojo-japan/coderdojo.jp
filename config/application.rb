@@ -9,7 +9,10 @@ Bundler.require(*Rails.groups)
 module CoderdojoJp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 7.1
+
+    # パフォーマンス最適化: autoloadパスを$LOAD_PATHに追加しない
+    config.add_autoload_paths_to_load_path = false
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
