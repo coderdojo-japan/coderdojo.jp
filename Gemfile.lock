@@ -594,7 +594,7 @@ DEPENDENCIES
   rack-host-redirect
   rack-mini-profiler
   rack-user_agent
-  rails (~> 7.1.0)
+  rails (~> 7.1.5)
   rails-controller-testing
   rails-html-sanitizer
   rake

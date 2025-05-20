@@ -5,7 +5,7 @@ gem 'bootsnap'
 gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 7.1.5'
 
 gem 'coffee-rails'
 gem 'jbuilder'
