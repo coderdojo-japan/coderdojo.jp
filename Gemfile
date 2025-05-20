@@ -5,7 +5,7 @@ gem 'bootsnap'
 gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.1.0'
 
 gem 'coffee-rails'
 gem 'jbuilder'
@@ -13,16 +13,13 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem 'rails-html-sanitizer', '~> 1.4.4'
+gem 'rails-html-sanitizer'
 gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
 
-# Specify to 1.3.4 to prevent error
-# TODO: This can be removed on Rails 7.1
-# https://github.com/rails/rails/issues/54260
-# https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
-gem 'concurrent-ruby', '1.3.4'
+# Rails 7.1では不要になったため、バージョン制限を解除
+gem 'concurrent-ruby'
 
 # For handling error
 # https://github.com/yuki24/rambulance
@@ -93,7 +90,7 @@ group :development, :test do
 
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 5.0'
   gem 'selenium-webdriver'
 
   gem 'dotenv-rails'
