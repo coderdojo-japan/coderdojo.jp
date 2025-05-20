@@ -89,6 +89,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    airbrake (13.0.5)
+      airbrake-ruby (~> 6.0)
+    airbrake-ruby (6.2.2)
+      rbtree3 (~> 0.6)
     ast (2.4.3)
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
@@ -407,6 +411,7 @@ GEM
       ffi (~> 1.0)
     rbs (3.9.4)
       logger
+    rbtree3 (0.7.1)
     rdoc (6.14.0)
       erb
       psych (>= 4.0.0)
@@ -552,6 +557,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   aws-sdk-s3 (~> 1)
   bootsnap
   bootstrap-sass

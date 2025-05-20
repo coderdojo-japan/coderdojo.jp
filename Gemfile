@@ -27,6 +27,10 @@ gem 'concurrent-ruby'
 # https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
 gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
 
+# Error Monitoring by Airbrake
+# https://github.com/airbrake/airbrake
+gem 'airbrake'
+
 # For redirection
 gem 'rack-host-redirect'
 
