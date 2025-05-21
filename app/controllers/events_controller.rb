@@ -34,7 +34,7 @@ class EventsController < ApplicationController
         name: dojo.name,
         note: dojo.note,
         url:  dojo.url,
-        has_event_histories: latest_event.nil?,
+        has_event_histories: latest_event.present?,
 
         # 過去のイベント開催日と note 内の日付を比較し、新しい方の日付を表示
         event_at: (latest_event_at < last_session_date) ?
