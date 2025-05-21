@@ -17,29 +17,26 @@ gem 'rails-html-sanitizer'
 gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
+gem 'concurrent-ruby'
 
 # Add bundled gems for Ruby 3.3+
 # https://gihyo.jp/article/2024/01/ruby3.3-bundled-gems
 gem 'csv'
 gem 'ostruct'
 
-# Rails 7.1では不要になったため、バージョン制限を解除
-gem 'concurrent-ruby'
 
-# For handling error
-# https://github.com/yuki24/rambulance
-# Using patch gem due to NameError: uninitialized constant ApplicationHelper
+# For handling error by Rambulance: https://github.com/yuki24/rambulance
+# FIXME: Using patch gem due to NameError: uninitialized constant ApplicationHelper
 # https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
 gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
 
-# Error Monitoring by Airbrake
-# https://github.com/airbrake/airbrake
+# Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
 gem 'airbrake'
 
 # For redirection
 gem 'rack-host-redirect'
 
-# Add RSS for podcasts
+# Add RSS for Podcasts: https://coderdojo.jp/podcasts
 gem 'rss'
 
 # For SSL and CORS
@@ -64,7 +61,8 @@ gem 'rinku'
 # For RSS feed
 gem 'ruby-mp3info', require: 'mp3info'
 
-# For Sitemap (Google Search Console)
+# For Sitemap (Mainly use Google Search Console)
+# https://github.com/kjvarga/sitemap_generator
 gem 'sitemap_generator'
 
 # For Pokemon image file downloads
