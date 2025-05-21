@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# 磐梯
+#- dojo_id: 337
+#  name: ???
+#  group_id: ???
+#  url: https://sites.google.com/view/coderdojo-bandai
+
 # 恩納@OIST（沖縄県恩納村）名護と同一 connpass のため登録は不要
 #- dojo_id: 336
 #  name: connpass

@@ -400,6 +400,20 @@
   - Ruby
   - Python
   - tello
+- id: 337
+  order: '074071'
+  created_at: '2025-05-09'
+  name: 磐梯
+  prefecture_id: 7
+  logo: "/img/dojos/bandai.webp"
+  url: https://sites.google.com/view/coderdojo-bandai
+  description: 磐梯町で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - ラズベリーパイ
+  - ロボット工作
+  - 電子工作
 - id: 248
   order: '074667'
   created_at: '2020-06-20'
