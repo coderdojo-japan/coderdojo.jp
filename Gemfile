@@ -84,11 +84,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'minitest-retry'
-  gem 'pry-byebug'
-  gem 'pry-doc'
-  gem 'pry-rails'
-  gem 'pry-stack_explorer'
   gem 'rake'
   gem 'rspec-retry'
 
