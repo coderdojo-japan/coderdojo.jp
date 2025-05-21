@@ -3,10 +3,10 @@ require 'rss'
 namespace :podcasts do
   desc 'Anchor.fm から Podcast データ情報を取得して登録'
   task upsert: :environment do
-    user_id     = '626746926'
-    logger      = ActiveSupport::Logger.new('log/podcasts.log')
-    console     = ActiveSupport::Logger.new(STDOUT)
-    logger.extend ActiveSupport::Logger.broadcast(console)
+    user_id = '626746926'
+    logger  = ActiveSupport::Logger.new('log/podcasts.log')
+    console = ActiveSupport::Logger.new(STDOUT)
+    logger  = ActiveSupport::BroadcastLogger.new(logger, console)
 
     logger.info('==== START podcasts:upsert ====')
 

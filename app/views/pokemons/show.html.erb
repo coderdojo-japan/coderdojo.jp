@@ -1,0 +1,20 @@
+<% provide(:title, '『ポケモンと学ぶ初めてのプログラミング』素材ダウンロードに参加する皆さまへ') %>
+<% provide(:desc,  '『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードページです。') %>
+<% provide(:url,         '/pokemon/downloads') %>
+<% provide(:meta_image,  '/img/pokemon_scratch.png') %>
+
+<div class="container" style="line-height: 2.2em;">
+  <section class="doc text-center">
+    <h2 style="padding: 20px 0px; line-height: 1.4em;">
+      利用規約に同意して頂き<br class="ignore-pc" />ありがとうございます💖
+    </h2>
+    <img class="lazyload" loading="lazy" src="https://i.gyazo.com/612bd10c725dc91a6a3bcc2d7a6d427a.png" style="padding-bottom: 20px; border-radius: 4px; max-width: 500px;" />
+    <p style="padding-top: 20px;">
+      ボタンをクリックして、<br class="ignore-pc" />ポケモン素材をダウンロードしよう！
+    </p>
+    <%= link_to @presigned_url, class: "btn-blue", style: "max-width:320px; display:block; margin:20px auto 100px;" do %>
+      <i class="fas fa-folder-download white"></i>
+      ポケモン素材をダウンロードする
+    <% end %>
+  </section>
+</div> 

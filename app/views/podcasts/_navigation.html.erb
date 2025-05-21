@@ -1,6 +1,6 @@
 <div style="display: table; font-weight: bolder; width: 100%; padding: 10px 10px; background-color:#3870c4;">
   <p class="nav prev">
-    <% if @episode.exists?(offset: -1) %>
+    <% if @episode.exist?(offset: -1) %>
       <%= link_to podcast_path(@episode.id - 1), title: '前のエピソードを見る' do %>
 	&laquo; prev
       <% end %>
@@ -12,7 +12,7 @@
     <%= link_to '目次に戻る'.html_safe, podcasts_path %>
   </p>
   <p class="nav next">
-    <% if @episode.exists?(offset: +1) %>
+    <% if @episode.exist?(offset: +1) %>
       <%= link_to podcast_path(@episode.id + 1), title: '次のエピソードを見る' do %>
 	next &raquo;
       <% end %>

@@ -1,0 +1,25 @@
+<li class="dojo" id="<%= dojo.name %>">
+  <header>
+    <%= link_to lazy_image_tag(dojo.logo, alt: "CoderDojo #{dojo.name}", class: 'dojo-picture'), dojo.url,
+              target: "_blank", rel: "external noopener" %>
+    <span class="dojo-name">
+      <%= link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener" %>
+      <% if not dojo.counter == 1 %>
+        <span class="dojo-counter" data-original-title="道場数"
+              data-placement="bottom"
+              data-toggle="tooltip"><%= dojo.counter %></span>
+      <% end %>
+    </span>
+  </header>
+  <ul class="tags">
+    <% dojo.tags.each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
+  </ul>
+  <p class="dojo-description">
+    <%= dojo.description %>
+    <% if dojo.is_private %>
+      <%= link_to 'Private', doc_path('private-dojo'), class: 'dojo-private' %>
+    <% end %>
+  </p>
+</li> 

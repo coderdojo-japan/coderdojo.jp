@@ -105,7 +105,8 @@
   </div>
 </section>
 
-<!-- 以下のイベントお知らせ部分は HAML でコメントアウトされているため、HTMLコメントで残しています
+<!-- イベントのお知らせ (任意) -->
+<!--
 <hr>
 <section id="events" class="detail-introduction text-center">
   <h2>
@@ -161,7 +162,7 @@
 </section>
 
 <!--
-  以下の .text-center.grayscale-bg は HAML 上でコメントアウトされているため、HTMLコメントで残しています
+  以下の .text-center.grayscale-bg は section 数を増やしたときの調整用。
   <div class="text-center grayscale-bg" style="padding-top: 40px; padding-bottom: 50px;">
     <section class="detail-introduction" id="news">
       ...
@@ -203,7 +204,19 @@
     <br class="ignore-pc">
     <small>(毎月配信)</small>
   </p>
-  <%= render partial: 'shared/newsletter' %>
+  
+  <div id="mc_embed_signup">
+    <form id="mc-embedded-subscribe-form" class="validate" action="https://coderdojo.us17.list-manage.com/subscribe/post?u=39a5824e42ab56ec44bb4e84e&amp;id=097dfa6a14" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+      <div id="mc_embed_signup_scroll">
+	<input id="mce-EMAIL" type="email" name="EMAIL" class="email" placeholder="your@example.com">
+	<div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input tabindex="-1" name="b_39a5824e42ab56ec44bb4e84e_097dfa6a14" type="text" value="">
+	</div>
+	<input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="購読する">
+      </div>
+    </form>
+  </div> 
+  
   <div class="btn-cover" style="margin-top: 40px;">
     <a class="btn-blue" href="<%= news_url %>">
       <i class="far fa-newspaper"></i>
@@ -213,7 +226,7 @@
 </section>
 
 <!--
-  以下も HAML 上でコメントアウトされている「最近の CoderDojo (Twitter タイムライン)」部分です
+  「最近の CoderDojo (Twitter タイムライン)」部分。公式の埋め込み機能が復旧されるまではコメントアウト。
   <section id="timeline" class="text-center" style="margin-bottom: 50px;">
     <h3 class="text-center" style="margin-bottom: 30px;">
       <a href="https://x.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20コーダー道場%20lang%3Aja">

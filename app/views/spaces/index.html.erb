@@ -1,0 +1,97 @@
+<section class="cover">
+  <%= lazy_image_tag "spaces_cover.png", alt: "Cover photo for CoderDojo Spaces" %>
+</section>
+
+<section class="introduction text-center list">
+  <h1>
+    <b>CoderDojo Spaces (β)</b>
+  </h1>
+  <br>
+  <p>CoderDojo 運営者と会場提供可能な企業をつなぐページです 🤝</p>
+  <p>リンク先のページから各法人にコンタクトしてみてください 💌</p>
+</section>
+
+<section id="spaces" class="detail-introduction text-center">
+</section>
+<section class="dojos text-center grayscale-bg" style="padding-bottom: 100px;">
+  <br>
+  <h2 style="color: dimgray;">スペース提供企業まとめ</h2>
+  <br>
+  <ul class="loaded dojo-flex">
+    <li class="dojo">
+      <header>
+        <a href="http://www.csaj.jp/">
+          <span class="dojo-picture" style="background-image: url('/img/spaces/csaj.png');"></span>
+          <span class="dojo-name">CSAJ</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <li>東京都</li>
+        <li>港区</li>
+        <li>赤坂</li>
+      </ul>
+      <p>CoderDojo 向けに会議室を提供可能</p>
+    </li>
+    <li class="dojo">
+      <header>
+        <a href="http://bridd.info/">
+          <span class="dojo-picture" style="background-image: url('/img/spaces/bridd.png');"></span>
+          <span class="dojo-name">SPACE BRiDD</span>
+        </a>
+      </header>
+      <ul class="tags">
+        <li>東京都</li>
+        <li>神田</li>
+        <li>大手町</li>
+      </ul>
+      <p class="dojo-description">BRIDD 大手町</p>
+    </li>
+  </ul>
+</section>
+
+<div class="text-center">
+  <section class="detail-introduction">
+    <br>
+    <h2 style="color: dimgray;">お問い合わせ</h2>
+    <br>
+    <p>
+      CoderDojo 向けに会場を提供してみませんか? 🤝
+      <br>
+      もし興味がありましたら下記フォームよりご連絡ください 📨
+      <br>
+      <br>
+    </p>
+
+    <!-- Contact Form via Wufoo -->
+    <div id="contact"></div>
+    <div id="wufoo-qkjthoy0qpuvg9" style="margin-top: -10px">
+      <a href="https://yasslab.wufoo.com/forms/qkjthoy0qpuvg9">問い合わせフォーム</a>.
+    </div>
+    <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">
+      HTML Forms powered by
+      <a href="https://www.wufoo.com">Wufoo</a>.
+    </div>
+    <script>
+      var qkjthoy0qpuvg9;(function(d, t) {
+      var s = d.createElement(t), options = {
+        'userName':'yasslab',
+        'formHash':'qkjthoy0qpuvg9',
+        'autoResize':true,
+        'height':'497',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'show',
+        'ssl':true
+      };
+      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+      s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try {
+          qkjthoy0qpuvg9 = new WufooForm();qkjthoy0qpuvg9.initialize(options);qkjthoy0qpuvg9.display();
+        } catch (e) {}
+      };
+      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+      })(document, 'script');
+    </script>
+  </section>
+</div> 

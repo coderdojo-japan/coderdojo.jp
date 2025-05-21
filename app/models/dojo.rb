@@ -10,7 +10,7 @@ class Dojo < ApplicationRecord
   has_many   :dojo_event_services, dependent: :destroy
   has_many   :event_histories,     dependent: :destroy
 
-  serialize :tags
+  serialize :tags, coder: YAML
   before_save { self.email = self.email.downcase }
 
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }

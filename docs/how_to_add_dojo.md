@@ -20,7 +20,7 @@
 7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
 
-参考 PR: [coderdojo-japan/coderdojo.jp#1449](https://github.com/coderdojo-japan/coderdojo.jp/pull/1449)
+これまでの対応例 (PR): https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is%3Apr+%22Add+CoderDojo%22
 
 <br>
 

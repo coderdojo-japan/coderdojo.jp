@@ -1,6 +1,6 @@
 [![カバー画像](https://raw.githubusercontent.com/coderdojo-japan/coderdojo.jp/main/public/cover_rounded.webp)](https://coderdojo.jp/)
 
-# :yin_yang:️ CoderDojo Japan 公式Webサイトへようこそ！
+# [:yin_yang:️](#readme) CoderDojo Japan 公式Webサイトへようこそ！
 
 [![Build Status](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/test.yml/badge.svg)](https://github.com/coderdojo-japan/coderdojo.jp/actions)
 
@@ -9,7 +9,7 @@
 
 <div id='signup'></div><br>
 
-## :beginner: Dojo を掲載するには?
+## [:beginner:](#signup) Dojo を掲載するには?
 
 CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援プログラム](https://coderdojo.jp/kata#support)をご利用することができます。[coderdojo.jp](https://coderdojo.jp) への掲載方法も載っていますので、詳細は [CoderDojo Kata](https://coderdojo.jp/kata#support) をご確認ください。
 
@@ -18,7 +18,7 @@ CoderDojo を立ち上げ、承認されたら、[CoderDojo Kata にある支援
 
 <div id='howto'></div><br>
 
-## :wrench: 開発に参加するには?
+## [:wrench:](#howto) 開発に参加するには?
 
 coderdojo.jp の開発には以下のいずれかの方法で参加できます。Dojo 情報の修正やドキュメントの追加・執筆であれば、ブラウザだけで参加できます。
 
@@ -35,7 +35,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 
 <div id='howto-update-dojo'></div><br>
 
-## 1. Dojo 情報を更新する
+## [:yin_yang:](#howto-update-dojo) 1. Dojo 情報を更新する
 
 Dojo 情報は次の手順で簡単に更新できます。
 
@@ -47,14 +47,13 @@ Dojo 情報は次の手順で簡単に更新できます。
 
 以上で完了です。提案された修正はメンテナーによってチェックされ、問題なければ提案された内容が反映されます。もし問題があってもメンテナー側で気付いて修正できるので、まずはお気軽に提案してみてください :wink:
 
-
 > [!NOTE]
-> https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[db/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/db/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
+> https://coderdojo.jp/docs にあるドキュメントの編集方法も同様です。[public/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/docs)ディレクトリをブラウザで開き、修正したいファイルをクリックして、修正内容を提案してください。同ディレクトページの右上にある `Create new file` ボタンをクリックすると、新しいドキュメントの追記を提案することもできます。
 
 
 <div id='howto-update-kata'></div><br>
 
-## 2. Kata 情報を更新する
+## [:memo:](#howto-update-kata) 2. Kata 情報を更新する
 
 Kata 情報も、Dojo 情報と同様の方法で更新できます。
 
@@ -84,7 +83,7 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 
 <div id='howto-develop'></div><br>
 
-## 3. 新機能の開発やデザインを改善する
+## [:art:](#howto-develop) 3. 新機能の開発やデザインを改善する
 
 本サイトでは以下の技術が使われているので、それぞれのツールをセットアップします。
 
@@ -123,7 +122,7 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 
 <div id='howto-develop-ci'></div><br>
 
-### :rocket: CI/Deploy 構成
+### [:rocket:](#howto-develop-ci) CI/Deploy 構成
 
 [coderdojo.jp](https://coderdojo.jp/)  は現在、次の構成でテスト・デプロイされています。
 
@@ -147,7 +146,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 
 <div id='howto-develop-tasks'></div><br>
 
-### :gem: CI で実行される各種 Ruby スクリプト (Rake タスク)
+### [:gem:](#howto-develop-tasks) CI で実行される各種 Ruby スクリプト (Rake タスク)
 
 最新版は [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh) からご確認いただけます。
 
@@ -174,7 +173,7 @@ bundle exec rails podcasts:upsert
 
 <div id='howto-develop-jobs'></div><br>
 
-### ⏰ 定期的に実行されるスクリプト (Heroku Scheduler)
+### [:alarm_clock:](#howto-develop-jobs) 定期的に実行されるスクリプト (Heroku Scheduler)
 
 以下のコマンドは上記 CI とは関係なく、定期的に実行されます。
 
@@ -206,7 +205,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 <div id='howto-develop-docs'></div><br>
 
-## 4. 他、開発に関する資料
+## [:books:](#howto-develop-docs) 4. 他、開発に関する資料
 
 開発に関する資料は [/docs](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/docs) や下記サイトにまとめてあります (最新順)。必要に応じて適宜ご参照ください。
 
@@ -223,7 +222,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 <div id='api'></div><br>
 
-### 🤝 API
+### [:handshake:](#api) API
 
 現在提供中の API 一覧です。利用例のある API は互換性を意識して開発されるため、比較的使いやすいです。ただし予告なく破壊的な変更が行われる可能性もあるため、あらかじめご了承いただけると幸いです 🚧
 
@@ -249,7 +248,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 <div id='history'></div><br>
 
-### :scroll: Development History & Contributors
+### [:scroll:](#history) Development History & Contributors
 
 - **2012:** CoderDojo Japan started in [Facebook Group](https://www.facebook.com/groups/coderdojo.jp/about/)
 - **2014:** coderdojo.jp was launched as ['coderdojo-japan.github.io'](https://github.com/coderdojo-japan/coderdojo-japan.github.io/graphs/contributors)
@@ -268,7 +267,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 
 <div id='license'></div><br>
 
-## 5. License
+## [:sparkling_heart:](#license) 5. License
 
 This web application is developed with many other brilliant works! :sparkling_heart:
 You can check out them and our works with associated licenses from [LICENSE.md](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/LICENSE.md). :wink:

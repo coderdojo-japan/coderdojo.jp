@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '3.1.6'
+ruby '3.2.8'
 
 gem 'bootsnap'
 gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.1.5'
 
 gem 'coffee-rails'
 gem 'jbuilder'
@@ -13,23 +13,23 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-gem 'haml-rails'
-gem 'rails-html-sanitizer', '~> 1.4.4'
+gem 'rails-html-sanitizer'
 gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
 
-# Specify to 1.3.4 to prevent error
-# TODO: This can be removed on Rails 7.1
-# https://github.com/rails/rails/issues/54260
-# https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
-gem 'concurrent-ruby', '1.3.4'
+# Rails 7.1では不要になったため、バージョン制限を解除
+gem 'concurrent-ruby'
 
 # For handling error
 # https://github.com/yuki24/rambulance
 # Using patch gem due to NameError: uninitialized constant ApplicationHelper
 # https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
 gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
+
+# Error Monitoring by Airbrake
+# https://github.com/airbrake/airbrake
+gem 'airbrake'
 
 # For redirection
 gem 'rack-host-redirect'
@@ -94,7 +94,7 @@ group :development, :test do
 
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 6.1.1'
   gem 'selenium-webdriver'
 
   gem 'dotenv-rails'
