@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.2.8'
+ruby file: '.ruby-version'
 
 gem 'bootsnap'
 gem 'pg'
@@ -17,6 +17,8 @@ gem 'rails-html-sanitizer'
 gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
+
+gem 'csv' # Need to declare due to become a bundled gem
 
 # Rails 7.1では不要になったため、バージョン制限を解除
 gem 'concurrent-ruby'
