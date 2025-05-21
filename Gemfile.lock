@@ -595,6 +595,7 @@ DEPENDENCIES
   memory_profiler
   mini_racer
   net-http
+  ostruct
   pg
   puma
   puma_worker_killer

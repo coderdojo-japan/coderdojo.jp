@@ -18,7 +18,10 @@ gem 'sass-rails', '>= 5'
 gem 'simple_grid_rails'
 gem 'uglifier'
 
-gem 'csv' # Need to declare due to become a bundled gem
+# Add bundled gems for Ruby 3.3+
+# https://gihyo.jp/article/2024/01/ruby3.3-bundled-gems
+gem 'csv'
+gem 'ostruct'
 
 # Rails 7.1では不要になったため、バージョン制限を解除
 gem 'concurrent-ruby'
