@@ -10,10 +10,10 @@ namespace :podcasts do
 
     logger.info('==== START podcasts:upsert ====')
 
-    ANCHOR_FM_RSS = (Rails.env.test? || Rails.env.staging?) ?
+    PODCAST_RSS = (Rails.env.test? || Rails.env.staging?) ?
       Rails.root.join('spec', 'sample_anchorfm.rss').to_s :
       'https://anchor.fm/s/54d501e8/podcast/rss'
-    rss = RSS::Parser.parse(ANCHOR_FM_RSS, false)
+    rss = RSS::Parser.parse(PODCAST_RSS, false)
 
     if rss.items.length.zero?
       logger.info('No track exists. Maybe failed to set RSS URL?')
