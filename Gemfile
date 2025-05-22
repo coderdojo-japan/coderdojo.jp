@@ -26,11 +26,10 @@ gem 'csv'
 gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
 
 gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
-gem 'rack-host-redirect' # For redirection
-gem 'secure_headers'     # For SSL and CORS
-gem 'rinku'              # For Auto Link
-gem 'sitemap_generator'  # For Sitemap: https://github.com/kjvarga/sitemap_generator
-
+gem 'rack-host-redirect' # Enable redirection
+gem 'secure_headers'     # Enable SSL and CORS
+gem 'rinku'              # Enable Auto Link for Podcasts
+gem 'sitemap_generator'  # Sitemap: https://github.com/kjvarga/sitemap_generator
 gem 'rss'                # Add RSS for Podcasts: https://coderdojo.jp/podcasts
 gem 'ruby-mp3info', require: 'mp3info' # For RSS feed
 
