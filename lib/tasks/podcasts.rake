@@ -11,7 +11,7 @@ namespace :podcasts do
     logger.info('==== START podcasts:upsert ====')
 
     ANCHOR_FM_RSS = Rails.env.test? ?
-      'anchorfm_sample.rss' :
+      Rails.root.join('spec', 'anchorfm_sample.rss').to_s :
       'https://anchor.fm/s/54d501e8/podcast/rss'
     rss = RSS::Parser.parse(ANCHOR_FM_RSS, false)
 
