@@ -53,10 +53,10 @@ group :development do
 
   # Enable perf tools if needed (YAGNI).
   # https://ja.wikipedia.org/wiki/YAGNI
-  #gem 'flamegraph',         require: false
-  #gem 'memory_profiler',    require: false
-  #gem 'rack-mini-profiler', require: false
-  #gem 'stackprof',          require: false
+  gem 'stackprof',          require: false
+  gem 'flamegraph',         require: false
+  gem 'memory_profiler',    require: false
+  gem 'rack-mini-profiler', require: false
 end
 
 group :development, :test do
