@@ -18,7 +18,6 @@ gem 'sass-rails', '>= 5'
 # Add bundled gems for Ruby 3.3+
 # https://gihyo.jp/article/2024/01/ruby3.3-bundled-gems
 gem 'csv'
-gem 'ostruct'
 
 
 # For handling error by Rambulance: https://github.com/yuki24/rambulance

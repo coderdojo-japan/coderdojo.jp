@@ -574,7 +574,6 @@ DEPENDENCIES
   listen
   memory_profiler
   net-http
-  ostruct
   pg
   puma
   puma_worker_killer
