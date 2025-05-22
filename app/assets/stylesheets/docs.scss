@@ -6,7 +6,7 @@
 .docs {
   font-family: serif;
   line-height: 2.2em;
-  a:hover{
+  a:hover {
     text-decoration: none;
   }
   ul {
@@ -15,115 +15,131 @@
       font-size: 20px;
       padding-left: 1.5em;
       text-indent: -1.5em;
-
       @media only screen and (max-width: 768px) {
-	padding-bottom: 10px;
-	margin-left: -35px;
+        padding-bottom: 10px;
+        margin-left: -35px;
       }
     }
   }
 }
 
 /* 各ページ用: /doc/* */
-
 .doc {
   counter-reset: doc-chapter;
   position: relative;
   font-family: serif;
-  line-height:  2.0em;
-}
-.doc > h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  line-height:  2.0em;
-}
-.doc > h1:first-child {
-  margin-top: 0;
-}
-.doc > h2 {
-  counter-reset: doc-paragraph;
-  counter-increment: doc-chapter;
-  padding-top:   40px;
-  margin-top:   1.2em;
-  margin-bottom: 20px;
-}
-.doc > h3 {
-  padding-top:   40px;
-  margin-top:   1.2em;
-  margin-bottom: 20px;
-  line-height:  2.0em;
-}
-.doc > p {
-  counter-increment: doc-paragraph;
-  text-indent: 0em;
-  padding-left: 1em;
-  line-height:  2.0em;
-}
-.doc > h1 + p,
-.doc > h2 + p,
-.doc > hr + p,
-.doc > p:first-of-type {
-  text-indent:  0em;
-  padding-left: 1em;
-}
-.doc > p::before {
-  //content: counter(doc-paragraph) " ";
-  font-weight: bold;
-  margin-left: -2em;
-  margin-right: 1em;
-}
-.doc > h1 + p::before,
-.doc > h2 + p::before,
-.doc > hr + p::before,
-.doc > p:first-of-type::before {
-  content: none;
-}
-.doc > ul {
-  list-style: none;        
-  padding: 0 0 0 2.5em;
-}
-.doc > ol {
-  list-style: none;
-  counter-reset: doc-ordered-list;
-  padding: 0 0 0 2.5em;
-}
-.doc > ol > li {
-  counter-increment: doc-ordered-list;
-  text-indent: -2.5em;
-}
-.doc > ol > li::before {
-  content: "\FF08" counter(doc-ordered-list) "\FF09";
-}
-.doc > hr {
-  border: none;
-  border-top: 1px solid black;
-  margin: 2em 0;
-}
-.doc > h4 {
-  position: absolute;
-  margin: 0;
-  right: 30em;
-  font-size: 100%;
-}
-.doc > h4 + ul {
-  margin: 0 0 2em auto;
-  width: 28em;
-  list-style: none;
-}
-.doc > h4 + ul > li:last-child::after {
-  content: "\329E";
-  position: absolute;
-  right: 1em;
-}
-.doc > blockquote {
-  border: 1px solid black;
-  padding: .5em 1.5em;
-  margin: 1em 0 1.5em;
+  line-height: 2.0em;
 
-  small { line-height:  2.0em; }
-}
-.doc > ol > li > ul {
-  list-style: none;
+  h1 {
+    text-align: center;
+    margin-top: 1.2em;
+    margin-bottom: 40px;
+    line-height: 2.0em;
+  }
+
+  h1:first-child {
+    margin-top: 0;
+  }
+
+  h2, h3 {
+    margin-top: 2.6em;
+    margin-bottom: 20px;
+    line-height: 2.0em;
+  }
+
+  .gc_wrapper { margin-top: 50px; }
+  
+  p {
+    counter-increment: doc-paragraph;
+    text-indent: 0em;
+    padding-left: 1em;
+    line-height: 2.0em;
+  }
+
+  p::before {
+    font-weight: bold;
+    margin-left: -2em;
+    margin-right: 1em;
+  }
+
+  h1 + p,
+  h2 + p,
+  hr + p,
+  p:first-of-type {
+    text-indent: 0em;
+    padding-left: 1em;
+  }
+
+  p::before,
+  h1 + p::before,
+  h2 + p::before,
+  hr + p::before,
+  p:first-of-type::before {
+    content: none;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0 0 2.5em;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: doc-ordered-list;
+    padding: 0 0 0 2.5em;
+  }
+
+  ol > li {
+    counter-increment: doc-ordered-list;
+    text-indent: -2.5em;
+  }
+
+  ol > li::before {
+    content: "\FF08" counter(doc-ordered-list) "\FF09";
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid black;
+    margin: 2em 0;
+  }
+
+  h4 {
+    position: absolute;
+    margin: 0;
+    right: 30em;
+    font-size: 100%;
+  }
+
+  h4 + ul {
+    margin: 0 0 2em auto;
+    width: 28em;
+    list-style: none;
+  }
+
+  h4 + ul > li:last-child::after {
+    content: "\329E";
+    position: absolute;
+    right: 1em;
+  }
+
+  blockquote {
+    border: 1px solid black;
+    padding: .5em 1.5em;
+    margin: 1em 0 1.5em;
+
+    small {
+      line-height: 2.0em;
+    }
+  }
+
+  ol > li > ul {
+    list-style: none;
+  }
+
+  small::before {
+    content: none;
+  }
 }
 
 // Sample Usecase: https://coderdojo.jp/docs/fundraising-methods
