@@ -19,12 +19,7 @@ gem 'sass-rails', '>= 5'
 # https://gihyo.jp/article/2024/01/ruby3.3-bundled-gems
 gem 'csv'
 
-
-# For handling error by Rambulance: https://github.com/yuki24/rambulance
-# FIXME: Using patch gem due to NameError: uninitialized constant ApplicationHelper
-# https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
-gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
-
+gem 'rambulance'         # Error handling pages: https://github.com/yuki24/rambulance
 gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
 gem 'rack-host-redirect' # Enable redirection
 gem 'secure_headers'     # Enable SSL and CORS
