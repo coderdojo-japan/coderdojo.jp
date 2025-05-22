@@ -556,7 +556,6 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass
   capybara
-  concurrent-ruby
   csv
   dotenv-rails
   factory_bot_rails
