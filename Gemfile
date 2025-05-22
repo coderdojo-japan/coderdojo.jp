@@ -7,7 +7,6 @@ gem 'puma'
 gem 'puma_worker_killer'
 gem 'rails', '~> 7.1.5'
 
-gem 'coffee-rails'
 gem 'jbuilder'
 gem 'jquery-rails'
 
