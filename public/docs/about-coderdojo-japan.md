@@ -2,27 +2,6 @@
 
 一般社団法人 CoderDojo Japan では、全国{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上ある非営利のプログラミング道場「CoderDojo」の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。
 
-<style type="text/css">
-  section.doc h1 {
-    margin-bottom: 40px;
-    line-height:  2.0em;
-  }
-  section.doc h2,
-  section.doc h3 {
-    padding-top:   40px;
-    margin-bottom: 20px;
-    line-height:  2.0em;
-  }
-
-  section.doc p {
-    line-height:  2.0em;
-  }
-
-  blockquote small {
-    line-height:  2.0em;
-  }
-</style>
-
 <br>
 
 - (1) 日本国内の「CoderDojo」の設立及び運営の支援

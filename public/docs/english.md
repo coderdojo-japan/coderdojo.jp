@@ -171,29 +171,3 @@ We occasionally host guests from overseas at our co-working and shared-office sp
     <script src='https://apis.google.com/js/platform.js'></script>
   </div>
 </div>
-
-
-<style type="text/css">
-  section.doc h1 {
-    margin-bottom: 40px;
-    line-height:  2.0em;
-  }
-  section.doc h2,
-  section.doc h3 {
-    padding-top:   40px;
-    margin-bottom: 20px;
-    line-height:  2.0em;
-  }
-
-  section.doc p {
-    line-height:  2.0em;
-  }
-
-  h2#faq {
-    text-align: center;
-  }
-
-  blockquote small {
-    line-height:  2.0em;
-  }
-</style>

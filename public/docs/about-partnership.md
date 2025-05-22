@@ -2,31 +2,6 @@
 
 本パートナーシップにご興味を持って頂きありがとうございます。本ページでは CoderDojo の活動状況をご紹介させて頂きながら、貴社で行われている事業と継続的にご協力していけないかをご提案させて頂いております。
 
-<style type="text/css">
-  section.doc h1 {
-    margin-bottom: 40px;
-    line-height:  2.0em;
-  }
-  section.doc h2,
-  section.doc h3 {
-    padding-top:   40px;
-    margin-bottom: 20px;
-    line-height:  2.0em;
-  }
-
-  section.doc p {
-    line-height:  2.0em;
-  }
-
-  h2#faq {
-    text-align: center;
-  }
-
-  blockquote small {
-    line-height:  2.0em;
-  }
-</style>
-
 
 ## [☯️](#coderdojo-is) CoderDojo とは？ {#coderdojo-is}
 
