@@ -30,17 +30,14 @@ gem 'ostruct'
 # https://github.com/coderdojo-japan/coderdojo.jp/pull/1631#issuecomment-2424826474
 gem 'rambulance', git: 'https://github.com/yasslab/rambulance'
 
-# Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
-gem 'airbrake'
+gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
+gem 'rack-host-redirect' # For redirection
+gem 'secure_headers'     # For SSL and CORS
+gem 'rinku'              # For Auto Link
+gem 'sitemap_generator'  # For Sitemap: https://github.com/kjvarga/sitemap_generator
 
-# For redirection
-gem 'rack-host-redirect'
-
-# Add RSS for Podcasts: https://coderdojo.jp/podcasts
-gem 'rss'
-
-# For SSL and CORS
-gem 'secure_headers'
+gem 'rss'                # Add RSS for Podcasts: https://coderdojo.jp/podcasts
+gem 'ruby-mp3info', require: 'mp3info' # For RSS feed
 
 # Rendering legal documents
 gem 'kramdown'
@@ -54,16 +51,6 @@ gem 'koala'
 gem 'lazy_high_charts', '1.5.8'
 gem 'rack-attack'
 gem 'rack-user_agent'
-
-# For Auto Link
-gem 'rinku'
-
-# For RSS feed
-gem 'ruby-mp3info', require: 'mp3info'
-
-# For Sitemap (Mainly use Google Search Console)
-# https://github.com/kjvarga/sitemap_generator
-gem 'sitemap_generator'
 
 # For Pokemon image file downloads
 gem 'aws-sdk-s3', '~> 1'
