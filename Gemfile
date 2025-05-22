@@ -45,15 +45,18 @@ gem 'rack-user_agent'
 gem 'aws-sdk-s3', '~> 1'
 
 group :development do
-  gem 'flamegraph',         require: false
-  gem 'memory_profiler',    require: false
-  gem 'rack-mini-profiler', require: false
-  gem 'stackprof',          require: false
   gem 'letter_opener_web'
   gem 'listen'
   gem 'solargraph'
   gem 'spring'
   gem 'web-console'
+
+  # Enable perf tools if needed (YAGNI).
+  # https://ja.wikipedia.org/wiki/YAGNI
+  #gem 'flamegraph',         require: false
+  #gem 'memory_profiler',    require: false
+  #gem 'rack-mini-profiler', require: false
+  #gem 'stackprof',          require: false
 end
 
 group :development, :test do
