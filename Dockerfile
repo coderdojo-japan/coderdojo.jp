@@ -11,11 +11,10 @@ RUN apt-get update -qq \
 
 ENV ENTRYKIT_VERSION 0.4.0
 
-
 RUN mkdir /app
 
 WORKDIR /app
 
 RUN bundle config build.nokogiri --use-system-libraries
 
-ENTRYPOINT [ "./entrypoint.rb" ]
+ENTRYPOINT ["/bin/bash", "-c", "ruby -v && gem install bundler && bundle install -j3 --quiet && exec \"$@\"", "--"]
