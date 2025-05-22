@@ -14,8 +14,6 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'rails-html-sanitizer'
 gem 'sass-rails', '>= 5'
-gem 'simple_grid_rails'
-gem 'uglifier'
 gem 'concurrent-ruby'
 
 # Add bundled gems for Ruby 3.3+
