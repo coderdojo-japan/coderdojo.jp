@@ -73,4 +73,20 @@ RSpec.describe Dojo, :type => :model do
       Dojo::DOJO_INFO_YAML_PATH = orig_yaml
     end
   end
+
+  describe 'validate id sequence' do
+    it 'has sequential ids except for allowed gaps' do
+      allowed_missing_ids = [
+        1, 29, 63, 80, 93, 95, 142,
+        160, 161, 162, 163, 164, 166,
+        167, 168, 170, 171, 213
+      ]
+
+      ids = Dojo.load_attributes_from_yaml.map { |d| d['id'] }
+      max_id = ids.max
+      missing_ids = (1..max_id).to_a - ids
+
+      expect(missing_ids).to match_array(allowed_missing_ids)
+    end
+  end
 end
