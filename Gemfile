@@ -75,33 +75,30 @@ gem 'net-http'
 gem 'uri'
 
 group :development do
-  gem 'flamegraph', require: false
+  gem 'flamegraph',         require: false
+  gem 'memory_profiler',    require: false
+  gem 'rack-mini-profiler', require: false
+  gem 'stackprof',          require: false
   gem 'letter_opener_web'
   gem 'listen'
-  gem 'memory_profiler', require: false
-  gem 'rack-mini-profiler', require: false
   gem 'solargraph'
   gem 'spring'
-  gem 'stackprof', require: false
   gem 'web-console'
 end
 
 group :development, :test do
   gem 'rake'
+  gem 'rspec-rails', '~> 6.1.1'
   gem 'rspec-retry'
 
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 6.1.1'
   gem 'selenium-webdriver'
 
-  gem 'dotenv-rails'
-end
-
-group :test do
   gem 'rails-controller-testing'
-end
+  gem 'dotenv-rails'
 
-# Enable to edit on GitHub Codespaces
-# https://github.com/coderdojo-japan/coderdojo.jp/pull/1526
-gem 'mini_racer'
+  # NOTE: This enable GitHub Codespaces. Uncomment for YAGNI.
+  # https://github.com/coderdojo-japan/coderdojo.jp/pull/1526
+  #gem 'mini_racer'
+end

@@ -275,12 +275,6 @@ GEM
       letter_opener (~> 1.9)
       railties (>= 6.1)
       rexml
-    libv8-node (23.6.1.0)
-    libv8-node (23.6.1.0-aarch64-linux)
-    libv8-node (23.6.1.0-arm64-darwin)
-    libv8-node (23.6.1.0-x86_64-darwin)
-    libv8-node (23.6.1.0-x86_64-linux)
-    libv8-node (23.6.1.0-x86_64-linux-musl)
     lint_roller (1.1.0)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -299,8 +293,6 @@ GEM
     memoist (0.16.2)
     memory_profiler (1.1.0)
     mini_mime (1.1.5)
-    mini_racer (0.18.1)
-      libv8-node (~> 23.6.1.0)
     minitest (5.25.5)
     msgpack (1.8.0)
     multi_json (1.15.0)
@@ -593,7 +585,6 @@ DEPENDENCIES
   letter_opener_web
   listen
   memory_profiler
-  mini_racer
   net-http
   ostruct
   pg
