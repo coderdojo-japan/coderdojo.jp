@@ -1,6 +1,6 @@
 <% provide(:title, '『ポケモンと学ぶ初めてのプログラミング』素材ダウンロードに参加する皆さまへ') %>
 <% provide(:desc,  '『ポケモンと学ぶ初めてのプログラミング』のワークショップで必要となるポケモン素材のダウンロードページです。') %>
-<% provide(:url,         '/pokemon/downloads') %>
+<% provide(:url,         '/pokemon/download') %>
 <% provide(:meta_image,  '/img/pokemon_scratch.png') %>
 
 <div class="container" style="line-height: 2.2em;">
@@ -12,9 +12,9 @@
     <p style="padding-top: 20px;">
       ボタンをクリックして、<br class="ignore-pc" />ポケモン素材をダウンロードしよう！
     </p>
-    <%= link_to @presigned_url, class: "btn-blue", style: "max-width:320px; display:block; margin:20px auto 100px;" do %>
+    <%=# link_to @presigned_url, class: "btn-blue", style: "max-width:320px; display:block; margin:20px auto 100px;" do %>
       <i class="fas fa-folder-download white"></i>
       ポケモン素材をダウンロードする
-    <% end %>
+    <%# end %>
   </section>
 </div> 

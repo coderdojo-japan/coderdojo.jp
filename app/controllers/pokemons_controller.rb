@@ -9,7 +9,7 @@ class PokemonsController < ApplicationController
   # GET /pokemon/workshop
   def workshop; end
 
-  # POST /pokemon
+  # POST /pokemon (Disabled as v2 released)
   def create
     pokemon = Pokemon.create(
       email:            params[:email],
@@ -24,7 +24,7 @@ class PokemonsController < ApplicationController
     redirect_to pokemon_download_path(key: pokemon.download_key)
   end
 
-  # GET /pokemon/download
+  # GET /pokemon/download (Disabled as v2 released)
   def show
     pokemon = Pokemon.find_by(download_key: params[:key])
     if pokemon.nil?
