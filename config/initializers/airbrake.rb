@@ -9,14 +9,14 @@
 #
 # Configuration details:
 # https://github.com/airbrake/airbrake-ruby#configuration
-if (project_id = ENV['AIRBRAKE_PROJECT_ID']) &&
+if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
    project_key = (ENV['AIRBRAKE_PROJECT_KEY'] || ENV['AIRBRAKE_API_KEY'])
   Airbrake.configure do |c|
     # You must set both project_id & project_key. To find your project_id and
     # project_key navigate to your project's General Settings and copy the
     # values from the right sidebar.
     # https://github.com/airbrake/airbrake-ruby#project_id--project_key
-    c.project_id = project_id
+    c.project_id  = project_id
     c.project_key = project_key
 
     # Configures the root directory of your project. Expects a String or a
@@ -43,7 +43,7 @@ if (project_id = ENV['AIRBRAKE_PROJECT_ID']) &&
     # unwanted environments such as :test.  NOTE: This option *does not* work if
     # you don't set the 'environment' option.
     # https://github.com/airbrake/airbrake-ruby#ignore_environments
-    c.ignore_environments = %w[test]
+    c.ignore_environments = %w[test staging development]
 
     # A list of parameters that should be filtered out of what is sent to
     # Airbrake. By default, all "password" attributes will have their contents
