@@ -44,12 +44,6 @@ gem 'rack-user_agent'
 # For Pokemon image file downloads
 gem 'aws-sdk-s3', '~> 1'
 
-# Following warning are displayed and for prevention
-# warning: already initialized constant Net::ProtocRetryError
-# https://github.com/ruby/net-imap/issues/16
-gem 'net-http'
-gem 'uri'
-
 group :development do
   gem 'flamegraph',         require: false
   gem 'memory_profiler',    require: false

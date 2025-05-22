@@ -282,8 +282,6 @@ GEM
     multi_json (1.15.0)
     multipart-post (2.4.1)
     mutex_m (0.3.0)
-    net-http (0.6.0)
-      uri
     net-imap (0.5.8)
       date
       net-protocol
@@ -514,7 +512,6 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.3)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -568,7 +565,6 @@ DEPENDENCIES
   letter_opener_web
   listen
   memory_profiler
-  net-http
   pg
   puma
   puma_worker_killer
@@ -593,7 +589,6 @@ DEPENDENCIES
   solargraph
   spring
   stackprof
-  uri
   web-console
 
 RUBY VERSION
