@@ -134,7 +134,7 @@ Doorkeeperのイベントを取得するために、[こちらでPublic API Acce
 
 - テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/.github/workflows/test.yml)
 - デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
-- デプロイ後: [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/Procfile)
+- デプロイ後: [script/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/script/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/Procfile)
 
 GitHub Actions に `deploy` workflow を入れることもできましたが、次の２つの目的から現在は分離しています。
 
@@ -148,7 +148,7 @@ GitHub Actions に `deploy` workflow を入れることもできましたが、�
 
 ### [:gem:](#howto-develop-tasks) CI で実行される各種 Ruby スクリプト (Rake タスク)
 
-最新版は [scripts/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/scripts/release.sh) からご確認いただけます。
+最新版は [script/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/script/release.sh) からご確認いただけます。
 
 ```console
 # データベースのマイグレーション
