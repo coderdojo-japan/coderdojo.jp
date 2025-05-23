@@ -2,9 +2,10 @@
 SitemapGenerator::Sitemap.default_host = "https://coderdojo.jp"
 
 # NOTE: Ping to search engines is outdated
+#
 # Bingのping APIは廃止され、IndexNowに移行 https://github.com/kjvarga/sitemap_generator/issues/391
 # Google も非推奨になった: https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping
-
+#
 # TODO: This is workaround. Will be deleted in the future release.
 # https://github.com/kjvarga/sitemap_generator/issues/432
 SitemapGenerator::Sitemap.search_engines.delete(:google)
