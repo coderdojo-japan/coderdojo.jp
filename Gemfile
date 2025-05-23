@@ -5,7 +5,7 @@ gem 'bootsnap'
 gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
-gem 'rails', '~> 7.2.0'
+gem 'rails', '~> 8.0.0'
 
 gem 'jbuilder'
 gem 'jquery-rails'
