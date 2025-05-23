@@ -561,6 +561,7 @@ DEPENDENCIES
   letter_opener_web
   listen
   memory_profiler
+  ostruct
   pg
   puma
   puma_worker_killer

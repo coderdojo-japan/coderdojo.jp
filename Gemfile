@@ -18,6 +18,7 @@ gem 'sass-rails', '>= 5'
 # Add bundled gems for Ruby 3.3+
 # https://gihyo.jp/article/2024/01/ruby3.3-bundled-gems
 gem 'csv'
+gem 'ostruct' # Depended by 'koala' gem and shown at 'deploy' job in Actions (rake assets:precompile)
 
 gem 'rambulance'         # Error handling pages: https://github.com/yuki24/rambulance
 gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
