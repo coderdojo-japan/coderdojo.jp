@@ -5,7 +5,7 @@ class DojoEventService < ApplicationRecord
   belongs_to :dojo
   has_many :upcoming_events, dependent: :destroy
 
-  enum name: EXTERNAL_SERVICES + INTERNAL_SERVICES
+  enum :name, EXTERNAL_SERVICES + INTERNAL_SERVICES
 
   validates :name, presence: true
   validates :group_id, uniqueness: { scope: :name }, unless: Proc.new { |a| a.group_id.blank? }
