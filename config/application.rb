@@ -9,16 +9,12 @@ Bundler.require(*Rails.groups)
 module CoderdojoJp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    # Each version's default can be checked at `config/initializers/new_framework_defaults_*.rb`
-    config.load_defaults 7.1
-
-    # パフォーマンス最適化: autoloadパスを$LOAD_PATHに追加しない
-    config.add_autoload_paths_to_load_path = false
+    config.load_defaults 7.2
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    config.autoload_lib(ignore: %w(assets tasks))
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
