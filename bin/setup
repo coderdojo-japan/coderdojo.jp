@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require "fileutils"
+require "active_support/time"
 
 APP_ROOT = File.expand_path("..", __dir__)
 APP_NAME = "coderdojo-jp"
@@ -29,7 +30,7 @@ FileUtils.chdir APP_ROOT do
   system! 'bin/rails dojos:update_db_by_yaml'
   system! 'bin/rails dojo_event_services:upsert'
 
-  today = Time.zone.today
+  today = Time.now.in_time_zone('Tokyo').to_date
   from  = (today - 90).strftime('%Y%m')
   to    = today.prev_month.strftime('%Y%m')
   if ENV['DOORKEEPER_API_TOKEN']
