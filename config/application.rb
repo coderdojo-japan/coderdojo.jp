@@ -32,5 +32,8 @@ module CoderdojoJp
 
     # Fixture paths
     config.fixture_paths = [Rails.root.join('spec/fixtures')]
+
+    # Rails 8.0: `to_time` will always preserve the full timezone in Rails 8.1.
+    config.active_support.to_time_preserves_timezone = :zone
   end
 end
