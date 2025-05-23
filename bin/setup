@@ -29,19 +29,21 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Upserting application data =="
   system! 'bin/rails dojos:update_db_by_yaml'
   system! 'bin/rails dojo_event_services:upsert'
+  system! "bin/rails statistics:aggregation[-,-,static_yaml]"
 
-  today = Time.now.in_time_zone('Tokyo').to_date
-  from  = (today - 90).strftime('%Y%m')
-  to    = today.prev_month.strftime('%Y%m')
-  if ENV['DOORKEEPER_API_TOKEN']
-    system! "bin/rails statistics:aggregation[#{from},#{to}]"
-    system! 'bin/rails upcoming_events:aggregation'
-  else
-    puts doorkeeper_message
-    system! "bin/rails statistics:aggregation[#{from},#{to},connpass]"
-    system! "bin/rails statistics:aggregation[#{from},#{to},facebook]"
-    system! 'bin/rails upcoming_events:aggregation[connpass]'
-  end
+  #today = Time.now.in_time_zone('Tokyo').to_date
+  #from  = (today - 90).strftime('%Y%m')
+  #to    = today.prev_month.strftime('%Y%m')
+  #if ENV['DOORKEEPER_API_TOKEN'] && ENV['FIXIE_URL']
+  #  system! "bin/rails statistics:aggregation[#{from},#{to}]"
+  #  system! 'bin/rails upcoming_events:aggregation'
+  #elsif ENV['DOORKEEPER_API_TOKEN']
+  #  system! "bin/rails statistics:aggregation[#{from},#{to},connpass]"
+  #  system! "bin/rails statistics:aggregation[#{from},#{to},facebook]"
+  #  system! 'bin/rails upcoming_events:aggregation[connpass]'
+  #else
+  #  puts event_services_message
+  #end
 
   puts "\n== Removing old logs and tempfiles =="
   system! "bin/rails log:clear tmp:clear"
@@ -54,18 +56,13 @@ FileUtils.chdir APP_ROOT do
   # system "curl -Is https://#{APP_NAME}.test/up | head -n 1"
 end
 
-def doorkeeper_message
+def event_services_message
   <<~MESSAGE
 
-  環境変数 DOORKEEPER_API_TOKEN が設定されていないため、
-  Doorkeeper API を使ったイベント情報の取得をスキップします。
+  環境変数 DOORKEEPER_API_TOKEN と FIXIE_URL が設定されていないため、
+  Doorkeeper API や connpass API を使ったイベント情報の取得をスキップします。
 
-  Doorkeeper のイベントを取得するためには、
-  下記ページから Doorkeeper API Token を取得し、
-  環境変数 DOORKEEPER_API_TOKEN に設定してください。
-  https://manage.doorkeeper.jp/user/oauth/applications
-
-  環境変数設定後に、bin/setup を再実行してください！
-
+  なお API 経由でイベント情報を取得しなくても、rails server は実行可能です。
+  もし API 経由でイベント情報を取得したい場合は開発チームにご連絡ください。
   MESSAGE
 end
