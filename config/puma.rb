@@ -46,11 +46,12 @@ pidfile ENV["PIDFILE"] if ENV["PIDFILE"]
 # process behavior so workers use less memory.
 preload_app!
 
-before_fork do
-  # NOTE: We use Rolling Restarts on Heroku with Puma web server
-  # https://devcenter.heroku.com/articles/ruby-memory-use#too-many-workers-over-time
-  # https://github.com/schneems/puma_worker_killer#only-turn-on-rolling-restarts
-  require 'puma_worker_killer'
-
-  PumaWorkerKiller.enable_rolling_restart # Default is every 6 hours
-end
+# NOTE: Enable this mode when we switch from `single` to `cluster` mode (worker count > 0).
+# https://github.com/puma/puma/issues/2950
+#before_fork do
+#  # NOTE: We use Rolling Restarts on Heroku with Puma web server
+#  # https://devcenter.heroku.com/articles/ruby-memory-use#too-many-workers-over-time
+#  # https://github.com/schneems/puma_worker_killer#only-turn-on-rolling-restarts
+#  require 'puma_worker_killer'
+#  PumaWorkerKiller.enable_rolling_restart # Default is every 6 hours
+#end
