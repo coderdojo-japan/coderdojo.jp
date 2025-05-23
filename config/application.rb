@@ -33,6 +33,11 @@ module CoderdojoJp
     # Fixture paths
     config.fixture_paths = [Rails.root.join('spec/fixtures')]
 
+    # TODO: The following config should be switched to its default value `true`, but not urgent.
+    # Rails 5.0: Require `belongs_to` associations by default. Previous versions had false.
+    # https://railsguides.jp/configuring.html#config-active-record-belongs-to-required-by-default
+    config.active_record.belongs_to_required_by_default = false
+
     # Rails 8.0: `to_time` will always preserve the full timezone in Rails 8.1.
     config.active_support.to_time_preserves_timezone = :zone
   end
