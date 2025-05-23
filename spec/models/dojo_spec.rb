@@ -82,7 +82,7 @@ RSpec.describe Dojo, :type => :model do
         167, 168, 170, 171, 213
       ]
 
-      ids = Dojo.load_attributes_from_yaml.map { |d| d['id'] }
+      ids = Dojo.load_attributes_from_yaml.map { it['id'] }
       max_id = ids.max
       missing_ids = (1..max_id).to_a - ids
 
