@@ -29,10 +29,9 @@ FileUtils.chdir APP_ROOT do
   system! 'bin/rails dojos:update_db_by_yaml'
   system! 'bin/rails dojo_event_services:upsert'
 
-  today = Date.today
-  from = (today - 90).strftime('%Y%m')
-  to   = today.prev_month.strftime('%Y%m')
-
+  today = Time.zone.today
+  from  = (today - 90).strftime('%Y%m')
+  to    = today.prev_month.strftime('%Y%m')
   if ENV['DOORKEEPER_API_TOKEN']
     system! "bin/rails statistics:aggregation[#{from},#{to}]"
     system! 'bin/rails upcoming_events:aggregation'
