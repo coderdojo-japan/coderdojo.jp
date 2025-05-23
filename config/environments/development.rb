@@ -72,6 +72,9 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  pf_host = "#{ENV['CODESPACE_NAME']}-3000.#{pf_domain}"
+  config.hosts << pf_host
+  config.hosts << '.ngrok.io'
   config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
 
   # Raise error when a before_action's only/except options reference missing actions.
@@ -85,8 +88,4 @@ Rails.application.configure do
   config.action_dispatch.default_headers = {
     'X-Frame-Options' => "ALLOW-FROM #{pf_domain}"
   }
-
-  pf_host = "#{ENV['CODESPACE_NAME']}-3000.#{pf_domain}"
-  config.hosts << pf_host
-  config.hosts << '.ngrok.io'
 end
