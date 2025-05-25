@@ -22,7 +22,10 @@
       <li data-toggle="tooltip"
           data-placement="bottom"
           data-html="true"
-          data-template='<div class="tooltip tags-more-tooltip" role="tooltip" style="background-color: #99CCFF; opacity:1;"><div class="tooltip-arrow"></div><div class="tooltip-inner" style="background-color: #99CCFF;color :#fff; opacity:1;"></div></div>'
+          data-template='<div class="tooltip tags-more-tooltip" role="tooltip">
+		           <div class="tooltip-arrow"></div>
+		           <div class="tooltip-inner"></div>
+		         </div>'
           title="<%= dojo.tags[5..].join(', ') %>">...</li>
     <% end %>
   </ul>
