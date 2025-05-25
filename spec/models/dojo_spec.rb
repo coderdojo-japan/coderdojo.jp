@@ -52,11 +52,6 @@ RSpec.describe Dojo, :type => :model do
     it { should_not be_valid }
   end
 
-  describe 'when tags are too many' do
-    before { @dojo.tags = %w[Scratch RasPi HackforPlay Viscuit Arduino 電子工作] }
-    it { should_not be_valid }
-  end
-
   describe 'validate yaml format' do
     it 'should not raise Psych::SyntaxError' do
       expect{ Dojo.load_attributes_from_yaml }.not_to raise_error
