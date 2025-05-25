@@ -78,4 +78,7 @@ Rails.application.configure do
 
   # Enable to edit on GitHub Codespaces && allow requests from our preview domain.
   config.action_dispatch.default_headers = { 'X-Frame-Options' => "ALLOW-FROM #{pf_domain}" }
+
+  # Enable to compile Sass like custom.scss whenever accessed in Dev environment.
+  config.assets.compile = true
 end
