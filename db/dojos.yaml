@@ -47,14 +47,16 @@
   created_at: '2017-09-20'
   name: 恵庭
   prefecture_id: 1
-  url: https://www.facebook.com/CoderDojoEniwa/
+  url: https://recoderdojoeniwa.github.io/HomePage/
   logo: "/img/dojos/eniwa.webp"
-  description: 恵庭市で月2回開催
+  description: 恵庭市で毎月最終日曜日開催
   tags:
   - Scratch
-  - Progate
+  - Godot
   - Minecraft
-  - 電子工作
+  - CAD、3Dプリンタ
+  - C、Python、Rust etc...
+  - Unity
 - id: 261
   order: '012173'
   created_at: '2021-01-09'
