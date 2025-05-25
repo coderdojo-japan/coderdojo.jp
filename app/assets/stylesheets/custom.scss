@@ -854,22 +854,33 @@ body>footer a:hover {
   color: #ccc
 }
 
+// Dojo tags style
 .tags {
   margin: 0 5px;
   padding: 0;
   list-style: none;
   font-size: 13px;
-}
 
-.tags>li {
-  display: inline-block;
-  font-size: 80%;
-  color: #fff;
-  border-radius: .3em;
-  border: 1px solid #e8e8e8;
-  padding: .2em .8em;
-  margin: .1em;
-  background: #99CCFF
+  li {
+    display: inline-block;
+    font-size: 80%;
+    color: #fff;
+    border-radius: .3em;
+    border: 1px solid #e8e8e8;
+    padding: .2em .8em;
+    margin: .1em;
+    background: #99CCFF
+  }
+
+  // Tags after 5th tag are shown as Bootstrap tooltip.
+  .tooltip.tags-more-tooltip .tooltip-inner {
+    background-color: #99CCFF !important;
+    color: #fff !important;
+    opacity: 1 !important;
+  }
+  .tooltip.tags-more-tooltip .tooltip-arrow {
+    border-bottom-color: #99CCFF !important;
+  }
 }
 
 .title>h1 {
