@@ -68,6 +68,16 @@ if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
   # (under context/versions/dependencies).
   # Airbrake.add_filter(Airbrake::Filters::DependencyFilter.new)
 
+  # NOTE: SIGTERM is a standard signal sent by the hosting environment (e.g., Heroku)
+  # when it needs to stop an existing Puma process, typically during a new deployment/restart.
+  # Puma traps this signal, which surfaces as SignalException: SIGTERM in the stack trace from launcher.rb.
+  # It does not necessarily indicate a bug in the application.
+  Airbrake.add_filter do |notice|
+    if notice.exception.is_a?(SignalException) && notice.exception.message == 'SIGTERM'
+      notice.ignore!
+    end
+  end
+
   # If you want to convert your log messages to Airbrake errors, we offer an
   # integration with the Logger class from stdlib.
   # https://github.com/airbrake/airbrake#logger
