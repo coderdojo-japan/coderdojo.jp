@@ -13,15 +13,15 @@ class Book
     end
 
     def find(title)
-      Dir.glob("#{DIR_PATH}/#{title}/*.html.erb").sort.map do |filename|
-        self.new(title, File.basename(filename, '.*'))
+      Dir.glob("#{DIR_PATH}/#{title}/*.html.erb").sort.map do |page|
+        self.new(title, File.basename(page, '.*'))
       end
     end
 
-    def exist?(title, filename)
-      filename.nil? ?
+    def exist?(title, page)
+      page.nil? ?
         self.find(title).any? :
-        self.find(title).map(&:filename).include?(filename + ".html")
+        self.find(title).map(&:filename).include?(page + ".html")
     end
   end
 
