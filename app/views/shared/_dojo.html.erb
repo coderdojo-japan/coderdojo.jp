@@ -5,17 +5,30 @@
     <span class="dojo-name">
       <%= link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener" %>
       <% if not dojo.counter == 1 %>
-        <span class="dojo-counter" data-original-title="道場数"
+        <span class="dojo-counter"
+	      data-original-title="道場数"
               data-placement="bottom"
               data-toggle="tooltip"><%= dojo.counter %></span>
       <% end %>
     </span>
   </header>
+
   <ul class="tags">
-    <% dojo.tags.each do |tag| %>
+    <% dojo.tags.first(5).each do |tag| %>
       <li><%= tag %></li>
     <% end %>
+
+    <% if dojo.tags.drop(5).any? %>
+      <li class="tags-more"
+          data-toggle="tooltip" 
+          data-placement="bottom" 
+          data-html="true"
+          title="<%= dojo.tags[5..].join(', ') %>">
+	...
+      </li>
+    <% end %>
   </ul>
+
   <p class="dojo-description">
     <%= dojo.description %>
     <% if dojo.is_private %>
