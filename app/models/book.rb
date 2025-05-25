@@ -19,7 +19,9 @@ class Book
     end
 
     def exist?(title, filename)
-      self.find(title).map(&:filename).include?(filename)
+      filename.nil? ?
+        self.find(title).any? :
+        self.find(title).map(&:filename).include?(filename + ".html")
     end
   end
 

@@ -96,12 +96,15 @@ Rails.application.routes.draw do
   get "/.well-known/acme-challenge/:id" => "static_pages#lets_encrypt"
   get "/.well-known/security.txt"       => "static_pages#security"
 
-  # CoderDojo Books from Sotechsha
-  get "/sotechsha"       => "sotechsha_pages#index"
-  get "/sotechsha/:page" => "sotechsha_pages#show"
-
-  get "/sotechsha2"       => "sotechsha2_pages#index"
-  get "/sotechsha2/:page" => "sotechsha2_pages#show"
+  # CoderDojo Books such as published from ソーテック社
+  #get "/sotechsha"       => "sotechsha_pages#index"
+  #get "/sotechsha/:page" => "sotechsha_pages#show"
+  get "/sotechsha1", to: redirect('/sotechsha')
+  get "/sotechsha"        => "books#sotechsha1_index"
+  get "/sotechsha/:page"  => "books#sotechsha1_show"
+  get "/sotechsha2"       => "books#sotechsha2_index"
+  get "/sotechsha2/:page" => "books#sotechsha2_show"
+  #get "/sotechsha/sozai", to: redirect('/sotechsha/gazou')
 
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
