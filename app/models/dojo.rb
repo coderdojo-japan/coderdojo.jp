@@ -23,8 +23,8 @@ class Dojo < ApplicationRecord
   validates :description, presence: true, length: { maximum: 50 }
   validates :logo,        presence: false
   validates :tags,        presence: true
-  validate  :number_of_tags
   validates :url,         presence: true
+  #validate  :number_of_tags
 
   class << self
     def load_attributes_from_yaml
@@ -69,10 +69,12 @@ class Dojo < ApplicationRecord
 
   private
 
-  def number_of_tags
-    num_of_tags = self.tags.length
-    if num_of_tags > 5
-      errors.add(:number_of_tags, 'should be 1 to 5')
-    end
-  end
+  # Now 6+ tags are available since this PR:
+  # https://github.com/coderdojo-japan/coderdojo.jp/pull/1697
+  #def number_of_tags
+  #  num_of_tags = self.tags.length
+  #  if num_of_tags > 5
+  #    errors.add(:number_of_tags, 'should be 1 to 5')
+  #  end
+  #end
 end
