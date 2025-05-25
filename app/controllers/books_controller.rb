@@ -14,9 +14,9 @@ class BooksController < ApplicationController
   private
 
   def render_book_page(params)
-    book_name = params[:action].split('_').first
-    Book.exist?(book_name, params[:page]) ?
-      render("books/#{book_name}/#{params[:page]}") :
-      redirect_to('/' + book_name) # TODO: Show flash
+    book_title = params[:action].split('_').first
+    Book.exist?(book_title, params[:page]) ?
+      render("books/#{book_title}/#{params[:page]}") :
+      redirect_to("/#{book_title}", flash: { warning: '該当するページが見つかりませんでした 💦'} )
   end
 end
