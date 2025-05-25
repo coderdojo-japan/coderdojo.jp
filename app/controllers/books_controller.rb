@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   # NOTE: The following URLs are hard-coded by published books.
   # And the books are just a few, so not a big problem for now.
+  # https://github.com/coderdojo-japan/coderdojo.jp/pull/1696
 
   # GET /sotechsha[2]
   def sotechsha1_index; render("books/sotechsha1/index"); end
