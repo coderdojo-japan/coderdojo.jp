@@ -1482,10 +1482,13 @@
   description: 調布市で毎月開催
   tags:
   - Scratch
+  - Viscuit
   - JavaScript
   - Webサイト
   - Ruby
   - ラズベリーパイ
+  - Unity
+  - Python
 - id: 212
   order: '132080'
   is_active: false

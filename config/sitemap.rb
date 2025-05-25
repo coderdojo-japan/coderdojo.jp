@@ -10,6 +10,8 @@ SitemapGenerator::Sitemap.default_host = "https://coderdojo.jp"
 # https://github.com/kjvarga/sitemap_generator/issues/432
 SitemapGenerator::Sitemap.search_engines.delete(:google)
 
+SitemapGenerator::Sitemap.overwrite = true
+
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
