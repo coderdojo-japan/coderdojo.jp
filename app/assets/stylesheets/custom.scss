@@ -873,13 +873,11 @@ body>footer a:hover {
   }
 
   // Tags after 5th tag are shown as Bootstrap tooltip.
+  .tooltip.tags-more-tooltip .tooltip-arrow { border-bottom-color: #99CCFF !important; }
   .tooltip.tags-more-tooltip .tooltip-inner {
     background-color: #99CCFF !important;
     color: #fff !important;
     opacity: 1 !important;
-  }
-  .tooltip.tags-more-tooltip .tooltip-arrow {
-    border-bottom-color: #99CCFF !important;
   }
 }
 
