@@ -7,8 +7,8 @@ RSpec.describe UpcomingEvents::Aggregation do
 
   describe '.run' do
     before do
-      @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com')
-      @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com')
+      @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://dojo1.com', prefecture_id: 13)
+      @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://dojo2.com', prefecture_id: 13)
       @es1 = create(:dojo_event_service, dojo_id: @d1.id, name: :connpass,   group_id: 9876)
       @es2 = create(:dojo_event_service, dojo_id: @d2.id, name: :doorkeeper, group_id: 5555)
     end

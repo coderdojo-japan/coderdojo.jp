@@ -6,7 +6,8 @@ RSpec.describe Dojo, :type => :model do
                  order: 0, description: "東京都世田谷区で毎週開催",
                  logo: "https://graph.facebook.com/346407898743580/picture?type=large",
                  url:  "http://tokyo.coderdojo.jp/",
-                 tags: ["Scratch", "Webサイト", "ゲーム"])
+                 tags: ["Scratch", "Webサイト", "ゲーム"],
+                 prefecture_id: 13)
   end
 
   subject { @dojo }
