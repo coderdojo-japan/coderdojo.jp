@@ -212,7 +212,7 @@
   description: 登米市で毎月開催
   tags:
   - Scratch
-  - 3Dプリンター
+  - 3Dプリンタ
   - 3D CAD
   - Pepper
   - micro:bit
@@ -256,7 +256,7 @@
   - Minecraft
   - Webサイト
   - 電子工作
-  - 3Dプリンター
+  - 3Dプリンタ
 - id: 139
   order: '052035'
   is_active: false
@@ -1310,8 +1310,8 @@
   tags:
   - Scratch
   - micro:bit
-  - 3Dプリンター
-  - UVプリンター
+  - 3Dプリンタ
+  - UVプリンタ
   - レーザーカッター
   - 刺繍ミシン
 - id: 15
@@ -4082,7 +4082,7 @@
   - toio
   - micro:bit
   - Drone
-  - 3Dプリンター
+  - 3Dプリンタ
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
@@ -4121,7 +4121,7 @@
   - Scratch
   - micro:bit
   - toio
-  - 3Dプリンター
+  - 3Dプリンタ
 - id: 57
   order: '473251'
   created_at: '2016-12-19'
