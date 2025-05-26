@@ -43,7 +43,7 @@
   - 電子工作
 - id: 100
   order: '012319'
-  note: '2024-07-21 https://www.facebook.com/CoderDojoEniwa/posts/pfbid0SfrehQRyN9LS78ewt6y2coxHiKhvy1ddg77zCBhZoKyqBD4MYrK8XH9FhKDBJXF2l'
+  note: 2024-07-21 https://www.facebook.com/CoderDojoEniwa/posts/pfbid0SfrehQRyN9LS78ewt6y2coxHiKhvy1ddg77zCBhZoKyqBD4MYrK8XH9FhKDBJXF2l
   created_at: '2017-09-20'
   name: 恵庭
   prefecture_id: 1
@@ -513,7 +513,7 @@
   - Islay
 - id: 8
   order: '082244'
-  note: 'Active - 2025-04-05 http://coderdojo-moriya.com/archives/5011'
+  note: Active - 2025-04-05 http://coderdojo-moriya.com/archives/5011
   created_at: '2016-07-12'
   name: 守谷
   prefecture_id: 8
@@ -712,7 +712,7 @@
   - Unity
 - id: 10
   order: '112305'
-  note: 'Active for years.'
+  note: Active for years.
   created_at: '2012-07-02'
   name: ひばりヶ丘
   prefecture_id: 11
@@ -885,7 +885,7 @@
   - Scratch
 - id: 23
   order: '122173'
-  note: 'Active for years.'
+  note: Active for years.
   created_at: '2014-09-22'
   name: 柏
   prefecture_id: 12
@@ -1019,7 +1019,7 @@
   - 映像制作
 - id: 158
   order: '122303'
-  note: '2024-09-21 https://x.com/KEITAROinNRT/status/1837328724599189598'
+  note: 2024-09-21 https://x.com/KEITAROinNRT/status/1837328724599189598
   is_active: true
   created_at: '2018-11-17'
   name: 成田
@@ -1130,7 +1130,7 @@
   - Webサイト
 - id: 331
   order: '131032'
-  note: 'Active - 2025-03-09 に開催 https://note.com/coderdojo_konan/n/n63193aa2048c'
+  note: Active - 2025-03-09 に開催 https://note.com/coderdojo_konan/n/n63193aa2048c
   created_at: '2024-12-19'
   name: 品川港南
   prefecture_id: 13
@@ -1286,7 +1286,7 @@
 - id: 19
   order: '131130'
   is_active: true
-  note: Re-activated @ 2024-04-01
+  note: Re-activated @ 2024-04-01.
   created_at: '2020-01-30'
   name: 渋谷
   prefecture_id: 13
@@ -1998,7 +1998,7 @@
   - LEGO
 - id: 257
   order: '162086'
-  note: '2024-12-07 https://coderdojo-tonami.org/event/weekly-188th/'
+  note: 2024-12-07 https://coderdojo-tonami.org/event/weekly-188th/
   created_at: '2020-11-13'
   name: となみ
   prefecture_id: 16
@@ -2063,7 +2063,7 @@
 - id: 88
   order: '192015'
   is_active: true
-  note: 'Re-activated @ 2024-11-15 https://www.facebook.com/share/p/1a51trhzQo/'
+  note: Re-activated @ 2024-11-15 https://www.facebook.com/share/p/1a51trhzQo/
   created_at: '2017-05-29'
   name: 甲府
   prefecture_id: 19
@@ -2576,7 +2576,7 @@
 - id: 62
   order: '242039'
   is_active: true
-  note: '2025-03-16 https://www.instagram.com/p/DG990t1PjEk/?img_index=1'
+  note: 2025-03-16 https://www.instagram.com/p/DG990t1PjEk/?img_index=1
   created_at: '2016-12-22'
   name: 伊勢
   prefecture_id: 24
@@ -3082,7 +3082,7 @@
   - 電子工作
 - id: 48
   order: '281107'
-  note: 'Active - 2025-03-08 https://www.facebook.com/CoderDojoKobe/posts/pfbid02oraVjAR3BVbVnK7eGhTMrjBSEWEnTassxb9fkx3kTWajccUNDXx8s359HYs6tX6Vl'
+  note: Active - 2025-03-08 https://www.facebook.com/CoderDojoKobe/posts/pfbid02oraVjAR3BVbVnK7eGhTMrjBSEWEnTassxb9fkx3kTWajccUNDXx8s359HYs6tX6Vl
   created_at: '2016-09-28'
   name: 神戸
   prefecture_id: 28
@@ -3224,7 +3224,7 @@
   - Minecraft
 - id: 36
   order: '292095'
-  note: 'Active - 奈良/生駒/平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/'
+  note: Active - 奈良/生駒/平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
   created_at: '2016-04-25'
   name: 生駒
   prefecture_id: 29
@@ -3299,7 +3299,7 @@
   - Viscuit
 - id: 47
   order: '302015'
-  note: 'Active for years - 2025-03-16 https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604'
+  note: Active for years - 2025-03-16 https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604
   created_at: '2016-11-01'
   name: 和歌山
   prefecture_id: 30
@@ -3320,7 +3320,7 @@
   - Scratch
 - id: 99
   order: '302066'
-  note: 'Active for years. https://coderdojo-nanki-tanabe.jimdofree.com/%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A-%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95/'
+  note: Active for years. https://coderdojo-nanki-tanabe.jimdofree.com/%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A-%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95/
   created_at: '2017-09-06'
   name: 南紀田辺
   prefecture_id: 30
@@ -3375,7 +3375,7 @@
   - CodeyRocky
 - id: 224
   order: '320005'
-  note: '2024-11-22 から別イベント管理サービスを使用 https://reserva.be/iwapro/news?search_osh_no=46684&mode=list_detail'
+  note: 2024-11-22 から別イベント管理サービスを使用 https://reserva.be/iwapro/news?search_osh_no=46684&mode=list_detail
   created_at: '2019-09-06'
   name: 大田・邑南、他
   counter: 7
@@ -3419,7 +3419,7 @@
 - id: 245
   order: '325015'
   is_active: true
-  note: '2024-06-23 https://coderdojo-tsuwano.connpass.com/event/322734/'
+  note: 2024-06-23 https://coderdojo-tsuwano.connpass.com/event/322734/
   created_at: '2020-03-10'
   name: 津和野
   prefecture_id: 32
@@ -3474,7 +3474,8 @@
   - Webアプリ
 - id: 150
   order: '332020'
-  note: Last confirmed activities were https://x.com/CoderDojoKuras1/status/1834862180405330298 @ 2024-09-14 (DojoCon Japan 2024), https://c.sanyonews.jp/programming/ @ 2024-10-10
+  note: Last confirmed activities were https://x.com/CoderDojoKuras1/status/1834862180405330298
+    @ 2024-09-14 (DojoCon Japan 2024), https://c.sanyonews.jp/programming/ @ 2024-10-10
   created_at: '2018-05-29'
   name: 倉敷
   prefecture_id: 33
@@ -3960,7 +3961,7 @@
   - Python
 - id: 55
   order: '454419'
-  note: 'Active for years - 2025-04-13 https://x.com/YoseiIto/status/1889435600337641670'
+  note: Active for years - 2025-04-13 https://x.com/YoseiIto/status/1889435600337641670
   created_at: '2016-09-15'
   name: 宮崎
   prefecture_id: 45
@@ -4000,7 +4001,7 @@
   - micro:bit
 - id: 106
   order: '472051'
-  note: '2020-08-16 から浦添と合同でイベント開催? https://www.facebook.com/coderdojo.ginowan/posts/pfbid0wKhwQAbNXcoEfEwZc9e1CxqKB7dfNZ8xmhZFf6SpxRC99vYWdrVGwBr7Y3W1GkxVl'
+  note: 2020-08-16 から浦添と合同でイベント開催? https://www.facebook.com/coderdojo.ginowan/posts/pfbid0wKhwQAbNXcoEfEwZc9e1CxqKB7dfNZ8xmhZFf6SpxRC99vYWdrVGwBr7Y3W1GkxVl
   created_at: '2017-09-20'
   name: 宜野湾
   prefecture_id: 47
@@ -4109,7 +4110,7 @@
   - Python
 - id: 336
   order: '473111'
-  note: 'Active - CoderDojo 名護と合同でイベント管理 https://coderdojo-nago.connpass.com/'
+  note: Active - CoderDojo 名護と合同でイベント管理 https://coderdojo-nago.connpass.com/
   created_at: '2025-03-28'
   name: 恩納@OIST
   prefecture_id: 47
@@ -4146,7 +4147,7 @@
   - Scratch
 - id: 318
   order: '473502'
-  note: '2025-03-24 https://note.com/code_for_haebaru/n/n2823cfb85bbc?magazine_key=mb9902e30b85a'
+  note: 2025-03-24 https://note.com/code_for_haebaru/n/n2823cfb85bbc?magazine_key=mb9902e30b85a
   created_at: '2024-05-19'
   name: 南風原
   prefecture_id: 47
