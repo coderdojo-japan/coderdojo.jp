@@ -1299,6 +1299,21 @@
   - Swift
   - JavaScript
   - デザイン
+- id: 338
+  order: '131130'
+  created_at: '2025-05-26'
+  name: 青山
+  prefecture_id: 13
+  logo: "/img/dojos/default.webp"
+  url: https://coderdojoaoyama.connpass.com/
+  description: 青山学院青山キャンパスで毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - 3Dプリンター
+  - UVプリンター
+  - レーザーカッター
+  - 刺繍ミシン
 - id: 15
   order: '131148'
   is_active: false
