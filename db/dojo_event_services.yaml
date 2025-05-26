@@ -27,12 +27,11 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
-# TODO: イベントが作成されたら c-search でイベント ID を取得する
 # 青山（東京都渋谷区）
-#- dojo_id: 338
-#  name: connpass
-#  group_id: ??? 
-#  url: https://coderdojoaoyama.connpass.com/
+- dojo_id: 338
+  name: connpass
+  group_id: 16324
+  url: https://coderdojoaoyama.connpass.com/
 
 # 磐梯
 #- dojo_id: 337
