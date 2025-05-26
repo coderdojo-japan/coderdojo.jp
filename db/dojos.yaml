@@ -1285,8 +1285,8 @@
   - JavaScript
 - id: 19
   order: '131130'
-  is_active: true
-  note: Re-activated @ 2024-04-01.
+  is_active: false
+  note: Re-activated @ 2024-04-01. Re-deactivated @ 2025/05/26 with approval from this champion.
   created_at: '2020-01-30'
   name: 渋谷
   prefecture_id: 13
