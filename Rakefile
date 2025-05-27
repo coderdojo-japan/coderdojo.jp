@@ -4,8 +4,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
-
-# Run RSspec test by: bundle exec rake test
-require "rspec/core/rake_task"
-RSpec::Core::RakeTask.new(:spec)
-task :test => :spec
