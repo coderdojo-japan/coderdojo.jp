@@ -1,4 +1,6 @@
 # For Kodaira's dojo event histories
+# NOTE: This needs google_drive gem.
+# Exec: `gem install google_drive`
 #
 # Google spread sheet url
 # https://docs.google.com/spreadsheets/d/15oTUF20IBQ99taJb3BO10Xpbn0tR-c_xmTJQUwH2M38/edit#gid=1633991574
