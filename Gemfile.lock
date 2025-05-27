@@ -164,8 +164,6 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    faraday_middleware (1.2.1)
-      faraday (~> 1.0)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -548,7 +546,6 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   faraday
-  faraday_middleware
   flamegraph
   font-awesome-rails
   google_drive

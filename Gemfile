@@ -34,7 +34,6 @@ gem 'kramdown'
 gem 'kramdown-parser-gfm'
 
 gem 'faraday'
-gem 'faraday_middleware'
 
 gem 'google_drive'
 gem 'koala'
