@@ -35,7 +35,6 @@ gem 'kramdown-parser-gfm'
 
 gem 'faraday'
 
-gem 'google_drive'
 gem 'koala'
 gem 'lazy_high_charts', '1.5.8'
 gem 'rack-attack'
