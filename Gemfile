@@ -29,18 +29,23 @@ gem 'sitemap_generator'  # Sitemap: https://github.com/kjvarga/sitemap_generator
 gem 'rss'                # Add RSS for Podcasts: https://coderdojo.jp/podcasts
 gem 'ruby-mp3info', require: 'mp3info' # For RSS feed
 
-# Rendering legal documents
+# Rendering *.md documents: https://coderdojo.jp/docs
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
 
+# Need to fetch Stats & UpcomingEvents.
+# https://coderdojo.jp/stats
+# https://coderdojo.jp/events
 gem 'faraday'
-
 gem 'koala'
 gem 'lazy_high_charts', '1.5.8'
+
+# Protect from attacks for Security
 gem 'rack-attack'
 gem 'rack-user_agent'
 
-# For Pokemon image file downloads
+# For Pokemon Workshop v1. https://coderdojo.jp/pokemon
+# But current v2 does not need this, so can be removed.
 gem 'aws-sdk-s3', '~> 1'
 
 group :development do
