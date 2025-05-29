@@ -123,6 +123,9 @@ GEM
       logger (~> 1.5)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
+    connpass_api_v2 (0.1.0)
+      faraday (>= 2.0.0)
+      faraday-mashify
     crass (1.0.6)
     csv (3.3.4)
     date (3.4.1)
@@ -144,6 +147,9 @@ GEM
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
+    faraday-mashify (1.0.0)
+      faraday (~> 2.0)
+      hashie
     faraday-multipart (1.1.0)
       multipart-post (~> 2.0)
     faraday-net_http (3.4.0)
@@ -165,6 +171,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hash-deep-merge (0.1.1)
+    hashie (5.0.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
@@ -483,6 +490,7 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass
   capybara
+  connpass_api_v2
   csv
   dotenv-rails
   factory_bot_rails
