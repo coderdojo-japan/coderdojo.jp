@@ -13,20 +13,20 @@ module UpcomingEvents
             events = @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id))
             puts "[doorkeeper] dojo_id: #{dojo.id}, group_id: #{dojo_event_service.group_id}, fetched events: #{events&.size || 0}"
             (events || []).compact.each do |e|
-              puts "[doorkeeper] event_id: #{e['id']}, title: #{e['title']}"
-              next unless e['group'].to_s == dojo_event_service.group_id
+              puts "[doorkeeper] event_id: #{e.fetch('id')}, title: #{e.fetch('title')}"
+              next unless e.fetch('group').to_s == dojo_event_service.group_id
 
-              record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e['id'])
+              record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e.fetch('id'))
               record.update!(service_name: dojo_event_service.name,
-                             event_title:  e['title'],
-                             event_url:    e['public_url'],
-                             participants: e['participants'],
-                             event_at:     Time.zone.parse(e['starts_at']),
-                             event_end_at: Time.zone.parse(e['ends_at']),
-                             event_update_at: Time.zone.parse(e['updated_at']),
-                             address:      e['address'],
-                             place:        e['venue_name'],
-                             limit:        e['ticket_limit'])
+                             event_title:  e.fetch('title'),
+                             event_url:    e.fetch('public_url'),
+                             participants: e.fetch('participants'),
+                             event_at:     Time.zone.parse(e.fetch('starts_at')),
+                             event_end_at: Time.zone.parse(e.fetch('ends_at')),
+                             event_update_at: Time.zone.parse(e.fetch('updated_at')),
+                             address:      e.fetch('address'),
+                             place:        e.fetch('venue_name'),
+                             limit:        e.fetch('ticket_limit'))
             end
           end
         end
