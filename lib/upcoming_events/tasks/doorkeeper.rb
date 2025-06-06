@@ -11,9 +11,9 @@ module UpcomingEvents
         @dojos.each do |dojo|
           dojo.dojo_event_services.for(:doorkeeper).each do |dojo_event_service|
             events = @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id))
-            puts "[doorkeeper] dojo_id: #{dojo.id}, group_id: #{dojo_event_service.group_id}, fetched events: #{events&.size || 0}"
+            puts "[Doorkeeper] dojo_id: #{dojo.id}, group_id: #{dojo_event_service.group_id}, fetched events: #{events&.size || 0}"
             (events || []).compact.each do |e|
-              puts "[doorkeeper] event_id: #{e.fetch('id')}, title: #{e.fetch('title')}"
+              puts "[Doorkeeper] event_id: #{e.fetch('id')}, title: #{e.fetch('title')}"
               next unless e.fetch('group').to_s == dojo_event_service.group_id
 
               record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e.fetch('id'))
