@@ -43,7 +43,7 @@ module EventService
 
                 # APIキーごとに、現状「1秒間に1リクエストまで」 のリクエスト制限 (スロットリング) を設けています。
                 # この制限を超過すると、HTTPステータスコード 429 Too Many Requests が返されます。
-                # cf. https://connpass.com/about/api/v2/#section/%E6%A6%82%E8%A6%81/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E9%99%90
+                # cf. https://connpass.com/about/api/v2/
                 sleep 1
               rescue ConnpassApiV2::Error => e
                 sleep 5 && retry if e.response&.status == 429
