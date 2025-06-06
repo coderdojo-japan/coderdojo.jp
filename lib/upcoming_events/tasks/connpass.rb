@@ -12,7 +12,7 @@ module UpcomingEvents
           dojo.dojo_event_services.for(:connpass).pluck(:group_id)
         end
       
-        @client.fetch_events(**@params.merge(series_id: group_ids)).each do |e|
+        @client.fetch_events(**@params.merge(group_id: group_ids)).each do |e|
           dojo_event_service = DojoEventService.find_by(group_id: e.dig('series', 'id').to_s)
           next unless dojo_event_service
       
