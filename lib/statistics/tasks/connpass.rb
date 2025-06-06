@@ -20,7 +20,7 @@ module Statistics
           dojo.dojo_event_services.for(:connpass).pluck(:group_id)
         end
 
-        @client.fetch_events(**@params.merge(series_id: group_ids)).each do |e|
+        @client.fetch_events(**@params.merge(group_id: group_ids)).each do |e|
           dojo_event_service = DojoEventService.find_by(group_id: e.dig('series', 'id').to_s)
           next unless dojo_event_service
 
@@ -28,10 +28,11 @@ module Statistics
                                dojo_name:        dojo_event_service.dojo.name,
                                service_name:     dojo_event_service.name,
                                service_group_id: dojo_event_service.group_id,
-                               event_id:     e['event_id'],
-                               event_url:    e['event_url'],
-                               participants: e['accepted'],
-                               evented_at:   Time.zone.parse(e['started_at']))
+                               event_id:         e.fetch('id'),
+                               event_url:        e.fetch('event_url'),
+                               participants:     e.fetch('accepted'),
+                               evented_at:       Time.zone.parse(e.fetch('started_at'))
+            )
         end
       end
 

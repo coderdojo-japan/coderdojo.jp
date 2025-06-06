@@ -1,25 +1,27 @@
+require 'connpass_api_v2'
+
 module EventService
   module Providers
       class Connpass
-        ENDPOINT = 'https://connpass.com/api/v1'.freeze
-        # NOTE: 期間は ym or ymd パラメータで指定(複数指定可能)、未指定時全期間が対象
-
         def initialize
-          @client = EventService::Client.new(ENDPOINT, proxy: ENV['FIXIE_URL'])
+          @client = ConnpassApiV2.client(ENV['CONNPASS_API_KEY'])
         end
 
         def search(keyword:)
-          @client.get('event/', { keyword: keyword, count: 100 })
+          @client.get_events(keyword: keyword, count: 100)
         end
 
         # NOTE: yyyymm, yyyymmdd は文字列を要素とする配列(Array[String])で指定
-        def fetch_events(series_id:, yyyymm: nil, yyyymmdd: nil)
-          series_id = series_id.join(',') if series_id.is_a?(Array)
+        def fetch_events(group_id:, yyyymm: nil, yyyymmdd: nil)
+          group_id = group_id.join(',') if group_id.is_a?(Array)
 
+          # API v1 -> v2 でパラメータ名が変更された
+          # https://connpass.com/about/api/v2/
+          # e.g. series_id -> group_id
           params = {
-            series_id: series_id,
-            start: 1,
-            count: 100
+            group_id: group_id,
+            start: 1,   # offset → start
+            count: 100  # limit → count
           }
 
           param_period_patern = []
@@ -35,17 +37,22 @@ module EventService
 
           param_period_patern.each do |param_period|
             loop do
-              # connpass は https://connpass.com/robots.txt を守らない場合は、アクセス制限を施すので、下記の sleep を入れるようにした https://connpass.com/about/api/
-              sleep 5
-              part = @client.get('event/', params.merge(param_period))
+              begin
+                args = params.merge(param_period).compact
+                res = @client.get_events(**args)
+              rescue ConnpassApiV2::Error => e
+                sleep 5 && retry if e.response&.status == 403
 
-              break if part['results_returned'].zero?
+                raise e
+              end
 
-              events.push(*part.fetch('events'))
+              break if res.results_returned.zero?
 
-              break if part.size < params[:count]
+              events.push(*res.events)
 
-              break if params[:start] + params[:count] > part['results_available']
+              break if res.events.size < params[:count]
+
+              break if params[:start] + params[:count] > res.results_available
 
               params[:start] += params[:count]
             end

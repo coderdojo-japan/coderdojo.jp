@@ -39,6 +39,7 @@ gem 'kramdown-parser-gfm'
 gem 'faraday'
 gem 'koala'
 gem 'lazy_high_charts', '1.5.8'
+gem 'connpass_api_v2' # https://github.com/sue445/connpass_api_v2-ruby
 
 # Protect from attacks for Security
 gem 'rack-attack'

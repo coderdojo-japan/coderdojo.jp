@@ -16,10 +16,10 @@ module EventService
     def connection_for(endpoint, proxy)
       Faraday.new(endpoint, proxy: proxy) do |f|
         f.response :logger if self.class.debug
-        
+
         # faraday標準のJSONパーサーを使用
         f.response :json, parser_options: { symbolize_names: true }
-        
+
         # faraday標準のエラーハンドリングを使用
         f.response :raise_error, include_request: true
 

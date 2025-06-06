@@ -32,7 +32,7 @@ RSpec.describe Statistics::Aggregation do
     subject { Statistics::Aggregation.new(from: Time.zone.today.prev_month.strftime('%Y%m')).run }
 
     it do
-      expect{ subject }.to change{ EventHistory.count }.from(0).to(3)
+      expect{ subject }.to change{ EventHistory.count }.from(0).to(2)
     end
   end
 

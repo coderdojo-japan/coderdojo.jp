@@ -6,7 +6,7 @@ module EventService
 
         def initialize
           @client = EventService::Client.new(ENDPOINT) do |c|
-            c.authorization(:Bearer, ENV.fetch('DOORKEEPER_API_TOKEN'))
+            c.request :authorization, 'Bearer', ENV.fetch('DOORKEEPER_API_TOKEN')
           end
           @default_since = '2010-07-01'.to_date.beginning_of_day
           @default_until = Time.zone.yesterday.end_of_day
