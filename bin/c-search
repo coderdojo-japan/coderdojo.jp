@@ -3,8 +3,15 @@
 require 'connpass_api_v2'
 require 'uri'
 
-puts('CONNPASS_API_KEY が設定されていません') && exit(1) if ENV['CONNPASS_API_KEY'].empty?
-puts('Usage: c-search [CONNPASS_EVENT_URL | CONNPASS_EVENT_ID]') && exit(1) if ARGV.empty?
+if ENV['CONNPASS_API_KEY'].nil?
+  puts('CONNPASS_API_KEY が設定されていません')
+  exit(1)
+end
+
+if ARGV.empty?
+  puts('Usage: c-search [CONNPASS_EVENT_URL | CONNPASS_EVENT_ID]')
+  exit(1)
+end
 
 input = ARGV[0]
 event_id = nil
