@@ -8,7 +8,7 @@ module EventService
         end
 
         def search(keyword:)
-          @client.get_events(q: keyword, count: 100)
+          @client.get_events(keyword: keyword, count: 100)
         end
 
         # NOTE: yyyymm, yyyymmdd は文字列を要素とする配列(Array[String])で指定
