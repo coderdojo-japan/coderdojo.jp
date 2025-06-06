@@ -28,10 +28,11 @@ module Statistics
                                dojo_name:        dojo_event_service.dojo.name,
                                service_name:     dojo_event_service.name,
                                service_group_id: dojo_event_service.group_id,
-                               event_id:     e['event_id'],
-                               event_url:    e['event_url'],
-                               participants: e['accepted'],
-                               evented_at:   Time.zone.parse(e['started_at']))
+                               event_id:         e.fetch('id'),
+                               event_url:        e.fetch('event_url'),
+                               participants:     e.fetch('accepted'),
+                               evented_at:       Time.zone.parse(e.fetch('started_at'))
+            )
         end
       end
 
