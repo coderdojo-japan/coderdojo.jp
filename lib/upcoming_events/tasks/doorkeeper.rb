@@ -10,7 +10,8 @@ module UpcomingEvents
       def run
         @dojos.each do |dojo|
           dojo.dojo_event_services.for(:doorkeeper).each do |dojo_event_service|
-            @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id)).each do |e|
+            events = @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id))
+            (events || []).compact.each do |e|
               next unless e['group'].to_s == dojo_event_service.group_id
 
               record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e['id'])
