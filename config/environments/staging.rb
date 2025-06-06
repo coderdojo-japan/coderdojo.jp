@@ -104,7 +104,7 @@ Rails.application.configure do
 
   # Mailer settings
   config.action_mailer.delivery_method       = :smtp
-  config.action_mailer.default_url_options   = { host: ENV['CODERDOJO_JAPAN_DEFAUL_URL'] }
+  config.action_mailer.default_url_options   = { host: ENV['CODERDOJO_JAPAN_DEFAULT_URL'] }
   ActionMailer::Base.smtp_settings           = {
     address:              'smtp.mailgun.org',
     port:                 '587',
