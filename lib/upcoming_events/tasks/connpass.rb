@@ -11,14 +11,14 @@ module UpcomingEvents
         group_ids = @dojos.flat_map do |dojo|
           dojo.dojo_event_services.for(:connpass).pluck(:group_id)
         end
-      
+
         events = @client.fetch_events(**@params.merge(group_id: group_ids))
         puts "[connpass] Fetched events: #{events.size}"
         events.each do |e|
           puts "[connpass] event_id: #{e.fetch('id')}, title: #{e.fetch('title')}"
           dojo_event_service = DojoEventService.find_by(group_id: e.dig('group', 'id').to_s)
           next unless dojo_event_service
-      
+
           record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e.fetch('id'))
           record.update!(service_name: dojo_event_service.name,
                          event_title:  e.fetch('title'),
