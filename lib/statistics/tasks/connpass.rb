@@ -29,7 +29,7 @@ module Statistics
                                service_name:     dojo_event_service.name,
                                service_group_id: dojo_event_service.group_id,
                                event_id:         e.fetch('id'),
-                               event_url:        e.fetch('event_url'),
+                               event_url:        e.fetch('url'),
                                participants:     e.fetch('accepted'),
                                evented_at:       Time.zone.parse(e.fetch('started_at'))
             )
