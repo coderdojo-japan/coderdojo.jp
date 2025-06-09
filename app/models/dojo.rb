@@ -47,6 +47,14 @@ class Dojo < ApplicationRecord
       active.group_by_region
     end
 
+    def group_by_prefecture
+      eager_load(:prefecture).default_order.group_by { |dojo| dojo.prefecture.name }
+    end
+
+    def group_by_prefecture_on_active
+      active.group_by_prefecture
+    end
+
     def aggregatable_annual_count(period)
       Hash[
         joins(:dojo_event_services)
