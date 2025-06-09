@@ -1,4 +1,5 @@
 <div id="accordion" class="panel-group" aria-multiselectable="true" role="tablist">
+ <% if @prefectures_and_dojos.present? %>
 
   <% @prefectures_and_dojos.each_with_index do |(prefecture, dojos), index| %>
     <div class="panel panel-default">
@@ -19,6 +20,8 @@
       </div>
     </div>
   <% end %>
+
+<% end %>
 </div>
 
 <script>
