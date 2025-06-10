@@ -105,4 +105,5 @@ Rails.application.routes.draw do
 
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+  mount Rambulance::Engine => "/"
 end
