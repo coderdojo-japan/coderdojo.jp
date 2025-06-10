@@ -2,7 +2,6 @@
   <% if @prefectures_and_dojos.present? %>
     <% @prefectures_and_dojos.each_with_index do |(prefecture, dojos), index| %>
       <% dojo_count = total_dojos_count(dojos) %>
-
       <div class="panel panel-default">
         <div class="panel-heading" id="heading<%= index %>" role="tab">
           <h4 class="panel-title">
@@ -18,7 +17,6 @@
           </div>
         </div>
       </div>
-
     <% end %>
   <% end %>
 </div>
