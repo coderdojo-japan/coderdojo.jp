@@ -4,6 +4,14 @@
 <%= render 'errors/header' %>
 
 <section class="introduction text-center list">
-  <h2>予期しないエラーが発生しました 😵‍💫</h2>
-  <p>現在、問題を調査しています。しばらくしてからもう一度お試しください。</p>
+  <h2>
+    予期しないエラーが発生しました 😵‍💫
+  </h2>
+  <p>
+    現在、問題を調査しています。しばらくしてからもう一度お試しください。
+    <br>
+  </p>
+  <%= render 'errors/feedback_notice' %>
 </section>
+
+<%= render 'errors/footer_links_and_timeline' %>
