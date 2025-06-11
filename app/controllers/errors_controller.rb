@@ -1,5 +1,5 @@
 class ErrorsController < ApplicationController
-  layout 'application' # エラー画面にも通常のアプリと同じレイアウトを適用
+  layout 'application'
 
   def not_found
     render status: 404 # このアクションでは app/views/errors/not_found.html.erb が使用されます
