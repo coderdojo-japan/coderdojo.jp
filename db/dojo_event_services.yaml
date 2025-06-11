@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yaml の追加順) ###
 
+# TODO: イベントが作成されたら group_id を取得する（作成されるまで group_id が取得できない）
+# 早良（福岡県福岡市早良区）
+#- dojo_id: 339
+#  name: connpass
+#  group_id: 
+#  url: https://coderdojosawara.connpass.com/
+
 # 青山（東京都渋谷区）
 - dojo_id: 338
   name: connpass
