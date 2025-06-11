@@ -106,4 +106,10 @@ Rails.application.routes.draw do
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   mount Rambulance::Engine => "/"
+
+  if Rails.env.development? || Rails.env.test?
+    get "/trigger_500", to: ->(env) { raise "Triggering 500 error" }
+    get "/trigger_422", to: "errors#unprocessable_entity"
+  end
+
 end
