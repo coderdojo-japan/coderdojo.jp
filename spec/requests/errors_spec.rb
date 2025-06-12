@@ -9,6 +9,7 @@ RSpec.describe "Errors", type: :request do
         get '/does_not_exist'
       end
       expect(response.status).to eq(404)
+      expect(response.body).to include("子どものためのプログラミング道場")
     end
 
     it 'renders the 422 error page' do
@@ -16,6 +17,7 @@ RSpec.describe "Errors", type: :request do
         get '/trigger_422'
       end
       expect(response.status).to eq(422)
+      expect(response.body).to include("子どものためのプログラミング道場")
     end
 
     it 'renders the 500 error page' do
@@ -23,6 +25,7 @@ RSpec.describe "Errors", type: :request do
         get '/trigger_500'
       end
       expect(response.status).to eq(500)
+      expect(response.body).to include("子どものためのプログラミング道場")
     end
   end
 end
