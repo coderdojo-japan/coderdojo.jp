@@ -107,6 +107,11 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   mount Rambulance::Engine => "/"
 
+  Rails.application.routes.draw do
+  %w(404 500 422).each do |code|
+    match code, to: "errors#show", via: :all, defaults: { status_code: code }
+  end
+
   if Rails.env.development? || Rails.env.test?
     get "/trigger_500", to: ->(env) { raise "Triggering 500 error" }
     get "/trigger_422", to: "errors#unprocessable_entity"
