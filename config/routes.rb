@@ -112,9 +112,14 @@ Rails.application.routes.draw do
     match code, to: "errors#show", via: :all, defaults: { status_code: code }
   end
 
+  # 開発／テスト環境のみの便利ルート ──
   if Rails.env.development? || Rails.env.test?
-    get "/trigger_500", to: ->(env) { raise "Triggering 500 error" }
-    get "/trigger_422", to: "errors#unprocessable_entity"
+    # 500エラーを意図的に発生させる
+    get "/trigger_500",   to: ->(env) { raise "Triggering 500 error" }
+    # 422エラーを意図的に返す
+    get "/trigger_422",   to: "errors#unprocessable_entity"
+    # Rambulance を開発／テスト環境でのみマウント
+    mount Rambulance::Engine => "/"
   end
 
 end
