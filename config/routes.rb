@@ -107,8 +107,8 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   mount Rambulance::Engine => "/"
 
-  Rails.application.routes.draw do
-  %w(404 500 422).each do |code|
+  # 全環境共通のエラーページルーティング
+  %w(404 422 500 ).each do |code|
     match code, to: "errors#show", via: :all, defaults: { status_code: code }
   end
 
