@@ -105,7 +105,6 @@ Rails.application.routes.draw do
 
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  mount Rambulance::Engine => "/"
 
   # 全環境共通のエラーページルーティング
   %w(404 422 500 ).each do |code|
