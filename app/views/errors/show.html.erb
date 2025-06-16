@@ -1,0 +1,49 @@
+<% provide(:title, @title) %>
+<% provide(:desc,  @desc) %>
+
+<div id="top" class="title text-center">
+  <i class="cd cd-logo"></i>
+  <h1>CoderDojo Japan</h1>
+  <p>子どものためのプログラミング道場</p>
+  <br>
+</div>
+
+<section class="introduction text-center list">
+  <h2><%= @title %></h2>
+  <p>
+    <%= @desc %>
+    <br>
+  </p>
+  <p>
+    フィードバックなどあれば info@coderdojo.jp にメールしていただくか、
+    <br>
+    もしくは
+    <a href="https://github.com/coderdojo-japan/coderdojo.jp/issues/" target="_blank" rel="noopener">
+      GitHub Issue
+    </a>
+    に書いていただけると嬉しいです (＞人＜ )✨
+  </p>
+</section>
+
+<section id="timeline" class="text-center grayscale-bg" style="padding-bottom: 100px;">
+  <br>
+  <h3 class="text-center">
+    <a href="https://twitter.com/search?vertical=default&q=dojocon%20OR%20coderdojo%20OR%20%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC%E9%81%93%E5%A0%B4%20lang%3Aja"
+       target="_blank" rel="noopener">
+      🐣 最近の情報発信
+    </a>
+  </h3>
+  <br>
+  <div class="twitter-timeline-wrapper">
+    <a class="twitter-timeline"
+       href="https://twitter.com/CoderDojoJapan?ref_src=twsrc%5Etfw"
+       data-lang="ja"
+       data-chrome="noheader nofooter noborders"
+       data-dnt="true"
+       data-width="500"
+       data-tweet-limit="5">
+      @CoderDojoJapan アカウントのタイムライン
+    </a>
+  </div>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
