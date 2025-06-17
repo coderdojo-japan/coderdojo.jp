@@ -1,3 +1,7 @@
+<% @status_code = local_assigns[:status_code].to_i %>
+<% @title       = error_title(@status_code) %>
+<% @desc        = error_desc(@status_code)  %>
+
 <% provide(:title, @title) %>
 <% provide(:desc,  @desc) %>
 
