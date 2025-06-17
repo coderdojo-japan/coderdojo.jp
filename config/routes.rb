@@ -106,17 +106,8 @@ Rails.application.routes.draw do
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
-  # 全環境共通のエラーページルーティング
-  %w(404 422 500 ).each do |code|
-    match code, to: "errors#show", via: :all, defaults: { status_code: code }
-  end
-
   # 開発／テスト環境のみの便利ルート ──
   if Rails.env.development? || Rails.env.test?
-    # 500エラーを意図的に発生させる
-    get "/trigger_500",   to: ->(env) { raise "Triggering 500 error" }
-    # 422エラーを意図的に返す
-    get "/trigger_422",   to: "errors#unprocessable_entity"
     # Rambulance を開発／テスト環境でのみマウント
     mount Rambulance::Engine => "/"
   end
