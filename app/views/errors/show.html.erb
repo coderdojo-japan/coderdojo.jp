@@ -1,9 +1,9 @@
-<% @status_code = local_assigns[:status_code].to_i %>
-<% @title       = error_title(@status_code) %>
-<% @desc        = error_desc(@status_code)  %>
+<%# The status_code local variable is passed from the parent template %>
+<% title = error_title(status_code) %>
+<% desc  = error_desc(status_code) %>
 
-<% provide(:title, @title) %>
-<% provide(:desc,  @desc) %>
+<% provide(:title, title) %>
+<% provide(:desc,  desc) %>
 
 <div id="top" class="title text-center">
   <i class="cd cd-logo"></i>
@@ -13,9 +13,9 @@
 </div>
 
 <section class="introduction text-center list">
-  <h2><%= @title %></h2>
+  <h2><%= title %></h2>
   <p>
-    <%= @desc %>
+    <%= desc %>
     <br>
   </p>
   <p>
