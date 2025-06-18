@@ -29,9 +29,10 @@ Rambulance.setup do |config|
   # If Rambulance receives an exception that is not listed here, it'll render
   # the internal server error template and return 500 as http status.
   config.rescue_responses = {
-    ActionController::RoutingError     => :not_found,
-    AbstractController::ActionNotFound => :not_found,
-    ActionController::BadRequest       => :bad_request,
+    "ActionController::RoutingError"     => :not_found,
+    "AbstractController::ActionNotFound" => :not_found,
+    "ActionController::BadRequest"       => :bad_request,
+    "ActionController::InvalidAuthenticityToken" => :unprocessable_entity,
 
     # "ActiveRecord::RecordNotUnique"  => :unprocessable_entity,
     # "CanCan::AccessDenied"           => :forbidden,
