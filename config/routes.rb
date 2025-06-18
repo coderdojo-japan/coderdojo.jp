@@ -111,6 +111,15 @@ Rails.application.routes.draw do
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
+  if Rails.env.development?
+    namespace :previews do
+      # /previews/errors/404 などのURLでアクセスできるようになります
+      get "errors/404" => "errors#not_found"
+      get "errors/422" => "errors#unprocessable_entity"
+      get "errors/500" => "errors#internal_server_error"
+    end
+  end
+
   # Rambulance がキャッチする /404, /422, /500
   match "/404", to: Rambulance::Engine, via: :all, defaults: { status_code: 404 }
   match "/422", to: Rambulance::Engine, via: :all, defaults: { status_code: 422 }
