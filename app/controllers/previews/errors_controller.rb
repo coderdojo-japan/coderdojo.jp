@@ -1,21 +1,20 @@
 class Previews::ErrorsController < ApplicationController
-  # このコントローラー全体で、application.html.erb のレイアウトを使用します
   layout "application"
 
-  # 404ページをプレビューするためのアクション
-  def not_found
-    # app/views/errors/not_found.html.erb を、
-    # ステータスコード404で描画します
-    render template: "errors/not_found", status: :not_found
+  def show
+    status_code = params[:status_code].to_i
+
+    if status_code == 422
+      # 422の時だけは、ファイル名を直接指定
+      # Rails標準のRack::Utilsは422を "Unprocessable Content" と解釈しますが、
+      # Rambulanceが期待するビュー名は `unprocessable_entity.html.erb` です。
+      # この食い違いを吸収するため、422の時だけファイル名を直接指定しています。
+      error_page_name = "unprocessable_entity"
+    else
+      error_page_name = Rack::Utils::HTTP_STATUS_CODES[status_code].downcase.gsub(" ", "_")
+    end
+
+    render template: "errors/#{error_page_name}", status: status_code
   end
 
-  # 422ページをプレビューするためのアクション
-  def unprocessable_entity
-    render template: "errors/unprocessable_entity", status: :unprocessable_entity
-  end
-
-  # 500ページをプレビューするためのアクション
-  def internal_server_error
-    render template: "errors/internal_server_error", status: :internal_server_error
-  end
 end

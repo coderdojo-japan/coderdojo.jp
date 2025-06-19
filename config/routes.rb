@@ -113,10 +113,7 @@ Rails.application.routes.draw do
 
   if Rails.env.development?
     namespace :previews do
-      # /previews/errors/404 などのURLでアクセスできるようになります
-      get "errors/404" => "errors#not_found"
-      get "errors/422" => "errors#unprocessable_entity"
-      get "errors/500" => "errors#internal_server_error"
+      get "errors/:status_code", to: "errors#show"
     end
   end
 
