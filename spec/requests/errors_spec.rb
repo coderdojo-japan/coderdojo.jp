@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Errors", type: :request do
+RSpec.describe 'Errors', type: :request do
   include Rambulance::TestHelper
   include ErrorsHelper
 
@@ -9,7 +9,7 @@ RSpec.describe "Errors", type: :request do
     Rails.application.routes.draw do
       get '/trigger_400', to: ->(env) { raise ActionController::BadRequest }
       get '/trigger_422', to: ->(env) { raise ActionController::InvalidAuthenticityToken }
-      get '/trigger_500', to: ->(env) { raise "This is a test 500 error" }
+      get '/trigger_500', to: ->(env) { raise 'This is a test 500 error' }
     end
 
     # ビューのレンダリングをスタブして、レイアウト起因のエラーを回避
@@ -24,7 +24,7 @@ RSpec.describe "Errors", type: :request do
     Rails.application.reload_routes!
   end
 
-  describe "Error requests" do
+  describe 'Error requests' do
     it 'renders the 404 error page' do
       with_exceptions_app do
         # どのルーティングにもマッチしないパスをリクエスト
