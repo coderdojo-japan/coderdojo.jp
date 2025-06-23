@@ -111,12 +111,6 @@ Rails.application.routes.draw do
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
-  if Rails.env.development?
-    namespace :previews do
-      get "errors/:status_code", to: "errors#show"
-    end
-  end
-
   # Rambulance がキャッチする /404, /422, /500
   match "/404", to: Rambulance::Engine, via: :all, defaults: { status_code: 404 }
   match "/422", to: Rambulance::Engine, via: :all, defaults: { status_code: 422 }
