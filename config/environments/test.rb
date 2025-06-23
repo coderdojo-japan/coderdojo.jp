@@ -22,9 +22,6 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.cache_store = :null_store
 
-  # テスト環境でも例外を自前ルーティングへ
-  config.exceptions_app = self.routes
-
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
 

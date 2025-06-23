@@ -2,11 +2,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file,
   # see http://guides.rubyonrails.org/routing.html
 
-  # Rambulance を開発／テスト環境でのみマウント
-  if Rails.env.development? || Rails.env.test?
-    mount Rambulance::Engine => "/"
-  end
-
   root "home#show"
 
   # Render legal documents by using Keiyaku CSS
@@ -110,10 +105,4 @@ Rails.application.routes.draw do
 
   # Check development sent emails
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-
-  # Rambulance がキャッチする /404, /422, /500
-  match "/404", to: Rambulance::Engine, via: :all, defaults: { status_code: 404 }
-  match "/422", to: Rambulance::Engine, via: :all, defaults: { status_code: 422 }
-  match "/500", to: Rambulance::Engine, via: :all, defaults: { status_code: 500 }
-
 end
