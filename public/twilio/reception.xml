@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Response>
+  <Gather numDigits="1" timeout="5" action="https://coderdojo.jp/twilio/record.xml" method="GET">
+    <Say language="ja-JP" voice="woman">
+      お電話ありがとうございます。一般社団法人コーダー道場ジャパンです。
+
+      コーダー道場ジャパンへのお問い合わせについては、公式ウェブサイトにある、
+      お問い合わせフォームよりご連絡いただけると幸いです。
+
+      メッセージを録音される場合は、1、を、
+      お問い合わせフォームの詳細をお聞きになる場合は、そのままお待ちください。
+    </Say>
+  </Gather>
+
+  <!-- タイムアウト後（何も押さなかった場合） -->
+  <Say language="ja-JP" voice="woman">
+    お問い合わせフォームの詳細ですね。
+    
+    お問い合わせフォームは、ブラウザから、
+    コーダー、ドウジョウ、ドット、ジェーピー、にアクセスし、
+    ページ下部にある、お問い合わせフォームよりご連絡ください。
+    アルファベットで、C、O、D、E、R、D、O、J、O、ドット、J、P、です。
+
+    お電話、ありがとうございました。
+  </Say>
+
+  <Hangup/>
+</Response>
