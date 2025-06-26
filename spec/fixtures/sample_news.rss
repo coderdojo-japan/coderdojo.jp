@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sample News Feed</title>
+    <link>https://coderdojo.jp/</link>
+    <description>テスト用のサンプルニュースフィード</description>
+
+    <item>
+      <title>テスト記事①</title>
+      <link>https://example.com/articles/1</link>
+      <pubDate>Mon, 01 Jun 2025 10:00:00 +0900</pubDate>
+      <description>サンプル記事の本文①</description>
+    </item>
+
+    <item>
+      <title>テスト記事②</title>
+      <link>https://example.com/articles/2</link>
+      <pubDate>Tue, 02 Jun 2025 11:30:00 +0900</pubDate>
+      <description>サンプル記事の本文②</description>
+    </item>
+
+  </channel>
+</rss>
