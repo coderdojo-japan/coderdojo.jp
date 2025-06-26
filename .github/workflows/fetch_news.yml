@@ -1,0 +1,39 @@
+name: Fetch News
+
+on:
+  schedule:
+    # 毎朝 9:00 JST
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version-file: .ruby-version
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Run news:fetch task
+        run: bin/rails news:fetch
+
+      - name: Commit updated news.yml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add db/news.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update news.yml via GitHub Actions"
+            git push
+          else
+            echo "No changes in db/news.yml"
+          fi
