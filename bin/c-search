@@ -32,7 +32,7 @@ result = client.get_events(event_id: event_id)
 
 if result.results_returned > 0
   event = result.events.first
-  puts event.fetch('id')
+  puts event.fetch('group').fetch('id')
   #puts "id:         #{event.fetch('id')}"
   #puts "title:      #{event.fetch('title')}"
   #puts "group_id:   #{event.fetch('group').fetch('id')}"
