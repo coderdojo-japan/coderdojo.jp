@@ -34,6 +34,12 @@
 #  group_id: 
 #  url: https://coderdojosawara.connpass.com/
 
+# 川西（兵庫県川西市）
+- dojo_id: 340
+  name: connpass
+  group_id: 16040
+  url: https://coderdojo-takaraduka.connpass.com/
+
 # 青山（東京都渋谷区）
 - dojo_id: 338
   name: connpass
