@@ -18,7 +18,7 @@ namespace :news do
       [ Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s ]
     else
       [
-        'https://coderdojo.jp/feed',
+        'https://coderdojo.jp/#news',
         # 必要に応じて他 Dojo の RSS もここに追加可能
         # 'https://coderdojotokyo.org/feed',
       ]
