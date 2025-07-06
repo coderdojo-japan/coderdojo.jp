@@ -48,6 +48,12 @@ Like in other countires, the CoderDojo community in Japan has been growing stead
   <center>📜 Slides presented at <a href='https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/'>Scratch Conference Europe</a></center>
 </div>
 
+<center style="margin-top: 20px;">
+  <a href='/english/stats'>
+    &raquo; View statistics of CoderDojo activities across Japan
+  </a>
+</center>
+
 <br>
 
 
@@ -100,6 +106,7 @@ With substantial support from our partners, we continue to contribute to the Cod
 
 For more detailed information, please refer to the following reports, articles, and videos on the CoderDojo community in Japan.
 
+- 📊 [Statistics of CoderDojo activities across Japan](/english/stats)
 - 🤝 [Social Contribution Activities (2024-2026) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/index.html)
 - 🤝 [Social Contribution Activities (2021-2023) \| About Us \| Mitsue-Links](https://www.mitsue.co.jp/english/company/csr/social/activities/2021-2023.html)
 - 🤝 [micro:bit - Children add tech to creative problem-solving in Japan](https://microbit.org/news/2022-04-14/children-add-tech-to-creative-problemsolving-in-japan/)
