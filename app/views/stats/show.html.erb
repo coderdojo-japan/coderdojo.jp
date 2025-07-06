@@ -233,7 +233,11 @@
       </tr>
     </table>
     <span style="font-size: 10px;">
-      ※ <%= @lang == 'en' ? 'Data from the <a href="#graph">transition charts</a> above' : '<a href="#graph">冒頭の推移グラフ</a> を表にしたデータです' %>
+      <% if @lang == 'en' %>
+        ※ Data from the <a href="#graph">transition charts</a> above
+      <% else %>
+        ※ <a href="#graph">冒頭の推移グラフ</a> を表にしたデータです
+      <% end %>
     </span>
   </div>
 
