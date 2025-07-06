@@ -1,5 +1,5 @@
 <% provide(:title, @lang == 'en' ? 'Statistics' : '統計情報') %>
-<% provide(:desc,  @lang == 'en' ? 'Statistics of CoderDojo in Japan. Use this page to understand activities across the country.' : 'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。') %>
+<% provide(:desc,  @lang == 'en' ? 'Statistics of CoderDojo activities across Japan. Use this to understand CoderDojo activities across Japan.' : 'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。') %>
 <% provide(:url,   @lang == 'en' ? english_stats_url : stats_url) %>
 <% provide(:meta_image, '/img/ogp-stats.jpeg') %>
 <% provide(:lang, @lang) %>
@@ -15,7 +15,7 @@
   <h1><%= @lang == 'en' ? 'Statistics' : '統計情報' %></h1>
   <div style="margin: 30px 36px 0;">
     <% if @lang == 'en' %>
-      This page presents statistics of CoderDojo in Japan.<br class="ignore-sp">Use this to understand activities across the country.
+      This page presents statistics of CoderDojo in Japan.<br class="ignore-sp">Use this to understand CoderDojo activities across Japan.
     <% else %>
       本ページでは CoderDojo の統計情報をまとめています。<br class="ignore-sp">全国の活動状況を把握したい場面などでご活用ください。
     <% end %>
