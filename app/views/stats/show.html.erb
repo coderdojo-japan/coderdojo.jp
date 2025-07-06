@@ -325,6 +325,21 @@
     <a href="#map">🗾</a>
     <%= @lang == 'en' ? 'Dojos by Region' : '地域別の道場数' %>
   </h2>
+  
+  <div style="margin: 20px auto; text-align: center;">
+    <a href="<%= dojomap_url %>" style="display: inline-block;">
+      <img src="/img/dojomap_rect.webp" 
+           alt="<%= @lang == 'en' ? 'DojoMap - Map of CoderDojo in Japan' : 'DojoMap - CoderDojo を地図から探す' %>" 
+           style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" 
+           loading="lazy">
+    </a>
+    <p style="margin-top: 10px;">
+      <a href="<%= dojomap_url %>" style="font-size: 16px;">
+        &raquo; <%= @lang == 'en' ? 'View dojos on interactive map' : '地図で CoderDojo を見る' %>
+      </a>
+    </p>
+  </div>
+  
   <div class="japan-map">
     <!-- 
     <p id="japan-map-text" style="margin: 20px auto; font-size: 140%;">
@@ -332,12 +347,6 @@
     </p>
     -->
     <div id="japan-map-container"></div>
-  </div>
-  <div style="margin-top: 0px; margin-bottom: 60px;" align="center">
-    <p>
-      <a href="<%= dojomap_url %>">&raquo; <%= @lang == 'en' ? 'View Map Data' : '地図データを見る' %></a><br>
-      <a href="<%= dojos_path  %>">&raquo; <%= @lang == 'en' ? 'View Individual Data' : '個別データを見る' %></a><br>
-    </p>
   </div>
 
   <!-- NOTE: Always show dojos with accordion style to compact -->
