@@ -1,7 +1,8 @@
-<% provide(:title, '統計情報') %>
-<% provide(:desc,  'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。') %>
-<% provide(:url,   stats_url) %>
+<% provide(:title, @lang == 'en' ? 'Statistics' : '統計情報') %>
+<% provide(:desc,  @lang == 'en' ? 'Statistics of CoderDojo in Japan. Use this page to understand activities across the country.' : 'CoderDojo の統計情報をまとめたページです。全国の活動状況を把握したい場面などでご活用ください。') %>
+<% provide(:url,   @lang == 'en' ? english_stats_url : stats_url) %>
 <% provide(:meta_image, '/img/ogp-stats.jpeg') %>
+<% provide(:lang, @lang) %>
 
 <!-- jQuery Japan Map -->
 <script type="text/javascript" src="/js/jquery.japan-map.js"></script>
@@ -11,14 +12,25 @@
 </section>
 
 <section class="stats text-center">
-  <h1>統計情報</h1>
+  <h1><%= @lang == 'en' ? 'Statistics' : '統計情報' %></h1>
   <div style="margin: 30px 36px 0;">
-    本ページでは CoderDojo の統計情報をまとめています。<br class="ignore-sp">全国の活動状況を把握したい場面などでご活用ください。
+    <% if @lang == 'en' %>
+      This page presents statistics of CoderDojo in Japan.<br class="ignore-sp">Use this to understand activities across the country.
+    <% else %>
+      本ページでは CoderDojo の統計情報をまとめています。<br class="ignore-sp">全国の活動状況を把握したい場面などでご活用ください。
+    <% end %>
+  </div>
+  <div style="margin-top: 20px;">
+    <% if @lang == 'en' %>
+      <a href="/stats">&raquo; Switch to Japanese</a>
+    <% else %>
+      <a href="/english/stats">&raquo; View in English</a>
+    <% end %>
   </div>
 
   <h2 id="graph" style="margin-top: 70px; color: #333333;">
     <a href="#graph">📊</a>
-    推移グラフ
+    <%= @lang == 'en' ? 'Transition Charts' : '推移グラフ' %>
   </h2>
 
   <style>
@@ -36,16 +48,22 @@
 
   <h2 id="latest" style="margin-top: 70px; color: #333333;">
     <a href="#latest">🆕</a>
-    最新データ
+    <%= @lang == 'en' ? 'Latest Data' : '最新データ' %>
   </h2>
 
-  <p><%= Time.current.year %>年のデータも含めた<br>最新の統計情報 <small>(実測値)</small> は次のとおりです。</p>
+  <p>
+    <% if @lang == 'en' %>
+      Latest statistics including <%= Time.current.year %> data<br><small>(actual values)</small> are as follows:
+    <% else %>
+      <%= Time.current.year %>年のデータも含めた<br>最新の統計情報 <small>(実測値)</small> は次のとおりです。
+    <% end %>
+  </p>
   <div style="margin-top: 20px;" align="center">
     <table border="1" style="margin-top: 4px;">
       <tr>
-        <th>掲載中の道場数</th>
-        <th>累計開催回数</th>
-        <th>累計参加者数</th>
+        <th><%= @lang == 'en' ? 'Active Dojos' : '掲載中の道場数' %></th>
+        <th><%= @lang == 'en' ? 'Total Events' : '累計開催回数' %></th>
+        <th><%= @lang == 'en' ? 'Total Participants' : '累計参加者数' %></th>
       </tr>
       <tr class="text-center">
         <td><%= @sum_of_dojos %></td>
@@ -62,22 +80,35 @@
 
   <h2 id="table" style="margin-top: 70px; color: #333333;">
     <a href="#table">📝</a>
-    集計方法と集計対象について
+    <%= @lang == 'en' ? 'About Data Collection' : '集計方法と集計対象について' %>
   </h2>
   <ul style="list-style: none; margin-left: -10px;">
-    <li>参加者数はユニーク数ではなく延べ数です。</li>
-    <li>集計対象は API などで集計可能な道場です。</li>
+    <% if @lang == 'en' %>
+      <li>The number of participants is total count, not unique count.</li>
+      <li>Only dojos that can be aggregated via APIs are included.</li>
+    <% else %>
+      <li>参加者数はユニーク数ではなく延べ数です。</li>
+      <li>集計対象は API などで集計可能な道場です。</li>
+    <% end %>
   </ul>
   <p style="margin-top: 10px;">
-    毎週月曜朝10時に集計をしています。
-    <br>
-    集計対象の道場数は次のとおりです。
+    <% if @lang == 'en' %>
+      Data is aggregated every Monday at 10:00 AM (JST).
+      <br>
+      The number of dojos included in the aggregation is as follows:
+    <% else %>
+      毎週月曜朝10時に集計をしています。
+      <br>
+      集計対象の道場数は次のとおりです。
+    <% end %>
   </p>
   <p style="margin-top: 10px; margin-bottom: -5px;">
     <b><%= @annual_dojos_table[@period_end.to_s] %></b> /
     <b><%= @annual_dojos_whole[@period_end.to_s] %></b> Dojos
   </p>
-  <span style="font-size: 10px;">（非アクティブになった道場も含まれています）</span>
+  <span style="font-size: 10px;">
+    <%= @lang == 'en' ? '(Including inactive dojos)' : '（非アクティブになった道場も含まれています）' %>
+  </span>
 
   <style>
     .table-container {
@@ -91,14 +122,14 @@
   <div id="table-target" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
     <b>
       <a href="#table-target">🔍</a>
-      集計対象と集計割合の推移
+      <%= @lang == 'en' ? 'Aggregation Target and Coverage Ratio' : '集計対象と集計割合の推移' %>
     </b>
   </div>
   <div class="table-container" align="center">
     <table class="compact" border="1" style="margin-top: 10px;">
       <tr>
         <th>
-          <span class="table-head">西暦</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Year' : '西暦' %></span>
         </th>
         <% @period_range.each do |year| %>
           <th>
@@ -108,7 +139,7 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">集計数</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Aggregated' : '集計数' %></span>
         </td>
         <% @annual_dojos_table.each_value do |num| %>
           <td>
@@ -118,7 +149,7 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">総道場</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Total Dojos' : '総道場' %></span>
         </td>
         <% @annual_dojos_whole.each_value do |num| %>
           <td>
@@ -128,7 +159,7 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">割合</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Ratio' : '割合' %></span>
           <span class="table-label">[%]</span>
         </td>
         <% @annual_dojos_ratio.each_value do |num| %>
@@ -141,21 +172,21 @@
       </tr>
     </table>
     <span style="font-size: 10px;">
-      ※ 非アクティブになった道場も含まれています
+      ※ <%= @lang == 'en' ? 'Including inactive dojos' : '非アクティブになった道場も含まれています' %>
     </span>
   </div>
 
   <div id="table-actual" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
     <b>
       <a href="#table-actual">☯️</a>
-      開催回数と参加者数の推移
+      <%= @lang == 'en' ? 'Events and Participants Trends' : '開催回数と参加者数の推移' %>
     </b>
   </div>
   <div class="table-container" align="center">
     <table class="compact" border="1" style="margin-top: 10px;">
       <tr>
         <th>
-          <span class="table-head">西暦</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Year' : '西暦' %></span>
         </th>
         <% @period_range.each do |year| %>
           <th>
@@ -167,7 +198,7 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">割合</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Ratio' : '割合' %></span>
           <span class="table-label">[%]</span>
         </td>
         <% @annual_dojos_ratio.each_value do |num| %>
@@ -180,8 +211,8 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">開催</span>
-          <span class="table-label">(集計)</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Events' : '開催' %></span>
+          <span class="table-label"><%= @lang == 'en' ? '(actual)' : '(集計)' %></span>
         </td>
         <% @annual_events_table.each_value.with_index(@period_start) do |num, year| %>
           <td>
@@ -191,8 +222,8 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">参加</span>
-          <span class="table-label">(集計)</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Participants' : '参加' %></span>
+          <span class="table-label"><%= @lang == 'en' ? '(actual)' : '(集計)' %></span>
         </td>
         <% @annual_participants_table.each_value.with_index(@period_start) do |num, year| %>
           <td>
@@ -202,21 +233,21 @@
       </tr>
     </table>
     <span style="font-size: 10px;">
-      ※ <a href="#graph">冒頭の推移グラフ</a> を表にしたデータです
+      ※ <%= @lang == 'en' ? 'Data from the <a href="#graph">transition charts</a> above' : '<a href="#graph">冒頭の推移グラフ</a> を表にしたデータです' %>
     </span>
   </div>
 
   <div id="table-estimate" align="center" style="margin-top: 50px; scroll-margin-top: 80px;">
     <b>
       <a href="#table-estimate">💭</a>
-      開催回数と参加者数の見込み
+      <%= @lang == 'en' ? 'Estimated Events and Participants' : '開催回数と参加者数の見込み' %>
     </b>
   </div>
   <div class="table-container" align="center">
     <table class="compact" border="1" style="margin-top: 10px;">
       <tr>
         <th>
-          <span class="table-head">西暦</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Year' : '西暦' %></span>
         </th>
         <% @period_range.each do |year| %>
           <th>
@@ -228,7 +259,7 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">割合</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Ratio' : '割合' %></span>
           <span class="table-label">[%]</span>
         </td>
         <% @annual_dojos_ratio.each_value do |num| %>
@@ -241,8 +272,8 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">開催</span>
-          <span class="table-label">(見込)</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Events' : '開催' %></span>
+          <span class="table-label"><%= @lang == 'en' ? '(estimated)' : '(見込)' %></span>
         </td>
         <% @annual_events_table.each_value.with_index(@period_start) do |num, year| %>
           <td>
@@ -258,8 +289,8 @@
       </tr>
       <tr style="text-align: center;">
         <td>
-          <span class="table-head">参加</span>
-          <span class="table-label">(見込)</span>
+          <span class="table-head"><%= @lang == 'en' ? 'Participants' : '参加' %></span>
+          <span class="table-label"><%= @lang == 'en' ? '(estimated)' : '(見込)' %></span>
         </td>
         <% @annual_participants_table.each_value.with_index(@period_start) do |num, year| %>
           <td>
@@ -272,16 +303,23 @@
     </table>
     <span style="font-size: 10px;">
       <% year = @period_end.to_s %>
-      ※ <%= year %>年の参加見込の計算例:
-      <%= @annual_participants_table[year] %> / 0.<%= @annual_dojos_ratio[year].remove('.') %>
-      = <%= Rational(@annual_participants_table[year], Rational(@annual_dojos_ratio[year], 100)).to_i %>
-      <small>(小数点以下は切り捨て)</small>
+      <% if @lang == 'en' %>
+        ※ Calculation example for <%= year %> participants estimate:
+        <%= @annual_participants_table[year] %> / 0.<%= @annual_dojos_ratio[year].remove('.') %>
+        = <%= Rational(@annual_participants_table[year], Rational(@annual_dojos_ratio[year], 100)).to_i %>
+        <small>(decimals are truncated)</small>
+      <% else %>
+        ※ <%= year %>年の参加見込の計算例:
+        <%= @annual_participants_table[year] %> / 0.<%= @annual_dojos_ratio[year].remove('.') %>
+        = <%= Rational(@annual_participants_table[year], Rational(@annual_dojos_ratio[year], 100)).to_i %>
+        <small>(小数点以下は切り捨て)</small>
+      <% end %>
     </span>
   </div>
 
   <h2 id="map" style="margin-top: 70px; color: #333333;">
     <a href="#map">🗾</a>
-    地域別の道場数
+    <%= @lang == 'en' ? 'Dojos by Region' : '地域別の道場数' %>
   </h2>
   <div class="japan-map">
     <!-- 
@@ -293,8 +331,8 @@
   </div>
   <div style="margin-top: 0px; margin-bottom: 60px;" align="center">
     <p>
-      <a href="<%= dojomap_url %>">&raquo; 地図データを見る</a><br>
-      <a href="<%= dojos_path  %>">&raquo; 個別データを見る</a><br>
+      <a href="<%= dojomap_url %>">&raquo; <%= @lang == 'en' ? 'View Map Data' : '地図データを見る' %></a><br>
+      <a href="<%= dojos_path  %>">&raquo; <%= @lang == 'en' ? 'View Individual Data' : '個別データを見る' %></a><br>
     </p>
   </div>
 
@@ -303,7 +341,7 @@
 
   <h2 id="prefectures" style="margin-top: 70px; color: #333333;">
     <a href="#prefectures">✅</a>
-    都道府県別の道場数
+    <%= @lang == 'en' ? 'Dojos by Prefecture' : '都道府県別の道場数' %>
     <div style="padding-top: 10px; font-size: smaller;">
       <%= "(#{@data_by_prefecture_count} / #{Prefecture.count})" %>
     </div>
@@ -312,24 +350,24 @@
     <table border="1">
       <tr>
         <th style="padding: 10px;">
-          <small>都道府県名</small>
+          <small><%= @lang == 'en' ? 'Prefecture' : '都道府県名' %></small>
         </th>
         <th style="padding: 10px;">
-          <small>道場数</small>
+          <small><%= @lang == 'en' ? 'Dojos' : '道場数' %></small>
         </th>
       </tr>
       <% @data_by_prefecture.each_with_index do |(prefecture, count), index| %>
         <tr>
           <% if count == 0 %>
             <td style="background-color: gainsboro; padding: 0px;">
-              <small><%= prefecture %></small>
+              <small><%= @lang == 'en' ? prefecture_name_in_english(prefecture) : prefecture %></small>
             </td>
             <td style="background-color: gainsboro; padding: 0px;">
               <small><%= count %></small>
             </td>
           <% else %>
             <td style="padding: 0px;">
-              <small><%= prefecture %></small>
+              <small><%= @lang == 'en' ? prefecture_name_in_english(prefecture) : prefecture %></small>
             </td>
             <td style="padding: 0px;">
               <small><%= count %></small>
@@ -342,7 +380,7 @@
 
   <h2 id="references" style="margin-top: 70px; color: #333333;">
     <a href="#references">📚</a>
-    関連リンク
+    <%= @lang == 'en' ? 'Related Links' : '関連リンク' %>
   </h2>
   <ul>
     <li>
