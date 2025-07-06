@@ -382,23 +382,38 @@
     <a href="#references">📚</a>
     <%= @lang == 'en' ? 'Related Links' : '関連リンク' %>
   </h2>
-  <ul>
-    <li>
-      <a href="https://bit.ly/coderdojo-japan-stats-past-works">
-        統計情報に関する『これまで』の開発 - GitHub
-      </a>
-    </li>
-    <li>
-      <a href="https://bit.ly/coderdojo-japan-stats-future-works">
-        統計情報に関する『これから』の開発 - GitHub
-      </a>
-    </li>
-    <li>
-      <a href="https://bit.ly/coderdojo-japan-stats-data-sheet">
-        日本の CoderDojo (財団&Japan) - Spreadsheet
-      </a>
-    </li>
-  </ul>
+  <% if @lang == 'en' %>
+    <ul>
+      <li>
+        <a href="/english">
+          &raquo; See CoderDojo Japan Association
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/playlist?list=PL94GDfaSQTmKxMzXVMzzdl-zCmzgitQFP">
+          &raquo; Watch English Video Playlist on YouTube
+        </a>
+      </li>
+    </ul>
+  <% else %>
+    <ul>
+      <li>
+        <a href="https://bit.ly/coderdojo-japan-stats-past-works">
+          統計情報に関する『これまで』の開発 - GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://bit.ly/coderdojo-japan-stats-future-works">
+          統計情報に関する『これから』の開発 - GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://bit.ly/coderdojo-japan-stats-data-sheet">
+          日本の CoderDojo (財団&Japan) - Spreadsheet
+        </a>
+      </li>
+    </ul>
+  <% end %>
   <br>
 </section>
 
