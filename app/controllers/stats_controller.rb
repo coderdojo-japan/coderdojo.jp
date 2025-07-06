@@ -101,9 +101,27 @@ class StatsController < ApplicationController
     @data_by_region = []
     @regions_and_dojos = Dojo.group_by_region_on_active
     @regions_and_dojos.each_with_index do |(region, dojos), index|
+      # 地域名の英語化
+      region_name = if @lang == 'en'
+        case region
+        when '北海道' then 'Hokkaido'
+        when '東北' then 'Tohoku'
+        when '関東' then 'Kanto'
+        when '中部' then 'Chubu'
+        when '近畿' then 'Kinki'
+        when '中国' then 'Chugoku'
+        when '四国' then 'Shikoku'
+        when '九州' then 'Kyushu'
+        when '沖縄' then 'Okinawa'
+        else region
+        end
+      else
+        region
+      end
+      
       @data_by_region << {
         code:        index+1,
-        name:        "#{region} (#{dojos.pluck(:counter).sum})",
+        name:        "#{region_name} (#{dojos.pluck(:counter).sum})",
         color:       "dodgerblue",  # Area Color
         hoverColor:  "dodgerblue", # Another option: "deepskyblue"
         prefectures: Prefecture.where(region: region).map(&:id)
@@ -112,7 +130,8 @@ class StatsController < ApplicationController
 
     @data_by_prefecture = {}
     Prefecture.order(:id).each do |p|
-      @data_by_prefecture[p.name] = Dojo.active.where(prefecture_id: p.id).sum(:counter)
+      prefecture_name = @lang == 'en' ? helpers.prefecture_name_in_english(p.name) : p.name
+      @data_by_prefecture[prefecture_name] = Dojo.active.where(prefecture_id: p.id).sum(:counter)
     end
     @data_by_prefecture_count = @data_by_prefecture.select{|k,v| v>0}.count
 
