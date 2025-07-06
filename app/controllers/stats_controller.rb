@@ -41,10 +41,17 @@ class StatsController < ApplicationController
       end
       tags = tags.sort_by{|key, value| value}.reverse.to_h
 
-      f.xAxis categories: tags.keys.take(number_of_tags).reverse
+      # タグ名を言語に応じて翻訳
+      tag_labels = if @lang == 'en'
+        tags.keys.take(number_of_tags).map { |tag| helpers.translate_dojo_tag(tag) }.reverse
+      else
+        tags.keys.take(number_of_tags).reverse
+      end
+
+      f.xAxis categories: tag_labels
       f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
               tickInterval: 40, max: 240
-      f.series type: 'column', name: "対応道場数", yAxis: 0, showInLegend: false,
+      f.series type: 'column', name: @lang == 'en' ? "Number of Dojos" : "対応道場数", yAxis: 0, showInLegend: false,
                data: tags.values.take(number_of_tags).reverse,
                dataLabels: {
                  enabled: true,

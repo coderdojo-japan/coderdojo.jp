@@ -150,4 +150,55 @@ module ApplicationHelper
     prefecture_names[prefecture_name] || prefecture_name
   end
 
+  def translate_dojo_tag(tag_name)
+    # よくあるCoderDojoタグの英語訳
+    tag_translations = {
+      'ボードゲーム' => 'Board Games',
+      'ロボット' => 'Robotics',
+      'マインクラフト' => 'Minecraft',
+      'タイピング' => 'Typing',
+      '電子工作' => 'Electronics',
+      'プログラミング' => 'Programming',
+      'ゲーム' => 'Gaming',
+      'パソコン' => 'Computers',
+      '初心者歓迎' => 'Beginners Welcome',
+      'オンライン開催あり' => 'Online Available',
+      'オンライン' => 'Online',
+      '女子' => 'Girls',
+      '中高生' => 'Teens',
+      '3Dプリンター' => '3D Printing',
+      'AI' => 'AI',
+      'IoT' => 'IoT',
+      'VR' => 'VR',
+      'AR' => 'AR',
+      'Web' => 'Web',
+      'アプリ' => 'Apps',
+      'デザイン' => 'Design',
+      '音楽' => 'Music',
+      '動画' => 'Video',
+      'アニメーション' => 'Animation',
+      'ドローン' => 'Drones',
+      'レゴ' => 'LEGO',
+      '工作' => 'Crafts',
+      'ラズベリーパイ' => 'Raspberry Pi',
+      'Webサイト' => 'Web Development',
+      'ウェブサイト' => 'Web Development',
+      'スクラッチ' => 'Scratch',
+      'Scratch' => 'Scratch',
+      'Python' => 'Python',
+      'JavaScript' => 'JavaScript',
+      'Ruby' => 'Ruby',
+      'Unity' => 'Unity',
+      'micro:bit' => 'micro:bit',
+      'マイクロビット' => 'micro:bit',
+      'レーザーカッター' => 'Laser Cutting',
+      'ビスケット' => 'Viscuit',
+      'Viscuit' => 'Viscuit',
+      'HTML' => 'HTML',
+      'CSS' => 'CSS'
+    }
+    
+    tag_translations[tag_name] || tag_name
+  end
+
 end
