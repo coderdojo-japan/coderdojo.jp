@@ -31,17 +31,17 @@ class Stat
     @annual_sum_of_participants = year_hash_template.merge!(hash)
   end
 
-  def annual_dojos_chart
+  def annual_dojos_chart(lang = 'ja')
     # MEMO: トップページの道場数と一致するように Active Dojo を集計対象としている
-    HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period))
+    HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period), lang)
   end
 
-  def annual_event_histories_chart
-    HighChartsBuilder.build_annual_event_histories(annual_count_of_event_histories)
+  def annual_event_histories_chart(lang = 'ja')
+    HighChartsBuilder.build_annual_event_histories(annual_count_of_event_histories, lang)
   end
 
-  def annual_participants_chart
-    HighChartsBuilder.build_annual_participants(annual_sum_of_participants)
+  def annual_participants_chart(lang = 'ja')
+    HighChartsBuilder.build_annual_participants(annual_sum_of_participants, lang)
   end
 
   private

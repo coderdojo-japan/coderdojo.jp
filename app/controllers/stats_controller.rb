@@ -2,6 +2,9 @@ class StatsController < ApplicationController
 
   # GET /stats[.json]
   def show
+    # 言語設定
+    @lang = params[:lang] || 'ja'
+    
     # 2012年1月1日〜2024年12月31日までの集計結果
     @period_start = 2012
     @period_end   = 2024
@@ -10,9 +13,9 @@ class StatsController < ApplicationController
 
     # 推移グラフ
     @high_charts_globals          = HighChartsBuilder.global_options
-    @annual_dojos_chart           = stats.annual_dojos_chart
-    @annual_event_histories_chart = stats.annual_event_histories_chart
-    @annual_participants_chart    = stats.annual_participants_chart
+    @annual_dojos_chart           = stats.annual_dojos_chart(@lang)
+    @annual_event_histories_chart = stats.annual_event_histories_chart(@lang)
+    @annual_participants_chart    = stats.annual_participants_chart(@lang)
 
     # 最新データ
     @sum_of_dojos        = Dojo.active_dojos_count
@@ -24,7 +27,8 @@ class StatsController < ApplicationController
     # 道場タグ分布
     @dojo_tag_chart  = LazyHighCharts::HighChart.new('graph') do |f|
       number_of_tags = 10
-      f.title(text: "CoderDojo タグ分布 (上位 #{number_of_tags})")
+      title_text = @lang == 'en' ? "CoderDojo Tag Distribution (Top #{number_of_tags})" : "CoderDojo タグ分布 (上位 #{number_of_tags})"
+      f.title(text: title_text)
 
       # Use 'tally' method when using Ruby 2.7.0 or higher
       # cf. https://twitter.com/yasulab/status/1154566199511941120
