@@ -179,7 +179,7 @@
   <ul class="list" style="list-style: none;">
     <% @news_items.each do |news| %>
       <li>
-        <% has_emoji = news.title.chars.any? { |char| char.match?(/[\p{Emoji}\p{Emoji_Component}&&[:^ascii:]]/) } %>
+        <% has_emoji = news.title.chars.any? { |char| char.match?(/[\p{Emoji}&&[^0-9#*]]/) } %>
         <% if has_emoji %>
           <% # 絵文字が含まれていれば、タイトルをそのまま表示 %>
           <%= link_to news.title, news.url, target: '_blank', rel: 'noopener noreferrer' %>
