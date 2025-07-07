@@ -1,2 +1,42 @@
 ---
-news: []
+news:
+- url: https://news.coderdojo.jp/2024/12/25/box-japan-to-coderdojo/
+  title: "\U0001F384128台のノート PC 寄贈、Box Japan から CoderDojo へ \U0001F381"
+  published_at: Wed, 25 Dec 2024 11:00:40 +0000
+  id: https://news.coderdojo.jp/2024/12/25/box-japan-to-coderdojo/
+- url: https://news.coderdojo.jp/2025/01/14/dojoletter-vol-79-2024%e5%b9%b411%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.79 2024年11月号
+  published_at: Tue, 14 Jan 2025 03:30:45 +0000
+  id: https://news.coderdojo.jp/2025/01/14/dojoletter-vol-79-2024%e5%b9%b411%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/06/10/dojoletter-vol-85-2025%e5%b9%b404%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.85 2025年04月号
+  published_at: Tue, 10 Jun 2025 03:30:18 +0000
+  id: https://news.coderdojo.jp/2025/06/10/dojoletter-vol-85-2025%e5%b9%b404%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2024/12/10/dojoletter-vol-78-2024%e5%b9%b410%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.78 2024年10月号
+  published_at: Tue, 10 Dec 2024 04:00:06 +0000
+  id: https://news.coderdojo.jp/2024/12/10/dojoletter-vol-78-2024%e5%b9%b410%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/04/10/dojoletter-vol-83-2025%e5%b9%b402%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.83 2025年02月号
+  published_at: Thu, 10 Apr 2025 03:45:27 +0000
+  id: https://news.coderdojo.jp/2025/04/10/dojoletter-vol-83-2025%e5%b9%b402%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/05/12/dojoletter-vol-84-2025%e5%b9%b403%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.84 2025年03月号
+  published_at: Mon, 12 May 2025 04:00:33 +0000
+  id: https://news.coderdojo.jp/2025/05/12/dojoletter-vol-84-2025%e5%b9%b403%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/03/10/dojoletter-vol-82-2025%e5%b9%b401%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.82 2025年01月号
+  published_at: Mon, 10 Mar 2025 04:00:33 +0000
+  id: https://news.coderdojo.jp/2025/03/10/dojoletter-vol-82-2025%e5%b9%b401%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/02/10/dojoletter-vol-80-2024%e5%b9%b412%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.80 2024年12月号
+  published_at: Mon, 10 Feb 2025 04:00:55 +0000
+  id: https://news.coderdojo.jp/2025/02/10/dojoletter-vol-80-2024%e5%b9%b412%e6%9c%88%e5%8f%b7/
+- url: https://news.coderdojo.jp/2025/02/14/coderdojo-de-nyaicecode/
+  title: "\U0001F3B2 ダイス×プログラミング『ニャイス！コード』を、CoderDojo に75台寄贈"
+  published_at: Fri, 14 Feb 2025 08:24:07 +0000
+  id: https://news.coderdojo.jp/2025/02/14/coderdojo-de-nyaicecode/
+- url: https://news.coderdojo.jp/2025/04/04/55-laptops-to-coderdojo/
+  title: 米国系 IT 企業から CoderDojo へ、55 台のノート PC 寄贈
+  published_at: Fri, 04 Apr 2025 10:00:32 +0000
+  id: https://news.coderdojo.jp/2025/04/04/55-laptops-to-coderdojo/

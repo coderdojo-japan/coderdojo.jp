@@ -177,27 +177,18 @@
   </h2>
   <br>
   <ul class="list" style="list-style: none;">
-    <li>💻
-      <%= link_to '米国系IT企業からCoderDojoへ、55台のノートPC寄贈', news_url('/2025/04/04/55-laptops-to-coderdojo/') %>
-    </li>
-    <li>📰
-      <%= link_to 'DojoLetter Vol.81 2025年01月号', news_url('/2025/03/10/dojoletter-vol-82-2025年01月号/') %>
-    </li>
-    <li>🎲
-      <%= link_to 'ダイス×プログラミング『ニャイス！コード』 を75台寄贈', news_url('/2025/02/14/coderdojo-de-nyaicecode/') %>
-    </li>
-    <li>📰
-      <%= link_to 'DojoLetter Vol.80 2024年12月号', news_url('/2025/02/10/dojoletter-vol-80-2024年12月号/') %>
-    </li>
-    <li>📰
-      <%= link_to 'DojoLetter Vol.79 2024年11月号', news_url('/2025/01/14/dojoletter-vol-79-2024年11月号/') %>
-    </li>
-    <li>🎄
-      <%= link_to '128台のノートPC寄贈、Box JapanからCoderDojoへ', news_url('/2024/12/25/box-japan-to-coderdojo/') %>
-    </li>
-    <li>📰
-      <%= link_to 'DojoLetter Vol.78 2024年10月号', news_url('/2024/12/10/dojoletter-vol-78-2024年10月号/') %>
-    </li>
+    <% @news_items.each do |news| %>
+      <li>
+        <% has_emoji = news.title.chars.any? { |char| char.match?(/[\p{Emoji}\p{Emoji_Component}&&[:^ascii:]]/) } %>
+        <% if has_emoji %>
+          <% # 絵文字が含まれていれば、タイトルをそのまま表示 %>
+          <%= link_to news.title, news.url, target: '_blank', rel: 'noopener noreferrer' %>
+        <% else %>
+          <% # 絵文字が含まれていなければ、「📰」をつけて表示 %>
+          📰 <%= link_to news.title, news.url, target: '_blank', rel: 'noopener noreferrer' %>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
   <p style="margin-top: 30px;">
     最新情報はメールで受け取れます。
