@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Response>
+  <Say language="ja-JP" voice="woman">
+    メッセージの録音ですね。了解しました。
+    それでは、ピー、という発信音の後に、
+    お名前と、ご用件をお話しください。
+  </Say>
+  <Record maxLength="60" />
+  <Say language="ja-JP" voice="woman">
+    メッセージをお預かりしました。
+    お電話、ありがとうございました。
+  </Say>
+
+  <Hangup/>
+</Response>
