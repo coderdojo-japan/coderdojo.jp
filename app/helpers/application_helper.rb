@@ -203,4 +203,9 @@ module ApplicationHelper
     tag_translations[tag_name] || tag_name
   end
 
+  def format_news_title(news)
+    has_emoji = news.title[0]&.match?(/[\p{Emoji}&&[^0-9#*]]/)
+    has_emoji ? news.title : "📰 #{news.title}"
+  end
+
 end
