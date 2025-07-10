@@ -19,5 +19,12 @@
       <description>サンプル記事の本文②</description>
     </item>
 
+    <item>
+      <title>🎉 テスト記事③</title>
+      <link>https://example.com/articles/3</link>
+      <pubDate>Wed, 03 Jun 2025 12:00:00 +0900</pubDate>
+      <description>絵文字ありのサンプル記事の本文③</description>
+    </item>
+
   </channel>
 </rss>
