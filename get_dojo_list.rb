@@ -27,7 +27,9 @@ INPUT_TEXT.each do |line|
     .gsub(/codedojo/i,    '')
     .gsub(/coderdojo/i,   '')
     .gsub(/corderdojo/i,  '')        # 時々ある Typo
+    .gsub(/coder dojo/i,   '')
     .gsub(/コーダー道場/, '')
+    .gsub(/コードー道場/, '')
     .gsub(/コーダードージョー/, '')
     .gsub('‪',            '')
     .gsub('　',           '')
@@ -39,30 +41,36 @@ INPUT_TEXT.each do |line|
     .strip
 
   # Search dojo data by its KANJI name from DOJO_DB (including inactive dojos).
-  # MEMO: Use `.reverse` to find a latest dojo in case of overriding inactive dojo's name.
-  found_dojo = DOJO_DB.reverse.find do |dojo|
+  # MEMO: Same dojo name can exist like 南風原 (old: inacive, new: active).
+  found_dojo = DOJO_DB.find do |dojo|
     dojo[:name] == dojo_name.downcase
       .gsub('aizu',           '会津')
-      .gsub('ishigaki',       '石垣')
-      .gsub('hitachinaka',    'ひたちなか')
-      .gsub('kodaira',        'こだいら')
-      .gsub('toke',           '土気')
       .gsub('anjo',           '安城')
-      .gsub('yabuki',         '矢吹')
+      .gsub('harumi',         '晴海')
+      .gsub('hitachinaka',    'ひたちなか')
+      .gsub('ishigaki',       '石垣')
+      .gsub('kodaira',        'こだいら')
       .gsub('nagareyama',     '流山')
       .gsub('minami-kashiwa', '南柏')
       .gsub('miyoshi',        '三好') # NOTE: 'Miyoshi' can be 三好 or 三次. Only 三好 uses 'Miyoshi' for now.
-      .gsub('tsuruoka',       '鶴岡')
-      .gsub('harumi',         '晴海')
+      .gsub('tempaku',        '天白')
+      .gsub('toke',           '土気')
       .gsub('tokushima',      '徳島')
+      .gsub('tsuruoka',       '鶴岡')
+      .gsub('yabuki',         '矢吹')
+      .gsub('まつど',         '松戸')
       .gsub('高岡',           'たかおか')
       .gsub('町田',           'まちだ')
       .gsub('小平',           'こだいら')
       .gsub('八戸',           '八戸@吹上')
       .gsub('平野',           '平野@YOZORA LABO')
       .gsub('麹町',           '麹町@アドバンスト・ソフト')
+      .gsub('吉備okayama',    '吉備')
       .gsub('吉備岡山',       '吉備')
+      .gsub('名護 恩納@oist', '名護')
+      .gsub('浦和',                      '浦和@Urawa Minecraft Club')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
+      .gsub('南風原',         '南風原')
   end
 
   (found_dojo && found_dojo[:is_active]) ?
