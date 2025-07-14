@@ -374,14 +374,14 @@
         <tr>
           <% if count == 0 %>
             <td style="background-color: gainsboro; padding: 0px;">
-              <small><%= @lang == 'en' ? prefecture_name_in_english(prefecture) : prefecture %></small>
+              <small><%= prefecture %></small>
             </td>
             <td style="background-color: gainsboro; padding: 0px;">
               <small><%= count %></small>
             </td>
           <% else %>
             <td style="padding: 0px;">
-              <small><%= @lang == 'en' ? prefecture_name_in_english(prefecture) : prefecture %></small>
+              <small><%= prefecture %></small>
             </td>
             <td style="padding: 0px;">
               <small><%= count %></small>
