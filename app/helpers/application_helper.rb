@@ -96,7 +96,9 @@ module ApplicationHelper
 
   def prefecture_name_in_english(prefecture_name)
     # 都道府県名の英語表記を返す簡易マッピング
-    # データベースには「県」「都」「府」が省略された形で保存されている
+    # 「都」「府」「県」を除去してから検索
+    name_without_suffix = prefecture_name.gsub(/[都府県]$/, '')
+    
     prefecture_names = {
       '北海道' => 'Hokkaido',
       '青森' => 'Aomori',
@@ -147,7 +149,7 @@ module ApplicationHelper
       '沖縄' => 'Okinawa'
     }
     
-    prefecture_names[prefecture_name] || prefecture_name
+    prefecture_names[name_without_suffix] || prefecture_name
   end
 
   def translate_dojo_tag(tag_name)

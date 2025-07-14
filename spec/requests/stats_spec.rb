@@ -23,9 +23,9 @@ RSpec.describe "Stats", type: :request do
     end
 
     it "都道府県名が英語で表示される" do
-      # テストデータベースに都道府県を作成
-      Prefecture.find_or_create_by!(name: "東京", region: "関東")
-      Prefecture.find_or_create_by!(name: "大阪", region: "近畿")
+      # テストデータベースに都道府県を作成（seeds.rbの形式に合わせる）
+      Prefecture.find_or_create_by!(name: "東京都", region: "関東")
+      Prefecture.find_or_create_by!(name: "大阪府", region: "近畿")
       Prefecture.find_or_create_by!(name: "北海道", region: "北海道")
       
       get "/english/stats"
