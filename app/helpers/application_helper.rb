@@ -207,5 +207,4 @@ module ApplicationHelper
     has_emoji = news.title[0]&.match?(/[\p{Emoji}&&[^0-9#*]]/)
     has_emoji ? news.title : "📰 #{news.title}"
   end
-
 end
