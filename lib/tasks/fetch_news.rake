@@ -15,7 +15,7 @@ namespace :news do
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
     feed_urls = if Rails.env.test? || Rails.env.staging?
-      [ Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s ]
+      [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s]
     else
       [
         'https://news.coderdojo.jp/feed/',
