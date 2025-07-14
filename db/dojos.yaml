@@ -3836,14 +3836,13 @@
   name: 久留米
   prefecture_id: 40
   logo: "/img/dojos/kurume.webp"
-  url: https://www.facebook.com/CoderDojoKurume/
+  url: https://www.coderdojokurume.com/
   description: 久留米市で毎月開催
   tags:
   - Scratch
   - micro:bit
+  - Minecraft
   - Webサイト
-  - PHP
-  - Mindstorms
 - id: 172
   order: '402036'
   is_active: false
