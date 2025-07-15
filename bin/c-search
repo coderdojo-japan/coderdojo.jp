@@ -4,6 +4,7 @@ require 'connpass_api_v2'
 require 'uri'
 require 'net/http'
 require 'json'
+require 'timeout'
 
 if ENV['CONNPASS_API_KEY'].nil?
   puts('CONNPASS_API_KEY が設定されていません')
@@ -74,9 +75,17 @@ def fetch_group_by_subdomain(subdomain, api_key, limit = 5)
     case res
     when Net::HTTPSuccess
       data = JSON.parse(res.body)
+      return { success: false, message: "Invalid API response" } unless data.is_a?(Hash)
+      
       if data['results_returned'] && data['results_returned'] > 0
-        group = data['groups'].first
-        return { success: true, group_id: group['id'] }
+        groups = data['groups']
+        return { success: false, message: "Invalid API response: missing groups" } unless groups&.any?
+        
+        group = groups.first
+        group_id = group&.dig('id')
+        return { success: false, message: "Invalid API response: missing group ID" } unless group_id
+        
+        return { success: true, group_id: group_id }
       else
         return { success: false, message: "グループが見つかりませんでした (subdomain: #{subdomain})" }
       end
@@ -85,7 +94,10 @@ def fetch_group_by_subdomain(subdomain, api_key, limit = 5)
       if location
         # 新しいURIでリトライ
         new_uri = URI.join(uri, location)
-        return fetch_group_by_subdomain(subdomain, api_key, limit - 1)
+        # リダイレクト先のURIから新しいsubdomainを抽出
+        new_subdomain = new_uri.host&.split('.')&.first
+        return { success: false, message: "Invalid redirect URL" } unless new_subdomain
+        return fetch_group_by_subdomain(new_subdomain, api_key, limit - 1)
       else
         return { success: false, message: "リダイレクト先が不明です" }
       end
