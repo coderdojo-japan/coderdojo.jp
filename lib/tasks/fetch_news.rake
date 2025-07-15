@@ -1,6 +1,7 @@
 require 'rss'
 require 'open-uri'
 require 'yaml'
+require 'time'
 require 'active_support/broadcast_logger'
 
 namespace :news do
@@ -12,6 +13,14 @@ namespace :news do
     logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
 
     logger.info('==== START news:fetch ====')
+
+    # 既存の news.yml を読み込み
+    yaml_path = Rails.root.join('db', 'news.yml')
+    existing_news = if File.exist?(yaml_path)
+      YAML.load_file(yaml_path)['news'] || []
+    else
+      []
+    end
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
     feed_urls = if Rails.env.test? || Rails.env.staging?
@@ -25,7 +34,7 @@ namespace :news do
     end
 
     # RSS 取得＆パース
-    items = feed_urls.flat_map do |url|
+    new_items = feed_urls.flat_map do |url|
       logger.info("Fetching RSS → #{url}")
       begin
         URI.open(url) do |rss|
@@ -44,19 +53,63 @@ namespace :news do
       end
     end
 
-    # 重複排除＆日付降順ソート
-    unique = items.uniq { |i| i['url'] }
-    sorted = unique.sort_by { |i| i['published_at'] }.reverse
+   # 既存データをハッシュに変換（URL をキーに）
+    existing_items_hash = existing_news.index_by { |item| item['url'] }
 
-    # id を追加
-    sorted.each { |i| i['id'] = i['url'] }
-
-    # YAML に書き出し
-    File.open('db/news.yml', 'w') do |f|
-      f.write({ 'news' => sorted }.to_yaml)
+    # 新しいアイテムと既存アイテムを分離
+    truly_new_items = []
+    updated_items = []
+    
+    new_items.each do |new_item|
+      if existing_items_hash.key?(new_item['url'])
+        # 既存アイテムの更新
+        existing_item = existing_items_hash[new_item['url']]
+        updated_item = existing_item.merge(new_item)  # 新しい情報で更新
+        updated_items << updated_item
+      else
+        # 完全に新しいアイテム
+        truly_new_items << new_item
+      end
     end
 
-    logger.info("✅ Wrote #{sorted.size} items to db/news.yml")
+    # 既存の最大IDを取得
+    max_existing_id = existing_news.map { |item| item['id'].to_i }.max || 0
+
+    # 新しいアイテムのみに ID を割り当て（古い順）
+    truly_new_items_sorted = truly_new_items.sort_by { |item| 
+      Time.parse(item['published_at']) 
+    }
+    
+    truly_new_items_sorted.each_with_index do |item, index|
+      item['id'] = max_existing_id + index + 1
+    end
+
+    # 更新されなかった既存アイテムを取得
+    updated_urls = updated_items.map { |item| item['url'] }
+    unchanged_items = existing_news.reject { |item| updated_urls.include?(item['url']) }
+
+    # 全アイテムをマージ
+    all_items = unchanged_items + updated_items + truly_new_items_sorted
+
+    # 日付降順ソート
+    sorted_items = all_items.sort_by { |item| 
+      Time.parse(item['published_at']) 
+    }.reverse
+
+    File.open('db/news.yml', 'w') do |f|
+  formatted_items = sorted_items.map do |item|
+    {
+      'id' => item['id'],
+      'url' => item['url'],
+      'title' => item['title'],
+      'published_at' => item['published_at']
+    }
+  end
+  
+  f.write({ 'news' => formatted_items }.to_yaml)
+end
+
+    logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
 end
