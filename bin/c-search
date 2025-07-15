@@ -2,6 +2,8 @@
 
 require 'connpass_api_v2'
 require 'uri'
+require 'net/http'
+require 'json'
 
 if ENV['CONNPASS_API_KEY'].nil?
   puts('CONNPASS_API_KEY が設定されていません')
@@ -9,34 +11,127 @@ if ENV['CONNPASS_API_KEY'].nil?
 end
 
 if ARGV.empty?
-  puts('Usage: c-search [CONNPASS_EVENT_URL | CONNPASS_EVENT_ID]')
+  puts('Usage: c-search [CONNPASS_URL | CONNPASS_EVENT_ID]')
+  puts('  例: c-search https://coderdojoaoyama.connpass.com/')
+  puts('  例: c-search https://coderdojoaoyama.connpass.com/event/356972/')
+  puts('  例: c-search 356972')
   exit(1)
 end
 
 input = ARGV[0]
-event_id = nil
-if input =~ /^https?:\/\//
-  # URLからイベントIDを抽出
-  event_id = URI(input).path[%r{event/(\d+)}, 1]
-else
-  event_id = input.gsub(/\D/, '')
+
+# URLのバリデーションとタイプ判定
+def validate_and_classify_url(input)
+  # 数字のみの場合はイベントID
+  return { type: :event_id, value: input.gsub(/\D/, '') } if input !~ /^https?:\/\//
+
+  begin
+    uri = URI.parse(input)
+    
+    # HTTPSのみ許可（セキュリティ対策）
+    unless uri.scheme == 'https'
+      return { type: :error, message: "HTTPSのURLを指定してください: #{input}" }
+    end
+    
+    # Connpassドメインのみ許可（SSRF対策）
+    unless uri.host&.end_with?('.connpass.com')
+      return { type: :error, message: "Connpass のURLを指定してください: #{input}" }
+    end
+    
+    # イベントURLの場合
+    if uri.path =~ %r{/event/(\d+)/?}
+      return { type: :event_url, event_id: $1 }
+    end
+    
+    # グループURLの場合
+    if uri.path == '/' || uri.path.empty?
+      subdomain = uri.host.split('.').first
+      return { type: :group_url, subdomain: subdomain }
+    end
+    
+    return { type: :error, message: "認識できないURLパターンです: #{input}" }
+  rescue URI::InvalidURIError => e
+    return { type: :error, message: "無効なURLです: #{input}" }
+  end
 end
 
-unless event_id && !event_id.empty?
-  puts "イベントIDが特定できませんでした: #{input}"
+# グループ情報を取得する関数（リダイレクト対応）
+def fetch_group_by_subdomain(subdomain, api_key, limit = 5)
+  return { success: false, message: "リダイレクトが多すぎます" } if limit <= 0
+  
+  uri = URI('https://connpass.com/api/v2/groups/')
+  uri.query = URI.encode_www_form(subdomain: subdomain, count: 1)
+  
+  req = Net::HTTP::Get.new(uri)
+  req['X-Api-Key'] = api_key
+  
+  begin
+    res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true, 
+                          open_timeout: 5, read_timeout: 5) do |http|
+      http.request(req)
+    end
+    
+    case res
+    when Net::HTTPSuccess
+      data = JSON.parse(res.body)
+      if data['results_returned'] && data['results_returned'] > 0
+        group = data['groups'].first
+        return { success: true, group_id: group['id'] }
+      else
+        return { success: false, message: "グループが見つかりませんでした (subdomain: #{subdomain})" }
+      end
+    when Net::HTTPRedirection  # 301, 302などのリダイレクト
+      location = res['location']
+      if location
+        # 新しいURIでリトライ
+        new_uri = URI.join(uri, location)
+        return fetch_group_by_subdomain(subdomain, api_key, limit - 1)
+      else
+        return { success: false, message: "リダイレクト先が不明です" }
+      end
+    when Net::HTTPNotFound
+      return { success: false, message: "グループが見つかりませんでした (subdomain: #{subdomain})" }
+    else
+      return { success: false, message: "APIエラー: #{res.code} #{res.message}" }
+    end
+  rescue Timeout::Error
+    return { success: false, message: "APIへの接続がタイムアウトしました" }
+  rescue => e
+    return { success: false, message: "エラーが発生しました: #{e.message}" }
+  end
+end
+
+# メイン処理
+result = validate_and_classify_url(input)
+
+case result[:type]
+when :error
+  puts result[:message]
   exit 1
-end
-
-client = ConnpassApiV2.client(ENV['CONNPASS_API_KEY'])
-result = client.get_events(event_id: event_id)
-
-if result.results_returned > 0
-  event = result.events.first
-  puts event.fetch('group').fetch('id')
-  #puts "id:         #{event.fetch('id')}"
-  #puts "title:      #{event.fetch('title')}"
-  #puts "group_id:   #{event.fetch('group').fetch('id')}"
-  #puts "group_name: #{event.fetch('group').fetch('title')}"
-else
-  puts "イベントが見つかりませんでした (event_id: #{event_id})"
+  
+when :event_id, :event_url
+  # イベントIDまたはイベントURLの場合（既存の処理）
+  event_id = result[:type] == :event_id ? result[:value] : result[:event_id]
+  
+  client = ConnpassApiV2.client(ENV['CONNPASS_API_KEY'])
+  api_result = client.get_events(event_id: event_id)
+  
+  if api_result.results_returned > 0
+    event = api_result.events.first
+    puts event.fetch('group').fetch('id')
+  else
+    puts "イベントが見つかりませんでした (event_id: #{event_id})"
+    exit 1
+  end
+  
+when :group_url
+  # グループURLの場合（新規処理）
+  group_result = fetch_group_by_subdomain(result[:subdomain], ENV['CONNPASS_API_KEY'])
+  
+  if group_result[:success]
+    puts group_result[:group_id]
+  else
+    puts group_result[:message]
+    exit 1
+  end
 end
