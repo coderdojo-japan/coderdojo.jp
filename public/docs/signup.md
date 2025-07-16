@@ -36,10 +36,10 @@ CoderDojo の立ち上げ申請がまだお済みでない場合は、下記ペ�
 
 <br>
 
-### 掲載にあたって、以下の点をご確認ください {#terms-of-use}
+### [✅](#terms) 掲載にあたって、以下の点をご確認ください {#terms}
 
 1. 文字数やタグ数に上限があるため、申請内容を一部変更して掲載する場合があります 🙏
-  - ✅ 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
+  - 📝 例: scratch→Scratch，月１回開催→毎月開催，HTML5→HTML，マイクラ→Minecraft など
   - <br>
 1. 財団により非アクティブと判断された場合、もしくは１年以上開催されていない場合は非表示になります 😴
   - 📜️ [CoderDojo が承認されているかを確認する方法 - CoderDojo Japan](/docs/how-to-check-dojo-status)
