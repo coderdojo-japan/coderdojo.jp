@@ -64,6 +64,13 @@ jobs:
             Always respond in Japanese, even if given instructions are in English.
             Use Japanese for all outputs, explanations, and comments in code
 
+            For each heading use this HTML style that users can see your summary at first and check details when clicking:
+              <details>
+                <summary><strong>[YOUR_HEADING]</strong></summary>
+                [YOUR_FEEDBACKS]
+              </details>
+            Not that inside <details> tags you should write in HTML, not Markdown.
+
           # Optional: Use sticky comments to make Claude reuse the same comment on subsequent pushes to the same PR
           # use_sticky_comment: true
           
