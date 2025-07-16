@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :news do
-    title { "MyString" }
-    url { "MyString" }
-    published_at { "2025-06-30 13:06:11" }
+    sequence(:title) { |n| "Test News Article #{n}" }
+    sequence(:url) { |n| "https://news.coderdojo.jp/#{n}" }
+    published_at { 1.day.ago }
   end
 end
