@@ -141,13 +141,12 @@ https://coderdojo.jp/stats
 ### 各イベント管理サービスの `group_id` の取得方法
 
 - `connpass` の場合は [Connpass API](https://connpass.com/about/api/) に対応します
-  1. connpass のイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
-  2. イベントのページを表示します (どのイベントでもOK)
-  3. イベントページの URL をコピーします
-  4. 以下のコマンドで上記のコピーした URL を指定すると `group_id` (Series ID) が得えられます
+  1. connpass のグループまたはイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
+  2. URL をコピーします
+  3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` (Series ID) が得えられます
   
   ```
-  $ bin/c-search https://coderdojo-tobe.connpass.com/event/89808/
+  $ bundle exec bin/c-search https://coderdojo-tobe.connpass.com/
     => 5072
   ```
   `jq`コマンドが使えない場合はインストールしてください。
