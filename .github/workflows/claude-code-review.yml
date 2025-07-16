@@ -17,13 +17,24 @@ jobs:
     #   github.event.pull_request.user.login == 'external-contributor' ||
     #   github.event.pull_request.user.login == 'new-developer' ||
     #   github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
-    
+    #
+    # 現時点では Org 内の MEMBER と OWNER のみが使用可能
+    if: |
+      (github.event_name == 'pull_request' && 
+       contains(fromJSON('["MEMBER", "OWNER"]'), github.event.pull_request.author_association)) ||
+      (github.event_name == 'issue_comment' && 
+       github.event.issue.pull_request && 
+       contains(github.event.comment.body, '@claude') &&
+       contains(fromJSON('["MEMBER", "OWNER"]'), github.event.comment.author_association))
+        
     runs-on: ubuntu-latest
+ 
+    # 最小限の権限のみ付与
     permissions:
-      contents: read
-      pull-requests: read
-      issues: read
-      id-token: write
+      contents:      read  # リポジトリ内容の読込/書込
+      pull-requests: read  # PRのコメントの読込/書込
+      issues:        read  # Issueのコメントの読込/書込
+      id-token:      write # 実行時に適切な権限を取得 (ココがwriteの時、上記はreadで良い)
     
     steps:
       - name: Checkout repository
@@ -38,7 +49,7 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
           # Optional: Specify model (defaults to Claude Sonnet 4, uncomment for Claude Opus 4)
-          # model: "claude-opus-4-20250514"
+          model: "claude-opus-4-20250514"
           
           # Direct prompt for automated review (no @claude mention needed)
           direct_prompt: |
@@ -50,6 +61,8 @@ jobs:
             - Test coverage
             
             Be constructive and helpful in your feedback.
+            Always respond in Japanese, even if given instructions are in English.
+            Use Japanese for all outputs, explanations, and comments in code
 
           # Optional: Use sticky comments to make Claude reuse the same comment on subsequent pushes to the same PR
           # use_sticky_comment: true
