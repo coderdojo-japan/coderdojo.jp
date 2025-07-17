@@ -1,8 +1,22 @@
 require 'rss'
-require 'open-uri'
+require 'net/http'
+require 'uri'
 require 'yaml'
 require 'time'
 require 'active_support/broadcast_logger'
+
+def safe_open(url)
+  uri = URI.parse(url)
+  unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+    raise "不正なURLです: #{url}"
+  end
+
+  Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+    request = Net::HTTP::Get.new(uri)
+    response = http.request(request)
+    response.body
+  end
+end
 
 namespace :news do
   desc 'RSS フィードから最新ニュースを取得し、db/news.yml に書き出す'
@@ -37,15 +51,14 @@ namespace :news do
     new_items = feed_urls.flat_map do |url|
       logger.info("Fetching RSS → #{url}")
       begin
-        URI.open(url) do |rss|
-          feed = RSS::Parser.parse(rss, false)
-          feed.items.map do |item|
-            {
-              'url'          => item.link,
-              'title'        => item.title,
-              'published_at' => item.pubDate.to_s
-            }
-          end
+        rss = safe_open(url)
+        feed = RSS::Parser.parse(rss, false)
+        feed.items.map do |item|
+          {
+            'url'          => item.link,
+            'title'        => item.title,
+            'published_at' => item.pubDate.to_s
+          }
         end
       rescue => e
         logger.warn("⚠️ Failed to fetch #{url}: #{e.message}")
