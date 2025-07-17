@@ -31,7 +31,7 @@ namespace :news do
     # 既存の news.yml を読み込み
     yaml_path = Rails.root.join('db', 'news.yml')
     existing_news = if File.exist?(yaml_path)
-      YAML.load_file(yaml_path)['news'] || []
+      YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)['news'] || []
     else
       []
     end
