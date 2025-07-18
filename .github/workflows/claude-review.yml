@@ -26,9 +26,9 @@ jobs:
     # 推奨: 最小限の権限のみ付与
     permissions:
       contents:      read  # Repository 内の権限
-      pull-requests: read  # PR 内コメントの権限
-      issues:        read  # Issueコメントの権限
       actions:       read  # Actionsログへの権限
+      issues:        read  # Issueコメントの権限
+      pull-requests: read  # PR 内コメントの権限
       id-token:      write # 実行時に適切な権限を取得
     
     steps:
