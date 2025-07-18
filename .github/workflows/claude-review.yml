@@ -1,26 +1,25 @@
 name: Claude Review
 
 on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
   pull_request:
     types: [opened, synchronize]
-  issue_comment:
+  pull_request_review:
+    types: [submitted]
+  pull_request_review_comment:
     types: [created]
 
 jobs:
   claude-review:
-    # ✅ 実行される場合:
-    # - PR 作成時（自動レビュー）
-    # - PR 更新時（自動レビュー）
-    # - Issueコメントで「@claude これを見て」
-    # - PR のコメントで「@claude レビューして」
-    #
-    # ❌ 実行されない場合:
-    # - Issueコメントでも @claude がない場合
-    # - PR のコメントでも @claude がない場合
     if: |
-      (github.event_name == 'pull_request') ||
-      (github.event_name == 'issue_comment' && 
-       contains(github.event.comment.body, '@claude'))
+      (github.event_name == 'issues'                      && contains(github.event.issue.body,        '@claude')) ||
+      (github.event_name == 'issue_comment'               && contains(github.event.comment.body,      '@claude')) ||
+      (github.event_name == 'pull_request'                && contains(github.event.pull_request.body, '@claude')) ||
+      (github.event_name == 'pull_request_review'         && contains(github.event.review.body,       '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body,      '@claude'))
     
     runs-on: ubuntu-latest
     
