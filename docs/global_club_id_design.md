@@ -1,4 +1,4 @@
-# Global Clubs Integration
+# Global Club ID Design
 
 ## 概要
 
