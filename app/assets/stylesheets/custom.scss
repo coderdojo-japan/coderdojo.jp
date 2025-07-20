@@ -349,7 +349,7 @@ h1,h2,h3,h4,h5,h6 { scroll-margin-top: 100px; }
 }
 
 .dojo {
-  overflow: hidden;
+  overflow: visible;
   vertical-align: top
 }
 
@@ -860,6 +860,13 @@ body>footer a:hover {
   padding: 0;
   list-style: none;
   font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media only screen and (max-width: 720px) {
+    justify-content: flex-start;
+  }
 
   li {
     display: inline-block;
