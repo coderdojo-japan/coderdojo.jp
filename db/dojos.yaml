@@ -1142,6 +1142,21 @@
   - Scratch
   - Webアプリ
   - スマホアプリ
+- id: 341
+  order: '131032'
+  created_at: '2025-07-20'
+  name: 赤坂国際
+  prefecture_id: 13
+  url: https://altairxiii.wixsite.com/cit-coder-dojo
+  logo: "/img/dojos/default.webp"
+  description: 港区赤坂で隔週開催
+  tags:
+  - Scratch
+  - Python
+  - Arduino
+  - TinkerCad
+  - Fusion360
+  - Mindstorms
 - id: 335
   order: '131041'
   created_at: '2025-03-18'
