@@ -31,21 +31,21 @@ namespace :news do
     # 既存の news.yml を読み込み
     yaml_path = Rails.root.join('db', 'news.yml')
     existing_news = if File.exist?(yaml_path)
-      YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)['news'] || []
-    else
-      []
-    end
+                      YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)['news'] || []
+                    else
+                      []
+                    end
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
     feed_urls = if Rails.env.test? || Rails.env.staging?
-      [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s]
-    else
-      [
-        'https://news.coderdojo.jp/feed/',
-        # 必要に応じて他 Dojo の RSS もここに追加可能
-        # 'https://coderdojotokyo.org/feed',
-      ]
-    end
+                  [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s]
+                else
+                  [
+                    'https://news.coderdojo.jp/feed/'
+                    # 必要に応じて他 Dojo の RSS もここに追加可能
+                    # 'https://coderdojotokyo.org/feed',
+                  ]
+                end
 
     # RSS 取得＆パース
     new_items = feed_urls.flat_map do |url|
