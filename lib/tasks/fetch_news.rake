@@ -64,7 +64,7 @@ namespace :news do
       end
     end
 
-   # 既存データをハッシュに変換（URL をキーに）
+    # 既存データをハッシュに変換（URL をキーに）
     existing_items_hash = existing_news.index_by { |item| item['url'] }
 
     # 新しいアイテムと既存アイテムを分離
@@ -108,17 +108,17 @@ namespace :news do
     }.reverse
 
     File.open('db/news.yml', 'w') do |f|
-  formatted_items = sorted_items.map do |item|
-    {
-      'id' => item['id'],
-      'url' => item['url'],
-      'title' => item['title'],
-      'published_at' => item['published_at']
-    }
-  end
-  
-  f.write({ 'news' => formatted_items }.to_yaml)
-end
+      formatted_items = sorted_items.map do |item|
+        {
+          'id'           => item['id'],
+          'url'          => item['url'],
+          'title'        => item['title'],
+          'published_at' => item['published_at']
+        }
+      end
+
+      f.write({ 'news' => formatted_items }.to_yaml)
+    end
 
     logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
