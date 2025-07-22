@@ -7,9 +7,7 @@ require 'active_support/broadcast_logger'
 
 def safe_open(url)
   uri = URI.parse(url)
-  unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
-    raise "不正なURLです: #{url}"
-  end
+  raise "不正なURLです: #{url}" unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
 
   Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
     request = Net::HTTP::Get.new(uri)
