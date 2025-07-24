@@ -179,7 +179,7 @@
   <ul class="list" style="list-style: none;">
     <% @news_items.each do |news| %>
       <li>
-        <%= link_to format_news_title(news), news.url, target: '_blank', rel: 'noopener noreferrer' %>
+        <%= link_to format_news_title(news), news.url, target: '_blank' %>
       </li>
     <% end %>
   </ul>
