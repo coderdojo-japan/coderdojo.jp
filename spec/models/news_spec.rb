@@ -9,7 +9,7 @@ RSpec.describe News, type: :model do
     end
 
     describe 'title' do
-      it 'presence: true' do
+      it 'タイトルが空の場合は無効になる' do
         news.title = nil
         expect(news).not_to be_valid
         expect(news.errors[:title]).not_to be_empty
@@ -17,13 +17,13 @@ RSpec.describe News, type: :model do
     end
 
     describe 'url' do
-      it 'presence: true' do
+      it 'URL が空の場合は無効になる' do
         news.url = nil
         expect(news).not_to be_valid
         expect(news.errors[:url]).not_to be_empty
       end
 
-      it 'uniqueness: true' do
+      it 'URL が重複している場合は無効になる' do
         create(:news, url: 'https://example.com/test')
         duplicate_news = build(:news, url: 'https://example.com/test')
         expect(duplicate_news).not_to be_valid
@@ -46,7 +46,7 @@ RSpec.describe News, type: :model do
     end
 
     describe 'published_at' do
-      it 'presence: true' do
+      it '公開日時が空の場合は無効になる' do
         news.published_at = nil
         expect(news).not_to be_valid
         expect(news.errors[:published_at]).not_to be_empty
