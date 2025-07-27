@@ -48,18 +48,24 @@ class PodcastsController < ApplicationController
     return content unless content.match?(Podcast::TIMESTAMP_REGEX)
     youtube_id = @episode.content.match(Podcast::YOUTUBE_ID_REGEX)[1]
     content.gsub!(Podcast::TIMESTAMP_REGEX) do
-        t = $1
-        t = (t.size ==  '0:00'.size) ?   '0' + t : t
-        t = (t.size == '00:00'.size) ? '00:' + t : t
-
-        #t = Time.parse(t).seconds_since_midnight.to_i
-        # This format should be faster than above:
-        #   ?t=01:23:45
-        #   ?t=01h23m45s
-        t[2] = 'h'
-        t[5] = 'm'
-        t   << 's'
-        "- [#{$1}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
+        original_t = $1
+        parts = original_t.split(':')
+        
+        # タイムスタンプをh:m:s形式に変換
+        if parts.size == 3
+          # 00:00:00 形式
+          h, m, s = parts
+          t = "#{h}h#{m}m#{s}s"
+        elsif parts.size == 2
+          # 00:00 形式
+          m, s = parts
+          t = "#{m}m#{s}s"
+        else
+          # それ以外（通常は来ないはず）
+          t = original_t
+        end
+        
+        "- [#{original_t}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
     end
   end
 end
