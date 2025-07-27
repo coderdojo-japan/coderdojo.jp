@@ -98,5 +98,35 @@ RSpec.feature 'Podcasts', type: :feature do
       expect(page).to have_link '05:45', href: 'https://youtu.be/test123?t=05m45s'
       expect(page).to have_link '59:59', href: 'https://youtu.be/test123?t=59m59s'
     end
+
+    scenario 'Show note timestamps with m:ss format (single digit minutes) are converted to YouTube links' do
+      @podcast = create(:podcast)
+      allow(@podcast).to receive(:exist?) { true }
+      allow(@podcast).to receive(:content) { 
+        <<~CONTENT
+          タイトル
+          収録日: 2019/05/10
+          
+          YouTubeリンク: https://www.youtube.com/watch?v=episode21
+          
+          ## Shownote
+          
+          - 0:00 ゲスト自己紹介
+          - 0:54 TFabWorks 無償レンタルプログラム
+          - 2:10 2019年の年末から動き出した
+          - 9:25 レンタルの種類
+        CONTENT
+      }
+      allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
+
+      visit  "/podcasts/#{@podcast.id}"
+      expect(page).to have_http_status(:success)
+      
+      # m:ss形式（一桁の分）のタイムスタンプもYouTubeリンクに変換されているか確認
+      expect(page).to have_link '0:00', href: 'https://youtu.be/episode21?t=0m00s'
+      expect(page).to have_link '0:54', href: 'https://youtu.be/episode21?t=0m54s'
+      expect(page).to have_link '2:10', href: 'https://youtu.be/episode21?t=2m10s'
+      expect(page).to have_link '9:25', href: 'https://youtu.be/episode21?t=9m25s'
+    end
   end
 end
