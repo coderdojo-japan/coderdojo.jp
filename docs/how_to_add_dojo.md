@@ -2,6 +2,8 @@
 
 新規Dojoから申請が来た場合の手順書をまとめています。
 
+[<img width="338" height="354" alt="image" src="https://github.com/user-attachments/assets/95fd7b3e-8a49-4631-9a87-a486d69c8d4e" />](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
+
 <br>
 
 ## 追加の手順とデータの読み方
