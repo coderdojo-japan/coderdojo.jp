@@ -3235,6 +3235,20 @@
   description: 猪名川町で毎月開催
   tags:
   - Scratch
+- id: 342
+  order: '284815'
+  created_at: '2025-07-28'
+  name: 播磨科学公園都市
+  prefecture_id: 28
+  logo: "/img/dojos/default.webp"
+  url: https://codeclub.org/ja/clubs/1700a138-2909-4e4e-9e75-88ebcbbbc55a
+  description: 上郡町で毎月開催
+  tags:
+  - Python
+  - Unity
+  - ラズベリーパイ
+  - HTML
+  - CSS
 - id: 35
   order: '292010'
   created_at: '2014-10-26'
