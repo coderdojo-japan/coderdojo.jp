@@ -76,12 +76,12 @@ namespace :news do
     
     new_items.each do |new_item|
       if existing_items_hash.key?(new_item['url'])
-        # 既存アイテムの更新
         existing_item = existing_items_hash[new_item['url']]
-        updated_item = existing_item.merge(new_item)  # 新しい情報で更新
-        updated_items << updated_item
+        # タイトルまたは公開日が変わった場合のみ更新
+        if existing_item['title'] != new_item['title'] || existing_item['published_at'] != new_item['published_at']
+          updated_items << existing_item.merge(new_item)
+        end
       else
-        # 完全に新しいアイテム
         truly_new_items << new_item
       end
     end
