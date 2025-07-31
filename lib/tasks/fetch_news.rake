@@ -16,6 +16,26 @@ def safe_open(url)
   end
 end
 
+def fetch_rss_items(url, logger)
+  logger.info("Fetching RSS → #{url}")
+  begin
+    rss = safe_open(url)
+    feed = RSS::Parser.parse(rss, false)
+    feed.items.map { |item| item_to_hash(item) }
+  rescue => e
+    logger.warn("⚠️ Failed to fetch #{url}: #{e.message}")
+    []
+  end
+end
+
+def item_to_hash(item)
+  {
+    'url'          => item.link,
+    'title'        => item.title,
+    'published_at' => item.pubDate.to_s
+  }
+end
+
 namespace :news do
   desc 'RSS フィードから最新ニュースを取得し、db/news.yml に書き出す'
   task fetch: :environment do
@@ -45,24 +65,7 @@ namespace :news do
                   ]
                 end
 
-    # RSS 取得＆パース
-    new_items = feed_urls.flat_map do |url|
-      logger.info("Fetching RSS → #{url}")
-      begin
-        rss = safe_open(url)
-        feed = RSS::Parser.parse(rss, false)
-        feed.items.map do |item|
-          {
-            'url'          => item.link,
-            'title'        => item.title,
-            'published_at' => item.pubDate.to_s
-          }
-        end
-      rescue => e
-        logger.warn("⚠️ Failed to fetch #{url}: #{e.message}")
-        []
-      end
-    end
+    new_items = feed_urls.flat_map { |url| fetch_rss_items(url, logger) }
 
     # 既存データをハッシュに変換（URL をキーに）
     existing_items_hash = existing_news.index_by { |item| item['url'] }
