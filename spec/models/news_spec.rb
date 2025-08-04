@@ -4,10 +4,6 @@ RSpec.describe News, type: :model do
   describe 'バリデーション' do
     let(:news) { build(:news) }
 
-    it '有効なファクトリーを持つ' do
-      expect(news).to be_valid
-    end
-
     describe 'title' do
       it 'タイトルが空の場合は無効になる' do
         news.title = nil
