@@ -18,31 +18,37 @@ RSpec.describe News, type: :model do
     end
 
     describe 'url' do
-      it 'URL が空の場合は無効になる' do
-        news.url = nil
-        expect(news).not_to be_valid
-        expect(news.errors[:url]).not_to be_empty
+      context '無効な場合' do
+        it 'URL が空の場合は無効になる' do
+          news.url = nil
+          expect(news).not_to be_valid
+          expect(news.errors[:url]).not_to be_empty
+        end
+
+        it 'URL が重複している場合は無効になる' do
+          create(:news, url: 'https://example.com/test')
+          duplicate_news = build(:news, url: 'https://example.com/test')
+          expect(duplicate_news).not_to be_valid
+          expect(duplicate_news.errors[:url]).not_to be_empty
+        end
+
+        it 'URL形式でない場合は無効になる' do
+          news.url = 'invalid-url'
+          expect(news).not_to be_valid
+          expect(news.errors[:url]).not_to be_empty
+        end
       end
 
-      it 'URL が重複している場合は無効になる' do
-        create(:news, url: 'https://example.com/test')
-        duplicate_news = build(:news, url: 'https://example.com/test')
-        expect(duplicate_news).not_to be_valid
-        expect(duplicate_news.errors[:url]).not_to be_empty
-      end
+      context '有効な場合' do
+        it 'HTTPSを許可する' do
+          news.url = 'https://example.com'
+          expect(news).to be_valid
+        end
 
-      it 'URL形式であること' do
-        news.url = 'invalid-url'
-        expect(news).not_to be_valid
-        expect(news.errors[:url]).not_to be_empty
-      end
-
-      it 'HTTPSとHTTPを許可する' do
-        news.url = 'https://example.com'
-        expect(news).to be_valid
-
-        news.url = 'http://example.com'
-        expect(news).to be_valid
+        it 'HTTPを許可する' do
+          news.url = 'http://example.com'
+          expect(news).to be_valid
+        end
       end
     end
 
