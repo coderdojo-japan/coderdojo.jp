@@ -6,9 +6,14 @@ RSpec.describe News, type: :model do
 
     describe 'title' do
       it 'タイトルが空の場合は無効になる' do
-        news.title = nil
-        expect(news).not_to be_valid
-        expect(news.errors[:title]).not_to be_empty
+      news.title = nil
+      expect(news).not_to be_valid
+      expect(news.errors[:title]).not_to be_empty
+      end
+
+      it 'タイトルが正しく設定されている場合は有効になる' do
+      news.title = '有効なタイトル'
+      expect(news).to be_valid
       end
     end
 
