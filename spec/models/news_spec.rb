@@ -48,9 +48,14 @@ RSpec.describe News, type: :model do
 
     describe 'published_at' do
       it '公開日時が空の場合は無効になる' do
-        news.published_at = nil
-        expect(news).not_to be_valid
-        expect(news.errors[:published_at]).not_to be_empty
+      news.published_at = nil
+      expect(news).not_to be_valid
+      expect(news.errors[:published_at]).not_to be_empty
+      end
+
+      it '公開日時が正しく設定されている場合は有効になる' do
+      news.published_at = Time.current
+      expect(news).to be_valid
       end
     end
   end
