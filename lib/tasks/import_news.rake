@@ -1,10 +1,9 @@
 require 'yaml'
 
 namespace :news do
-  desc 'db/news.yml （またはENV指定のYAML）を読み込んで News テーブルを upsert する'
+  desc 'db/news.yml を読み込んで News テーブルを upsert する'
   task import_from_yaml: :environment do
-    # ENVで上書き可能にする（なければデフォルト db/news.yml）
-    yaml_path = ENV['NEWS_YAML_PATH'] ? Pathname.new(ENV['NEWS_YAML_PATH']) : Rails.root.join('db', 'news.yml')
+    yaml_path = Rails.root.join('db', 'news.yml')
     raw       = YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)
 
     # entries を計算

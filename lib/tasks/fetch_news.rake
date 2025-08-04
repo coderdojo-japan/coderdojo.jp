@@ -7,8 +7,8 @@ require 'active_support/broadcast_logger'
 
 def safe_open(url)
   uri = URI.parse(url)
-  return File.read(url) if uri.scheme.nil? || uri.scheme == 'file'
   raise "不正なURLです: #{url}" unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+
   Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
     request = Net::HTTP::Get.new(uri)
     response = http.request(request)
@@ -26,18 +26,24 @@ namespace :news do
 
     logger.info('==== START news:fetch ====')
 
-    # YAML出力先を環境変数で上書きできるようにする
-    yaml_path = ENV['NEWS_YAML_PATH'] ? Pathname.new(ENV['NEWS_YAML_PATH']) : Rails.root.join('db', 'news.yml')
-    feed_urls = ENV['NEWS_RSS_PATH'] ? [ENV['NEWS_RSS_PATH']] :
-                  (Rails.env.test? || Rails.env.staging? ?
-                    [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s] :
-                    ['https://news.coderdojo.jp/feed/'])
-
+    # 既存の news.yml を読み込み
+    yaml_path = Rails.root.join('db', 'news.yml')
     existing_news = if File.exist?(yaml_path)
                       YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)['news'] || []
                     else
                       []
                     end
+
+    # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
+    feed_urls = if Rails.env.test? || Rails.env.staging?
+                  [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s]
+                else
+                  [
+                    'https://news.coderdojo.jp/feed/'
+                    # 必要に応じて他 Dojo の RSS もここに追加可能
+                    # 'https://coderdojotokyo.org/feed',
+                  ]
+                end
 
     # RSS 取得＆パース
     new_items = feed_urls.flat_map do |url|
@@ -101,11 +107,7 @@ namespace :news do
       Time.parse(item['published_at']) 
     }.reverse
 
-    sorted_items.each_with_index do |item, index|
-      item['id'] = index + 1
-    end
-
-    File.open(yaml_path, 'w') do |f|
+    File.open('db/news.yml', 'w') do |f|
       formatted_items = sorted_items.map do |item|
         {
           'id'           => item['id'],
@@ -118,7 +120,7 @@ namespace :news do
       f.write({ 'news' => formatted_items }.to_yaml)
     end
 
-    logger.info("✅ Wrote #{sorted_items.size} items to #{yaml_path} (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
+    logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
 end
