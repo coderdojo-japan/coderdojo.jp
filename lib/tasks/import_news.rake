@@ -3,6 +3,12 @@ require 'yaml'
 namespace :news do
   desc 'db/news.yml を読み込んで News テーブルを upsert する'
   task import_from_yaml: :environment do
+    file_logger = ActiveSupport::Logger.new('log/news.log')
+    console     = ActiveSupport::Logger.new(STDOUT)
+    logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
+
+    logger.info "==== START news:import_from_yaml ===="
+
     yaml_path = Rails.root.join('db', 'news.yml')
     raw       = YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)
 
@@ -22,17 +28,15 @@ namespace :news do
       
       if is_new || news.changed?
         news.save!
-        if is_new
-          new_count += 1
-          status = 'new'
-        else
-          updated_count += 1
-          status = 'updated'
-        end
-        puts "[News] #{news.published_at.to_date} #{news.title} (#{status})"
+        status = is_new ? 'new' : 'updated'
+        new_count += 1 if is_new
+        updated_count += 1 unless is_new
+
+        logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"  # ← puts から logger.info に変更
       end
     end
 
-    puts "Imported #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)."
+    logger.info "Imported #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)." 
+    logger.info "==== END news:import_from_yaml ===="
   end
 end
