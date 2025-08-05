@@ -32,7 +32,7 @@ namespace :news do
         new_count += 1 if is_new
         updated_count += 1 unless is_new
 
-        logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"  # ← puts から logger.info に変更
+        logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"
       end
     end
 
