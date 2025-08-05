@@ -3136,7 +3136,8 @@
   - Webサイト
 - id: 49
   order: '282031'
-  is_active: false
+  is_active: true
+  note: Re-activated since 2025-08-02 https://coderdojo-akashi.connpass.com/event/362346/
   created_at: '2016-04-04'
   name: 明石
   prefecture_id: 28
