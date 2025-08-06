@@ -528,10 +528,10 @@ end
 - [x] 再活性化機能（`reactivate!`）の実装
 - [x] モデルテストの作成
 
-### Phase 2（2週目）- データ移行準備（YAML対応版）
-- [ ] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装
+### Phase 2（2週目）- データ移行準備（YAML対応版）🔄 進行中
+- [x] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装（参考実装作成済み）
 - [ ] YAMLファイルの更新（ドライラン）
-- [ ] dojos:update_db_by_yaml タスクの inactivated_at 対応
+- [ ] dojos:update_db_by_yaml タスクの inactivated_at 対応（実装方法確定済み）
 - [ ] 手動調整が必要なケースの特定
 - [ ] YAMLファイルのレビューとコミット
 
