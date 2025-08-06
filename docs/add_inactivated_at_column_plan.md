@@ -161,13 +161,26 @@ end
 
 ### フェーズ2: データ移行
 
-#### 1. Git履歴からの日付抽出スクリプト（参考実装を活用）
+#### 重要: YAMLファイルがマスターデータ
+
+**db/dojos.yaml がマスターレコードであることに注意**:
+- データベースの変更だけでは不十分
+- `rails dojos:update_db_by_yaml` 実行時にYAMLの内容でDBが上書きされる
+- 永続化にはYAMLファイルへの反映が必須
+
+**データ更新の正しいフロー**:
+1. Git履歴から日付を抽出
+2. **YAMLファイルに `inactivated_at` を追加**
+3. `rails dojos:update_db_by_yaml` でDBに反映
+4. `rails dojos:migrate_adding_id_to_yaml` で整合性確認
+
+#### 1. Git履歴からの日付抽出とYAML更新スクリプト
 
 参考実装: https://github.com/remote-jp/remote-in-japan/blob/main/docs/upsert_data_by_readme.rb#L28-L44
 
 ```ruby
 # lib/tasks/dojos.rake に追加
-desc 'Git履歴からinactivated_at日付を抽出して設定'
+desc 'Git履歴からinactivated_at日付を抽出してYAMLファイルに反映'
 task extract_inactivated_at_from_git: :environment do
   require 'git'
   
@@ -213,12 +226,34 @@ task extract_inactivated_at_from_git: :environment do
       if commit_id && commit_id.match?(/^[0-9a-f]{40}$/)
         # コミット情報を取得
         commit = git.gcommit(commit_id)
-        inactived_date = commit.author_date
+        inactivated_date = commit.author_date
         
-        # データベースを更新
-        dojo.update!(inactivated_at: inactived_date)
-        puts "  ✓ Updated: inactivated_at = #{inactived_date.strftime('%Y-%m-%d %H:%M:%S')}"
-        puts "  Commit: #{commit_id[0..7]} by #{commit.author.name}"
+        # YAMLファイルのDojoブロックを見つけて更新
+        yaml_updated = false
+        yaml_lines.each_with_index do |line, index|
+          if line.match?(/^- id: #{dojo.id}$/)
+            # 該当Dojoブロックの最後に inactivated_at を追加
+            insert_index = index + 1
+            while insert_index < yaml_lines.length && !yaml_lines[insert_index].match?(/^- id:/)
+              insert_index += 1
+            end
+            
+            # inactivated_at 行を挿入
+            yaml_lines.insert(insert_index - 1, 
+              "  inactivated_at: #{inactivated_date.strftime('%Y-%m-%d %H:%M:%S')}\n")
+            yaml_updated = true
+            break
+          end
+        end
+        
+        if yaml_updated
+          # YAMLファイルを書き戻す
+          File.write(yaml_path, yaml_lines.join)
+          puts "  ✓ Updated YAML: inactivated_at = #{inactivated_date.strftime('%Y-%m-%d %H:%M:%S')}"
+          puts "  Commit: #{commit_id[0..7]} by #{commit.author.name}"
+        else
+          puts "  ✗ Failed to update YAML file"
+        end
       else
         puts "  ✗ Could not find commit information"
       end
@@ -229,8 +264,11 @@ task extract_inactivated_at_from_git: :environment do
   
   puts "\nSummary:"
   puts "Total inactive dojos: #{inactive_dojos.count}"
-  puts "Successfully updated: #{inactive_dojos.reload.where.not(inactivated_at: nil).count}"
-  puts "Failed to update: #{inactive_dojos.reload.where(inactivated_at: nil).count}"
+  puts "YAML file has been updated with inactivated_at dates"
+  puts "\nNext steps:"
+  puts "1. Review the changes in db/dojos.yaml"
+  puts "2. Run: rails dojos:update_db_by_yaml"
+  puts "3. Commit the updated YAML file"
 end
 
 # 特定のDojoのみを処理するバージョン
@@ -483,18 +521,19 @@ end
 
 ## 実装スケジュール案
 
-### Phase 1（1週目）- 基盤整備
-- [ ] `inactivated_at` カラム追加のマイグレーション作成
-- [ ] `note` カラムの型変更マイグレーション作成
-- [ ] Dojoモデルの基本的な変更（スコープ、メソッド追加）
-- [ ] 再活性化機能（`reactivate!`）の実装
-- [ ] モデルテストの作成
+### Phase 1（1週目）- 基盤整備 ✅ 完了
+- [x] `inactivated_at` カラム追加のマイグレーション作成
+- [x] `note` カラムの型変更マイグレーション作成
+- [x] Dojoモデルの基本的な変更（スコープ、メソッド追加）
+- [x] 再活性化機能（`reactivate!`）の実装
+- [x] モデルテストの作成
 
-### Phase 2（2週目）- データ移行準備
-- [ ] Git履歴抽出スクリプトの実装
-- [ ] ドライラン実行と結果確認
+### Phase 2（2週目）- データ移行準備（YAML対応版）
+- [ ] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装
+- [ ] YAMLファイルの更新（ドライラン）
+- [ ] dojos:update_db_by_yaml タスクの inactivated_at 対応
 - [ ] 手動調整が必要なケースの特定
-- [ ] CSVインポート機能の実装
+- [ ] YAMLファイルのレビューとコミット
 
 ### Phase 3（3週目）- 統計機能更新
 - [ ] Statモデルの更新（`active_at` スコープの活用）
