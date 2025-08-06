@@ -16,6 +16,12 @@ class Dojo < ApplicationRecord
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
   scope :active,        -> { where(is_active: true ) }
   scope :inactive,      -> { where(is_active: false) }
+  
+  # 新しいスコープ: 特定の日時点でアクティブだったDojoを取得
+  scope :active_at, ->(date) { 
+    where('created_at <= ?', date)
+      .where('inactivated_at IS NULL OR inactivated_at > ?', date) 
+  }
 
   validates :name,        presence: true, length: { maximum: 50 }
   validates :email,       presence: false
@@ -74,8 +80,50 @@ class Dojo < ApplicationRecord
       ]
     end
   end
+  
+  # インスタンスメソッド
+  def active?
+    inactivated_at.nil?
+  end
+  
+  def active_at?(date)
+    created_at <= date && (inactivated_at.nil? || inactivated_at > date)
+  end
+  
+  # 再活性化メソッド
+  def reactivate!
+    if inactivated_at.present?
+      # 非活動期間を note に記録
+      inactive_period = "#{inactivated_at.strftime('%Y-%m-%d')}〜#{Date.today}"
+      
+      if note.present?
+        self.note += "\n非活動期間: #{inactive_period}"
+      else
+        self.note = "非活動期間: #{inactive_period}"
+      end
+    end
+    
+    update!(
+      is_active: true,
+      inactivated_at: nil
+    )
+  end
+  
+  # is_activeとinactivated_atの同期（移行期間中）
+  before_save :sync_active_status
 
   private
+  
+  def sync_active_status
+    if is_active_changed?
+      if is_active == false && inactivated_at.nil?
+        self.inactivated_at = Time.current
+      elsif is_active == true && inactivated_at.present?
+        # is_activeがtrueに変更された場合、inactivated_atをnilに
+        self.inactivated_at = nil
+      end
+    end
+  end
 
   # Now 6+ tags are available since this PR:
   # https://github.com/coderdojo-japan/coderdojo.jp/pull/1697

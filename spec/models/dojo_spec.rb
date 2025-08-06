@@ -85,4 +85,48 @@ RSpec.describe Dojo, :type => :model do
       expect(missing_ids).to match_array(allowed_missing_ids)
     end
   end
+  
+  # inactivated_at カラムの基本的なテスト
+  describe 'inactivated_at functionality' do
+    before do
+      @dojo = Dojo.create!(
+        name: "CoderDojo テスト",
+        email: "test@coderdojo.jp",
+        order: 0,
+        description: "テスト用Dojo",
+        logo: "https://example.com/logo.png",
+        url: "https://test.coderdojo.jp",
+        tags: ["Scratch"],
+        prefecture_id: 13
+      )
+    end
+    
+    describe '#sync_active_status' do
+      it 'sets inactivated_at when is_active becomes false' do
+        expect(@dojo.inactivated_at).to be_nil
+        @dojo.update!(is_active: false)
+        expect(@dojo.inactivated_at).to be_present
+      end
+      
+      it 'clears inactivated_at when is_active becomes true' do
+        @dojo.update!(is_active: false)
+        expect(@dojo.inactivated_at).to be_present
+        
+        @dojo.update!(is_active: true)
+        expect(@dojo.inactivated_at).to be_nil
+      end
+    end
+    
+    describe '#active?' do
+      it 'returns true when inactivated_at is nil' do
+        @dojo.inactivated_at = nil
+        expect(@dojo.active?).to be true
+      end
+      
+      it 'returns false when inactivated_at is present' do
+        @dojo.inactivated_at = Time.current
+        expect(@dojo.active?).to be false
+      end
+    end
+  end
 end
