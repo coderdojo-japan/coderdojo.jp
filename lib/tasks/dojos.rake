@@ -34,20 +34,21 @@ namespace :dojos do
       raise_if_invalid_dojo(dojo)
 
       d = Dojo.find_or_initialize_by(id: dojo['id'])
-      d.name          = dojo['name']
-      d.counter       = dojo['counter'] || 1
-      d.email         = ''
-      d.description   = dojo['description']
-      d.logo          = dojo['logo']
-      d.tags          = dojo['tags']
-      d.note          = dojo['note'] || '' # For internal comments for developers
-      d.url           = dojo['url']
-      d.created_at    = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
-      d.updated_at    = Time.zone.now
-      d.prefecture_id = dojo['prefecture_id']
-      d.order         = dojo['order'] || search_order_number_by(dojo['name'])
-      d.is_active     = dojo['is_active'].nil?  ? true  : dojo['is_active']
-      d.is_private    = dojo['is_private'].nil? ? false : dojo['is_private']
+      d.name           = dojo['name']
+      d.counter        = dojo['counter'] || 1
+      d.email          = ''
+      d.description    = dojo['description']
+      d.logo           = dojo['logo']
+      d.tags           = dojo['tags']
+      d.note           = dojo['note'] || '' # For internal comments for developers
+      d.url            = dojo['url']
+      d.prefecture_id  = dojo['prefecture_id']
+      d.order          = dojo['order'] || search_order_number_by(dojo['name'])
+      d.is_active      = dojo['is_active'].nil?  ? true  : dojo['is_active']
+      d.is_private     = dojo['is_private'].nil? ? false : dojo['is_private']
+      d.inactivated_at = dojo['inactivated_at'] ? Time.zone.parse(dojo['inactivated_at']) : nil
+      d.created_at     = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
+      d.updated_at     = Time.zone.now
 
       d.save!
     end

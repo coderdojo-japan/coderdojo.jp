@@ -33,7 +33,23 @@ class Stat
 
   def annual_dojos_chart(lang = 'ja')
     # MEMO: トップページの道場数と一致するように Active Dojo を集計対象としている
-    HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period), lang)
+    # inactivated_at 実装後は、各年の時点でアクティブだったDojoを集計
+    if Dojo.column_names.include?('inactivated_at')
+      data = annual_dojos_with_historical_data
+      HighChartsBuilder.build_annual_dojos(data, lang)
+    else
+      HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period), lang)
+    end
+  end
+  
+  # 各年末時点でアクティブだったDojo数を集計（過去の非アクティブDojoも含む）
+  def annual_dojos_with_historical_data
+    (@period.first.year..@period.last.year).each_with_object({}) do |year, hash|
+      end_of_year = Time.zone.local(year).end_of_year
+      # その年の終わりにアクティブだったDojoの数を集計
+      count = Dojo.active_at(end_of_year).sum(:counter)
+      hash[year.to_s] = count
+    end
   end
 
   def annual_event_histories_chart(lang = 'ja')
