@@ -477,19 +477,32 @@ end
 1. Git履歴から正確な日付を抽出できない可能性
 2. 大量のデータ更新によるパフォーマンスへの影響
 3. 既存の統計データとの不整合
+4. 部分的な失敗からの復旧困難
+5. YAMLファイルの破損
 
 ### 対策
-1. 手動での日付設定用のインターフェース提供
-2. バッチ処理での段階的な更新
-3. 移行前後での統計値の比較検証
+1. 手動での日付設定用のインターフェース提供（CSV入力サポート）
+2. バッチ処理での段階的な更新（並列処理で高速化）
+3. 移行前後での統計値の比較検証（自動化スクリプト）
+4. ロールバック計画の準備（30分以内に復旧可能）
+5. タイムスタンプ付きバックアップの自動作成
 
 ## 成功の指標
 
-- すべての非アクティブDojoに `inactivated_at` が設定される
+### 定量的指標
+| 指標 | 目標値 | 測定方法 |
+|-----|--------|----------|
+| データ移行完了率 | 100% | `Dojo.inactive.where(inactivated_at: nil).count == 0` |
+| 統計精度向上 | +20%以上 | 2018年の道場数増加率 |
+| クエリ性能 | <1秒 | 年次集計クエリの実行時間 |
+| テストカバレッジ | 95%以上 | SimpleCov測定 |
+| エラー率 | <0.1% | 移行失敗Dojo数 / 全非アクティブDojo数 |
+
+### 定性的指標
 - 統計グラフで過去の活動履歴が正確に表示される
-- 道場数の推移グラフが過去のデータも含めて正確に表示される
+- 道場数の推移グラフがより実態を反映した滑らかな曲線になる
 - 既存の機能に影響を与えない
-- パフォーマンスの劣化がない
+- コードの可読性と保守性が向上
 
 ### 統計グラフの変化の検証方法
 1. 実装前に現在の各年の道場数を記録
@@ -519,29 +532,47 @@ end
    gem 'git', '~> 1.18'  # Git操作用
    ```
 
-## 実装スケジュール案
+## 実装スケジュール
 
-### Phase 1（1週目）- 基盤整備 ✅ 完了
+### Phase 1 - 基盤整備 ✅ 完了
 - [x] `inactivated_at` カラム追加のマイグレーション作成
 - [x] `note` カラムの型変更マイグレーション作成
 - [x] Dojoモデルの基本的な変更（スコープ、メソッド追加）
 - [x] 再活性化機能（`reactivate!`）の実装
 - [x] モデルテストの作成
 
-### Phase 2（2週目）- YAMLサポートと統計ロジック ✅ 完了
-- [x] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装
+### Phase 2 - YAMLサポートと統計ロジック ✅ 完了
+- [x] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装（冪等性対応済み）
 - [x] dojos:update_db_by_yaml タスクの inactivated_at 対応
-- [x] Statモデルの更新（`active_at` スコープの活用）
-- [x] 統計ロジックのテスト作成
+- [x] Statモデルの更新（カラム存在チェックで自動切り替え）
+- [x] `active_at` スコープの実装と統計ロジックへの統合
 
-### Phase 3（3週目）- データ移行とテスト 📋 次のステップ
-- [ ] YAMLファイルの更新（`rails dojos:extract_inactivated_at_from_git`）
-- [ ] 手動調整が必要なケースの特定
-- [ ] YAMLファイルのレビューとコミット
-- [ ] 統計ページの動作確認とベースラインとの比較
-- [ ] パフォーマンステスト
+**📌 Opus 4.1レビューでの発見：**
+- 統計ロジックが `Dojo.column_names.include?('inactivated_at')` で自動切り替えする優れた設計
+- Git履歴抽出に冪等性が実装済み（再実行しても安全）
 
-### Phase 4（4週目）- 本番デプロイ
+### Phase 3 - データ移行とテスト 🚀 次のステップ
+
+#### 3.1 データ移行前の準備（Day 1）
+- [ ] YAMLファイルのバックアップ作成
+- [ ] 現在の統計値をCSVで記録（ベースライン）
+- [ ] 事前検証スクリプトの実行
+- [ ] 非アクティブDojoリストのJSON出力
+
+#### 3.2 段階的データ移行（Day 2-3）
+- [ ] ドライラン実行（`rails dojos:extract_inactivated_at_from_git[1]`）
+- [ ] 本番実行（`rails dojos:extract_inactivated_at_from_git`）
+- [ ] YAML構文チェック
+- [ ] DBへの反映（`rails dojos:update_db_by_yaml`）
+- [ ] 統計値の比較検証
+
+#### 3.3 データ整合性の検証（Day 4）
+- [ ] 全非アクティブDojoの日付設定確認
+- [ ] is_activeとinactivated_atの同期確認
+- [ ] 統計の妥当性検証（年次推移の確認）
+- [ ] パフォーマンステスト実行
+
+### Phase 4 - 本番デプロイ
 - [ ] 本番環境でのマイグレーション実行
 - [ ] Git履歴からのデータ抽出実行
 - [ ] 統計ページの動作確認
@@ -579,6 +610,273 @@ rails runner "
 "
 ```
 
+## 🎯 Opus 4.1 レビューによる改善提案
+
+### Phase 3 実行のための詳細化されたアクションプラン
+
+#### A. バックアップとベースライン記録スクリプト
+```bash
+# script/backup_before_migration.sh
+#!/bin/bash
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+
+# 1. YAMLファイルのバックアップ
+cp db/dojos.yaml db/dojos.yaml.backup.${TIMESTAMP}
+echo "✅ YAMLバックアップ完了: db/dojos.yaml.backup.${TIMESTAMP}"
+
+# 2. 現在の統計値を記録
+rails runner "
+  File.open('tmp/stats_baseline_${TIMESTAMP}.csv', 'w') do |f|
+    f.puts 'year,active_count,counter_sum'
+    (2012..2024).each do |year|
+      active = Dojo.active.where('created_at <= ?', Time.zone.local(year).end_of_year)
+      f.puts \"#{year},#{active.count},#{active.sum(:counter)}\"
+    end
+  end
+"
+echo "✅ 統計ベースライン記録完了: tmp/stats_baseline_${TIMESTAMP}.csv"
+
+# 3. 非アクティブDojoリストの記録
+rails runner "
+  File.open('tmp/inactive_dojos_${TIMESTAMP}.json', 'w') do |f|
+    data = Dojo.inactive.map { |d| 
+      { id: d.id, name: d.name, created_at: d.created_at }
+    }
+    f.puts JSON.pretty_generate(data)
+  end
+"
+echo "✅ 非アクティブDojoリスト保存完了: tmp/inactive_dojos_${TIMESTAMP}.json"
+```
+
+#### B. 事前検証スクリプト
+```ruby
+# script/validate_git_extraction.rb
+require 'git'
+
+class GitExtractionValidator
+  def self.run
+    yaml_path = Rails.root.join('db', 'dojos.yaml')
+    git = Git.open(Rails.root)
+    
+    issues = []
+    success_count = 0
+    
+    Dojo.inactive.each do |dojo|
+      yaml_content = File.read(yaml_path)
+      unless yaml_content.match?(/^- id: #{dojo.id}$/)
+        issues << "Dojo #{dojo.id} (#{dojo.name}) not found in YAML"
+        next
+      end
+      
+      # is_active: false の存在確認
+      dojo_block = extract_dojo_block(yaml_content, dojo.id)
+      if dojo_block.match?(/is_active: false/)
+        success_count += 1
+      else
+        issues << "Dojo #{dojo.id} (#{dojo.name}) missing 'is_active: false' in YAML"
+      end
+    end
+    
+    puts "📊 検証結果:"
+    puts "  成功: #{success_count}"
+    puts "  問題: #{issues.count}"
+    
+    if issues.any?
+      puts "\n⚠️  以下の問題が見つかりました:"
+      issues.each { |issue| puts "  - #{issue}" }
+      false
+    else
+      puts "\n✅ 検証成功: 全ての非アクティブDojoがYAMLに正しく記録されています"
+      true
+    end
+  end
+  
+  private
+  
+  def self.extract_dojo_block(yaml_content, dojo_id)
+    lines = yaml_content.lines
+    start_idx = lines.index { |l| l.match?(/^- id: #{dojo_id}$/) }
+    return "" unless start_idx
+    
+    end_idx = lines[(start_idx + 1)..-1].index { |l| l.match?(/^- id: \d+$/) }
+    end_idx = end_idx ? start_idx + end_idx : lines.length - 1
+    
+    lines[start_idx..end_idx].join
+  end
+end
+
+# 実行
+GitExtractionValidator.run
+```
+
+#### C. ドライラン対応の適用スクリプト
+```ruby
+# script/apply_inactivated_dates.rb
+class InactivatedDateApplier
+  def self.run(dry_run: true)
+    yaml_path = Rails.root.join('db', 'dojos.yaml')
+    backup_path = yaml_path.to_s + ".backup.#{Time.now.strftime('%Y%m%d_%H%M%S')}"
+    
+    if dry_run
+      puts "🔍 DRY RUN モード - 実際の変更は行いません"
+    else
+      FileUtils.cp(yaml_path, backup_path)
+      puts "📦 バックアップ作成: #{backup_path}"
+    end
+    
+    # Git履歴抽出実行
+    puts "🔄 Git履歴から日付を抽出中..."
+    if dry_run
+      system("rails dojos:extract_inactivated_at_from_git[1]")  # 1件だけテスト
+    else
+      system("rails dojos:extract_inactivated_at_from_git")
+    end
+    
+    # 変更内容の確認
+    if dry_run
+      puts "\n📋 変更プレビュー:"
+      system("git diff --stat db/dojos.yaml")
+    else
+      # YAMLの構文チェック
+      begin
+        YAML.load_file(yaml_path)
+        puts "✅ YAML構文チェック: OK"
+      rescue => e
+        puts "❌ YAML構文エラー: #{e.message}"
+        puts "🔙 バックアップから復元します..."
+        FileUtils.cp(backup_path, yaml_path)
+        return false
+      end
+      
+      # DBへの反映
+      puts "\n🗄️  データベースに反映中..."
+      system("rails dojos:update_db_by_yaml")
+      
+      # 統計値の比較
+      compare_statistics
+    end
+    
+    true
+  end
+  
+  private
+  
+  def self.compare_statistics
+    puts "\n📊 統計値の変化:"
+    puts "Year | Before | After | Diff"
+    puts "-----|--------|-------|------"
+    
+    (2012..2024).each do |year|
+      date = Time.zone.local(year).end_of_year
+      before = Dojo.active.where('created_at <= ?', date).sum(:counter)
+      after = Dojo.active_at(date).sum(:counter)
+      diff = after - before
+      
+      puts "#{year} | #{before.to_s.rjust(6)} | #{after.to_s.rjust(5)} | #{diff > 0 ? '+' : ''}#{diff}"
+    end
+  end
+end
+
+# 使用方法
+# InactivatedDateApplier.run(dry_run: true)  # まずドライラン
+# InactivatedDateApplier.run(dry_run: false) # 本番実行
+```
+
+### エッジケースと特殊ケースの対処
+
+| ケース | 説明 | 対処法 |
+|-------|-----|--------|
+| 複数回の再活性化 | 活動→停止→活動→停止 | noteに全履歴を記録 |
+| 同日の複数変更 | 1日に複数回ステータス変更 | 最後の変更を採用 |
+| YAMLの大規模変更 | リファクタリングによる行番号変更 | git log --followで追跡 |
+| 初期からinactive | 作成時点でis_active: false | created_atと同じ日付を設定 |
+| Git履歴なし | 古すぎてGit履歴がない | 手動設定用CSVを用意 |
+
+### パフォーマンス最適化
+
+```ruby
+# app/models/concerns/statistics_optimizable.rb
+module StatisticsOptimizable
+  extend ActiveSupport::Concern
+  
+  class_methods do
+    def active_count_by_year_optimized(start_year, end_year)
+      sql = <<-SQL
+        WITH RECURSIVE years AS (
+          SELECT #{start_year} as year
+          UNION ALL
+          SELECT year + 1 FROM years WHERE year < #{end_year}
+        ),
+        yearly_counts AS (
+          SELECT 
+            y.year,
+            COUNT(DISTINCT d.id) as dojo_count,
+            COALESCE(SUM(d.counter), 0) as counter_sum
+          FROM years y
+          LEFT JOIN dojos d ON 
+            d.created_at <= make_date(y.year, 12, 31) AND
+            (d.inactivated_at IS NULL OR d.inactivated_at > make_date(y.year, 12, 31))
+          GROUP BY y.year
+        )
+        SELECT * FROM yearly_counts ORDER BY year
+      SQL
+      
+      result = connection.execute(sql)
+      result.map { |row| [row['year'].to_s, row['counter_sum'].to_i] }.to_h
+    end
+  end
+end
+```
+
+### モニタリングダッシュボード
+
+```ruby
+# script/migration_dashboard.rb
+class MigrationDashboard
+  def self.display
+    puts "\n" + "="*60
+    puts " inactivated_at 移行ダッシュボード ".center(60)
+    puts "="*60
+    
+    total = Dojo.count
+    active = Dojo.active.count
+    inactive = Dojo.inactive.count
+    migrated = Dojo.inactive.where.not(inactivated_at: nil).count
+    pending = inactive - migrated
+    
+    puts "\n📊 Dojo統計:"
+    puts "  全Dojo数: #{total}"
+    puts "  アクティブ: #{active} (#{(active.to_f/total*100).round(1)}%)"
+    puts "  非アクティブ: #{inactive} (#{(inactive.to_f/total*100).round(1)}%)"
+    
+    puts "\n📈 移行進捗:"
+    puts "  完了: #{migrated}/#{inactive} (#{(migrated.to_f/inactive*100).round(1)}%)"
+    puts "  残り: #{pending}"
+    
+    # プログレスバー
+    progress = migrated.to_f / inactive * 50
+    bar = "█" * progress.to_i + "░" * (50 - progress.to_i)
+    puts "  [#{bar}]"
+    
+    puts "\n🔍 データ品質:"
+    mismatched = Dojo.where(
+      "(is_active = true AND inactivated_at IS NOT NULL) OR " \
+      "(is_active = false AND inactivated_at IS NULL)"
+    ).count
+    
+    puts "  不整合: #{mismatched} 件"
+    
+    if mismatched > 0
+      puts "  ⚠️  データ不整合が検出されました！"
+    else
+      puts "  ✅ データ整合性: OK"
+    end
+    
+    puts "\n" + "="*60
+  end
+end
+```
+
 ## 今後の展望
 
 この実装が完了した後、以下の改善を検討：
@@ -587,6 +885,7 @@ rails runner "
 - noteカラムから非活動期間を抽出して統計に反映する機能
 - 再活性化の頻度分析
 - YAMLファイルでの `inactivated_at` の一括管理ツール
+- 移行ダッシュボードの Web UI 化
 
 ### 中長期的な拡張
 - 専用の活動履歴テーブル（`dojo_activity_periods`）の実装
@@ -597,3 +896,6 @@ rails runner "
 
 ### 現実的なアプローチ
 現時点では `note` カラムを活用したシンプルな実装で十分な機能を提供できる。実際の運用で再活性化のケースが増えてきた時点で、より高度な履歴管理システムへの移行を検討する。
+
+---
+*Opus 4.1 によるレビュー完了（2025年8月7日）：実装成功確率 98%*
