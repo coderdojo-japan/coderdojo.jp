@@ -32,14 +32,9 @@ class Stat
   end
 
   def annual_dojos_chart(lang = 'ja')
-    # MEMO: トップページの道場数と一致するように Active Dojo を集計対象としている
-    # inactivated_at 実装後は、各年の時点でアクティブだったDojoを集計
-    if Dojo.column_names.include?('inactivated_at')
-      data = annual_dojos_with_historical_data
-      HighChartsBuilder.build_annual_dojos(data, lang)
-    else
-      HighChartsBuilder.build_annual_dojos(Dojo.active.annual_count(@period), lang)
-    end
+    # 各年末時点でアクティブだったDojoを集計（過去の非アクティブDojoも含む）
+    # YAMLマスターデータには既にinactivated_atが含まれているため、常にこの方式を使用
+    HighChartsBuilder.build_annual_dojos(annual_dojos_with_historical_data, lang)
   end
   
   # 各年末時点でアクティブだったDojo数を集計（過去の非アクティブDojoも含む）

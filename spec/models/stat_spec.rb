@@ -10,6 +10,9 @@ RSpec.describe Stat, type: :model do
       @dojo1 = Dojo.create!(
         name: 'CoderDojo テスト1',
         email: 'test1@example.com',
+        description: 'テスト用Dojo1の説明',
+        tags: ['Scratch', 'Python'],
+        url: 'https://test1.coderdojo.jp',
         created_at: Time.zone.local(2020, 3, 1),
         prefecture_id: 13,
         is_active: false,
@@ -19,7 +22,10 @@ RSpec.describe Stat, type: :model do
       # 2021年から活動開始、現在も活動中
       @dojo2 = Dojo.create!(
         name: 'CoderDojo テスト2',
-        email: 'test2@example.com', 
+        email: 'test2@example.com',
+        description: 'テスト用Dojo2の説明',
+        tags: ['Scratch'],
+        url: 'https://test2.coderdojo.jp', 
         created_at: Time.zone.local(2021, 1, 1),
         prefecture_id: 13,
         is_active: true,
@@ -30,6 +36,9 @@ RSpec.describe Stat, type: :model do
       @dojo3 = Dojo.create!(
         name: 'CoderDojo テスト3',
         email: 'test3@example.com',
+        description: 'テスト用Dojo3の説明',
+        tags: ['JavaScript'],
+        url: 'https://test3.coderdojo.jp',
         created_at: Time.zone.local(2019, 1, 1),
         prefecture_id: 13,
         is_active: false,
@@ -58,22 +67,17 @@ RSpec.describe Stat, type: :model do
     let(:period) { Date.new(2020, 1, 1)..Date.new(2023, 12, 31) }
     let(:stat) { Stat.new(period) }
     
-    context 'inactivated_at カラムが存在する場合' do
-      it '過去の活動履歴を含めた統計を生成する' do
-        allow(Dojo).to receive(:column_names).and_return(['id', 'name', 'inactivated_at'])
-        expect(stat).to receive(:annual_dojos_with_historical_data)
-        
-        stat.annual_dojos_chart
-      end
-    end
-    
-    context 'inactivated_at カラムが存在しない場合' do
-      it '従来通りアクティブなDojoのみを集計する' do
-        allow(Dojo).to receive(:column_names).and_return(['id', 'name'])
-        expect(Dojo.active).to receive(:annual_count).with(period)
-        
-        stat.annual_dojos_chart
-      end
+    it '過去の活動履歴を含めた統計グラフを生成する' do
+      # annual_dojos_with_historical_dataが呼ばれることを確認し、ダミーデータを返す
+      expect(stat).to receive(:annual_dojos_with_historical_data).and_return({
+        '2020' => 1,
+        '2021' => 2,
+        '2022' => 1,
+        '2023' => 1
+      })
+      
+      result = stat.annual_dojos_chart
+      expect(result).to be_a(LazyHighCharts::HighChart)
     end
   end
 end
