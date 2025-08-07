@@ -109,6 +109,8 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
+    brakeman (7.1.0)
+      racc
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -489,6 +491,7 @@ DEPENDENCIES
   aws-sdk-s3 (~> 1)
   bootsnap
   bootstrap-sass
+  brakeman
   capybara
   connpass_api_v2
   csv

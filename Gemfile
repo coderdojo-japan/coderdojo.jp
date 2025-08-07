@@ -79,4 +79,6 @@ group :development, :test do
   # NOTE: This enable GitHub Codespaces. Uncomment for YAGNI.
   # https://github.com/coderdojo-japan/coderdojo.jp/pull/1526
   #gem 'mini_racer'
+
+  gem 'brakeman', require: false
 end
