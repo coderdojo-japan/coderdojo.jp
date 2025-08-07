@@ -15,10 +15,10 @@ class HighChartsBuilder
       LazyHighCharts::HighChart.new('graph') do |f|
         f.title(text: title_text)
         f.xAxis(categories: data[:years])
-        f.series(type: 'column', name: lang == 'en' ? 'New Dojos' : '開設数', yAxis: 0, data: data[:increase_nums])
+        f.series(type: 'column', name: lang == 'en' ? 'New' : '開設数', yAxis: 0, data: data[:increase_nums])
         f.series(type: 'line', name: lang == 'en' ? 'Total' : '累積合計', yAxis: 1, data: data[:cumulative_sums])
         f.yAxis [
-          { title: { text: lang == 'en' ? 'New Dojos' : '開設数' },   tickInterval: 15, max: 75 },
+          { title: { text: lang == 'en' ? 'New' : '開設数' },   tickInterval: 15, max: 75 },
           { title: { text: lang == 'en' ? 'Total' : '累積合計' }, tickInterval: 50, max: 250, opposite: true }
         ]
         f.chart(width: HIGH_CHARTS_WIDTH, alignTicks: false)
