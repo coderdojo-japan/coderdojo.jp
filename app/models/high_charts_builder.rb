@@ -65,9 +65,20 @@ class HighChartsBuilder
     private
 
     def annual_chart_data_from(source)
-      years           = source.map(&:first)
-      increase_nums   = source.map(&:last)
-      cumulative_sums = increase_nums.size.times.map {|i| increase_nums[0..i].sum }
+      # sourceがハッシュの場合は配列に変換
+      source_array = source.is_a?(Hash) ? source.to_a : source
+      
+      years           = source_array.map(&:first)
+      counts          = source_array.map(&:last)
+      
+      # 増加数を計算（前年との差分）
+      increase_nums = counts.each_with_index.map do |count, i|
+        i == 0 ? count : count - counts[i - 1]
+      end
+      
+      # annual_dojos_with_historical_dataからの値は既にその時点での総数
+      # （累積値として扱う）
+      cumulative_sums = counts
 
       {
         years: years,
