@@ -528,18 +528,18 @@ end
 - [x] 再活性化機能（`reactivate!`）の実装
 - [x] モデルテストの作成
 
-### Phase 2（2週目）- データ移行準備（YAML対応版）🔄 進行中
-- [x] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装（参考実装作成済み）
-- [ ] YAMLファイルの更新（ドライラン）
-- [ ] dojos:update_db_by_yaml タスクの inactivated_at 対応（実装方法確定済み）
+### Phase 2（2週目）- YAMLサポートと統計ロジック ✅ 完了
+- [x] Git履歴からYAMLへの inactivated_at 抽出スクリプトの実装
+- [x] dojos:update_db_by_yaml タスクの inactivated_at 対応
+- [x] Statモデルの更新（`active_at` スコープの活用）
+- [x] 統計ロジックのテスト作成
+
+### Phase 3（3週目）- データ移行とテスト 📋 次のステップ
+- [ ] YAMLファイルの更新（`rails dojos:extract_inactivated_at_from_git`）
 - [ ] 手動調整が必要なケースの特定
 - [ ] YAMLファイルのレビューとコミット
-
-### Phase 3（3週目）- 統計機能更新
-- [ ] Statモデルの更新（`active_at` スコープの活用）
-- [ ] 統計ロジックのテスト
+- [ ] 統計ページの動作確認とベースラインとの比較
 - [ ] パフォーマンステスト
-- [ ] 本番環境へのデプロイ準備
 
 ### Phase 4（4週目）- 本番デプロイ
 - [ ] 本番環境でのマイグレーション実行
