@@ -124,6 +124,32 @@ RSpec.describe Dojo, :type => :model do
         end
       end
     end
+    
+    it 'ensures all dojos with inactivated_at have is_active column' do
+      yaml_data = Dojo.load_attributes_from_yaml
+      dojos_with_inactivated_at = yaml_data.select { |dojo| dojo['inactivated_at'].present? }
+      
+      dojos_with_inactivated_at.each do |dojo|
+        # inactivated_atがあるDojoは必ずis_activeカラムを持つべき
+        # （再活性化されたDojoはis_active: trueの可能性があるため、値は問わない）
+        unless dojo.key?('is_active')
+          fail "ID: #{dojo['id']} (#{dojo['name']}) はinactivated_atを持っていますが、is_activeカラムがありません"
+        end
+      end
+      
+      # 統計情報として表示
+      if dojos_with_inactivated_at.any?
+        reactivated_count = dojos_with_inactivated_at.count { |d| d['is_active'] == true }
+        inactive_count = dojos_with_inactivated_at.count { |d| d['is_active'] == false }
+        
+        # テスト出力には表示されないが、デバッグ時に有用
+        # puts "inactivated_atを持つDojo数: #{dojos_with_inactivated_at.count}"
+        # puts "  - 現在非アクティブ: #{inactive_count}"
+        # puts "  - 再活性化済み: #{reactivated_count}"
+        
+        expect(dojos_with_inactivated_at.count).to eq(inactive_count + reactivated_count)
+      end
+    end
   end
   
   # inactivated_at カラムの基本的なテスト
