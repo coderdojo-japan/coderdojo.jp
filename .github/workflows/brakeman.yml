@@ -22,4 +22,4 @@ jobs:
         run: bundle install --jobs 4 --retry 3
 
       - name: Run Brakeman
-        run: bundle exec brakeman --exit-on-warn --quiet
+        run: bundle exec brakeman --ignore-config config/brakeman.ignore --exit-on-warn --quiet
