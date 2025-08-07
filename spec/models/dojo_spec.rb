@@ -86,6 +86,46 @@ RSpec.describe Dojo, :type => :model do
     end
   end
   
+  describe 'validate inactivated_at for inactive dojos' do
+    it 'ensures all inactive dojos in YAML have inactivated_at date' do
+      yaml_data = Dojo.load_attributes_from_yaml
+      inactive_dojos = yaml_data.select { |dojo| dojo['is_active'] == false }
+      
+      missing_dates = inactive_dojos.select { |dojo| dojo['inactivated_at'].nil? }
+      
+      if missing_dates.any?
+        missing_info = missing_dates.map { |d| "ID: #{d['id']} (#{d['name']})" }.join(", ")
+        fail "以下の非アクティブDojoにinactivated_atが設定されていません: #{missing_info}"
+      end
+      
+      expect(inactive_dojos.all? { |dojo| dojo['inactivated_at'].present? }).to be true
+    end
+    
+    it 'verifies inactivated_at dates are valid' do
+      yaml_data = Dojo.load_attributes_from_yaml
+      inactive_dojos = yaml_data.select { |dojo| dojo['is_active'] == false }
+      
+      inactive_dojos.each do |dojo|
+        next if dojo['inactivated_at'].nil?
+        
+        # 日付が正しくパースできることを確認
+        expect {
+          Time.zone.parse(dojo['inactivated_at'])
+        }.not_to raise_error, "ID: #{dojo['id']} (#{dojo['name']}) のinactivated_atが不正な形式です: #{dojo['inactivated_at']}"
+        
+        # 未来の日付でないことを確認
+        date = Time.zone.parse(dojo['inactivated_at'])
+        expect(date).to be <= Time.current, "ID: #{dojo['id']} (#{dojo['name']}) のinactivated_atが未来の日付です: #{dojo['inactivated_at']}"
+        
+        # created_atより後の日付であることを確認（もしcreated_atがある場合）
+        if dojo['created_at'].present?
+          created_date = Time.zone.parse(dojo['created_at'])
+          expect(date).to be >= created_date, "ID: #{dojo['id']} (#{dojo['name']}) のinactivated_atがcreated_atより前です"
+        end
+      end
+    end
+  end
+  
   # inactivated_at カラムの基本的なテスト
   describe 'inactivated_at functionality' do
     before do
