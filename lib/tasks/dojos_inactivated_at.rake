@@ -1,10 +1,7 @@
 namespace :dojos do
   desc 'Git履歴からinactivated_at日付を抽出してYAMLファイルに反映（引数でDojo IDを指定可能）'
   task :extract_inactivated_at_from_git, [:dojo_id] => :environment do |t, args|
-    require 'git'
-    
     yaml_path = Rails.root.join('db', 'dojos.yaml')
-    git = Git.open(Rails.root)
     
     # YAMLファイルの内容を行番号付きで読み込む
     yaml_lines = File.readlines(yaml_path)
@@ -50,23 +47,32 @@ namespace :dojos do
       if target_line_number
         # git blame を使って該当行の最新コミット情報を取得
         # --porcelain で解析しやすい形式で出力
-        blame_cmd = "git blame #{yaml_path} -L #{target_line_number},+1 --porcelain"
+        blame_cmd = "git blame #{yaml_path} -L #{target_line_number},+1 --porcelain 2>&1"
         blame_output = `#{blame_cmd}`.strip
         
+        # エラーチェック
+        if blame_output.include?("fatal:") || blame_output.empty?
+          puts "  ✗ Git blameエラー: #{blame_output}"
+          next
+        end
+        
         # コミットIDを抽出（最初の行の最初の要素）
-        commit_id = blame_output.lines[0].split.first
+        commit_id = blame_output.lines[0]&.split&.first
         
         if commit_id && commit_id.match?(/^[0-9a-f]{40}$/)
           # コミット情報を取得
-          commit = git.gcommit(commit_id)
-          inactivated_date = commit.author_date
+          commit_info = `git show --no-patch --format='%at%n%an%n%s' #{commit_id}`.strip.lines
+          timestamp = commit_info[0].to_i
+          author_name = commit_info[1]
+          commit_message = commit_info[2]
+          inactivated_date = Time.at(timestamp)
           
           # 特定Dojoモードの場合は情報表示のみ
           if args[:dojo_id]
             puts "✓ is_active: false に設定された日時: #{inactivated_date.strftime('%Y-%m-%d %H:%M:%S')}"
             puts "  コミット: #{commit_id[0..7]}"
-            puts "  作者: #{commit.author.name}"
-            puts "  メッセージ: #{commit.message.lines.first.strip}"
+            puts "  作者: #{author_name}"
+            puts "  メッセージ: #{commit_message}"
             next
           end
           
@@ -100,7 +106,7 @@ namespace :dojos do
           if yaml_updated
             updated_count += 1
             puts "  ✓ inactivated_at を追加: #{inactivated_date.strftime('%Y-%m-%d %H:%M:%S')}"
-            puts "    コミット: #{commit_id[0..7]} by #{commit.author.name}"
+            puts "    コミット: #{commit_id[0..7]} by #{author_name}"
           elsif !args[:dojo_id]
             puts "  - スキップ（既に設定済みまたは更新失敗）"
           end
