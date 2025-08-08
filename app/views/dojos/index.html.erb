@@ -47,7 +47,7 @@
             params[:year]
           ),
           include_blank: '全期間',
-          onchange: "window.location.href = '#{dojos_path}?year=' + this.value + '#table'",
+          onchange: "window.location.href = this.value ? '#{dojos_path}?year=' + this.value + '#table' : '#{dojos_path}#table'",
           style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px; cursor: pointer;' %>
       
       <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]), 
