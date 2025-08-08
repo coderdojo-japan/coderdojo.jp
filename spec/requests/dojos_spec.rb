@@ -240,10 +240,11 @@ RSpec.describe "Dojos", type: :request do
     end
     
     describe "HTML format year selection UI" do
-      it "shows year selection form" do
+      it "shows year selection form with auto-submit" do
         get dojos_path
         expect(response.body).to include('対象期間')
         expect(response.body).to include('<select')
+        expect(response.body).to include('onchange')
         expect(response.body).to include('2012')
         expect(response.body).to include(Date.current.year.to_s)
       end
