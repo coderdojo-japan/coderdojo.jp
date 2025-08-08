@@ -61,12 +61,7 @@ class DojosController < ApplicationController
       @selected_year = year
       end_of_year = Time.zone.local(@selected_year).end_of_year
       
-      # CSV/JSON形式の場合は統計データを返す
-      if request.format.csv? || request.format.json?
-        return render_yearly_stats
-      end
-      
-      # HTML形式の場合は、その年末時点でアクティブだった道場を表示
+      # その年末時点でアクティブだった道場を取得
       @dojos = []
       Dojo.active_at(end_of_year).includes(:prefecture).order(order: :asc).each do |dojo|
         @dojos << {
@@ -85,33 +80,33 @@ class DojosController < ApplicationController
       
       @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
     else
-      # yearパラメータなしの場合
-      if request.format.csv? || request.format.json?
-        # CSV/JSON: 全年次統計データを返す
-        return render_yearly_stats
+      # yearパラメータなしの場合、現在のアクティブな道場リスト（既存の実装）
+      @dojos = []
+      Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
+        @dojos << {
+          id:          dojo.id,
+          url:         dojo.url,
+          name:        dojo.name,
+          logo:        root_url + dojo.logo[1..],
+          order:       dojo.order,
+          counter:     dojo.counter,
+          is_active:   dojo.is_active,
+          prefecture:  dojo.prefecture.name,
+          created_at:  dojo.created_at,
+          description: dojo.description,
+        }
       end
-      
-      # HTML: 現在のアクティブな道場リスト（既存の実装）
-    @dojos = []
-    Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
-      @dojos << {
-        id:          dojo.id,
-        url:         dojo.url,
-        name:        dojo.name,
-        logo:        root_url + dojo.logo[1..],
-        order:       dojo.order,
-        counter:     dojo.counter,
-        is_active:   dojo.is_active,
-        prefecture:  dojo.prefecture.name,
-        created_at:  dojo.created_at,
-        description: dojo.description,
-      }
     end
 
+    # respond_toで形式ごとに処理を分岐
     respond_to do |format|
       format.html # => app/views/dojos/index.html.erb
-      format.json { render json: @dojos }
-      format.csv  { send_data render_to_string, type: :csv }  # 既存の道場リスト
+      format.json do
+        params[:year].present? ? render_yearly_stats : render(json: @dojos)
+      end
+      format.csv do
+        params[:year].present? ? render_yearly_stats : send_data(render_to_string, type: :csv)
+      end
     end
   end
 
@@ -126,14 +121,7 @@ class DojosController < ApplicationController
     @period_end = Date.current.year
     
     # yearパラメータが指定されている場合（整数のみ許可）
-    if params[:year].present?
-      year = params[:year].to_i
-      # 有効な年の範囲をチェック
-      unless year.between?(@period_start, @period_end)
-        return render json: { error: "Year must be between #{@period_start} and #{@period_end}" }, status: :bad_request
-      end
-      
-      @selected_year = year
+    if @selected_year  # 既にindexアクションで設定済み
       period = Time.zone.local(@selected_year).beginning_of_year..Time.zone.local(@selected_year).end_of_year
       @stat = Stat.new(period)
       @yearly_data = prepare_single_year_data(@stat, @selected_year)
@@ -146,6 +134,7 @@ class DojosController < ApplicationController
       filename_suffix = 'all'
     end
     
+    # CSVまたはJSONとして返す
     respond_to do |format|
       format.csv do
         send_data render_to_string(template: 'dojos/yearly_stats'),
