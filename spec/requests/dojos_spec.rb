@@ -178,21 +178,26 @@ RSpec.describe "Dojos", type: :request do
         expect(multi_branch_row["道場数"]).to eq("3")
       end
       
-      it "calculates counter_sum correctly" do
-        get dojos_path(format: :html)
+      it "calculates counter_sum correctly for CSV" do
+        get dojos_path(format: :csv)
         
         expected_sum = [@dojo_2020_active, @dojo_2020_inactive, @dojo_2021_active, 
                        @dojo_2019_inactive, @dojo_multi_branch].sum(&:counter)
-        expect(assigns(:counter_sum)).to eq(expected_sum)
+        # @counter_sum はCSVで使用されるので、CSVリクエスト時に検証
+        csv = CSV.parse(response.body)
+        last_line = csv.last
+        expect(last_line[2]).to eq(expected_sum.to_s)
       end
       
-      it "calculates counter_sum for filtered year" do
-        get dojos_path(year: 2020, format: :html)
+      it "calculates counter_sum for filtered year in CSV" do
+        get dojos_path(year: 2020, format: :csv)
         
         # 2020年末時点でアクティブな道場のcounter合計
         active_in_2020 = [@dojo_2020_active, @dojo_2020_inactive, @dojo_multi_branch]
         expected_sum = active_in_2020.sum(&:counter)
-        expect(assigns(:counter_sum)).to eq(expected_sum)
+        csv = CSV.parse(response.body)
+        last_line = csv.last
+        expect(last_line[2]).to eq(expected_sum.to_s)
       end
     end
     

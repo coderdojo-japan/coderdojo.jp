@@ -91,16 +91,9 @@
       <tr>
         <th>
           <small>
-	    🗾
-	    <br class='ignore-pc'>
-	    道場名 (ID 番号)
-	  </small>
-        </th>
-        <th>
-          <small>
 	    ☯️
 	    <br class='ignore-pc'>
-	    道場数
+	    道場名 (ID 番号)
 	  </small>
         </th>
         <th>
@@ -127,9 +120,6 @@
 		<small>(ID: <%= dojo[:id] %>)</small>
 	      <% end %>
 	    </small>
-          </td>
-          <td style="text-align: center;">
-	    <small><%= dojo[:counter] %></small>
           </td>
           <td>
 	    <small><%= dojo[:created_at].strftime("%F") %></small>
