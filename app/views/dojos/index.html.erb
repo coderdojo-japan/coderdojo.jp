@@ -98,6 +98,13 @@
         </th>
         <th>
           <small>
+	    🏢
+	    <br class='ignore-pc'>
+	    支部数
+	  </small>
+        </th>
+        <th>
+          <small>
 	    🗓
 	    <br class='ignore-pc'>
 	    <a href='/signup'>掲載日</a>
@@ -120,6 +127,9 @@
 		<small>(ID: <%= dojo[:id] %>)</small>
 	      <% end %>
 	    </small>
+          </td>
+          <td style="text-align: center;">
+	    <small><%= dojo[:counter] %></small>
           </td>
           <td>
 	    <small><%= dojo[:created_at].strftime("%F") %></small>

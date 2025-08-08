@@ -42,6 +42,9 @@ class DojosController < ApplicationController
         description: dojo.description,
       }
     end
+    
+    # counter合計を計算（/statsとの照合用）
+    @counter_sum = @dojos.sum { |d| d[:counter] }
 
     respond_to do |format|
       format.html { render :index }  # => app/views/dojos/index.html.erb
