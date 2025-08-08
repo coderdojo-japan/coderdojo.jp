@@ -2,7 +2,7 @@ require 'csv'
 
 csv_data = CSV.generate do |csv|
   # ヘッダー行
-  csv << ['ID', '道場名', '支部数', '都道府県', 'URL', '設立日', '状態']
+  csv << ['ID', '道場名', '道場数', '都道府県', 'URL', '設立日', '状態']
   
   # データ行
   @dojos.each do |dojo|

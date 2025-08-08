@@ -170,12 +170,12 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path(format: :csv)
         csv = CSV.parse(response.body, headers: true)
         
-        # ヘッダーに支部数が含まれる
-        expect(csv.headers).to include("支部数")
+        # ヘッダーに道場数が含まれる
+        expect(csv.headers).to include("道場数")
         
         # 各道場のcounter値が含まれる
         multi_branch_row = csv.find { |row| row["ID"] == @dojo_multi_branch.id.to_s }
-        expect(multi_branch_row["支部数"]).to eq("3")
+        expect(multi_branch_row["道場数"]).to eq("3")
       end
       
       it "calculates counter_sum correctly" do
@@ -201,7 +201,7 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path(format: :csv)
         csv = CSV.parse(response.body, headers: true)
         
-        expect(csv.headers).to eq(['ID', '道場名', '支部数', '都道府県', 'URL', '設立日', '状態'])
+        expect(csv.headers).to eq(['ID', '道場名', '道場数', '都道府県', 'URL', '設立日', '状態'])
       end
       
       it "includes total row at the end" do
