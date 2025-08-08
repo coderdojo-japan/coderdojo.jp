@@ -381,6 +381,30 @@ RSpec.describe DojosController, type: :controller do
         csv = CSV.parse(response.body)
         expect(csv[0]).to eq(['年', '年末アクティブ道場数', '新規開設数', '非アクティブ化数', '累積合計', '純増減'])
       end
+      
+      it 'yearパラメータなしの場合は非アクティブな道場も含む（CSV/JSON）' do
+        active_dojo = create(:dojo, is_active: true)
+        inactive_dojo = create(:dojo, is_active: false, inactivated_at: '2021-03-01')
+        
+        # JSON形式: 全道場を含む
+        get :index, format: :json
+        json_response = JSON.parse(response.body)
+        json_ids = json_response.map { |d| d['id'] }
+        expect(json_ids).to include(active_dojo.id)
+        expect(json_ids).to include(inactive_dojo.id)
+        
+        # CSV形式: 全道場を含む
+        get :index, format: :csv
+        csv = CSV.parse(response.body, headers: true)
+        csv_ids = csv.map { |row| row['ID'].to_i }
+        expect(csv_ids).to include(active_dojo.id)
+        expect(csv_ids).to include(inactive_dojo.id)
+        
+        # HTML形式: アクティブな道場のみ（既存の動作を維持）
+        get :index, format: :html
+        expect(assigns(:dojos).map { |d| d[:id] }).to include(active_dojo.id)
+        expect(assigns(:dojos).map { |d| d[:id] }).not_to include(inactive_dojo.id)
+      end
     end
     
     context '特定年のデータ（year=2020）' do
@@ -395,6 +419,30 @@ RSpec.describe DojosController, type: :controller do
         csv = CSV.parse(response.body)
         expect(csv[0]).to eq(['ID', '道場名', '都道府県', 'URL', '設立日', '状態'])
         expect(csv.size - 1).to eq(2)  # ヘッダーを除いて2道場
+      end
+      
+      it 'yearパラメータ指定時は非アクティブな道場を含まない（全形式）' do
+        # テストデータ: 2020年にアクティブ、2021年に非アクティブ化した道場
+        inactive_dojo = create(:dojo, 
+          created_at: '2019-01-01', 
+          is_active: false, 
+          inactivated_at: '2021-03-01'
+        )
+        
+        # HTML形式
+        get :index, params: { year: '2020' }, format: :html
+        expect(assigns(:dojos).map { |d| d[:id] }).not_to include(inactive_dojo.id)
+        
+        # JSON形式
+        get :index, params: { year: '2020' }, format: :json
+        json_response = JSON.parse(response.body)
+        expect(json_response.map { |d| d['id'] }).not_to include(inactive_dojo.id)
+        
+        # CSV形式
+        get :index, params: { year: '2020' }, format: :csv
+        csv = CSV.parse(response.body, headers: true)
+        csv_ids = csv.map { |row| row['ID'].to_i }
+        expect(csv_ids).not_to include(inactive_dojo.id)
       end
     end
     
