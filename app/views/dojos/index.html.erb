@@ -18,10 +18,9 @@
     <br>
     <div class='form__terms list'>
       <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
-	<li>現在は活動停止中 (In-active) の道場も表示されています</li>
-	<li>道場名をクリックすると個別の統計データが確認できます</li>
-	<li>下記表は <code><%= link_to dojos_path(format: :json), dojos_path(format: :json) %></code> で JSON に変換できます</li>
-	<li>CSV形式でもダウンロード可能です <code><%= link_to dojos_path(format: :csv), dojos_path(format: :csv) %></code></li>
+	<li>道場名をクリックすると、その道場の個別の統計データを確認できます</li>
+	<li>対象期間を選ぶと、その期間のアクティブな道場の一覧を表示できます</li>
+	<li>全期間の場合のみ、すべての道場（非アクティブ含む）を表示できます</li>
       </ul>
     </div>
   </p>
