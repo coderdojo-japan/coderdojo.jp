@@ -88,8 +88,11 @@
   <body>
     <%= render 'shared/header' %>
 
+    <%# 'inline_' プレフィックスがついたflashメッセージは、ここでは表示せず、各ビュー内でカスタム表示する %>
     <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% unless message_type.to_s.start_with?('inline_') %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
     <% end %>
 
     <%= yield %>
