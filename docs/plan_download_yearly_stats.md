@@ -3,6 +3,13 @@
 ## 概要
 CoderDojoの統計データを年次でダウンロードできる機能を実装する。`/dojos` ページにクエリパラメータ（`?year=2024`）を追加することで、特定年のデータや全年次統計をCSV/JSON形式でダウンロード可能にする。既存の `/stats` ページとの混乱を避けるため、`/dojos` エンドポイントを拡張する形で実装する。
 
+### データの取得範囲
+- **yearパラメータなし（デフォルト）**:
+  - HTML表示: 現在アクティブな道場のみ（既存の動作を維持）
+  - CSV/JSONダウンロード: 全道場（アクティブ + 非アクティブ）
+- **yearパラメータあり（例: year=2024）**:
+  - HTML/JSON/CSV すべての形式: その年末時点でアクティブだった道場のみ
+
 ## 🎯 要件定義
 
 ### Phase 1: 基本実装（MVP）
@@ -35,9 +42,9 @@ get '/dojos/:id', to: 'dojos#show'       # HTML, JSON, CSV
 # URLパターン例：
 # GET /dojos                  → 現在のアクティブ道場一覧（HTML）
 # GET /dojos?year=2024        → 2024年末時点のアクティブ道場一覧（HTML）
-# GET /dojos.csv              → 全年次統計データ
+# GET /dojos.csv              → 全道場リスト（アクティブ + 非アクティブ）
 # GET /dojos.csv?year=2024    → 2024年末時点のアクティブ道場リスト（CSV）
-# GET /dojos.json             → 全年次統計データ
+# GET /dojos.json             → 全道場リスト（アクティブ + 非アクティブ）
 # GET /dojos.json?year=2024   → 2024年末時点のアクティブ道場リスト（JSON）
 ```
 
@@ -80,9 +87,19 @@ class DojosController < ApplicationController
       
       @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
     else
-      # yearパラメータなしの場合、現在のアクティブな道場リスト（既存の実装）
+      # yearパラメータなしの場合
+      # HTML表示: 現在のアクティブな道場のみ（既存の実装を維持）
+      # CSV/JSONダウンロード: 全道場（アクティブ + 非アクティブ）
+      if request.format.html?
+        # HTMLの場合は現在アクティブな道場のみ
+        dojos_scope = Dojo.active
+      else
+        # CSV/JSONの場合は全道場（非アクティブも含む）
+        dojos_scope = Dojo.all
+      end
+      
       @dojos = []
-      Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
+      dojos_scope.includes(:prefecture).order(order: :asc).each do |dojo|
         @dojos << {
           id:          dojo.id,
           url:         dojo.url,
@@ -101,12 +118,8 @@ class DojosController < ApplicationController
     # respond_toで形式ごとに処理を分岐
     respond_to do |format|
       format.html # => app/views/dojos/index.html.erb
-      format.json do
-        params[:year].present? ? render_yearly_stats : render(json: @dojos)
-      end
-      format.csv do
-        params[:year].present? ? render_yearly_stats : send_data(render_to_string, type: :csv)
-      end
+      format.json { render json: @dojos }
+      format.csv  { send_data render_to_string, type: :csv }
     end
   end
 
