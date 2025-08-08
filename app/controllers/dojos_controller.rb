@@ -28,7 +28,7 @@ class DojosController < ApplicationController
     end
     
     @dojos = []
-    dojos_scope.includes(:prefecture).order(order: :asc).each do |dojo|
+    dojos_scope.includes(:prefecture).order(is_active: :desc, order: :asc).each do |dojo|
       @dojos << {
         id:          dojo.id,
         url:         dojo.url,
