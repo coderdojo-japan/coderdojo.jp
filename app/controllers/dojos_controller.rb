@@ -69,7 +69,7 @@ class DojosController < ApplicationController
       
       # 表示用の日付テキスト
       display_date = "#{@selected_year}年末"
-      display_date = Date.current.strftime('%Y年%m月%d日') if @selected_year == Date.current.year
+      display_date = Date.current.strftime('%Y年%-m月%-d日') if @selected_year == Date.current.year
       
       flash.now[:inline_info] = "#{display_date}時点のアクティブな道場を表示中<br>（開設数: #{new_dojos_count} / 合計数: #{total_dojos_count}）".html_safe
     end
