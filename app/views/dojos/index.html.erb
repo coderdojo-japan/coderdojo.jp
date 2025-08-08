@@ -129,7 +129,7 @@
               <small>
 	        <a href='<%= dojo[:url] %>'>
 		  <span title="<%= dojo[:url] %>">
-		    <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
+		    <%= truncate(CGI.unescape(dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/')), length: 30) %>
 		  </span>
 	        </a>
               </small>
@@ -150,7 +150,7 @@
               <small>
 	        <a href='<%= dojo[:url] %>'>
 		  <span title="<%= dojo[:url] %>">
-		    <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
+		    <%= truncate(CGI.unescape(dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/')), length: 30) %>
 		  </span>
 	        </a>
               </small>
