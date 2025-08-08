@@ -87,7 +87,7 @@
   </style>
 
   <div style="margin-top: 20px;" align="center">
-    <table border="1">
+    <table border="1" class="stats-table">
       <tr>
         <th>
           <small>
@@ -113,26 +113,49 @@
       </tr>
       <% @dojos.each do |dojo| %>
         <tr>
-          <td>
-	    <small>
-	      <%= link_to dojo_path(dojo[:id]) do %>
-		<%= dojo[:name] %><br>
-		<small>(ID: <%= dojo[:id] %>)</small>
-	      <% end %>
-	    </small>
-          </td>
-          <td>
-	    <small><%= dojo[:created_at].strftime("%F") %></small>
-          </td>
-          <td class="url-cell">
-            <small>
-	      <a href='<%= dojo[:url] %>'>
-		<span title="<%= dojo[:url] %>">
-		  <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
-		</span>
-	      </a>
-            </small>
-          </td>
+          <% if dojo[:is_active] %>
+            <td>
+	      <small>
+	        <%= link_to dojo_path(dojo[:id]) do %>
+		  <%= dojo[:name] %><br>
+		  <small>(ID: <%= dojo[:id] %>)</small>
+	        <% end %>
+	      </small>
+            </td>
+            <td>
+	      <small><%= dojo[:created_at].strftime("%F") %></small>
+            </td>
+            <td class="url-cell">
+              <small>
+	        <a href='<%= dojo[:url] %>'>
+		  <span title="<%= dojo[:url] %>">
+		    <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
+		  </span>
+	        </a>
+              </small>
+            </td>
+          <% else %>
+            <td class="inactive-item">
+	      <small>
+	        <%= link_to dojo_path(dojo[:id]) do %>
+		  <%= dojo[:name] %><br>
+		  <small>(ID: <%= dojo[:id] %>)</small>
+	        <% end %>
+	      </small>
+            </td>
+            <td class="inactive-item">
+	      <small><%= dojo[:created_at].strftime("%F") %></small>
+            </td>
+            <td class="url-cell inactive-item">
+              <small>
+	        <a href='<%= dojo[:url] %>'>
+		  <span title="<%= dojo[:url] %>">
+		    <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
+		  </span>
+	        </a>
+              </small>
+            </td>
+          <% end %>
         </tr>
       <% end %>
     </table>

@@ -361,7 +361,7 @@
     </div>
   </h2>
   <div style="margin-top: 20px;" align="center">
-    <table border="1">
+    <table border="1" class="stats-table">
       <tr>
         <th style="padding: 10px;">
           <small><%= @lang == 'en' ? 'Prefecture' : '都道府県名' %></small>
@@ -373,10 +373,10 @@
       <% @data_by_prefecture.each_with_index do |(prefecture, count), index| %>
         <tr>
           <% if count == 0 %>
-            <td style="background-color: gainsboro; padding: 0px;">
+            <td class="inactive-item" style="padding: 0px;">
               <small><%= prefecture %></small>
             </td>
-            <td style="background-color: gainsboro; padding: 0px;">
+            <td class="inactive-item" style="padding: 0px;">
               <small><%= count %></small>
             </td>
           <% else %>
