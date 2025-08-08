@@ -21,9 +21,49 @@
 	<li>現在は活動停止中 (In-active) の道場も表示されています</li>
 	<li>道場名をクリックすると個別の統計データが確認できます</li>
 	<li>下記表は <code><%= link_to dojos_path(format: :json), dojos_path(format: :json) %></code> で JSON に変換できます</li>
+	<li>CSV形式でもダウンロード可能です <code><%= link_to dojos_path(format: :csv), dojos_path(format: :csv) %></code></li>
       </ul>
     </div>
   </p>
+  
+  <!-- 年次データフィルタリング -->
+  <div style="margin: 30px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; max-width: 600px;">
+    <h3>📊 年次データのフィルタリング</h3>
+    
+    <% if @selected_year %>
+      <div style="padding: 10px; background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 4px; margin-bottom: 15px;">
+        <strong><%= @selected_year %>年末時点</strong>のアクティブな道場を表示中
+        <%= link_to '全道場を表示', dojos_path, style: 'margin-left: 10px;' %>
+      </div>
+    <% end %>
+    
+    <%= form_with(url: dojos_path, method: :get, local: true, style: 'margin-top: 15px;') do |f| %>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <%= label_tag :year, '年を選択:', style: 'font-weight: bold;' %>
+        <%= select_tag :year, 
+            options_for_select(
+              (2012..Date.current.year).to_a.reverse.map { |y| [y.to_s + '年', y] },
+              params[:year]
+            ),
+            include_blank: '全道場',
+            style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px;' %>
+        
+        <%= button_tag type: 'submit', style: 'padding: 5px 15px; background: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer;' do %>
+          表示
+        <% end %>
+        
+        <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]), 
+            style: 'padding: 5px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 4px;' %>
+        
+        <%= link_to 'JSON', dojos_path(format: :json, year: params[:year]), 
+            style: 'padding: 5px 15px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;' %>
+      </div>
+    <% end %>
+    
+    <p style="font-size: smaller; color: #6c757d; margin-top: 15px;">
+      ※ 年を選択すると、その年末時点でアクティブだった道場のデータを表示・ダウンロードできます。
+    </p>
+  </div>
 
   <style type="text/css">
     /* URL 用のセルにクラスを付けておく想定 */

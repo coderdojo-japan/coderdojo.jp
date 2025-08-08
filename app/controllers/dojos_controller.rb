@@ -1,9 +1,34 @@
 class DojosController < ApplicationController
 
-  # GET /dojos[.json]
+  # GET /dojos[.html|.json|.csv]
   def index
+    # yearパラメータがある場合の処理
+    if params[:year].present?
+      begin
+        year = params[:year].to_i
+        # 有効な年の範囲をチェック
+        unless year.between?(2012, Date.current.year)
+          flash[:alert] = "指定された年（#{year}）は無効です。2012年から#{Date.current.year}年の間で指定してください。"
+          return redirect_to dojos_path
+        end
+        
+        @selected_year = year
+        end_of_year = Time.zone.local(@selected_year).end_of_year
+        
+        # その年末時点でアクティブだった道場を取得
+        dojos_scope = Dojo.active_at(end_of_year)
+        @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
+      rescue ArgumentError
+        flash[:alert] = "無効な年が指定されました"
+        return redirect_to dojos_path
+      end
+    else
+      # yearパラメータなしの場合（既存の実装そのまま）
+      dojos_scope = Dojo.all
+    end
+    
     @dojos = []
-    Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
+    dojos_scope.includes(:prefecture).order(order: :asc).each do |dojo|
       @dojos << {
         id:          dojo.id,
         url:         dojo.url,
@@ -19,10 +44,9 @@ class DojosController < ApplicationController
     end
 
     respond_to do |format|
-      # No corresponding View for now.
-      # Only for API: GET /dojos.json
-      format.html # => app/views/dojos/index.html.erb
+      format.html { render :index }  # => app/views/dojos/index.html.erb
       format.json { render json: @dojos }
+      format.csv  { send_data render_to_string, type: :csv }
     end
   end
 
