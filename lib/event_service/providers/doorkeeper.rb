@@ -31,7 +31,7 @@ module EventService
 
               break if part.size.zero?
 
-              events.push(*part.map { |e| e['event'] })
+              events.push(*part.map { |e| e[:event] })
 
               break if part.size < 25   # 25 items / 1 request
 
