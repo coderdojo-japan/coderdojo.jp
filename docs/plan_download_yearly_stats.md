@@ -5,8 +5,7 @@ CoderDojoの統計データを年次でダウンロードできる機能を実�
 
 ### データの取得範囲
 - **yearパラメータなし（デフォルト）**:
-  - HTML表示: 現在アクティブな道場のみ（既存の動作を維持）
-  - CSV/JSONダウンロード: 全道場（アクティブ + 非アクティブ）
+  - 全形式（HTML/JSON/CSV）: 全道場（アクティブ + 非アクティブ）※既存の動作そのまま
 - **yearパラメータあり（例: year=2024）**:
   - HTML/JSON/CSV すべての形式: その年末時点でアクティブだった道場のみ
 
@@ -88,19 +87,9 @@ class DojosController < ApplicationController
       
       @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
     else
-      # yearパラメータなしの場合
-      # HTML表示: 現在のアクティブな道場のみ（既存の実装を維持）
-      # CSV/JSONダウンロード: 全道場（アクティブ + 非アクティブ）
-      if request.format.html?
-        # HTMLの場合は現在アクティブな道場のみ
-        dojos_scope = Dojo.active
-      else
-        # CSV/JSONの場合は全道場（非アクティブも含む）
-        dojos_scope = Dojo.all
-      end
-      
+      # yearパラメータなしの場合（既存の実装そのまま）
       @dojos = []
-      dojos_scope.includes(:prefecture).order(order: :asc).each do |dojo|
+      Dojo.includes(:prefecture).order(order: :asc).all.each do |dojo|
         @dojos << {
           id:          dojo.id,
           url:         dojo.url,
@@ -120,87 +109,12 @@ class DojosController < ApplicationController
     respond_to do |format|
       format.html { render :index }  # => app/views/dojos/index.html.erb
       format.json { render json: @dojos }
-      format.csv  { send_data render_to_string, type: :csv }
+      format.csv  { send_data render_to_string, type: :csv }  # 新規追加
     end
   end
 
   def show
     # 既存の実装のまま
-  end
-  
-  private
-  
-  def render_yearly_stats
-    @period_start = 2012
-    @period_end = Date.current.year
-    
-    # yearパラメータが指定されている場合（整数のみ許可）
-    if @selected_year  # 既にindexアクションで設定済み
-      period = Time.zone.local(@selected_year).beginning_of_year..Time.zone.local(@selected_year).end_of_year
-      @stat = Stat.new(period)
-      @yearly_data = prepare_single_year_data(@stat, @selected_year)
-      filename_suffix = @selected_year.to_s
-    else
-      # yearパラメータなし = 全年次データ
-      period = Time.zone.local(@period_start).beginning_of_year..Time.zone.local(@period_end).end_of_year
-      @stat = Stat.new(period)
-      @yearly_data = prepare_all_years_data(@stat)
-      filename_suffix = 'all'
-    end
-    
-    # CSVまたはJSONとして返す
-    respond_to do |format|
-      format.csv do
-        send_data render_to_string(template: 'dojos/yearly_stats'),
-                  type: :csv,
-                  filename: "coderdojo_stats_#{filename_suffix}_#{Date.current.strftime('%Y%m%d')}.csv"
-      end
-      format.json { render json: @yearly_data }
-    end
-  end
-  
-  def prepare_all_years_data(stat)
-    active_dojos = stat.annual_dojos_with_historical_data
-    new_dojos = stat.annual_new_dojos_count
-    
-    # 年ごとのデータを整形
-    years = (@period_start..@period_end).map(&:to_s)
-    years.map do |year|
-      prev_year = (year.to_i - 1).to_s
-      {
-        year: year,
-        active_dojos_at_year_end: active_dojos[year] || 0,
-        new_dojos: new_dojos[year] || 0,
-        inactivated_dojos: calculate_inactivated_count(year),
-        cumulative_total: active_dojos[year] || 0,
-        net_change: prev_year && active_dojos[prev_year] ? 
-          (active_dojos[year] || 0) - active_dojos[prev_year] : 
-          (active_dojos[year] || 0)
-      }
-    end
-  end
-  
-  def prepare_single_year_data(stat, year)
-    # 特定年のアクティブな道場リストを返す
-    end_of_year = Time.zone.local(year).end_of_year
-    dojos = Dojo.active_at(end_of_year).includes(:prefecture)
-    
-    dojos.map do |dojo|
-      {
-        id: dojo.id,
-        name: dojo.name,
-        prefecture: dojo.prefecture.name,
-        url: dojo.url,
-        created_at: dojo.created_at.strftime('%Y-%m-%d'),
-        is_active_at_year_end: dojo.active_at?(end_of_year)
-      }
-    end
-  end
-  
-  def calculate_inactivated_count(year)
-    start_of_year = Time.zone.local(year.to_i).beginning_of_year
-    end_of_year = Time.zone.local(year.to_i).end_of_year
-    Dojo.where(inactivated_at: start_of_year..end_of_year).sum(:counter)
   end
 end
 ```
@@ -382,9 +296,14 @@ RSpec.describe DojosController, type: :controller do
         expect(csv[0]).to eq(['年', '年末アクティブ道場数', '新規開設数', '非アクティブ化数', '累積合計', '純増減'])
       end
       
-      it 'yearパラメータなしの場合は非アクティブな道場も含む（CSV/JSON）' do
+      it 'yearパラメータなしの場合は非アクティブな道場も含む（全形式）' do
         active_dojo = create(:dojo, is_active: true)
         inactive_dojo = create(:dojo, is_active: false, inactivated_at: '2021-03-01')
+        
+        # HTML形式: 全道場を含む
+        get :index, format: :html
+        expect(assigns(:dojos).map { |d| d[:id] }).to include(active_dojo.id)
+        expect(assigns(:dojos).map { |d| d[:id] }).to include(inactive_dojo.id)
         
         # JSON形式: 全道場を含む
         get :index, format: :json
@@ -399,11 +318,6 @@ RSpec.describe DojosController, type: :controller do
         csv_ids = csv.map { |row| row['ID'].to_i }
         expect(csv_ids).to include(active_dojo.id)
         expect(csv_ids).to include(inactive_dojo.id)
-        
-        # HTML形式: アクティブな道場のみ（既存の動作を維持）
-        get :index, format: :html
-        expect(assigns(:dojos).map { |d| d[:id] }).to include(active_dojo.id)
-        expect(assigns(:dojos).map { |d| d[:id] }).not_to include(inactive_dojo.id)
       end
     end
     
