@@ -39,12 +39,4 @@ csv_data = CSV.generate do |csv|
     
     csv << row
   end
-  
-  # 合計行を追加
-  csv << []
-  if @selected_year
-    csv << ['合計', "#{@dojos.length}道場", @counter_sum, '', '', '', '']
-  else
-    csv << ['合計', "#{@dojos.length}道場", @counter_sum, '', '', '', '', '']
-  end
 end
