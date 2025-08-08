@@ -62,7 +62,7 @@ RSpec.describe "Dojos", type: :request do
         future_year = Date.current.year + 1
         get dojos_path(year: future_year, format: :json)
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
-        expect(flash[:alert]).to include("無効です")
+        expect(flash[:alert]).to include("指定された年は無効です")
       end
       
       it "handles invalid year strings" do

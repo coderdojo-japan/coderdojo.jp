@@ -8,7 +8,7 @@ class DojosController < ApplicationController
         year = params[:year].to_i
         # 有効な年の範囲をチェック
         unless year.between?(2012, Date.current.year)
-          flash[:alert] = "指定された年（#{year}）は無効です。2012年から#{Date.current.year}年の間で指定してください。"
+          flash[:alert] = "指定された年は無効です。2012年から#{Date.current.year}年の間で指定してください。"
           return redirect_to dojos_path(anchor: 'table')
         end
         
