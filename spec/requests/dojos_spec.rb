@@ -91,6 +91,12 @@ RSpec.describe "Dojos", type: :request do
           expect(assigns(:dojos).map { |d| d[:id] }).to include(@dojo_2020_inactive.id)
         end
         
+        it "displays default message for all periods" do
+          get dojos_path(format: :html)
+          expect(response.body).to include('全期間の道場を表示中（非アクティブ含む）')
+          expect(response.body).to include('alert-info')
+        end
+        
         it "includes inactive dojos in CSV format" do
           get dojos_path(format: :csv)
           csv = CSV.parse(response.body, headers: true)
