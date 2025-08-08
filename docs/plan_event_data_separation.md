@@ -30,6 +30,19 @@ upcoming_events テーブル     event_histories テーブル
 
 ## 🔄 データフロー
 
+### データ収集範囲とタイミング
+
+```ruby
+# UpcomingEvents: 1ヶ月前 〜 2ヶ月後
+# 例：1月8日実行時
+UpcomingEvents収集範囲: 2024/12/09 〜 2025/03/08
+削除対象: 2024/12/08以前に終了したイベント
+
+# EventHistory: 指定期間（通常は前週）
+# 例：月曜日実行時
+EventHistory収集範囲: 前週の月曜 〜 日曜（7日間）
+```
+
 ### イベントのライフサイクル
 
 ```ruby
@@ -112,42 +125,108 @@ rake statistics:aggregation  # 週1回で十分
 
 ## 🛠️ 実装詳細
 
-### UpcomingEvents の更新処理
+### UpcomingEvents の更新処理（実際のコード）
 
 ```ruby
 # lib/upcoming_events/aggregation.rb
 class UpcomingEvents::Aggregation
+  def initialize(args)
+    # NOTE: 1ヶ月前 〜 2ヶ月後のイベント情報を対象に収集
+    today = Time.zone.today
+    @from = today - 1.months + 1.day  # 1ヶ月前から
+    @to   = today + 2.months          # 2ヶ月後まで
+    @provider = args[:provider]
+  end
+
   def run
-    # 1. 古いデータを削除
-    UpcomingEvent.delete_all
-    
-    # 2. 各プロバイダから未来のイベントを取得
-    fetch_from_connpass
-    fetch_from_doorkeeper
-    
-    # 3. DBに保存（過去のイベントは除外）
-    events.select { |e| e[:date] > Date.today }.each do |event|
-      UpcomingEvent.create!(event)
+    puts "UpcomingEvents aggregate"
+    with_notifying do
+      delete_upcoming_events  # 古いイベントを削除
+      execute                 # 新しいイベントを取得
     end
   end
+
+  private
+
+  def delete_upcoming_events
+    # 1ヶ月より前に終了したイベントを削除
+    UpcomingEvent.until(@from).delete_all
+  end
+end
+
+# app/models/upcoming_event.rb
+class UpcomingEvent < ApplicationRecord
+  # untilスコープ: 指定日より前に終了したイベント
+  scope :until, ->(date) { where('event_end_at < ?', date.beginning_of_day) }
 end
 ```
 
-### EventHistory の集計処理
+#### 削除メカニズムの詳細
+
+1. **1ヶ月分のバッファー期間**
+   - 即座に削除せず、1ヶ月前まで保持
+   - 例：1月8日実行時、12月8日より前のイベントを削除
+
+2. **event_end_at ベースの判定**
+   - イベント終了時刻を基準に削除判定
+   - 開始時刻ではない点が重要
+
+3. **delete_all による一括削除**
+   - コールバックを実行しない高速削除
+   - トランザクション内で安全に実行
+
+### EventHistory の集計処理（実際のコード）
 
 ```ruby
 # lib/statistics/aggregation.rb
 class Statistics::Aggregation
+  def initialize(args)
+    @from, @to = aggregation_period(args[:from], args[:to])
+    @provider  = args[:provider]
+    @dojo_id   = args[:dojo_id].to_i if args[:dojo_id].present?
+  end
+
   def run
-    # 指定期間の過去イベントのみを集計
-    period = @from..@to  # 過去の期間
-    
-    # 各プロバイダから過去のイベントを取得
-    fetch_past_events(period)
-    
-    # EventHistoryに保存（実際に開催されたもののみ）
-    events.each do |event|
-      EventHistory.create!(event) if event[:status] == 'held'
+    puts "Aggregate for #{@from}~#{@to}"
+    with_notifying do
+      delete_event_histories  # 期間内の既存データを削除
+      execute                 # 新しいデータを取得・保存
+    end
+  end
+
+  private
+
+  def delete_event_histories
+    target_period = @from.beginning_of_day..@to.end_of_day
+    # 各プロバイダごとに削除処理
+    (@externals.keys + @internals.keys).each do |kind|
+      "Statistics::Tasks::#{kind.to_s.camelize}".constantize
+        .delete_event_histories(target_period, @dojo_id)
+    end
+  end
+end
+
+# lib/statistics/tasks/doorkeeper.rb
+class Statistics::Tasks::Doorkeeper
+  def run
+    @dojos.each do |dojo|
+      dojo.dojo_event_services.for(:doorkeeper).each do |service|
+        events = @client.fetch_events(group_id: service.group_id)
+        
+        events.each do |e|
+          # 実際に開催されたイベントのみ保存
+          next unless e[:group].to_s == service.group_id
+          
+          EventHistory.create!(
+            dojo_id:       dojo.id,
+            dojo_name:     dojo.name,
+            event_id:      e[:id],
+            event_url:     e[:public_url],
+            participants:  e[:participants],  # 実際の参加者数
+            evented_at:    Time.zone.parse(e[:starts_at])
+          )
+        end
+      end
     end
   end
 end
