@@ -39,13 +39,13 @@
     
     <%= form_with(url: dojos_path, method: :get, local: true, style: 'margin-top: 15px;') do |f| %>
       <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-        <%= label_tag :year, '年を選択:', style: 'font-weight: bold;' %>
+        <%= label_tag :year, '対象期間:', style: 'font-weight: bold;' %>
         <%= select_tag :year, 
             options_for_select(
               (2012..Date.current.year).to_a.reverse.map { |y| [y.to_s + '年', y] },
               params[:year]
             ),
-            include_blank: '全道場',
+            include_blank: '全期間',
             style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px;' %>
         
         <%= button_tag type: 'submit', style: 'padding: 5px 15px; background: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer;' do %>
