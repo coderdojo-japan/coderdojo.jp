@@ -224,26 +224,28 @@ RSpec.describe "Dojos", type: :request do
         expect(multi_branch_row["道場数"]).to eq("3")
       end
       
-      it "calculates counter_sum correctly for CSV" do
+      it "includes counter field in CSV data rows" do
         get dojos_path(format: :csv)
         
-        expected_sum = [@dojo_2020_active, @dojo_2020_inactive, @dojo_2021_active, 
-                       @dojo_2019_inactive, @dojo_multi_branch].sum(&:counter)
-        # @counter_sum はCSVで使用されるので、CSVリクエスト時に検証
-        csv = CSV.parse(response.body)
-        last_line = csv.last
-        expect(last_line[2]).to eq(expected_sum.to_s)
+        csv = CSV.parse(response.body, headers: true)
+        # 各道場のcounter値が正しく含まれることを確認
+        multi_branch_row = csv.find { |row| row["ID"] == @dojo_multi_branch.id.to_s }
+        expect(multi_branch_row["道場数"]).to eq("3")
+        
+        normal_dojo_row = csv.find { |row| row["ID"] == @dojo_2020_active.id.to_s }
+        expect(normal_dojo_row["道場数"]).to eq("1")
       end
       
-      it "calculates counter_sum for filtered year in CSV" do
+      it "filters counter values correctly for specific year" do
         get dojos_path(year: 2020, format: :csv)
         
-        # 2020年末時点でアクティブな道場のcounter合計
-        active_in_2020 = [@dojo_2020_active, @dojo_2020_inactive, @dojo_multi_branch]
-        expected_sum = active_in_2020.sum(&:counter)
-        csv = CSV.parse(response.body)
-        last_line = csv.last
-        expect(last_line[2]).to eq(expected_sum.to_s)
+        csv = CSV.parse(response.body, headers: true)
+        # 2020年末時点でアクティブな道場のみが含まれることを確認
+        dojo_ids = csv.map { |row| row["ID"].to_i }
+        expect(dojo_ids).to include(@dojo_2020_active.id)
+        expect(dojo_ids).to include(@dojo_2020_inactive.id)  # 2021年に非アクティブ化されたので2020年末時点ではアクティブ
+        expect(dojo_ids).to include(@dojo_multi_branch.id)
+        expect(dojo_ids).not_to include(@dojo_2021_active.id)  # 2021年作成なので含まれない
       end
     end
     
@@ -252,17 +254,22 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path(format: :csv)
         csv = CSV.parse(response.body, headers: true)
         
-        expect(csv.headers).to eq(['ID', '道場名', '道場数', '都道府県', 'URL', '設立日', '状態'])
+        # 全期間の場合は閉鎖日カラムが追加される
+        expect(csv.headers).to eq(['ID', '道場名', '道場数', '都道府県', 'URL', '設立日', '状態', '閉鎖日'])
       end
       
-      it "includes total row at the end" do
+      it "does not include total row for better data consistency" do
         get dojos_path(format: :csv)
-        lines = response.body.split("\n")
+        csv = CSV.parse(response.body)
         
-        # 最後の行が合計行
-        last_line = lines.last
-        expect(last_line).to include("合計")
-        expect(last_line).to include("道場")
+        # 合計行が含まれないことを確認（データ一貫性のため）
+        csv.each do |row|
+          # IDカラムに「合計」という文字列が含まれないことを確認
+          expect(row[0]).not_to eq("合計") if row[0]
+        end
+        
+        # 全ての行がデータ行またはヘッダー行であることを確認
+        expect(csv.all? { |row| row.compact.any? }).to be true
       end
       
       it "formats dates correctly" do
