@@ -10,8 +10,8 @@ RSpec.describe EventService::Providers::Doorkeeper do
     it do
       expect(subject).to be_instance_of(Array)
       expect(subject.size).to eq 1
-      expect(subject.first['event']['id']).to eq 1234
-      expect(subject.first['event']['group']).to eq 5555
+      expect(subject.first[:event][:id]).to eq 1234
+      expect(subject.first[:event][:group]).to eq 5555
     end
   end
 
