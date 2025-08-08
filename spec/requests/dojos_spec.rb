@@ -293,6 +293,9 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path(year: 2020)
         expect(response.body).to include('2020年末時点')
         expect(response.body).to include('アクティブな道場を表示中')
+        # 統計情報が含まれていることを確認（/statsページとの比較検証用）
+        expect(response.body).to include('開設道場数:')
+        expect(response.body).to include('合計道場数:')
         # inline_infoメッセージが表示されることを確認
         expect(response.body).to include('alert-info')
       end

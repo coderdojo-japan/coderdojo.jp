@@ -18,9 +18,6 @@ class DojosController < ApplicationController
         # その年末時点でアクティブだった道場を取得
         dojos_scope = Dojo.active_at(end_of_year)
         @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
-        
-        # 成功メッセージもinline_で表示
-        flash.now[:inline_info] = "#{@selected_year}年末時点のアクティブな道場を表示中"
       rescue ArgumentError
         flash[:inline_alert] = "無効な年が指定されました"
         return redirect_to dojos_path(anchor: 'table')
@@ -58,6 +55,12 @@ class DojosController < ApplicationController
     
     # counter合計を計算（/statsとの照合用）
     @counter_sum = @dojos.sum { |d| d[:counter] }
+    
+    # 年が選択されている場合、統計情報を含むメッセージを設定
+    if @selected_year
+      active_dojos_count = @dojos.count
+      flash.now[:inline_info] = "#{@selected_year}年末時点のアクティブな道場を表示中<br>（開設道場数: #{active_dojos_count} / 合計道場数: #{@counter_sum}）".html_safe
+    end
 
     respond_to do |format|
       format.html { render :index }  # => app/views/dojos/index.html.erb
