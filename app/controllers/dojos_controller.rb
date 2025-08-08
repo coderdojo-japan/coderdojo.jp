@@ -8,7 +8,7 @@ class DojosController < ApplicationController
         year = params[:year].to_i
         # 有効な年の範囲をチェック
         unless year.between?(2012, Date.current.year)
-          flash[:alert] = "指定された年は無効です。2012年から#{Date.current.year}年の間で指定してください。"
+          flash[:inline_alert] = "指定された年は無効です。2012年から#{Date.current.year}年の間で指定してください。"
           return redirect_to dojos_path(anchor: 'table')
         end
         
@@ -18,8 +18,11 @@ class DojosController < ApplicationController
         # その年末時点でアクティブだった道場を取得
         dojos_scope = Dojo.active_at(end_of_year)
         @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
+        
+        # 成功メッセージもinline_で表示
+        flash.now[:inline_info] = "#{@selected_year}年末時点のアクティブな道場を表示中"
       rescue ArgumentError
-        flash[:alert] = "無効な年が指定されました"
+        flash[:inline_alert] = "無効な年が指定されました"
         return redirect_to dojos_path(anchor: 'table')
       end
     else

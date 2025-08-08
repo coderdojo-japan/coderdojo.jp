@@ -55,20 +55,20 @@ RSpec.describe "Dojos", type: :request do
       it "rejects years before 2012" do
         get dojos_path(year: 2011, format: :json)
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
-        expect(flash[:alert]).to include("2012年から")
+        expect(flash[:inline_alert]).to include("2012年から")
       end
       
       it "rejects years after current year" do
         future_year = Date.current.year + 1
         get dojos_path(year: future_year, format: :json)
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
-        expect(flash[:alert]).to include("指定された年は無効です")
+        expect(flash[:inline_alert]).to include("指定された年は無効です")
       end
       
       it "handles invalid year strings" do
         get dojos_path(year: "invalid", format: :json)
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
-        expect(flash[:alert]).to include("無効")
+        expect(flash[:inline_alert]).to include("無効")
       end
     end
     
@@ -253,6 +253,8 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path(year: 2020)
         expect(response.body).to include('2020年末時点')
         expect(response.body).to include('アクティブな道場を表示中')
+        # inline_infoメッセージが表示されることを確認
+        expect(response.body).to include('alert-info')
       end
       
       it "includes CSV and JSON download links with year parameter" do

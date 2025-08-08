@@ -33,15 +33,7 @@
       年次データのフィルタリング
     </h3>
     
-    <% if flash[:alert] %>
-      <div style="padding: 10px; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; margin-bottom: 15px; color: #721c24;">
-        <%= flash[:alert] %>
-      </div>
-    <% elsif @selected_year %>
-      <div style="padding: 10px; background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 4px; margin-bottom: 15px;">
-        <strong><%= @selected_year %>年末時点</strong>のアクティブな道場を表示中
-      </div>
-    <% end %>
+    <%= render_inline_flash_messages %>
     
     <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px;">
       <%= label_tag :year, '対象期間:', style: 'font-weight: bold;' %>
