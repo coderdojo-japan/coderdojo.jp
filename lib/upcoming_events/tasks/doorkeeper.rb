@@ -13,20 +13,22 @@ module UpcomingEvents
             events = @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id))
             puts "[Doorkeeper] dojo_id: #{dojo.id}, group_id: #{dojo_event_service.group_id}, fetched events: #{events&.size || 0}"
             (events || []).compact.each do |e|
-              puts "[Doorkeeper] event_id: #{e.fetch('id')}, title: #{e.fetch('title')}"
-              next unless e.fetch('group').to_s == dojo_event_service.group_id
+              puts "[Doorkeeper] event_id: #{e.fetch(:id)}, title: #{e.fetch(:title)}"
+              next unless e.fetch(:group).to_s == dojo_event_service.group_id
 
-              record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e.fetch('id'))
-              record.update!(service_name: dojo_event_service.name,
-                             event_title:  e.fetch('title'),
-                             event_url:    e.fetch('public_url'),
-                             participants: e.fetch('participants'),
-                             event_at:     Time.zone.parse(e.fetch('starts_at')),
-                             event_end_at: Time.zone.parse(e.fetch('ends_at')),
-                             event_update_at: Time.zone.parse(e.fetch('updated_at')),
-                             address:      e.fetch('address'),
-                             place:        e.fetch('venue_name'),
-                             limit:        e.fetch('ticket_limit'))
+              record = dojo_event_service.upcoming_events.find_or_initialize_by(event_id: e.fetch(:id))
+              record.update!(
+                service_name: dojo_event_service.name,
+                event_title:  e.fetch(:title),
+                event_url:    e.fetch(:public_url),
+                participants: e.fetch(:participants),
+                event_at:     Time.zone.parse(e.fetch(:starts_at)),
+                event_end_at: Time.zone.parse(e.fetch(:ends_at)),
+                event_update_at: Time.zone.parse(e.fetch(:updated_at)),
+                address:      e.fetch(:address),
+                place:        e.fetch(:venue_name),
+                limit:        e.fetch(:ticket_limit)
+              )
             end
           end
         end
