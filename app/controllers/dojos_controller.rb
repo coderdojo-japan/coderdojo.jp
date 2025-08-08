@@ -32,6 +32,16 @@ class DojosController < ApplicationController
     
     @dojos = []
     dojos_scope.includes(:prefecture).order(is_active: :desc, order: :asc).each do |dojo|
+      # 年が選択されている場合は、その年末時点でのアクティブ状態を判定
+      # 選択されていない場合は、現在の is_active を使用
+      is_active_at_selected_time = if @selected_year
+        # その年末時点でアクティブだったかを判定
+        # inactivated_at が nil（まだアクティブ）または選択年より後に非アクティブ化
+        dojo.inactivated_at.nil? || dojo.inactivated_at > Time.zone.local(@selected_year).end_of_year
+      else
+        dojo.is_active
+      end
+      
       @dojos << {
         id:          dojo.id,
         url:         dojo.url,
@@ -39,7 +49,7 @@ class DojosController < ApplicationController
         logo:        root_url + dojo.logo[1..],
         order:       dojo.order,
         counter:     dojo.counter,
-        is_active:   dojo.is_active,
+        is_active:   is_active_at_selected_time,
         prefecture:  dojo.prefecture.name,
         created_at:  dojo.created_at,
         description: dojo.description,

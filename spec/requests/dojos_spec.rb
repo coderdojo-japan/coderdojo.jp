@@ -128,6 +128,27 @@ RSpec.describe "Dojos", type: :request do
           expect(dojo_ids).not_to include(@dojo_2021_active.id)
         end
         
+        it "does not show inactivated styling for dojos active in 2020" do
+          get dojos_path(year: 2020, format: :html)
+          
+          # HTMLレスポンスを取得
+          html = response.body
+          
+          # 2021年に非アクティブ化された道場（Test Dojo 2020 Inactive）が含まれていることを確認
+          expect(html).to include("Test Dojo 2020 Inactive")
+          
+          # その道場の行を探す（IDで特定）
+          dojo_row_match = html.match(/Test Dojo 2020 Inactive.*?<\/tr>/m)
+          expect(dojo_row_match).not_to be_nil
+          
+          dojo_row = dojo_row_match[0]
+          
+          # 重要: この道場は2021年3月に非アクティブ化されたが、
+          # 2020年末時点ではアクティブだったので、inactive-item クラスを持たないべき
+          # 現在のコードはここで失敗するはず（現在の is_active: false を使っているため）
+          expect(dojo_row).not_to include('class="inactive-item"')
+        end
+        
         it "filters correctly in CSV format" do
           get dojos_path(year: 2020, format: :csv)
           
@@ -153,6 +174,25 @@ RSpec.describe "Dojos", type: :request do
           # 2021年3月に非アクティブ化された道場は含まれない
           expect(dojo_ids).not_to include(@dojo_2020_inactive.id)
           expect(dojo_ids).not_to include(@dojo_2019_inactive.id)
+        end
+        
+        it "does not show any inactivated dojos for year 2021" do
+          get dojos_path(year: 2021, format: :html)
+          
+          html = response.body
+          
+          # 2021年末時点でアクティブな道場のみが含まれる
+          expect(html).to include("Test Dojo 2020")      # アクティブ
+          expect(html).to include("Test Dojo 2021")      # アクティブ
+          expect(html).to include("Multi Branch Dojo")   # アクティブ
+          
+          # 2021年に非アクティブ化された道場は含まれない
+          expect(html).not_to include("Test Dojo 2020 Inactive")
+          expect(html).not_to include("Test Dojo 2019 Inactive")
+          
+          # すべての表示された道場は inactive-item クラスを持たないべき
+          # （2021年末時点ではすべてアクティブなので）
+          expect(html.scan('class="inactive-item"').count).to eq(0)
         end
       end
     end
