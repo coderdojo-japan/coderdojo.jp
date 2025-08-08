@@ -58,7 +58,7 @@ RSpec.describe "Dojos", type: :request do
         expect(flash[:inline_alert]).to include("2012年から")
       end
       
-      it "rejects years after current year" do
+      it "rejects future years" do
         future_year = Date.current.year + 1
         get dojos_path(year: future_year, format: :json)
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
@@ -294,8 +294,8 @@ RSpec.describe "Dojos", type: :request do
         expect(response.body).to include('2020年末時点')
         expect(response.body).to include('アクティブな道場を表示中')
         # 統計情報が含まれていることを確認（/statsページとの比較検証用）
-        expect(response.body).to include('開設道場数:')
-        expect(response.body).to include('合計道場数:')
+        expect(response.body).to include('開設数:')
+        expect(response.body).to include('合計数:')
         # inline_infoメッセージが表示されることを確認
         expect(response.body).to include('alert-info')
       end
