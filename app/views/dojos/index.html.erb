@@ -28,12 +28,15 @@
   
   <!-- 年次データフィルタリング -->
   <div style="margin: 30px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; max-width: 600px;">
-    <h3>📊 年次データのフィルタリング</h3>
+    <h3 id="table">
+      <a href="#table">📊</a>
+      年次データのフィルタリング
+    </h3>
     
     <% if @selected_year %>
       <div style="padding: 10px; background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 4px; margin-bottom: 15px;">
         <strong><%= @selected_year %>年末時点</strong>のアクティブな道場を表示中
-        <%= link_to '全道場を表示', dojos_path, style: 'margin-left: 10px;' %>
+        <%= link_to '全道場を表示', dojos_path(anchor: 'table'), style: 'margin-left: 10px;' %>
       </div>
     <% end %>
     
@@ -45,7 +48,7 @@
             params[:year]
           ),
           include_blank: '全期間',
-          onchange: "window.location.href = '#{dojos_path}?year=' + this.value",
+          onchange: "window.location.href = '#{dojos_path}?year=' + this.value + '#table'",
           style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px; cursor: pointer;' %>
       
       <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]), 
