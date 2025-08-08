@@ -117,7 +117,7 @@ class DojosController < ApplicationController
 
     # respond_toで形式ごとに処理を分岐
     respond_to do |format|
-      format.html # => app/views/dojos/index.html.erb
+      format.html { render :index }  # => app/views/dojos/index.html.erb
       format.json { render json: @dojos }
       format.csv  { send_data render_to_string, type: :csv }
     end
