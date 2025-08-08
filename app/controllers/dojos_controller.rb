@@ -50,6 +50,7 @@ class DojosController < ApplicationController
         prefecture:  dojo.prefecture.name,
         created_at:  dojo.created_at,
         description: dojo.description,
+        inactivated_at: dojo.inactivated_at,  # CSV用に追加
       }
     end
     
@@ -80,7 +81,15 @@ class DojosController < ApplicationController
     respond_to do |format|
       format.html { render :index }  # => app/views/dojos/index.html.erb
       format.json { render json: @dojos }
-      format.csv  { send_data render_to_string, type: :csv }
+      format.csv do
+        # ファイル名を年に応じて設定
+        filename = if @selected_year
+          "dojos_#{@selected_year}.csv"
+        else
+          "dojos_all.csv"
+        end
+        send_data render_to_string, type: :csv, filename: filename
+      end
     end
   end
 
