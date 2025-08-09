@@ -176,7 +176,7 @@ end
 
 #### 1. Git履歴からの日付抽出とYAML更新スクリプト
 
-参考実装: https://github.com/remote-jp/remote-in-japan/blob/main/docs/upsert_data_by_readme.rb#L28-L44
+参考実装: https://github.com/remote-jp/remote-in-japan/blob/main/doc/upsert_data_by_readme.rb#L28-L44
 
 ```ruby
 # lib/tasks/dojos.rake に追加
