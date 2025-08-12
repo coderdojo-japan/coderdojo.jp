@@ -1,29 +1,6 @@
 {
   "ignored_warnings": [
     {
-      "warning_type": "Dynamic Render Path",
-      "warning_code": 15,
-      "fingerprint": "69b5a133fab8ea617d2581423cefaf077b9366e683c5fac715647bddeec7f50a",
-      "check_name": "Render",
-      "message": "Render path contains parameter value",
-      "file": "app/controllers/sotechsha_pages_controller.rb",
-      "line": 5,
-      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
-      "code": "render(action => \"sotechsha_pages/#{params[:page]}\", {})",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "SotechshaPagesController",
-        "method": "show"
-      },
-      "user_input": "params[:page]",
-      "confidence": "Medium",
-      "cwe_id": [
-        22
-      ],
-      "note": ""
-    },
-    {
       "warning_type": "Command Injection",
       "warning_code": 14,
       "fingerprint": "7307f11036b1ab86f410d8d967d3972618705df73cafdd17f8e311c10c76c1f1",
@@ -185,29 +162,6 @@
       "confidence": "Weak",
       "cwe_id": [
         79
-      ],
-      "note": ""
-    },
-    {
-      "warning_type": "Dynamic Render Path",
-      "warning_code": 15,
-      "fingerprint": "c54623ebce2c2053b95088b9da8112aee962e7cadd79bd9b4b9afdedaddc15b1",
-      "check_name": "Render",
-      "message": "Render path contains parameter value",
-      "file": "app/controllers/sotechsha2_pages_controller.rb",
-      "line": 5,
-      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
-      "code": "render(action => \"sotechsha2_pages/#{params[:page]}\", {})",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "Sotechsha2PagesController",
-        "method": "show"
-      },
-      "user_input": "params[:page]",
-      "confidence": "Medium",
-      "cwe_id": [
-        22
       ],
       "note": ""
     },
