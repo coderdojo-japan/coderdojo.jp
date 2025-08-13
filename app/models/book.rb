@@ -19,9 +19,14 @@ class Book
     end
 
     def exist?(title, page)
-      page.nil? ?
-        self.find(title).any? :
-        self.find(title).map(&:filename).include?(page + ".html")
+      return false unless page.present?
+  
+      view_paths = [
+        Rails.root.join("app/views/books/#{title}/#{page}.html.erb"),
+        Rails.root.join("app/views/#{title}/#{page}.html.erb")
+      ]
+  
+      view_paths.any? { |path| File.exist?(path) }
     end
   end
 
