@@ -1,29 +1,6 @@
 {
   "ignored_warnings": [
     {
-      "warning_type": "Command Injection",
-      "warning_code": 14,
-      "fingerprint": "7307f11036b1ab86f410d8d967d3972618705df73cafdd17f8e311c10c76c1f1",
-      "check_name": "Execute",
-      "message": "Possible command injection",
-      "file": "lib/statistics/aggregation.rb",
-      "line": 163,
-      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
-      "code": "`curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"#{msg}\"}' #{slack_hook_url} -o /dev/null -w \"slack: %{http_code}\"`",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "Statistics::Statistics::Aggregation::Notifier",
-        "method": "s(:self).notify"
-      },
-      "user_input": "msg",
-      "confidence": "Medium",
-      "cwe_id": [
-        77
-      ],
-      "note": ""
-    },
-    {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 4,
       "fingerprint": "8ba988098c444755698e4e65d38a94f4095948c1a9bc6220c7e2a4636c3c04d7",
@@ -196,29 +173,6 @@
       "confidence": "Weak",
       "cwe_id": [
         79
-      ],
-      "note": ""
-    },
-    {
-      "warning_type": "Command Injection",
-      "warning_code": 14,
-      "fingerprint": "e5394a11f2e9bb6bc213b7ebd34fbcead20048858592aa19e5ae2961f33c636d",
-      "check_name": "Execute",
-      "message": "Possible command injection",
-      "file": "lib/upcoming_events/aggregation.rb",
-      "line": 89,
-      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
-      "code": "`curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"#{msg}\"}' #{slack_hook_url} -o /dev/null -w \"slack: %{http_code}\"`",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "UpcomingEvents::UpcomingEvents::Aggregation::Notifier",
-        "method": "s(:self).notify"
-      },
-      "user_input": "msg",
-      "confidence": "Medium",
-      "cwe_id": [
-        77
       ],
       "note": ""
     }

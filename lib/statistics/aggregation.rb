@@ -160,7 +160,7 @@ module Statistics
 
         def notify(msg)
           $stdout.puts msg
-          puts `curl -X POST -H 'Content-type: application/json' --data '{"text":"#{msg}"}' #{slack_hook_url} -o /dev/null -w "slack: %{http_code}"` if notifierable?
+          SlackNotifier.post_message(msg, slack_hook_url) if notifierable?
         end
       end
     end
