@@ -1,5 +1,9 @@
 ---
 news:
+- id: 11
+  url: https://news.coderdojo.jp/2025/08/12/dojoletter-vol-87-2025%e5%b9%b406%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.87 2025年06月号
+  published_at: Tue, 12 Aug 2025 04:00:02 +0000
 - id: 10
   url: https://news.coderdojo.jp/2025/07/14/233-laptops-to-coderdojo/
   title: 米国系 IT 企業から CoderDojo へ、233 台のノート PC 寄贈

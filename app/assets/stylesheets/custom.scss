@@ -1072,3 +1072,10 @@ section {
   line-height: 1.7em;
   color: #909090;
 }
+
+/* Stats and Dojos table styling */
+.stats-table {
+  td.inactive-item {
+    background-color: gainsboro;
+  }
+}

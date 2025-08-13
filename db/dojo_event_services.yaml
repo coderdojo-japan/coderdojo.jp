@@ -28,10 +28,17 @@
 ### (dojos.yaml の追加順) ###
 
 # 播磨科学公園都市（兵庫県上郡町）
-#- dojo_id: 342
+#- dojo_id: 343
 #  name: ???
 #  group_id: ???
 #  url: https://codeclub.org/ja/clubs/1700a138-2909-4e4e-9e75-88ebcbbbc55a
+
+# 砧（東京都世田谷区）- connpass の個人アカウントのため登録できない。グループアカウントにする必要がある。
+# TODO: グループ化されたら dojos.yamlのurlも合わせて更新
+#- dojo_id: 342
+#  name: connpass
+#  group_id: ???
+#  url: https://connpass.com/event/363462/
 
 # 赤坂国際（東京都港区）- 独自のイベント管理システム?
 #- dojo_id: 341

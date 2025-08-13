@@ -83,7 +83,29 @@ RSpec.shared_context 'Use stubs for Doorkeeper' do
     [
       200,
       { 'Content-Type' => 'application/json' },
-      '[{"event":{"title":"CoderDojo title","id":1234,"starts_at":"2017-05-28T01:00:00.000Z","ends_at":"2017-05-28T04:00:00.000Z","venue_name":"奥多摩町","address":"奥多摩町","lat":"35.801763000000","long":"139.087656000000","ticket_limit":30,"published_at":"2017-04-22T03:43:04.000Z","updated_at":"2017-05-10T11:31:21.810Z","group":5555,"banner":null,"description":"CoderDojo description","public_url":"https://coderdojo-okutama.doorkeeper.jp/events/8888","participants":12,"waitlisted":0}}]'
+      [
+        {
+          event: {
+            title: "CoderDojo title",
+            id: 1234,
+            starts_at: (Time.zone.today.prev_month + 10.days).to_time.utc.iso8601,
+            ends_at: (Time.zone.today.prev_month + 10.days + 3.hours).to_time.utc.iso8601,
+            venue_name: "奥多摩町",
+            address: "奥多摩町",
+            lat: "35.801763000000",
+            long: "139.087656000000",
+            ticket_limit: 30,
+            published_at: (Time.zone.today.prev_month - 5.days).to_time.utc.iso8601,
+            updated_at: (Time.zone.today.prev_month - 1.day).to_time.utc.iso8601,
+            group: 5555,
+            banner: nil,
+            description: "CoderDojo description",
+            public_url: "https://coderdojo-okutama.doorkeeper.jp/events/8888",
+            participants: 12,
+            waitlisted: 0
+          }
+        }
+      ]
     ]
   end
 end
@@ -128,16 +150,50 @@ RSpec.shared_context 'Use stubs UpcomingEvents for Doorkeeper' do
     [
       200,
       { 'Content-Type' => 'application/json' },
-      '[{"event":{"title":"CoderDojo title","id":1234,"starts_at":"' +
-           "#{Time.zone.today + 1.month}T01:00:00.000Z" + '","ends_at":"' +
-           "#{Time.zone.today + 1.month}T04:00:00.000Z" + '","venue_name":"奥多摩町","address":"奥多摩町","lat":"35.801763000000","long":"139.087656000000","ticket_limit":30,"published_at":"' +
-           "#{Time.zone.today - 4.days}T03:43:04.000Z" + '","updated_at":"' +
-           "#{Time.zone.today}T11:31:21.810Z" + '","group":5555,"banner":null,"description":"CoderDojo description","public_url":"https://coderdojo-okutama.doorkeeper.jp/events/8888","participants":12,"waitlisted":0}},' +
-       '{"event":{"title":"CoderDojo title","id":2345,"starts_at":"' +
-           "#{Time.zone.today + 1.month + 1.day}T01:00:00.000Z" + '","ends_at":"' +
-           "#{Time.zone.today + 1.month + 1.day}T04:00:00.000Z" + '","venue_name":"奥多摩町","address":"奥多摩町","lat":"35.801763000000","long":"139.087656000000","ticket_limit":30,"published_at":"' +
-           "#{Time.zone.today - 4.days}T03:43:04.000Z" + '","updated_at":"' +
-           "#{Time.zone.today}T11:31:21.810Z" + '","group":5555,"banner":null,"description":"CoderDojo description","public_url":"https://coderdojo-okutama.doorkeeper.jp/events/8888","participants":12,"waitlisted":0}}]'
+      [
+        {
+          event: {
+            title: "CoderDojo title",
+            id: 1234,
+            starts_at: "#{Time.zone.today + 1.month}T01:00:00.000Z",
+            ends_at: "#{Time.zone.today + 1.month}T04:00:00.000Z",
+            venue_name: "奥多摩町",
+            address: "奥多摩町",
+            lat: "35.801763000000",
+            long: "139.087656000000",
+            ticket_limit: 30,
+            published_at: "#{Time.zone.today - 4.days}T03:43:04.000Z",
+            updated_at: "#{Time.zone.today}T11:31:21.810Z",
+            group: 5555,
+            banner: nil,
+            description: "CoderDojo description",
+            public_url: "https://coderdojo-okutama.doorkeeper.jp/events/8888",
+            participants: 12,
+            waitlisted: 0
+          }
+        },
+        {
+          event: {
+            title: "CoderDojo title",
+            id: 2345,
+            starts_at: "#{Time.zone.today + 1.month + 1.day}T01:00:00.000Z",
+            ends_at: "#{Time.zone.today + 1.month + 1.day}T04:00:00.000Z",
+            venue_name: "奥多摩町",
+            address: "奥多摩町",
+            lat: "35.801763000000",
+            long: "139.087656000000",
+            ticket_limit: 30,
+            published_at: "#{Time.zone.today - 4.days}T03:43:04.000Z",
+            updated_at: "#{Time.zone.today}T11:31:21.810Z",
+            group: 5555,
+            banner: nil,
+            description: "CoderDojo description",
+            public_url: "https://coderdojo-okutama.doorkeeper.jp/events/8888",
+            participants: 12,
+            waitlisted: 0
+          }
+        }
+      ]
     ]
   end
 end

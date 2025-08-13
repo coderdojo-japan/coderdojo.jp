@@ -48,6 +48,15 @@ module ApplicationHelper
     lang.empty? ? 'ja' : lang
   end
 
+  # 'inline_' プレフィックスがついたflashメッセージをビュー内で表示するヘルパー
+  # inline_alert → alert, inline_warning → warning のように変換してBootstrapのCSSクラスを適用
+  def render_inline_flash_messages
+    flash.select { |type, _| type.to_s.start_with?('inline_') }.map do |type, message|
+      css_class = type.to_s.gsub('inline_', '')
+      content_tag(:div, message, class: "alert alert-#{css_class}", style: "margin-bottom: 15px;")
+    end.join.html_safe
+  end
+
   def kata_description
     "道場で役立つ資料やコンテスト情報、立ち上げ方や各種支援をまとめています。"
   end

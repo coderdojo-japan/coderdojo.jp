@@ -18,12 +18,49 @@
     <br>
     <div class='form__terms list'>
       <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
-	<li>現在は活動停止中 (In-active) の道場も表示されています</li>
-	<li>道場名をクリックすると個別の統計データが確認できます</li>
-	<li>下記表は <code><%= link_to dojos_path(format: :json), dojos_path(format: :json) %></code> で JSON に変換できます</li>
+	<li>道場名をクリックすると、その道場の個別の統計データを確認できます</li>
+	<li>対象期間を選ぶと、その期間のアクティブな道場の一覧を表示できます</li>
+	<li>全期間の場合のみ、すべての道場（非アクティブ含む）を表示できます</li>
       </ul>
     </div>
+    <div style="text-align: center; margin-top: 10px; margin-bottom: 50px;">
+      <a href="/stats" style="color: #007bff; text-decoration: none;">
+        &raquo; 推移グラフで見る
+      </a>
+    </div>
   </p>
+  
+  <!-- 年次データを取得する -->
+  <div style="margin: 30px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; max-width: 600px;">
+    <h3 id="table">
+      <a href="#table">📊</a>
+      年次データを取得する
+    </h3>
+    
+    <%= render_inline_flash_messages %>
+    
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px;">
+      <%= label_tag :year, '対象期間:', style: 'font-weight: bold;' %>
+      <%= select_tag :year, 
+          options_for_select(
+            (2012..Date.current.year).to_a.reverse.map { |y| [y.to_s + '年', y] },
+            params[:year]
+          ),
+          include_blank: '全期間',
+          onchange: "window.location.href = this.value ? '#{dojos_path}?year=' + this.value + '#table' : '#{dojos_path}#table'",
+          style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px; cursor: pointer;' %>
+      
+      <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]), 
+          style: 'padding: 5px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 4px;' %>
+      
+      <%= link_to 'JSON', dojos_path(format: :json, year: params[:year]), 
+          style: 'padding: 5px 15px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;' %>
+    </div>
+    
+    <p style="font-size: smaller; color: #6c757d; margin-top: 15px;">
+      対象期間を選択すると、その時点のアクティブな道場の一覧を表示・ダウンロードできます。
+    </p>
+  </div>
 
   <style type="text/css">
     /* URL 用のセルにクラスを付けておく想定 */
@@ -47,7 +84,7 @@
   </style>
 
   <div style="margin-top: 20px;" align="center">
-    <table border="1">
+    <table border="1" class="stats-table">
       <tr>
         <th>
           <small>
@@ -73,26 +110,49 @@
       </tr>
       <% @dojos.each do |dojo| %>
         <tr>
-          <td>
-	    <small>
-	      <%= link_to dojo_path(dojo[:id]) do %>
-		<%= dojo[:name] %><br>
-		<small>(ID: <%= dojo[:id] %>)</small>
-	      <% end %>
-	    </small>
-          </td>
-          <td>
-	    <small><%= dojo[:created_at].strftime("%F") %></small>
-          </td>
-          <td class="url-cell">
-            <small>
-	      <a href='<%= dojo[:url] %>'>
-		<span title="<%= dojo[:url] %>">
-		  <%= CGI.unescape dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/') %>
-		</span>
-	      </a>
-            </small>
-          </td>
+          <% if dojo[:is_active] %>
+            <td>
+	      <small>
+	        <%= link_to dojo_path(dojo[:id]) do %>
+		  <%= dojo[:name] %><br>
+		  <small>(ID: <%= dojo[:id] %>)</small>
+	        <% end %>
+	      </small>
+            </td>
+            <td>
+	      <small><%= dojo[:created_at].strftime("%F") %></small>
+            </td>
+            <td class="url-cell">
+              <small>
+	        <a href='<%= dojo[:url] %>'>
+		  <span title="<%= dojo[:url] %>">
+		    <%= truncate(CGI.unescape(dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/')), length: 30) %>
+		  </span>
+	        </a>
+              </small>
+            </td>
+          <% else %>
+            <td class="inactive-item">
+	      <small>
+	        <%= link_to dojo_path(dojo[:id]) do %>
+		  <%= dojo[:name] %><br>
+		  <small>(ID: <%= dojo[:id] %>)</small>
+	        <% end %>
+	      </small>
+            </td>
+            <td class="inactive-item">
+	      <small><%= dojo[:created_at].strftime("%F") %></small>
+            </td>
+            <td class="url-cell inactive-item">
+              <small>
+	        <a href='<%= dojo[:url] %>'>
+		  <span title="<%= dojo[:url] %>">
+		    <%= truncate(CGI.unescape(dojo[:url].gsub('https://', '').gsub('http://', '').gsub('www.', '').chomp('/')), length: 30) %>
+		  </span>
+	        </a>
+              </small>
+            </td>
+          <% end %>
         </tr>
       <% end %>
     </table>
