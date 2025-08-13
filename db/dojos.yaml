@@ -617,12 +617,12 @@
   name: 前橋
   prefecture_id: 10
   logo: "/img/dojos/maebashi.webp"
-  url: https://vtmacs003b.github.io/maebashi.jp/
+  url: https://vtmacs.github.io/maebashi.jp/
   description: 前橋市で毎月開催
   tags:
   - Scratch
   - Minecraft
-  - ラズベリーパイ
+  - micro:bit
   - ゲーム
 - id: 180
   order: '102075'
