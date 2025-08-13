@@ -195,4 +195,15 @@ RSpec.describe Dojo, :type => :model do
       end
     end
   end
+
+  describe 'YAML data integrity' do
+    it 'has no duplicate IDs' do
+      yaml_data = Dojo.load_attributes_from_yaml
+      ids = yaml_data.map { |dojo| dojo['id'] }
+      duplicate_ids = ids.select { |id| ids.count(id) > 1 }.uniq
+      
+      expect(duplicate_ids).to be_empty,
+        "重複しているID: #{duplicate_ids.join(', ')}"
+    end
+  end
 end
