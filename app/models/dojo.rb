@@ -14,8 +14,13 @@ class Dojo < ApplicationRecord
   before_save { self.email = self.email.downcase }
 
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
-  scope :active,        -> { where(is_active: true ) }
-  scope :inactive,      -> { where(is_active: false) }
+  scope :active,        -> { where(inactivated_at: nil) }
+  scope :inactive,      -> { where.not(inactivated_at: nil) }
+  
+  # ソート用スコープ: アクティブな道場を先に表示
+  scope :order_by_active_status, -> {
+    order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'))
+  }
   
   # 新しいスコープ: 特定の日時点でアクティブだったDojoを取得
   scope :active_at, ->(date) { 
@@ -103,27 +108,10 @@ class Dojo < ApplicationRecord
       end
     end
     
-    update!(
-      is_active: true,
-      inactivated_at: nil
-    )
+    update!(inactivated_at: nil)
   end
   
-  # is_activeとinactivated_atの同期（移行期間中）
-  before_save :sync_active_status
-
   private
-  
-  def sync_active_status
-    if is_active_changed?
-      if is_active == false && inactivated_at.nil?
-        self.inactivated_at = Time.current
-      elsif is_active == true && inactivated_at.present?
-        # is_activeがtrueに変更された場合、inactivated_atをnilに
-        self.inactivated_at = nil
-      end
-    end
-  end
 
   # Now 6+ tags are available since this PR:
   # https://github.com/coderdojo-japan/coderdojo.jp/pull/1697
