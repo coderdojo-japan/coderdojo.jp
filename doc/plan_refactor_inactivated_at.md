@@ -27,31 +27,39 @@
 
 **解決策**: スコープの内部実装だけを変更すれば、99%のコードは変更不要！
 
-### 必要な変更は「たった7箇所」だけ！
+### 必要な変更は「たった8箇所」だけ！
 
 ```ruby
 # 1. Dojoモデル: スコープ内部実装（2行変更）
 scope :active,   -> { where(inactivated_at: nil) }           # is_active: true → inactivated_at: nil
 scope :inactive, -> { where.not(inactivated_at: nil) }       # is_active: false → inactivated_at NOT nil
 
-# 2. Dojoモデル: active?メソッド（1行変更）
+# 2. Dojoモデル: ソート用スコープを追加（新規追加）
+scope :order_by_active_status, -> {
+  # アクティブなDojoを先に、その後に非アクティブなDojoを表示
+  order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'))
+}
+
+# 3. Dojoモデル: active?メソッド（1行変更）
 def active?
   inactivated_at.nil?  # is_active → inactivated_at.nil?
 end
 
-# 3. Dojoモデル: sync_active_status削除（削除のみ）
+# 4. Dojoモデル: sync_active_status削除（削除のみ）
 # before_save :sync_active_status を削除
 
-# 4. Dojoモデル: reactivate!メソッド（1行削除）
+# 5. Dojoモデル: reactivate!メソッド（1行削除）
 update!(inactivated_at: nil)  # is_active: true を削除
 
-# 5. コントローラー: ソート条件（1行変更）
-.order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'), order: :asc)
+# 6. コントローラー: ソート条件（読みやすく変更）
+@dojos = Dojo.includes(:prefecture)
+             .order_by_active_status  # 新しいスコープを使用
+             .order(order: :asc)
 
-# 6. Rakeタスク: YAMLからの読み込み（1行削除）
+# 7. Rakeタスク: YAMLからの読み込み（1行削除）
 # d.is_active = ... この行を削除
 
-# 7. マイグレーション: カラム削除（最後に実行）
+# 8. マイグレーション: カラム削除（最後に実行）
 remove_column :dojos, :is_active
 ```
 
@@ -77,28 +85,35 @@ Dojo.where("(is_active = true AND inactivated_at IS NOT NULL) OR (is_active = fa
 
 ## Step 2: コード変更（10分）
 
-7箇所の変更を実施：
+8箇所の変更を実施：
 
 ```ruby
 # 1. app/models/dojo.rb - スコープ（2行）
 scope :active,   -> { where(inactivated_at: nil) }
 scope :inactive, -> { where.not(inactivated_at: nil) }
 
-# 2. app/models/dojo.rb - active?メソッド（既に実装済み！そのまま使える）
+# 2. app/models/dojo.rb - ソート用スコープを追加
+scope :order_by_active_status, -> {
+  order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'))
+}
+
+# 3. app/models/dojo.rb - active?メソッド（既に実装済み！そのまま使える）
 # def active?
 #   inactivated_at.nil?  # これは既にPR #1726で実装済み！
 # end
 
-# 3. app/models/dojo.rb - sync_active_status削除
+# 4. app/models/dojo.rb - sync_active_status削除
 # before_save :sync_active_status と private メソッドを削除
 
-# 4. app/models/dojo.rb - reactivate!メソッド
+# 5. app/models/dojo.rb - reactivate!メソッド
 # is_active: true の行を削除
 
-# 5. app/controllers/dojos_controller.rb - ソート
-.order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'), order: :asc)
+# 6. app/controllers/dojos_controller.rb - ソート（読みやすく！）
+@dojos = Dojo.includes(:prefecture)
+             .order_by_active_status
+             .order(order: :asc)
 
-# 6. lib/tasks/dojos.rake - is_active設定行を削除
+# 7. lib/tasks/dojos.rake - is_active設定行を削除
 # d.is_active = ... の行を削除
 ```
 
@@ -125,9 +140,10 @@ git push && rails db:migrate
 ## 🎯 なぜこのアプローチが優れているか
 
 ### KISS/YAGNI原則の実践
-- **変更箇所**: わずか7箇所（実質6箇所、1つは既に実装済み）
+- **変更箇所**: わずか8箇所（実質7箇所、1つは既に実装済み）
 - **実装時間**: 30分以内
 - **リスク**: 最小限（インターフェースを変えないため）
+- **可読性**: SQLをスコープに隠蔽して読みやすく
 - **ロールバック**: 簡単（スコープ内部を戻すだけ）
 
 ### Ultrathinking による洞察
@@ -144,11 +160,12 @@ git push && rails db:migrate
 ## 📝 実装チェックリスト
 
 - [ ] Step 1: データ整合性確認（Rails console）
-- [ ] Step 2: 7箇所のコード変更
+- [ ] Step 2: 8箇所のコード変更
   - [ ] Dojoモデル: スコープ内部実装（2行）
+  - [ ] Dojoモデル: order_by_active_statusスコープ追加
   - [ ] Dojoモデル: sync_active_status削除
   - [ ] Dojoモデル: reactivate!メソッド修正
-  - [ ] コントローラー: ソート条件変更
+  - [ ] コントローラー: ソート条件を読みやすく変更
   - [ ] Rakeタスク: is_active行削除
 - [ ] Step 3: マイグレーション作成と実行
 - [ ] テスト実行と確認
