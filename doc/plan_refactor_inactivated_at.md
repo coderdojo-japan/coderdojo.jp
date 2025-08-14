@@ -89,7 +89,7 @@ cp db/dojos.yaml db/dojos.yaml.backup_$(date +%Y%m%d)
 
 #### 0.3 ブランチ作成
 ```bash
-git checkout -b refactor/unify-inactivated-at
+git checkout -b refactor-to-merge-inactive-into-inactivated-columns
 ```
 
 ### Phase 1: テストファースト実装（45分）
