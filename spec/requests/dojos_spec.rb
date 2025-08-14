@@ -8,14 +8,13 @@ RSpec.describe "Dojos", type: :request do
       @dojo_2020_active = create(:dojo, 
         name: "Test Dojo 2020",
         created_at: "2020-06-01",
-        is_active: true
+        inactivated_at: nil
       )
       
       # 2020年に作成、2021年に非アクティブ化
       @dojo_2020_inactive = create(:dojo,
         name: "Test Dojo 2020 Inactive",
         created_at: "2020-01-01",
-        is_active: false,
         inactivated_at: "2021-03-01"
       )
       
@@ -23,14 +22,13 @@ RSpec.describe "Dojos", type: :request do
       @dojo_2021_active = create(:dojo,
         name: "Test Dojo 2021",
         created_at: "2021-01-01",
-        is_active: true
+        inactivated_at: nil
       )
       
       # 2019年に作成、2020年に非アクティブ化（2020年末時点では非アクティブ）
       @dojo_2019_inactive = create(:dojo,
         name: "Test Dojo 2019 Inactive",
         created_at: "2019-01-01",
-        is_active: false,
         inactivated_at: "2020-06-01"
       )
       
@@ -38,7 +36,7 @@ RSpec.describe "Dojos", type: :request do
       @dojo_multi_branch = create(:dojo,
         name: "Multi Branch Dojo",
         created_at: "2020-01-01",
-        is_active: true,
+        inactivated_at: nil,
         counter: 3
       )
     end
@@ -151,7 +149,6 @@ RSpec.describe "Dojos", type: :request do
           
           # 重要: この道場は2021年3月に非アクティブ化されたが、
           # 2020年末時点ではアクティブだったので、inactive-item クラスを持たないべき
-          # 現在のコードはここで失敗するはず（現在の is_active: false を使っているため）
           expect(dojo_row).not_to include('class="inactive-item"')
         end
         
