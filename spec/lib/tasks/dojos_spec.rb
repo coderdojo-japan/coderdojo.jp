@@ -54,7 +54,7 @@ RSpec.describe 'dojos' do
       expect(new_records.first.url).to eq('http://tinkerkids.jp/coderdojo.html')
       expect(new_records.first.description).to eq('毎月開催')
       expect(new_records.first.tags).to eq(%w(Scratch ラズベリーパイ Python JavaScript))
-      expect(new_records.first.is_active).to eq(true)
+      expect(new_records.first.active?).to eq(true)
       expect(new_records.first.is_private).to eq(false)
     end
 
@@ -75,20 +75,20 @@ RSpec.describe 'dojos' do
       expect(mod_record.name).to eq('dojo_1(mod)')
     end
 
-    context 'is_active' do
+    context 'inactivated_at (活性状態管理)' do
       let(:dojo_base) do
         @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
       end
 
-      it '指定なし ⇒ アクティブ' do
+      it 'inactivated_at 指定なし ⇒ アクティブ' do
         allow(YAML).to receive(:unsafe_load_file).and_return([
           dojo_base
         ])
 
         # before
-        @dojo_2.update_columns(is_active: false)
+        @dojo_2.update_columns(inactivated_at: Time.current)
         expect(Dojo.count).to eq(3)
-        expect(@dojo_2.is_active).to eq(false)
+        expect(@dojo_2.reload.active?).to eq(false)
 
         # exec
         expect(@rake[task].invoke).to be_truthy
@@ -96,18 +96,19 @@ RSpec.describe 'dojos' do
         # after
         expect(Dojo.count).to eq(3)
         mod_record = Dojo.find_by(id: @dojo_2.id)
-        expect(mod_record.is_active).to eq(true)
+        expect(mod_record.active?).to eq(true)
+        expect(mod_record.inactivated_at).to be_nil
       end
 
-      it 'true 指定 ⇒ アクティブ' do
+      it 'inactivated_at: nil 指定 ⇒ アクティブ' do
         allow(YAML).to receive(:unsafe_load_file).and_return([
-          dojo_base.merge('is_active' => true)
+          dojo_base.merge('inactivated_at' => nil)
         ])
 
         # before
-        @dojo_2.update_columns(is_active: false)
+        @dojo_2.update_columns(inactivated_at: Time.current)
         expect(Dojo.count).to eq(3)
-        expect(@dojo_2.is_active).to eq(false)
+        expect(@dojo_2.reload.active?).to eq(false)
 
         # exec
         expect(@rake[task].invoke).to be_truthy
@@ -115,17 +116,19 @@ RSpec.describe 'dojos' do
         # after
         expect(Dojo.count).to eq(3)
         mod_record = Dojo.find_by(id: @dojo_2.id)
-        expect(mod_record.is_active).to eq(true)
+        expect(mod_record.active?).to eq(true)
+        expect(mod_record.inactivated_at).to be_nil
       end
 
-      it 'false 指定 ⇒ 非アクティブ' do
+      it 'inactivated_at に日付指定 ⇒ 非アクティブ' do
+        inactivation_date = '2023-01-15'
         allow(YAML).to receive(:unsafe_load_file).and_return([
-          dojo_base.merge('is_active' => false)
+          dojo_base.merge('inactivated_at' => inactivation_date)
         ])
 
         # before
         expect(Dojo.count).to eq(3)
-        expect(@dojo_2.is_active).to eq(true)
+        expect(@dojo_2.active?).to eq(true)
 
         # exec
         expect(@rake[task].invoke).to be_truthy
@@ -133,7 +136,8 @@ RSpec.describe 'dojos' do
         # after
         expect(Dojo.count).to eq(3)
         mod_record = Dojo.find_by(id: @dojo_2.id)
-        expect(mod_record.is_active).to eq(false)
+        expect(mod_record.active?).to eq(false)
+        expect(mod_record.inactivated_at).to eq(Time.zone.parse(inactivation_date))
       end
     end
 

@@ -86,28 +86,12 @@ RSpec.describe Dojo, :type => :model do
     end
   end
   
-  describe 'validate inactivated_at for inactive dojos' do
-    it 'ensures all inactive dojos in YAML have inactivated_at date' do
+  describe 'validate inactivated_at dates' do
+    it 'verifies inactivated_at dates are valid when present' do
       yaml_data = Dojo.load_attributes_from_yaml
-      inactive_dojos = yaml_data.select { |dojo| dojo['is_active'] == false }
+      dojos_with_inactivated_at = yaml_data.select { |dojo| dojo['inactivated_at'].present? }
       
-      missing_dates = inactive_dojos.select { |dojo| dojo['inactivated_at'].nil? }
-      
-      if missing_dates.any?
-        missing_info = missing_dates.map { |d| "ID: #{d['id']} (#{d['name']})" }.join(", ")
-        fail "以下の非アクティブDojoにinactivated_atが設定されていません: #{missing_info}"
-      end
-      
-      expect(inactive_dojos.all? { |dojo| dojo['inactivated_at'].present? }).to be true
-    end
-    
-    it 'verifies inactivated_at dates are valid' do
-      yaml_data = Dojo.load_attributes_from_yaml
-      inactive_dojos = yaml_data.select { |dojo| dojo['is_active'] == false }
-      
-      inactive_dojos.each do |dojo|
-        next if dojo['inactivated_at'].nil?
-        
+      dojos_with_inactivated_at.each do |dojo|
         # 日付が正しくパースできることを確認
         expect {
           Time.zone.parse(dojo['inactivated_at'])
@@ -122,32 +106,6 @@ RSpec.describe Dojo, :type => :model do
           created_date = Time.zone.parse(dojo['created_at'])
           expect(date).to be >= created_date, "ID: #{dojo['id']} (#{dojo['name']}) のinactivated_atがcreated_atより前です"
         end
-      end
-    end
-    
-    it 'ensures all dojos with inactivated_at have is_active column' do
-      yaml_data = Dojo.load_attributes_from_yaml
-      dojos_with_inactivated_at = yaml_data.select { |dojo| dojo['inactivated_at'].present? }
-      
-      dojos_with_inactivated_at.each do |dojo|
-        # inactivated_atがあるDojoは必ずis_activeカラムを持つべき
-        # （再活性化されたDojoはis_active: trueの可能性があるため、値は問わない）
-        unless dojo.key?('is_active')
-          fail "ID: #{dojo['id']} (#{dojo['name']}) はinactivated_atを持っていますが、is_activeカラムがありません"
-        end
-      end
-      
-      # 統計情報として表示
-      if dojos_with_inactivated_at.any?
-        reactivated_count = dojos_with_inactivated_at.count { |d| d['is_active'] == true }
-        inactive_count = dojos_with_inactivated_at.count { |d| d['is_active'] == false }
-        
-        # テスト出力には表示されないが、デバッグ時に有用
-        # puts "inactivated_atを持つDojo数: #{dojos_with_inactivated_at.count}"
-        # puts "  - 現在非アクティブ: #{inactive_count}"
-        # puts "  - 再活性化済み: #{reactivated_count}"
-        
-        expect(dojos_with_inactivated_at.count).to eq(inactive_count + reactivated_count)
       end
     end
   end

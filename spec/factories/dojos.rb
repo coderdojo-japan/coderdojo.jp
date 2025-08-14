@@ -8,7 +8,13 @@ FactoryBot.define do
     url           { 'https://example.com' }
     logo          { '/img/dojos/default.webp' }
     counter       { 1 }
-    is_active     { true }
     order         { 131001 }
+    # デフォルトはアクティブ（inactivated_at: nil）
+    inactivated_at { nil }
+    
+    # 非アクティブなDojoを作成するためのtrait
+    trait :inactive do
+      inactivated_at { Time.current }
+    end
   end
 end
