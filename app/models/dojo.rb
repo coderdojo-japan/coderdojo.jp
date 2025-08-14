@@ -90,19 +90,6 @@ class Dojo < ApplicationRecord
     created_at <= date && (inactivated_at.nil? || inactivated_at > date)
   end
 
-  # URLの安全性をチェックして、安全なURLを返す
-  def safe_url
-    return '#' if url.blank?
-  
-    # URI.parseがエラーになるか、HTTPスキームでない場合は'#'を返す
-    begin
-      uri = URI.parse(url)
-      uri.scheme&.match?(/\Ahttps?\z/) ? url : '#'
-    rescue URI::InvalidURIError
-      '#'
-    end
-  end
-  
   # 再活性化メソッド
   def reactivate!
     if inactivated_at.present?

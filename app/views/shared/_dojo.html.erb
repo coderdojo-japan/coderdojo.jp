@@ -1,9 +1,9 @@
 <li class="dojo" id="<%= html_escape(dojo.name) %>">
   <header>
-    <%= link_to lazy_image_tag(dojo.logo, alt: html_escape("CoderDojo #{dojo.name}"), class: 'dojo-picture'), sanitize_url(dojo.safe_url),
+    <%= link_to lazy_image_tag(dojo.logo, alt: html_escape("CoderDojo #{dojo.name}"), class: 'dojo-picture'), safe_dojo_url(dojo),
               target: "_blank", rel: "external noopener noreferrer" %>
     <span class="dojo-name">
-      <%= link_to html_escape("#{dojo.name} (#{dojo.prefecture.name})"), sanitize_url(dojo.safe_url), target: "_blank", rel: "external noopener noreferrer" %>
+      <%= link_to html_escape("#{dojo.name} (#{dojo.prefecture.name})"), safe_dojo_url(dojo), target: "_blank", rel: "external noopener noreferrer" %>
       <% if not dojo.counter == 1 %>
         <span class="dojo-counter"
               data-original-title="道場数"

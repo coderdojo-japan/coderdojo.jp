@@ -55,6 +55,17 @@ module ApplicationHelper
     )
   end
 
+  def safe_dojo_url(dojo)
+    return '#' if dojo.url.blank?
+
+    begin
+      uri = URI.parse(dojo.url)
+      uri.scheme&.match?(/\Ahttps?\z/) ? dojo.url : '#'
+    rescue URI::InvalidURIError
+      '#'
+    end
+  end
+
   # 'inline_' プレフィックスがついたflashメッセージをビュー内で表示するヘルパー
   # inline_alert → alert, inline_warning → warning のように変換してBootstrapのCSSクラスを適用
   def render_inline_flash_messages
