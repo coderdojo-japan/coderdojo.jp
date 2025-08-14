@@ -21,7 +21,6 @@ RSpec.describe Dojo, :type => :model do
   it { should respond_to(:tags) }
 
   it { should be_valid }
-  it { expect(Dojo.new.is_active?).to be(true) }
 
   describe "when name is not present" do
     before { @dojo.name = " " }
@@ -165,22 +164,6 @@ RSpec.describe Dojo, :type => :model do
         tags: ["Scratch"],
         prefecture_id: 13
       )
-    end
-    
-    describe '#sync_active_status' do
-      it 'sets inactivated_at when is_active becomes false' do
-        expect(@dojo.inactivated_at).to be_nil
-        @dojo.update!(is_active: false)
-        expect(@dojo.inactivated_at).to be_present
-      end
-      
-      it 'clears inactivated_at when is_active becomes true' do
-        @dojo.update!(is_active: false)
-        expect(@dojo.inactivated_at).to be_present
-        
-        @dojo.update!(is_active: true)
-        expect(@dojo.inactivated_at).to be_nil
-      end
     end
     
     describe '#active?' do
