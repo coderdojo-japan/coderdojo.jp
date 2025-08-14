@@ -63,6 +63,15 @@ before_save :sync_active_status
 
 ## 📝 実装計画
 
+### 実装戦略: TDD による安全なリファクタリング
+
+1. **検出フェーズ**: エラーを発生させて依存箇所を特定
+2. **修正フェーズ**: 特定された箇所を順次修正
+3. **移行フェーズ**: 新しい実装に切り替え
+4. **削除フェーズ**: 不要なコードとカラムを削除
+
+この戦略により、見落としなく安全にリファクタリングを実施できます。
+
 ### Phase 0: 準備作業（30分）
 
 #### 0.1 データ整合性の最終確認
@@ -93,6 +102,24 @@ git checkout -b refactor-to-merge-inactive-into-inactivated-columns
 ```
 
 ### Phase 1: テストファースト実装（45分）
+
+#### 1.0 依存箇所の検出（TDDアプローチ）
+```ruby
+# app/models/dojo.rb
+# 一時的にエラーを発生させて、これらのスコープを使用している箇所を検出
+scope :active, -> { 
+  raise NotImplementedError, 
+    "DEPRECATED: Use `where(inactivated_at: nil)` instead of `.active` scope. Called from: #{caller.first}"
+}
+scope :inactive, -> { 
+  raise NotImplementedError,
+    "DEPRECATED: Use `where.not(inactivated_at: nil)` instead of `.inactive` scope. Called from: #{caller.first}"
+}
+
+# テストを実行して、どこでエラーが発生するか確認
+# bundle exec rspec
+# これにより、リファクタリングが必要な全ての箇所を特定できる
+```
 
 #### 1.1 テストの更新
 ```ruby
@@ -139,11 +166,21 @@ end
 
 ### Phase 2: モデル層のリファクタリング（30分）
 
-#### 2.1 スコープの更新
+#### 2.1 スコープの更新（段階的移行）
 ```ruby
 # app/models/dojo.rb
 class Dojo < ApplicationRecord
-  # 更新されたスコープ
+  # Step 1: エラー検出フェーズ（Phase 1.0で実施）
+  # scope :active, -> { raise NotImplementedError, "..." }
+  # scope :inactive, -> { raise NotImplementedError, "..." }
+  
+  # Step 2: 警告フェーズ（オプション）
+  # scope :active, -> { 
+  #   Rails.logger.warn "DEPRECATED: .active scope will be updated to use inactivated_at"
+  #   where(is_active: true)
+  # }
+  
+  # Step 3: 最終的な実装
   scope :active,   -> { where(inactivated_at: nil) }
   scope :inactive, -> { where.not(inactivated_at: nil) }
   
