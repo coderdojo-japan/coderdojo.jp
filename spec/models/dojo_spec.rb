@@ -61,7 +61,7 @@ RSpec.describe Dojo, :type => :model do
     it 'should raise Psych::SyntaxError' do
       orig_yaml = Dojo::DOJO_INFO_YAML_PATH
       Dojo.send(:remove_const, :DOJO_INFO_YAML_PATH)
-      Dojo::DOJO_INFO_YAML_PATH = Rails.root.join('spec', 'data', 'invalid_format_of.yaml')
+      Dojo::DOJO_INFO_YAML_PATH = Rails.root.join('spec', 'data', 'invalid_format_of.yml')
 
       expect{ Dojo.load_attributes_from_yaml }.to raise_error(Psych::SyntaxError)
 

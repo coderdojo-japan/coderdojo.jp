@@ -4,7 +4,7 @@ namespace :dojo_event_services do
     result = { inserted: [], updated: [], deleted: [], kept: [], skipped: [] }
     reserved_ids = []
 
-    list = YAML.load_file(Rails.root.join('db','dojo_event_services.yaml'))
+    list = YAML.load_file(Rails.root.join('db','dojo_event_services.yml'))
     list.each do |des|
       unless DojoEventService.names.keys.include?(des['name'])
         event_names = DojoEventService.names.keys.map { |s| "`#{s}`" }

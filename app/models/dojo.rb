@@ -4,7 +4,7 @@ class Dojo < ApplicationRecord
   NUM_OF_ANNUAL_NINJAS = "7,000"
   NUM_OF_TOTAL_EVENTS  = "10,000"
   NUM_OF_TOTAL_NINJAS  = "62,000"
-  DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yaml')
+  DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yml')
 
   belongs_to :prefecture
   has_many   :dojo_event_services, dependent: :destroy

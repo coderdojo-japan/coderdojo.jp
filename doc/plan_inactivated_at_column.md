@@ -163,7 +163,7 @@ end
 
 #### 重要: YAMLファイルがマスターデータ
 
-**db/dojos.yaml がマスターレコードであることに注意**:
+**db/dojos.yml がマスターレコードであることに注意**:
 - データベースの変更だけでは不十分
 - `rails dojos:update_db_by_yaml` 実行時にYAMLの内容でDBが上書きされる
 - 永続化にはYAMLファイルへの反映が必須
@@ -184,7 +184,7 @@ desc 'Git履歴からinactivated_at日付を抽出してYAMLファイルに反�
 task extract_inactivated_at_from_git: :environment do
   require 'git'
   
-  yaml_path = Rails.root.join('db', 'dojos.yaml')
+  yaml_path = Rails.root.join('db', 'dojos.yml')
   git = Git.open(Rails.root)
   
   # YAMLファイルの内容を行番号付きで読み込む
@@ -266,7 +266,7 @@ task extract_inactivated_at_from_git: :environment do
   puts "Total inactive dojos: #{inactive_dojos.count}"
   puts "YAML file has been updated with inactivated_at dates"
   puts "\nNext steps:"
-  puts "1. Review the changes in db/dojos.yaml"
+  puts "1. Review the changes in db/dojos.yml"
   puts "2. Run: rails dojos:update_db_by_yaml"
   puts "3. Commit the updated YAML file"
 end
@@ -584,10 +584,10 @@ end
 
 ```bash
 # 特定のDojoのis_active履歴を確認
-git log -p --follow db/dojos.yaml | grep -B5 -A5 "id: 104"
+git log -p --follow db/dojos.yml | grep -B5 -A5 "id: 104"
 
 # YAMLファイルの特定行のblame情報を確認
-git blame db/dojos.yaml -L 17,17 --porcelain
+git blame db/dojos.yml -L 17,17 --porcelain
 
 # 非アクティブDojoの一覧を取得
 rails runner "Dojo.inactive.pluck(:id, :name).each { |id, name| puts \"#{id}: #{name}\" }"
@@ -621,8 +621,8 @@ rails runner "
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
 # 1. YAMLファイルのバックアップ
-cp db/dojos.yaml db/dojos.yaml.backup.${TIMESTAMP}
-echo "✅ YAMLバックアップ完了: db/dojos.yaml.backup.${TIMESTAMP}"
+cp db/dojos.yml db/dojos.yml.backup.${TIMESTAMP}
+echo "✅ YAMLバックアップ完了: db/dojos.yml.backup.${TIMESTAMP}"
 
 # 2. 現在の統計値を記録
 rails runner "
@@ -655,7 +655,7 @@ require 'git'
 
 class GitExtractionValidator
   def self.run
-    yaml_path = Rails.root.join('db', 'dojos.yaml')
+    yaml_path = Rails.root.join('db', 'dojos.yml')
     git = Git.open(Rails.root)
     
     issues = []
@@ -714,7 +714,7 @@ GitExtractionValidator.run
 # script/apply_inactivated_dates.rb
 class InactivatedDateApplier
   def self.run(dry_run: true)
-    yaml_path = Rails.root.join('db', 'dojos.yaml')
+    yaml_path = Rails.root.join('db', 'dojos.yml')
     backup_path = yaml_path.to_s + ".backup.#{Time.now.strftime('%Y%m%d_%H%M%S')}"
     
     if dry_run
@@ -735,7 +735,7 @@ class InactivatedDateApplier
     # 変更内容の確認
     if dry_run
       puts "\n📋 変更プレビュー:"
-      system("git diff --stat db/dojos.yaml")
+      system("git diff --stat db/dojos.yml")
     else
       # YAMLの構文チェック
       begin

@@ -3,8 +3,8 @@
 ##########################
 #
 # This is outdated and will be removed.
-# Use `db/static_event_histories.yaml` instead:
-# https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yaml
+# Use `db/static_event_histories.yml` instead:
+# https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yml
 #
 # example
 # - dojo_id: 80
