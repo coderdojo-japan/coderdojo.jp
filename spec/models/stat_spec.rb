@@ -15,7 +15,6 @@ RSpec.describe Stat, type: :model do
         url: 'https://test1.coderdojo.jp',
         created_at: Time.zone.local(2020, 3, 1),
         prefecture_id: 13,
-        is_active: false,
         inactivated_at: Time.zone.local(2022, 6, 15)
       )
       
@@ -28,7 +27,6 @@ RSpec.describe Stat, type: :model do
         url: 'https://test2.coderdojo.jp', 
         created_at: Time.zone.local(2021, 1, 1),
         prefecture_id: 13,
-        is_active: true,
         inactivated_at: nil
       )
       
@@ -41,7 +39,6 @@ RSpec.describe Stat, type: :model do
         url: 'https://test3.coderdojo.jp',
         created_at: Time.zone.local(2019, 1, 1),
         prefecture_id: 13,
-        is_active: false,
         inactivated_at: Time.zone.local(2020, 3, 1)
       )
     end
@@ -95,7 +92,7 @@ RSpec.describe Stat, type: :model do
         url: 'https://test1.coderdojo.jp',
         created_at: Time.zone.local(2012, 4, 1),
         prefecture_id: 13,
-        is_active: true
+        inactivated_at: nil
       )
       
       # 2022年に非アクティブ化される道場
@@ -107,7 +104,6 @@ RSpec.describe Stat, type: :model do
         url: 'https://test2.coderdojo.jp',
         created_at: Time.zone.local(2019, 1, 1),
         prefecture_id: 14,
-        is_active: false,
         inactivated_at: Time.zone.local(2022, 6, 1)
       )
       
@@ -120,7 +116,6 @@ RSpec.describe Stat, type: :model do
         url: 'https://test3.coderdojo.jp',
         created_at: Time.zone.local(2020, 1, 1),
         prefecture_id: 27,
-        is_active: false,
         inactivated_at: Time.zone.local(2023, 3, 1)
       )
       

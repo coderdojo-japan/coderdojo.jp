@@ -49,7 +49,7 @@ bundle exec rails statistics:aggregation[201801,201910,connpass,xxx]
 bundle exec rails statistics:aggregation[201801,201910,,xxx] 
 ```
 
-[`db/static_event_histories.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yaml) にある YAML データを更新する
+[`db/static_event_histories.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yml) にある YAML データを更新する
 
 ```
 # 全ての期間を更新する (Zshの場合)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_05_105233) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_14_115324) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
@@ -36,7 +36,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_05_105233) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "prefecture_id"
-    t.boolean "is_active", default: true, null: false
     t.boolean "is_private", default: false, null: false
     t.integer "counter", default: 1, null: false
     t.text "note", default: "", null: false
