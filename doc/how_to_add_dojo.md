@@ -16,10 +16,10 @@
 1. 掲載依頼の申請内容を確認する
 2. 総務省の[全国地方公共団体コード](https://www.soumu.go.jp/denshijiti/code.html)ページに行く
 3. 最新版の PDF にアクセスし、申請内容と一致する全国地方公共団体コードを確認する
-4. `db/dojos.yaml` ファイルを開き、全国地方公共団体コードの近い値（隣接する Dojo）のデータを見つける
+4. `db/dojos.yml` ファイルを開き、全国地方公共団体コードの近い値（隣接する Dojo）のデータを見つける
 5. 同じ全国地方公共団体コードがあれば同コードの直後に、初のコードであれば `order` の昇順で適した場所を探す
-6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) に追加する
-7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) に追加する
+6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) に追加する
+7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
 
 [&raquo; これまでの対応例 (PR) を見る](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
@@ -42,7 +42,7 @@ Web: https://coderdojo-naha.doorkeeper.jp/
 Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/naha
 ```
 
-上記のような申請を受け取ったら `db/dojos.yaml` に次のように追記します。   
+上記のような申請を受け取ったら `db/dojos.yml` に次のように追記します。   
 (order 順に追加すると見やすくてベターです)
 
 
@@ -125,7 +125,7 @@ https://coderdojo.jp/stats
 集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。   
 このため、新規 Dojo を追加する際は、集計対象にも追加をお願いします。
 
-集計対象は [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml) で管理しています。以下のように追記してください。
+集計対象は [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) で管理しています。以下のように追記してください。
 
 ```yaml
 # 田町@VMware
@@ -172,7 +172,7 @@ https://coderdojo.jp/stats
 
 ## 本番環境への反映方法
 
-dojos.yaml, dojo_event_services.yaml の更新を GitHub に push すると、次の手順で本番環境に反映されます。
+dojos.yml, dojo_event_services.yml の更新を GitHub に push すると、次の手順で本番環境に反映されます。
 
 1. GitHub の更新を [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions) が検知します
 1. [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions) で各種テストが実行されます

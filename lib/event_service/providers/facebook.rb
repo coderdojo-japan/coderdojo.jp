@@ -6,7 +6,7 @@ module EventService
       # You can load data from the following YAML file by exec (on Zsh):
       #
       # $ bundle exec rails statistics:aggregation\[-,-,facebook\]
-      YAML_FILE = Rails.root.join('db', 'facebook_event_histories.yaml')
+      YAML_FILE = Rails.root.join('db', 'facebook_event_histories.yml')
 
       def fetch_events(dojo_id: nil, since_at: nil, until_at: nil)
         dojo_ids = dojo_id if dojo_id.is_a?(Array)

@@ -39,7 +39,7 @@ coderdojo.jp の開発には以下のいずれかの方法で参加できます�
 
 Dojo 情報は次の手順で簡単に更新できます。
 
-1. [db/dojos.yaml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yaml) を開く
+1. [db/dojos.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) を開く
 2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
 3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
 4. 修正内容を確認し、問題なければ Create pull request をクリックする
@@ -157,10 +157,10 @@ bundle exec rails db:migrate
 # 開発用データの流し込み（seeding）
 bundle exec rails db:seed
 
-# db/dojos.yaml の内容をDBに反映するタスク
+# db/dojos.yml の内容をDBに反映するタスク
 bundle exec rails dojos:update_db_by_yaml
 
-# DBの内容を db/dojos.yaml に反映するタスク
+# DBの内容を db/dojos.yml に反映するタスク
 bundle exec rails dojos:migrate_adding_id_to_yaml
 
 # 近日開催の道場を更新するタスク
@@ -242,8 +242,8 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 なお本サイト内 DB の各テーブルおよびそのデータ（一般公開部分のみ）は、以下のファイルからご確認いただけます。
 
 - DB テーブル: [`db/schema.rb`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/schema.rb)
-- Dojo データ: [`db/dojos.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
-- Event データ (の情報取得元): [`db/dojo_event_services.yaml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yaml)
+- Dojo データ: [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml)
+- Event データ (の情報取得元): [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml)
   - :memo: １つの Dojo が複数のイベント管理サービスを使う事例もあるため [`Dojo has_many DojoEventServices`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/app/models/dojo.rb) となっています。
 
 

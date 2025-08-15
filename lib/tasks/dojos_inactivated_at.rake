@@ -3,7 +3,7 @@ require 'fileutils'
 namespace :dojos do
   desc 'Git履歴からinactivated_at日付を抽出してYAMLファイルに反映（引数でDojo IDを指定可能）'
   task :extract_inactivated_at_from_git, [:dojo_id] => :environment do |t, args|
-    yaml_path = Rails.root.join('db', 'dojos.yaml')
+    yaml_path = Rails.root.join('db', 'dojos.yml')
     
     # YAMLファイルの内容を行番号付きで読み込む
     yaml_lines = File.readlines(yaml_path)
@@ -155,7 +155,7 @@ namespace :dojos do
     if !args[:dojo_id] && updated_count > 0
       begin
         # バックアップを作成（tmpディレクトリに）
-        backup_path = Rails.root.join('tmp', "dojos.yaml.backup.#{Time.now.strftime('%Y%m%d_%H%M%S')}")
+        backup_path = Rails.root.join('tmp', "dojos.yml.backup.#{Time.now.strftime('%Y%m%d_%H%M%S')}")
         FileUtils.cp(yaml_path, backup_path)
         puts "\n📦 バックアップ作成: #{backup_path}"
         
@@ -169,7 +169,7 @@ namespace :dojos do
         puts "合計 #{updated_count} 個のDojoに inactivated_at を追加しました"
         puts ""
         puts "次のステップ:"
-        puts "1. db/dojos.yaml の変更内容を確認"
+        puts "1. db/dojos.yml の変更内容を確認"
         puts "2. rails dojos:update_db_by_yaml を実行してDBに反映"
         puts "3. 変更をコミット"
       rescue => e
