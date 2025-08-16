@@ -1118,6 +1118,8 @@
 - id: 295
   order: '131032'
   created_at: '2022-12-16'
+  inactivated_at: '2024-09-30'
+  note: Last event @ 2023-09-30 https://coderdojo-tamachi-vmware.connpass.com/event/296465/
   name: 田町@VMware
   prefecture_id: 13
   url: https://zen.coderdojo.com/dojos/jp/minato-tokyo/tamachi-vmware
