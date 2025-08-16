@@ -65,7 +65,10 @@
           </td>
           <td class="url-cell">
             <small>
-              <span title="<%= dojo[:note] %>"><%= raw Addressable::URI.unescape(Rinku.auto_link(dojo[:note])) %></span>
+              <span title="<%= dojo[:note] %>">
+                <% truncated_note = truncate(dojo[:note], length: 60) %>
+                <%= raw Addressable::URI.unescape(Rinku.auto_link(truncated_note)) %>
+              </span>
             </small>
           </td>
         </tr>
