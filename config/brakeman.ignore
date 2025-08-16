@@ -1,0 +1,181 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "8ba988098c444755698e4e65d38a94f4095948c1a9bc6220c7e2a4636c3c04d7",
+      "check_name": "LinkToHref",
+      "message": "Potentially unsafe model attribute in `link_to` href",
+      "file": "app/views/shared/_dojo.html.erb",
+      "line": 6,
+      "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
+      "code": "link_to(\"#{Dojo.new.name} (#{Dojo.new.prefecture.name})\", Dojo.new.url, :target => \"_blank\", :rel => \"external noopener\")",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "HomeController",
+          "method": "show",
+          "line": 7,
+          "file": "app/controllers/home_controller.rb",
+          "rendered": {
+            "name": "home/show",
+            "file": "app/views/home/show.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "home/show",
+          "line": 161,
+          "file": "app/views/home/show.html.erb",
+          "rendered": {
+            "name": "shared/_dojos",
+            "file": "app/views/shared/_dojos.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "shared/_dojos",
+          "line": 2,
+          "file": "app/views/shared/_dojos.html.erb",
+          "rendered": {
+            "name": "shared/_dojo",
+            "file": "app/views/shared/_dojo.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "shared/_dojo"
+      },
+      "user_input": "Dojo.new.url",
+      "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "b22a549fb14a7e6b3a9c34991ffcacd354dc768d74d50a8f6901e23c3ea19538",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/podcasts/show.html.erb",
+      "line": 39,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Rinku.auto_link(Kramdown::Document.new(self.convert_shownote(Podcast.find_by(:id => params[:id]).content), :input => \"GFM\").to_html)",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "PodcastsController",
+          "method": "show",
+          "line": 31,
+          "file": "app/controllers/podcasts_controller.rb",
+          "rendered": {
+            "name": "podcasts/show",
+            "file": "app/views/podcasts/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "podcasts/show"
+      },
+      "user_input": "Podcast.find_by(:id => params[:id]).content",
+      "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "b29f98f4da690ffb7c663390c21db3a71174dae17d06234deab9d6655af6babe",
+      "check_name": "LinkToHref",
+      "message": "Potentially unsafe model attribute in `link_to` href",
+      "file": "app/views/shared/_dojo.html.erb",
+      "line": 3,
+      "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
+      "code": "link_to(lazy_image_tag(Dojo.new.logo, :alt => (\"CoderDojo #{Dojo.new.name}\"), :class => \"dojo-picture\"), Dojo.new.url, :target => \"_blank\", :rel => \"external noopener\")",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "HomeController",
+          "method": "show",
+          "line": 7,
+          "file": "app/controllers/home_controller.rb",
+          "rendered": {
+            "name": "home/show",
+            "file": "app/views/home/show.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "home/show",
+          "line": 161,
+          "file": "app/views/home/show.html.erb",
+          "rendered": {
+            "name": "shared/_dojos",
+            "file": "app/views/shared/_dojos.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "shared/_dojos",
+          "line": 2,
+          "file": "app/views/shared/_dojos.html.erb",
+          "rendered": {
+            "name": "shared/_dojo",
+            "file": "app/views/shared/_dojo.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "shared/_dojo"
+      },
+      "user_input": "Dojo.new.url",
+      "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "e4187193a881ef4e98b77f205c86fcafbef3d65d9269bba30e8612f6a59273ed",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/docs/show.html.erb",
+      "line": 12,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Kramdown::Document.new(Document.new(params[:id]).content, :input => \"GFM\").to_html",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "DocsController",
+          "method": "show",
+          "line": 42,
+          "file": "app/controllers/docs_controller.rb",
+          "rendered": {
+            "name": "docs/show",
+            "file": "app/views/docs/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "docs/show"
+      },
+      "user_input": "Document.new(params[:id]).content",
+      "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
+      "note": ""
+    }
+  ],
+  "brakeman_version": "7.1.0"
+}

@@ -9,7 +9,7 @@
 
 <div class='container' style='line-height: 1.9em;'>
   <section class='doc' style='padding: 50px 0px 100px 0px;'>
-    <%= sanitize_content(@content) %>
+    <%= raw @content %>
   </section>
 
   <% if request.path.start_with? '/docs' %>
@@ -22,3 +22,5 @@
     <%= render 'shared/social_buttons' %>
   </section>
 </div>
+
+
