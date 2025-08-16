@@ -598,13 +598,13 @@
   created_at: '2016-10-17'
   name: 前橋
   prefecture_id: 10
-  url: https://vtmacs003b.github.io/maebashi.jp/
+  url: https://vtmacs.github.io/maebashi.jp/
   logo: "/img/dojos/maebashi.webp"
   description: 前橋市で毎月開催
   tags:
   - Scratch
   - Minecraft
-  - ラズベリーパイ
+  - micro:bit
   - ゲーム
 - id: 180
   order: '102075'
