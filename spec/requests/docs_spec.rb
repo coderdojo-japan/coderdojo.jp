@@ -23,5 +23,16 @@ RSpec.describe "Docs", type: :request do
       expect(response).to redirect_to root_url
       expect(response.status).to eq 302
     end
+
+    # /signup page has Google Form to be rendered.
+    context 'signup page - Google Form rendering (Critical)' do
+      before { get doc_path('signup') }
+
+      # The iframe is essential - without it, no one can submit applications
+      it('responds with 200 OK')  { expect(response).to have_http_status(:success) }
+      it('contains Google Forms') { expect(response.body).to include('<iframe') }
+      it('contains Google Forms URL') { expect(response.body).to include('docs.google.com/forms') }
+      it('has no raw CONSTANT name')  { expect(response.body).not_to include('{{ INACTIVE_THRESHOLD }}') }
+    end
   end
-end 
+end
