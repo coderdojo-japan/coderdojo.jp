@@ -24,9 +24,7 @@
       </ul>
     </div>
     <div style="text-align: center; margin-top: 10px; margin-bottom: 50px;">
-      <a href="/stats" style="color: #007bff; text-decoration: none;">
-        &raquo; 推移グラフで見る
-      </a>
+      <%= link_to raw('&raquo; 推移グラフで見る'), stats_path, style: 'color: #007bff; text-decoration: none;' %>
     </div>
   </p>
   
@@ -74,9 +72,9 @@
         </th>
         <th>
           <small>
-	    🗓
+	    🗾
 	    <br class='ignore-pc'>
-	    <a href='/signup'>掲載日</a>
+	    <%= link_to '掲載日', signup_path %>
 	  </small>
         </th>
         <th>

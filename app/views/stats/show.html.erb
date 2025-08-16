@@ -23,9 +23,9 @@
   </div>
   <div style="margin-top: 20px;">
     <% if @lang == 'en' %>
-      <a href="/stats">&raquo; Switch to Japanese</a>
+      <%= link_to raw('&raquo; Switch to Japanese'), stats_path %>
     <% else %>
-      <a href="/english/stats">&raquo; View in English</a> / <a href="/dojos">&raquo; 年次データを見る</a>
+      <%= link_to raw('&raquo; View in English'), english_stats_path %> / <%= link_to raw('&raquo; 年次データを見る'), dojos_path %>
     <% end %>
   </div>
 
@@ -399,9 +399,7 @@
   <% if @lang == 'en' %>
     <ul>
       <li>
-        <a href="/english">
-          &raquo; See CoderDojo Japan Association history
-        </a>
+        <%= link_to raw('&raquo; See CoderDojo Japan Association history'), english_path %>
       </li>
       <li>
         <a href="https://www.youtube.com/playlist?list=PL94GDfaSQTmKxMzXVMzzdl-zCmzgitQFP">

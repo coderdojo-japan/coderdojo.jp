@@ -13,7 +13,7 @@
   <br />
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
     主にデータ分析や
-    <a href="/signup#terms-of-use">Active/Inactive</a>
+    <%= link_to 'Active/Inactive', signup_path(anchor: 'terms-of-use') %>
     の判断などの用途で使われています。
     <br>
     <div class='form__terms list'>
@@ -37,9 +37,9 @@
         </th>
         <th>
           <small>
-            🗓
+            🗾
             <br class='ignore-pc'>
-            <a href='/signup'>掲載日</a>
+            <%= link_to '掲載日', signup_path %>
           </small>
         </th>
         <th>

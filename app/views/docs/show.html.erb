@@ -14,7 +14,7 @@
 
   <% if request.path.start_with? '/docs' %>
   <div style="margin-bottom: 40px;">
-    <p style="color: #5F5F5F"><small><a href='/docs'>&laquo; 資料一覧に戻る</a></small></p>
+    <p style="color: #5F5F5F"><small><%= link_to raw('&laquo; 資料一覧に戻る'), docs_path %></small></p>
   </div>
   <% end %>
 
