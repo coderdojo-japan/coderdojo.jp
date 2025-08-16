@@ -343,7 +343,7 @@ RSpec.describe "Dojos", type: :request do
     
     it "displays the activity status page" do
       get activity_dojos_path
-      expect(response.body).to include("道場別の直近の開催日まとめ")
+      expect(response.body).to include("道場別の活動状況まとめ")
     end
     
     it "includes only active dojos" do
@@ -355,6 +355,19 @@ RSpec.describe "Dojos", type: :request do
     it "redirects from old URL /events/latest" do
       get "/events/latest"
       expect(response).to redirect_to(activity_dojos_path)
+    end
+    
+    it "displays proper column headers" do
+      get activity_dojos_path
+      expect(response.body).to include("掲載日")
+      expect(response.body).to include("開催日")
+      expect(response.body).to include("ノート")
+    end
+    
+    it "displays created_at date for active dojos" do
+      get activity_dojos_path
+      # 掲載日は YYYY-MM-DD 形式で表示される
+      expect(response.body).to match(@active_dojo.created_at.strftime("%Y-%m-%d"))
     end
   end
 end

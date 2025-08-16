@@ -113,31 +113,30 @@ class DojosController < ApplicationController
     Dojo.active.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
       date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2})/) # YYYY-MM-DD
-      last_session_link = link_in_note.nil? ? dojo_path(dojo.id) : link_in_note.to_s
-      last_session_date = date_in_note.nil? ? dojo.created_at    : Time.zone.parse(date_in_note.to_s)
-
-      latest_event    = dojo.event_histories.newest.first
-      latest_event_at = latest_event.nil? ? Time.zone.parse('2000-01-23') : latest_event.evented_at
+      
+      latest_event = dojo.event_histories.newest.first
+      
       @latest_event_by_dojos << {
-        id:   dojo.id,
-        name: dojo.name,
-        note: dojo.note,
-        url:  dojo.url,
-        has_event_histories: latest_event.nil?,
-
-        # 過去のイベント開催日と note 内の日付を比較し、新しい方の日付を表示
-        event_at: (latest_event_at < last_session_date) ?
-          last_session_date.strftime("%Y-%m-%d") :
-          latest_event.evented_at.strftime("%Y-%m-%d"),
-
-        # 過去のイベント開催日と note 内の日付を比較し、新しい方のリンクを表示
-        event_url: (latest_event_at < last_session_date) ?
-          last_session_link :
-          latest_event.event_url
+        id:         dojo.id,
+        name:       dojo.name,
+        note:       dojo.note,
+        url:        dojo.url,
+        created_at: dojo.created_at,  # 掲載日（/dojos と同じ）
+        
+        # 直近の開催日（イベント履歴がある場合のみ）
+        latest_event_at:  latest_event.nil? ? nil : latest_event.evented_at,
+        latest_event_url: latest_event.nil? ? nil : latest_event.event_url,
+        
+        # note内の日付とリンク（fallback用）
+        note_date: date_in_note.nil? ? nil : Time.zone.parse(date_in_note.to_s),
+        note_link: link_in_note.nil? ? nil : link_in_note.to_s
       }
     end
 
-    # Sort by older events first && older Dojo ID first if same event date.
-    @latest_event_by_dojos.sort_by!{ |dojo| [dojo[:event_at], dojo[:id]] }
+    # Sort by latest event date (or created_at if no events) && older Dojo ID if same date
+    @latest_event_by_dojos.sort_by! do |dojo| 
+      sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
+      [sort_date, dojo[:id]]
+    end
   end
 end
