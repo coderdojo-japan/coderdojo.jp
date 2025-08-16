@@ -51,6 +51,13 @@
         </th>
         <th>
           <small>
+            🔍
+            <br class='ignore-pc'>
+            検索
+          </small>
+        </th>
+        <th>
+          <small>
             📝
             <br class='ignore-pc'>
             ノート
@@ -91,6 +98,16 @@
               <% else %>
                 <!-- 開催日情報なし -->
                 <span style="color: #999;">-</span>
+              <% end %>
+            </small>
+          </td>
+          <td>
+            <small>
+              <% search_query = "CoderDojo #{dojo[:name]}" %>
+              <% search_url = "https://www.google.co.jp/search?q=#{URI.encode_www_form_component(search_query)}" %>
+              <%= link_to search_url, target: "_blank", rel: "noopener" do %>
+                Search
+		<small><i class="far fa-external-link"></i></small>
               <% end %>
             </small>
           </td>
