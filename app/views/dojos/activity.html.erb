@@ -18,9 +18,9 @@
     <br>
     <div class='form__terms list'>
       <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
-	<li>「掲載日」は <%= link_to '/dojos', dojos_path %> ページと同じロジックで表示しています。</li>
-	<li>「開催日」は <%= link_to '過去開催', stats_path %> のデータから直近の開催日を表示しています（<%= link_to '近日開催', events_path %>は含まず）。</li>
-	<li>開催データは <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</li>
+	<li>「掲載日」は<%= link_to '統計情報 (道場別) ', dojos_path %> と同じロジックで表示しています。</li>
+	<li>「開催日」は<%= link_to '統計情報 (開催数)',  stats_path %> から直近の開催日を表示しています。</li>
+	<li>「開催日」のデータは <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</li>
       </ul>
     </div>
   </p>
