@@ -1,0 +1,114 @@
+<% provide(:title, '道場情報 - 活動状況まとめ') %>
+<% provide(:desc, '道場別の掲載日と直近開催日をまとめたページです。') %>
+<% provide(:url, activity_dojos_url) %>
+<% provide(:meta_image, '/img/ogp-events.jpeg') %>
+
+<section class="cover">
+  <%= lazy_image_tag('/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', min: true) %>
+</section>
+
+<section id="events" class="text-center" style="margin-bottom: 100px;">
+  <br />
+  <h1>☯️ 道場別の活動状況まとめ</h1>
+  <br />
+  <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
+    主にデータ分析や
+    <a href="/signup#terms-of-use">Active/Inactive</a>
+    の判断などの用途で使われています。
+    <br>
+    <div class='form__terms list'>
+      <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
+	<li>「掲載日」は<%= link_to '統計情報 (道場別) ', dojos_path %> と同じロジックで表示しています。</li>
+	<li>「開催日」は<%= link_to '統計情報 (開催数)',  stats_path %> から直近の開催日を表示しています。</li>
+	<li>「開催日」のデータは <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</li>
+      </ul>
+    </div>
+  </p>
+
+  <div style="margin-top: 20px;" align="center">
+    <table border="1" class="stats-table">
+      <tr>
+        <th>
+          <small>
+            ☯️
+            <br class='ignore-pc'>
+            道場名 (ID 番号)
+          </small>
+        </th>
+        <th>
+          <small>
+            🗓
+            <br class='ignore-pc'>
+            <a href='/signup'>掲載日</a>
+          </small>
+        </th>
+        <th>
+          <small>
+            👥
+            <br class='ignore-pc'>
+            開催日
+          </small>
+        </th>
+        <th>
+          <small>
+            📝
+            <br class='ignore-pc'>
+            ノート
+          </small>
+        </th>
+      </tr>
+      <% @latest_event_by_dojos.each do |dojo| %>
+        <tr>
+          <td>
+            <small>
+              <%= link_to dojo_path(dojo[:id]) do %>
+                <%= dojo[:name] %><br>
+                <small>(ID: <%= dojo[:id] %>)</small>
+              <% end %>
+            </small>
+          </td>
+          <td>
+            <small><%= dojo[:created_at].strftime("%Y-%m-%d") %></small>
+          </td>
+          <td>
+            <small>
+              <% if dojo[:latest_event_at] %>
+                <!-- イベント履歴がある場合 -->
+                <% expired = dojo[:latest_event_at] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
+                <span class="<%= 'expired' if expired %>">
+                  <%= link_to dojo[:latest_event_at].strftime("%Y-%m-%d"), dojo[:latest_event_url] %>
+                </span>
+              <% elsif dojo[:note_date] %>
+                <!-- note内に日付がある場合 -->
+                <% expired = dojo[:note_date] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
+                <span class="<%= 'expired' if expired %>">
+                  <% if dojo[:note_link] %>
+                    <%= link_to dojo[:note_date].strftime("%Y-%m-%d"), dojo[:note_link] %>
+                  <% else %>
+                    <%= dojo[:note_date].strftime("%Y-%m-%d") %>
+                  <% end %>
+                </span>
+              <% else %>
+                <!-- 開催日情報なし -->
+                <span style="color: #999;">-</span>
+              <% end %>
+            </small>
+          </td>
+          <td class="url-cell">
+            <small>
+              <span title="<%= dojo[:note] %>">
+                <% truncated_note = truncate(dojo[:note], length: 60) %>
+                <%= raw Addressable::URI.unescape(Rinku.auto_link(truncated_note)) %>
+              </span>
+            </small>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <p>
+    <pre style='white-space: pre-wrap; margin-top: 60px; color: #505050;'>本ページにある開催日は <br class='ignore-pc'><a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> にのみ対応しています。</pre>
+  </p>
+  <div style='margin-top: 30px;'><a href='#top'>&uarr; 上に戻る</a></div>
+</section>

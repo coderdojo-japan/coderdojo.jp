@@ -25,6 +25,19 @@ class DocsController < ApplicationController
       @doc.content.gsub! "{{ NUM_OF_TOTAL_EVENTS }}",  Dojo::NUM_OF_TOTAL_EVENTS
       @doc.content.gsub! "{{ NUM_OF_TOTAL_NINJAS }}",  Dojo::NUM_OF_TOTAL_NINJAS
     end
+    
+    # INACTIVE_THRESHOLD を日本語の期間表記に変換
+    if @doc.content.include? "INACTIVE_THRESHOLD"
+      # 1.year → "１年間", 6.months → "６ヶ月間" のように変換
+      threshold_in_months = Dojo::INACTIVE_THRESHOLD.to_i / 1.month.to_i
+      threshold_text = if threshold_in_months >= 12
+                         years = threshold_in_months / 12
+                         "#{years.to_s.tr('0-9', '０-９')}年間"
+                       else
+                         "#{threshold_in_months.to_s.tr('0-9', '０-９')}ヶ月間"
+                       end
+      @doc.content.gsub! "{{ INACTIVE_THRESHOLD }}", threshold_text
+    end
 
     @content    = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
     @url        = request.url

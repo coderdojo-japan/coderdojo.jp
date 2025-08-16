@@ -318,4 +318,63 @@ RSpec.describe "Dojos", type: :request do
       end
     end
   end
+
+  describe "GET /dojos/activity" do
+    before do
+      # アクティブな道場を作成
+      @active_dojo = create(:dojo,
+        name: "Active Dojo",
+        created_at: 1.week.ago,
+        inactivated_at: nil
+      )
+      
+      # 非アクティブな道場を作成
+      @inactive_dojo = create(:dojo,
+        name: "Inactive Dojo",
+        created_at: 2.years.ago,
+        inactivated_at: 1.year.ago
+      )
+    end
+    
+    it "returns http success" do
+      get activity_dojos_path
+      expect(response).to have_http_status(:success)
+    end
+    
+    it "displays the activity status page" do
+      get activity_dojos_path
+      expect(response.body).to include("道場別の活動状況まとめ")
+    end
+    
+    it "includes only active dojos" do
+      get activity_dojos_path
+      expect(response.body).to include(@active_dojo.name)
+      expect(response.body).not_to include(@inactive_dojo.name)
+    end
+    
+    it "redirects from old URL /events/latest" do
+      get "/events/latest"
+      expect(response).to redirect_to(activity_dojos_path)
+    end
+    
+    it "displays proper column headers" do
+      get activity_dojos_path
+      expect(response.body).to include("掲載日")
+      expect(response.body).to include("開催日")
+      expect(response.body).to include("ノート")
+    end
+    
+    it "displays created_at date for active dojos" do
+      get activity_dojos_path
+      # 掲載日は YYYY-MM-DD 形式で表示される
+      expect(response.body).to match(@active_dojo.created_at.strftime("%Y-%m-%d"))
+    end
+    
+    it "displays dojo ID same as /dojos page" do
+      get activity_dojos_path
+      # /dojos ページと同じように ID が表示される
+      expect(response.body).to include("(ID: #{@active_dojo.id})")
+      expect(response.body).to include("道場名 (ID 番号)")
+    end
+  end
 end
