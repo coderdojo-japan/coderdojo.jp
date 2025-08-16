@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 RSpec.configure do |config|
   # テスト中の不要な sleep を無効化して高速化する
   config.before(:each) do

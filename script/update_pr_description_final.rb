@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
 
 # PR説明を最新状況に更新するスクリプト
 require 'json'
