@@ -106,9 +106,13 @@ http://www.soumu.go.jp/denshijiti/code.html
 
     dojos.map! do |dojo|
       d = Dojo.find_by(name: dojo['name'])
+
+      # ID など DB の内容で上書きしたいカラムを明示的に指定する。
+      # YAML の各カラムの先頭に固定させたい場面などにも有効です。
       new_dojo          = {}
       new_dojo['id']    = d.id
-      new_dojo['order'] = d.order
+      #new_dojo['order'] = d.order  # ID の直後に固定させる場合の例
+
       new_dojo.merge!(dojo)
       new_dojo
     end
