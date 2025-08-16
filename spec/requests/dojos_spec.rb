@@ -369,5 +369,12 @@ RSpec.describe "Dojos", type: :request do
       # 掲載日は YYYY-MM-DD 形式で表示される
       expect(response.body).to match(@active_dojo.created_at.strftime("%Y-%m-%d"))
     end
+    
+    it "displays dojo ID same as /dojos page" do
+      get activity_dojos_path
+      # /dojos ページと同じように ID が表示される
+      expect(response.body).to include("(ID: #{@active_dojo.id})")
+      expect(response.body).to include("道場名 (ID 番号)")
+    end
   end
 end

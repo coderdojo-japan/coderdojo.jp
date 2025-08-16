@@ -32,7 +32,7 @@
           <small>
             ☯️
             <br class='ignore-pc'>
-            道場名
+            道場名 (ID 番号)
           </small>
         </th>
         <th>
@@ -61,7 +61,10 @@
         <tr>
           <td>
             <small>
-              <a href="<%= dojo[:url] %>"><%= dojo[:name] %></a>
+              <%= link_to dojo_path(dojo[:id]) do %>
+                <%= dojo[:name] %><br>
+                <small>(ID: <%= dojo[:id] %>)</small>
+              <% end %>
             </small>
           </td>
           <td>
