@@ -105,4 +105,39 @@ class DojosController < ApplicationController
       format.csv  { send_data render_to_string, type: :csv }
     end
   end
+
+  # GET /dojos/activity
+  # 道場の活動状況を表示（旧 /events/latest から移行）
+  def activity
+    @latest_event_by_dojos = []
+    Dojo.active.each do |dojo|
+      link_in_note = dojo.note.match(URI.regexp)
+      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2})/) # YYYY-MM-DD
+      last_session_link = link_in_note.nil? ? dojo_path(dojo.id) : link_in_note.to_s
+      last_session_date = date_in_note.nil? ? dojo.created_at    : Time.zone.parse(date_in_note.to_s)
+
+      latest_event    = dojo.event_histories.newest.first
+      latest_event_at = latest_event.nil? ? Time.zone.parse('2000-01-23') : latest_event.evented_at
+      @latest_event_by_dojos << {
+        id:   dojo.id,
+        name: dojo.name,
+        note: dojo.note,
+        url:  dojo.url,
+        has_event_histories: latest_event.nil?,
+
+        # 過去のイベント開催日と note 内の日付を比較し、新しい方の日付を表示
+        event_at: (latest_event_at < last_session_date) ?
+          last_session_date.strftime("%Y-%m-%d") :
+          latest_event.evented_at.strftime("%Y-%m-%d"),
+
+        # 過去のイベント開催日と note 内の日付を比較し、新しい方のリンクを表示
+        event_url: (latest_event_at < last_session_date) ?
+          last_session_link :
+          latest_event.event_url
+      }
+    end
+
+    # Sort by older events first && older Dojo ID first if same event date.
+    @latest_event_by_dojos.sort_by!{ |dojo| [dojo[:event_at], dojo[:id]] }
+  end
 end

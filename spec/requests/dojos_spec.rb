@@ -318,4 +318,43 @@ RSpec.describe "Dojos", type: :request do
       end
     end
   end
+
+  describe "GET /dojos/activity" do
+    before do
+      # アクティブな道場を作成
+      @active_dojo = create(:dojo,
+        name: "Active Dojo",
+        created_at: 1.week.ago,
+        inactivated_at: nil
+      )
+      
+      # 非アクティブな道場を作成
+      @inactive_dojo = create(:dojo,
+        name: "Inactive Dojo",
+        created_at: 2.years.ago,
+        inactivated_at: 1.year.ago
+      )
+    end
+    
+    it "returns http success" do
+      get activity_dojos_path
+      expect(response).to have_http_status(:success)
+    end
+    
+    it "displays the activity status page" do
+      get activity_dojos_path
+      expect(response.body).to include("道場別の直近の開催日まとめ")
+    end
+    
+    it "includes only active dojos" do
+      get activity_dojos_path
+      expect(response.body).to include(@active_dojo.name)
+      expect(response.body).not_to include(@inactive_dojo.name)
+    end
+    
+    it "redirects from old URL /events/latest" do
+      get "/events/latest"
+      expect(response).to redirect_to(activity_dojos_path)
+    end
+  end
 end

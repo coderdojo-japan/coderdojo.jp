@@ -64,7 +64,11 @@ Rails.application.routes.draw do
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
 
-  resources :dojos,    only: %i(index show) # GET /dojos.json returns dojo data as JSON
+  resources :dojos, only: %i(index show) do # GET /dojos.json returns dojo data as JSON
+    collection do
+      get :activity  # GET /dojos/activity - 道場活動状況（旧 /events/latest）
+    end
+  end
   resources :docs,     only: %i(index show)
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
@@ -84,9 +88,11 @@ Rails.application.routes.draw do
   #resources :stats,  only: %i(show)
   #resources :pokemons,  only: %i(index create)
 
-  # Upcoming Events & Latest Events
+  # Upcoming Events
   get '/events'        => 'events#index'
-  get '/events/latest' => 'events#latest'
+  
+  # Legacy redirect: /events/latest moved to /dojos/activity
+  get '/events/latest', to: redirect('/dojos/activity')
 
   # Redirects
   get "/releases/2016/12/12/new-backend", to: redirect('/docs/post-backend-update-history')
