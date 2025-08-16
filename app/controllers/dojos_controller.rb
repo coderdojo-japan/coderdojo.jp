@@ -115,8 +115,8 @@ class DojosController < ApplicationController
     @latest_event_by_dojos = []
     Dojo.active.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
-      # YYYY-MM-DD または YYYY/MM/DD 形式の日付を抽出
-      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2})/)
+      # YYYY-MM-DD、YYYY/MM/DD、または YYYY年MM月DD日 形式の日付を抽出
+      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2}|\d{4}年\d{1,2}月\d{1,2}日)/)
       
       latest_event = dojo.event_histories.newest.first
       
@@ -132,7 +132,7 @@ class DojosController < ApplicationController
         latest_event_url: latest_event.nil? ? nil : latest_event.event_url,
         
         # note内の日付とリンク（fallback用）
-        note_date: date_in_note.nil? ? nil : Time.zone.parse(date_in_note.to_s),
+        note_date: parse_date_from_note(date_in_note),
         note_link: link_in_note.nil? ? nil : link_in_note.to_s
       }
     end
@@ -142,5 +142,22 @@ class DojosController < ApplicationController
       sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
       [sort_date, dojo[:order]]
     end
+  end
+
+  private
+
+  def parse_date_from_note(date_match)
+    return nil if date_match.nil?
+    
+    date_string = date_match.to_s
+    
+    # 日本語形式の日付を標準形式に変換（例: 2025年8月24日 → 2025-08-24）
+    if date_string.include?('年')
+      date_string = date_string.gsub(/(\d{4})年(\d{1,2})月(\d{1,2})日/, '\1-\2-\3')
+    end
+    
+    Time.zone.parse(date_string)
+  rescue ArgumentError
+    nil
   end
 end
