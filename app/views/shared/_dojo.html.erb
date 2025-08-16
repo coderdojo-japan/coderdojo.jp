@@ -1,9 +1,9 @@
-<li class="dojo" id="<%= dojo.name %>">
+<li class="dojo" id="<%= html_escape(dojo.name) %>">
   <header>
-    <%= link_to lazy_image_tag(dojo.logo, alt: "CoderDojo #{dojo.name}", class: 'dojo-picture'), dojo.url,
-              target: "_blank", rel: "external noopener" %>
+    <%= link_to lazy_image_tag(dojo.logo, alt: html_escape("CoderDojo #{dojo.name}"), class: 'dojo-picture'), safe_dojo_url(dojo),
+              target: "_blank" %>
     <span class="dojo-name">
-      <%= link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener" %>
+      <%= link_to html_escape("#{dojo.name} (#{dojo.prefecture.name})"), safe_dojo_url(dojo), target: "_blank" %>
       <% if not dojo.counter == 1 %>
         <span class="dojo-counter"
               data-original-title="道場数"
@@ -15,7 +15,7 @@
 
   <ul class="tags">
     <% dojo.tags.first(5).each do |tag| %>
-      <li><%= tag %></li>
+      <li><%= html_escape(tag) %></li>
     <% end %>
 
     <% if dojo.tags.length > 5 %>
@@ -26,12 +26,12 @@
 	   	           <div class="tooltip-arrow"></div>
 		           <div class="tooltip-inner"></div>
 		         </div>'
-          title="<%= dojo.tags[5..].join(', ') %>">...</li>
+          title="<%= html_escape(dojo.tags[5..].join(', ')) %>">...</li>
     <% end %>
   </ul>
 
   <p class="dojo-description">
-    <%= dojo.description %>
+    <%= html_escape(dojo.description) %>
     <% if dojo.is_private %>
       <%= link_to 'Private', doc_path('private-dojo'), class: 'dojo-private' %>
     <% end %>

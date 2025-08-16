@@ -94,7 +94,7 @@ class Dojo < ApplicationRecord
   def active_at?(date)
     created_at <= date && (inactivated_at.nil? || inactivated_at > date)
   end
-  
+
   # 再活性化メソッド
   def reactivate!
     if inactivated_at.present?

@@ -14,6 +14,7 @@ RSpec.describe "Docs", type: :request do
       get doc_path(param)
       doc      = Document.new(param)
       expected = Kramdown::Document.new(doc.content, input: 'GFM').to_html
+      expected = ApplicationController.helpers.sanitize_content(expected)
       expect(response.body).to include(expected.strip)
     end
 
