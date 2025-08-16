@@ -377,4 +377,165 @@ RSpec.describe "Dojos", type: :request do
       expect(response.body).to include("道場名 (ID 番号)")
     end
   end
+
+  describe "GET /dojos/activity - note date priority" do
+    before do
+      # Create Wakayama-like dojo with old event history but newer note date
+      @test_dojo = create(:dojo,
+        name: "和歌山テスト",
+        created_at: Time.zone.parse("2016-11-01"),
+        inactivated_at: nil,
+        note: "Active for years - 2025-03-16 https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604"
+      )
+      
+      # Create an old event history record for this dojo
+      @old_event = EventHistory.create!(
+        dojo_id: @test_dojo.id,
+        dojo_name: @test_dojo.name,
+        service_name: "facebook",
+        event_id: "1761517970842435", 
+        participants: 10,
+        evented_at: Time.zone.parse("2017-03-12 14:30:00"),
+        event_url: "https://www.facebook.com/events/1761517970842435"
+      )
+    end
+    
+    it "should prioritize newer note date over older event history" do
+      get activity_dojos_path
+      
+      # Find the dojo row in the response
+      dojo_row_match = response.body.match(/#{@test_dojo.name}.*?<\/tr>/m)
+      expect(dojo_row_match).not_to be_nil, "Could not find dojo row for #{@test_dojo.name}"
+      
+      dojo_row = dojo_row_match[0]
+      
+      # The 開催日 (event date) column should show the newer note date (2025-03-16)
+      # not the older event history date (2017-03-12)
+      expect(dojo_row).to include("2025-03-16"), 
+        "Expected to see note date 2025-03-16 in 開催日 column, but found: #{dojo_row}"
+      
+      expect(dojo_row).not_to include("2017-03-12"), 
+        "Should not show old event history date 2017-03-12 when newer note date exists"
+    end
+
+    it "should link to note URL when displaying note date in 開催日 column" do
+      get activity_dojos_path
+      
+      # Find the dojo row
+      dojo_row_match = response.body.match(/#{@test_dojo.name}.*?<\/tr>/m)
+      expect(dojo_row_match).not_to be_nil
+      
+      dojo_row = dojo_row_match[0]
+      
+      # Should contain a link to the note URL
+      expect(dojo_row).to include("https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604"),
+        "Expected to find note URL in the 開催日 column"
+    end
+    
+    it "handles multiple date formats in note (YYYY-MM-DD and YYYY/MM/DD)" do
+      # Test with slash format
+      slash_format_dojo = create(:dojo,
+        name: "スラッシュ形式テスト",
+        created_at: Time.zone.parse("2016-01-01"),
+        inactivated_at: nil,
+        note: "Active - last event 2025/03/16 using Google Forms"
+      )
+      
+      # Create old event history
+      EventHistory.create!(
+        dojo_id: slash_format_dojo.id,
+        dojo_name: slash_format_dojo.name,
+        service_name: "connpass",
+        event_id: "12345",
+        participants: 5,
+        evented_at: Time.zone.parse("2017-01-01"),
+        event_url: "https://example.com"
+      )
+      
+      get activity_dojos_path
+      
+      # Should show the note date in standard format
+      expect(response.body).to include("2025-03-16"),
+        "Should parse YYYY/MM/DD format and display as YYYY-MM-DD"
+    end
+
+    it "handles Japanese date format in note (YYYY年MM月DD日)" do
+      # Test with Japanese date format
+      japanese_format_dojo = create(:dojo,
+        name: "日本語形式テスト",
+        created_at: Time.zone.parse("2016-01-01"),
+        inactivated_at: nil,
+        note: "最終開催日: 2025年8月24日 Peatixで申込受付中"
+      )
+      
+      # Create old event history
+      EventHistory.create!(
+        dojo_id: japanese_format_dojo.id,
+        dojo_name: japanese_format_dojo.name,
+        service_name: "connpass",
+        event_id: "jp123",
+        participants: 8,
+        evented_at: Time.zone.parse("2017-01-01"),
+        event_url: "https://example.com"
+      )
+      
+      get activity_dojos_path
+      
+      # Find the dojo row
+      dojo_row_match = response.body.match(/#{japanese_format_dojo.name}.*?<\/tr>/m)
+      expect(dojo_row_match).not_to be_nil
+      
+      dojo_row = dojo_row_match[0]
+      
+      # Should show the Japanese date in standard format (2025-08-24)
+      expect(dojo_row).to include("2025-08-24"),
+        "Should parse YYYY年MM月DD日 format and display as YYYY-MM-DD"
+    end
+
+    it "shows event history date when it's newer than note date" do
+      # Create dojo with older note date
+      newer_event_dojo = create(:dojo,
+        name: "イベント履歴が新しいテスト",
+        created_at: Time.zone.parse("2016-01-01"),
+        inactivated_at: nil,
+        note: "Last manual event - 2025-03-16 using Google Forms"
+      )
+      
+      # Create newer event history (newer than note date)
+      newer_event = EventHistory.create!(
+        dojo_id: newer_event_dojo.id,
+        dojo_name: newer_event_dojo.name,
+        service_name: "connpass",
+        event_id: "67890",
+        participants: 15,
+        evented_at: Time.zone.parse("2025-08-01 19:00:00"),  # Newer than note date
+        event_url: "https://example-newer.com"
+      )
+      
+      get activity_dojos_path
+      
+      # Find the dojo row
+      dojo_row_match = response.body.match(/#{newer_event_dojo.name}.*?<\/tr>/m)
+      expect(dojo_row_match).not_to be_nil
+      
+      dojo_row = dojo_row_match[0]
+      
+      # Extract just the 開催日 column to check the date display
+      td_matches = dojo_row.scan(/<td[^>]*>(.*?)<\/td>/m)
+      
+      # Based on debug output: td_matches[1] is the 開催日 column
+      # (道場名 column seems to be skipped in regex due to complex link structure)
+      event_date_column = td_matches[1]&.first # 開催日 column
+      
+      expect(event_date_column).not_to be_nil, "Could not find 開催日 column"
+      
+      # Should show the newer event history date (2025-08-01) in the 開催日 column
+      expect(event_date_column).to include("2025-08-01"),
+        "Expected to see newer event history date 2025-08-01 in 開催日 column, but found: #{event_date_column}"
+      
+      # The 開催日 column should not contain the older note date
+      expect(event_date_column).not_to include("2025-03-16"),
+        "Should not show older note date 2025-03-16 in 開催日 column when newer event history exists"
+    end
+  end
 end
