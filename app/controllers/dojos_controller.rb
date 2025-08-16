@@ -133,10 +133,10 @@ class DojosController < ApplicationController
       }
     end
 
-    # Sort by latest event date (or created_at if no events) && older Dojo ID if same date
+    # Sort by latest event date (or created_at if no events) && Dojo's order if same date
     @latest_event_by_dojos.sort_by! do |dojo| 
       sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
-      [sort_date, dojo[:id]]
+      [sort_date, dojo[:order]]
     end
   end
 end
