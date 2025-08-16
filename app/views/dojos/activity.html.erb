@@ -74,13 +74,13 @@
             <small>
               <% if dojo[:latest_event_at] %>
                 <!-- イベント履歴がある場合 -->
-                <% expired = dojo[:latest_event_at] <= Time.current.prev_year && !dojo[:note].include?('Active') %>
+                <% expired = dojo[:latest_event_at] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
                 <span class="<%= 'expired' if expired %>">
                   <%= link_to dojo[:latest_event_at].strftime("%Y-%m-%d"), dojo[:latest_event_url] %>
                 </span>
               <% elsif dojo[:note_date] %>
                 <!-- note内に日付がある場合 -->
-                <% expired = dojo[:note_date] <= Time.current.prev_year && !dojo[:note].include?('Active') %>
+                <% expired = dojo[:note_date] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
                 <span class="<%= 'expired' if expired %>">
                   <% if dojo[:note_link] %>
                     <%= link_to dojo[:note_date].strftime("%Y-%m-%d"), dojo[:note_link] %>

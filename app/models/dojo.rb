@@ -5,6 +5,9 @@ class Dojo < ApplicationRecord
   NUM_OF_TOTAL_EVENTS  = "10,000"
   NUM_OF_TOTAL_NINJAS  = "62,000"
   DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yml')
+  
+  # 1年以上イベント開催していない道場を判定する閾値
+  INACTIVE_THRESHOLD = 1.year
 
   belongs_to :prefecture
   has_many   :dojo_event_services, dependent: :destroy
