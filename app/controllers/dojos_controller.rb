@@ -115,7 +115,8 @@ class DojosController < ApplicationController
     @latest_event_by_dojos = []
     Dojo.active.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
-      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2})/) # YYYY-MM-DD
+      # YYYY-MM-DD または YYYY/MM/DD 形式の日付を抽出
+      date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2})/)
       
       latest_event = dojo.event_histories.newest.first
       
