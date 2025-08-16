@@ -25,35 +25,8 @@
     </div>
   </p>
 
-  <style type="text/css">
-    /* URL 用のセルにクラスを付けておく想定 */
-    table { table-layout: auto; }
-    td {
-      padding: 1px 10px 1px 10px;
-      text-align: right;
-      font-size: smaller;
-    }
-    span.expired {
-      a {
-	color: red;
-	background-color: #ffe5e5; /* 薄い赤背景 */
-      }
-    }
-    td.url-cell {
-      white-space:   normal;         /* 改行を許可 */
-      word-wrap:     break-word;     /* 古めのブラウザ向け */
-      overflow-wrap: break-word;     /* 新しめのブラウザ向け */
-      word-break:    break-all;      /* 英数字が続く場合の保険 (必要に応じて) */
-      text-align:    left;
-    }
-    th {
-      padding: 10px;
-      text-align: center;
-    }
-  </style>
-
   <div style="margin-top: 20px;" align="center">
-    <table border="1">
+    <table border="1" class="stats-table">
       <tr>
         <th>
           <small>☯️ 道場名</small>

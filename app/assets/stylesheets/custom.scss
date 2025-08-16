@@ -1075,7 +1075,34 @@ section {
 
 /* Stats and Dojos table styling */
 .stats-table {
-  td.inactive-item {
-    background-color: gainsboro;
+  table-layout: auto;
+  
+  th {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  td {
+    padding: 1px 10px 1px 10px;
+    text-align: right;
+    font-size: smaller;
+    
+    &.url-cell {
+      white-space:   normal;         /* 改行を許可 */
+      word-wrap:     break-word;     /* 古めのブラウザ向け */
+      overflow-wrap: break-word;     /* 新しめのブラウザ向け */
+      word-break:    break-all;      /* 英数字が続く場合の保険 (必要に応じて) */
+      text-align:    left;
+    }
+    
+    &.inactive-item {
+      background-color: gainsboro;
+    }
+  }
+  
+  // Activity page specific style for expired events
+  span.expired a {
+    color: red;
+    background-color: #ffe5e5; /* 薄い赤背景 */
   }
 }
