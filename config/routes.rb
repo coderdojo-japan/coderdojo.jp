@@ -49,9 +49,10 @@ Rails.application.routes.draw do
   get "/brand"            => "docs#show", id: 'brand-guidelines'
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
-  get "/english"          => "docs#show", id: 'english'
   get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
+  get "/english"          => "docs#show", id: 'english'
+  get "/english/calendar" => "docs#show", id: '_calendar-english'
 
   get "/financial-report",      to: redirect('/finances')
   get "/finances"         => "docs#show", id: 'finances'
