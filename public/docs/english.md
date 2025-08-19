@@ -89,7 +89,7 @@ Since incorporated, as one of [the official national partners](https://codeclub.
 
 <br>
 
-With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://web.archive.org/web/20240721015650/https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map named [DojoMap](https://map.coderdojo.jp/) below to find one. Additionally, if you represent a company interested in supporting dojos in Japan, feel free to contact us at `info@coderdojo.jp` with any ideas for the community. Thanks for reading! 🙏✨
+With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://web.archive.org/web/20240721015650/https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map named [DojoMap](https://map.coderdojo.jp/) below to find one. 🗺️
 
 <a href='https://map.coderdojo.jp/'>
   <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
@@ -101,6 +101,11 @@ With substantial support from our partners, we continue to contribute to the Cod
   </a>
 </center>
 
+<br>
+
+Finally, if you represent a company interested in supporting dojos in Japan, feel free to contact us at `info@coderdojo.jp` with any ideas for the community. Thanks for reading! 🙏✨
+
+<br>
 
 ## [<i class="fa-solid fa-books"></i>](#references) References {#references}
 
@@ -128,6 +133,14 @@ For more detailed information, please refer to the following reports, articles, 
 ## [<i class="fa-brands fa-youtube"></i>](#meetups) Casual Meetup with Guests {#meetups}
 
 We occasionally host guests from overseas at our co-working and shared-office space, [CASE Shinjuku](https://case-shinjuku.com/english), in Tokyo. You can look back on our past meetups on [YouTube](https://www.youtube.com/coderdojojapan).
+
+<div class="home-point-video">
+  <iframe class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/JS60C033f0g?list=PL94GDfaSQTmKxMzXVMzzdl-zCmzgitQFP&start=0&cc_load_policy=1&cc_lang_pref=en" title="CoderDojo Meetup with Bill Liao (@liaonet) in 2024"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   allowfullscreen></iframe>
+</div>
+
 
 <div class="home-point-video">
   <iframe class='lazyload' frameborder="0"
