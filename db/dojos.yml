@@ -2601,10 +2601,11 @@
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
-  note: 2025-03-16 https://www.instagram.com/p/DG990t1PjEk/?img_index=1
+  inactivated_at: '2025-04-21'
+  note: Last session confirmed - 2024/4/21(日)
   name: 伊勢
   prefecture_id: 24
-  url: https://www.instagram.com/coderdojo.ise/
+  url: https://coderdojo-ise.jimdofree.com/
   logo: "/img/dojos/ise.webp"
   description: 伊勢市で毎月開催
   tags:
