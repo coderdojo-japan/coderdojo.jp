@@ -273,7 +273,7 @@ We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are
 This web application is developed with many other brilliant works! :sparkling_heart:
 You can check out them and our works with associated licenses from [LICENSE.md](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/LICENSE.md). :wink:
 
-Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about-coderdojo-japan) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
+Copyright &copy; [一般社団法人 CoderDojo Japan](https://coderdojo.jp/about) ([@coderdojo-japan](https://github.com/coderdojo-japan)).
 
 <br>
 

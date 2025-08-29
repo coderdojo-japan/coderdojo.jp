@@ -1,6 +1,6 @@
 # ☯️ 一般社団法人 CoderDojo Japan について (2017年版)
 
-<center>(本ページは2017年度の古い情報となっています。最新版は<a href="/about-coderdojo-japan">コチラ</a>から)</center>
+<center>(本ページは2017年度の古い情報となっています。最新版は<a href="/about">コチラ</a>から)</center>
 
 <br>
 一般社団法人 CoderDojo Japan では次の事業を行なっておりますが、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。

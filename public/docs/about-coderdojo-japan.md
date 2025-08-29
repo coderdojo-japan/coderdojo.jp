@@ -30,6 +30,13 @@
     &raquo; 設立経緯を見る
   </a>
 </div>
+<center>
+  <a href='/english'>
+    <small>
+      &raquo; English speakers? Then check English version!
+    </small>
+  </a>
+</center>
 
 <br>
 
