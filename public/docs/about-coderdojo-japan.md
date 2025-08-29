@@ -1,5 +1,7 @@
 # ☯️ 一般社団法人 CoderDojo Japan について {#top}
 
+<img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' style='margin-bottom: 30px;' />
+
 一般社団法人 CoderDojo Japan では、全国{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上ある非営利のプログラミング道場「CoderDojo」の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。
 
 <br>
@@ -18,19 +20,51 @@
 本ページでは、一般社団法人 CoderDojo Japan が運営する上記事業の活動内容や、設立経緯などについてまとめています。
 
 <div class='btn-cover' style="margin: 20px auto;">
+  <a class='btn-blue' href='#coderdojo'>
+    &raquo; CoderDojo とは
+  </a>
   <a class='btn-blue' href='#works'>
-    <i class='far fa-handshake'></i>
-    活動内容を見る
+    &raquo; 活動内容を見る
   </a>
   <a class='btn-blue' href='#history'>
-    <i class='far fa-scroll'></i>
-    設立経緯を見る
+    &raquo; 設立経緯を見る
   </a>
 </div>
 
 <br>
 
-<img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' />
+## [☯️](#coderdojo) CoderDojo とは {#coderdojo}
+
+CoderDojo は、主に7〜17歳を対象とした子どものためのプログラミング道場です。2011年にアイルランドから始まった国際的な非営利活動で、**日本には{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上の道場**が各地域で活動しています。
+
+<a href='https://map.coderdojo.jp/'>
+  <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
+   src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
+</a>
+<center>
+  <a href='https://map.coderdojo.jp/'>
+    &raquo; 日本含む世界中の CoderDojo を地図から探せるアプリ「DojoMap」
+  </a>
+</center>
+
+<br>
+
+コロナ禍で大きな影響を受けましたが、日本では再び[毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上のイベント](/events)が開催されるようになり、累計で{{ NUM_OF_TOTAL_EVENTS }}回以上のプログラミング機会を子供達に提供しています。各イベントの運営はプログラマーやデザイナー、学生や教員など、多様な方々の協力によって支えられています。
+
+主に [Scratch や micro:bit、Webサイト制作などが人気](/stats#tag)ですが、特定のテクノロジーやテキストにこだわらず、参加者自身に作りたいものを考えて来てもらい、その実現を後押しすることが CoderDojo の特徴の１つです。
+
+<br>
+
+<div class="home-point-video">
+  <iframe width="560" height="315" class='lazyload' frameborder="0"
+   data-src="https://www.youtube.com/embed/HQhIjnrF6mQ?rel=0" allowfullscreen></iframe>
+</div>
+<center>
+  <a href='https://www.youtube.com/watch?v=HQhIjnrF6mQ'>
+    &raquo; YouTube で１分紹介動画を見る
+  </a>
+</center>
+
 
 
 ## [🤝](#works) 活動内容と実績 {#works}
@@ -50,10 +84,10 @@ CoderDojo Japan では、[上記の定款](#top)に定められた事業内容�
    - 実績: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DecaDojo](https://decadojo.coderdojo.jp/) や [DojoCon Japan](https://dojocon.coderdojo.jp/) の開催サポートなど<br><br>
 - **(4) 国内外の「CoderDojo」に関する普及および゙広報に関する活動**
    - 内容: News サイトや SNS、Podcast などで CoderDojo 活動の周知を支援します
-   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Facebook](https://www.facebook.com/coderdojo.jp) や [Twitter](https://twitter.com/CoderDojoJapan) アカウント、[DojoCast](/podcasts) をご参照ください<br><br>
+   - 実績: [DojoLetter](https://news.coderdojo.jp/category/dojoletter%e3%83%90%e3%83%83%e3%82%af%e3%83%8a%e3%83%b3%e3%83%90%e3%83%bc/)、[Facebook](https://www.facebook.com/coderdojo.jp) や [X](https://x.com/CoderDojoJapan) (旧: Twitter) アカウント、[DojoCast](/podcasts) をご参照ください<br><br>
 - **(5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有**
    - 内容: CoderDojo コミュニティで得られた知見をオープンに共有します
-   - 実績: ラズパイ財団 CEOとのミートアップ、CoderDojo 共同設立者 (James, Bill) とのミートアップなど。詳細は [YouTube の合同セッション・イベントまとめ](https://www.youtube.com/channel/UCal5GuoCDCMDQe07w69TuJA/playlists?view=50&sort=dd&shelf_id=6)をご参照ください<br><br>
+   - 実績: ラズベリーパイ財団 CEO との対談、CoderDojo 共同設立者 (James, Bill) との対談、[ポケモンワークショップ](http://localhost:3000/pokemon/workshop)など。詳細は[公式 YouTube チャンネル](https://www.youtube.com/@CoderDojoJapan/playlists)をご参照ください<br><br>
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
    - 実績: [決算書の作成](/finances)、[理事の募集](#next)、[問い合わせ対応](/#inquiry)、[CoderDojo Foundation](https://coderdojo.com/foundation/) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など <br><br>
@@ -63,11 +97,11 @@ CoderDojo Japan が実施している上記活動、ならびに [CoderDojo Foun
 
 <br>
 
-一方、パートナー法人と[連名でプレスリリースを出す](https://www.sakura.ad.jp/information/pressreleases/2020/03/25/1968203191/)場合など、取り組みの実現に向けて秘密情報を保持しながら動くこともあります。CoderDojo コミュニティを裏側からサポートする事業にご興味がある場合は、下記「[理事募集のお知らせ](#next)」をご確認ください。
+一方、パートナー法人と足並みを揃えて[プレスリリースを出す](https://prtimes.jp/main/html/searchrlp/company_id/38935)場合など、取り組みの実現に向けて秘密情報を保持しながら動くこともあります。CoderDojo コミュニティを裏側からサポートする事業にご興味がある場合は、下記「[理事募集のお知らせ](#board)」をご確認ください。
 
 <div align="right" style="margin-top: 30px; margin-bottom: 50px;">
 一般社団法人 CoderDojo Japan<br>
-代表理事 安川要平<br>
+代表理事 <a href='https://x.com/yasulab'>安川要平</a><br>
 info@coderdojo.jp
 </div>
 
@@ -113,7 +147,7 @@ info@coderdojo.jp
 </a>
 
 
-## [👥](#next) 理事募集について {#next}
+## [👥](#board) 理事募集について {#board}
 
 2020年7月をもって共同設立者である [@tkc49](https://twitter.com/tkc49) さんが理事役から相談役に移ったため、それに伴って新たな理事募集を行っています。隔週の定例ミーティング参加などは任意となるものの、理事以外の意見を求めたい場面で相談対応をしていただいたり、[@tkc49](https://twitter.com/tkc49) さん主導で始まった [news.coderdojo.jp](https://news.coderdojo.jp) の運用などにも引き続き関わっていただいております。
 

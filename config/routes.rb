@@ -14,12 +14,14 @@ Rails.application.routes.draw do
   #get "/docs/teikan",            to: redirect('/teikan')
   #get "/docs/signup",            to: redirect('/signup')
 
-  get "/docs/join-in-board",      to: redirect('/about-coderdojo-japan')
-  get "/docs/join-in-board-2017", to: redirect('/about-coderdojo-japan')
-  get "/join-in-board",           to: redirect('/about-coderdojo-japan')
-  get "/join-in-board-2017",      to: redirect('/about-coderdojo-japan')
-  get "/about-coderdojo-japan"    => "docs#show", id: 'about-coderdojo-japan'
+  get "/docs/join-in-board",      to: redirect('/about')
+  get "/docs/join-in-board-2017", to: redirect('/about')
+  get "/join-in-board",           to: redirect('/about')
+  get "/join-in-board-2017",      to: redirect('/about')
+  get "/join-in-board",           to: redirect('/about')
+  get "/about-coderdojo-japan",   to: redirect('/about')
   get "/about-coderdojo"          => "docs#show", id: 'about-coderdojo'
+  get "/about"                    => "docs#show", id: 'about-coderdojo-japan'
 
   get "/docs/code-of-conduct",    to: redirect('/conduct')
   get "/docs/conduct",            to: redirect('/conduct')
