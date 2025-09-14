@@ -4,35 +4,61 @@ on:
   schedule:
     # 毎朝 9:00 JST
     - cron: '0 0 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
   workflow_dispatch:
 
 jobs:
-  fetch:
+  daily:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+    - name: 💎 Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+
+    - name: 🧪 Install dependencies
+      run: bundle install
+
+    - name: 📰 Run news:fetch task
+      run: bin/rails news:fetch
+
+    - name: 🆙 Commit updated news.yml
+      run: |
+        git config user.name  "Yohei Yasukawa"
+        git config user.email "yohei@yasslab.jp"
+        git checkout main
+        git add db/news.yml
+        if ! git diff --cached --quiet; then
+          git commit -m '🤖 Upsert db/news.yml'
+          git push origin main
+          echo "🆕 Found news in db/news.yml"
+          echo "FOUND_NEWS=true"  >> $GITHUB_ENV
+        else
+          echo "✅ No news in db/news.yml"
+          echo "FOUND_NEWS=false" >> $GITHUB_ENV
+        fi
+
+    - name: ✅ Do nothing if no news found
+      if: ${{ env.FOUND_NEWS == 'false' }}
+      run: |
+        echo "No news found."
+
+    - name: 🚀 Deploy to Heroku if news found
+      if: ${{ env.FOUND_NEWS == 'true' }}
+      # TODO: This workflows depend on Ubuntu version.
+      # https://github.com/AkhileshNS/heroku-deploy/issues/186
+      runs-on: ubuntu-22.04
+      steps:
+      - uses: actions/checkout@v3
+      - uses: akhileshns/heroku-deploy@v3.13.15
         with:
-          bundler-cache: true
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Run news:fetch task
-        run: bin/rails news:fetch
-
-      - name: Commit updated news.yml
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add db/news.yml
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update news.yml via GitHub Actions"
-            git push
-          else
-            echo "No changes in db/news.yml"
-          fi
+          heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email:    ${{ secrets.HEROKU_EMAIL }}
