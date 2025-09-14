@@ -20,7 +20,7 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+        run: bundle install
 
       - name: Run news:fetch task
         run: bin/rails news:fetch
