@@ -48,7 +48,9 @@ jobs:
   deploy:
     needs: daily
     if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
-    runs-on: ubuntu-latest
+    # TODO: ubuntu-latest image needs to install heroku CLI to deploy.
+    # https://github.com/AkhileshNS/heroku-deploy/issues/188
+    runs-on: ubuntu-22.04
     
     steps:
     - name: ☑️ Checkout code
