@@ -11,6 +11,8 @@ on:
 jobs:
   daily:
     runs-on: ubuntu-latest
+    outputs:
+      FOUND_NEWS: ${{ steps.check_news.outputs.FOUND_NEWS }}
 
     steps:
     - name: ☑️ Checkout code
@@ -23,13 +25,11 @@ jobs:
       with:
         bundler-cache: true
 
-    - name: 🧪 Install dependencies
-      run: bundle install
-
     - name: 📰 Run news:fetch task
       run: bin/rails news:fetch
 
     - name: 🆙 Commit updated news.yml
+      id: check_news
       run: |
         git config user.name  "Yohei Yasukawa"
         git config user.email "yohei@yasslab.jp"
@@ -39,26 +39,26 @@ jobs:
           git commit -m '🤖 Upsert db/news.yml'
           git push origin main
           echo "🆕 Found news in db/news.yml"
-          echo "FOUND_NEWS=true"  >> $GITHUB_ENV
+          echo "FOUND_NEWS=true"  >> $GITHUB_OUTPUT
         else
           echo "✅ No news in db/news.yml"
-          echo "FOUND_NEWS=false" >> $GITHUB_ENV
+          echo "FOUND_NEWS=false" >> $GITHUB_OUTPUT
         fi
 
-    - name: ✅ Do nothing if no news found
-      if: ${{ env.FOUND_NEWS == 'false' }}
-      run: |
-        echo "No news found."
-
-    - name: 🚀 Deploy to Heroku if news found
-      if: ${{ env.FOUND_NEWS == 'true' }}
-      # TODO: This workflows depend on Ubuntu version.
-      # https://github.com/AkhileshNS/heroku-deploy/issues/186
-      runs-on: ubuntu-22.04
-      steps:
-      - uses: actions/checkout@v3
-      - uses: akhileshns/heroku-deploy@v3.13.15
-        with:
-          heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          heroku_email:    ${{ secrets.HEROKU_EMAIL }}
+  deploy:
+    needs: daily
+    if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: main
+    
+    - name: 🚀 Deploy to Heroku
+      uses: akhileshns/heroku-deploy@v3.14.15
+      with:
+        heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
+        heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+        heroku_email:    ${{ secrets.HEROKU_EMAIL    }}
