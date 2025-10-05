@@ -1,5 +1,9 @@
 ---
 news:
+- id: 13
+  url: https://news.coderdojo.jp/2025/10/04/dojoletter-vol-89-2025%e5%b9%b408%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.89 2025年08月号
+  published_at: Sat, 04 Oct 2025 13:20:16 +0000
 - id: 12
   url: https://news.coderdojo.jp/2025/09/10/dojoletter-vol-88-2025%e5%b9%b407%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.88 2025年07月号
