@@ -1995,6 +1995,18 @@
   - Minecraft
   - 電子工作
   - 3Dデザイン
+- id: 344
+  order: '162051'
+  created_at: '2025-10-27'
+  name: 氷見@bigberries
+  prefecture_id: 16
+  logo: "/img/dojos/default.webp"
+  url: https://codeclub.org/ja/clubs/6a93d88f-6f44-4057-8a2a-d003896b0406
+  description: 氷見市で隔週開催
+  tags:
+  - Scratch
+  - micro:bit
+  - MESH
 - id: 279
   order: '162060'
   created_at: '2022-03-01'
