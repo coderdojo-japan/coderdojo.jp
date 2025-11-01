@@ -73,7 +73,7 @@ namespace :news do
     # 新しいアイテムと既存アイテムを分離
     truly_new_items = []
     updated_items = []
-    
+
     new_items.each do |new_item|
       if existing_items_hash.key?(new_item['url'])
         existing_item = existing_items_hash[new_item['url']]
@@ -90,10 +90,10 @@ namespace :news do
     max_existing_id = existing_news.map { |item| item['id'].to_i }.max || 0
 
     # 新しいアイテムのみに ID を割り当て（古い順）
-    truly_new_items_sorted = truly_new_items.sort_by { |item| 
-      Time.parse(item['published_at']) 
+    truly_new_items_sorted = truly_new_items.sort_by { |item|
+      Time.parse(item['published_at'])
     }
-    
+
     truly_new_items_sorted.each_with_index do |item, index|
       item['id'] = max_existing_id + index + 1
     end
@@ -106,8 +106,8 @@ namespace :news do
     all_items = unchanged_items + updated_items + truly_new_items_sorted
 
     # 日付降順ソート
-    sorted_items = all_items.sort_by { |item| 
-      Time.parse(item['published_at']) 
+    sorted_items = all_items.sort_by { |item|
+      Time.parse(item['published_at'])
     }.reverse
 
     File.open('db/news.yml', 'w') do |f|
