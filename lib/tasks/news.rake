@@ -10,11 +10,7 @@ namespace :news do
 
     logger.info('==== START news:fetch ====')
 
-    # 既存の news.yml を読み込み
-    news_yaml_path = Rails.root.join('db', 'news.yml')
-    existing_news  = YAML.safe_load File.read(news_yaml_path)
-
-    # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
+    # 本番環境では実サイトのフィード、それ以外（テスト環境など）ではテスト用フェード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
     TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
     RSS_FEED_LIST  = Rails.env.production? ?
@@ -32,16 +28,17 @@ namespace :news do
       }
     end
 
-    # 既存データをハッシュに変換（URL をキーに）
-    existing_items_hash = existing_news.index_by { |item| item['url'] }
+    # 既存データ (YAML) を読み込み、ハッシュに変換
+    news_yaml_file = File.read Rails.root.join('db', 'news.yml')
+    existing_news  = YAML.safe_load(news_yaml_file).index_by { |item| item['url'] }
 
     # 新しいアイテムと既存アイテムを分離
     truly_new_items = []
     updated_items = []
 
     news_items.each do |new_item|
-      if existing_items_hash.key?(new_item['url'])
-        existing_item = existing_items_hash[new_item['url']]
+      if existing_news.key?(new_item['url'])
+        existing_item = existing_news[new_item['url']]
         # タイトルまたは公開日が変わった場合のみ更新
         if existing_item['title'] != new_item['title'] || existing_item['published_at'] != new_item['published_at']
           updated_items << existing_item.merge(new_item)
