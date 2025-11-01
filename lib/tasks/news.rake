@@ -37,14 +37,14 @@ def item_to_hash(item)
 end
 
 namespace :news do
-  desc 'RSS フィードから最新ニュースを取得してデータベースに upsert'
-  task upsert: :environment do
+  desc 'RSS フィードを取得し、db/news.yml に保存'
+  task fetch: :environment do
     # ロガー設定（ファイル＋コンソール出力）
     file_logger = ActiveSupport::Logger.new('log/news.log')
     console     = ActiveSupport::Logger.new(STDOUT)
     logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
 
-    logger.info('==== START news:upsert ====')
+    logger.info('==== START news:fetch ====')
 
     # 既存の news.yml を読み込み
     yaml_path = Rails.root.join('db', 'news.yml')
@@ -125,9 +125,21 @@ namespace :news do
     end
 
     logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
+    logger.info('====  END news:fetch  ====')
+  end
 
-    # データベースへの upsert 処理（統合部分）
-    entries = sorted_items
+  desc 'db/news.yml からデータベースに upsert'
+  task upsert: :environment do
+    file_logger = ActiveSupport::Logger.new('log/news.log')
+    console     = ActiveSupport::Logger.new(STDOUT)
+    logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
+
+    logger.info "==== START news:upsert ===="
+
+    yaml_path = Rails.root.join('db', 'news.yml')
+    raw       = YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)
+
+    entries = raw['news'] || []
     new_count = 0
     updated_count = 0
 
@@ -152,8 +164,8 @@ namespace :news do
       end
     end
 
-    logger.info "Imported #{new_count + updated_count} items to database (#{new_count} new, #{updated_count} updated)."
-    logger.info('====  END news:upsert  ====')
+    logger.info "Upserted #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)."
+    logger.info "==== END news:upsert ===="
   end
 
 end
