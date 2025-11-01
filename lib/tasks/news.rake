@@ -16,9 +16,10 @@ namespace :news do
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
+    TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
     RSS_FEED_LIST  = Rails.env.production? ?
       [DOJO_NEWS_FEED] :
-      [Rails.root.join('spec', 'fixtures', 'sample_news.rss')]
+      [TEST_NEWS_FEED]
 
     news_items = RSS_FEED_LIST.flat_map do |feed|
       feed = RSS::Parser.parse(feed, false)
