@@ -1,71 +1,35 @@
 require 'rss'
-require 'net/http'
-require 'uri'
-require 'yaml'
-require 'time'
-require 'active_support/broadcast_logger'
-
-def safe_open(url)
-  uri = URI.parse(url)
-  raise "不正なURLです: #{url}" unless uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
-
-  Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-    request = Net::HTTP::Get.new(uri)
-    response = http.request(request)
-    response.body
-  end
-end
-
-def fetch_rss_items(url, logger)
-  logger.info("Fetching RSS → #{url}")
-  begin
-    rss = safe_open(url)
-    feed = RSS::Parser.parse(rss, false)
-    feed.items.map { |item| item_to_hash(item) }
-  rescue => e
-    logger.warn("⚠️ Failed to fetch #{url}: #{e.message}")
-    []
-  end
-end
-
-def item_to_hash(item)
-  {
-    'url'          => item.link,
-    'title'        => item.title,
-    'published_at' => item.pubDate.to_s
-  }
-end
 
 namespace :news do
   desc 'RSS フィードを取得し、db/news.yml に保存'
   task fetch: :environment do
     # ロガー設定（ファイル＋コンソール出力）
-    file_logger = ActiveSupport::Logger.new('log/news.log')
     console     = ActiveSupport::Logger.new(STDOUT)
-    logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
+    logger_file = ActiveSupport::Logger.new('log/news.log')
+    logger      = ActiveSupport::BroadcastLogger.new(logger_file, console)
 
     logger.info('==== START news:fetch ====')
 
     # 既存の news.yml を読み込み
-    yaml_path = Rails.root.join('db', 'news.yml')
-    existing_news = if File.exist?(yaml_path)
-                      YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)['news'] || []
-                    else
-                      []
-                    end
+    news_yaml_path = Rails.root.join('db', 'news.yml')
+    existing_news  = YAML.safe_load(File.read(news_yaml_path), permitted_classes: [Time], aliases: true)['news']
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
-    feed_urls = if Rails.env.test? || Rails.env.staging?
-                  [Rails.root.join('spec', 'fixtures', 'sample_news.rss').to_s]
-                else
-                  [
-                    'https://news.coderdojo.jp/feed/'
-                    # 必要に応じて他 Dojo の RSS もここに追加可能
-                    # 'https://coderdojotokyo.org/feed',
-                  ]
-                end
+    DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
+    RSS_FEED_LIST  = Rails.env.production? ?
+      [DOJO_NEWS_FEED] :
+      [Rails.root.join('spec', 'fixtures', 'sample_news.rss')]
 
-    new_items = feed_urls.flat_map { |url| fetch_rss_items(url, logger) }
+    news_items = RSS_FEED_LIST.flat_map do |feed|
+      feed = RSS::Parser.parse(feed, false)
+      feed.items.map { |item|
+        {
+          'url'          => item.link,
+          'title'        => item.title,
+          'published_at' => item.pubDate.to_s
+        }
+      }
+    end
 
     # 既存データをハッシュに変換（URL をキーに）
     existing_items_hash = existing_news.index_by { |item| item['url'] }
@@ -74,7 +38,7 @@ namespace :news do
     truly_new_items = []
     updated_items = []
 
-    new_items.each do |new_item|
+    news_items.each do |new_item|
       if existing_items_hash.key?(new_item['url'])
         existing_item = existing_items_hash[new_item['url']]
         # タイトルまたは公開日が変わった場合のみ更新
@@ -167,5 +131,4 @@ namespace :news do
     logger.info "Upserted #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)."
     logger.info "==== END news:upsert ===="
   end
-
 end
