@@ -37,14 +37,14 @@ def item_to_hash(item)
 end
 
 namespace :news do
-  desc 'RSS フィードから最新ニュースを取得し、db/news.yml に書き出す'
-  task fetch: :environment do
+  desc 'RSS フィードから最新ニュースを取得してデータベースに upsert'
+  task upsert: :environment do
     # ロガー設定（ファイル＋コンソール出力）
     file_logger = ActiveSupport::Logger.new('log/news.log')
     console     = ActiveSupport::Logger.new(STDOUT)
     logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
 
-    logger.info('==== START news:fetch ====')
+    logger.info('==== START news:upsert ====')
 
     # 既存の news.yml を読み込み
     yaml_path = Rails.root.join('db', 'news.yml')
@@ -110,6 +110,7 @@ namespace :news do
       Time.parse(item['published_at'])
     }.reverse
 
+    # YAML ファイルに書き出し
     File.open('db/news.yml', 'w') do |f|
       formatted_items = sorted_items.map do |item|
         {
@@ -124,6 +125,49 @@ namespace :news do
     end
 
     logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
-    logger.info('====  END news:fetch  ====')
+
+    # データベースへの upsert 処理（統合部分）
+    entries = sorted_items
+    new_count = 0
+    updated_count = 0
+
+    News.transaction do
+      entries.each do |attrs|
+        news = News.find_or_initialize_by(url: attrs['url'])
+        is_new = news.new_record?
+
+        news.assign_attributes(
+          title:        attrs['title'],
+          published_at: attrs['published_at']
+        )
+        
+        if is_new || news.changed?
+          news.save!
+          status = is_new ? 'new' : 'updated'
+          new_count += 1 if is_new
+          updated_count += 1 unless is_new
+
+          logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"
+        end
+      end
+    end
+
+    logger.info "Imported #{new_count + updated_count} items to database (#{new_count} new, #{updated_count} updated)."
+    logger.info('====  END news:upsert  ====')
+  end
+
+  # 後方互換性のためのエイリアス（既存のデプロイ設定などで使われている可能性）
+  desc '※ Deprecated: news:upsert を使用してください'
+  task fetch: :environment do
+    logger = ActiveSupport::Logger.new(STDOUT)
+    logger.warn "⚠️  news:fetch は非推奨です。news:upsert を使用してください"
+    Rake::Task['news:upsert'].invoke
+  end
+
+  desc '※ Deprecated: news:upsert を使用してください'
+  task import_from_yaml: :environment do
+    logger = ActiveSupport::Logger.new(STDOUT)
+    logger.warn "⚠️  news:import_from_yaml は非推奨です。news:upsert を使用してください"
+    Rake::Task['news:upsert'].invoke
   end
 end
