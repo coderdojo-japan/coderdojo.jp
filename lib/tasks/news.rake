@@ -156,18 +156,4 @@ namespace :news do
     logger.info('====  END news:upsert  ====')
   end
 
-  # 後方互換性のためのエイリアス（既存のデプロイ設定などで使われている可能性）
-  desc '※ Deprecated: news:upsert を使用してください'
-  task fetch: :environment do
-    logger = ActiveSupport::Logger.new(STDOUT)
-    logger.warn "⚠️  news:fetch は非推奨です。news:upsert を使用してください"
-    Rake::Task['news:upsert'].invoke
-  end
-
-  desc '※ Deprecated: news:upsert を使用してください'
-  task import_from_yaml: :environment do
-    logger = ActiveSupport::Logger.new(STDOUT)
-    logger.warn "⚠️  news:import_from_yaml は非推奨です。news:upsert を使用してください"
-    Rake::Task['news:upsert'].invoke
-  end
 end
