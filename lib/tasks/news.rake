@@ -10,14 +10,14 @@ namespace :news do
 
     logger.info('==== START news:fetch ====')
 
-    # 本番環境では実サイトのフィード、それ以外（テスト環境など）ではテスト用フェード
+    # 本番/開発環境では実サイトのフィード、それ以外（テスト環境など）ではテスト用フィード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
     TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
-    RSS_FEED_LIST  = Rails.env.production? ?
-      [DOJO_NEWS_FEED] :
-      [TEST_NEWS_FEED]
+    RSS_FEED_LIST  = (Rails.env.test? || Rails.env.staging?) ?
+      [TEST_NEWS_FEED] :
+      [DOJO_NEWS_FEED]
 
-    news_items = RSS_FEED_LIST.flat_map do |feed|
+    fetched_items = RSS_FEED_LIST.flat_map do |feed|
       feed = RSS::Parser.parse(feed, false)
       feed.items.map { |item|
         {
@@ -28,44 +28,41 @@ namespace :news do
       }
     end
 
-    # 既存データ (YAML) を読み込み、ハッシュに変換
-    news_yaml_file = File.read Rails.root.join('db', 'news.yml')
-    existing_news  = YAML.safe_load(news_yaml_file).index_by { |item| item['url'] }
+    # 取得済みニュース (YAML) を読み込み、URL をキーとしたハッシュに変換
+    news_yaml_file  = File.read Rails.root.join('db', 'news.yml')
+    existing_items  = YAML.safe_load(news_yaml_file).index_by { it['url'] }
+    existing_max_id = existing_items.flat_map { |url, item| item['id'].to_i }.max || 0
 
-    # 新しいアイテムと既存アイテムを分離
-    truly_new_items = []
+    # 新規記事と既存記事を分離
+    created_items = []
     updated_items = []
 
-    news_items.each do |new_item|
-      if existing_news.key?(new_item['url'])
-        existing_item = existing_news[new_item['url']]
-        # タイトルまたは公開日が変わった場合のみ更新
-        if existing_item['title'] != new_item['title'] || existing_item['published_at'] != new_item['published_at']
-          updated_items << existing_item.merge(new_item)
+    fetched_items.each do |fetched_item|
+      existing_item    = existing_items[fetched_item['url']]
+
+      if existing_item
+        # タイトルまたは公開日が変わっていたら更新
+        if existing_item['title'] != fetched_item['title'] || existing_item['published_at'] != fetched_item['published_at']
+          updated_items << existing_item.merge(fetched_item)
         end
       else
-        truly_new_items << new_item
+        # 新規アイテムならそのまま追加
+        created_items << fetched_item
       end
     end
 
-    # 既存の最大IDを取得
-    max_existing_id = existing_news.map { |item| item['id'].to_i }.max || 0
-
     # 新しいアイテムのみに ID を割り当て（古い順）
-    truly_new_items_sorted = truly_new_items.sort_by { |item|
-      Time.parse(item['published_at'])
-    }
-
-    truly_new_items_sorted.each_with_index do |item, index|
-      item['id'] = max_existing_id + index + 1
+    created_items.sort_by! { Time.parse it['published_at'] }
+    created_items.each_with_index do |item, index|
+      item['id'] = existing_max_id + index + 1
     end
 
     # 更新されなかった既存アイテムを取得
-    updated_urls = updated_items.map { |item| item['url'] }
-    unchanged_items = existing_news.reject { |item| updated_urls.include?(item['url']) }
+    updated_urls    = updated_items.map { it['url'] }
+    unchanged_items = existing_items.values.reject { updated_urls.include?(it['url']) }
 
     # 全アイテムをマージ
-    all_items = unchanged_items + updated_items + truly_new_items_sorted
+    all_items = unchanged_items + updated_items + created_items
 
     # 日付降順ソート
     sorted_items = all_items.sort_by { |item|
@@ -83,18 +80,18 @@ namespace :news do
         }
       end
 
-      f.write({ 'news' => formatted_items }.to_yaml)
+      f.write(formatted_items.to_yaml)
     end
 
-    logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
+    logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{created_items.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
 
   desc 'db/news.yml からデータベースに upsert'
   task upsert: :environment do
-    file_logger = ActiveSupport::Logger.new('log/news.log')
     console     = ActiveSupport::Logger.new(STDOUT)
-    logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
+    logger_file = ActiveSupport::Logger.new('log/news.log')
+    logger      = ActiveSupport::BroadcastLogger.new(logger_file, console)
 
     logger.info "==== START news:upsert ===="
 
@@ -112,7 +109,7 @@ namespace :news do
           title:        attrs['title'],
           published_at: attrs['published_at']
         )
-        
+
         if is_new || news.changed?
           news.save!
           status = is_new ? 'new' : 'updated'
