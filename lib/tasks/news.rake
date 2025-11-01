@@ -37,7 +37,7 @@ def item_to_hash(item)
 end
 
 namespace :news do
-  desc 'RSS フィードから最新ニュースを取得し、db/news.yml に書き出す'
+  desc 'RSS フィードを取得し、db/news.yml に保存'
   task fetch: :environment do
     # ロガー設定（ファイル＋コンソール出力）
     file_logger = ActiveSupport::Logger.new('log/news.log')
@@ -73,7 +73,7 @@ namespace :news do
     # 新しいアイテムと既存アイテムを分離
     truly_new_items = []
     updated_items = []
-    
+
     new_items.each do |new_item|
       if existing_items_hash.key?(new_item['url'])
         existing_item = existing_items_hash[new_item['url']]
@@ -90,10 +90,10 @@ namespace :news do
     max_existing_id = existing_news.map { |item| item['id'].to_i }.max || 0
 
     # 新しいアイテムのみに ID を割り当て（古い順）
-    truly_new_items_sorted = truly_new_items.sort_by { |item| 
-      Time.parse(item['published_at']) 
+    truly_new_items_sorted = truly_new_items.sort_by { |item|
+      Time.parse(item['published_at'])
     }
-    
+
     truly_new_items_sorted.each_with_index do |item, index|
       item['id'] = max_existing_id + index + 1
     end
@@ -106,10 +106,11 @@ namespace :news do
     all_items = unchanged_items + updated_items + truly_new_items_sorted
 
     # 日付降順ソート
-    sorted_items = all_items.sort_by { |item| 
-      Time.parse(item['published_at']) 
+    sorted_items = all_items.sort_by { |item|
+      Time.parse(item['published_at'])
     }.reverse
 
+    # YAML ファイルに書き出し
     File.open('db/news.yml', 'w') do |f|
       formatted_items = sorted_items.map do |item|
         {
@@ -126,4 +127,45 @@ namespace :news do
     logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{truly_new_items_sorted.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
+
+  desc 'db/news.yml からデータベースに upsert'
+  task upsert: :environment do
+    file_logger = ActiveSupport::Logger.new('log/news.log')
+    console     = ActiveSupport::Logger.new(STDOUT)
+    logger      = ActiveSupport::BroadcastLogger.new(file_logger, console)
+
+    logger.info "==== START news:upsert ===="
+
+    yaml_path = Rails.root.join('db', 'news.yml')
+    raw       = YAML.safe_load(File.read(yaml_path), permitted_classes: [Time], aliases: true)
+
+    entries = raw['news'] || []
+    new_count = 0
+    updated_count = 0
+
+    News.transaction do
+      entries.each do |attrs|
+        news = News.find_or_initialize_by(url: attrs['url'])
+        is_new = news.new_record?
+
+        news.assign_attributes(
+          title:        attrs['title'],
+          published_at: attrs['published_at']
+        )
+        
+        if is_new || news.changed?
+          news.save!
+          status = is_new ? 'new' : 'updated'
+          new_count += 1 if is_new
+          updated_count += 1 unless is_new
+
+          logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"
+        end
+      end
+    end
+
+    logger.info "Upserted #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)."
+    logger.info "==== END news:upsert ===="
+  end
+
 end
