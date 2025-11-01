@@ -20,7 +20,8 @@ class Document
   end
 
   def initialize(filename)
-    @filename = filename
+    # ActiveStorage::Filename を使用してファイル名をサニタイズ
+    @filename = ActiveStorage::Filename.new(filename).sanitized
   end
 
   def path
@@ -56,7 +57,6 @@ class Document
   end
 
   def exist?
-    return false if path.include? "\u0000"
     Document.all.map(&:filename).include?(filename)
   end
 
