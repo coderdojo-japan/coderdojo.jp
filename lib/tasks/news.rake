@@ -12,7 +12,7 @@ namespace :news do
 
     # 既存の news.yml を読み込み
     news_yaml_path = Rails.root.join('db', 'news.yml')
-    existing_news  = YAML.safe_load(File.read(news_yaml_path))['news']
+    existing_news  = YAML.safe_load File.read(news_yaml_path)
 
     # テスト／ステージング環境ではサンプルファイル、本番は実サイトのフィード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
@@ -102,9 +102,7 @@ namespace :news do
     logger.info "==== START news:upsert ===="
 
     yaml_path = Rails.root.join('db', 'news.yml')
-    raw       = YAML.safe_load(File.read(yaml_path))
-
-    entries = raw['news'] || []
+    entries   = YAML.safe_load File.read(yaml_path)
     new_count = 0
     updated_count = 0
 
