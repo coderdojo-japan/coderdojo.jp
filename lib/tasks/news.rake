@@ -54,8 +54,8 @@ namespace :news do
 
     # 新しいアイテムのみに ID を割り当て（古い順）
     created_items.sort_by! { Time.parse it['published_at'] }
-    created_items.each_with_index do |item, index|
-      item['id'] = existing_max_id + index + 1
+    created_items.each.with_index(1) do |item, index|
+      item['id'] = existing_max_id + index
     end
 
     # URL をキーに、更新されなかった既存の YAML データを取得・保持
