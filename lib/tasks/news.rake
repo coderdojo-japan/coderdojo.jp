@@ -81,8 +81,9 @@ namespace :news do
       f.write(formatted_items.to_yaml)
     end
 
-    logger.info("✅ Wrote #{merged_items.size} items to #{NEWS_YAML_PATH} (#{created_items.size} new, #{updated_items.size} updated)")
-    logger.info('====  END news:fetch  ====')
+    logger.info "✅ Wrote #{merged_items.size} items to #{NEWS_YAML_PATH} (#{created_items.size} new, #{updated_items.size} updated)"
+    logger.info "====  END news:fetch  ===="
+    logger.info ""
   end
 
   desc "#{NEWS_YAML_PATH} からデータベースに upsert"
@@ -93,32 +94,33 @@ namespace :news do
 
     logger.info "==== START news:upsert ===="
 
-    entries   = YAML.safe_load File.read(NEWS_YAML_PATH)
-    new_count = 0
+    news_items = YAML.safe_load File.read(NEWS_YAML_PATH)
+    created_count = 0
     updated_count = 0
 
     News.transaction do
-      entries.each do |attrs|
-        news = News.find_or_initialize_by(url: attrs['url'])
-        is_new = news.new_record?
-
+      news_items.each do |item|
+        news = News.find_or_initialize_by(url: item['url'])
         news.assign_attributes(
-          title:        attrs['title'],
-          published_at: attrs['published_at']
+          title:        item['title'],
+          published_at: item['published_at']
         )
 
-        if is_new || news.changed?
+        is_new_record = news.new_record?
+        if is_new_record || news.changed?
           news.save!
-          status = is_new ? 'new' : 'updated'
-          new_count += 1 if is_new
-          updated_count += 1 unless is_new
+
+          status = is_new_record ? 'new' : 'updated'
+          created_count += 1 if     is_new_record
+          updated_count += 1 unless is_new_record
 
           logger.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"
         end
       end
     end
 
-    logger.info "Upserted #{new_count + updated_count} items (#{new_count} new, #{updated_count} updated)."
+    logger.info "Upserted #{created_count + updated_count} items (#{created_count} new, #{updated_count} updated)."
     logger.info "==== END news:upsert ===="
+    logger.info ""
   end
 end
