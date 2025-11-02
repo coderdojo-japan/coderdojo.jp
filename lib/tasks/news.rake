@@ -10,13 +10,14 @@ namespace :news do
 
     logger.info('==== START news:fetch ====')
 
-    # 本番/開発環境では実サイトのフィード、それ以外（テスト環境など）ではテスト用フィード
+    # 本番/開発環境では実フィード、それ以外（テスト環境など）ではテスト用フィード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
     TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
     RSS_FEED_LIST  = (Rails.env.test? || Rails.env.staging?) ?
       [TEST_NEWS_FEED] :
       [DOJO_NEWS_FEED]
 
+    # RSS のデータ構造を、News のデータ構造に変換
     fetched_items = RSS_FEED_LIST.flat_map do |feed|
       feed = RSS::Parser.parse(feed, false)
       feed.items.map { |item|
@@ -38,16 +39,14 @@ namespace :news do
     updated_items = []
 
     fetched_items.each do |fetched_item|
-      existing_item    = existing_items[fetched_item['url']]
+      existing_item = existing_items[fetched_item['url']]
 
-      if existing_item
-        # タイトルまたは公開日が変わっていたら更新
-        if existing_item['title'] != fetched_item['title'] || existing_item['published_at'] != fetched_item['published_at']
-          updated_items << existing_item.merge(fetched_item)
-        end
-      else
+      if existing_item.nil?
         # 新規アイテムならそのまま追加
         created_items << fetched_item
+      elsif existing_item['title'] != fetched_item['title'] || existing_item['published_at'] != fetched_item['published_at']
+        # タイトルまたは公開日が変わっていたら更新
+        updated_items << existing_item.merge(fetched_item)
       end
     end
 
@@ -57,21 +56,18 @@ namespace :news do
       item['id'] = existing_max_id + index + 1
     end
 
-    # 更新されなかった既存アイテムを取得
+    # URL をキーに、更新されなかった既存の YAML データを取得・保持
     updated_urls    = updated_items.map { it['url'] }
     unchanged_items = existing_items.values.reject { updated_urls.include?(it['url']) }
 
-    # 全アイテムをマージ
-    all_items = unchanged_items + updated_items + created_items
-
-    # 日付降順ソート
-    sorted_items = all_items.sort_by { |item|
-      Time.parse(item['published_at'])
+    # 新規・更新・既存の各アイテムをマージし、日付降順でソート
+    merged_items = (unchanged_items + updated_items + created_items).sort_by {
+      Time.parse(it['published_at'])
     }.reverse
 
     # YAML ファイルに書き出し
     File.open('db/news.yml', 'w') do |f|
-      formatted_items = sorted_items.map do |item|
+      formatted_items = merged_items.map do |item|
         {
           'id'           => item['id'],
           'url'          => item['url'],
@@ -83,7 +79,7 @@ namespace :news do
       f.write(formatted_items.to_yaml)
     end
 
-    logger.info("✅ Wrote #{sorted_items.size} items to db/news.yml (#{created_items.size} new, #{updated_items.size} updated)")
+    logger.info("✅ Wrote #{merged_items.size} items to db/news.yml (#{created_items.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
 
