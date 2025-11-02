@@ -1,11 +1,14 @@
 require 'rss'
 
+NEWS_YAML_PATH = 'db/news.yml'.freeze
+NEWS_LOG_PATH = 'log/news.log'.freeze
+
 namespace :news do
-  desc 'RSS フィードを取得し、db/news.yml に保存'
+  desc "RSS フィードを取得し、#{NEWS_YAML_PATH} に保存"
   task fetch: :environment do
     # ロガー設定（ファイル＋コンソール出力）
     console     = ActiveSupport::Logger.new(STDOUT)
-    logger_file = ActiveSupport::Logger.new('log/news.log')
+    logger_file = ActiveSupport::Logger.new(NEWS_LOG_PATH)
     logger      = ActiveSupport::BroadcastLogger.new(logger_file, console)
 
     logger.info('==== START news:fetch ====')
@@ -30,8 +33,7 @@ namespace :news do
     end
 
     # 取得済みニュース (YAML) を読み込み、URL をキーとしたハッシュに変換
-    news_yaml_file  = File.read Rails.root.join('db', 'news.yml')
-    existing_items  = YAML.safe_load(news_yaml_file).index_by { it['url'] }
+    existing_items  = YAML.safe_load(File.read NEWS_YAML_PATH).index_by { it['url'] }
     existing_max_id = existing_items.flat_map { |url, item| item['id'].to_i }.max || 0
 
     # 新規記事と既存記事を分離
@@ -66,7 +68,7 @@ namespace :news do
     }.reverse
 
     # YAML ファイルに書き出し
-    File.open('db/news.yml', 'w') do |f|
+    File.open(NEWS_YAML_PATH, 'w') do |f|
       formatted_items = merged_items.map do |item|
         {
           'id'           => item['id'],
@@ -79,20 +81,19 @@ namespace :news do
       f.write(formatted_items.to_yaml)
     end
 
-    logger.info("✅ Wrote #{merged_items.size} items to db/news.yml (#{created_items.size} new, #{updated_items.size} updated)")
+    logger.info("✅ Wrote #{merged_items.size} items to #{NEWS_YAML_PATH} (#{created_items.size} new, #{updated_items.size} updated)")
     logger.info('====  END news:fetch  ====')
   end
 
-  desc 'db/news.yml からデータベースに upsert'
+  desc "#{NEWS_YAML_PATH} からデータベースに upsert"
   task upsert: :environment do
     console     = ActiveSupport::Logger.new(STDOUT)
-    logger_file = ActiveSupport::Logger.new('log/news.log')
+    logger_file = ActiveSupport::Logger.new(NEWS_LOG_PATH)
     logger      = ActiveSupport::BroadcastLogger.new(logger_file, console)
 
     logger.info "==== START news:upsert ===="
 
-    yaml_path = Rails.root.join('db', 'news.yml')
-    entries   = YAML.safe_load File.read(yaml_path)
+    entries   = YAML.safe_load File.read(NEWS_YAML_PATH)
     new_count = 0
     updated_count = 0
 
