@@ -149,7 +149,15 @@
     <a href="#dojos">🗾</a>
     日本各地の道場
   </h2>
-  <br>
+
+  <div id="map" class="detail-introduction" style="margin: 30px auto 0px;">
+    <%= link_to(
+      lazy_image_tag('/img/dojomap_ss.webp', alt: '地図から Dojo を探せるアプリ「DojoMap」',
+		     title: '地図から探せるアプリ「DojoMap」'),
+      'https://map.coderdojo.jp/'
+    ) %>
+  </div>
+  
   <p style="margin: 0 30px 20px 30px;">
     近くの道場を探してみましょう！
     <br class="ignore-sp">
