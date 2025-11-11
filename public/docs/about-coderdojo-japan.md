@@ -63,8 +63,7 @@ CoderDojo は、主に7〜17歳を対象とした子どものためのプログ�
 <br>
 
 <div class="home-point-video">
-  <iframe width="560" height="315" class='lazyload' frameborder="0"
-   data-src="https://www.youtube.com/embed/HQhIjnrF6mQ?rel=0" allowfullscreen></iframe>
+  <iframe width="100%" frameborder="0" src="https://www.youtube.com/embed/HQhIjnrF6mQ?rel=0" allowfullscreen></iframe>
 </div>
 <center>
   <a href='https://www.youtube.com/watch?v=HQhIjnrF6mQ'>
@@ -142,8 +141,7 @@ info@coderdojo.jp
 <!--
 ### 10周年記念のメッセージ動画
 <div class="home-point-video">
-  <iframe width="560" height="315" class='lazyload' frameborder="0"
-   data-src="https://www.youtube.com/embed/SrakeakMlys?rel=0&start=488" allowfullscreen></iframe>
+  <iframe width="100%" frameborder="0" src="https://www.youtube.com/embed/SrakeakMlys?rel=0&start=488" allowfullscreen></iframe>
 </div>
 -->
 
@@ -165,8 +163,7 @@ info@coderdojo.jp
 <br>
 
 <div class="home-point-video">
-  <iframe width="560" height="315" class='lazyload' frameborder="0" 
-   data-src="https://www.youtube.com/embed/fcIVHHeKQLQ?rel=0" allowfullscreen></iframe>
+  <iframe width="100%" frameborder="0" src="https://www.youtube.com/embed/fcIVHHeKQLQ?rel=0" allowfullscreen></iframe>
 </div>
 <a href="/podcasts/19"><img class="lazyload" data-src="/img/DojoCast_019_shownote.png" /></a>
 
@@ -178,8 +175,7 @@ info@coderdojo.jp
 - **A.** はい、隔週の定例ミーティング (定例会) があります。原則オンラインで行われ、これまでのところ、平日の日中に時間を合わせて実施することが多いです。具体的な雰囲気は下記の YouTube 動画「<a href="/podcasts/26">公開定例会</a>」をご参照ください 👥
 
 <div class="home-point-video">
-  <iframe width="560" height="315" class='lazyload' frameborder="0" 
-   data-src="https://www.youtube.com/embed/xn5Y5OTvRZU?rel=0" allowfullscreen></iframe>
+  <iframe width="100%" frameborder="0" src="https://www.youtube.com/embed/xn5Y5OTvRZU?rel=0" allowfullscreen></iframe>
 </div>
 
 <!--![定例会の様子 - esa.io](/img/board-meetup-sample.png)-->

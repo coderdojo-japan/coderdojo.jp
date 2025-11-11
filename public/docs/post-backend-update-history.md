@@ -9,7 +9,7 @@
 ## 🗣 動画版
 
 <div class='home-point-video'>
-  <iframe class='lazyload' loading='lazy' src="https://www.youtube.com/embed/B96S3Z1zsq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe loading='lazy' src="https://www.youtube.com/embed/B96S3Z1zsq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br>
@@ -64,7 +64,7 @@
 次のデモ動画を見てもらうと分かりやすいのですが、Ruby/Rails を Cloud-Based CMS として活用できるようにするプロ向けの有料サービスです。
 
 <div class='home-point-video'>
-  <iframe class='lazyload' loading='lazy' src="https://www.youtube.com/embed/gsjt5ykGPgA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe loading='lazy' src="https://www.youtube.com/embed/gsjt5ykGPgA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 2016年にリリースされたばかりのサービスですが、豊富なプラグイン機能や開発者と直接話せるサポート体制もあり、順調に[採用事例も増えている](https://scrivito.com/customers)ようです。ただ、これだけ充実していることもあってか、[お値段もそれなり](https://scrivito.com/pricing)にします 💸

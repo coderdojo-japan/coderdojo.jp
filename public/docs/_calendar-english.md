@@ -24,9 +24,8 @@ In-person meeting is also welcome! If you are around Tokyo, feel free to drop by
 ## [<i class="fa-solid fa-yin-yang"></i>️](#about) CoderDojo one-minute video {#about}
 
 <div class="home-point-video">
-  <iframe class='lazyload' frameborder="0"
-   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   data-src="https://www.youtube.com/embed/GjdRWcdw-N4?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e&cc_load_policy=1&cc_lang_pref=en&rel=0" allowfullscreen></iframe>
+  <iframe frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   src="https://www.youtube.com/embed/GjdRWcdw-N4?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e&cc_load_policy=1&cc_lang_pref=en&rel=0" allowfullscreen></iframe>
 </div>
 
 <div class="btn-cover" style="margin-top: 40px;">
