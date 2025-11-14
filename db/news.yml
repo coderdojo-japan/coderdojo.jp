@@ -3,6 +3,10 @@
   url: https://news.coderdojo.jp/2025/11/02/dojoletter-vol-90-2025%e5%b9%b409%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.90 2025年09月号
   published_at: Sun, 02 Nov 2025 13:10:18 +0000
+- id: 25
+  url: https://prtimes.jp/main/html/rd/p/000000016.000038935.html
+  title: CoderDojo のオープンデータが、デジタル庁が推進する地域の Well-Being 指標のデジタル生活指数に採用
+  published_at: '2025-10-24T20:00:07+09:00'
 - id: 13
   url: https://news.coderdojo.jp/2025/10/04/dojoletter-vol-89-2025%e5%b9%b408%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.89 2025年08月号
@@ -11,6 +15,11 @@
   url: https://news.coderdojo.jp/2025/09/10/dojoletter-vol-88-2025%e5%b9%b407%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.88 2025年07月号
   published_at: Wed, 10 Sep 2025 03:45:56 +0000
+- id: 24
+  url: https://prtimes.jp/main/html/rd/p/000000017.000038935.html
+  title: 日本各地に 200 以上！全国の CoderDojo 関係者が集まるカンファレンス「DojoCon Japan 2025」が、10月25日 (土曜)
+    に福岡県久留米市で開催
+  published_at: '2025-09-02T17:30:01+09:00'
 - id: 11
   url: https://news.coderdojo.jp/2025/08/12/dojoletter-vol-87-2025%e5%b9%b406%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.87 2025年06月号
@@ -55,3 +64,39 @@
   url: https://news.coderdojo.jp/2025/01/14/dojoletter-vol-79-2024%e5%b9%b411%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.79 2024年11月号
   published_at: Tue, 14 Jan 2025 03:30:45 +0000
+- id: 23
+  url: https://prtimes.jp/main/html/rd/p/000000014.000038935.html
+  title: Box Japan からの支援を受け、全国の CoderDojo へ 128 台のノート PC 寄贈
+  published_at: '2024-12-25T20:00:31+09:00'
+- id: 22
+  url: https://prtimes.jp/main/html/rd/p/000000012.000038935.html
+  title: 国際的な非営利活動「CoderDojo」の共同発起人が来日、高田馬場でトークイベント開催
+  published_at: '2024-02-29T15:00:02+09:00'
+- id: 21
+  url: https://prtimes.jp/main/html/rd/p/000000011.000038935.html
+  title: TFabWorks と連携し、全国の CoderDojo を対象とした Scratch 用コントローラー「Takoratch」の無償レンタルプログラムをスタート
+  published_at: '2023-08-30T12:10:01+09:00'
+- id: 20
+  url: https://prtimes.jp/main/html/rd/p/000000010.000038935.html
+  title: 国内の CoderDojo 関係者が集まる「DojoCon Japan 2023 “Be Cool”」、2023年8月27日（日曜）に奈良で開催
+  published_at: '2023-06-22T10:00:03+09:00'
+- id: 19
+  url: https://prtimes.jp/main/html/rd/p/000000008.000038935.html
+  title: Geolonia の支援を得て、全国の CoderDojo が地図から探せる「DojoMap」を開発
+  published_at: '2022-12-01T13:59:22+09:00'
+- id: 18
+  url: https://prtimes.jp/main/html/rd/p/000000007.000038935.html
+  title: ポケットサイズの教育用コンピューター「micro:bit」、CoderDojo に 1500 台寄贈
+  published_at: '2022-05-16T17:00:03+09:00'
+- id: 17
+  url: https://prtimes.jp/main/html/rd/p/000000005.000038935.html
+  title: 発売3周年のロボットトイ「toio」、CoderDojo 向けレンタルプログラム開始
+  published_at: '2022-03-18T10:00:20+09:00'
+- id: 16
+  url: https://prtimes.jp/main/html/rd/p/000000003.000038935.html
+  title: プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に。
+  published_at: '2021-04-23T14:00:05+09:00'
+- id: 15
+  url: https://prtimes.jp/main/html/rd/p/000000002.000038935.html
+  title: TFabWorksと連携し、micro:bitなどの無償レンタルプログラムを全国のCoderDojo向けに提供
+  published_at: '2020-11-26T14:00:06+09:00'

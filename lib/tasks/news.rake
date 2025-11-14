@@ -25,10 +25,20 @@ namespace :news do
     fetched_items = RSS_FEED_LIST.flat_map do |feed|
       feed = RSS::Parser.parse(feed, false)
       feed.items.map { |item|
+        # RSS 1.0 (RDF) と RSS 2.0 の両方に対応
+        # RSS 2.0: pubDate, RSS 1.0 (RDF): dc:date
+        published_at = if item.respond_to?(:pubDate)
+                         item.pubDate.to_s
+                       elsif item.respond_to?(:dc_date)
+                         item.dc_date.to_s
+                       else
+                         Time.current.to_s
+                       end
+        
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => item.pubDate.to_s
+          'published_at' => published_at
         }
       }
     end
