@@ -43,7 +43,7 @@ namespace :news do
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => published_at.iso8601  # ISO 8601 形式に統一
+          'published_at' => published_at.in_time_zone('Asia/Tokyo').iso8601  # JST に統一
         }
       }
     end
@@ -113,12 +113,9 @@ namespace :news do
 
     # 2. WordPress REST API からすべての投稿を取得
     dojo_news_items = []
-    page = 1
-    per_page = 100
-
-    loop do
+    loop.with_index(1) do |_, index|
       uri = URI("https://news.coderdojo.jp/wp-json/wp/v2/posts")
-      uri.query = URI.encode_www_form(page: page, per_page: per_page, status: 'publish')
+      uri.query = URI.encode_www_form(page: index, per_page: 100, status: 'publish')
 
       response = Net::HTTP.get_response(uri)
       break unless response.is_a?(Net::HTTPSuccess)
@@ -128,9 +125,9 @@ namespace :news do
 
       posts.each do |post|
         dojo_news_items << {
-          'url' => post['link'],
-          'title' => post['title']['rendered'],
-          'published_at' => Time.parse(post['date_gmt'] + ' UTC').iso8601
+          'url'          => post['link'],
+          'title'        => post['title']['rendered'],
+          'published_at' => Time.parse(post['date_gmt'] + ' UTC').in_time_zone('Asia/Tokyo').iso8601
         }
       end
 
