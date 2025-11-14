@@ -14,11 +14,12 @@ namespace :news do
     logger.info('==== START news:fetch ====')
 
     # 本番/開発環境では実フィード、それ以外（テスト環境など）ではテスト用フィード
-    DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
-    TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
-    RSS_FEED_LIST  = (Rails.env.test? || Rails.env.staging?) ?
+    DOJO_NEWS_FEED    = 'https://news.coderdojo.jp/feed/'
+    PRTIMES_NEWS_FEED = 'https://prtimes.jp/companyrdf.php?company_id=38935'
+    TEST_NEWS_FEED    = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
+    RSS_FEED_LIST     = (Rails.env.test? || Rails.env.staging?) ?
       [TEST_NEWS_FEED] :
-      [DOJO_NEWS_FEED]
+      [DOJO_NEWS_FEED, PRTIMES_NEWS_FEED]
 
     # RSS のデータ構造を、News のデータ構造に変換
     fetched_items = RSS_FEED_LIST.flat_map do |feed|
