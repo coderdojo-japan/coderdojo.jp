@@ -13,6 +13,34 @@ TASK_LOGGER    = ActiveSupport::BroadcastLogger.new(
                    ActiveSupport::Logger.new(STDOUT)
                  )
 
+# DojoNews (WordPress) REST APIから全投稿を取得するメソッド
+def fetch_dojo_news_posts(api_endpoint)
+  items = []
+  
+  loop.with_index(1) do |_, page|
+    uri = URI(api_endpoint)
+    uri.query = URI.encode_www_form(page: page, per_page: 100, status: 'publish')
+    
+    response = Net::HTTP.get_response(uri)
+    break unless response.is_a?(Net::HTTPSuccess)
+    
+    posts = JSON.parse(response.body)
+    break if posts.empty?
+    
+    posts.each do |post|
+      items << {
+        'url'          => post['link'],
+        'title'        => post['title']['rendered'],
+        'published_at' => Time.parse(post['date_gmt'] + ' UTC').in_time_zone('Asia/Tokyo').iso8601
+      }
+    end
+    
+    TASK_LOGGER.info("📄 WordPress API: ページ #{page} から #{posts.size} 件取得")
+  end
+  
+  items
+end
+
 namespace :news do
   desc "RSS フィードを取得し、#{NEWS_YAML_PATH} に保存"
   task fetch: :environment do
@@ -112,27 +140,7 @@ namespace :news do
     TASK_LOGGER.info("📄 news.yml をリセットしました")
 
     # 2. WordPress REST API からすべての投稿を取得
-    dojo_news_items = []
-    loop.with_index(1) do |_, index|
-      uri       = URI("https://news.coderdojo.jp/wp-json/wp/v2/posts")
-      uri.query = URI.encode_www_form(page: index, per_page: 100, status: 'publish')
-
-      response = Net::HTTP.get_response(uri)
-      break unless response.is_a?(Net::HTTPSuccess)
-
-      posts = JSON.parse(response.body)
-      break if posts.empty?
-
-      posts.each do |post|
-        dojo_news_items << {
-          'url'          => post['link'],
-          'title'        => post['title']['rendered'],
-          'published_at' => Time.parse(post['date_gmt'] + ' UTC').in_time_zone('Asia/Tokyo').iso8601
-        }
-      end
-
-      TASK_LOGGER.info("📄 WordPress API: ページ #{index} から #{posts.size} 件取得")
-    end
+    dojo_news_items = fetch_dojo_news_posts("https://news.coderdojo.jp/wp-json/wp/v2/posts")
     TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
 
     # 3. PR TIMES RSS フィードからすべてのプレスリリースを取得
