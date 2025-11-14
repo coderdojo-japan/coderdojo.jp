@@ -114,7 +114,7 @@ namespace :news do
     # 2. WordPress REST API からすべての投稿を取得
     dojo_news_items = []
     loop.with_index(1) do |_, index|
-      uri = URI("https://news.coderdojo.jp/wp-json/wp/v2/posts")
+      uri       = URI("https://news.coderdojo.jp/wp-json/wp/v2/posts")
       uri.query = URI.encode_www_form(page: index, per_page: 100, status: 'publish')
 
       response = Net::HTTP.get_response(uri)
@@ -131,14 +131,13 @@ namespace :news do
         }
       end
 
-      TASK_LOGGER.info("📄 WordPress API: ページ #{page} から #{posts.size} 件取得")
-      page += 1
+      TASK_LOGGER.info("📄 WordPress API: ページ #{index} から #{posts.size} 件取得")
     end
     TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
 
     # 3. PR TIMES RSS フィードからすべてのプレスリリースを取得
     prtimes_items = []
-    feed = RSS::Parser.parse('https://prtimes.jp/companyrdf.php?company_id=38935', false)
+    feed = RSS::Parser.parse(PR_TIMES_FEED, false)
     feed.items.each do |item|
       published_at = if item.respond_to?(:dc_date) && item.dc_date
                        item.dc_date.iso8601
@@ -147,12 +146,11 @@ namespace :news do
                      end
 
       prtimes_items << {
-        'url' => item.link,
-        'title' => item.title,
+        'url'          => item.link,
+        'title'        => item.title,
         'published_at' => published_at
       }
     end
-    TASK_LOGGER.info("📢 PR TIMES RSS: #{prtimes_items.size} 件取得")
     TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
 
     # 4. すべてのアイテムをマージし、ID を付与
