@@ -15,19 +15,32 @@ namespace :news do
 
     # 本番/開発環境では実フィード、それ以外（テスト環境など）ではテスト用フィード
     DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'
+    PR_TIMES_FEED  = 'https://prtimes.jp/companyrdf.php?company_id=38935'
     TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss')
     RSS_FEED_LIST  = (Rails.env.test? || Rails.env.staging?) ?
       [TEST_NEWS_FEED] :
-      [DOJO_NEWS_FEED]
+      [DOJO_NEWS_FEED, PR_TIMES_FEED]
 
     # RSS のデータ構造を、News のデータ構造に変換
     fetched_items = RSS_FEED_LIST.flat_map do |feed|
       feed = RSS::Parser.parse(feed, false)
       feed.items.map { |item|
+        # RSS 1.0 (RDF) と RSS 2.0 の両方に対応
+        # RSS 2.0: pubDate, RSS 1.0 (RDF): dc:date
+        # - PR TIMES: RSS 1.0 (RDF) 形式 - <rdf:RDF> タグ、dc:date フィールドを使用
+        # - CoderDojo News: RSS 2.0 形式 - <rss version="2.0"> タグ、pubDate フィールドを使用
+        published_at = if item.respond_to?(:pubDate) && item.pubDate
+                         item.pubDate
+                       elsif item.respond_to?(:dc_date) && item.dc_date
+                         item.dc_date
+                       else
+                         raise "Unexpected RSS format: neither pubDate nor dc:date found for item: #{item.link}"
+                       end
+
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => item.pubDate.to_s
+          'published_at' => published_at.iso8601  # ISO 8601 形式に統一
         }
       }
     end
