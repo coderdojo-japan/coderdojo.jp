@@ -27,18 +27,18 @@ namespace :news do
       feed.items.map { |item|
         # RSS 1.0 (RDF) と RSS 2.0 の両方に対応
         # RSS 2.0: pubDate, RSS 1.0 (RDF): dc:date
-        published_at = if item.respond_to?(:pubDate)
-                         item.pubDate.to_s
-                       elsif item.respond_to?(:dc_date)
-                         item.dc_date.to_s
+        published_at = if item.respond_to?(:pubDate) && item.pubDate
+                         item.pubDate
+                       elsif item.respond_to?(:dc_date) && item.dc_date
+                         item.dc_date
                        else
-                         Time.current.to_s
+                         raise "Unexpected RSS format: neither pubDate nor dc:date found for item: #{item.link}"
                        end
         
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => published_at
+          'published_at' => published_at.iso8601  # ISO 8601 形式に統一
         }
       }
     end
