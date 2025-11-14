@@ -14,7 +14,8 @@ TASK_LOGGER    = ActiveSupport::BroadcastLogger.new(
                    ActiveSupport::Logger.new(STDOUT)
                  )
 
-# DojoNews (WordPress) REST APIから全投稿を取得するメソッド
+# DojoNews (WordPress) REST API から全投稿を取得するメソッド
+# https://news.coderdojo.jp/wp-json/wp/v2/posts (JSON)
 def fetch_dojo_news_posts(api_endpoint)
   items = []
 
@@ -72,22 +73,13 @@ namespace :news do
 
     # 2. 環境に応じたデータソースから取得
     if Rails.env.test? || Rails.env.staging?
-      # テスト環境: サンプルRSSのみ
+      # テスト環境: サンプルRSS（RSS 2.0、pubDateのみ）
       TASK_LOGGER.info("🧪 テスト環境: サンプルRSSから取得")
-      feed = RSS::Parser.parse(TEST_NEWS_FEED, false)
-      items = feed.items.map { |item|
-        published_at = if item.respond_to?(:pubDate) && item.pubDate
-                         item.pubDate
-                       elsif item.respond_to?(:dc_date) && item.dc_date
-                         item.dc_date
-                       else
-                         raise "Unexpected RSS format: neither pubDate nor dc:date found for item: #{item.link}"
-                       end
-
+      items = RSS::Parser.parse(TEST_NEWS_FEED, false).items.map { |item|
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => published_at.in_time_zone('Asia/Tokyo').iso8601
+          'published_at' => item.pubDate.in_time_zone('Asia/Tokyo').iso8601
         }
       }
     else
@@ -101,16 +93,12 @@ namespace :news do
       items = dojo_news_items + prtimes_items
     end
 
-    # 3. 古い順でソートしてID付与（1から開始）
-    sorted_items = items.sort_by { |item| Time.parse(item['published_at']) }
-    sorted_items.each.with_index(1) do |item, index|
-      item['id'] = index
-    end
+    # 3. 古い順にソートして ID を付与（ISO 8601 なら文字列のままソート可能）
+    sorted_items = items.sort_by    { |item| item['published_at'] }
+    sorted_items.each.with_index(1) { |item, index| item['id'] = index }
 
-    # 4. 最新順にソート
-    final_items = sorted_items.sort_by { |item| Time.parse(item['published_at']) }.reverse
-
-    # 5. YAML ファイルに書き出し
+    # 4. 最新順にソートして YAML ファイルに書き出す
+    final_items = sorted_items.sort_by { |item| item['published_at'] }.reverse
     File.open(NEWS_YAML_PATH, 'w') do |f|
       formatted_items = final_items.map do |item|
         {
