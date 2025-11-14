@@ -2,9 +2,10 @@ require 'rss'
 require 'net/http'
 require 'json'
 
-PR_TIMES_FEED  = 'https://prtimes.jp/companyrdf.php?company_id=38935'.freeze
-DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'.freeze
 TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss').freeze
+DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'.freeze
+DOJO_NEWS_JSON = 'https://news.coderdojo.jp/wp-json/wp/v2/posts'.freeze
+PR_TIMES_FEED  = 'https://prtimes.jp/companyrdf.php?company_id=38935'.freeze
 
 NEWS_YAML_PATH = 'db/news.yml'.freeze
 NEWS_LOGS_PATH = 'log/news.log'.freeze
@@ -16,17 +17,17 @@ TASK_LOGGER    = ActiveSupport::BroadcastLogger.new(
 # DojoNews (WordPress) REST APIから全投稿を取得するメソッド
 def fetch_dojo_news_posts(api_endpoint)
   items = []
-  
+
   loop.with_index(1) do |_, page|
     uri = URI(api_endpoint)
     uri.query = URI.encode_www_form(page: page, per_page: 100, status: 'publish')
-    
+
     response = Net::HTTP.get_response(uri)
     break unless response.is_a?(Net::HTTPSuccess)
-    
+
     posts = JSON.parse(response.body)
     break if posts.empty?
-    
+
     posts.each do |post|
       items << {
         'url'          => post['link'],
@@ -34,11 +35,29 @@ def fetch_dojo_news_posts(api_endpoint)
         'published_at' => Time.parse(post['date_gmt'] + ' UTC').in_time_zone('Asia/Tokyo').iso8601
       }
     end
-    
+
     TASK_LOGGER.info("📄 WordPress API: ページ #{page} から #{posts.size} 件取得")
   end
-  
+
   items
+end
+
+# PR TIMES RSS フィードからすべてのプレスリリースを取得するメソッド
+def fetch_prtimes_posts(rss_feed_url)
+  feed = RSS::Parser.parse(rss_feed_url, false)
+  feed.items.map do |item|
+    published_at = if item.respond_to?(:dc_date) && item.dc_date
+                     item.dc_date.in_time_zone('Asia/Tokyo').iso8601
+                   else
+                     raise "PR TIMES feed: dc:date not found for item: #{item.link}"
+                   end
+
+    {
+      'url'          => item.link,
+      'title'        => item.title,
+      'published_at' => published_at
+    }
+  end
 end
 
 namespace :news do
@@ -140,25 +159,11 @@ namespace :news do
     TASK_LOGGER.info("📄 news.yml をリセットしました")
 
     # 2. WordPress REST API からすべての投稿を取得
-    dojo_news_items = fetch_dojo_news_posts("https://news.coderdojo.jp/wp-json/wp/v2/posts")
+    dojo_news_items = fetch_dojo_news_posts(DOJO_NEWS_JSON)
     TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
 
     # 3. PR TIMES RSS フィードからすべてのプレスリリースを取得
-    prtimes_items = []
-    feed = RSS::Parser.parse(PR_TIMES_FEED, false)
-    feed.items.each do |item|
-      published_at = if item.respond_to?(:dc_date) && item.dc_date
-                       item.dc_date.iso8601
-                     else
-                       raise "PR TIMES feed: dc:date not found for item: #{item.link}"
-                     end
-
-      prtimes_items << {
-        'url'          => item.link,
-        'title'        => item.title,
-        'published_at' => published_at
-      }
-    end
+    prtimes_items = fetch_prtimes_posts(PR_TIMES_FEED)
     TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
 
     # 4. すべてのアイテムをマージし、ID を付与
