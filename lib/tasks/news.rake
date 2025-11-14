@@ -94,25 +94,13 @@ namespace :news do
     end
 
     # 3. 古い順にソートして ID を付与（ISO 8601 なら文字列のままソート可能）
-    sorted_items = items.sort_by    { |item| item['published_at'] }
-    sorted_items.each.with_index(1) { |item, index| item['id'] = index }
+    items_by_oldest = items.sort_by    { |item| item['published_at'] }
+    items_by_oldest.each.with_index(1) { |item, index| item['id'] = index }
 
     # 4. 最新順にソートして YAML ファイルに書き出す
-    final_items = sorted_items.sort_by { |item| item['published_at'] }.reverse
-    File.open(NEWS_YAML_PATH, 'w') do |f|
-      formatted_items = final_items.map do |item|
-        {
-          'id'           => item['id'],
-          'url'          => item['url'],
-          'title'        => item['title'],
-          'published_at' => item['published_at']
-        }
-      end
+    File.open(NEWS_YAML_PATH, 'w') { it.write(items_by_oldest.reverse.to_yaml) }
 
-      f.write(formatted_items.to_yaml)
-    end
-
-    TASK_LOGGER.info("✅ 合計 #{final_items.size} 件を news.yml に保存しました")
+    TASK_LOGGER.info("✅ 合計 #{items_by_oldest.size} 件を news.yml に保存しました")
     TASK_LOGGER.info("📌 次は 'bundle exec rails news:upsert' でデータベースに反映してください")
     TASK_LOGGER.info("====  END news:fetch  ====")
     TASK_LOGGER.info("")
