@@ -61,24 +61,21 @@ def fetch_prtimes_posts(rss_feed_url)
 end
 
 namespace :news do
-  desc "RSS フィードを取得し、#{NEWS_YAML_PATH} に保存"
+  desc "ニュースフィードを取得し、#{NEWS_YAML_PATH} を再構築（冪等）"
   task fetch: :environment do
     # ロガー設定（ファイル＋コンソール出力）
     TASK_LOGGER.info('==== START news:fetch ====')
 
-    # 本番/開発環境では実フィード、それ以外（テスト環境など）ではテスト用フィード
-    RSS_FEED_LIST  = (Rails.env.test? || Rails.env.staging?) ?
-      [TEST_NEWS_FEED] :
-      [DOJO_NEWS_FEED, PR_TIMES_FEED]
+    # 1. news.yml を空にする
+    File.write(NEWS_YAML_PATH, [].to_yaml)
+    TASK_LOGGER.info("📄 news.yml をリセットしました")
 
-    # RSS のデータ構造を、News のデータ構造に変換
-    fetched_items = RSS_FEED_LIST.flat_map do |feed|
-      feed = RSS::Parser.parse(feed, false)
-      feed.items.map { |item|
-        # RSS 1.0 (RDF) と RSS 2.0 の両方に対応
-        # RSS 2.0: pubDate, RSS 1.0 (RDF): dc:date
-        # - PR TIMES: RSS 1.0 (RDF) 形式 - <rdf:RDF> タグ、dc:date フィールドを使用
-        # - CoderDojo News: RSS 2.0 形式 - <rss version="2.0"> タグ、pubDate フィールドを使用
+    # 2. 環境に応じたデータソースから取得
+    if Rails.env.test? || Rails.env.staging?
+      # テスト環境: サンプルRSSのみ
+      TASK_LOGGER.info("🧪 テスト環境: サンプルRSSから取得")
+      feed = RSS::Parser.parse(TEST_NEWS_FEED, false)
+      items = feed.items.map { |item|
         published_at = if item.respond_to?(:pubDate) && item.pubDate
                          item.pubDate
                        elsif item.respond_to?(:dc_date) && item.dc_date
@@ -90,100 +87,32 @@ namespace :news do
         {
           'url'          => item.link,
           'title'        => item.title,
-          'published_at' => published_at.in_time_zone('Asia/Tokyo').iso8601  # JST に統一
+          'published_at' => published_at.in_time_zone('Asia/Tokyo').iso8601
         }
       }
+    else
+      # 本番環境: WordPress REST API + PR TIMES RSS
+      dojo_news_items = fetch_dojo_news_posts(DOJO_NEWS_JSON)
+      TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
+
+      prtimes_items = fetch_prtimes_posts(PR_TIMES_FEED)
+      TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
+
+      items = dojo_news_items + prtimes_items
     end
 
-    # 取得済みニュース (YAML) を読み込み、URL をキーとしたハッシュに変換
-    existing_items  = YAML.safe_load(File.read NEWS_YAML_PATH).index_by { it['url'] }
-    existing_max_id = existing_items.flat_map { |url, item| item['id'].to_i }.max || 0
-
-    # 新規記事と既存記事を分離
-    created_items = []
-    updated_items = []
-
-    fetched_items.each do |fetched_item|
-      existing_item = existing_items[fetched_item['url']]
-
-      if existing_item.nil?
-        # 新規アイテムならそのまま追加
-        created_items << fetched_item
-      elsif existing_item['title'] != fetched_item['title'] || existing_item['published_at'] != fetched_item['published_at']
-        # タイトルまたは公開日が変わっていたら更新
-        updated_items << existing_item.merge(fetched_item)
-      end
-    end
-
-    # 新しいアイテムのみに ID を割り当て（古い順）
-    created_items.sort_by! { Time.parse it['published_at'] }
-    created_items.each.with_index(1) do |item, index|
-      item['id'] = existing_max_id + index
-    end
-
-    # URL をキーに、更新されなかった既存の YAML データを取得・保持
-    updated_urls    = updated_items.map { it['url'] }
-    unchanged_items = existing_items.values.reject { updated_urls.include?(it['url']) }
-
-    # 新規・更新・既存の各アイテムをマージし、日付降順でソート
-    merged_items = (unchanged_items + updated_items + created_items).sort_by {
-      Time.parse(it['published_at'])
-    }.reverse
-
-    # YAML ファイルに書き出し
-    File.open(NEWS_YAML_PATH, 'w') do |f|
-      formatted_items = merged_items.map do |item|
-        {
-          'id'           => item['id'],
-          'url'          => item['url'],
-          'title'        => item['title'],
-          'published_at' => item['published_at']
-        }
-      end
-
-      f.write(formatted_items.to_yaml)
-    end
-
-    TASK_LOGGER.info "✅ Wrote #{merged_items.size} items to #{NEWS_YAML_PATH} (#{created_items.size} new, #{updated_items.size} updated)"
-    TASK_LOGGER.info "====  END news:fetch  ===="
-    TASK_LOGGER.info ""
-  end
-
-  desc "news.yml をリセットし、すべてのフィードから全記事を取得"
-  task 'fetch:reset' => :environment do
-    # ロガー設定（ファイル＋コンソール出力）
-    TASK_LOGGER.info('==== START news:fetch:reset ====')
-
-    # 1. news.yml を空にする
-    File.write(NEWS_YAML_PATH, [].to_yaml)
-    TASK_LOGGER.info("📄 news.yml をリセットしました")
-
-    # 2. WordPress REST API からすべての投稿を取得
-    dojo_news_items = fetch_dojo_news_posts(DOJO_NEWS_JSON)
-    TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
-
-    # 3. PR TIMES RSS フィードからすべてのプレスリリースを取得
-    prtimes_items = fetch_prtimes_posts(PR_TIMES_FEED)
-    TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
-
-    # 4. すべてのアイテムをマージし、ID を付与
-    all_items = (dojo_news_items + prtimes_items).sort_by { |item|
-      Time.parse(item['published_at'])
-    }
-
-    # ID を付与（古い順で1から）
-    all_items.each.with_index(1) do |item, index|
+    # 3. 古い順でソートしてID付与（1から開始）
+    sorted_items = items.sort_by { |item| Time.parse(item['published_at']) }
+    sorted_items.each.with_index(1) do |item, index|
       item['id'] = index
     end
 
-    # 最新順にソート
-    sorted_items = all_items.sort_by { |item|
-      Time.parse(item['published_at'])
-    }.reverse
+    # 4. 最新順にソート
+    final_items = sorted_items.sort_by { |item| Time.parse(item['published_at']) }.reverse
 
     # 5. YAML ファイルに書き出し
     File.open(NEWS_YAML_PATH, 'w') do |f|
-      formatted_items = sorted_items.map do |item|
+      formatted_items = final_items.map do |item|
         {
           'id'           => item['id'],
           'url'          => item['url'],
@@ -195,9 +124,10 @@ namespace :news do
       f.write(formatted_items.to_yaml)
     end
 
-    TASK_LOGGER.info("✅ 合計 #{sorted_items.size} 件を news.yml に保存しました")
+    TASK_LOGGER.info("✅ 合計 #{final_items.size} 件を news.yml に保存しました")
     TASK_LOGGER.info("📌 次は 'bundle exec rails news:upsert' でデータベースに反映してください")
-    TASK_LOGGER.info("====  END news:fetch:reset  ====")
+    TASK_LOGGER.info("====  END news:fetch  ====")
+    TASK_LOGGER.info("")
   end
 
 
