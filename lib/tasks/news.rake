@@ -97,8 +97,17 @@ namespace :news do
     items_by_oldest = items.sort_by    { |item| item['published_at'] }
     items_by_oldest.each.with_index(1) { |item, index| item['id'] = index }
 
-    # 4. 最新順にソートして YAML ファイルに書き出す
-    File.open(NEWS_YAML_PATH, 'w') { it.write(items_by_oldest.reverse.to_yaml) }
+    # 4. 最新順にソートして YAML ファイルに書き出す（キー順序: id, url, title, published_at）
+    File.open(NEWS_YAML_PATH, 'w') do |file|
+      file.write(items_by_oldest.reverse.map do |item|
+        {
+          'id'           => item['id'],
+          'url'          => item['url'],
+          'title'        => item['title'],
+          'published_at' => item['published_at']
+        }
+      end.to_yaml)
+    end
 
     TASK_LOGGER.info("✅ 合計 #{items_by_oldest.size} 件を news.yml に保存しました")
     TASK_LOGGER.info("📌 次は 'bundle exec rails news:upsert' でデータベースに反映してください")
