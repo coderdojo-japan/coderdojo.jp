@@ -24,7 +24,7 @@ CoderDojo は、主に7〜17歳を対象とした子どものためのプログ�
   <center>写真: 日本で初めての CoderDojo 開催の様子</center>
 </div>
 
-CoderDojoの普及に伴い、個人だけでなく法人とも連携しやすい状況にしていくため、2016年に公式日本法人「[CoderDojo Japan](/about-coderdojo-japan)」が設立されました。公式日本法人では、[{{ NUM_OF_PARTNERSHIPS }}社以上のパートナー法人](/#partners)と連携し、全国のCoderDojoに対して[様々な支援プログラム](/kata#support)を提供しています。
+CoderDojoの普及に伴い、個人だけでなく法人とも連携しやすい状況にしていくため、2016年に公式日本法人「[CoderDojo Japan](/about)」が設立されました。公式日本法人では、[{{ NUM_OF_PARTNERSHIPS }}社以上のパートナー法人](/#partners)と連携し、全国のCoderDojoに対して[様々な支援プログラム](/kata#support)を提供しています。
 
 <div>
   <a href='https://news.coderdojo.jp/2021/04/23/programming-with-pokemon/'>
@@ -147,7 +147,7 @@ info@coderdojo.jp
 
 ### Q. CoderDojo Japan はパートナー法人に対してどんなサポートが可能ですか？ {#support}
 
-[一般社団法人 CoderDojo Japan](/about-coderdojo-japan) では、以下 `A:` のご支援の対価として、`B:` や `C:` に記載するサポートが可能です。(※)
+[一般社団法人 CoderDojo Japan](/about) では、以下 `A:` のご支援の対価として、`B:` や `C:` に記載するサポートが可能です。(※)
 
 <blockquote>
   <small>※

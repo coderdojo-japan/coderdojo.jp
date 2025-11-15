@@ -1,0 +1,66 @@
+name: Daily Workflow
+
+on:
+  schedule:
+    # 毎朝 9:00 JST
+    - cron: '0 0 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch:
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    outputs:
+      FOUND_NEWS: ${{ steps.check_news.outputs.FOUND_NEWS }}
+
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+
+    - name: 💎 Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+
+    - name: 📰 Run news:fetch task
+      run: bin/rails news:fetch
+
+    - name: 🆙 Commit updated news.yml
+      id: check_news
+      run: |
+        git config user.name  "Yohei Yasukawa"
+        git config user.email "yohei@yasslab.jp"
+        git checkout main
+        git add db/news.yml
+        if ! git diff --cached --quiet; then
+          git commit -m '🤖 Upsert db/news.yml'
+          git push origin main
+          echo "🆕 Found news in db/news.yml"
+          echo "FOUND_NEWS=true"  >> $GITHUB_OUTPUT
+        else
+          echo "✅ No news in db/news.yml"
+          echo "FOUND_NEWS=false" >> $GITHUB_OUTPUT
+        fi
+
+  deploy:
+    needs: daily
+    if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
+    # TODO: ubuntu-latest image needs to install heroku CLI to deploy.
+    # https://github.com/AkhileshNS/heroku-deploy/issues/188
+    runs-on: ubuntu-22.04
+    
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: main
+    
+    - name: 🚀 Deploy to Heroku
+      uses: akhileshns/heroku-deploy@v3.14.15
+      with:
+        heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
+        heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+        heroku_email:    ${{ secrets.HEROKU_EMAIL    }}

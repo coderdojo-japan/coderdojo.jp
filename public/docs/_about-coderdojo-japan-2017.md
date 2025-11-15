@@ -1,6 +1,6 @@
 # ☯️ 一般社団法人 CoderDojo Japan について (2017年版)
 
-<center>(本ページは2017年度の古い情報となっています。最新版は<a href="/about-coderdojo-japan">コチラ</a>から)</center>
+<center>(本ページは2017年度の古い情報となっています。最新版は<a href="/about">コチラ</a>から)</center>
 
 <br>
 一般社団法人 CoderDojo Japan では次の事業を行なっておりますが、CoderDojo の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。
@@ -57,8 +57,7 @@ CoderDojo Japan では、定款に定められた事業内容にしたがって�
 CoderDojo Japan への応募・参加について、ビデオメッセージを収録してみました。こちらもよければ視聴していただけると嬉しいです ;)
 
 <div class="home-point-video">
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/IZxdBlcY4iw?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### 応募書類・結果について

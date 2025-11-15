@@ -1437,7 +1437,7 @@
   created_at: '2017-11-18'
   name: 立川
   prefecture_id: 13
-  url: https://coderdojotachikawa.github.io/
+  url: https://coderdojotachikawa.doorkeeper.jp/
   logo: "/img/dojos/tachikawa.webp"
   description: 立川市で毎月開催
   tags:
@@ -1995,6 +1995,18 @@
   - Minecraft
   - 電子工作
   - 3Dデザイン
+- id: 344
+  order: '162051'
+  created_at: '2025-10-27'
+  name: 氷見@bigberries
+  prefecture_id: 16
+  logo: "/img/dojos/default.webp"
+  url: https://codeclub.org/ja/clubs/6a93d88f-6f44-4057-8a2a-d003896b0406
+  description: 氷見市で隔週開催
+  tags:
+  - Scratch
+  - micro:bit
+  - MESH
 - id: 279
   order: '162060'
   created_at: '2022-03-01'
@@ -2601,10 +2613,11 @@
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
-  note: 2025-03-16 https://www.instagram.com/p/DG990t1PjEk/?img_index=1
+  inactivated_at: '2025-04-21'
+  note: Last session confirmed - 2024/4/21(日)
   name: 伊勢
   prefecture_id: 24
-  url: https://www.instagram.com/coderdojo.ise/
+  url: https://coderdojo-ise.jimdofree.com/
   logo: "/img/dojos/ise.webp"
   description: 伊勢市で毎月開催
   tags:
@@ -3247,7 +3260,7 @@
   created_at: '2025-07-28'
   name: 播磨科学公園都市
   prefecture_id: 28
-  url: https://koto-ictclub.net/dojo/
+  url: https://www.coderdojo-hsgc-techno.org/
   logo: "/img/dojos/default.webp"
   description: 赤穂郡上郡町で毎月開催
   tags:
@@ -3832,7 +3845,7 @@
   created_at: '2017-10-06'
   name: ももち
   prefecture_id: 40
-  url: https://peraichi.com/landing_pages/view/coderdojo
+  url: https://kikakusouken.co.jp/coderdojo/
   logo: "/img/dojos/momochi.webp"
   description: 福岡市早良区百道で毎月開催
   tags:
@@ -4024,7 +4037,7 @@
   prefecture_id: 45
   url: https://lmlab.net/coderdojo/
   logo: "/img/dojos/miyazaki.webp"
-  description: 西臼杵郡で毎月開催
+  description: 宮崎市で隔月開催
   tags:
   - Scratch
   - IchigoJam
