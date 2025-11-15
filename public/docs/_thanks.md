@@ -80,7 +80,7 @@ CoderDojo については下記スライドにまとめられております。�
 
 - 📺 [YouTube - CoderDojo とは?](https://www.youtube.com/playlist?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e)
 - 📺 [YouTube - CoderDojo Japan](https://www.youtube.com/CoderDojoJapan)
-- 🏢 [一般社団法人 CoderDojo Japan について](/about-coderdojo-japan)
+- 🏢 [一般社団法人 CoderDojo Japan について](/about)
 - 🌐 [English - CoderDojo Japan Association](/english)
 - ☯️ [English - CoderDojo Foundation](https://coderdojo.com/en)
 

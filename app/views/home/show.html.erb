@@ -21,7 +21,7 @@
     <li>Viscuit, PHP, 電子工作など</li>
   </ul>
 
-  <p style='margin: 20px auto;'>内容も規模もそれぞれ異なりますが、どの道場でも主体的に学ぶ姿勢が大切です。</p>
+  <p style='font-size: 99%; margin: 20px auto;'>内容も規模もそれぞれ異なりますが、どの道場でも主体的に学ぶ姿勢が大切です。</p>
 
   <p id="welcome">
     詳細は次のスライドをお読みください。
@@ -107,33 +107,40 @@
 
 <!-- イベントのお知らせ (任意) -->
 <!--
-<hr>
 <section id="events" class="detail-introduction text-center">
   <h2>
     <a href="#events">🆕</a>
     イベントのお知らせ
   </h2>
-  <ol style="list-style: none; margin-left: -40px; margin-top: 30px;">
-    <li>
-      <%= link_to(
-        lazy_image_tag('dojocon_japan_2022.webp', alt: 'DojoCon Japan 2022', style: 'margin-bottom: 15px;'),
-        'https://dojocon2022.coderdojo.jp/'
-      ) %>
-    </li>
-  </ol>
+
+  <div class="home-point-thumbnail" style="margin-top: 30px; margin-bottom: 15px;">
+    <%= link_to(
+      lazy_image_tag('dojocon-japan-2025.webp', alt: 'DojoCon Japan 開催のお知らせ', style: 'margin-bottom: 15px;'),
+      'https://dojocon2025.coderdojo.jp/'
+    ) %>
+  </div>
   <p style="margin-bottom: 30px;">
-    11月27日に
-    <a href="https://dojocon2022.coderdojo.jp/">DojoCon Japan</a>
-    開催! 全国のCoderDojo関係者と話してみませんか? 😆✨
+    10月下旬に <a href="https://dojocon2025.coderdojo.jp/">DojoCon Japan</a>  開催! 全国の CoderDojo 関係者と話してみませんか? 😆✨
   </p>
+
+  <p class="event-notice" style="margin-top: 30px; margin-bottom: 60px;">
+    <a href="https://dojocon2025.coderdojo.jp/contests/">
+      🎨
+      皆さんの作品、教えてください!<br>
+      <small>(１次通過者は交通費・宿泊費の補助あり)</small>
+    </a>
+    <br>
+    <i><small>〆切: 9月7月 (日曜)</small></i>
+  </p>
+
+  <div class="btn-cover" style="margin-bottom: 40px;">
+    <a class="btn-blue" href="https://dojocon2025.coderdojo.jp/">
+      <i class="fad fa-user-group"></i>
+      詳細を見る
+    </a>
+  </div>
+
 </section>
-<p class="event-notice" style="margin-top: 30px; margin-bottom: 60px;">
-  <a href="https://bit.ly/pokemon-special-workshop-in-kashiwa">
-    プログラミングでポケモンをうごかしてみよう
-  </a>
-  <br>
-  <small>5月16日 (日) 10am〜、オンライン開催</small>
-</p>
 -->
 
 <section id="dojos" class="dojos text-center grayscale-bg">
@@ -142,7 +149,15 @@
     <a href="#dojos">🗾</a>
     日本各地の道場
   </h2>
-  <br>
+
+  <div id="map" class="detail-introduction" style="padding-bottom: 10px;">
+    <%= link_to(
+      lazy_image_tag('/img/dojomap_ss.webp', alt: '地図から Dojo を探せるアプリ「DojoMap」',
+		     title: '地図から探せるアプリ「DojoMap」'),
+      'https://map.coderdojo.jp/'
+    ) %>
+  </div>
+  
   <p style="margin: 0 30px 20px 30px;">
     近くの道場を探してみましょう！
     <br class="ignore-sp">

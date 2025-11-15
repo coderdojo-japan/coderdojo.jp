@@ -50,7 +50,7 @@ class PodcastsController < ApplicationController
     content.gsub!(Podcast::TIMESTAMP_REGEX) do
         original_t = $1
         parts = original_t.split(':')
-        
+
         # タイムスタンプをh:m:s形式に変換
         if parts.size == 3
           # 00:00:00 形式
@@ -64,7 +64,7 @@ class PodcastsController < ApplicationController
           # それ以外（通常は来ないはず）
           t = original_t
         end
-        
+
         "- [#{original_t}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
     end
   end

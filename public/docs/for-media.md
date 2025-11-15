@@ -28,7 +28,7 @@
   ※
   [CoderDojo 憲章を見る](/charter)<br>
   ※
-  [CoderDojo Japan の活動実績を見る](/about-coderdojo-japan)
+  [CoderDojo Japan の活動実績を見る](/about)
 </small>
 <br>
 

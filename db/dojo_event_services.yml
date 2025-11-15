@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 氷見@bigberries（富山県氷見市）
+#- dojo_id: 344
+#  name: ???
+#  group_id: ???
+#  url: https://codeclub.org/ja/clubs/6a93d88f-6f44-4057-8a2a-d003896b0406
+
 # 播磨科学公園都市（兵庫県上郡町）
 #- dojo_id: 343
 #  name: ???

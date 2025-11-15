@@ -14,12 +14,14 @@ Rails.application.routes.draw do
   #get "/docs/teikan",            to: redirect('/teikan')
   #get "/docs/signup",            to: redirect('/signup')
 
-  get "/docs/join-in-board",      to: redirect('/about-coderdojo-japan')
-  get "/docs/join-in-board-2017", to: redirect('/about-coderdojo-japan')
-  get "/join-in-board",           to: redirect('/about-coderdojo-japan')
-  get "/join-in-board-2017",      to: redirect('/about-coderdojo-japan')
-  get "/about-coderdojo-japan"    => "docs#show", id: 'about-coderdojo-japan'
+  get "/docs/join-in-board",      to: redirect('/about')
+  get "/docs/join-in-board-2017", to: redirect('/about')
+  get "/join-in-board",           to: redirect('/about')
+  get "/join-in-board-2017",      to: redirect('/about')
+  get "/join-in-board",           to: redirect('/about')
+  get "/about-coderdojo-japan",   to: redirect('/about')
   get "/about-coderdojo"          => "docs#show", id: 'about-coderdojo'
+  get "/about"                    => "docs#show", id: 'about-coderdojo-japan'
 
   get "/docs/code-of-conduct",    to: redirect('/conduct')
   get "/docs/conduct",            to: redirect('/conduct')
@@ -36,6 +38,7 @@ Rails.application.routes.draw do
   get "/docs/_thanks",            to: redirect('/thanks')
 
   get "/redirects/202407",        to: redirect('https://www.facebook.com/groups/coderdojo.jp.champions/posts/7788378511253707/')
+  get "/redirects/prtimes",       to: redirect('https://prtimes.jp/main/html/searchrlp/company_id/38935')
   get "/redirects/interface",     to: redirect('/')
   get "/youtube",                 to: redirect('https://www.youtube.com/CoderDojoJapan')
   get "/calendar",                to: redirect('/calendars')
@@ -49,9 +52,10 @@ Rails.application.routes.draw do
   get "/brand"            => "docs#show", id: 'brand-guidelines'
   get "/charter"          => "docs#show", id: 'charter'
   get "/charter_en"       => "docs#show", id: 'charter_en'
-  get "/english"          => "docs#show", id: 'english'
   get "/for-media"        => "docs#show", id: 'for-media'
   get "/styleguides"      => "docs#show", id: 'styleguides'
+  get "/english"          => "docs#show", id: 'english'
+  get "/english/calendar" => "docs#show", id: '_calendar-english'
 
   get "/financial-report",      to: redirect('/finances')
   get "/finances"         => "docs#show", id: 'finances'
