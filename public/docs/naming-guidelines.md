@@ -9,7 +9,7 @@
 
 <br>
 
-> 💡 本記事は [CoderDojo Founudation](https://coderdojo.com/foundation/) との協議の上、日本地域に合わせて加筆修正しています。海外で CoderDojo を立ち上げる場合は [Naming your Dojo](https://help.coderdojo.com/cdkb/s/article/Naming-your-Dojo) をご参照ください。
+> 💡 本記事は [CoderDojo Foundation](https://speakerdeck.com/helloworldfoundation) との協議の上、日本地域に合わせて加筆修正しています。
 
 <br>
 

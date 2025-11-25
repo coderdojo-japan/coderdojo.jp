@@ -120,7 +120,6 @@ For more detailed information, please refer to the following reports, articles, 
 - 📰 [Nikkei Asia - Kids are coding it for themselves (Facebook)](https://www.facebook.com/nikkeiasia/photos/a.208198422599445/321410134611606)
 - 📰 [The Nation - Free coding sessions to move Pokemon characters surges in popularity](https://www.nationthailand.com/international/40005112)
 - ☯️ [CoderDojo - CoderDojo and Raspberry Pi Join Forces](https://web.archive.org/web/20240721015650/https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/)
-- ☯️ [CoderDojo - Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)
 - ☯️ [CoderDojo - Our National Partners](https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan)
 - ☯️ [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
 - ☯️ [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)

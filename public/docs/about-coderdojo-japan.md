@@ -115,7 +115,7 @@ info@coderdojo.jp
 
 ## [📜](#history) 法人設立から現在までの経緯 {#history}
 
-一般社団法人 CoderDojo Japan は、CoderDojo Foundation の承認にもと、[@yasulab](https://twitter.com/yasulab) と [@tkc49](https://twitter.com/tkc49) によって[2016年に設立](https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html)されました。前項で列挙した設立後の活動も高く評価され、国際的なモデル事例の１つとして CoderDojo Foundation の公式記事「[Example: community-led regional body](https://help.coderdojo.com/cdkb/s/article/Example-community-led-regional-body)」としても紹介されています。
+一般社団法人 CoderDojo Japan は、CoderDojo Foundation の承認にもと、[@yasulab](https://twitter.com/yasulab) と [@tkc49](https://twitter.com/tkc49) によって[2016年に設立](https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html)されました。
 
 <br>
 

@@ -48,7 +48,7 @@
 
 DojoCon Japan の要件ではありせんが、以下に DojoCon (本家) の要件も記載しておきます。開催にあたってこちらもご参考にして頂けると幸いです。
 
-⚠️ **注釈: 下記は翻訳当時の内容となります。最新版のポリシーは『[DojoCon Handbook](https://help.coderdojo.com/cdkb/s/article/DojoCon-Handbook)』をご参照ください。**
+⚠️ **注釈: 下記は翻訳当時の内容となります。最新版のポリシーは『[DojoCon Handbook](https://drive.google.com/file/d/1EWmdLMAhoShXhR6F4DEDs3oBI1qRGOLK/view?usp=sharing)』をご参照ください。**
 
 ## Event Outline（イベント概要）
 
@@ -118,6 +118,6 @@ DojoCon Japan の要件ではありせんが、以下に DojoCon (本家) の要
 
 ### 関連リンク {#reference}
 
-- [DojoCon Handbook](https://help.coderdojo.com/cdkb/s/article/DojoCon-Handbook)
 - [DojoCon Japan - CoderDojo Conference](https://dojocon.coderdojo.jp/)
+- [DojoCon Handbook](https://drive.google.com/file/d/1EWmdLMAhoShXhR6F4DEDs3oBI1qRGOLK/view?usp=sharing)
 
