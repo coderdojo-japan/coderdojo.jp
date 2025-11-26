@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 鳥羽@竹田住設（三重県鳥羽市）
+#- dojo_id: 345
+#  name: ???
+#  group_id: ???
+#  url: https://codeclub.org/ja/clubs/3a2f68c8-b54a-412b-bf28-915df1563b85
+
 # 氷見@bigberries（富山県氷見市）
 #- dojo_id: 344
 #  name: ???

@@ -2625,6 +2625,18 @@
   - micro:bit
   - LEGO
   - LabVIEW
+- id: 345
+  order: '242110'
+  created_at: '2025-11-23'
+  name: 鳥羽@竹田住設
+  prefecture_id: 24
+  url: https://ict.toba.city/
+  logo: "/img/dojos/default.webp"
+  description: 鳥羽市で隔週開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
 - id: 37
   order: '252018'
   created_at: '2015-09-16'
