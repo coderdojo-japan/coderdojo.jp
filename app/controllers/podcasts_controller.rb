@@ -65,7 +65,7 @@ class PodcastsController < ApplicationController
           t = original_t
         end
 
-        "- [#{original_t}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
+        "[#{original_t}](https://youtu.be/#{youtube_id}?t=#{t}) &nbsp; "
     end
   end
 end

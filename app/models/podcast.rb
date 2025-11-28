@@ -2,7 +2,8 @@ class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
   DIR_PATH        = 'public/podcasts'
   WDAY2JAPANESE   = %w(日 月 火 水 木 金 土)
-  TIMESTAMP_REGEX  = /-\s((\d{1,2}:)?\d{1,2}:\d{2})/
+  # Match timestamps at the beginning of lines (YouTube format)
+  TIMESTAMP_REGEX  = /^((\d{1,2}:)?\d{1,2}:\d{2})/
   YOUTUBE_ID_REGEX = /watch\?v=((\w)*)/
 
   validates :title,          presence: true
