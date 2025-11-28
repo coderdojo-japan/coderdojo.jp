@@ -44,10 +44,10 @@ class PodcastsController < ApplicationController
     HTML
     content.gsub!(/(#+) Shownote/) { shownote }
 
-    return content unless content.match?(Podcast::YOUTUBE_ID_REGEX)
-    return content unless content.match?(Podcast::TIMESTAMP_REGEX)
-    youtube_id = @episode.content.match(Podcast::YOUTUBE_ID_REGEX)[1]
-    content.gsub!(Podcast::TIMESTAMP_REGEX) do
+    return content unless content.match?(Podcast::REGEX_YOUTUBE_ID)
+    return content unless content.match?(Podcast::REGEX_TIMESTAMP)
+    youtube_id = @episode.content.match(Podcast::REGEX_YOUTUBE_ID)[1]
+    content.gsub!(Podcast::REGEX_TIMESTAMP) do
         original_t = $1
         parts = original_t.split(':')
 
