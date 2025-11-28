@@ -49,10 +49,10 @@ RSpec.feature 'Podcasts', type: :feature do
           
           ## Shownote
           
-          - 00:00:00 米国系 IT 企業から CoderDojo へ、233台のノートPC寄贈
-          - 00:25:01 AI と遊んでみる回の動画 https://youtu.be/BYpa1CcYtss?t=1425
-          - 00:59:14 CASE Shinjuku 利用者と CoderDojo の繋がり
-          - 01:00:57 CASE Shinjuku の英語アクセスページ https://case-shinjuku.com/english
+          00:00:00 米国系 IT 企業から CoderDojo へ、233台のノートPC寄贈
+          00:25:01 AI と遊んでみる回の動画 https://youtu.be/BYpa1CcYtss?t=1425
+          00:59:14 CASE Shinjuku 利用者と CoderDojo の繋がり
+          01:00:57 CASE Shinjuku の英語アクセスページ https://case-shinjuku.com/english
         CONTENT
       }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
@@ -83,9 +83,9 @@ RSpec.feature 'Podcasts', type: :feature do
           
           ## Shownote
           
-          - 00:30 オープニング
-          - 05:45 メインテーマ
-          - 59:59 エンディング
+          00:30 オープニング
+          05:45 メインテーマ
+          59:59 エンディング
         CONTENT
       }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
@@ -111,10 +111,10 @@ RSpec.feature 'Podcasts', type: :feature do
           
           ## Shownote
           
-          - 0:00 ゲスト自己紹介
-          - 0:54 TFabWorks 無償レンタルプログラム
-          - 2:10 2019年の年末から動き出した
-          - 9:25 レンタルの種類
+          0:00 ゲスト自己紹介
+          0:54 TFabWorks 無償レンタルプログラム
+          2:10 2019年の年末から動き出した
+          9:25 レンタルの種類
         CONTENT
       }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
