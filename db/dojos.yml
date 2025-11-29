@@ -391,6 +391,17 @@
   - Webサイト
   - Python
   - micro:bit
+- id: 346
+  order: '073687'
+  created_at: '2025-11-29'
+  name: 南会津
+  prefecture_id: 7
+  url: https://coderdojo-minamiaizu.doorkeeper.jp/
+  logo: "/img/dojos/default.webp"
+  description: 南会津で不定期開催
+  tags:
+  - Scratch
+  - Roblox
 - id: 223
   order: '075213'
   created_at: '2019-08-26'
