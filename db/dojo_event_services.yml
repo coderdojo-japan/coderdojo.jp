@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 南会津（福島県南会津群）
+- dojo_id: 346
+  name: doorkeeper
+  group_id: 98760
+  url: https://coderdojo-minamiaizu.doorkeeper.jp/
+
 # 鳥羽@竹田住設（三重県鳥羽市）
 #- dojo_id: 345
 #  name: ???
