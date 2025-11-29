@@ -144,28 +144,36 @@ https://coderdojo.jp/stats
 
 ### 各イベント管理サービスの `group_id` の取得方法
 
-- `connpass` の場合は [Connpass API](https://connpass.com/about/api/) に対応します
-  1. connpass のグループまたはイベントページをブラウザで表示します (Ex. https://coderdojo-tobe.connpass.com/)
+- `connpass` の場合は [Connpass API](https://connpass.com/about/api/) から取得します
+  1. connpass のグループまたはイベントページをブラウザで表示します。例: https://coderdojo-tobe.connpass.com/
   2. URL をコピーします
-  3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` (Series ID) が得えられます
+  3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` が得られます
   
   ```
   $ bundle exec bin/c-search https://coderdojo-tobe.connpass.com/
     => 5072
   ```
+
   `jq`コマンドが使えない場合はインストールしてください。
 
   ```
   $ brew install jq
   ```
   
-- `doorkeeper` の場合は [Doorkeeper API](https://www.doorkeeper.jp/developer/api?locale=en) に対応します
-  1. connpassと 同様に、Doorkeeper のイベントページの url から event ID を確認します (https://coderdojo-suita.doorkeeper.jp/events/90704 だと `90704`)
-  2. 以下のコマンドで上記の event ID を指定すると `group_id` (group) を得ることができます
+- `doorkeeper` の場合は [Doorkeeper API](https://www.doorkeeper.jp/developer/api?locale=en) から取得します
+  1. Doorkeeper のイベントページをブラウザで表示します。例: https://coderdojo-suita.doorkeeper.jp/events/90704
+  2. URL をコピーします
+  3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` が得られます
   
   ```
-  $ curl --silent -X GET https://api.doorkeeper.jp/events/90704 | jq '.event.group'
-    9690
+  $ bundle exec bin/d-search https://coderdojo-minamiaizu.doorkeeper.jp/events/193082
+    98760
+  ```
+
+  `jq`コマンドが使えない場合はインストールしてください。
+
+  ```
+  $ brew install jq
   ```
 
 <br>
