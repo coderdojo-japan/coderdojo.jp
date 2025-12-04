@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 八女
+- dojo_id: 347
+  name: connpass
+  group_id: 17099 
+  url: https://coderdojo-yame.connpass.com/
+
 # 南会津（福島県南会津群）
 - dojo_id: 346
   name: doorkeeper
