@@ -2802,6 +2802,19 @@
   tags:
   - Scratch
   - ラズベリーパイ
+- id: 348
+  order: '271144'
+  created_at: '2015-12-04'
+  name: 新大阪
+  prefecture_id: 27
+  logo: "/img/dojos/shin-osaka.webp"
+  url: https://coderdojo-shin-osaka.connpass.com/
+  description: 大阪市東淀川区で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - AI
+  - 3Dモデリング
 - id: 297
   order: '271209'
   created_at: '2023-01-19'
