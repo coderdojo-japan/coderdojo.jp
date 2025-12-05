@@ -265,6 +265,7 @@ GEM
     nokogiri (1.18.9-x86_64-linux-musl)
       racc (~> 1.4)
     observer (0.1.2)
+    openssl (3.3.2)
     ostruct (0.6.1)
     parallel (1.27.0)
     parser (3.3.8.0)
@@ -509,6 +510,7 @@ DEPENDENCIES
   letter_opener_web
   listen
   memory_profiler
+  openssl
   ostruct
   pg
   puma
