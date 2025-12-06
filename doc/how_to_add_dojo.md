@@ -83,7 +83,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します。（db/city_code.csv も参照できます。）
 - `logo` にはロゴ画像へのパスを入力してください。
   - ロゴ画像が省略されていた場合は `default.webp` を入力してください。
-  - ロゴ画像があれば `.png` と `.webp` に変換し、[TinyPNG](https://tinypng.com/) で圧縮し、`public/img/dojos` に置いてください。
+  - ロゴ画像があれば `.png` と `.webp` に変換し、[TinyPNG](https://tinypng.com/) で圧縮し、`public/img/dojos` に**２つとも** 置いてください。
   - ロゴ画像が正方形ではない場合、表示が崩れることがあるため、[Macのプレビューで画像に余白を追加](https://www.google.com/search?q=Mac+プレビュー+画像+余白)し、正方形にしてください。
 
 yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
