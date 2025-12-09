@@ -48,7 +48,6 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 ```yaml
 - order: '472018'
-  created_at: '2019-06-15'
   name: 那覇
   counter: 1                       # 省略化。連名道場のときに使います (後述)
   prefecture_id: 47
@@ -66,7 +65,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | 項目名 | 内容 |
 |:---|:---|
 | `id` | **入力しない。** タスク実行時に自動で追加されます (詳細は後述) |
-| `created_at` | 掲載申請日の年月日 |
+| `created_at` | **入力しない。** タスク実行時に自動で追加されます  (詳細は後述) |
 | `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
 | `name` | Dojo名 |
 | `counter` | 省略化。[連名道場](https://github.com/coderdojo-japan/coderdojo.jp/issues/610)を登録する際に使います |
@@ -92,7 +91,7 @@ yaml ファイルに各項目を追記したら次のコマンドを実行し、
 $ bundle exec rails dojos:update_db_by_yaml
 ```
 
-その後、DB に反映された id を yaml に書き出すため、次のコマンドを実行します。
+その後、DB に反映された `id` や `created_at` を YAML ファイルに書き出すため、次のコマンドを実行します。
 
 ```bash
 $ bundle exec rails dojos:migrate_adding_id_to_yaml
@@ -106,7 +105,7 @@ $ bundle exec rails dojos:migrate_adding_id_to_yaml
 ActiveRecord::Base.connection.execute("SELECT setval('dojos_id_seq', coalesce((SELECT MAX(id)+1 FROM dojos), 1), false)")
 ```
 
-yaml ファイルに id および order が動的に更新されたことを確認できたら `:new: Add CoderDojo 那覇 in 沖縄県` といったコミットをし、Pull Request を送ります。
+YAML ファイルに `id` および `created_at` が追加されたことを確認できたら `:new: Add CoderDojo 那覇 in 沖縄県` といったコミットをし、Pull Request を送ります。
 
 Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
