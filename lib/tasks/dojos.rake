@@ -111,7 +111,9 @@ http://www.soumu.go.jp/denshijiti/code.html
       # YAML の各カラムの先頭に固定させたい場面などにも有効です。
       new_dojo          = {}
       new_dojo['id']    = d.id
-      #new_dojo['order'] = d.order  # ID の直後に固定させる場合の例
+      new_dojo['order'] = d.order
+      new_dojo['created_at'] = d.created_at&.to_date&.to_s
+      #new_dojo['name'] = d.order  # created の直後に固定させる場合の例
 
       new_dojo.merge!(dojo)
       new_dojo
