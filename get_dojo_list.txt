@@ -6,67 +6,72 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
-CoderDojo 尾張
-CoderDojo野母崎(長崎市)
-CoderDojo前橋
-CoderDojo大府
-CoderDojo津山
-CoderDojo 横浜師岡
-CoderDojo吉備Okayama
-CoderDojo 黒潮町
-CoderDojo 長門
-CoderDojo 南風原
-CoderDojo 南柏
-CoderDojo 福山大門
-CoderDojo神戸
-コードー道場まつど
-Coder Dojo Nagareyama
+CoderDojo福山大門
+CoderDojo吉備
+CoderDojo神山
+CoderDojo 青梅
 CoderDojo 長野
-CoderDojo師勝
-CoderDojo 磐田
-CoderDojo松山
-CoderDojo 倉敷
-CoderDojo Kodaira
-CoderDojo市川真間
-CoderDojo稲毛海岸
-CoderDojo富田林
-CoderDojo 恵那
-CoderDojo堺
-CoderDojo岩国
-CoderDojo武蔵小杉
-CoderDojo山形、CoderDojo村山
-CoderDojo 和歌山有田
-CoderDojo岐阜
-CoderDojo品川港南
-CoderDojo Harumi
-CoderDojo 富山
-CoderDojo富士宮
-CoderDojo青梅
-CoderDojoまちだ
-CoderDojo Miyoshi
-CoderDojo淡路島
-CoderDojo犬山
-CoderDojo 高岡
-CoderDojo伊予
-CoderDojo 宇治
-CoderDojo 札幌
-CoderDojo滝沢
-CoderDojoとなみ
-CoderDojo 小田原
-CoderDojo 戸田公園
-CoderDojo 稲沢正明寺
-CoderDojo 仙台若林
+CoderDojo長門
+CoderDojo神戸
+CoderDojo ひばりヶ丘
+CoderDojo 古河
+CoderDojo鎌ケ谷
+CoderDojo 晴海
+CoderDojo前橋
 CoderDojo 喜多方
+CoderDojo野母崎
+CoderDojo 札幌
+CoderDojo松山
+CoderDojo 江別
+CoderDojo 大府
+CoderDojo 市川真間
+CoderDojo 山形
+CoderDojo白河
+CoderDojo 新大阪
+CoderDojo 灘
+CoderDojo 岡南
+CoderDojoとなみ
+CoderDojo 品川港南
+CoderDojo 水戸
+CoderDojo 伊勢原
+CoderDojo磐田
+CoderDojo八戸
+CoderDojo津山
+CoderDojoまちだ
+CoderDojo 黒潮町
+CoderDojo 生駒
+CoderDojo武蔵小杉
+CoderDojo 戸田公園
+CoderDojo那覇
+CoderDojo浦添、宜野湾
+CoderDojo 小田原
+CoderDojo 氷見@bigberries
+CoderDojo 富山
+CoderDojo 豊橋
 CoderDojo猪名川
-Coder Dojo Tempaku
-CoderDojo 久留米
+Coderdojo 倉敷
+CoderDojo岩国
+CoderDojo 和歌山
+CoderDojo 早良
+CoderDojo 会津
+CoderDojo久留米
+CoderDojo 徳島
+CoderDojo名古屋
+CoderDojo 恵那
+CoderDojo八尾@yotteco
+CoderDojo 富士宮
+CoderDojo 稲沢正明寺
+CoderDojo岐阜
+CoderDojo ひたちなか
+CoderDojo日進
+CoderDojo 南会津
+CoderDojo たかおか
+CoderDojo 天白
+CoderDojo 三好
+coderdojo松戸
 CoderDojo 恵庭
-CoderDojo船橋
-Coderdojo大船
-CoderDojo 平野
-CoderDojo加西
-CoderDojo末広町@アミュレット
-CoderDojo 名護　CoderDojo 恩納@OIST
-CoderDojo 福岡
+CoderDojo 南紀田辺
+CoderDojo 矢吹
+CoderDojo 光
+CoderDojo 柏
 CoderDojo 浦和
-CoderDojo 二本松
