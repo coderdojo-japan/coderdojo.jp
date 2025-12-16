@@ -82,27 +82,32 @@ CoderDojo Japan では、[上記の定款](#teikan)に定められた事業内�
 - **(1) 日本国内の「CoderDojo」の設立及び運営の支援**
    - 内容: [Kata](/kata), [Stats](/stats), [Docs](/docs), [DojoCast](/podcasts), [DojoPaaS](https://github.com/coderdojo-japan/dojopaas), [DojoMap](https://github.com/coderdojo-japan/map.coderdojo.jp) などの運営・開発をします
    - 詳細: [GitHub アカウント](https://github.com/coderdojo-japan) や [coderdojo.jp リポジトリ](https://github.com/coderdojo-japan/coderdojo.jp)からご確認いただけます
-   - 開発例: [📊 Add inactivated_at to Dojo model to replace is_active boolean column #1726 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/pull/1726)<br><br>
+   - 実例: [📊 Add inactivated_at to Dojo model to replace is_active boolean column #1726 - GitHub](https://github.com/coderdojo-japan/coderdojo.jp/pull/1726)<br><br>
+
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
    - 内容: [パートナーシップ](/partnership)をご検討されている法人と協議・交渉をします
-   - 詳細: [news.coderdojo.jp](https://news.coderdojo.jp) の[お知らせ](https://news.coderdojo.jp/category/news/)や[プレス](https://news.coderdojo.jp/category/press/)からご確認いただけます
-   - 連携例: [☯️ CoderDojo のオープンデータが、デジタル庁が推進する地域の Well-Being 指標のデジタル生活指数に採用 - PR TIMES](https://prtimes.jp/main/html/rd/p/000000016.000038935.html)<br><br>
+   - 詳細: [news.coderdojo.jp](https://news.coderdojo.jp) の[お知らせ](https://news.coderdojo.jp/category/news/)や、PR TIMES の[プレスリリース](https://prtimes.jp/main/html/searchrlp/company_id/38935)などからご確認いただけます
+   - 実例: [💻 米国系 IT 企業から CoderDojo へ、162 台のノート PC 寄贈 - CoderDojo Japan](https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/)
+   - 実例: [💻 英国の教育財団から CoderDojo へ、1500 台の BBC micro:bit 寄贈 - CoderDojo Japan](https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/)<br><br>
+
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
    - 内容: CoderDojo 間の情報共有や、合同で開催するイベントを支援します
    - 詳細: [Facebook グループ](https://www.facebook.com/groups/coderdojo.jp)の運営、[DecaDojo](https://decadojo.coderdojo.jp/) や [DojoCon Japan](https://dojocon.coderdojo.jp/) の開催サポートなど
-   - 共有例: [💻 米国系 IT 企業から CoderDojo へ、162 台のノート PC を寄贈 - Facebook](https://www.facebook.com/groups/coderdojo.jp/permalink/25424832487203477/)<br><br>
+   - 実例: [☯️ CoderDojo のオープンデータが、デジタル庁が推進する地域の Well-Being 指標のデジタル生活指数に採用 - Facebook](https://www.facebook.com/groups/coderdojo.jp/permalink/24963750126645051/)<br><br>
+
 - **(4) 国内外の「CoderDojo」に関する普及および゙広報に関する活動**
    - 内容: News サイトや SNS、Podcast などで CoderDojo 活動の周知を支援します
    - 詳細: [DojoLetter](https://news.coderdojo.jp/category/dojoletterバックナンバー/)、[Facebook](https://www.facebook.com/coderdojo.jp) や [X](https://x.com/CoderDojoJapan) (旧: Twitter) アカウント、[DojoCast](/podcasts) からご確認いただけます
-   - 広報例: [📣 プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に。 - X (旧: Twitter)](https://x.com/CoderDojoJapan/status/1385460981883498499)<br><br>
+   - 実例: [📣 プログラミングでポケモンを動かすワークショップが、全国のCoderDojoで実施可能に。 - X (旧: Twitter)](https://x.com/CoderDojoJapan/status/1385460981883498499)<br><br>
+
 - **(5) 国内外の「CoderDojo」の活動を通じて得られた知見の共有**
    - 内容: CoderDojo コミュニティで得られた知見をオープンに共有します
    - 詳細: ラズベリーパイ財団 CEO との対談、CoderDojo 共同設立者 (James, Bill) との対談、[ポケモンワークショップ](/pokemon/workshop)など。詳細は[公式 YouTube チャンネル](https://www.youtube.com/@CoderDojoJapan/playlists)をご参照ください
-   - 共有例: [🧑‍🏫 ポケモンワークショップの事例紹介 - CoderDojo Japan](/pokemon/workshop)<br><br>
+   - 実例: [🧑‍🏫 ポケモンワークショップの事例紹介 - CoderDojo Japan](/pokemon/workshop)<br><br>
 - **(6) 前各号に附帯関連する一切の事業**
    - 内容: 法人として必要な事務作業や、今後のためにやっておくべきことを実施します
    - 詳細: [決算書の作成](/finances)、[理事の募集](#next)、[問い合わせ対応](/#inquiry)、[CoderDojo Foundation](https://speakerdeck.com/helloworldfoundation) や [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) とのミーティング (英語) など
-   - 実施例: [📚 決算報告書 - CoderDojo Japan](/finances)<br><br>
+   - 実例: [📚 決算報告書 - CoderDojo Japan](/finances)<br><br>
 
 
 CoderDojo Japan が実施している上記活動、ならびに [CoderDojo Foundation や Raspberry Pi Foundation が行なっている活動](https://coderdojo.com/wp-content/cache/all/2017/06/01/coderdojo-%e3%81%a8-raspberry-pi%e3%80%81%e4%b8%a1%e7%b5%84%e7%b9%94%e3%81%8c%e6%8f%90%e6%90%ba%e3%81%b8/)の一部はオープンになっているため、<b>理事にならなくても参画できる活動は多い</b>です。(例: [翻訳ボランティアコミュニティ](https://www.raspberrypi.org/translate/)、[DojoLetterの編集](https://news.coderdojo.jp/category/dojoletter%E3%83%90%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC/)、[Webシステムの開発](https://github.com/coderdojo-japan)など)
