@@ -6,72 +6,99 @@
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
 
-CoderDojo福山大門
-CoderDojo吉備
-CoderDojo神山
-CoderDojo 青梅
-CoderDojo 長野
-CoderDojo長門
-CoderDojo神戸
-CoderDojo ひばりヶ丘
-CoderDojo 古河
-CoderDojo鎌ケ谷
-CoderDojo 晴海
-CoderDojo前橋
-CoderDojo 喜多方
-CoderDojo野母崎
-CoderDojo 札幌
-CoderDojo松山
-CoderDojo 江別
-CoderDojo 大府
-CoderDojo 市川真間
-CoderDojo 山形
-CoderDojo白河
-CoderDojo 新大阪
-CoderDojo 灘
-CoderDojo 岡南
-CoderDojoとなみ
-CoderDojo 品川港南
-CoderDojo 水戸
-CoderDojo 伊勢原
-CoderDojo磐田
-CoderDojo八戸
-CoderDojo津山
-CoderDojoまちだ
-CoderDojo 黒潮町
-CoderDojo 生駒
-CoderDojo武蔵小杉
-CoderDojo 戸田公園
-CoderDojo那覇
-CoderDojo浦添、宜野湾
-CoderDojo 小田原
-CoderDojo 氷見@bigberries
-CoderDojo 富山
-CoderDojo 豊橋
-CoderDojo猪名川
-Coderdojo 倉敷
-CoderDojo岩国
-CoderDojo 和歌山
-CoderDojo 早良
-CoderDojo 会津
-CoderDojo久留米
-CoderDojo 徳島
-CoderDojo名古屋
-CoderDojo 恵那
-CoderDojo八尾@yotteco
-CoderDojo 富士宮
-CoderDojo 稲沢正明寺
-CoderDojo岐阜
-CoderDojo ひたちなか
-CoderDojo日進
-CoderDojo 南会津
-CoderDojo たかおか
-CoderDojo 天白
-CoderDojo 三好
-coderdojo松戸
-CoderDojo 恵庭
-CoderDojo 南紀田辺
-CoderDojo 矢吹
-CoderDojo 光
-CoderDojo 柏
-CoderDojo 浦和
+
+札幌（北海道）
+札幌東（北海道）
+室蘭（北海道）
+八戸（青森）
+陸前高田（岩手）
+滝沢（岩手）
+登米（宮城）
+富谷（宮城）
+会津（福島）
+白河（福島）
+喜多方（福島）
+矢吹（福島）
+古河（茨城）
+宇都宮（栃木）
+西那須野（栃木）
+前橋（群馬）
+浦和（埼玉）
+戸田公園（埼玉）
+若葉みつわ台（千葉）
+若葉若松（千葉）
+TOKE（千葉）
+市川真間（千葉）
+松戸（千葉）
+柏（千葉）
+南柏（千葉）
+Nagareyama（千葉）
+鎌ケ谷（千葉）
+品川御殿山（東京）
+麹町（東京）
+吉祥寺（東京）
+青梅（東京）
+まちだ（東京）
+Kodaira（東京）
+あざみ野（神奈川）
+久地（神奈川）
+武蔵小杉（神奈川）
+中央林間（神奈川）
+伊勢原（神奈川）
+富山（富山）
+となみ（富山）
+なんと@よってカフェ（富山）
+松本（長野）
+岐阜（岐阜）
+静岡（静岡）
+天白（愛知）
+瑞穂（愛知）
+豊橋（愛知）
+Anjo（愛知）
+西尾（愛知）
+犬山（愛知）
+稲沢正明寺（愛知）
+大府（愛知）
+尾張（愛知）
+師勝（愛知）
+宇治（京都）
+大阪狭山（大阪）
+堺/泉北和泉（大阪）
+とよなか（大阪）
+吹田（大阪）
+枚方（大阪）
+茨木（大阪）
+富田林（大阪）
+大東（大阪）
+みのお（大阪）
+藤井寺（大阪）
+柏原（大阪）
+せんなん（大阪）
+灘（兵庫）
+明石（兵庫）
+加西（兵庫）
+奈良（奈良）
+生駒（奈良）
+和歌山（和歌山）
+南紀田辺（和歌山）
+鳥取（鳥取）
+吉備（岡山）
+津山（岡山）
+福山大門（広島）
+三次（広島）
+宇部（山口）
+光（山口）
+Miyoshi（徳島）
+伊予（愛媛）
+香椎（福岡）
+福岡（福岡）
+ももち（福岡）
+久留米（福岡）
+ナカマ（福岡）
+春日（福岡）
+さが（佐賀）
+那覇（沖縄）
+Ishigaki（沖縄）
+名護（沖縄）
+宮古島（沖縄）
+嘉手納（沖縄）

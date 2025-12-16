@@ -74,9 +74,16 @@ INPUT_TEXT.each do |line|
       .gsub('南風原',         '南風原')
   end
 
-  (found_dojo && found_dojo[:is_active]) ?
-    dojo_list << found_dojo :
-    not_found << dojo_name
+  # Show all dojos, including in-active dojos, if SHOW_ALL mode
+  if ENV['SHOW_ALL'].eql?('true')
+    (found_dojo) ?
+      dojo_list << found_dojo :
+      not_found << dojo_name
+  else
+    (found_dojo && found_dojo[:is_active]) ?
+      dojo_list << found_dojo :
+      not_found << dojo_name
+  end
 end
 
 # coderdojo.jp の掲載順と同じ順序に揃える
