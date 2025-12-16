@@ -87,8 +87,8 @@ CoderDojo Japan では、[上記の定款](#teikan)に定められた事業内�
 - **(2) 日本国内の各「CoderDojo」間のネットワークの構築、企業や行政との連携の支援**
    - 内容: [パートナーシップ](/partnership)をご検討されている法人と協議・交渉をします
    - 詳細: [news.coderdojo.jp](https://news.coderdojo.jp) の[お知らせ](https://news.coderdojo.jp/category/news/)や、PR TIMES の[プレスリリース](https://prtimes.jp/main/html/searchrlp/company_id/38935)などからご確認いただけます
-   - 実例: [💻 米国系 IT 企業から CoderDojo へ、162 台のノート PC 寄贈 - CoderDojo Japan](https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/)
-   - 実例: [💻 英国の教育財団から CoderDojo へ、1500 台の BBC micro:bit 寄贈 - CoderDojo Japan](https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/)<br><br>
+   - 実例: [💻 米国系 IT 企業から CoderDojo へ、162 台のノート PC 寄贈](https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/)
+   - 実例: [💻 英国の教育財団から CoderDojo へ、1500 台の BBC micro:bit 寄贈](https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/)<br><br>
 
 - **(3) 日本国内の各「CoderDojo」と国外の「CoderDojo」との連携、協力に関する支援**
    - 内容: CoderDojo 間の情報共有や、合同で開催するイベントを支援します
