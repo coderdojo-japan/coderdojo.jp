@@ -5,7 +5,10 @@
 # 実装例: https://github.com/coderdojo-japan/coderdojo.jp/pull/1433
 # 実行例: $ ./get_dojo_list.rb
 # 活用例: https://news.coderdojo.jp/2022/05/16/1500-microbits-to-coderdojo/ (寄贈先のCoderDojo一覧)
-
+#
+# 【TIPS】過去の古い寄贈記事をリスト形式 -> 表形式に更新したい場合は SHOW_ALL モードを使う。
+# 更新例: $ SHOW_ALL=true ./get_dojo_list.rb
+# 更新例: https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/
 
 札幌（北海道）
 札幌東（北海道）
