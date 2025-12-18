@@ -3,9 +3,7 @@
 <% provide :url,   @url %>
 <% provide :meta_image, "/img/ogp-news.jpeg" %>
 
-<section class="cover">
-  <%= lazy_image_tag 'news_cover.jpg', alt: 'Cover Photo on News', min: false %>
-</section>
+<%= lazy_image_tag 'news_cover.jpg', alt: 'Cover Photo on News', class: 'cover-wide' %>
 
 <div class='container'>
   <section class='news' style='padding: 50px 0px 0px;'>
@@ -43,7 +41,7 @@
 </div>
 
 <section class="cover">
-  <%= lazy_image_tag '/coderdojo_object.webp', alt: 'CoderDojo Object' %>
+  <%= lazy_image_tag '/coderdojo_object.webp', alt: 'CoderDojo Object', class: 'cover-wide' %>
 </section>
 
 <div class='container'>
