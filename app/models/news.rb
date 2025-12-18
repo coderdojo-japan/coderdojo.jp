@@ -12,11 +12,12 @@ class News < ApplicationRecord
     return title if has_custom_emoji
 
     # Add preset Emoji to its prefix if title does not have Emoji.
-    emoji = case url
-            when %r{/podcasts/\d+}
+    emoji = if url.match?(%r{/podcasts/\d+})
               '📻'
-            when %r{prtimes\.jp}
+            elsif url.match?(%r{prtimes\.jp})
               '📢'
+            elsif title.include?('寄贈')
+              '🎁'
             else
               '📰'
             end
