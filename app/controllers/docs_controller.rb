@@ -1,6 +1,6 @@
 class DocsController < ApplicationController
   def index
-    @title = 'CoderDojo 資料集'
+    @title = '📚 CoderDojo 資料集'
     @desc  = 'CoderDojo に関する資料を<br class="ignore-pc">トピック毎にまとめたページです。'
     @url   = request.url
     @docs  = Document.all.delete_if.each do |doc|
@@ -25,7 +25,7 @@ class DocsController < ApplicationController
       @doc.content.gsub! "{{ NUM_OF_TOTAL_EVENTS }}",  Dojo::NUM_OF_TOTAL_EVENTS
       @doc.content.gsub! "{{ NUM_OF_TOTAL_NINJAS }}",  Dojo::NUM_OF_TOTAL_NINJAS
     end
-    
+
     # INACTIVE_THRESHOLD を日本語の期間表記に変換
     if @doc.content.include? "INACTIVE_THRESHOLD"
       # 1.year → "１年間", 6.months → "６ヶ月間" のように変換

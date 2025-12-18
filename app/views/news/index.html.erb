@@ -3,9 +3,13 @@
 <% provide :url,   @url %>
 <% provide :meta_image, "/img/ogp-news.jpeg" %>
 
+<section class="cover">
+  <%= lazy_image_tag 'news_cover.jpg', alt: 'Cover Photo on News', min: false %>
+</section>
+
 <div class='container'>
   <section class='news' style='padding: 50px 0px 0px;'>
-    <h2 class='text-center'><%= @title.html_safe %></h2>
+    <h1 class='text-center'><%= @title.html_safe %></h1>
 
     <p class='text-center' style='padding-top: 30px;'>
       <%= @desc.html_safe %>
@@ -36,7 +40,13 @@
       <p class="text-center">現在、ニュース記事はありません。</p>
     <% end %>
   </section>
+</div>
 
+<section class="cover">
+  <%= lazy_image_tag '/coderdojo_object.webp', alt: 'CoderDojo Object' %>
+</section>
+
+<div class='container'>
   <section class="text-center list" style='margin-bottom: 100px;'>
     <%= render 'shared/dojo_letter_signup' %>
     <%= render 'shared/social_buttons' %>
