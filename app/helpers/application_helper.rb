@@ -107,7 +107,7 @@ module ApplicationHelper
     # 都道府県名の英語表記を返す簡易マッピング
     # 「都」「府」「県」を除去してから検索
     name_without_suffix = prefecture_name.gsub(/[都府県]$/, '')
-    
+
     prefecture_names = {
       '北海道' => 'Hokkaido',
       '青森' => 'Aomori',
@@ -157,7 +157,7 @@ module ApplicationHelper
       '鹿児島' => 'Kagoshima',
       '沖縄' => 'Okinawa'
     }
-    
+
     prefecture_names[name_without_suffix] || prefecture_name
   end
 
@@ -208,32 +208,8 @@ module ApplicationHelper
       'HTML' => 'HTML',
       'CSS' => 'CSS'
     }
-    
+
     tag_translations[tag_name] || tag_name
   end
 
-  def format_news_title(news)
-    has_custom_emoji = news.title[0]&.match?(/[\p{Emoji}&&[^0-9#*]]/)
-    return news.title if has_custom_emoji
-
-    # Add preset Emoji to its prefix if news.title does not have Emoji.
-    emoji = case news.url
-            when %r{/podcasts/\d+}
-              '📻'
-            when %r{prtimes\.jp}
-              '📢'
-            else
-              '📰'
-            end
-    "#{emoji} #{news.title}"
-  end
-
-  def news_link_url(news)
-    # Convert absolute podcast URLs to relative paths for local development
-    if news.url.match?(%r{^https://coderdojo\.jp/podcasts/\d+$})
-      news.url.sub('https://coderdojo.jp', '')
-    else
-      news.url
-    end
-  end
 end

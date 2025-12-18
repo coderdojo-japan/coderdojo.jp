@@ -74,6 +74,7 @@ Rails.application.routes.draw do
     end
   end
   resources :docs,     only: %i(index show)
+  resources :news,     only: %i(index)
   resources :podcasts, only: %i(index show)
   resources :spaces,   only: %i(index)
 

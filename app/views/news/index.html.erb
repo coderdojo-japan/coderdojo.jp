@@ -1,0 +1,44 @@
+<% provide :title, strip_tags(@title) %>
+<% provide :desc,  strip_tags(@desc)  %>
+<% provide :url,   @url %>
+<% provide :meta_image, "/img/ogp-news.jpeg" %>
+
+<div class='container'>
+  <section class='news' style='padding: 50px 0px 0px;'>
+    <h2 class='text-center'><%= @title.html_safe %></h2>
+
+    <p class='text-center' style='padding-top: 30px;'>
+      <%= @desc.html_safe %>
+    </p>
+  </section>
+
+  <section class="text-center list" style='margin-bottom: 30px;'>
+    <%= render 'shared/dojo_letter_signup' %>
+    <%= render 'shared/social_buttons' %>
+  </section>
+
+  <section class='news' style='padding: 50px 0px;'>
+    <% if @news_items.any? %>
+      <div class="news-list">
+        <% @news_items.each do |news| %>
+          <article class="news-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
+            <h3 style="margin-bottom: 10px;">
+              <%= link_to news.formatted_title, news.link_url, target: '_blank', rel: 'noopener' %>
+            </h3>
+            <p class="news-meta" style="color: #666; font-size: 14px;">
+              <i class="fa fa-calendar"></i>
+              <%= l(news.published_at.to_date, format: :long) if news.published_at %>
+            </p>
+          </article>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-center">現在、ニュース記事はありません。</p>
+    <% end %>
+  </section>
+
+  <section class="text-center list" style='margin-bottom: 100px;'>
+    <%= render 'shared/dojo_letter_signup' %>
+    <%= render 'shared/social_buttons' %>
+  </section>  
+</div>

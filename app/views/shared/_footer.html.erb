@@ -2,7 +2,7 @@
   <h2 style="line-height: 30px;">
     <a class="footer-link" href="/" title="トップページに戻ります">Top</a>
     | <a class="footer-link" href="/kata"  title="道場情報まとめ「Kata」を見る">Kata</a>
-    | <a class="footer-link" href="/#news" title="最近のニュース「DojoLetter」を見る">News</a>
+    | <a class="footer-link" href="/news" title="最近のニュース「DojoLetter」を見る">News</a>
     | <a class="footer-link" href="/docs"  title="公式資料まとめ「Docs」を見る">資料</a>
     | <a class="footer-link" href="/charter" title="CoderDojo 憲章を見る">憲章</a>
     | <a class="footer-link" href="/stats"   title="CoderDojo の統計データを見る">統計</a>
@@ -16,7 +16,7 @@
   </h2>
 
   <h2>
-    <%= link_to news_url do %>
+    <%= link_to news_index_path do %>
       <i class="fa fa-newspaper-o fa-3x fa-fw" aria-hidden="true" title="News"></i>
     <% end %>
     <%= link_to facebook_page_url do %>
