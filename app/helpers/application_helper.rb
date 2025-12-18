@@ -218,7 +218,7 @@ module ApplicationHelper
 
     # Add preset Emoji to its prefix if news.title does not have Emoji.
     emoji = case news.url
-            when %r{coderdojo\.jp/podcasts}, %r{spotify\.com/pod/show/coderdojo-japan}
+            when %r{/podcasts/\d+}
               '📻'
             when %r{prtimes\.jp}
               '📢'
@@ -226,5 +226,14 @@ module ApplicationHelper
               '📰'
             end
     "#{emoji} #{news.title}"
+  end
+
+  def news_link_url(news)
+    # Convert absolute podcast URLs to relative paths for local development
+    if news.url.match?(%r{^https://coderdojo\.jp/podcasts/\d+$})
+      news.url.sub('https://coderdojo.jp', '')
+    else
+      news.url
+    end
   end
 end
