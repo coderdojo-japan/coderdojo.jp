@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-    @title = '☯️ CoderDojo ニュース ✉️'
+    @title = '☯️ CoderDojo ニュース 📰'
     @desc  = 'CoderDojo に関するお知らせの一覧ページです。'
     @url   = request.url
 
