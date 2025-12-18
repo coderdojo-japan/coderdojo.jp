@@ -35,9 +35,11 @@ RSpec.describe "News", type: :request do
       get news_index_path
       
       # 新しい順に表示されることを確認
-      news2_pos = response.body.index(@news2.title)
-      news1_pos = response.body.index(@news1.title)
-      news3_pos = response.body.index(@news3.title)
+      # format_news_title によってプリセット絵文字が追加される可能性があるため、
+      # タイトルの主要部分で位置を確認
+      news2_pos = response.body.index("テストニュース2")
+      news1_pos = response.body.index("テストニュース1")
+      news3_pos = response.body.index("テストニュース3")
       
       expect(news2_pos).to be < news1_pos
       expect(news1_pos).to be < news3_pos
@@ -46,9 +48,11 @@ RSpec.describe "News", type: :request do
     it "ニュースのタイトルとリンクを表示する" do
       get news_index_path
       
-      expect(response.body).to include(@news1.title)
+      # format_news_title によってプリセット絵文字が追加される可能性があるため、
+      # タイトルの主要部分が含まれていることを確認
+      expect(response.body).to include("テストニュース1")
       expect(response.body).to include(@news1.url)
-      expect(response.body).to include(@news2.title)
+      expect(response.body).to include("テストニュース2")
       expect(response.body).to include(@news2.url)
     end
 
