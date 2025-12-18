@@ -194,7 +194,7 @@
   <ul class="list" style="list-style: none;">
     <% @news_items.each do |news| %>
       <li>
-        <%= link_to format_news_title(news), news_link_url(news), target: '_blank' %>
+        <%= link_to news.formatted_title, news.link_url, target: '_blank' %>
       </li>
     <% end %>
   </ul>

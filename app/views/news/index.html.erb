@@ -16,7 +16,7 @@
         <% @news_items.each do |news| %>
           <article class="news-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
             <h3 style="margin-bottom: 10px;">
-              <%= link_to format_news_title(news), news.url, target: '_blank', rel: 'noopener' %>
+              <%= link_to news.formatted_title, news.link_url, target: '_blank', rel: 'noopener' %>
             </h3>
             <p class="news-meta" style="color: #666; font-size: 14px;">
               <i class="fa fa-calendar"></i>

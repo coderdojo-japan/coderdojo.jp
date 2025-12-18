@@ -76,4 +76,43 @@ RSpec.describe News, type: :model do
       end
     end
   end
+
+  describe '#formatted_title' do
+    it '先頭文字が絵文字ならそのまま返す' do
+      news = build(:news, title: '🔔 新着', url: 'https://news.coderdojo.jp/123')
+      expect(news.formatted_title).to eq '🔔 新着'
+    end
+
+    context '先頭文字が絵文字でない場合' do
+      it 'ポッドキャストのURLには📻を付与する' do
+        news = build(:news, title: 'エピソード33', url: 'https://coderdojo.jp/podcasts/33')
+        expect(news.formatted_title).to eq '📻 エピソード33'
+      end
+
+      it 'PR TIMESのURLには📢を付与する' do
+        news = build(:news, title: 'プレスリリース', url: 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html')
+        expect(news.formatted_title).to eq '📢 プレスリリース'
+      end
+
+      it 'その他のURLには📰を付与する' do
+        news = build(:news, title: '更新情報', url: 'https://news.coderdojo.jp/2025/12/06/dojoletter')
+        expect(news.formatted_title).to eq '📰 更新情報'
+      end
+    end
+  end
+
+  describe '#link_url' do
+    it 'ポッドキャストの絶対URLを相対パスに変換する' do
+      news = build(:news, url: 'https://coderdojo.jp/podcasts/33')
+      expect(news.link_url).to eq '/podcasts/33'
+    end
+
+    it 'その他のURLはそのまま返す' do
+      news = build(:news, url: 'https://news.coderdojo.jp/2025/12/06/dojoletter')
+      expect(news.link_url).to eq 'https://news.coderdojo.jp/2025/12/06/dojoletter'
+      
+      news2 = build(:news, url: 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html')
+      expect(news2.link_url).to eq 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html'
+    end
+  end
 end
