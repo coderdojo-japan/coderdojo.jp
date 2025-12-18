@@ -66,8 +66,18 @@ end
 def fetch_podcast_posts(rss_feed_url)
   feed = RSS::Parser.parse(rss_feed_url, false)
   feed.items.map do |item|
+    # タイトルの先頭3桁の数字から内部リンクを生成
+    # 例: "033 - タイトル" → /podcasts/33
+    # 例: "001 - タイトル" → /podcasts/1
+    unless item.title =~ /^(\d{3})\s/
+      raise "DojoCast episode number not found in title: #{item.title}"
+    end
+    
+    episode_number = $1.to_i  # 033 → 33, 001 → 1
+    internal_url = "https://coderdojo.jp/podcasts/#{episode_number}"
+    
     {
-      'url'          => item.link,
+      'url'          => internal_url,
       'title'        => item.title,
       'published_at' => item.pubDate.in_time_zone('Asia/Tokyo').iso8601
     }

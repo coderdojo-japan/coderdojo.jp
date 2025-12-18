@@ -213,7 +213,18 @@ module ApplicationHelper
   end
 
   def format_news_title(news)
-    has_emoji = news.title[0]&.match?(/[\p{Emoji}&&[^0-9#*]]/)
-    has_emoji ? news.title : "📰 #{news.title}"
+    has_custom_emoji = news.title[0]&.match?(/[\p{Emoji}&&[^0-9#*]]/)
+    return news.title if has_custom_emoji
+
+    # Add preset Emoji to its prefix if news.title does not have Emoji.
+    emoji = case news.url
+            when %r{coderdojo\.jp/podcasts}, %r{spotify\.com/pod/show/coderdojo-japan}
+              '📻'
+            when %r{prtimes\.jp}
+              '📢'
+            else
+              '📰'
+            end
+    "#{emoji} #{news.title}"
   end
 end
