@@ -104,7 +104,7 @@ namespace :news do
       TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
 
       podcast_items = fetch_podcast_posts(DOJO_CAST_FEED)
-      TASK_LOGGER.info("🎙️ DojoCast から #{podcast_items.size} 件を取得")
+      TASK_LOGGER.info("📻 DojoCast から #{podcast_items.size} 件を取得")
 
       items = dojo_news_items + prtimes_items + podcast_items
     end
