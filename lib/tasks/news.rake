@@ -6,6 +6,7 @@ TEST_NEWS_FEED = Rails.root.join('spec', 'fixtures', 'sample_news.rss').freeze
 DOJO_NEWS_FEED = 'https://news.coderdojo.jp/feed/'.freeze
 DOJO_NEWS_JSON = 'https://news.coderdojo.jp/wp-json/wp/v2/posts'.freeze
 PR_TIMES_FEED  = 'https://prtimes.jp/companyrdf.php?company_id=38935'.freeze
+DOJO_CAST_FEED = 'https://coderdojo.jp/podcasts.rss'.freeze
 
 NEWS_YAML_PATH = 'db/news.yml'.freeze
 NEWS_LOGS_PATH = 'log/news.log'.freeze
@@ -61,6 +62,28 @@ def fetch_prtimes_posts(rss_feed_url)
   end
 end
 
+# DojoCast ポッドキャスト RSS フィードから取得するメソッド
+def fetch_podcast_posts(rss_feed_url)
+  feed = RSS::Parser.parse(rss_feed_url, false)
+  feed.items.map do |item|
+    # タイトルの先頭3桁の数字から内部リンクを生成
+    # 例: "033 - タイトル" → /podcasts/33
+    # 例: "001 - タイトル" → /podcasts/1
+    unless item.title =~ /^(\d{3})\s/
+      raise "DojoCast episode number not found in title: #{item.title}"
+    end
+    
+    episode_number = $1.to_i  # 033 → 33, 001 → 1
+    internal_url = "https://coderdojo.jp/podcasts/#{episode_number}"
+    
+    {
+      'url'          => internal_url,
+      'title'        => item.title,
+      'published_at' => item.pubDate.in_time_zone('Asia/Tokyo').iso8601
+    }
+  end
+end
+
 namespace :news do
   desc "ニュースフィードを取得し、#{NEWS_YAML_PATH} を再構築（冪等）"
   task fetch: :environment do
@@ -83,14 +106,17 @@ namespace :news do
         }
       }
     else
-      # 本番環境: WordPress REST API + PR TIMES RSS
+      # 本番環境: WordPress REST API + PR TIMES RSS + Podcast RSS
       dojo_news_items = fetch_dojo_news_posts(DOJO_NEWS_JSON)
       TASK_LOGGER.info("📰 news.coderdojo.jp から #{dojo_news_items.size} 件を取得")
 
       prtimes_items = fetch_prtimes_posts(PR_TIMES_FEED)
       TASK_LOGGER.info("📢 PR TIMES から #{prtimes_items.size} 件を取得")
 
-      items = dojo_news_items + prtimes_items
+      podcast_items = fetch_podcast_posts(DOJO_CAST_FEED)
+      TASK_LOGGER.info("📻 DojoCast から #{podcast_items.size} 件を取得")
+
+      items = dojo_news_items + prtimes_items + podcast_items
     end
 
     # 3. 古い順にソートして ID を付与（ISO 8601 なら文字列のままソート可能）
