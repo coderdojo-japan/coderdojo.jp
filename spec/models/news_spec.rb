@@ -84,6 +84,16 @@ RSpec.describe News, type: :model do
     end
 
     context '先頭文字が絵文字でない場合' do
+      it 'タイトルに「寄贈」が含まれる場合は🎁を付与する' do
+        news = build(:news, title: 'ノートPC 233台を寄贈しました', url: 'https://news.coderdojo.jp/2025/12/18/pc-donation')
+        expect(news.formatted_title).to eq '🎁 ノートPC 233台を寄贈しました'
+      end
+
+      it 'ポッドキャストURLはタイトルの「寄贈」より優先される' do
+        news = build(:news, title: 'ポッドキャストで寄贈について話しました', url: 'https://coderdojo.jp/podcasts/50')
+        expect(news.formatted_title).to eq '📻 ポッドキャストで寄贈について話しました'
+      end
+
       it 'ポッドキャストのURLには📻を付与する' do
         news = build(:news, title: 'エピソード33', url: 'https://coderdojo.jp/podcasts/33')
         expect(news.formatted_title).to eq '📻 エピソード33'
