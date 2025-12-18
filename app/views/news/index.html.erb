@@ -4,13 +4,20 @@
 <% provide :meta_image, "/img/ogp-news.jpeg" %>
 
 <div class='container'>
-  <section class='news' style='padding: 50px 0px;'>
+  <section class='news' style='padding: 50px 0px 0px;'>
     <h2 class='text-center'><%= @title.html_safe %></h2>
 
-    <p class='text-center' style='padding-bottom: 50px;'>
+    <p class='text-center' style='padding-top: 30px;'>
       <%= @desc.html_safe %>
     </p>
-    
+  </section>
+
+  <section class="text-center list" style='margin-bottom: 30px;'>
+    <%= render 'shared/dojo_letter_signup' %>
+    <%= render 'shared/social_buttons' %>
+  </section>
+
+  <section class='news' style='padding: 50px 0px;'>
     <% if @news_items.any? %>
       <div class="news-list">
         <% @news_items.each do |news| %>
@@ -30,20 +37,8 @@
     <% end %>
   </section>
 
-  <%= render 'shared/dojo_letter_signup' %>
-
-  <div style="margin-bottom: 40px;">
-    <p style="color: #5F5F5F">
-      <small>
-        最新情報は 
-        <a href="https://news.coderdojo.jp" target="_blank" rel="noopener">CoderDojo Japan ブログ</a> や
-        <a href="https://www.facebook.com/groups/coderdojo.jp/" target="_blank" rel="noopener">Facebook グループ</a> 
-        でも配信しています! 📰✨
-      </small>
-    </p>
-  </div>
-
-  <section class="text-center list" style='margin-bottom: 30px;'>
+  <section class="text-center list" style='margin-bottom: 100px;'>
+    <%= render 'shared/dojo_letter_signup' %>
     <%= render 'shared/social_buttons' %>
-  </section>
+  </section>  
 </div>
