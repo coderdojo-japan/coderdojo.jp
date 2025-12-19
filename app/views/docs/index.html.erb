@@ -1,10 +1,10 @@
 <% provide :title, strip_tags(@title) %>
 <% provide :desc,  strip_tags(@desc)  %>
 <% provide :url,   @url %>
-<% provide :meta_image, "/img/ogp-docs.jpeg" %>
+<% provide :meta_image, "/img/ogp-docs.jpg" %>
 
 <section class="cover">
-  <%= lazy_image_tag 'docs_cover.jpg', alt: 'Cover Photo on Docs', min: false, class: 'cover-wide' %>
+  <%= lazy_image_tag '/img/ogp-docs.jpg', alt: 'Cover Photo on Docs', min: false, class: 'cover-wide' %>
 </section>
 
 <div class='container'>

@@ -1,9 +1,9 @@
 <% provide :title, strip_tags(@title) %>
 <% provide :desc,  strip_tags(@desc)  %>
 <% provide :url,   @url %>
-<% provide :meta_image, "/img/ogp-news.jpeg" %>
+<% provide :meta_image, "/img/ogp-news.jpg" %>
 
-<%= lazy_image_tag 'news_cover.jpg', alt: 'Cover Photo on News', class: 'cover-wide' %>
+<%= lazy_image_tag '/img/ogp-news.jpg', alt: 'Cover Photo on News', class: 'cover-wide' %>
 
 <div class='container'>
   <section class='news' style='padding: 50px 0px 0px;'>
