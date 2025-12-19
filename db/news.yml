@@ -1,4 +1,8 @@
 ---
+- id: 183
+  url: https://coderdojo.jp/podcasts/34
+  title: 034 - 2024年 CoderDojo Meetup with Bill Liao 後日談 【復刻版】
+  published_at: '2025-12-17T09:00:00+09:00'
 - id: 182
   url: https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/
   title: 米国系 IT 企業から CoderDojo へ、162 台のノート PC 寄贈
@@ -38,7 +42,7 @@
   published_at: '2025-08-12T13:00:02+09:00'
 - id: 173
   url: https://coderdojo.jp/podcasts/32
-  title: 032 - ノート PC の233台寄贈を支える工夫
+  title: 032 - 233台のノート PC 寄贈を支える工夫
   published_at: '2025-07-27T09:00:00+09:00'
 - id: 172
   url: https://news.coderdojo.jp/2025/07/14/233-laptops-to-coderdojo/
@@ -78,7 +82,7 @@
   published_at: '2025-02-10T13:00:55+09:00'
 - id: 163
   url: https://coderdojo.jp/podcasts/31
-  title: 031 - 馬場経ラジオ × CoderDojo Japan
+  title: 031 - 128台のノート PC 寄贈、後日談 with 馬場経ラジオ
   published_at: '2025-01-28T09:00:00+09:00'
 - id: 162
   url: https://news.coderdojo.jp/2025/01/14/dojoletter-vol-79-2024%e5%b9%b411%e6%9c%88%e5%8f%b7/
@@ -230,7 +234,7 @@
   published_at: '2023-01-01T11:00:59+09:00'
 - id: 125
   url: https://coderdojo.jp/podcasts/30
-  title: 030 - Micro:bit 教育財団 × CoderDojo
+  title: 030 - 1500台の micro:bit 寄贈、後日談 with Micro:bit 教育財団
   published_at: '2022-12-13T09:00:00+09:00'
 - id: 124
   url: https://coderdojo.jp/podcasts/29
