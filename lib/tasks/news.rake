@@ -142,7 +142,7 @@ namespace :news do
   end
 
 
-  desc "#{NEWS_YAML_PATH} からデータベースに upsert"
+  desc "#{NEWS_YAML_PATH} からデータベースに upsert (YAMLのIDを使用)"
   task upsert: :environment do
     TASK_LOGGER.info "==== START news:upsert ===="
 
@@ -151,9 +151,20 @@ namespace :news do
     updated_count = 0
 
     News.transaction do
+      # まず、同じURLだが異なるIDのレコードを削除
       news_items.each do |item|
-        news = News.find_or_initialize_by(url: item['url'])
+        existing_with_different_id = News.where(url: item['url']).where.not(id: item['id']).first
+        if existing_with_different_id
+          TASK_LOGGER.info "[News] Removing duplicate: ID:#{existing_with_different_id.id} (URL: #{item['url']}) to be replaced by ID:#{item['id']}"
+          existing_with_different_id.destroy
+        end
+      end
+
+      news_items.each do |item|
+        # YAMLのIDを使ってレコードを検索または初期化
+        news = News.find_or_initialize_by(id: item['id'])
         news.assign_attributes(
+          url:          item['url'],
           title:        item['title'],
           published_at: item['published_at']
         )
@@ -166,8 +177,15 @@ namespace :news do
           created_count += 1 if     is_new_record
           updated_count += 1 unless is_new_record
 
-          TASK_LOGGER.info "[News] #{news.published_at.to_date} #{news.title} (#{status})"
+          TASK_LOGGER.info "[News] ID #{format('%04d', news.id)}: #{news.published_at.to_date} #{news.title} (#{status})"
         end
+      end
+
+      # YAMLに存在しないレコードを削除
+      yaml_ids = news_items.map { |item| item['id'] }
+      deleted_count = News.where.not(id: yaml_ids).destroy_all.size
+      if deleted_count > 0
+        TASK_LOGGER.info "Deleted #{deleted_count} items that are not in YAML."
       end
     end
 
