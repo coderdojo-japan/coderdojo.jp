@@ -259,7 +259,10 @@ a>img {
 h2 {
   font-weight: 500;
 }
-h1,h2,h3,h4,h5,h6 { scroll-margin-top: 100px; }
+h1,h2,h3,h4,h5,h6 {
+  scroll-margin-top: 100px;
+  line-height: 1.7em;
+}
 
 .fontsize-bigger {
   font-size: 20px;
