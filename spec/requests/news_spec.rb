@@ -79,6 +79,41 @@ RSpec.describe "News", type: :request do
       )
     end
 
+    context "variant が設定されている場合" do
+      it "variant :pc が設定されていても JSON 形式でレスポンスを返す" do
+        # rack-user_agent gem が PC からのアクセスで variant :pc を設定する状況を再現
+        # set_request_variant をオーバーライドして variant を強制的に設定
+        allow_any_instance_of(NewsController).to receive(:set_request_variant) do |controller|
+          controller.request.variant = :pc
+        end
+        
+        get news_index_path(format: :json)
+        
+        expect(response).to have_http_status(:success)
+        expect(response.content_type).to match(/application\/json/)
+        
+        json = JSON.parse(response.body)
+        expect(json).to be_an(Array)
+        expect(json.length).to eq(2)
+      end
+
+      it "variant :smartphone が設定されていても JSON 形式でレスポンスを返す" do
+        # rack-user_agent gem がモバイルからのアクセスで variant :smartphone を設定する状況を再現
+        allow_any_instance_of(NewsController).to receive(:set_request_variant) do |controller|
+          controller.request.variant = :smartphone
+        end
+        
+        get news_index_path(format: :json)
+        
+        expect(response).to have_http_status(:success)
+        expect(response.content_type).to match(/application\/json/)
+        
+        json = JSON.parse(response.body)
+        expect(json).to be_an(Array)
+        expect(json.length).to eq(2)
+      end
+    end
+
     it "JSON形式でレスポンスを返す" do
       get news_index_path(format: :json)
       expect(response).to have_http_status(:success)
