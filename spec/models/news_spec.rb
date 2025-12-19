@@ -156,4 +156,26 @@ RSpec.describe News, type: :model do
       end
     end
   end
+
+  describe '#to_type' do
+    it 'coderdojo.jp/podcasts のURLは「ポッドキャスト」を返す' do
+      news = build(:news, url: 'https://coderdojo.jp/podcasts/33')
+      expect(news.to_type).to eq 'ポッドキャスト'
+    end
+
+    it 'prtimes.jp のURLは「プレスリリース」を返す' do
+      news = build(:news, url: 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html')
+      expect(news.to_type).to eq 'プレスリリース'
+    end
+
+    it 'news.coderdojo.jp のURLは「お知らせ」を返す' do
+      news = build(:news, url: 'https://news.coderdojo.jp/2025/12/06/dojoletter')
+      expect(news.to_type).to eq 'お知らせ'
+    end
+
+    it 'その他のURLは「ニュース」を返す' do
+      news = build(:news, url: 'https://example.com/article')
+      expect(news.to_type).to eq 'ニュース'
+    end
+  end
 end

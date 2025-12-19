@@ -40,6 +40,7 @@
             <p class="news-meta" style="color: #666; font-size: 14px;">
               <!--<i class="fa fa-calendar"></i>-->
               <%= l(news.published_at.to_date, format: :long) if news.published_at %>
+	      &ndash; <%= news.to_type %>
             </p>
           </article>
         <% end %>
