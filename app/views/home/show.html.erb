@@ -194,7 +194,16 @@
   <ul class="list" style="list-style: none;">
     <% @news_items.each do |news| %>
       <li>
-        <%= link_to news.formatted_title, news.link_url, target: '_blank' %>
+        <% if news.internal_link? %>
+          <%= link_to news.link_url do %>
+	    <%= news.formatted_title %>
+	  <% end %>
+        <% else %>
+          <%= link_to news.link_url, target: '_blank' do %>
+	    <%= news.formatted_title %>
+	    <small><small><i class="far fa-external-link"></i></small></small>
+	  <% end %>
+        <% end %>
       </li>
     <% end %>
   </ul>

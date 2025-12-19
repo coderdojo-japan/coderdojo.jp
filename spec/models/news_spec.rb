@@ -125,4 +125,35 @@ RSpec.describe News, type: :model do
       expect(news2.link_url).to eq 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html'
     end
   end
+
+  describe '#internal_link?' do
+    context '内部リンクの場合' do
+      it 'coderdojo.jpドメインのURLはtrueを返す' do
+        news = build(:news, url: 'https://coderdojo.jp/podcasts/33')
+        expect(news.internal_link?).to be true
+      end
+
+      it '相対パスで始まるURLはtrueを返す' do
+        news = build(:news, url: '/kata')
+        expect(news.internal_link?).to be true
+      end
+    end
+
+    context '外部リンクの場合' do
+      it 'news.coderdojo.jpサブドメインはfalseを返す' do
+        news = build(:news, url: 'https://news.coderdojo.jp/2025/12/06/dojoletter')
+        expect(news.internal_link?).to be false
+      end
+
+      it 'prtimes.jpドメインはfalseを返す' do
+        news = build(:news, url: 'https://prtimes.jp/main/html/rd/p/000000001.000038935.html')
+        expect(news.internal_link?).to be false
+      end
+
+      it '他の外部ドメインはfalseを返す' do
+        news = build(:news, url: 'https://example.com/article')
+        expect(news.internal_link?).to be false
+      end
+    end
+  end
 end

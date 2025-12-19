@@ -32,4 +32,9 @@ class News < ApplicationRecord
       url
     end
   end
+
+  def internal_link?
+    # Check if the link is internal (coderdojo.jp domain)
+    url.match?(%r{^https://coderdojo\.jp}) || url.start_with?('/')
+  end
 end
