@@ -10,7 +10,7 @@ RSpec.describe "News", type: :request do
         published_at: 2.days.ago
       )
       @news2 = News.create!(
-        title: "テストニュース2", 
+        title: "テストニュース2",
         url: "https://example.com/news2",
         published_at: 1.day.ago
       )
@@ -61,6 +61,59 @@ RSpec.describe "News", type: :request do
       get news_index_path
       
       expect(response.body).to include("現在、ニュース記事はありません")
+    end
+  end
+
+  describe "GET /news.json" do
+    before do
+      # テスト用のニュースデータを作成
+      @news1 = News.create!(
+        title: "テストニュース1",
+        url: "https://example.com/news1",
+        published_at: 2.days.ago
+      )
+      @news2 = News.create!(
+        title: "テストニュース2", 
+        url: "https://coderdojo.jp/podcasts/2",
+        published_at: 1.day.ago
+      )
+    end
+
+    it "JSON形式でレスポンスを返す" do
+      get news_index_path(format: :json)
+      expect(response).to have_http_status(:success)
+      expect(response.content_type).to match(/application\/json/)
+    end
+
+    it "ニュースデータをJSON形式で返す" do
+      get news_index_path(format: :json)
+      json = JSON.parse(response.body)
+      
+      expect(json).to be_an(Array)
+      expect(json.length).to eq(2)
+      
+      # 新しい順に返されることを確認
+      expect(json[0]["title"]).to eq("テストニュース2")
+      expect(json[1]["title"]).to eq("テストニュース1")
+    end
+
+    it "各ニュースアイテムに必要な属性が含まれる" do
+      get news_index_path(format: :json)
+      json = JSON.parse(response.body)
+      
+      first_news = json[0]
+      expect(first_news).to have_key("id")
+      expect(first_news).to have_key("title")
+      expect(first_news).to have_key("url")
+      expect(first_news).to have_key("published_at")
+    end
+
+    it "ニュースがない場合は空の配列を返す" do
+      News.destroy_all
+      get news_index_path(format: :json)
+      
+      json = JSON.parse(response.body)
+      expect(json).to eq([])
     end
   end
 end

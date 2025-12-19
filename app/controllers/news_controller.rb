@@ -6,5 +6,10 @@ class NewsController < ApplicationController
 
     # データベースからニュースデータを取得（最新順）
     @news_items = News.recent
+
+    respond_to do |format|
+      format.html # デフォルトのHTMLビュー
+      format.json { render json: @news_items }
+    end
   end
 end
