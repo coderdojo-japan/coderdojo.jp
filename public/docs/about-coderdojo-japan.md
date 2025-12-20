@@ -1,4 +1,4 @@
-# ☯️ 一般社団法人 CoderDojo Japan について {#top}
+# ☯️ 一般社団法人 CoderDojo Japan とは {#top}
 
 <img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' style='margin-bottom: 30px;' />
 
