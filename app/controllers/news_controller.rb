@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-    @title = '📰️ CoderDojo ニュース'
+    @title = '📰 CoderDojo ニュース'
     @desc  = 'CoderDojo に関するお知らせの一覧ページです。'
     @url   = request.url
 
@@ -9,7 +9,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       format.html # デフォルトのHTMLビュー
-      format.json { 
+      format.json {
         # JSON レスポンス時は variant を無視する
         # rack-user_agent gem による variant 設定が JSON レスポンスに影響しないようにする
         request.variant = nil
