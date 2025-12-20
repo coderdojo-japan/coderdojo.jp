@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
   def index
     @title = '📰 CoderDojo ニュース'
-    @desc  = 'CoderDojo に関するお知らせの一覧ページです。'
+    @desc  = '<a href="/about">CoderDojo Japan</a> からの、<br class="ignore-pc">お知らせの一覧ページです。'
     @url   = request.url
 
     # データベースからニュースデータを取得（最新順）
