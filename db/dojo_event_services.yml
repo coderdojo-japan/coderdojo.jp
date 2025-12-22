@@ -27,7 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
-# 新大阪(大阪府大阪市)
+# SAGA @ 駅前中央（佐賀県佐賀市）
+- dojo_id: 349
+  name: connpass
+  group_id: 17204
+  url: https://coderdojosaga-ekimaechuo.connpass.com/
+
+# 新大阪（大阪府大阪市）
 - dojo_id: 348
   name: connpass
   group_id: 17055
