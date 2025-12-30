@@ -186,23 +186,6 @@ $ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
 ```
 
 
-<!--
-### :cloud: Development with Scrivito
-
-(:warning: *NOTE: Scrivito チームと相談し、今後別の仕組みに置き換わる予定です*)
-
-Some pages require [Scrivito](https://scrivito.com/), Professional Cloud-Based Rails CMS, such as:
-
-- `/kata`
-- ~~/news/*~~ (Outdated)
-- `/sotechsha/*`
-
-CMS enables wider people to contribute to editing contents, but on the other hand, this requires Scrivito API Keys for engineers to join developing Scrivito-used pages like above.
-
-We use `SCRIVITO_TENANT` and `SCRIVITO_API_KEY` keys in production, but they are not required in development. If you find any problem that needs them report it to [GitHub Issues](https://github.com/coderdojo-japan/coderdojo.jp/issues).
--->
-
-
 <div id='howto-develop-docs'></div><br>
 
 ## [:books:](#howto-develop-docs) 4. 他、開発に関する資料
