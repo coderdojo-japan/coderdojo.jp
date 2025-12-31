@@ -58,6 +58,13 @@
         </th>
         <th>
           <small>
+            🔗
+            <br class='ignore-pc'>
+            URL
+          </small>
+        </th>
+        <th>
+          <small>
             📝
             <br class='ignore-pc'>
             ノート
@@ -127,6 +134,14 @@
               <%= link_to search_url, target: "_blank", rel: "noopener" do %>
                 Search
 		<small><i class="far fa-external-link"></i></small>
+              <% end %>
+            </small>
+          </td>
+          <td>
+            <small>
+              <%= link_to dojo[:url], target: "_blank" do %>
+                Jump
+                <small><i class="far fa-external-link"></i></small>
               <% end %>
             </small>
           </td>
