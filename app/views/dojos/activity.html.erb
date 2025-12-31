@@ -131,7 +131,7 @@
             <small>
               <% search_query = "CoderDojo #{dojo[:name]}" %>
               <% search_url = "https://www.google.co.jp/search?q=#{URI.encode_www_form_component(search_query)}" %>
-              <%= link_to search_url, target: "_blank", rel: "noopener" do %>
+              <%= link_to search_url, target: "_blank" do %>
                 Search
 		<small><i class="far fa-external-link"></i></small>
               <% end %>
