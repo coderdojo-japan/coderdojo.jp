@@ -5,8 +5,8 @@ class Dojo < ApplicationRecord
   NUM_OF_TOTAL_EVENTS  = "10,000"
   NUM_OF_TOTAL_NINJAS  = "62,000"
   DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yml')
-  
-  # 1年以上イベント開催していない道場を判定する閾値
+
+  # アクティブかどうかを判定する直近の活動の閾値
   INACTIVE_THRESHOLD = 1.year
 
   belongs_to :prefecture
@@ -19,16 +19,16 @@ class Dojo < ApplicationRecord
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
   scope :active,        -> { where(inactivated_at: nil) }
   scope :inactive,      -> { where.not(inactivated_at: nil) }
-  
+
   # ソート用スコープ: アクティブな道場を先に表示
   scope :order_by_active_status, -> {
     order(Arel.sql('CASE WHEN inactivated_at IS NULL THEN 0 ELSE 1 END'))
   }
-  
+
   # 新しいスコープ: 特定の日時点でアクティブだったDojoを取得
-  scope :active_at, ->(date) { 
+  scope :active_at, ->(date) {
     where('created_at <= ?', date)
-      .where('inactivated_at IS NULL OR inactivated_at > ?', date) 
+      .where('inactivated_at IS NULL OR inactivated_at > ?', date)
   }
 
   validates :name,        presence: true, length: { maximum: 50 }
@@ -88,32 +88,32 @@ class Dojo < ApplicationRecord
       ]
     end
   end
-  
+
   # インスタンスメソッド
   def active?
     inactivated_at.nil?
   end
-  
+
   def active_at?(date)
     created_at <= date && (inactivated_at.nil? || inactivated_at > date)
   end
-  
+
   # 再活性化メソッド
   def reactivate!
     if inactivated_at.present?
       # 非活動期間を note に記録
       inactive_period = "#{inactivated_at.strftime('%Y-%m-%d')}〜#{Date.today}"
-      
+
       if note.present?
         self.note += "\n非活動期間: #{inactive_period}"
       else
         self.note = "非活動期間: #{inactive_period}"
       end
     end
-    
+
     update!(inactivated_at: nil)
   end
-  
+
   private
 
   # Now 6+ tags are available since this PR:
