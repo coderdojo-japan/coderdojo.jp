@@ -31,7 +31,7 @@ RSpec.describe 'Docs', type: :request do
       it('responds with 200 OK')  { expect(response).to have_http_status(:success) }
       it('contains Google Forms') { expect(response.body).to include('<iframe') }
       it('contains Google Forms URL') { expect(response.body).to include('docs.google.com/forms') }
-      it('has no raw CONSTANT name')  { expect(response.body).not_to include('{{ INACTIVE_THRESHOLD }}') }
+      it('has no raw CONSTANT name')  { expect(response.body).not_to include('{{ INACTIVE_THRESHOLD_IN_MONTH }}') }
     end
   end
 end
