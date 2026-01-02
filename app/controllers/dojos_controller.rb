@@ -11,10 +11,10 @@ class DojosController < ApplicationController
           flash[:inline_alert] = "指定された年は無効です。2012年から#{Date.current.year}年の間で指定してください。"
           return redirect_to dojos_path(anchor: 'table')
         end
-        
+
         @selected_year = year
         year_end = Time.zone.local(@selected_year).end_of_year
-        
+
         # その年末時点でアクティブだった道場を取得
         dojos_scope = Dojo.active_at(year_end)
         @page_title = "#{@selected_year}年末時点のCoderDojo一覧"
@@ -26,7 +26,7 @@ class DojosController < ApplicationController
       # yearパラメータなしの場合（既存の実装そのまま）
       dojos_scope = Dojo.all
     end
-    
+
     @dojos = []
     dojos_scope.includes(:prefecture).order_by_active_status.order(order: :asc).each do |dojo|
       # 年が選択されている場合は、その年末時点でのアクティブ状態を判定
@@ -38,7 +38,7 @@ class DojosController < ApplicationController
       else
         dojo.active?
       end
-      
+
       @dojos << {
         id:          dojo.id,
         url:         dojo.url,
@@ -53,10 +53,10 @@ class DojosController < ApplicationController
         inactivated_at: dojo.inactivated_at,  # CSV用に追加
       }
     end
-    
+
     # counter合計を計算（/statsとの照合用）
     @counter_sum = @dojos.sum { |d| d[:counter] }
-    
+
     # 情報メッセージを設定
     if @selected_year
       # /statsページと同じ計算方法を使用
@@ -64,14 +64,14 @@ class DojosController < ApplicationController
       year_begin = Time.zone.local(@selected_year).beginning_of_year
       year_end = Time.zone.local(@selected_year).end_of_year
       new_dojos_count = Dojo.where(created_at: year_begin..year_end).sum(:counter)
-      
+
       # 合計数 = その年末時点でアクティブだったDojoのcounter合計
       total_dojos_count = Dojo.active_at(year_end).sum(:counter)
-      
+
       # 表示用の日付テキスト
       display_date = "#{@selected_year}年末"
       display_date = Date.current.strftime('%Y年%-m月%-d日') if @selected_year == Date.current.year
-      
+
       flash.now[:inline_info] = "#{display_date}時点のアクティブな道場を表示中<br>（開設数: #{new_dojos_count} / 合計数: #{total_dojos_count}）".html_safe
     else
       # 全期間表示時の情報メッセージ
@@ -111,34 +111,34 @@ class DojosController < ApplicationController
   def activity
     # ビューで使用するための閾値をインスタンス変数に設定（モデルから取得）
     @inactive_threshold = Dojo::INACTIVE_THRESHOLD_IN_MONTH
-    
+
     @latest_event_by_dojos = []
     Dojo.active.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
       # YYYY-MM-DD、YYYY/MM/DD、または YYYY年MM月DD日 形式の日付を抽出
       date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2}|\d{4}年\d{1,2}月\d{1,2}日)/)
-      
+
       latest_event = dojo.event_histories.newest.first
-      
+
       @latest_event_by_dojos << {
         id:         dojo.id,
         name:       dojo.name,
         note:       dojo.note,
         url:        dojo.url,
         created_at: dojo.created_at,  # 掲載日（/dojos と同じ）
-        
+
         # 直近の開催日（イベント履歴がある場合のみ）
-        latest_event_at:  latest_event.nil? ? nil : latest_event.evented_at,
-        latest_event_url: latest_event.nil? ? nil : latest_event.event_url,
-        
+        latest_event_at:  latest_event&.evented_at,
+        latest_event_url: latest_event&.event_url,
+
         # note内の日付とリンク（fallback用）
         note_date: parse_date_from_note(date_in_note),
-        note_link: link_in_note.nil? ? nil : link_in_note.to_s
+        note_link: link_in_note&.to_s
       }
     end
 
     # Sort by latest event date (or created_at if no events) && Dojo's order if same date
-    @latest_event_by_dojos.sort_by! do |dojo| 
+    @latest_event_by_dojos.sort_by! do |dojo|
       sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
       [sort_date, dojo[:order]]
     end
@@ -148,14 +148,14 @@ class DojosController < ApplicationController
 
   def parse_date_from_note(date_match)
     return nil if date_match.nil?
-    
+
     date_string = date_match.to_s
-    
+
     # 日本語形式の日付を標準形式に変換（例: 2025年8月24日 → 2025-08-24）
     if date_string.include?('年')
       date_string = date_string.gsub(/(\d{4})年(\d{1,2})月(\d{1,2})日/, '\1-\2-\3')
     end
-    
+
     Time.zone.parse(date_string)
   rescue ArgumentError
     nil

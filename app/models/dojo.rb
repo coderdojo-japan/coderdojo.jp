@@ -104,11 +104,7 @@ class Dojo < ApplicationRecord
       # 非活動期間を note に記録
       inactive_period = "#{inactivated_at.strftime('%Y-%m-%d')}〜#{Date.today}"
 
-      if note.present?
-        self.note += "\n非活動期間: #{inactive_period}"
-      else
-        self.note = "非活動期間: #{inactive_period}"
-      end
+      self.note = note.present? ? "#{note}\n非活動期間: #{inactive_period}" : "非活動期間: #{inactive_period}"
     end
 
     update!(inactivated_at: nil)
