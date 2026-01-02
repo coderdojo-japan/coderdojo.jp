@@ -7,7 +7,7 @@ class Dojo < ApplicationRecord
   DOJO_INFO_YAML_PATH = Rails.root.join('db', 'dojos.yml')
 
   # アクティブかどうかを判定する直近の活動の閾値
-  INACTIVE_THRESHOLD = 1.year
+  INACTIVE_THRESHOLD_IN_MONTH = 12.months
 
   belongs_to :prefecture
   has_many   :dojo_event_services, dependent: :destroy
