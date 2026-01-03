@@ -129,20 +129,20 @@
             </small>
           </td>
           <td>
-            <small>
-              <% search_query = "CoderDojo #{dojo[:name]}" %>
-              <% search_url = "https://www.google.co.jp/search?q=#{URI.encode_www_form_component(search_query)}" %>
-              <%= link_to search_url, target: "_blank" do %>
-                Search
-		<small><i class="far fa-external-link"></i></small>
-              <% end %>
-            </small>
+            <small><small>
+              <% search_query = URI.encode_www_form(q: "CoderDojo #{dojo[:name].split('@').first.strip}") %>
+              <% search_range = URI.encode_www_form(tbs: "qdr:m12") # 過去12ヶ月の検索結果 %>
+              <% search_url   = "https://www.google.co.jp/search?" + search_query %>
+	      
+              <%= link_to '全期間', [search_url].join,                    target: "_blank" %><br>
+              <%= link_to '12ヶ月', [search_url, search_range].join('&'), target: "_blank" %>
+            </small></small>
           </td>
           <td>
             <small>
               <%= link_to dojo[:url], target: "_blank" do %>
                 Jump
-                <small><i class="far fa-external-link"></i></small>
+                <small><small><i class="far fa-external-link"></i></small></small>
               <% end %>
             </small>
           </td>
