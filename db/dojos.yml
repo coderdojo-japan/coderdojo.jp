@@ -982,6 +982,8 @@
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
+  inactivated_at: '2025-02-24'
+  note: Last sessiono confirmed @ 2024/02/24 https://www.facebook.com/coderdojourayasu/posts/pfbid06TXfFAg3X8onDATXvDud1RKTL6kFDQBKApTCMgYoZN7hGxRkZ2MYoJo75J1fcEY6l?locale=ja_JP
   name: 浦安
   prefecture_id: 12
   url: http://urayasu.coderdojo.chiba.jp/
