@@ -15,8 +15,8 @@ module DojoHelper
   def truncate_with_preserved_links(text, length: 60)
     return text if text.blank?
     
-    # まずリンクを自動検出してHTMLに変換
-    html_with_links = Rinku.auto_link(text)
+    # まずリンクを自動検出してHTMLに変換（target="_blank"を追加）
+    html_with_links = Rinku.auto_link(text, :all, 'target="_blank"')
     
     # HTMLをパースする
     doc = Nokogiri::HTML::DocumentFragment.parse(html_with_links)
@@ -50,9 +50,9 @@ module DojoHelper
         remaining_length = length - current_length
         
         if link_text.length > remaining_length
-          # リンクのテキスト部分を切り詰める（href属性は保持）
+          # リンクのテキスト部分を切り詰める（href属性とtarget属性を保持）
           truncated_text = link_text[0, remaining_length] + "..."
-          result += %Q(<a href="#{node['href']}">#{truncated_text}</a>)
+          result += %Q(<a href="#{node['href']}" target="_blank">#{truncated_text}</a>)
           break
         else
           result += node.to_html
