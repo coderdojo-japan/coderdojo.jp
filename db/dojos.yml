@@ -3316,6 +3316,7 @@
 - id: 35
   order: '292010'
   created_at: '2014-10-26'
+  note: Active for years. 奈良・生駒・平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
   name: 奈良
   prefecture_id: 29
   url: https://coderdojo-nara.github.io/
@@ -3329,7 +3330,7 @@
 - id: 36
   order: '292095'
   created_at: '2016-04-25'
-  note: Active - 奈良/生駒/平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
+  note: Active for years. 奈良・生駒・平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
   name: 生駒
   prefecture_id: 29
   url: https://nara-coderdojo.github.io/
@@ -3354,6 +3355,7 @@
 - id: 294
   order: '293423'
   created_at: '2022-12-12'
+  note: Active for years. 奈良・生駒・平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
   name: 平群
   prefecture_id: 29
   url: https://nara-coderdojo.github.io/
