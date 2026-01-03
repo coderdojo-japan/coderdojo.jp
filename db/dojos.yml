@@ -457,6 +457,7 @@
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
+  note: "Active for years. Google フォームでイベント管理"
   name: つくば
   prefecture_id: 8
   url: https://coderdojo-tsukuba.com/
