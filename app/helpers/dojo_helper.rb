@@ -26,6 +26,8 @@ module DojoHelper
       display_text = link.text
       # http://, https:// を削除（\A で文字列の先頭のみマッチ）
       display_text = display_text.gsub(/\Ahttps?:\/\//, '')
+      # www. を削除（\A で文字列の先頭のみマッチ）
+      display_text = display_text.gsub(/\Awww\./, '')
       # 末尾のスラッシュを削除（\z で文字列の末尾のみマッチ）
       display_text = display_text.gsub(/\/\z/, '')
       link.content = display_text

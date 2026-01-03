@@ -377,24 +377,28 @@ RSpec.describe "Dojos", type: :request do
       expect(response.body).to include("道場名")
     end
     
-    it "displays URLs without http:// or https:// in note column" do
+    it "displays URLs without http://, https://, and www. in note column" do
       # URLを含むnoteを持つ道場を作成
       create(:dojo, 
         name: "Test Dojo",
-        note: "Active https://example.com/ and http://test.com/",
+        note: "Active https://www.example.com/ and http://www.example.net/ and https://example.org/",
         inactivated_at: nil
       )
       
       get activity_dojos_path
       
-      # ノート欄の表示テキストに http:// や https:// が含まれないことを確認
+      # ノート欄の表示テキストに http://, https://, www. が含まれないことを確認
       doc = Nokogiri::HTML(response.body)
       note_cells = doc.css('td.url-cell')
       
-      test_cell = note_cells.find { |cell| cell.text.include?("example.com") }
+      test_cell = note_cells.find { |cell| cell.text.include?("example") }
       expect(test_cell).not_to be_nil
       expect(test_cell.text).not_to include("https://")
       expect(test_cell.text).not_to include("http://")
+      expect(test_cell.text).not_to include("www.")
+      # リンクは保持されていることを確認
+      expect(test_cell.to_html).to include('href="https://www.example.com/"')
+      expect(test_cell.to_html).to include('href="http://www.example.net/"')
     end
   end
 
