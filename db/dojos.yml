@@ -1964,6 +1964,8 @@
 - id: 127
   order: '152064'
   created_at: '2018-02-17'
+  inactivated_at: '2023-01-10'
+  note: Last session confirmed was 2022-01-10 https://x.com/TINKER_KIDS/status/1480429555576090625
   name: 新発田
   prefecture_id: 15
   url: http://tinkerkids.jp/coderdojo.html
