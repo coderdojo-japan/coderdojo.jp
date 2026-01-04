@@ -93,6 +93,8 @@ module DojoHelper
 
   # 記録日を取得（note_date と latest_event_at のより新しい方）
   def get_record_date(dojo)
+    # compact で nil を除去してから max を取ることで、
+    # 片方または両方が nil でも安全に処理できる
     [dojo[:note_date], dojo[:latest_event_at]].compact.max
   end
 
