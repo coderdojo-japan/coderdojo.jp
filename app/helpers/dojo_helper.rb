@@ -123,7 +123,7 @@ module DojoHelper
   # 記録日のリンクを生成
   def link_to_record_date(dojo)
     record_date = get_record_date(dojo)
-    return content_tag(:span, '-', style: 'color: #999;') unless record_date
+    return content_tag(:span, '-') unless record_date
     
     # どちらの日付を使用しているか判定
     if dojo[:note_date] && dojo[:latest_event_at]
@@ -161,7 +161,7 @@ module DojoHelper
     days_passed = days_passed_from_record_date(dojo)
     
     if days_passed.nil?
-      content_tag(:span, '-', style: 'color: #999;')
+      content_tag(:span, '-')
     else
       expired = record_date_expired?(dojo)
       content = "#{days_passed} 日"
