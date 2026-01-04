@@ -797,6 +797,8 @@
 - id: 159
   order: '121003'
   created_at: '2018-12-02'
+  inactivated_at: '2025-04-20'
+  note: 2024-04-20 https://www.facebook.com/CoderDojoTOKE/posts/pfbid02jsCuPajVr3u88nqS8ebcxxBh3v96C21NJwTdPFc2vy1q9UrJo3UsXeHxQWcjVmLcl
   name: 土気
   prefecture_id: 12
   url: https://www.facebook.com/CoderDojoTOKE/
