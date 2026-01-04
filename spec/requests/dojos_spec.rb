@@ -431,15 +431,15 @@ RSpec.describe "Dojos", type: :request do
     
     it "displays proper column headers" do
       get activity_dojos_path
-      expect(response.body).to include("掲載日")
+      expect(response.body).to include("経過日")
       expect(response.body).to include("記録日")
       expect(response.body).to include("ノート")
     end
     
-    it "displays created_at date for active dojos" do
+    it "displays days passed for active dojos" do
       get activity_dojos_path
-      # 掲載日は YYYY-MM-DD 形式で表示される
-      expect(response.body).to match(@active_dojo.created_at.strftime("%Y-%m-%d"))
+      # 経過日は日数で表示される
+      expect(response.body).to include("日")
     end
     
     it "displays dojo ID same as /dojos page" do

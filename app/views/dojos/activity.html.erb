@@ -19,7 +19,7 @@
     <div class='form__terms list'>
       <ul style='list-style-type: "\2713\0020"; font-size: smaller;'>
 	<li>「記録日」は<%= link_to '統計情報 (開催数)',  stats_path %> や活動の確認/記録日を表示しています。</li>
-	<li>「掲載日」は<%= link_to '統計情報 (道場別) ', dojos_path %> と同じロジックで表示しています。</li>
+	<li>「経過日」は記録日からの経過日数（<%= link_to '閾値', signup_path(anchor: 'terms') %>の確認用）を表示しています。</li>
 	<li>「記録日」は <a href='https://doorkeeper.jp/'>Doorkeeper</a> と <a href='http://connpass.com/'>connpass</a> の場合、自動で更新されます。</li>
       </ul>
     </div>
@@ -45,9 +45,9 @@
         </th>
         <th>
           <small>
-            🗾
+            ⏱️
             <br class='ignore-pc'>
-            <%= link_to '掲載日', signup_path %>
+            <%= link_to '経過日', signup_path(anchor: 'terms') %>
           </small>
         </th>
         <th>
@@ -126,7 +126,31 @@
             </small>
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
-            <small><%= dojo[:created_at].strftime("%Y-%m-%d") %></small>
+            <small>
+              <% 
+                # 記録日を決定（note_date と latest_event_at のより新しい方）
+                record_date = nil
+                if dojo[:note_date] && dojo[:latest_event_at]
+                  record_date = dojo[:note_date] > dojo[:latest_event_at] ? dojo[:note_date] : dojo[:latest_event_at]
+                elsif dojo[:note_date]
+                  record_date = dojo[:note_date]
+                elsif dojo[:latest_event_at]
+                  record_date = dojo[:latest_event_at]
+                end
+                
+                if record_date
+                  # 経過日数を計算
+                  days_passed = (Date.current - record_date.to_date).to_i
+                  expired = days_passed >= 365 && !dojo[:note]&.include?('Active')
+              %>
+                <span class="<%= 'expired' if expired %>">
+                  <%= days_passed %> 日
+                </span>
+              <% else %>
+                <!-- 記録日がない場合 -->
+                <span style="color: #999;">-</span>
+              <% end %>
+            </small>
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><small>
