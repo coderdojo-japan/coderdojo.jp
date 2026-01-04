@@ -346,10 +346,82 @@ RSpec.describe "Dojos", type: :request do
       expect(response.body).to include("道場別の活動状況まとめ")
     end
     
-    it "includes only active dojos" do
+    it "includes both active and inactive dojos" do
       get activity_dojos_path
       expect(response.body).to include(@active_dojo.name)
-      expect(response.body).not_to include(@inactive_dojo.name)
+      expect(response.body).to include(@inactive_dojo.name)
+    end
+    
+    it "displays inactive dojos with inactive-item class" do
+      get activity_dojos_path
+      doc = Nokogiri::HTML(response.body)
+      
+      # 非アクティブな道場の行を探す（リンク内にある名前を探す）
+      inactive_link = doc.xpath("//a[contains(., '#{@inactive_dojo.name}')]").first
+      expect(inactive_link).not_to be_nil
+      
+      # そのリンクを含む行（tr）を取得
+      inactive_row = inactive_link.xpath("ancestor::tr").first
+      expect(inactive_row).not_to be_nil
+      
+      # その行のすべてのセルに inactive-item クラスがあることを確認
+      inactive_cells = inactive_row.css('td')
+      expect(inactive_cells.all? { |cell| cell['class']&.include?('inactive-item') }).to be true
+    end
+    
+    it "sorts inactive dojos by latest event date in descending order" do
+      # 複数の非アクティブな道場を作成（異なる作成日で）
+      older_inactive_dojo = create(:dojo,
+        name: "Older Inactive Dojo",
+        created_at: 2.years.ago,  # より古い作成日
+        inactivated_at: 6.months.ago
+      )
+      
+      newer_inactive_dojo = create(:dojo,
+        name: "Newer Inactive Dojo",  
+        created_at: 1.year.ago,  # より新しい作成日
+        inactivated_at: 3.months.ago
+      )
+      
+      # db/static_event_histories.yml の形式に合わせてEventHistory を作成
+      # より古いイベント
+      EventHistory.create!(
+        dojo_id: older_inactive_dojo.id,
+        dojo_name: older_inactive_dojo.name,
+        event_url: 'https://example.com/event1',
+        evented_at: 8.months.ago,
+        participants: 10,
+        service_name: 'static_yml',
+        service_group_id: 'static',
+        event_id: 1
+      )
+      
+      # より新しいイベント
+      EventHistory.create!(
+        dojo_id: newer_inactive_dojo.id,
+        dojo_name: newer_inactive_dojo.name,
+        event_url: 'https://example.com/event2',
+        evented_at: 4.months.ago,  # より最近のイベント
+        participants: 15,
+        service_name: 'static_yml',
+        service_group_id: 'static',
+        event_id: 2
+      )
+      
+      get activity_dojos_path
+      doc = Nokogiri::HTML(response.body)
+      
+      # 全ての道場の名前を取得（テーブルの最初のセルのリンクから）
+      dojo_links = doc.css('table tr td:first-child a')
+      dojo_names = dojo_links.map(&:text).map(&:strip)
+      
+      # 非アクティブな道場の中で、newer_inactive_dojo が older_inactive_dojo より先に表示されることを確認
+      newer_index = dojo_names.find_index { |name| name.include?(newer_inactive_dojo.name) }
+      older_index = dojo_names.find_index { |name| name.include?(older_inactive_dojo.name) }
+      
+      expect(newer_index).not_to be_nil
+      expect(older_index).not_to be_nil
+      expect(newer_index).to be < older_index
     end
     
     it "redirects from old URL /events/latest" do
