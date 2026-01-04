@@ -644,9 +644,9 @@ RSpec.describe "Dojos", type: :request do
       # Extract just the 記録日 column to check the date display
       td_matches = dojo_row.scan(/<td[^>]*>(.*?)<\/td>/m)
       
-      # Based on debug output: td_matches[1] is the 記録日 column
+      # Based on debug output: td_matches[0] is the 記録日 column (列順変更後)
       # (道場名 column seems to be skipped in regex due to complex link structure)
-      event_date_column = td_matches[1]&.first # 記録日 column
+      event_date_column = td_matches[0]&.first # 記録日 column
       
       expect(event_date_column).not_to be_nil, "Could not find 記録日 column"
       
