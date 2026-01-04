@@ -4221,6 +4221,8 @@
 - id: 244
   order: '472115'
   created_at: '2020-02-25'
+  inactivated_at: '2023-04-07'
+  note: 2022-04-07 https://coderdojo-okinawa-pia.hatenablog.com/archive/2022/04/07
   name: 沖縄@ぴあ
   prefecture_id: 47
   url: https://coderdojo-okinawa-pia.hatenablog.com/
