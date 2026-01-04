@@ -143,6 +143,11 @@ class DojosController < ApplicationController
       }
     end
 
+    # 同じイベントサービスを共有している道場の開催日を同期
+    # 生駒 (ID: 36) と平群 (ID: 294) は奈良 (ID: 35) と同じ connpass を使用
+    sync_event_date(36, 35)  # 生駒は奈良の開催日を参照
+    sync_event_date(294, 35) # 平群は奈良の開催日を参照
+
     # アクティブな道場と非アクティブな道場を分けてソート
     active_dojos   = @latest_event_by_dojos.select { |d| d[:is_active] }
     inactive_dojos = @latest_event_by_dojos.reject { |d| d[:is_active] }
@@ -164,6 +169,19 @@ class DojosController < ApplicationController
   end
 
   private
+
+  # 指定された道場の開催日を別の道場の開催日と同期する
+  # @param target_dojo_id [Integer] 更新対象の道場ID
+  # @param source_dojo_id [Integer] 参照元の道場ID
+  def sync_event_date(target_dojo_id, source_dojo_id)
+    source_dojo = @latest_event_by_dojos.find { |d| d[:id] == source_dojo_id }
+    target_dojo = @latest_event_by_dojos.find { |d| d[:id] == target_dojo_id }
+
+    if source_dojo && target_dojo
+      target_dojo[:latest_event_at]  = source_dojo[:latest_event_at]
+      target_dojo[:latest_event_url] = source_dojo[:latest_event_url]
+    end
+  end
 
   def parse_date_from_note(date_match)
     return nil if date_match.nil?
