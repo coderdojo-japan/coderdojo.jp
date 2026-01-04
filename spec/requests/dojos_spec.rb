@@ -432,7 +432,7 @@ RSpec.describe "Dojos", type: :request do
     it "displays proper column headers" do
       get activity_dojos_path
       expect(response.body).to include("掲載日")
-      expect(response.body).to include("開催日")
+      expect(response.body).to include("記録日")
       expect(response.body).to include("ノート")
     end
     
@@ -530,16 +530,16 @@ RSpec.describe "Dojos", type: :request do
       
       dojo_row = dojo_row_match[0]
       
-      # The 開催日 (event date) column should show the newer note date (2025-03-16)
+      # The 記録日 (recorded date) column should show the newer note date (2025-03-16)
       # not the older event history date (2017-03-12)
       expect(dojo_row).to include("2025-03-16"), 
-        "Expected to see note date 2025-03-16 in 開催日 column, but found: #{dojo_row}"
+        "Expected to see note date 2025-03-16 in 記録日 column, but found: #{dojo_row}"
       
       expect(dojo_row).not_to include("2017-03-12"), 
         "Should not show old event history date 2017-03-12 when newer note date exists"
     end
 
-    it "should link to note URL when displaying note date in 開催日 column" do
+    it "should link to note URL when displaying note date in 記録日 column" do
       get activity_dojos_path
       
       # Find the dojo row
@@ -550,7 +550,7 @@ RSpec.describe "Dojos", type: :request do
       
       # Should contain a link to the note URL
       expect(dojo_row).to include("https://coderdojo-wakayama.hatenablog.com/entry/2025/03/16/230604"),
-        "Expected to find note URL in the 開催日 column"
+        "Expected to find note URL in the 記録日 column"
     end
     
     it "handles multiple date formats in note (YYYY-MM-DD and YYYY/MM/DD)" do
@@ -641,22 +641,22 @@ RSpec.describe "Dojos", type: :request do
       
       dojo_row = dojo_row_match[0]
       
-      # Extract just the 開催日 column to check the date display
+      # Extract just the 記録日 column to check the date display
       td_matches = dojo_row.scan(/<td[^>]*>(.*?)<\/td>/m)
       
-      # Based on debug output: td_matches[1] is the 開催日 column
+      # Based on debug output: td_matches[1] is the 記録日 column
       # (道場名 column seems to be skipped in regex due to complex link structure)
-      event_date_column = td_matches[1]&.first # 開催日 column
+      event_date_column = td_matches[1]&.first # 記録日 column
       
-      expect(event_date_column).not_to be_nil, "Could not find 開催日 column"
+      expect(event_date_column).not_to be_nil, "Could not find 記録日 column"
       
-      # Should show the newer event history date (2025-08-01) in the 開催日 column
+      # Should show the newer event history date (2025-08-01) in the 記録日 column
       expect(event_date_column).to include("2025-08-01"),
-        "Expected to see newer event history date 2025-08-01 in 開催日 column, but found: #{event_date_column}"
+        "Expected to see newer event history date 2025-08-01 in 記録日 column, but found: #{event_date_column}"
       
-      # The 開催日 column should not contain the older note date
+      # The 記録日 column should not contain the older note date
       expect(event_date_column).not_to include("2025-03-16"),
-        "Should not show older note date 2025-03-16 in 開催日 column when newer event history exists"
+        "Should not show older note date 2025-03-16 in 記録日 column when newer event history exists"
     end
   end
 end
