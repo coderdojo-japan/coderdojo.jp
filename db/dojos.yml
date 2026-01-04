@@ -4238,6 +4238,8 @@
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
+  inactivated_at: '2024-03-12'
+  note: 2023-03-12 https://coderdojo-uruma.hatenablog.com/entry/2023/03/10/123704
   name: うるま
   prefecture_id: 47
   url: https://coderdojo-uruma.hatenablog.com/
