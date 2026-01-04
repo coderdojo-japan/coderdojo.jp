@@ -90,4 +90,87 @@ module DojoHelper
 
     result.html_safe
   end
+
+  # 記録日を取得（note_date と latest_event_at のより新しい方）
+  def get_record_date(dojo)
+    if dojo[:note_date] && dojo[:latest_event_at]
+      dojo[:note_date] > dojo[:latest_event_at] ? dojo[:note_date] : dojo[:latest_event_at]
+    elsif dojo[:note_date]
+      dojo[:note_date]
+    elsif dojo[:latest_event_at]
+      dojo[:latest_event_at]
+    else
+      nil
+    end
+  end
+
+  # 記録日からの経過日数を計算
+  def days_passed_from_record_date(dojo)
+    record_date = get_record_date(dojo)
+    return nil unless record_date
+    
+    (Date.current - record_date.to_date).to_i
+  end
+
+  # 記録日が期限切れかどうかを判定
+  def record_date_expired?(dojo, threshold = 365)
+    days_passed = days_passed_from_record_date(dojo)
+    return false unless days_passed
+    
+    days_passed >= threshold && !dojo[:note]&.include?('Active')
+  end
+
+  # 記録日のリンクを生成
+  def link_to_record_date(dojo)
+    record_date = get_record_date(dojo)
+    return content_tag(:span, '-', style: 'color: #999;') unless record_date
+    
+    # どちらの日付を使用しているか判定
+    if dojo[:note_date] && dojo[:latest_event_at]
+      if dojo[:note_date] > dojo[:latest_event_at]
+        # note日付の方が新しい
+        link = dojo[:note_link]
+      else
+        # イベント履歴の方が新しい
+        link = dojo[:latest_event_url]
+      end
+    elsif dojo[:note_date]
+      link = dojo[:note_link]
+    elsif dojo[:latest_event_at]
+      link = dojo[:latest_event_url]
+    end
+    
+    formatted_date = record_date.strftime("%Y-%m-%d")
+    expired = record_date_expired?(dojo)
+    
+    content = if link
+      link_to(formatted_date, link)
+    else
+      formatted_date
+    end
+    
+    if expired
+      content_tag(:span, content, class: 'expired')
+    else
+      content_tag(:span, content)
+    end
+  end
+
+  # 経過日数の表示を生成
+  def display_days_passed(dojo)
+    days_passed = days_passed_from_record_date(dojo)
+    
+    if days_passed.nil?
+      content_tag(:span, '-', style: 'color: #999;')
+    else
+      expired = record_date_expired?(dojo)
+      content = "#{days_passed} 日"
+      
+      if expired
+        content_tag(:span, content, class: 'expired')
+      else
+        content_tag(:span, content)
+      end
+    end
+  end
 end

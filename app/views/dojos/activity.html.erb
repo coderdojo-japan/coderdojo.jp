@@ -84,72 +84,12 @@
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small>
-              <% if dojo[:note_date] && dojo[:latest_event_at] %>
-                <!-- 両方の日付がある場合：より新しい方を表示 -->
-                <% if dojo[:note_date] > dojo[:latest_event_at] %>
-                  <!-- note日付の方が新しい -->
-                  <% expired = dojo[:note_date] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
-                  <span class="<%= 'expired' if expired %>">
-                    <% if dojo[:note_link] %>
-                      <%= link_to dojo[:note_date].strftime("%Y-%m-%d"), dojo[:note_link] %>
-                    <% else %>
-                      <%= dojo[:note_date].strftime("%Y-%m-%d") %>
-                    <% end %>
-                  </span>
-                <% else %>
-                  <!-- イベント履歴の方が新しいか同じ -->
-                  <% expired = dojo[:latest_event_at] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
-                  <span class="<%= 'expired' if expired %>">
-                    <%= link_to dojo[:latest_event_at].strftime("%Y-%m-%d"), dojo[:latest_event_url] %>
-                  </span>
-                <% end %>
-              <% elsif dojo[:note_date] %>
-                <!-- note日付のみ -->
-                <% expired = dojo[:note_date] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
-                <span class="<%= 'expired' if expired %>">
-                  <% if dojo[:note_link] %>
-                    <%= link_to dojo[:note_date].strftime("%Y-%m-%d"), dojo[:note_link] %>
-                  <% else %>
-                    <%= dojo[:note_date].strftime("%Y-%m-%d") %>
-                  <% end %>
-                </span>
-              <% elsif dojo[:latest_event_at] %>
-                <!-- イベント履歴のみ -->
-                <% expired = dojo[:latest_event_at] <= Time.current - @inactive_threshold && !dojo[:note].include?('Active') %>
-                <span class="<%= 'expired' if expired %>">
-                  <%= link_to dojo[:latest_event_at].strftime("%Y-%m-%d"), dojo[:latest_event_url] %>
-                </span>
-              <% else %>
-                <!-- 開催日情報なし -->
-                <span style="color: #999;">-</span>
-              <% end %>
+              <%= link_to_record_date(dojo) %>
             </small>
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small>
-              <% 
-                # 記録日を決定（note_date と latest_event_at のより新しい方）
-                record_date = nil
-                if dojo[:note_date] && dojo[:latest_event_at]
-                  record_date = dojo[:note_date] > dojo[:latest_event_at] ? dojo[:note_date] : dojo[:latest_event_at]
-                elsif dojo[:note_date]
-                  record_date = dojo[:note_date]
-                elsif dojo[:latest_event_at]
-                  record_date = dojo[:latest_event_at]
-                end
-                
-                if record_date
-                  # 経過日数を計算
-                  days_passed = (Date.current - record_date.to_date).to_i
-                  expired = days_passed >= 365 && !dojo[:note]&.include?('Active')
-              %>
-                <span class="<%= 'expired' if expired %>">
-                  <%= days_passed %> 日
-                </span>
-              <% else %>
-                <!-- 記録日がない場合 -->
-                <span style="color: #999;">-</span>
-              <% end %>
+              <%= display_days_passed(dojo) %>
             </small>
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
