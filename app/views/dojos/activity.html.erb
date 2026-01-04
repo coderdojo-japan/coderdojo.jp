@@ -74,7 +74,7 @@
       </tr>
       <% @latest_event_by_dojos.each do |dojo| %>
         <tr>
-          <td>
+          <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small>
               <%= link_to dojo_path(dojo[:id]) do %>
                 <%= dojo[:name] %><br>
@@ -82,10 +82,10 @@
               <% end %>
             </small>
           </td>
-          <td>
+          <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><%= dojo[:created_at].strftime("%Y-%m-%d") %></small>
           </td>
-          <td>
+          <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small>
               <% if dojo[:note_date] && dojo[:latest_event_at] %>
                 <!-- 両方の日付がある場合：より新しい方を表示 -->
@@ -128,7 +128,7 @@
               <% end %>
             </small>
           </td>
-          <td>
+          <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><small>
               <% search_query = URI.encode_www_form(q: "CoderDojo #{dojo[:name].split('@').first.strip}") %>
               <% search_range = URI.encode_www_form(tbs: "qdr:m12") # 過去12ヶ月の検索結果 %>
@@ -138,7 +138,7 @@
               <%= link_to '12ヶ月', [search_url, search_range].join('&'), target: "_blank" %>
             </small></small>
           </td>
-          <td>
+          <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><small>
               <%= link_to dojo[:url], target: "_blank" do %>
                 Website
@@ -146,7 +146,7 @@
               <% end %>
             </small></small>
           </td>
-          <td class="url-cell">
+          <td class="url-cell <%= 'inactive-item' unless dojo[:is_active] %>">
             <small>
               <span title="<%= dojo[:note] %>">
                 <%= raw Addressable::URI.unescape(truncate_with_preserved_links(dojo[:note], length: 60)) %>

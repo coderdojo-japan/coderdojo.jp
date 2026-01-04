@@ -113,7 +113,12 @@ class DojosController < ApplicationController
     @inactive_threshold = Dojo::INACTIVE_THRESHOLD_IN_MONTH
 
     @latest_event_by_dojos = []
-    Dojo.active.each do |dojo|
+
+    # アクティブな道場と非アクティブな道場を両方取得
+    # アクティブな道場を先に、非アクティブな道場を後に表示
+    dojos = Dojo.active.to_a + Dojo.inactive.to_a
+
+    dojos.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
       # YYYY-MM-DD、YYYY/MM/DD、または YYYY年MM月DD日 形式の日付を抽出
       date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2}|\d{4}年\d{1,2}月\d{1,2}日)/)
@@ -126,6 +131,7 @@ class DojosController < ApplicationController
         note:       dojo.note,
         url:        dojo.url,
         created_at: dojo.created_at,  # 掲載日（/dojos と同じ）
+        is_active:  dojo.active?,   # アクティブ状態を追加
 
         # 直近の開催日（イベント履歴がある場合のみ）
         latest_event_at:  latest_event&.evented_at,
@@ -137,11 +143,24 @@ class DojosController < ApplicationController
       }
     end
 
-    # Sort by latest event date (or created_at if no events) && Dojo's order if same date
-    @latest_event_by_dojos.sort_by! do |dojo|
+    # アクティブな道場と非アクティブな道場を分けてソート
+    active_dojos   = @latest_event_by_dojos.select { |d| d[:is_active] }
+    inactive_dojos = @latest_event_by_dojos.reject { |d| d[:is_active] }
+
+    # それぞれのグループ内でソート
+    active_dojos.sort_by! do |dojo|
       sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
       [sort_date, dojo[:order]]
     end
+
+    # 非アクティブな道場は最新の開催日から古い順（降順）にソート
+    inactive_dojos.sort_by! do |dojo|
+      sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
+      [-sort_date.to_i, dojo[:order]]  # マイナスを付けて降順にする
+    end
+
+    # アクティブな道場を先に、非アクティブな道場を後に
+    @latest_event_by_dojos = active_dojos + inactive_dojos
   end
 
   private
