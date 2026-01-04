@@ -30,6 +30,12 @@
 #   evented_at: 
 #   participants: 
 
+# 平野 @ YOZORA LABO (LINE による参加申込にも対応。LINE 中心で対応してそう?) in 2025
+- dojo_id: 329
+  event_url: https://yozoralabo.connpass.com/event/363235/
+  evented_at: 2025-08-09 13:00
+  participants: 2
+
 # 2023/01..2025/04 CoderDojo佐賀 https://www.facebook.com/CoderDojoSAGA
 - dojo_id:  269
   event_url: https://www.facebook.com/share/p/1DTRLhfars/
