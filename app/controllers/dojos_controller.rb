@@ -145,7 +145,7 @@ class DojosController < ApplicationController
 
     # 同じイベントサービスを共有している道場の開催日を同期
     # 生駒 (ID: 36) と平群 (ID: 294) は奈良 (ID: 35) と同じ connpass を使用
-    sync_event_date(36, 35)  # 生駒は奈良の開催日を参照
+    sync_event_date(36,  35) # 生駒は奈良の開催日を参照
     sync_event_date(294, 35) # 平群は奈良の開催日を参照
 
     # アクティブな道場と非アクティブな道場を分けてソート
