@@ -154,13 +154,17 @@ class DojosController < ApplicationController
 
     # それぞれのグループ内でソート
     active_dojos.sort_by! do |dojo|
-      sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
+      # より新しい日付を使用してソート（活発な道場ほど下に表示）
+      dates = [dojo[:latest_event_at], dojo[:note_date], dojo[:created_at]].compact
+      sort_date = dates.max || dojo[:created_at]
       [sort_date, dojo[:order]]
     end
 
     # 非アクティブな道場は最新の開催日から古い順（降順）にソート
     inactive_dojos.sort_by! do |dojo|
-      sort_date = dojo[:latest_event_at] || dojo[:note_date] || dojo[:created_at]
+      # より新しい日付を使用してソート
+      dates = [dojo[:latest_event_at], dojo[:note_date], dojo[:created_at]].compact
+      sort_date = dates.max || dojo[:created_at]
       [-sort_date.to_i, dojo[:order]]  # マイナスを付けて降順にする
     end
 
