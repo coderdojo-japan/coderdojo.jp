@@ -113,11 +113,11 @@ module DojoHelper
   end
 
   # 記録日が期限切れかどうかを判定
-  def record_date_expired?(dojo, threshold = 365)
-    days_passed = days_passed_from_record_date(dojo)
-    return false unless days_passed
+  def record_date_expired?(dojo, threshold = Dojo::INACTIVE_THRESHOLD_IN_MONTH)
+    record_date = get_record_date(dojo)
+    return false unless record_date
     
-    days_passed >= threshold && !dojo[:note]&.include?('Active')
+    record_date <= Time.current - threshold && !dojo[:note]&.include?('Active')
   end
 
   # 記録日のリンクを生成
