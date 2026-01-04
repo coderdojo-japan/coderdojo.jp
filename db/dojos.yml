@@ -118,6 +118,8 @@
 - id: 143
   order: '032107'
   created_at: '2018-04-21'
+  inactivated_at: '2025-03-24'
+  note: Last session confirmed was 2024-03-24 https://plus-hamakada.org/category/coderdojo/
   name: 陸前高田
   prefecture_id: 3
   url: https://www.facebook.com/CoderDojoRikuzentakata
@@ -154,6 +156,7 @@
 - id: 3
   order: '041009'
   created_at: '2014-01-23'
+  note: Active for years. Facebook で活動報告 https://www.facebook.com/CoderdojoIzumi/
   name: 泉
   prefecture_id: 4
   url: https://www.facebook.com/CoderdojoIzumi
