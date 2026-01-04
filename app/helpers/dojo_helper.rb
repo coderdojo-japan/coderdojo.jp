@@ -143,6 +143,8 @@ module DojoHelper
   end
 
   # 経過日数の表示を生成
+  # Rails の time_ago_in_words だと「約12ヶ月」のような曖昧な表現になるため、
+  # 正確な日数表示と expired 判定を含むカスタムヘルパーを実装
   def display_days_passed(dojo)
     days_passed = days_passed_from_record_date(dojo)
     
