@@ -472,6 +472,31 @@ RSpec.describe "Dojos", type: :request do
       expect(test_cell.to_html).to include('href="https://www.example.com/"')
       expect(test_cell.to_html).to include('href="http://www.example.net/"')
     end
+    
+    it "displays Facebook URLs as fb.com in note column" do
+      # Facebook URLを含むnoteを持つ道場を作成
+      create(:dojo, 
+        name: "Test Dojo with Facebook",
+        note: "Check out https://www.facebook.com/groups/coderdojo and https://facebook.com/events/123",
+        inactivated_at: nil
+      )
+      
+      get activity_dojos_path
+      
+      # ノート欄の表示テキストで facebook.com が fb.com に短縮されていることを確認
+      doc = Nokogiri::HTML(response.body)
+      note_cells = doc.css('td.url-cell')
+      
+      fb_cell = note_cells.find { |cell| cell.text.include?("fb.com") }
+      expect(fb_cell).not_to be_nil
+      expect(fb_cell.text).to include("fb.com/groups/coderdojo")
+      expect(fb_cell.text).to include("fb.com/events/123")
+      expect(fb_cell.text).not_to include("facebook.com")
+      expect(fb_cell.text).not_to include("www.")
+      # 元のリンクは保持されていることを確認
+      expect(fb_cell.to_html).to include('href="https://www.facebook.com/groups/coderdojo"')
+      expect(fb_cell.to_html).to include('href="https://facebook.com/events/123"')
+    end
   end
 
   describe "GET /dojos/activity - note date priority" do
