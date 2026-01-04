@@ -93,15 +93,7 @@ module DojoHelper
 
   # 記録日を取得（note_date と latest_event_at のより新しい方）
   def get_record_date(dojo)
-    if dojo[:note_date] && dojo[:latest_event_at]
-      dojo[:note_date] > dojo[:latest_event_at] ? dojo[:note_date] : dojo[:latest_event_at]
-    elsif dojo[:note_date]
-      dojo[:note_date]
-    elsif dojo[:latest_event_at]
-      dojo[:latest_event_at]
-    else
-      nil
-    end
+    [dojo[:note_date], dojo[:latest_event_at]].compact.max
   end
 
   # 記録日からの経過日数を計算
@@ -125,19 +117,11 @@ module DojoHelper
     record_date = get_record_date(dojo)
     return content_tag(:span, '-') unless record_date
     
-    # どちらの日付を使用しているか判定
-    if dojo[:note_date] && dojo[:latest_event_at]
-      if dojo[:note_date] > dojo[:latest_event_at]
-        # note日付の方が新しい
-        link = dojo[:note_link]
-      else
-        # イベント履歴の方が新しい
-        link = dojo[:latest_event_url]
-      end
-    elsif dojo[:note_date]
-      link = dojo[:note_link]
-    elsif dojo[:latest_event_at]
-      link = dojo[:latest_event_url]
+    # どちらの日付を使用しているか判定してリンクを設定
+    link = if record_date == dojo[:note_date]
+      dojo[:note_link]
+    else
+      dojo[:latest_event_url]
     end
     
     formatted_date = record_date.strftime("%Y-%m-%d")
