@@ -611,7 +611,7 @@
 - id: 7
   order: '102016'
   created_at: '2016-10-17'
-  note: "NETSUGEN にてイベント管理: https://vtmacs.github.io/maebashi.jp/#schedule"
+  note: "NETSUGEN にてイベント管理 (2026-01-17): https://vtmacs.github.io/maebashi.jp/#schedule"
   name: 前橋
   prefecture_id: 10
   url: https://vtmacs.github.io/maebashi.jp/
