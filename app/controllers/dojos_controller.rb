@@ -148,6 +148,10 @@ class DojosController < ApplicationController
     sync_event_date(36,  35) # 生駒は奈良の開催日を参照
     sync_event_date(294, 35) # 平群は奈良の開催日を参照
 
+    # 南柏 (ID: 112) と柏の葉 (ID: 311) は柏 (ID: 23) と同じイベントサービスを使用
+    sync_event_date(112, 23) # 南柏は、柏の開催日を参照
+    sync_event_date(311, 23) # 柏の葉は柏の開催日を参照
+
     # アクティブな道場と非アクティブな道場を分けてソート
     active_dojos   = @latest_event_by_dojos.select { |d| d[:is_active] }
     inactive_dojos = @latest_event_by_dojos.reject { |d| d[:is_active] }
@@ -184,6 +188,8 @@ class DojosController < ApplicationController
     if source_dojo && target_dojo
       target_dojo[:latest_event_at]  = source_dojo[:latest_event_at]
       target_dojo[:latest_event_url] = source_dojo[:latest_event_url]
+      target_dojo[:note_date]        = source_dojo[:note_date]
+      target_dojo[:note_link]        = source_dojo[:note_link]
     end
   end
 
