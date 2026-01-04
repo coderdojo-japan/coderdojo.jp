@@ -90,4 +90,75 @@ module DojoHelper
 
     result.html_safe
   end
+
+  # 記録日を取得（note_date と latest_event_at のより新しい方）
+  def get_record_date(dojo)
+    # compact で nil を除去してから max を取ることで、
+    # 片方または両方が nil でも安全に処理できる
+    [dojo[:note_date], dojo[:latest_event_at]].compact.max
+  end
+
+  # 記録日からの経過日数を計算
+  def days_passed_from_record_date(dojo)
+    record_date = get_record_date(dojo)
+    return nil unless record_date
+    
+    (Date.current - record_date.to_date).to_i
+  end
+
+  # 記録日が期限切れかどうかを判定
+  def record_date_expired?(dojo, threshold = Dojo::INACTIVE_THRESHOLD_IN_MONTH)
+    record_date = get_record_date(dojo)
+    return false unless record_date
+    
+    record_date <= Time.current - threshold && !dojo[:note]&.include?('Active')
+  end
+
+  # 記録日のリンクを生成
+  def link_to_record_date(dojo)
+    record_date = get_record_date(dojo)
+    return content_tag(:span, '-') unless record_date
+    
+    # どちらの日付を使用しているか判定してリンクを設定
+    link = if record_date == dojo[:note_date]
+      dojo[:note_link]
+    else
+      dojo[:latest_event_url]
+    end
+    
+    formatted_date = record_date.strftime("%Y-%m-%d")
+    expired = record_date_expired?(dojo)
+    
+    content = if link
+      link_to(formatted_date, link)
+    else
+      formatted_date
+    end
+    
+    if expired
+      content_tag(:span, content, class: 'expired')
+    else
+      content_tag(:span, content)
+    end
+  end
+
+  # 経過日数の表示を生成
+  # Rails の time_ago_in_words だと「約12ヶ月」のような曖昧な表現になるため、
+  # 正確な日数表示と expired 判定を含むカスタムヘルパーを実装
+  def display_days_passed(dojo)
+    days_passed = days_passed_from_record_date(dojo)
+    
+    if days_passed.nil?
+      content_tag(:span, '-')
+    else
+      expired = record_date_expired?(dojo)
+      content = "#{days_passed} 日"
+      
+      if expired
+        content_tag(:span, content, class: 'expired')
+      else
+        content_tag(:span, content)
+      end
+    end
+  end
 end
