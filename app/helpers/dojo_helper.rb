@@ -28,6 +28,8 @@ module DojoHelper
       display_text = display_text.gsub(/\Ahttps?:\/\//, '')
       # www. を削除（\A で文字列の先頭のみマッチ）
       display_text = display_text.gsub(/\Awww\./, '')
+      # facebook.com を fb.com に置換（Facebook の公式短縮ドメイン）
+      display_text = display_text.gsub(/\Afacebook\.com/, 'fb.com')
       # 末尾のスラッシュを削除（\z で文字列の末尾のみマッチ）
       display_text = display_text.gsub(/\/\z/, '')
       link.content = display_text
