@@ -825,6 +825,7 @@
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
+  note: 2025年12月21日 https://ichikawa.coderdojo.chiba.jp/coderdojo20251231/
   name: 市川
   prefecture_id: 12
   url: http://ichikawa.coderdojo.chiba.jp
