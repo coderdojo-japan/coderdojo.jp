@@ -652,9 +652,10 @@
 - id: 263
   order: '111074'
   created_at: '2021-01-16'
+  note: 2025/12/21 (日) 14:00～16:15 https://www.facebook.com/urawaminecraftclub/posts/pfbid034PHei4C4CXi29KGhfrdKbfXKDhDgZ6CZmSJMmfsdRnJSQTkWrwmawAu2jCLSDczAl
   name: 浦和@Urawa Minecraft Club
   prefecture_id: 11
-  url: https://www.urawa-minecraftclub.com/
+  url: https://www.facebook.com/urawaminecraftclub
   logo: "/img/dojos/urawa.webp"
   description: さいたま市浦和区で毎週日曜開催
   tags:
