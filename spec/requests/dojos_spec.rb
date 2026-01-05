@@ -343,7 +343,7 @@ RSpec.describe "Dojos", type: :request do
     
     it "displays the activity status page" do
       get activity_dojos_path
-      expect(response.body).to include("道場別の活動状況まとめ")
+      expect(response.body).to include("道場別の活動記録まとめ")
     end
     
     it "includes both active and inactive dojos" do

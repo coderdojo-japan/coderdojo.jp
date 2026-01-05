@@ -39,7 +39,7 @@ CoderDojo の立ち上げ申請がまだお済みでない場合は、下記ペ�
 ### [✅](#terms) 掲載にあたって、以下の点をご確認ください {#terms}
 
 1. 財団により非アクティブと判断された場合、もしくは活動の様子が `{{ INACTIVE_THRESHOLD_IN_MONTH }}ヶ月間` 確認できない場合は非表示になります 😴
-  - ☯️  [CoderDojo Japan - 道場別の活動状況まとめ](/dojos/activity)
+  - ☯️  [CoderDojo Japan - 道場別の活動記録まとめ](/dojos/activity)
   - 📜️ [CoderDojo Japan - CoderDojo が承認されているかを確認する方法](/docs/how-to-check-dojo-status)
   - <br>
 1. 文字数やタグ数に上限があるため、申請内容を一部変更して掲載する場合があります 🙏

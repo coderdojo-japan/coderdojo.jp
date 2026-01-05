@@ -107,7 +107,7 @@ class DojosController < ApplicationController
   end
 
   # GET /dojos/activity
-  # 道場の活動状況を表示（旧 /events/latest から移行）
+  # 道場の活動記録を表示（旧 /events/latest から移行）
   def activity
     # ビューで使用するための閾値をインスタンス変数に設定（モデルから取得）
     @inactive_threshold = Dojo::INACTIVE_THRESHOLD_IN_MONTH
