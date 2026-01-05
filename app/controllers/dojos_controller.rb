@@ -152,6 +152,9 @@ class DojosController < ApplicationController
     sync_event_date(112, 23) # 南柏は、柏の開催日を参照
     sync_event_date(311, 23) # 柏の葉は柏の開催日を参照
 
+    # 宜野湾 (ID: 106) は浦添 (ID: 205) と同じ主催者で運営
+    sync_event_date(106, 205) # 宜野湾は浦添の開催日を参照
+
     # アクティブな道場と非アクティブな道場を分けてソート
     active_dojos   = @latest_event_by_dojos.select { |d| d[:is_active] }
     inactive_dojos = @latest_event_by_dojos.reject { |d| d[:is_active] }
