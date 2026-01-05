@@ -3110,6 +3110,8 @@
 - id: 272
   order: '272264'
   created_at: '2021-02-28'
+  inactivated_at: '2022-07-25'
+  note: 2021-07-25 https://coderdojo-fujiidera.localinfo.jp/posts/19955576
   name: 藤井寺・柏原
   prefecture_id: 27
   url: https://www.coderdojo-fujiidera-kashiwara.com
