@@ -94,7 +94,7 @@
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><small>
-              <% search_query = URI.encode_www_form(q: 'CoderDojo' + dojo[:name].split('@').first.strip) %>
+              <% search_query = URI.encode_www_form(q: "CoderDojo \"#{dojo[:name].split('@').first.strip}\"") %>
               <% search_range = URI.encode_www_form(tbs: "qdr:m12") # 過去12ヶ月の検索結果 %>
               <% search_url   = "https://www.google.co.jp/search?" + search_query %>
 	      
