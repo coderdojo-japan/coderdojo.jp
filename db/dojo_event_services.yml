@@ -388,10 +388,10 @@
 # url: 
 
 # 紫雲
-#- dojo_id: 290
-#  name: zen
-#  group_id: 
-#  url: https://zen.coderdojo.com/dojos/jp/takamatsu-kagawa-prefecture/shiun-kagawa
+- dojo_id: 290
+  name: connpass
+  group_id: 11304
+  url: https://coderdojoshiun.connpass.com/
 
 # たまち
 - dojo_id: 289
