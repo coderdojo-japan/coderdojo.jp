@@ -105,11 +105,12 @@
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
             <small><small>
               <% search_query = URI.encode_www_form(q: "CoderDojo \"#{dojo[:name].split('@').first.strip}\"") %>
-              <% search_range = URI.encode_www_form(tbs: "qdr:m12") # 過去12ヶ月の検索結果 %>
-              <% search_url   = "https://www.google.co.jp/search?" + search_query %>
+	      <% search_by_x  = "https://x.com/search?"            + search_query %>
+              <% search_by_g  = "https://www.google.co.jp/search?" + search_query %>
 	      
-              <%= link_to '全期間', [search_url].join,                    target: "_blank" %><br>
-              <%= link_to '12ヶ月', [search_url, search_range].join('&'), target: "_blank" %>
+	      <%= link_to 'X で検索', [search_by_x, 'f=live'     ].join('&'), target: "_blank" %><br>
+              <%= link_to '12ヶ月',   [search_by_g, 'tbs=qdr:m12'].join('&'), target: "_blank" %><br>
+              <%= link_to '全期間',   [search_by_g].join,                     target: "_blank" %>
             </small></small>
           </td>
           <td class="<%= 'inactive-item' unless dojo[:is_active] %>">
