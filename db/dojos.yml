@@ -1386,7 +1386,7 @@
 - id: 16
   order: '131156'
   created_at: '2016-09-09'
-  inactivated_at: '2022-03-16'
+  note: "非活動期間: 2022-03-16〜2026-01-10"
   name: すぎなみ
   prefecture_id: 13
   url: https://coderdojo-suginami.github.io/
