@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   get "/partnership"      => "docs#show", id: 'about-partnership'
   get "/privacy"          => "docs#show", id: 'privacy'
   get "/teikan"           => "docs#show", id: 'teikan'
+  get "/teikan_en"        => "docs#show", id: 'teikan_en'
   get "/signup"           => "docs#show", id: 'signup'
   get "/kata"             => "docs#kata"
   #get "/debug/kata"       => "docs#kata"
