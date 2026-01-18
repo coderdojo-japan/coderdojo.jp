@@ -1,5 +1,11 @@
 # 🏢 一般社団法人 CoderDojo Japan 定款
-<center>(<a href="https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/teikan.md">定款の変更履歴を見る</a> / <a href="/about">具体的な活動内容を見る</a>)</center>
+
+<center>
+  ( <a href="https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/teikan.md">&raquo; 定款の変更履歴を見る</a>
+  / <a href="/about">&raquo; 具体的な活動内容を見る</a>
+  / <a href="/teikan_en">&raquo; View English translation</a>
+  )</center>
+
 <br/>
 
 ## 第1章 総則
