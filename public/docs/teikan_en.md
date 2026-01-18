@@ -1,9 +1,8 @@
 # 🏢 CoderDojo Japan Association - Articles of Incorporation (定款)
 
-<div style="padding: 30px 0px;">
-  <img class='lazyload' loading='lazy' alt="Photo of announcement to found the CoderDojo Japan Association."
-   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
-</div>
+<img class='lazyload' loading='lazy' alt='Photo of announcement to found the CoderDojo Japan Association.' src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+
+English translation of the Articles of Incorporation of [CoderDojo Japan Association](/english), established in 2016.
 
 <center>
   ( <a href="/teikan">&raquo; View official Japanese articles of incorporation</a> )

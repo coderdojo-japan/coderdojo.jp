@@ -1,9 +1,8 @@
 # 🏢 一般社団法人 CoderDojo Japan 定款
 
-<div style="padding: 30px 0px;">
-  <img class='lazyload' loading='lazy' alt="Photo of announcement to found the CoderDojo Japan Association."
-   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
-</div>
+<img class='lazyload' loading='lazy' alt='Photo of announcement to found the CoderDojo Japan Association.' src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+
+[一般社団法人 CoderDojo Japan](/about) の定款です。2016年の設立当時のもので、現在は改訂されている可能性がある点にご注意ください。
 
 <center>
   ( <a href="https://github.com/coderdojo-japan/coderdojo.jp/commits/main/db/docs/teikan.md">&raquo; 定款の変更履歴を見る</a>
