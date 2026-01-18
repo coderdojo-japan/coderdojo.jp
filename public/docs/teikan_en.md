@@ -12,7 +12,7 @@
 <blockquote>
   <p style="font-size: 80%">
     📝
-    Note: The following Articles of Incorporation are translated by AI from Japanese into English. In any event there is discrepancy between English and Japanese, <a href='/teikan'>the Japanese one</a> shall control to the contents herein.
+    Note: The following Articles of Incorporation are translated by AI from Japanese into English. In any event there is discrepancy between English and Japanese, <a href='/teikan'>the Japanese version</a> shall control to the contents herein.
   </p>
 </blockquote>
 
