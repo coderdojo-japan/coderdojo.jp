@@ -5,10 +5,14 @@
    src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
 </div>
 
+<center>
+  ( <a href="/teikan">&raquo; View official Japanese articles of incorporation</a> )
+</center>
+
 <blockquote>
   <p style="font-size: 80%">
     📝
-    <b>Note: The following Articles of Incorporation are translated by AI from Japanese into English. In any event there is discrepancy between English and Japanese, <a href='/teikan'>the Japanese one</a> shall control to the contents herein.</b>
+    Note: The following Articles of Incorporation are translated by AI from Japanese into English. In any event there is discrepancy between English and Japanese, <a href='/teikan'>the Japanese one</a> shall control to the contents herein.
   </p>
 </blockquote>
 
