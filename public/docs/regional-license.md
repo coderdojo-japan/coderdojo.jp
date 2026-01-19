@@ -1,10 +1,9 @@
 # 🌐 地域ライセンス契約書
 <center><small>(本契約書は、契約当時の写しとなります。<a href="regional-license_en">英語の原文を読む</a>)</small></center>
 
-<div style="padding: 30px 0px;">
-  <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
-   src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
-</div>
+<img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+
+CoderDojo Foundation と一般社団法人 CoderDojo Japan の間で締結された地域ライセンス契約書です。2016年の契約当時の写しとなります。
 
 <blockquote>
   <p style="font-size: 80%">

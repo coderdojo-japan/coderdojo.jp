@@ -52,4 +52,39 @@ RSpec.describe Document do
       expect(doc.exist?).to be true
     end
   end
+
+  describe 'meta descriptions' do
+    it 'すべての公開ドキュメントの meta description に HTML タグが含まれていないこと' do
+      # 全ドキュメントファイルを取得（記録用ページ "_" で始まるものを除く）
+      doc_files = Dir.glob('public/docs/*.md').map { |f| File.basename(f, '.*') }
+      public_docs = doc_files.reject { |f| f.start_with?('_') }
+
+      # 各ドキュメントの meta description をチェック
+      problematic_docs = []
+      public_docs.each do |filename|
+        doc = Document.new(filename)
+        description = doc.description
+
+        # HTML タグまたは HTML エンティティが含まれている場合は問題あり
+        if description.match?(/<|&lt;|&gt;|&amp;/)
+          problematic_docs << {
+            filename: filename,
+            description: description[0..100] # 最初の100文字
+          }
+        end
+      end
+
+      # エラーメッセージを詳細に表示
+      if problematic_docs.any?
+        error_message = "\n以下のドキュメントの meta description に HTML タグが含まれています:\n"
+        problematic_docs.each do |doc|
+          error_message += "\n❌ #{doc[:filename]}\n"
+          error_message += "   Description: #{doc[:description]}...\n"
+        end
+        fail error_message
+      end
+
+      expect(problematic_docs).to be_empty
+    end
+  end
 end
