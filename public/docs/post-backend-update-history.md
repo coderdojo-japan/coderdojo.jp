@@ -2,6 +2,8 @@
 
 <p class="text-center"><small>本記事は2016年12月12日に公開した記事を一部改訂したアーカイブ版です。</small></p>
 
+2016年の CoderDojo Advent Calendar で公開した、coderdojo.jp のバックエンド刷新に関する技術記事です。
+
 -----
 
 [CoderDojo Advent Calendar](http://www.adventar.org/calendars/1619) 12日目、coderdojo.jp の裏側をリニューアルした話です。 (執筆: [@yasulab](https://twitter.com/yasulab))
