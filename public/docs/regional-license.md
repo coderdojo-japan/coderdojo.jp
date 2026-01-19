@@ -1,9 +1,8 @@
 # 🌐 地域ライセンス契約書
-<center><small>(本契約書は、契約当時の写しとなります。<a href="regional-license_en">英語の原文を読む</a>)</small></center>
 
 <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
 
-CoderDojo Foundation と一般社団法人 CoderDojo Japan の間で締結された地域ライセンス契約書です。2016年の契約当時の写しとなります。
+CoderDojo Foundation (当時の名称: `HELLO WORLD Foundation`) と一般社団法人 CoderDojo Japan (英名: `CoderDojo Japan Association`) の間で締結された地域ライセンス契約書です。2016年の契約当時の写しとなります。
 
 <blockquote>
   <p style="font-size: 80%">
@@ -12,7 +11,11 @@ CoderDojo Foundation と一般社団法人 CoderDojo Japan の間で締結され
   </p>
 </blockquote>
 
+<center><small><a href="regional-license_en">&raquo; 英語の原文を読む (View in English)</a></small></center>
+
 <br>
+
+-----
 
 以下のライセンス契約は、地域または国の全ての登録済 CoderDojo 慈善団体と締結されるものです。本ライセンス契約は、ある地域を代表する組織または非公認のグループと締結する基本的な MOU（覚書）として行使されることになります。
 
