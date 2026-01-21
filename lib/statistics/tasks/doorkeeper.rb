@@ -18,6 +18,7 @@ module Statistics
       def run
         @dojos.each do |dojo|
           dojo.dojo_event_services.for(:doorkeeper).each do |dojo_event_service|
+            puts "  Fetching events for #{dojo.name} (group_id: #{dojo_event_service.group_id})"
             events = @client.fetch_events(**@params.merge(group_id: dojo_event_service.group_id))
             (events || []).compact.each do |e|
               next unless e[:group].to_s == dojo_event_service.group_id
@@ -31,6 +32,10 @@ module Statistics
                                    participants: e[:participants],
                                    evented_at:   Time.zone.parse(e[:starts_at]))
             end
+            puts "    ✓ Successfully fetched #{events&.size || 0} events"
+          rescue => e
+            puts "    ✗ Failed to fetch events for #{dojo.name} (group_id: #{dojo_event_service.group_id}): #{e.message}"
+            raise e
           end
         end
       end
