@@ -50,10 +50,10 @@ module EventService
           end
         rescue Faraday::ServerError => e
           # 502, 503, 504: Server errors
-          if [502, 503, 504].include?(e.response[:status]) && retry_count < 3
-            wait_time = 2 ** retry_count * 10  # Exponential backoff: 10, 20, 40 seconds
+          if [502, 503, 504].include?(e.response[:status]) && retry_count < 2
+            wait_time = 2 ** retry_count * 5  # Exponential backoff: 5, 10 seconds
             puts "Server error (#{e.response[:status]}) for group_id: #{group_id}."
-            puts "Retrying in #{wait_time} seconds... (attempt #{retry_count + 1}/3)"
+            puts "Retrying in #{wait_time} seconds... (attempt #{retry_count + 1}/2)"
             sleep wait_time
             fetch_events(group_id: group_id, since_at: since_at, until_at: until_at, retry_count: retry_count + 1)
           else
