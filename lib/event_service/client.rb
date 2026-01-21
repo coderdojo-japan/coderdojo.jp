@@ -14,7 +14,7 @@ module EventService
     private
 
     def connection_for(endpoint, proxy)
-      Faraday.new(endpoint, proxy: proxy) do |f|
+      Faraday.new(endpoint, proxy: proxy, request: { open_timeout: 10, timeout: 60 }) do |f|
         f.response :logger if self.class.debug
 
         # faraday標準のJSONパーサーを使用

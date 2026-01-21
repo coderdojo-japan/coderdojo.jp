@@ -17,35 +17,48 @@ module EventService
         end
 
         # NOTE: since_at, until_at は DateTime で指定
-        def fetch_events(group_id:, since_at: @default_since, until_at: @default_until)
-          begin
-            params = {
-              page: 1,
-              since: since_at.utc.iso8601,
-              until: until_at.utc.iso8601
-            }
-            events = []
+        def fetch_events(group_id:, since_at: @default_since, until_at: @default_until, retry_count: 0)
+          params = {
+            page: 1,
+            since: since_at.utc.iso8601,
+            until: until_at.utc.iso8601
+          }
+          events = []
 
-            loop do
-              part = @client.get("groups/#{group_id}/events", params)
+          loop do
+            part = @client.get("groups/#{group_id}/events", params)
 
-              break if part.size.zero?
+            break if part.size.zero?
 
-              events.push(*part.map { |e| e[:event] })
+            events.push(*part.map { |e| e[:event] })
 
-              break if part.size < 25   # 25 items / 1 request
+            break if part.size < 25   # 25 items / 1 request
 
-              params[:page] += 1
-            end
+            params[:page] += 1
+          end
 
-            events
-          rescue Faraday::ClientError => e
-            raise e unless e.response[:status] == 429
-
+          events
+        rescue Faraday::ClientError => e
+          # 429: Rate Limit
+          if e.response[:status] == 429
             puts 'API rate limit exceeded.'
             puts "This task will retry in 60 seconds from now(#{Time.zone.now})."
             sleep 60
             retry
+          else
+            raise e
+          end
+        rescue Faraday::ServerError => e
+          # 502, 503, 504: Server errors
+          if [502, 503, 504].include?(e.response[:status]) && retry_count < 3
+            wait_time = 2 ** retry_count * 10  # Exponential backoff: 10, 20, 40 seconds
+            puts "Server error (#{e.response[:status]}) for group_id: #{group_id}."
+            puts "Retrying in #{wait_time} seconds... (attempt #{retry_count + 1}/3)"
+            sleep wait_time
+            fetch_events(group_id: group_id, since_at: since_at, until_at: until_at, retry_count: retry_count + 1)
+          else
+            puts "Failed to fetch events for group_id: #{group_id} after #{retry_count} retries."
+            raise e
           end
         end
       end
