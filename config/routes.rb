@@ -24,14 +24,14 @@ Rails.application.routes.draw do
   get "/about"                    => "docs#show", id: 'about-coderdojo-japan'
 
   get "/docs/code-of-conduct",    to: redirect('/conduct')
-  get "/docs/conduct",            to: redirect('/conduct')
+  #get "/docs/conduct",            to: redirect('/conduct')
   get "/conduct"                  => "docs#show", id: 'conduct'
 
-  get "/docs/brand-guidelines",   to: redirect('/brand')
-  get "/docs/thanks",             to: redirect('/thanks')
   get "/docs/financial-report",   to: redirect('/finances')
-  get "/docs/finances",           to: redirect('/finances')
-  get "/docs/for-media",          to: redirect('/for-media')
+  #get "/docs/brand-guidelines",   to: redirect('/brand')
+  #get "/docs/thanks",             to: redirect('/thanks')
+  #get "/docs/finances",           to: redirect('/finances')
+  #get "/docs/for-media",          to: redirect('/for-media')
 
   get "/docs/_calendar-yohei",    to: redirect('/calendar/yohei')
   get "/docs/_calendar-kirie",    to: redirect('/calendar/kirie')
