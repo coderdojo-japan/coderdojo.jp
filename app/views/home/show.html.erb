@@ -163,7 +163,8 @@
     <br class="ignore-sp">
     参加方法は各道場のWebサイトに記載されています
   </p>
-  <div class="btn-cover" style="margin-bottom: 40px;">
+
+  <div class="btn-cover" style="margin-bottom: 100px;">
     <a class="btn-blue" href="<%= dojomap_url %>">
       <i class="far fa-map-marked"></i>
       地図情報から探す
@@ -173,6 +174,7 @@
       近日開催から探す
     </a>
   </div>
+
   <%= render partial: 'shared/dojos', locals: { regions_and_dojos: @regions_and_dojos } %>
 </section>
 
