@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 西条 
+# - dojo_id: 350
+#   name: doorkeeper
+#   group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
+#   url: https://saijo.doorkeeper.jp/
+
 # SAGA @ 駅前中央（佐賀県佐賀市）
 - dojo_id: 349
   name: connpass

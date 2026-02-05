@@ -3713,6 +3713,19 @@
   tags:
   - Scratch
   - micro:bit
+- id: 350
+  order: '342122'
+  created_at: '2026-02-05'
+  name: 西条
+  prefecture_id: 34
+  logo: "/img/dojos/default.webp"
+  url: https://kiriem.github.io/coderdojo.saijo/
+  description: 東広島市で毎月開催
+  tags:
+  - Scratch
+  - micro:bit
+  - Webサイト
+  - AI
 - id: 192
   order: '352021'
   created_at: '2019-01-14'
