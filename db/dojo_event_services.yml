@@ -27,7 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
-# 西条 
+# 新居浜（愛媛）
+# - dojo_id: 351
+#   name: facebook
+#   group_id: ???
+#   url: https://www.facebook.com/CoderDojoEhimeNiihama
+
+# 西条
 # - dojo_id: 350
 #   name: doorkeeper
 #   group_id: イベントが追加されたら group_id を取得してコメントアウトを外す
