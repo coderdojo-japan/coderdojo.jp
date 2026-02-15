@@ -176,7 +176,7 @@
   tags:
   - Scratch
   - Webサイト
-  - ゲーム
+  - ゲーム開発
 - id: 317
   order: '041033'
   created_at: '2024-05-01'
@@ -203,7 +203,7 @@
   tags:
   - Scratch
   - Webサイト
-  - ゲーム
+  - ゲーム開発
 - id: 4
   order: '042129'
   created_at: '2016-04-25'
@@ -623,7 +623,7 @@
   - Scratch
   - Minecraft
   - micro:bit
-  - ゲーム
+  - ゲーム開発
 - id: 180
   order: '102075'
   created_at: '2018-08-08'
@@ -648,7 +648,7 @@
   tags:
   - Scratch
   - Webサイト
-  - アプリ
+  - アプリ開発
 - id: 263
   order: '111074'
   created_at: '2021-01-16'
@@ -1143,8 +1143,8 @@
   - Scratch
   - Hour of Code
   - 電子工作
-  - Webアプリ開発
-  - スマホアプリ開発
+  - Webサイト
+  - アプリ開発
 - id: 295
   order: '131032'
   created_at: '2022-12-16'
@@ -1170,8 +1170,8 @@
   tags:
   - Minecraft
   - Scratch
-  - Webアプリ
-  - スマホアプリ
+  - Webサイト
+  - アプリ開発
 - id: 341
   order: '131032'
   created_at: '2025-07-20'
@@ -1312,7 +1312,7 @@
   tags:
   - Scratch
   - Webサイト
-  - ゲーム
+  - ゲーム開発
 - id: 308
   order: '131121'
   created_at: '2023-08-31'
@@ -1408,7 +1408,7 @@
   description: 豊島区で毎月開催
   tags:
   - Scratch
-  - ゲーム
+  - ゲーム開発
   - Webサイト
   - Java
 - id: 130
@@ -3471,7 +3471,7 @@
   tags:
   - Scratch
   - Webサイト
-  - アプリ
+  - アプリ開発
 - id: 115
   order: '313866'
   created_at: '2017-08-16'
@@ -3585,7 +3585,7 @@
   - Unity
   - Python
   - C#
-  - Webアプリ開発
+  - アプリ開発
 - id: 268
   order: '331015'
   created_at: '2021-05-01'
