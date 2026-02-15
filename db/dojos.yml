@@ -3861,6 +3861,20 @@
   - Unity
   - Mindstorms
   - Python
+- id: 351
+  order: '382051'
+  created_at: '2025-02-14'
+  name: 新居浜
+  prefecture_id: 38
+  url:  https://www.facebook.com/CoderDojoEhimeNiihama
+  logo: "/img/dojos/default.webp"
+  description: 新居浜市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
+  - Webサイト
+  - アプリ開発
+  - ゲーム開発
 - id: 226
   order: '382108'
   created_at: '2019-10-02'
