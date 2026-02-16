@@ -55,11 +55,11 @@ jobs:
       run: curl https://cli-assets.heroku.com/install.sh | sh
 
     - name: 📅 Run upcoming_events:aggregation on Heroku
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        heroku run rails upcoming_events:aggregation \
-          -a ${{ secrets.HEROKU_APP_NAME }}
+        heroku run rails upcoming_events:aggregation --app $HEROKU_APP_NAME
+      env:
+        HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
   deploy:
     needs: daily
