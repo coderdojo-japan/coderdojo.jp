@@ -1,0 +1,25 @@
+name: Weekly Workflow
+
+on:
+  schedule:
+    # 毎週月曜 1:00 AM UTC (日本時間 10:00 AM)
+    - cron: '0 1 * * 1'
+  # Allows you to run this workflow manually from the Actions tab
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch:
+
+jobs:
+  run-on-heroku:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+    - name: 📦 Install Heroku CLI
+      run: curl https://cli-assets.heroku.com/install.sh | sh
+
+    - name: 📊 Run statistics:aggregation on Heroku
+      run: |
+        heroku run rails statistics:aggregation --app $HEROKU_APP_NAME
+      env:
+        HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
