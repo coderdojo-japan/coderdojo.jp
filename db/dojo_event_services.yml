@@ -28,10 +28,10 @@
 ### (dojos.yml の追加順) ###
 
 # 新居浜（愛媛）
-# - dojo_id: 351
-#   name: facebook
-#   group_id: ???
-#   url: https://www.facebook.com/CoderDojoEhimeNiihama
+- dojo_id: 351
+  name: connpass
+  group_id: 17378
+  url: https://corderdojo-ehimeniihama.connpass.com/
 
 # 西条
 # - dojo_id: 350
