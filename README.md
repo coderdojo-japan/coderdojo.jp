@@ -177,15 +177,20 @@ bundle exec rails podcasts:upsert
 
 以下のコマンドは上記 CI とは関係なく、GitHub Actions で定期的に実行されます。
 
-```console
-# 【毎日】近日開催のイベント収集 (Daily at 0:00 UTC / 9:00 JST)
-# 実行タイミング: .github/workflows/daily.yml
-$ bundle exec rails upcoming_events:aggregation
+- :octocat: https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/daily.yml
 
-# 【毎週】統計情報ページ用のデータ収集 (Weekly on Monday at 1:00 AM UTC / 10:00 AM JST)
-# 実行タイミング: .github/workflows/weekly.yml
-$ bundle exec rails statistics:aggregation
-```
+   ```console
+   # 【毎日】近日開催のイベント収集 (毎朝9:00am)
+   # 実行タイミング: .github/workflows/daily.yml
+   $ bundle exec rails upcoming_events:aggregation
+   ```
+
+- :octocat: https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/weekly.yml
+
+   ```
+   # 【毎週】統計情報ページ用のデータ収集 (毎週月曜10am)
+   $ bundle exec rails statistics:aggregation
+   ```
 
 
 <div id='howto-develop-docs'></div><br>
