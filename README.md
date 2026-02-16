@@ -173,16 +173,18 @@ bundle exec rails podcasts:upsert
 
 <div id='howto-develop-jobs'></div><br>
 
-### [:alarm_clock:](#howto-develop-jobs) 定期的に実行されるスクリプト (Heroku Scheduler)
+### [:alarm_clock:](#howto-develop-jobs) 定期的に実行されるスクリプト (GitHub Actions)
 
-以下のコマンドは上記 CI とは関係なく、定期的に実行されます。
+以下のコマンドは上記 CI とは関係なく、GitHub Actions で定期的に実行されます。
 
 ```console
-# 【毎日】近日開催のイベント収集 (Daily at 9:00 PM UTC)
+# 【毎日】近日開催のイベント収集 (Daily at 0:00 UTC / 9:00 JST)
+# 実行タイミング: .github/workflows/daily.yml
 $ bundle exec rails upcoming_events:aggregation
 
-# 【毎週】統計情報ページ用のデータ収集 (Daily at 1:00 AM UTC)
-$ [ $(date +%u) = 1 ] && bundle exec rails statistics:aggregation
+# 【毎週】統計情報ページ用のデータ収集 (Weekly on Monday at 1:00 AM UTC / 10:00 AM JST)
+# 実行タイミング: .github/workflows/weekly.yml
+$ bundle exec rails statistics:aggregation
 ```
 
 

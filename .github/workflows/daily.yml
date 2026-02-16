@@ -45,19 +45,35 @@ jobs:
           echo "FOUND_NEWS=false" >> $GITHUB_OUTPUT
         fi
 
+  run-on-heroku:
+    needs: daily
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+    - name: 📦 Install Heroku CLI
+      run: curl https://cli-assets.heroku.com/install.sh | sh
+
+    - name: 📅 Run upcoming_events:aggregation on Heroku
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: |
+        heroku run rails upcoming_events:aggregation \
+          -a ${{ secrets.HEROKU_APP_NAME }}
+
   deploy:
     needs: daily
     if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
     # TODO: ubuntu-latest image needs to install heroku CLI to deploy.
     # https://github.com/AkhileshNS/heroku-deploy/issues/188
     runs-on: ubuntu-22.04
-    
+
     steps:
     - name: ☑️ Checkout code
       uses: actions/checkout@v4
       with:
         ref: main
-    
+
     - name: 🚀 Deploy to Heroku
       uses: akhileshns/heroku-deploy@v3.14.15
       with:
