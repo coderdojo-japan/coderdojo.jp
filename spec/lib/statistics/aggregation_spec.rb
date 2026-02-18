@@ -22,10 +22,10 @@ RSpec.describe Statistics::Aggregation do
       create(:dojo_event_service, dojo_id: d1.id, name: :connpass, group_id: 9876)
       create(:dojo_event_service, dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
 
-      create(:dojo, id: 194, name: 'Dojo194', email: 'info@dojo194.example.com', description: 'CoderDojo194', tags: %w(CoderDojo194), url: 'https://example.com/dojo194', prefecture_id: 13)
+      d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.example.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.com/dojo3', prefecture_id: 13)
       allow(EventService::Providers::StaticYaml).to receive(:new).and_return(yaml_provider)
       allow(yaml_provider).to receive(:fetch_events).and_return([
-        { 'dojo_id' => 194, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
+        { 'dojo_id' => d3.id, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
       ])
     end
 
