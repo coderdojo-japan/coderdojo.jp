@@ -93,6 +93,7 @@ module ApplicationHelper
   def dojomap_url(path='/'); 'https://map.coderdojo.jp'  + path; end
   def zen_url(path='/find'); 'https://zen.coderdojo.com' + path; end
 
+  def cpj_url;        'https://coolestprojects2026.coderdojo.jp';  end
   def decadojo_url;   'https://decadojo.coderdojo.jp'; end
   def dojocon_url;    'https://dojocon.coderdojo.jp';  end
   def dojoletter_url; 'https://news.coderdojo.jp/category/DojoLetterバックナンバー'; end
