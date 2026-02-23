@@ -66,6 +66,17 @@ CoderDojo Kashiwa と柏市教育委員会の連携について更に詳しく�
 
 <br>
 
+<div style="padding: 10px 0px 5px 15px; font-weight: bold">関連リンク</div>
+
+<ul>
+  <li>
+    <a href="https://www.facebook.com/groups/coderdojo.jp/permalink/25963840273302693/">「CoderDojoでのGIGA端末利用」に関する連携・実績まとめ - Facebook グループ</a>
+  </li>
+</ul>
+
+<br>
+<br>
+
 <div align="right">
   一般社団法人 CoderDojo Japan<br>
   理事　宮島 衣瑛 (<a href='https://x.com/kiriem_'>@kiriem_</a>)<br>
