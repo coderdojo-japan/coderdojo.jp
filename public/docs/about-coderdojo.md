@@ -67,6 +67,7 @@ CoderDojo Kashiwa と柏市教育委員会の連携について更に詳しく�
 <br>
 
 <div align="right">
-一般社団法人 CoderDojo Japan<br>
-連絡先: info@coderdojo.jp
+  一般社団法人 CoderDojo Japan<br>
+  理事　宮島 衣瑛 (<a href='https://x.com/kiriem_'>@kiriem_</a>)<br>
+  連絡先: info@coderdojo.jp
 </div>
