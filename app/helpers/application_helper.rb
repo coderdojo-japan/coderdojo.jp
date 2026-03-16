@@ -98,6 +98,7 @@ module ApplicationHelper
   def dojocon_url;    'https://dojocon.coderdojo.jp';  end
   def dojoletter_url; 'https://news.coderdojo.jp/category/DojoLetterバックナンバー'; end
   def foundation_url; 'https://speakerdeck.com/helloworldfoundation'; end
+  def raspi_url;      'https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/'; end
 
   def facebook_group_url; 'https://www.facebook.com/groups/coderdojo.jp'; end
   def facebook_page_url;  'https://www.facebook.com/coderdojo.jp'; end
