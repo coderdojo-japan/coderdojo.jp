@@ -23,15 +23,15 @@
     <%= form_with url: pokemon_path, class: 'form' do |f| %>
       <div class="field">
         <%= f.label :email, "メールアドレス" %>
-        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: example@gmail.com', disabled: true %>
+        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: coderdojo@example.com', disabled: true %>
       </div>
       <div class="field">
         <%= f.label :parent_name, "保護者の名前" %>
-        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道場', disabled: true %>
+        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道場', disabled: true %>
       </div>
       <div class="field">
         <%= f.label :participant_name, "参加者の名前" %>
-        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: 幸田 道子', disabled: true %>
+        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道子', disabled: true %>
       </div>
       <div class="field">
         <%= f.label :dojo_name, "道場名" %>
