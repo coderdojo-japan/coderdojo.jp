@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 大和西大寺（奈良・生駒・田原本・平群・明日香のイベント収集サイトは共通のため省略）
+#- dojo_id: 352
+#  name: connpass
+#  group_id: 2617
+#  url: https://coderdojo-nara-ikoma.connpass.com/
+
 # 新居浜（愛媛）
 - dojo_id: 351
   name: connpass
