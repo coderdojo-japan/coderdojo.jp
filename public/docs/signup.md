@@ -23,7 +23,7 @@ CoderDojo として承認されたら、Dojo 情報を coderdojo.jp に掲載す
 
 <br>
 
-CoderDojo Japan への掲載申請が承認されると、[パートナー法人](/#partners)が提供する[すべての CoderDojo 向け支援プログラム](/kata#support)にお申し込みできるようになります。
+CoderDojo Japan への掲載申請が承認されると、[パートナー法人](/#partners)が提供する [CoderDojo 向け支援プログラム](/kata#support)にお申し込みできるようになります。
 
 - 🎁️ パートナー法人の各援プログラム: [https://coderdojo.jp/kata#support](/kata#support)
 
