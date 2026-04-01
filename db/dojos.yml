@@ -3349,6 +3349,19 @@
   - micro:bit
   - toio
   - Minecraft
+- id: 352
+  order: '292010'
+  created_at: '2026-03-29'
+  name: 大和西大寺
+  prefecture_id: 29
+  url: https://coderdojo-nara-ikoma.connpass.com/
+  logo: "/img/dojos/yamato-saidaiji.webp"
+  description: 奈良市で不定期開催
+  tags:
+  - Scratch
+  - Luanti
+  - KNIME
+  - AI
 - id: 36
   order: '292095'
   created_at: '2016-04-25'
