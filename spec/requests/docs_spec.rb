@@ -38,6 +38,7 @@ RSpec.describe 'Docs', type: :request do
           response.status < 400
         end
 
+        puts "Checked #{links.count} internal links"
         expect(dead_links).to be_empty, "Dead links found: #{dead_links.join(', ')}"
       end
     end
