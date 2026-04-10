@@ -30,7 +30,7 @@ RSpec.describe 'Docs', type: :request do
         doc   = Nokogiri::HTML(response.body)
         links = doc.css('a[href]').map { |a| a['href'] }
                    .select { |href| href.start_with?('/') && !href.start_with?('/#') }
-                   .map { |href| href.split('#').first }
+                   .map    { |href| href.split('#').first }
                    .uniq
 
         dead_links = links.reject do |path|
