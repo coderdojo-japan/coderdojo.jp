@@ -23,6 +23,25 @@ RSpec.describe 'Docs', type: :request do
       expect(response.status).to eq 302
     end
 
+    # /kata page internal links should not be dead links
+    context 'kata page - internal links check' do
+      it 'has no dead internal links' do
+        get '/kata'
+        doc   = Nokogiri::HTML(response.body)
+        links = doc.css('a[href]').map { |a| a['href'] }
+                   .select { |href| href.start_with?('/') && !href.start_with?('/#') }
+                   .map { |href| href.split('#').first }
+                   .uniq
+
+        dead_links = links.reject do |path|
+          get path
+          response.status < 400
+        end
+
+        expect(dead_links).to be_empty, "Dead links found: #{dead_links.join(', ')}"
+      end
+    end
+
     # /signup page has Google Form to be rendered.
     context 'signup page - Google Form rendering (Critical)' do
       before { get doc_path('signup') }

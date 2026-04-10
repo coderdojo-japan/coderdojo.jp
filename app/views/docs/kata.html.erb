@@ -57,7 +57,7 @@
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
 	<%= lazy_image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
-	
+
 	<h3 id='welcome'>
 	  <a href='#welcome'>✅</a>
 	  初めての人へ
@@ -87,7 +87,7 @@
 	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本の道場一覧', root_path(anchor: 'dojos') %></a>や<%= link_to '近日開催の道場', events_path %>、もしくは<%= link_to '地図情報（DojoMap）', dojomap_url %> から最寄りの道場を探してみましょう!</p>
 
 	<div class='btn-cover' style="margin-top: 20px; margin-bottom: 100px;">
-	  <%= link_to '/events', class: 'btn-blue' do %>
+	  <%= link_to events_path, class: 'btn-blue' do %>
 	    📆
 	    近日開催から探す
 	  <% end %>
@@ -250,7 +250,7 @@
 	  </li>
 	</ul>
 
-	
+
 	<h3 id='media-articles' style='margin-top: 80px;'>
 	  <a href='#media-articles'>📜</a>
 	  Web記事・プレスリリース
@@ -674,7 +674,7 @@
 	  </a>
 	</div>
 
-	
+
 	<h3 id='challenge-contests'>
 	  <a href='#challenge-contests'>🏅</a>
 	  コンテスト
@@ -895,7 +895,7 @@
 	</ul>
 	<br>
 	<p>具体的なイメージが掴めたら、準備・申請の手続きを進めていきましょう!</p>
-	
+
 	<h3 id='startup-flowchart'>
 	  <a href='#startup-flowchart'>☯️</a>
 	  Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span>
@@ -1328,7 +1328,7 @@
 	    <h4 id='doc-safeguarding-checklist'><%= link_to 'ボランティアのための子ども安全保護チェックリスト', 'https://raspberrypi.my.salesforce.com/sfc/p/#4J000000GeqW/a/8d000000PGbW/TH92cMY9bA.gvpWJx0xXME.cFddNiDAEZ0rG4ciel00' %><small>（英語）</small></h4>
 	    <p>by <%= link_to 'Raspberry Pi & CoderDojo Foundation', raspi_url %></p>
 	  </li>
-	  
+
 	  <li>
 	    <h4 id='doc-start-a-coderdojo'><a href="https://www.futurelearn.com/info/courses/start-a-coder-dojo/0/steps/40617">Start a CoderDojo - What is CoderDojo?</a><small>（英語）</small></h4>
 	    <p>by <%= link_to 'Raspberry Pi & CoderDojo Foundation', raspi_url %></p>
