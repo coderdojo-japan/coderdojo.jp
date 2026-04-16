@@ -11,7 +11,7 @@ English translation of the Articles of Incorporation of [CoderDojo Japan Associa
 <blockquote>
   <p style="font-size: 80%">
     📝
-    Note: The following Articles of Incorporation's translation from Japanese into English may contain inaccuracies. In any event there is discrepancy between English and Japanese, <a href='/teikan'>the Japanese version</a> shall control to the contents herein.
+    Note: The following Articles of Incorporation's translation from Japanese into English may contain inaccuracies. In the event of any discrepancy between English and Japanese, <a href='/teikan'>the Japanese version</a> shall control to the contents herein.
   </p>
 </blockquote>
 
