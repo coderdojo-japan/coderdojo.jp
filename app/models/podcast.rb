@@ -5,7 +5,7 @@ class Podcast < ApplicationRecord
   YOUTUBE_PLAYLIST_ID  = 'PL94GDfaSQTmJxxnapafkApHYgQUJ6ABUU'
   # Match timestamps at the beginning of lines (YouTube format)
   REGEX_TIMESTAMP  = /^((\d{1,2}:)?\d{1,2}:\d{2})/
-  REGEX_YOUTUBE_ID = /watch\?v=((\w)*)/
+  REGEX_YOUTUBE_ID = /watch\?v=([\w-]+)/
 
   validates :title,          presence: true
   validates :content_size,   presence: true
@@ -33,5 +33,9 @@ class Podcast < ApplicationRecord
 
   def content
     exist? ? File.read(path) : ''
+  end
+
+  def youtube_id
+    content.match(REGEX_YOUTUBE_ID)[1]
   end
 end

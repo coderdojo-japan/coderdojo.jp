@@ -3,6 +3,11 @@ require 'rails_helper'
 RSpec.feature 'Podcasts', type: :feature do
   describe 'GET documents' do
     scenario 'Podcast index should be exist' do
+      @podcast = create(:podcast)
+      allow(@podcast).to receive(:exist?) { true }
+      allow(@podcast).to receive(:content) { "title\nhttps://www.youtube.com/watch?v=test123\n" }
+      allow(Podcast).to  receive(:order).and_return([@podcast].reverse)
+
       visit '/podcasts'
       expect(page).to have_http_status(:success)
     end
@@ -13,6 +18,7 @@ RSpec.feature 'Podcasts', type: :feature do
       allow(@podcast).to receive(:exist?).with(offset: -1) { false }
       allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\nhttps://www.youtube.com/watch?v=test123\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
+      allow(Podcast).to  receive(:order).and_return([@podcast].reverse)
 
       visit "/podcasts/#{@podcast.id}"
       expect(page).to have_http_status(:success)
@@ -28,6 +34,7 @@ RSpec.feature 'Podcasts', type: :feature do
       allow(@podcast).to receive(:exist?) { true }
       allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\nhttps://www.youtube.com/watch?v=test123\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
+      allow(Podcast).to  receive(:order).and_return([@podcast].reverse)
 
       visit  "/podcasts/#{@podcast.id}"
       target = 'DojoCast'

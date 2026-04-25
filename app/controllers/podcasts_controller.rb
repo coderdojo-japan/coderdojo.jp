@@ -27,7 +27,7 @@ class PodcastsController < ApplicationController
     @url     = request.url
     @title   = @episode.title.split('-').last.strip
     @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
-    @youtube_id = @episode.content.match(Podcast::REGEX_YOUTUBE_ID)[1]
+    @youtube_id = @episode.youtube_id
     @content = Kramdown::Document.new(
                                   self.convert_shownote(@episode.content),
                                   input: 'GFM').to_html
