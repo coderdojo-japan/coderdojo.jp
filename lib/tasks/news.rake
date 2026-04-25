@@ -72,10 +72,10 @@ def fetch_podcast_posts(rss_feed_url)
     unless item.title =~ /^(\d{3})\s/
       raise "DojoCast episode number not found in title: #{item.title}"
     end
-    
+
     episode_number = $1.to_i  # 033 → 33, 001 → 1
     internal_url = "https://coderdojo.jp/podcasts/#{episode_number}"
-    
+
     {
       'url'          => internal_url,
       'title'        => item.title,
@@ -132,7 +132,7 @@ namespace :news do
           'title'        => item['title'],
           'published_at' => item['published_at']
         }
-      end.to_yaml)
+      end.to_yaml(line_width: -1))
     end
 
     TASK_LOGGER.info("✅ 合計 #{items_by_oldest.size} 件を news.yml に保存しました")

@@ -1,4 +1,8 @@
 ---
+- id: 191
+  url: https://coderdojo.jp/podcasts/35
+  title: '035 - How Coolest Projects Started in the CoderDojo community (Guest: Bill Liao)'
+  published_at: '2026-04-25T09:00:00+09:00'
 - id: 190
   url: https://news.coderdojo.jp/2026/04/05/dojoletter-vol-95-2026%e5%b9%b402%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.95 2026年02月号
@@ -61,8 +65,7 @@
   published_at: '2025-09-10T12:45:56+09:00'
 - id: 175
   url: https://prtimes.jp/main/html/rd/p/000000017.000038935.html
-  title: 日本各地に 200 以上！全国の CoderDojo 関係者が集まるカンファレンス「DojoCon Japan 2025」が、10月25日 (土曜)
-    に福岡県久留米市で開催
+  title: 日本各地に 200 以上！全国の CoderDojo 関係者が集まるカンファレンス「DojoCon Japan 2025」が、10月25日 (土曜) に福岡県久留米市で開催
   published_at: '2025-09-02T17:30:01+09:00'
 - id: 174
   url: https://news.coderdojo.jp/2025/08/12/dojoletter-vol-87-2025%e5%b9%b406%e6%9c%88%e5%8f%b7/
