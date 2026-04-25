@@ -1,7 +1,8 @@
 class Podcast < ApplicationRecord
   self.table_name = 'podcasts'
   DIR_PATH        = 'public/podcasts'
-  WDAY2JAPANESE   = %w(日 月 火 水 木 金 土)
+  WDAY2JAPANESE        = %w(日 月 火 水 木 金 土)
+  YOUTUBE_PLAYLIST_ID  = 'PL94GDfaSQTmJxxnapafkApHYgQUJ6ABUU'
   # Match timestamps at the beginning of lines (YouTube format)
   REGEX_TIMESTAMP  = /^((\d{1,2}:)?\d{1,2}:\d{2})/
   REGEX_YOUTUBE_ID = /watch\?v=((\w)*)/

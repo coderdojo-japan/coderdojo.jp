@@ -27,6 +27,7 @@ class PodcastsController < ApplicationController
     @url     = request.url
     @title   = @episode.title.split('-').last.strip
     @date    = @episode.published_date.strftime("%Y年%-m月%-d日（#{Podcast::WDAY2JAPANESE[@episode.published_date.wday]}）")
+    @youtube_id = @episode.content.match(Podcast::REGEX_YOUTUBE_ID)[1]
     @content = Kramdown::Document.new(
                                   self.convert_shownote(@episode.content),
                                   input: 'GFM').to_html
@@ -45,8 +46,10 @@ class PodcastsController < ApplicationController
     content.gsub!(/(#+) Shownote/) { shownote }
 
     return content unless content.match?(Podcast::REGEX_YOUTUBE_ID)
+    youtube_id = content.match(Podcast::REGEX_YOUTUBE_ID)[1]
+    embed = render_to_string(partial: 'podcasts/youtube_embed', locals: { youtube_id: youtube_id })
+    content.gsub!(/<a[^>]+>\s*<img[^>]+Cover Photo[^>]*>\s*<\/a>/m, embed)
     return content unless content.match?(Podcast::REGEX_TIMESTAMP)
-    youtube_id = @episode.content.match(Podcast::REGEX_YOUTUBE_ID)[1]
     content.gsub!(Podcast::REGEX_TIMESTAMP) do
         original_t = $1
         parts = original_t.split(':')

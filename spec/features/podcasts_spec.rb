@@ -11,7 +11,7 @@ RSpec.feature 'Podcasts', type: :feature do
       @podcast = create(:podcast)
       allow(@podcast).to receive(:exist?) { true }
       allow(@podcast).to receive(:exist?).with(offset: -1) { false }
-      allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\n..." }
+      allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\nhttps://www.youtube.com/watch?v=test123\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
 
       visit "/podcasts/#{@podcast.id}"
@@ -26,7 +26,7 @@ RSpec.feature 'Podcasts', type: :feature do
     scenario 'Load doc file with absolute path' do
       @podcast = create(:podcast)
       allow(@podcast).to receive(:exist?) { true }
-      allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\n..." }
+      allow(@podcast).to receive(:content) { "title\n収録日: 2019/05/10\nhttps://www.youtube.com/watch?v=test123\n..." }
       allow(Podcast).to  receive(:find_by).with(id: @podcast.id.to_s) { @podcast }
 
       visit  "/podcasts/#{@podcast.id}"
@@ -40,15 +40,15 @@ RSpec.feature 'Podcasts', type: :feature do
     scenario 'Show note timestamps are converted to YouTube links' do
       @podcast = create(:podcast)
       allow(@podcast).to receive(:exist?) { true }
-      allow(@podcast).to receive(:content) { 
+      allow(@podcast).to receive(:content) {
         <<~CONTENT
           タイトル
           収録日: 2019/05/10
-          
+
           YouTubeリンク: https://www.youtube.com/watch?v=Dd9IYiF0R6E
-          
+
           ## Shownote
-          
+
           00:00:00 米国系 IT 企業から CoderDojo へ、233台のノートPC寄贈
           00:25:01 AI と遊んでみる回の動画 https://youtu.be/BYpa1CcYtss?t=1425
           00:59:14 CASE Shinjuku 利用者と CoderDojo の繋がり
@@ -59,13 +59,13 @@ RSpec.feature 'Podcasts', type: :feature do
 
       visit  "/podcasts/#{@podcast.id}"
       expect(page).to have_http_status(:success)
-      
+
       # タイムスタンプがYouTubeリンクに変換されているか確認
       expect(page).to have_link '00:00:00', href: 'https://youtu.be/Dd9IYiF0R6E?t=00h00m00s'
       expect(page).to have_link '00:25:01', href: 'https://youtu.be/Dd9IYiF0R6E?t=00h25m01s'
       expect(page).to have_link '00:59:14', href: 'https://youtu.be/Dd9IYiF0R6E?t=00h59m14s'
       expect(page).to have_link '01:00:57', href: 'https://youtu.be/Dd9IYiF0R6E?t=01h00m57s'
-      
+
       # 既存のURL付きタイムスタンプはそのまま表示されること
       expect(page).to have_content 'AI と遊んでみる回の動画 https://youtu.be/BYpa1CcYtss?t=1425'
       expect(page).to have_content 'CASE Shinjuku の英語アクセスページ https://case-shinjuku.com/english'
@@ -74,15 +74,15 @@ RSpec.feature 'Podcasts', type: :feature do
     scenario 'Show note timestamps with mm:ss format are converted to YouTube links' do
       @podcast = create(:podcast)
       allow(@podcast).to receive(:exist?) { true }
-      allow(@podcast).to receive(:content) { 
+      allow(@podcast).to receive(:content) {
         <<~CONTENT
           タイトル
           収録日: 2019/05/10
-          
+
           YouTubeリンク: https://www.youtube.com/watch?v=test123
-          
+
           ## Shownote
-          
+
           00:30 オープニング
           05:45 メインテーマ
           59:59 エンディング
@@ -92,7 +92,7 @@ RSpec.feature 'Podcasts', type: :feature do
 
       visit  "/podcasts/#{@podcast.id}"
       expect(page).to have_http_status(:success)
-      
+
       # mm:ss形式のタイムスタンプもYouTubeリンクに変換されているか確認
       expect(page).to have_link '00:30', href: 'https://youtu.be/test123?t=00m30s'
       expect(page).to have_link '05:45', href: 'https://youtu.be/test123?t=05m45s'
@@ -102,15 +102,15 @@ RSpec.feature 'Podcasts', type: :feature do
     scenario 'Show note timestamps with m:ss format (single digit minutes) are converted to YouTube links' do
       @podcast = create(:podcast)
       allow(@podcast).to receive(:exist?) { true }
-      allow(@podcast).to receive(:content) { 
+      allow(@podcast).to receive(:content) {
         <<~CONTENT
           タイトル
           収録日: 2019/05/10
-          
+
           YouTubeリンク: https://www.youtube.com/watch?v=episode21
-          
+
           ## Shownote
-          
+
           0:00 ゲスト自己紹介
           0:54 TFabWorks 無償レンタルプログラム
           2:10 2019年の年末から動き出した
@@ -121,7 +121,7 @@ RSpec.feature 'Podcasts', type: :feature do
 
       visit  "/podcasts/#{@podcast.id}"
       expect(page).to have_http_status(:success)
-      
+
       # m:ss形式（一桁の分）のタイムスタンプもYouTubeリンクに変換されているか確認
       expect(page).to have_link '0:00', href: 'https://youtu.be/episode21?t=0m00s'
       expect(page).to have_link '0:54', href: 'https://youtu.be/episode21?t=0m54s'
