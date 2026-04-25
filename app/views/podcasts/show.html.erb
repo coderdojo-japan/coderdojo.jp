@@ -29,8 +29,6 @@
       <h1 id='title'>📻 <%= @title %><span style='display: none;'> - DojoCast</span></h1>
       <div style='text-align: center; margin-bottom: 60px;'>公開日: <%= @date %></div>
 
-      <iframe class="lazyload" src="https://creators.spotify.com/pod/profile/coderdojo-japan/embed/episodes/<%= @episode.permalink %>" width="100%" frameborder="yes" scrolling="no" style='margin-bottom: 30px;'></iframe>
-
       <%= raw Rinku.auto_link(@content) %>
     </div>
   </section>
