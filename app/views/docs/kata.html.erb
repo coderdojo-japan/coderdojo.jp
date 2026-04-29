@@ -949,13 +949,13 @@
 	  </li>
 
 	  <li>
-	    <p>アカウント作成後、クラブ登録・管理プラットフォーム「<a href='https://codeclub.org/ja/p/cd-japan'>Code Club</a>」に行き、先ほど作成した Raspberry Pi アカウントでログインします。</p>
+	    <p>アカウント作成後、クラブ登録・管理プラットフォーム「<%= link_to 'Code Club', club_url %>」に行き、先ほど作成した Raspberry Pi アカウントでログインします。</p>
 	    <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
 	      <p>
 		📝
 		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> <span style='font-size: smaller'>(Code Club コミュニティ)</span> で新規クラブ登録・管理を行っています。
 
-		<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>
+		<!--<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>-->
 		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 10px auto 20px'), 'https://codeclub.org/en/our-partners' %>
 	      </p>
 	    </blockquote>
