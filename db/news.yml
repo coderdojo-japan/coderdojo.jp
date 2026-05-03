@@ -1,4 +1,8 @@
 ---
+- id: 192
+  url: https://news.coderdojo.jp/2026/05/02/dojoletter-vol-96-2026%e5%b9%b403%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.96 2026年03月号
+  published_at: '2026-05-02T22:05:32+09:00'
 - id: 191
   url: https://coderdojo.jp/podcasts/35
   title: '035 - How Coolest Projects Started in the CoderDojo community (Guest: Bill Liao)'
