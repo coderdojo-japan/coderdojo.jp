@@ -68,6 +68,7 @@ INPUT_TEXT.each do |line|
       .gsub('麹町',           '麹町@アドバンスト・ソフト')
       .gsub('吉備okayama',    '吉備')
       .gsub('吉備岡山',       '吉備')
+      .gsub('愛媛新居浜',     '新居浜')
       .gsub('名護 恩納@oist', '名護')
       .gsub('urawa',                     '浦和@Urawa Minecraft Club')
       .gsub('浦和',                      '浦和@Urawa Minecraft Club')
