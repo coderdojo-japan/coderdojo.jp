@@ -16,6 +16,7 @@
       <script src="https://apis.google.com/js/platform.js"></script>
     </div>
 
+    <% if @episodes.present? %>
     <h3 id="live" style="text-align: center; padding-top: 70px;">🎙
       最新エピソードを聴く</h3>
 
@@ -32,6 +33,7 @@
 	</div>
       </section>
     </div>
+    <% end %>
 
 
     <h3 id="episodes" style="text-align: center; padding-top: 70px; padding-bottom: 10px; margin-top: 50px;">📻 これまでの収録</h3>
