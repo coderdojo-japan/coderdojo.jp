@@ -1,12 +1,22 @@
 # ☯️ DojoCon Japan 開催ガイドライン
 
-<br>
+<img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/dojocon-japan_object.webp' style='padding: 0px 0px 40px;' />
 
 本記事は、これまでの DojoCon Japan 実行委員長の方々を中心にまとめられた開催ガイドラインです。DojoCon Japan の開催に興味ある方にとってお役に立てば幸いです。
 
+<div class="home-point-video" style="margin-top: 50px; margin-bottom: 30px;">
+  <iframe width="100%" src="https://www.youtube.com/embed/videoseries?si=xvSZS6NT0U7L7s52&amp;list=PL94GDfaSQTmKKCQJmSjQuFVRLmYj0uQSE" title="DojoCon Japan Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="btn-cover" style="margin-top: 0px; margin-bottom: 80px;">
+  <a class="btn-blue" href="https://dojocon.coderdojo.jp/" target="_blank">
+    ☯️ 過去の開催例を見る
+    <small><i class="far fa-external-link"></i></small>
+  </a>
+</div>
+
 <!--『ココの詳細が知りたい』『今年は主催してみたい』などありましたら info@coderdojo.jp までお気軽にご連絡ください。-->
 
-<br>
 
 ## 開催の頻度や名称について
 
