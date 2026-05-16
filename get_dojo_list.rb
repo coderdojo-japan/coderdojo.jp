@@ -58,7 +58,10 @@ INPUT_TEXT.each do |line|
       .gsub('tokushima',      '徳島')
       .gsub('tsuruoka',       '鶴岡')
       .gsub('yabuki',         '矢吹')
+      .gsub('matsudo',        '松戸')
       .gsub('まつど',         '松戸')
+      .gsub('mito',           '水戸')
+      .gsub('saga@駅前中央',  'SAGA@駅前中央')
       .gsub('高岡',           'たかおか')
       .gsub('町田',           'まちだ')
       .gsub('小平',           'こだいら')
@@ -70,9 +73,8 @@ INPUT_TEXT.each do |line|
       .gsub('吉備岡山',       '吉備')
       .gsub('愛媛新居浜',     '新居浜')
       .gsub('名護 恩納@oist', '名護')
-      .gsub('urawa',                     '浦和@Urawa Minecraft Club')
-      .gsub('浦和',                      '浦和@Urawa Minecraft Club')
       .gsub('浦和@urawa minecraft club', '浦和@Urawa Minecraft Club')
+      .gsub('urawa',                     '浦和@Urawa Minecraft Club')
       .gsub('南風原',         '南風原')
   end
 
