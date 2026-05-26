@@ -44,7 +44,7 @@ Like in other countires, the CoderDojo community in Japan has been growing stead
 
 <div>
   <script defer class="speakerdeck-embed" data-slide="1" data-id="cbe1df65074d4777a19c5f15c5bf93e9" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-  <center>📜 Slides presented at <a href='https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/'>Scratch Conference Europe</a></center>
+  <center>📜 Slides presented at <a href='https://web.archive.org/web/20240721233606/https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/'>Scratch Conference Europe</a></center>
 </div>
 
 <center style="margin-top: 20px;">
@@ -122,7 +122,7 @@ For more detailed information, please refer to the following reports, articles, 
 - ☯️ [CoderDojo - CoderDojo and Raspberry Pi Join Forces](https://web.archive.org/web/20240721015650/https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/)
 - ☯️ [CoderDojo - Our National Partners](https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan)
 - ☯️ [CoderDojo - How the CoderDojo community in Japan has adapted to change](https://coderdojo.com/2020/06/18/how-the-coderdojo-community-in-japan-has-adapted-to-change/)
-- ☯️ [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)
+- ☯️ [CoderDojo - 6 insightful talks at Scratch Conference Europe!](https://web.archive.org/web/20240721233606/https://coderdojo.com/2019/08/30/6-insightful-talks-at-scratch-conference-europe/)
 - ☯️ [CoderDojo - Co-founder of CoderDojo Japan](https://coderdojo.com/2016/03/30/coderdojo-heroes-yohei-yasukawa-co-founder-of-coderdojo-japan/)
 - ☯️ [CoderDojo - What’s happening at DojoCon Japan 2017](https://coderdojo.com/2017/11/02/whats-happening-at-dojocon-japan-2017/)
 - 💰 [CoderDojo Japan - Financial Statements in Japanese](/finances)
