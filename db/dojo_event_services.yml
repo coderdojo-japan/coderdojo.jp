@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 伊佐@本城(鹿児島)
+#- dojo_id: 354
+#  name: facebook
+#  group_id:
+#  url: https://www.facebook.com/profile.php?id=61590880613574
+
 # 姫路（兵庫）
 - dojo_id: 353
   name: connpass
