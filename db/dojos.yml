@@ -4215,6 +4215,20 @@
   - micro:bit
   - Minecraft
   - mBot
+- id: 354
+  order: '462241'
+  created_at: '2026-06-11'
+  name: 伊佐@本城
+  prefecture_id: 46
+  logo: "/img/dojos/isa.webp"
+  url: https://www.facebook.com/profile.php?id=61590880613574
+  description: 伊佐市で毎月開催
+  tags:
+  - Scratch
+  - ラズベリーパイ
+  - toio
+  - Python
+  - Webサイト
 - id: 216
   order: '472018'
   created_at: '2019-06-15'
