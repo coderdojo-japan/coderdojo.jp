@@ -10,59 +10,57 @@
 # 更新例: $ SHOW_ALL=true ./get_dojo_list.rb
 # 更新例: https://news.coderdojo.jp/2025/12/14/162-laptops-to-coderdojo/
 
-CoderDojo HARUMI 
-CoderDojoまちだ
-CoderDojo長門
-CoderDojo吉祥寺
-CoderDojo 福山大門
-CoderDojoSAGA@駅前中央
-CoderDojo大府
-CoderDojo 豊橋
-CoderDojo 恵那
-CoderDojo日進
-CoderDojo 天白
-CoderDojo野母崎(長崎)
-CoderDojo 岡南
-CoderDojo神山
-CoderDojo愛媛新居浜
-CoderDojo 古河、さくら
-CoderDojo新大阪
-CoderDojo 長野
-CoderDojo 神戸
-CoderDojo滝沢
-CoderDojo 那覇
-CoderDojo青梅
-CoderDojo 鶴岡
-CoderDojoMatsudo
-CoderDojo松山
-CoderDojo 市川真間
-CoderDojo吉備
-CoderDojo 柏
-CoderDojo稲毛海岸
-CoderDojo たかおか
-CoderDojo　鳥羽＠竹田住設
-CoderDojo 黒潮町
-CoderDojo船橋
-CoderDojo 大和西大寺
-CoderDojo岐阜
-CoderDojo浦添
-CoderDojo多摩センター
-CoderDojo 小田原
-CoderDojo Mito
-CoderDojo八女
-CoderDojo Miyoshi
-CoderDojo 喜多方
-CoderDojo Nagareyama
-CoderDojo 松本
-CoderDojo 札幌
-CoderDojo 灘
-coderdojo八尾
-CoderDojo 神楽坂
-CoderDojo Hitachinaka  (ひたちなか)
-CoderDojo岩国
-CoderDojoとなみ
-CoderDojo Urawa
-CoderDojo 光
-CoderDojo 早良
-CoderDojo 横浜師岡
-CoderDojo末広町@アミュレット
+室蘭（北海道）
+八戸@吹上（青森）
+会津（福島）
+白河（福島）
+つくば（茨城）
+守谷（茨城）
+前橋（群馬）
+柏（千葉）
+土気（千葉）
+松戸（千葉）
+鎌ケ谷（千葉）
+市川（千葉）
+市川真間（千葉）
+若葉みつわ台（千葉）
+南柏（千葉）
+麹町@アドバンスト・ソフト（東京）
+小平（東京）
+品川御殿山（東京）
+久地（神奈川）
+戸部（神奈川）
+厚木（神奈川）
+港北NT（神奈川）
+となみ（富山）
+岐阜（岐阜）
+三島・沼津（静岡）
+稲沢正明寺（愛知）
+犬山（愛知）
+師勝（愛知）
+西尾（愛知）
+大府（愛知）
+豊橋（愛知）
+名古屋（愛知）
+伊勢（三重）
+大東（大阪）
+加西（兵庫）
+猪名川（兵庫）
+奈良（奈良）
+和歌山（和歌山）
+吉備（岡山）
+津山（岡山）
+光（山口）
+福山大門（広島）
+伊予（愛媛）
+ももち（福岡）
+久留米（福岡）
+香椎（福岡）
+春日（福岡）
+さが（佐賀）
+鹿児島（鹿児島）
+石垣（沖縄）
+沖縄＠ぴあ（沖縄）
+嘉手納（沖縄）
+宮古島（沖縄）
+名護（沖縄）
