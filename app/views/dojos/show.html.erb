@@ -10,9 +10,10 @@
 <section id="events" class="text-center" style="margin-bottom: 100px;">
   <br>
   <h1>☯️
-    CoderDojo <%= @dojo.name %> - 統計情報<br><small>（公開情報のみ掲載）</small>
+    CoderDojo <%= @dojo.name %> - 統計情報
   </h1>
-  <br>
+  <%= link_to lazy_image_tag(@dojo.logo, alt: "CoderDojo #{@dojo.name}", class: 'dojo-picture'), @dojo.url,
+              class: 'dojo-picture-link', target: "_blank", rel: "external noopener" %>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
     <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する<br class='ignore-pc'>公開されている統計情報をまとめたページです。
 
