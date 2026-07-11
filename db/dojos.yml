@@ -2287,6 +2287,17 @@
   tags:
   - Scratch
   - Ruby
+- id: 355
+  order: '202177'
+  created_at: '2026-07-10'
+  name: 佐久
+  prefecture_id: 20
+  logo: "/img/dojos/saku.webp"
+  url: https://x.com/CoderDojoSaku
+  description: 佐久市で不定期開催
+  tags:
+  - Scratch
+  - Webサイト
 - id: 87
   order: '202207'
   created_at: '2017-05-11'
