@@ -6,6 +6,9 @@
 #
 # NOTE: gem のセキュリティ更新は設定ファイル不要で動くため、
 #       ここに bundler を足さなくても既存の挙動は変わらない。
+#
+# 経緯（なぜ bundler を含めないか等）は PR #1837 を参照。
+# https://github.com/coderdojo-japan/coderdojo.jp/pull/1837
 version: 2
 updates:
   - package-ecosystem: github-actions
