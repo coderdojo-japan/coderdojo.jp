@@ -1,0 +1,16 @@
+# GitHub Actions の更新を Dependabot に追跡させる設定。
+#
+# 未設置だったため actions/checkout が v3/v4 のまま放置され、
+# 「Node.js 20 is deprecated」の警告が出ていた。以降は Dependabot が
+# 更新 PR を出すので、同じ形の陳腐化を防げる。
+#
+# NOTE: gem のセキュリティ更新は設定ファイル不要で動くため、
+#       ここに bundler を足さなくても既存の挙動は変わらない。
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "Bump"
