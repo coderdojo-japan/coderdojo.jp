@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 佐久（長野県佐久市）
+# イベント管理サービスが判明したら group_id を取得してコメントアウトを外す。
+#- dojo_id: 355
+#  name: ???
+#  group_id: ???
+#  url: https://codeclub.org/ja/clubs/50f7407f-7eaa-4a71-9a36-710bc4192737
+
 # 伊佐@本城(鹿児島)
 #- dojo_id: 354
 #  name: facebook
