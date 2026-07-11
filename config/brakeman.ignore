@@ -175,7 +175,42 @@
         79
       ],
       "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "e86b8054ce40ae9caeeafa36440f0f982cd6a57d8d54dc772334a8ac70390b3a",
+      "check_name": "LinkToHref",
+      "message": "Potentially unsafe model attribute in `link_to` href",
+      "file": "app/views/dojos/show.html.erb",
+      "line": 15,
+      "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
+      "code": "link_to(lazy_image_tag(Dojo.find(params[:id]).logo, :alt => (\"CoderDojo #{Dojo.find(params[:id]).name}\"), :class => \"dojo-picture\"), Dojo.find(params[:id]).url, :class => \"dojo-picture-link\", :target => \"_blank\", :rel => \"external noopener\")",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "DojosController",
+          "method": "show",
+          "line": 103,
+          "file": "app/controllers/dojos_controller.rb",
+          "rendered": {
+            "name": "dojos/show",
+            "file": "app/views/dojos/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "dojos/show"
+      },
+      "user_input": "Dojo.find(params[:id]).url",
+      "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
+      "note": "Dojo の URL は db/dojos.yml で管理され、PR レビューを経てのみ変更される信頼済みデータのため。同一パターンの shared/_dojo.html.erb:3 も同じ理由で ignore 済み。詳細は PR #1840 を参照。"
     }
   ],
-  "brakeman_version": "7.1.0"
+  "brakeman_version": "7.1.0",
+  "updated": "2026-07-11 19:35:20 +0900"
 }

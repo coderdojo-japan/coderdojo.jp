@@ -661,6 +661,14 @@ body>footer a:hover {
   margin: 0 auto;
 }
 
+// 道場の個別ページ (/dojos/:id) でロゴを囲むリンク。
+// .dojo-picture が display: block のため、包む <a> をインラインのままにすると
+// クリック領域が行いっぱいに広がってしまう。inline-block で画像サイズに収める。
+.dojo-picture-link {
+  display: inline-block;
+  margin: 25px 0;
+}
+
 .dojo-name {
   display: block;
   margin: .5em 0;
@@ -1079,17 +1087,17 @@ section {
 /* Stats and Dojos table styling */
 .stats-table {
   table-layout: auto;
-  
+
   th {
     padding: 10px;
     text-align: center;
   }
-  
+
   td {
     padding: 1px 10px 1px 10px;
     text-align: right;
     font-size: smaller;
-    
+
     &.url-cell {
       white-space:   normal;         /* 改行を許可 */
       word-wrap:     break-word;     /* 古めのブラウザ向け */
@@ -1097,12 +1105,12 @@ section {
       word-break:    break-all;      /* 英数字が続く場合の保険 (必要に応じて) */
       text-align:    left;
     }
-    
+
     &.inactive-item {
       background-color: gainsboro;
     }
   }
-  
+
   // Activity page specific style for expired events
   span.expired a {
     color: red;
