@@ -4,6 +4,9 @@ require 'rails_helper'
 # Gemfile (ruby file:) と CI (ruby-version: .ruby-version) はそれを参照している。
 # 一方 Dockerfile の FROM だけは Docker の仕様上ファイルを読めず、ベタ書きせざるを得ない。
 # そのため、両者がズレたまま気付かない事故を防ぐテストを置いている。
+#
+# 完全 DRY 化（ARG + build-arg）を見送った理由など、検討の経緯は PR #1836 を参照。
+# https://github.com/coderdojo-japan/coderdojo.jp/pull/1836
 RSpec.describe 'Ruby version consistency' do
   let(:ruby_version) { Rails.root.join('.ruby-version').read.strip }
 
