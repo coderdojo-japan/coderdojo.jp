@@ -46,10 +46,6 @@ gem 'connpass_api_v2' # https://github.com/sue445/connpass_api_v2-ruby
 gem 'rack-attack'
 gem 'rack-user_agent'
 
-# For Pokemon Workshop v1. https://coderdojo.jp/pokemon
-# But current v2 does not need this, so can be removed.
-gem 'aws-sdk-s3', '~> 1'
-
 group :development do
   gem 'letter_opener_web'
   gem 'listen'

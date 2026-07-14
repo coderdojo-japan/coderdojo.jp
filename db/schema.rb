@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_14_115324) do
+ActiveRecord::Schema[8.0].define(version: 2026_07_14_184224) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
@@ -80,18 +80,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_14_115324) do
     t.datetime "updated_at", precision: nil, null: false
     t.date "published_date", null: false
     t.index ["enclosure_url"], name: "index_podcasts_on_enclosure_url", unique: true
-  end
-
-  create_table "pokemons", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "parent_name", null: false
-    t.string "participant_name", null: false
-    t.string "dojo_name", null: false
-    t.text "presigned_url"
-    t.string "download_key"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["download_key"], name: "index_pokemons_on_download_key", unique: true
   end
 
   create_table "prefectures", force: :cascade do |t|
