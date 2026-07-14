@@ -70,8 +70,14 @@ RSpec.describe "Dojos", type: :request do
       end
 
       # 文字列以外の year（配列やハッシュ）でも 500 にせず、無効な年として扱う
-      it "handles non-string year parameters" do
+      it "handles array-formatted year parameters" do
         get "/dojos.json?year[]=2020"
+        expect(response).to redirect_to(dojos_path(anchor: 'table'))
+        expect(flash[:inline_alert]).to include("無効")
+      end
+
+      it "handles hash-formatted year parameters" do
+        get "/dojos.json?year[a]=2020"
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
         expect(flash[:inline_alert]).to include("無効")
       end
