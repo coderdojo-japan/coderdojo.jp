@@ -61,3 +61,8 @@ jobs:
           heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email:    ${{ secrets.HEROKU_EMAIL }}
+          # branch の既定値 "HEAD" のままだと、Heroku 側が main/master への push と
+          # 認識できず `Pushed to branch other than [main, master], skipping build.`
+          # としてビルドをスキップする。Actions は push 自体に成功するため success と
+          # 表示され、デプロイされていないことに気付けない。明示的に main を指定する。
+          branch: main
