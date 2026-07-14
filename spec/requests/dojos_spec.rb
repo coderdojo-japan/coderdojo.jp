@@ -68,6 +68,19 @@ RSpec.describe "Dojos", type: :request do
         expect(response).to redirect_to(dojos_path(anchor: 'table'))
         expect(flash[:inline_alert]).to include("無効")
       end
+
+      # 文字列以外の year（配列やハッシュ）でも 500 にせず、無効な年として扱う
+      it "handles array-formatted year parameters" do
+        get "/dojos.json?year[]=2020"
+        expect(response).to redirect_to(dojos_path(anchor: 'table'))
+        expect(flash[:inline_alert]).to include("無効")
+      end
+
+      it "handles hash-formatted year parameters" do
+        get "/dojos.json?year[a]=2020"
+        expect(response).to redirect_to(dojos_path(anchor: 'table'))
+        expect(flash[:inline_alert]).to include("無効")
+      end
     end
 
     describe "year filtering functionality" do
@@ -160,6 +173,58 @@ RSpec.describe "Dojos", type: :request do
           expect(csv_ids).to include(@dojo_2020_active.id)
           expect(csv_ids).not_to include(@dojo_2019_inactive.id)
           expect(csv_ids).not_to include(@dojo_2021_active.id)
+        end
+      end
+
+      # 年を指定した一覧は Dojo.active_at(年末) で絞り込んでいるため、
+      # 残った道場はすべてその年末時点でアクティブ、という不変条件が成り立つ。
+      # コントローラ側で is_active を再判定しないための根拠となるテスト。
+      context "when a year is specified" do
+        it "marks every listed dojo as active at that year end" do
+          get dojos_path(year: 2020, format: :json)
+          json_response = JSON.parse(response.body)
+
+          expect(json_response).not_to be_empty
+          expect(json_response.map { |d| d["is_active"] }).to all(be true)
+        end
+
+        # 「現在は非アクティブだが、その年末時点ではアクティブだった」道場が
+        # アクティブ扱いになることを名指しで固定する（上の不変条件だけでは、
+        # そもそも現在アクティブな道場しか返さない実装でも通ってしまうため）
+        it "marks a dojo inactivated in a later year as active at that year end" do
+          get dojos_path(year: 2020, format: :json)
+
+          dojo = JSON.parse(response.body).find { |d| d["id"] == @dojo_2020_inactive.id }
+          expect(dojo["is_active"]).to be true
+        end
+
+        # 年末の境界値: 元日 0:00 JST ちょうどに非アクティブ化された道場は、
+        # 前年末の時点ではまだアクティブ（> と >= の取り違えを検出する）
+        it "includes a dojo inactivated exactly at the beginning of the next year" do
+          boundary_dojo = create(:dojo,
+            name: "Boundary Dojo",
+            created_at: "2020-01-01",
+            inactivated_at: Time.zone.local(2021, 1, 1)
+          )
+
+          get dojos_path(year: 2020, format: :json)
+          expect(JSON.parse(response.body).map { |d| d["id"] }).to include(boundary_dojo.id)
+
+          get dojos_path(year: 2021, format: :json)
+          expect(JSON.parse(response.body).map { |d| d["id"] }).not_to include(boundary_dojo.id)
+        end
+
+        # タイムゾーン境界: UTC では前年末でも、JST では年明けに非アクティブ化された道場。
+        # 年末の判定が JST（Asia/Tokyo）で行われることを固定する
+        it "treats the year end in JST, not UTC" do
+          jst_new_year_dojo = create(:dojo,
+            name: "JST New Year Dojo",
+            created_at: "2020-01-01",
+            inactivated_at: Time.utc(2020, 12, 31, 20)  # = 2021-01-01 05:00 JST
+          )
+
+          get dojos_path(year: 2020, format: :json)
+          expect(JSON.parse(response.body).map { |d| d["id"] }).to include(jst_new_year_dojo.id)
         end
       end
 
