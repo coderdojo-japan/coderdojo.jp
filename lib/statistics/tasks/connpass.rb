@@ -21,7 +21,9 @@ module Statistics
         end
 
         @client.fetch_events(**@params.merge(group_id: group_ids)).each do |e|
-          dojo_event_service = DojoEventService.find_by(group_id: e.dig('series', 'id').to_s)
+          # API v1 -> v2 でイベントの所属グループを表すキーが series -> group に変わった
+          # cf. https://connpass.com/about/api/v2/
+          dojo_event_service = DojoEventService.find_by(group_id: e.dig('group', 'id').to_s)
           next unless dojo_event_service
 
           EventHistory.create!(dojo_id:          dojo_event_service.dojo_id,

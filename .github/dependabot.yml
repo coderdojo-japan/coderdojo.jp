@@ -17,3 +17,10 @@ updates:
       interval: weekly
     commit-message:
       prefix: "Bump"
+    ignore:
+      # heroku-deploy v4 は push 先を refs/head/main と組み立てるバグがあり
+      # (正しくは refs/heads/main)、Heroku がビルドをスキップしてデプロイが
+      # 黙って行われなくなる。修正が入るまでメジャー更新を見送る。
+      # 経緯は PR #1848 を参照。
+      - dependency-name: akhileshns/heroku-deploy
+        update-types: ["version-update:semver-major"]
