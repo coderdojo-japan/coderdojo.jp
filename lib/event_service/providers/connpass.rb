@@ -36,6 +36,10 @@ module EventService
           events = []
 
           param_period_patern.each do |param_period|
+            # ページ送りの位置は期間バッチごとに独立している。
+            # 前のバッチの位置を引き継ぐと、このバッチの先頭のイベントを取りこぼす。
+            params[:start] = 1
+
             loop do
               begin
                 args = params.merge(param_period).compact
