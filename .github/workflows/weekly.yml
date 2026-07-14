@@ -23,3 +23,13 @@ jobs:
       env:
         HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
         HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+
+    # 集計は失敗しても例外を握り潰して exit 0 で終わることがある。
+    # 「直近 30 日で 1 件も記録されていないプロバイダ」を検知して、
+    # 静かなデータ欠損に気付けるようにする（PR #1845 の再発防止）。
+    - name: 🔍 Check if the aggregation is silently broken
+      run: |
+        heroku run rails statistics:sanity_check --app $HEROKU_APP_NAME
+      env:
+        HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}

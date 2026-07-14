@@ -8,6 +8,12 @@ namespace :statistics do
     end
   end
 
+  desc '集計が静かに壊れていないかを確認します（直近 N 日で 0 件のプロバイダを検知）'
+  task :sanity_check, [:days] => :environment do |tasks, args|
+    days = args[:days].presence&.to_i || 30
+    Statistics::SanityCheck.new(days: days).run
+  end
+
   desc 'キーワードからイベント情報を検索します'
   task :search, [:keyword] => :environment do |tasks, args|
     raise ArgumentError, 'Require the keyword' if args[:keyword].nil?
