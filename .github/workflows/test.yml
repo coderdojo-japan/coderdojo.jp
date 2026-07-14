@@ -56,13 +56,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v7
-      - uses: akhileshns/heroku-deploy@v4
+      # heroku-deploy は v3 に固定する。v4 は push 先を refs/head/main と組み立てており
+      # (正しくは refs/heads/main)、Heroku 側が main への push と認識できずに
+      # `Pushed to branch other than [main, master], skipping build.` としてビルドを
+      # スキップする。push 自体は成功するため Actions は success と表示され、
+      # デプロイされていないことに気付けない。branch 入力を指定しても解消しない。
+      # 詳細は PR #1847 / #1848 を参照。
+      - uses: akhileshns/heroku-deploy@v3.15.15
         with:
           heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email:    ${{ secrets.HEROKU_EMAIL }}
-          # branch の既定値 "HEAD" のままだと、Heroku 側が main/master への push と
-          # 認識できず `Pushed to branch other than [main, master], skipping build.`
-          # としてビルドをスキップする。Actions は push 自体に成功するため success と
-          # 表示され、デプロイされていないことに気付けない。明示的に main を指定する。
-          branch: main
