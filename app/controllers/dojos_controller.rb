@@ -4,7 +4,9 @@ class DojosController < ApplicationController
   def index
     # yearパラメータがある場合は、その年末時点でアクティブだった道場に絞り込む
     if params[:year].present?
-      year = params[:year].to_i  # 数値でない文字列は 0 になり、下の範囲チェックで弾かれる
+      # 数値でない文字列や、配列・ハッシュ形式の year（?year[]=2020）は 0 になり、
+      # 下の範囲チェックで無効な年として弾かれる
+      year = params[:year].to_s.to_i
       unless year.between?(2012, Date.current.year)
         flash[:inline_alert] = "指定された年は無効です。2012年から#{Date.current.year}年の間で指定してください。"
         return redirect_to dojos_path(anchor: 'table')
