@@ -31,8 +31,21 @@ RSpec.describe Statistics::Aggregation do
 
     subject { Statistics::Aggregation.new(from: Time.zone.today.prev_month.strftime('%Y%m')).run }
 
+    # connpass 1 件 + doorkeeper 1 件 + static_yaml 1 件
+    # （connpass が 0 件だった頃は 2 件で通っていた。上記キー変更のバグを追認していたため）
     it do
-      expect{ subject }.to change{ EventHistory.count }.from(0).to(2)
+      expect{ subject }.to change{ EventHistory.count }.from(0).to(3)
+    end
+
+    # connpass API v2 でイベントの所属グループを表すキーが series -> group に変わった。
+    # 集計側が古いキーを見ていると、DojoEventService が引けず全イベントが黙って捨てられる。
+    # 2025年5月以降の connpass のイベント履歴が丸ごと欠損した原因なので、明示的に固定する。
+    it 'connpass のイベント履歴が記録される' do
+      expect{ subject }.to change{ EventHistory.for(:connpass).count }.from(0)
+
+      event = EventHistory.for(:connpass).first
+      expect(event.service_group_id).to eq('9876')
+      expect(event.participants).to eq(10)
     end
   end
 
