@@ -4,10 +4,10 @@ class StatsController < ApplicationController
   def show
     # 言語設定
     @lang = params[:lang] || 'ja'
-    
-    # 2012年1月1日〜2024年12月31日までの集計結果
+
+    # 2012年1月1日〜2025年12月31日までの集計結果
     @period_start = 2012
-    @period_end   = 2024
+    @period_end   = 2025
     period        = Time.zone.local(@period_start).beginning_of_year..Time.zone.local(@period_end).end_of_year
     stats         = Stat.new(period)
 
@@ -118,7 +118,7 @@ class StatsController < ApplicationController
       else
         region
       end
-      
+
       @data_by_region << {
         code:        index+1,
         name:        "#{region_name} (#{dojos.pluck(:counter).sum})",
