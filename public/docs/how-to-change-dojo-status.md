@@ -5,7 +5,7 @@
 <br>
 
 <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
-  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、<b>毎年11月〜12月ごろに数クリックで終わる年次調査アンケートのメール</b>が、クラブ登録・管理プラットフォーム (Code Club) から届くようになります。未回答の道場には後日<a href="https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/" target='_blank'>「現在活動中ですか?」という確認メール</a>が届きます。このメールも未回答だと「<code>活動停止中 (Inactive)</code>」と判断されるのでご注意ください。<br>
+  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、<b>毎年11月〜12月ごろに数クリックで終わる年次調査アンケート</b>が、クラブ登録・管理サイト (Code Club) から「<a href='https://gyazo.com/96060f077afc251c45525c6a4fcbaf79'><code>*ACTION NEEDED* Important check-in ... (後略)</code></a>」といった件名のメールで届くようになります。本メールに未回答の場合「<code>活動停止中 (Inactive)</code>」と判断されるのでご注意ください。(<a href='https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/'>&raquo; 参考事例を見る</a>)<br>
     <br>
     <small>※
       上記の他、<a href='/signup#terms'>一定期間、活動の状況が確認できない場合</a>も Inactive となります。参加者やその保護者が「最寄りの Dojo を見つけたけど今は活動してないみたい... 😭」となってしまうのを未然に防ぐため、お手数ですがご協力いただけると幸いです 🙇
