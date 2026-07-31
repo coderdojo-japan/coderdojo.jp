@@ -34,7 +34,7 @@ CoderDojoの普及に伴い、個人だけでなく法人とも連携しやす�
   <center>
     図: パートナー法人の年次推移
     <br class='ignore-pc'>
-    <small>(<a href='https://news.coderdojo.jp/'>&raquo; 最近の提携事例を見る</a>)</small>
+    <small>(<a href='https://news.coderdojo.jp/author/yasulab/'>&raquo; 最近の提携事例を見る</a>)</small>
   </center>
 </div>
 
