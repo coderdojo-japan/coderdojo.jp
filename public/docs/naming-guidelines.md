@@ -48,6 +48,30 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 
 <br>
 
+## [📝](#example) 命名例: CoderDojo 紙屋町の場合 {#example}
+
+<br>
+
+CoderDojo コミュニティの１つに [CoderDojo 紙屋町](https://www.coderdojo-hiroshima.com/) (旧: CoderDojo 広島) があります。
+
+CoderDojo コミュニティが今ほどの規模ではなかった頃は「`CoderDojo 広島`」という名称で活動していましたが、その後、広島県内で他の Dojo も立ち上がっていきました。
+
+![広島の CoderDojo コミュニティ（当時）](/img/dojos-in-hiroshima.png)
+
+その際、同 Dojo の代表者 (当時) である鼠屋さんから、
+
+> _**広島でも今後CoderDojoが増えるだろうということから、「広島県内の複数あるDojoのうちのひとつ」というイメージを明確にしたいため、現在の開催地である紙屋町を名前にすることにしました。**_
+
+というメッセージと共に、CoderDojo 広島から CoderDojo 紙屋町に名称が変更されました。
+
+[![全文のスクショ](https://i.gyazo.com/4fcbe0cac2e8f0b1dcbbb24c2bc2bbf7.png)](https://www.coderdojo-hiroshima.com/archives/1225)
+
+参考記事: [CoderDojo紙屋町に名称変更しました！ − CoderDojo紙屋町](https://www.coderdojo-hiroshima.com/archives/1225)
+
+上記は１つの事例ではありますが、皆さんが Dojo 名を考える際のご参考になれば幸いです ;)
+
+<br>
+
 何かお困りのことがあれば、一般社団法人 CoderDojo Japan までご連絡ください。
 
 <br>
@@ -72,7 +96,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 <br>
 
 - Q. 他の都道府県に[同一名称の市区町村名](https://ja.wikipedia.org/wiki/同一名称の市区町村一覧)がある場合、避けたほうがよいですか?
-- A. coderdojo.jp では `道場名 (都道府県名)` といった形で掲載しているため、名称が重なることはありません。とはいえ参加者が混同する可能性もありますので、もし可能であれば[より小さい単位の地域名](#faq)を使ったり、上記の[既に道場がある場合](#existing-dojo)を参考にご対応していただけると嬉しいです。
+- A. coderdojo.jp では `道場名 (都道府県名)` といった形で掲載しているため、名称が重なることはありません。とはいえ参加者が混同する可能性もありますので、もし可能であれば[より小さい単位の地域名](#faq)を使ったり、上記の[既に道場がある場合](#dojo-friends)を参考にご対応していただけると嬉しいです。
 
 
 
