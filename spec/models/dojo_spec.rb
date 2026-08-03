@@ -98,34 +98,49 @@ RSpec.describe Dojo, :type => :model do
     #
     # 受付日ではなく掲載日を採用した理由など、検討の経緯は PR #1861 を参照。
     # https://github.com/coderdojo-japan/coderdojo.jp/pull/1861
-    RECENT_DOJO_ID_FROM = 300
-    ALLOWED_INVERSION_IN_DAYS = 90
+    # 定数にすると describe を抜けて Object に定義されてしまうためローカル変数を使う。
+    recent_dojo_id_from = 300
+    allowed_inversion_in_days = 90
 
-    let(:yaml_data) { Dojo.load_attributes_from_yaml }
+    # YYYY-MM-DD 以外や 2025-02-30 のような存在しない日付には nil を返す。
+    # Time.zone.parse は 2025-02-30 を 2025-03-02 に繰り上げるため使わない。
+    def parse_created_at(dojo)
+      Date.iso8601(dojo['created_at'].to_s)
+    rescue Date::Error
+      nil
+    end
 
-    it 'has parsable and non-future created_at' do
-      yaml_data.select { |dojo| dojo['created_at'].present? }.each do |dojo|
-        date = Time.zone.parse(dojo['created_at'].to_s)
+    let(:dojos_with_created_at) do
+      Dojo.load_attributes_from_yaml.select { |dojo| dojo['created_at'].present? }
+    end
+
+    it 'has valid and non-future created_at' do
+      dojos_with_created_at.each do |dojo|
+        date = parse_created_at(dojo)
 
         expect(date).to be_present,
-          "ID: #{dojo['id']} (#{dojo['name']}) の created_at が不正な形式です: #{dojo['created_at']}"
-        expect(date).to be <= Time.current,
+          "ID: #{dojo['id']} (#{dojo['name']}) の created_at が YYYY-MM-DD 形式の日付ではありません: #{dojo['created_at']}"
+        expect(date).to be <= Date.current,
           "ID: #{dojo['id']} (#{dojo['name']}) の created_at が未来の日付です: #{dojo['created_at']}"
       end
     end
 
     it 'has created_at roughly in ascending order of id' do
-      recent_dojos = yaml_data
-        .select { |dojo| dojo['id'].to_i >= RECENT_DOJO_ID_FROM && dojo['created_at'].present? }
+      recent_dojos = dojos_with_created_at
+        .select { |dojo| dojo['id'].to_i >= recent_dojo_id_from }
         .sort_by { |dojo| dojo['id'] }
 
       recent_dojos.each_cons(2) do |prev_dojo, dojo|
-        inversion_in_days = (Date.parse(prev_dojo['created_at'].to_s) - Date.parse(dojo['created_at'].to_s)).to_i
+        prev_date = parse_created_at(prev_dojo)
+        date      = parse_created_at(dojo)
+        next if prev_date.nil? || date.nil? # 形式の誤りは上のテストが報告する
 
-        expect(inversion_in_days).to be <= ALLOWED_INVERSION_IN_DAYS,
+        inversion_in_days = (prev_date - date).to_i
+
+        expect(inversion_in_days).to be <= allowed_inversion_in_days,
           "ID: #{dojo['id']} (#{dojo['name']}) の created_at #{dojo['created_at']} が、" \
           "1つ前の ID: #{prev_dojo['id']} (#{prev_dojo['name']}) の #{prev_dojo['created_at']} より " \
-          "#{inversion_in_days} 日も前になっています。年を取り違えていないか確認してください。"
+          "#{inversion_in_days} 日も前になっています。どちらかが年を取り違えていないか確認してください。"
       end
     end
   end
