@@ -52,9 +52,7 @@ CoderDojo の名前には、`道場名 @ スポンサー名` または `道場�
 
 <br>
 
-CoderDojo コミュニティの１つに [CoderDojo 紙屋町](https://www.coderdojo-hiroshima.com/) (旧: CoderDojo 広島) があります。
-
-CoderDojo コミュニティが今ほどの規模ではなかった頃は「`CoderDojo 広島`」という名称で活動していましたが、その後、広島県内で他の Dojo も立ち上がっていきました。
+CoderDojo コミュニティの１つに [CoderDojo 紙屋町](https://www.coderdojo-hiroshima.com/) (旧: CoderDojo 広島) があります。当時、CoderDojo コミュニティが今ほどの規模ではなかった頃は「`CoderDojo 広島`」という名称で活動していましたが、その後、広島県内で他の Dojo も立ち上がっていきました。
 
 ![広島の CoderDojo コミュニティ（当時）](/img/dojos-in-hiroshima.png)
 
@@ -68,7 +66,9 @@ CoderDojo コミュニティが今ほどの規模ではなかった頃は「`Cod
 
 参考記事: [CoderDojo紙屋町に名称変更しました！ − CoderDojo紙屋町](https://www.coderdojo-hiroshima.com/archives/1225)
 
-上記は１つの事例ではありますが、皆さんが Dojo 名を考える際のご参考になれば幸いです ;)
+上記の事例にあるように **なるべく具体的な地域名をご使用いただけると近隣地域に新たな Dojo が立ち上げやすくなります** ので、よければ近隣に他の Dojo を立ち上げやすくなるような命名だと大変幸いです。
+
+皆さんが Dojo 名を考える際のご参考になれば幸いです 🙇‍♂️
 
 <br>
 
