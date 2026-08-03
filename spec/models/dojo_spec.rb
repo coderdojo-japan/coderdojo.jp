@@ -95,6 +95,9 @@ RSpec.describe Dojo, :type => :model do
     # id 300 未満は Parse からの移行データや再掲載を含み、created_at が
     # 掲載日ではなく道場の設立日を指すものが混在しているため対象外とする。
     # 対象範囲での逆行は最大 15 日であり、閾値 90 日は十分な余裕がある。
+    #
+    # 受付日ではなく掲載日を採用した理由など、検討の経緯は PR #1861 を参照。
+    # https://github.com/coderdojo-japan/coderdojo.jp/pull/1861
     RECENT_DOJO_ID_FROM = 300
     ALLOWED_INVERSION_IN_DAYS = 90
 
