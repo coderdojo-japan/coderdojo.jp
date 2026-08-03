@@ -34,7 +34,7 @@
 Dojo名: CoderDojo 那覇
 Dojoタグ: Scratch, Webサイト, Ruby
 説明文: 那覇市で毎月開催
-ロゴ (任意): 
+ロゴ (任意):
 Web: https://coderdojo-naha.doorkeeper.jp/
 代表者: *** (個人情報のため非表示)
 連絡先: *** (個人情報のため非表示)
@@ -79,6 +79,16 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 
 - `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
+- `created_at` も同様に省略してください。後述のコマンドが**掲載日**（コマンドを実行した日）を自動で入れます。
+  - **手で書き換えないでください。** 申請の受付日を記録したくなりますが、受付日は
+    リポジトリと公開情報からは検証できません。掲載日なら Git 履歴から誰でも検証できます。
+  - コード側も掲載日として扱っており、`/dojos` の日付表示と
+    「その年に新規掲載された道場数」の統計に使われます。
+  - 過去に手で書き換えた際、年を取り違える事故が2件ありました。
+    うち1件は年次統計に誤計上されたまま残っていたため、
+    `spec/models/dojo_spec.rb` で極端な逆行を検出するようにしています。
+  - なお、過去データにはコミット日と 0〜3 日ずれているものがありますが、遡及修正はしません。
+    年次統計の値は変わらず、履歴をいじるコストに見合わないためです。
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します。（db/city_code.csv も参照できます。）
 - `logo` にはロゴ画像へのパスを入力してください。
   - ロゴ画像が省略されていた場合は `default.webp` を入力してください。
@@ -147,7 +157,7 @@ https://coderdojo.jp/stats
   1. connpass のグループまたはイベントページをブラウザで表示します。例: https://coderdojo-tobe.connpass.com/
   2. URL をコピーします
   3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` が得られます
-  
+
   ```
   $ bundle exec bin/c-search https://coderdojo-tobe.connpass.com/
     => 5072
@@ -158,12 +168,12 @@ https://coderdojo.jp/stats
   ```
   $ brew install jq
   ```
-  
+
 - `doorkeeper` の場合は [Doorkeeper API](https://www.doorkeeper.jp/developer/api?locale=en) から取得します
   1. Doorkeeper のイベントページをブラウザで表示します。例: https://coderdojo-suita.doorkeeper.jp/events/90704
   2. URL をコピーします
   3. 以下のコマンドで上記のコピーした URL を指定すると `group_id` が得られます
-  
+
   ```
   $ bundle exec bin/d-search https://coderdojo-minamiaizu.doorkeeper.jp/events/193082
     98760
