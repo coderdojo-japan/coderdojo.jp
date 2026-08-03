@@ -4371,6 +4371,20 @@
   - micro:bit
   - Webサイト
   - Python
+- id: 356
+  order: '472158'
+  created_at: '2026-07-06'
+  name: 南城
+  prefecture_id: 47
+  logo: "/img/dojos/nanjo.webp"
+  url: https://qtendou.github.io/Dojo/
+  description: 南城市で毎月開催
+  tags:
+  - Scratch
+  - Minecraft
+  - Unity
+  - JavaScript
+  - HTML
 - id: 336
   order: '473111'
   created_at: '2025-03-28'
