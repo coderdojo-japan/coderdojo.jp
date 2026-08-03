@@ -80,7 +80,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 
 - `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
 - `created_at` も同様に省略してください。後述のコマンドが**掲載日**（コマンドを実行した日）を自動で入れます。
-  - **申請の受付日に書き換えないでください。** `/dojos` の日付表示と
+  - 入るのは申請の受付日ではなく掲載日です。`/dojos` の日付表示と
     「その年に新規掲載された道場数」の統計に使われます。
     経緯は [PR #1861](https://github.com/coderdojo-japan/coderdojo.jp/pull/1861) を参照してください。
 - `order` には総務省が定める[全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html)の値を入力します。（db/city_code.csv も参照できます。）
