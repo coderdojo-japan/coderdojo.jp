@@ -3315,6 +3315,27 @@
   - Scratch
   - Webサイト
   - Ruby
+- id: 357
+  order: '282154'
+  created_at: '2026-08-04'
+  name: 三木
+  prefecture_id: 28
+  logo: "/img/dojos/miki2026.webp"
+  url: https://coderdojo-miki2026.connpass.com/
+  description: 三木市で毎月開催
+  tags:
+  - Scratch
+  - makeblock
+  - ラズベリーパイ
+  - micro:bit
+  - Arduino
+  - Webサイト
+  - Minecraft
+  - 電子工作
+  - 3Dプリンタ
+  - 3D CAD
+  - ネットワーク
+  - アマチュア無線
 - id: 340
   order: '282171'
   created_at: '2025-06-28'

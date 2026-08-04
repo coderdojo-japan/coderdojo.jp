@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 三木（兵庫県三木市）
+- dojo_id: 357
+  name: connpass
+  group_id: 17988
+  url: https://coderdojo-miki2026.connpass.com/
+
 # 南城（沖縄県南城市）- 独自サイトで運用 (申込は Google フォーム)
 # イベント管理サービスが判明したら group_id を取得してコメントアウトを外す。
 #- dojo_id: 356
