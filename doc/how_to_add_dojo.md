@@ -135,8 +135,15 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 - 区切りは**タブ 1 個**。スペースに変換されると日次ビルドが落ちます
 
 この 1 行を追加して push すれば、あとは DojoMap の日次 Actions が GeoJSON を再生成してデプロイします。
-すぐ反映したい場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) を手動実行し、
-地図に表示されたことを確認してください。
+すぐ反映したい場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) を手動実行してください。
+
+突合の結果は https://map.coderdojo.jp/dojo2dojo.json で確認できます
+（配信されるまで数十秒かかることがあります）。
+
+```bash
+curl -s https://map.coderdojo.jp/dojo2dojo.json | ruby -rjson -e 'pp JSON.parse(STDIN.read).find { |x| x["name_japan"] == "南城" }'
+#=> {"global_club_id" => "b115e722-...", "name_japan" => "南城", "name_earth" => "CoderDojo南城", ...}
+```
 
 <br>
 
