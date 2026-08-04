@@ -231,7 +231,7 @@
   - Pepper
   - micro:bit
 - id: 277
-  order: '042129'
+  order: '042161'
   created_at: '2021-10-18'
   name: 富谷
   prefecture_id: 4
@@ -958,6 +958,18 @@
   description: 野田市で毎月開催
   tags:
   - Scratch
+- id: 158
+  order: '122114'
+  created_at: '2018-11-17'
+  note: 2024-09-21 https://x.com/KEITAROinNRT/status/1837328724599189598
+  name: 成田
+  prefecture_id: 12
+  url: https://coderdojo.narita-area.com/
+  logo: "/img/dojos/narita.webp"
+  description: 成田市で毎月開催
+  tags:
+  - Scratch
+  global_club_id: 0f582494-c6ad-4b88-ad8a-dc18567a825e
 - id: 23
   order: '122173'
   created_at: '2014-09-22'
@@ -1105,18 +1117,6 @@
   tags:
   - Scratch
   - 映像制作
-- id: 158
-  order: '122303'
-  created_at: '2018-11-17'
-  note: 2024-09-21 https://x.com/KEITAROinNRT/status/1837328724599189598
-  name: 成田
-  prefecture_id: 12
-  url: https://coderdojo.narita-area.com/
-  logo: "/img/dojos/narita.webp"
-  description: 成田市で毎月開催
-  tags:
-  - Scratch
-  global_club_id: 0f582494-c6ad-4b88-ad8a-dc18567a825e
 - id: 121
   order: '131016'
   created_at: '2017-11-28'
@@ -2105,20 +2105,6 @@
   - Python
   - JavaScript
   global_club_id: 3b543ede-20e5-4283-a0a6-c342fcb3ffc8
-- id: 293
-  order: '160008'
-  created_at: '2022-12-04'
-  name: 舟橋
-  prefecture_id: 16
-  url: https://sites.google.com/coderdojo.com/funahashi/
-  logo: "/img/dojos/funabashimura.webp"
-  description: 舟橋村で毎月2回開催
-  tags:
-  - Scratch
-  - 電子工作
-  - Minecraft
-  - App Inventor
-  global_club_id: 0b208aca-b939-4ad0-b2ef-286dacd9fc19
 - id: 267
   order: '162019'
   created_at: '2021-04-29'
@@ -2219,6 +2205,20 @@
   - LEGO
   - Viscuit
   global_club_id: f126911d-5a5e-4fbe-89ef-de2feb46a232
+- id: 293
+  order: '163210'
+  created_at: '2022-12-04'
+  name: 舟橋
+  prefecture_id: 16
+  url: https://sites.google.com/coderdojo.com/funahashi/
+  logo: "/img/dojos/funabashimura.webp"
+  description: 舟橋村で毎月2回開催
+  tags:
+  - Scratch
+  - 電子工作
+  - Minecraft
+  - App Inventor
+  global_club_id: 0b208aca-b939-4ad0-b2ef-286dacd9fc19
 - id: 298
   order: '163228'
   created_at: '2023-02-24'
@@ -2888,18 +2888,6 @@
   - Unity
   - Webサイト
   global_club_id: 14bf5604-1ca8-4d10-8187-b33fb5c2443f
-- id: 34
-  order: '261009'
-  created_at: '2014-10-14'
-  name: 長岡京
-  prefecture_id: 26
-  url: https://coderdojo-nagaokakyo.doorkeeper.jp/
-  logo: "/img/dojos/nagaokakyo.webp"
-  description: 長岡京市で毎月開催
-  tags:
-  - Scratch
-  - 8x9Craft
-  global_club_id: fa0ae0bf-b6b3-4d57-975b-6f095ab89c7a
 - id: 262
   order: '262048'
   created_at: '2021-01-12'
@@ -2911,6 +2899,18 @@
   tags:
   - Scratch
   global_club_id: 67cbaaab-e71e-4f98-aefc-6dc62d5ef197
+- id: 34
+  order: '262099'
+  created_at: '2014-10-14'
+  name: 長岡京
+  prefecture_id: 26
+  url: https://coderdojo-nagaokakyo.doorkeeper.jp/
+  logo: "/img/dojos/nagaokakyo.webp"
+  description: 長岡京市で毎月開催
+  tags:
+  - Scratch
+  - 8x9Craft
+  global_club_id: fa0ae0bf-b6b3-4d57-975b-6f095ab89c7a
 - id: 250
   order: '262129'
   created_at: '2020-06-27'
@@ -2969,20 +2969,6 @@
   - PHP
   - Ruby
   - Java
-- id: 44
-  order: '271004'
-  created_at: '2016-08-15'
-  name: 大阪狭山
-  prefecture_id: 27
-  url: https://coderdojo-osakasayama.doorkeeper.jp/
-  logo: "/img/dojos/osakasayama.webp"
-  description: 大阪狭山で毎月開催
-  tags:
-  - Scratch
-  - Ruby
-  - mruby
-  - 電子工作
-  global_club_id: 71008d87-7849-4be0-8868-578642d24718
 - id: 116
   order: '271004'
   created_at: '2017-11-02'
@@ -3336,6 +3322,20 @@
   tags:
   - Scratch
   global_club_id: 55f5d988-38b6-4ede-97d6-5da2a1d87ebb
+- id: 44
+  order: '272311'
+  created_at: '2016-08-15'
+  name: 大阪狭山
+  prefecture_id: 27
+  url: https://coderdojo-osakasayama.doorkeeper.jp/
+  logo: "/img/dojos/osakasayama.webp"
+  description: 大阪狭山で毎月開催
+  tags:
+  - Scratch
+  - Ruby
+  - mruby
+  - 電子工作
+  global_club_id: 71008d87-7849-4be0-8868-578642d24718
 - id: 124
   order: '281018'
   created_at: '2018-01-26'
@@ -4469,7 +4469,7 @@
   - Python
   global_club_id: e03205bc-4467-4431-9fa7-5b12b6cf3b7e
 - id: 55
-  order: '454419'
+  order: '452017'
   created_at: '2016-09-15'
   note: Active for years - 2025-04-13 https://x.com/YoseiIto/status/1889435600337641670
   name: 宮崎
