@@ -75,6 +75,39 @@ RSpec.describe 'dojos' do
       expect(mod_record.name).to eq('dojo_1(mod)')
     end
 
+    # global_club_id は空文字を許さない。ユニークインデックスは NULL を複数許すが
+    # 空文字は 1 件しか許さないため、YAML に空文字が 2 件書かれると save! が落ちる。
+    context 'global_club_id' do
+      let(:dojo_base) do
+        @dojo_2.attributes.keep_if { |k, v| %w(id order name prefecture_id logo url description tags).include?(k) }
+      end
+
+      it '値があれば保存される' do
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          dojo_base.merge('global_club_id' => 'b115e722-3f39-4306-9041-3d323844182e')
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_2.id).global_club_id).to eq('b115e722-3f39-4306-9041-3d323844182e')
+      end
+
+      it '空文字は nil に正規化される' do
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          dojo_base.merge('global_club_id' => '')
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_2.id).global_club_id).to be_nil
+      end
+
+      it '未指定なら nil になる' do
+        allow(YAML).to receive(:unsafe_load_file).and_return([dojo_base])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_2.id).global_club_id).to be_nil
+      end
+    end
+
     context 'inactivated_at (活性状態管理)' do
       let(:dojo_base) do
         @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }

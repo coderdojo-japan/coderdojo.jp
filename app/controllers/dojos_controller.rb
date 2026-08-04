@@ -34,6 +34,7 @@ class DojosController < ApplicationController
         created_at:  dojo.created_at,
         description: dojo.description,
         inactivated_at: dojo.inactivated_at,  # CSV用に追加
+        global_club_id: dojo.global_club_id,  # DojoMap が Clubs API と突合するために使う
       }
     end
 

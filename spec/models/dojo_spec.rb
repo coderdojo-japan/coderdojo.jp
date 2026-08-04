@@ -206,5 +206,29 @@ RSpec.describe Dojo, :type => :model do
       expect(duplicate_ids).to be_empty,
         "重複しているID: #{duplicate_ids.join(', ')}"
     end
+
+    # global_club_id は Clubs API 上のクラブ ID (UUID)。DojoMap がこの ID で突合する。
+    # 手作業のマージや追記で最も起きやすい事故が重複と typo で、
+    # typo はユニーク制約では捕まらないため形式も検証する。
+    describe 'global_club_id' do
+      let(:dojos_with_global_club_id) do
+        Dojo.load_attributes_from_yaml.select { |dojo| dojo['global_club_id'].present? }
+      end
+
+      it 'is a valid UUID' do
+        dojos_with_global_club_id.each do |dojo|
+          expect(dojo['global_club_id']).to match(/\A\h{8}-\h{4}-\h{4}-\h{4}-\h{12}\z/),
+            "ID: #{dojo['id']} (#{dojo['name']}) の global_club_id が UUID 形式ではありません: #{dojo['global_club_id']}"
+        end
+      end
+
+      it 'is not shared by two dojos' do
+        ids = dojos_with_global_club_id.map { |dojo| dojo['global_club_id'] }
+        duplicated = ids.tally.select { |_, count| count > 1 }.keys
+
+        expect(duplicated).to be_empty,
+          "重複している global_club_id: #{duplicated.join(', ')}"
+      end
+    end
   end
 end

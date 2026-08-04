@@ -44,6 +44,8 @@ namespace :dojos do
       d.url            = dojo['url']
       d.prefecture_id  = dojo['prefecture_id']
       d.order          = dojo['order'] || search_order_number_by(dojo['name'])
+      # 空文字は nil にする。ユニークインデックスは NULL を複数許すが空文字は 1 件しか許さない
+      d.global_club_id = dojo['global_club_id'].presence
       d.is_private     = dojo['is_private'].nil? ? false : dojo['is_private']
       d.inactivated_at = dojo['inactivated_at'] ? Time.zone.parse(dojo['inactivated_at']) : nil
       d.created_at     = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
