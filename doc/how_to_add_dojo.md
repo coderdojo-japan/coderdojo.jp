@@ -136,7 +136,6 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
 右列は Dojo 名と大きく異なることがあります（例: `三木` に対して `三木市 ・西神@ 三木山総合体育館　ふくいく`）。
 名前で探さず、**掲載申請の「承認確認」URL の UUID** と一致する `id` のクラブを選んでください。
-同じ市に別の Dojo がある場合の取り違えを防げます。
 
 この 1 行を追加して push すれば、あとは DojoMap の日次 Actions が GeoJSON を再生成してデプロイします。
 すぐ反映したい場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) を手動実行してください。
