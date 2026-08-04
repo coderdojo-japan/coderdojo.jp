@@ -213,6 +213,12 @@ RSpec.describe Dojo, :type => :model do
     # 現時点では YAML に置いてあるだけで、どこからも読まれていない。
     # 値の妥当性はこの spec だけが守っているため、手作業の追記で起きやすい
     # typo と重複をここで検出する。
+    #
+    # 休止・閉鎖したクラブは Clubs API の一覧取得に現れないため、値が正しいかを
+    # 突合で確かめられない。そのため形式と重複だけを検証し、実在性は検証しない。
+    # UUID 単体の状態は club(id:) クエリで調べられる（応答が null なら存在しない、
+    # permissions のエラーなら存在するが非公開）。
+    #
     # 経緯は PR #1868 を参照。
     # https://github.com/coderdojo-japan/coderdojo.jp/pull/1868
     describe 'global_club_id' do
