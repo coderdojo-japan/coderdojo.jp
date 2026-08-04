@@ -3651,6 +3651,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 78fe4fd5-615a-49a5-89df-d9fed37ac0cc
 - id: 128
   order: '293431'
   created_at: '2018-02-18'
