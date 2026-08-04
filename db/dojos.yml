@@ -2637,6 +2637,7 @@
   - Scratch
   - アプリ開発
   - ラズベリーパイ
+  global_club_id: 891b073b-5954-494e-bf92-924585400871
 - id: 214
   order: '232033'
   created_at: '2019-05-18'
@@ -3447,6 +3448,7 @@
   - Scratch
   - Webサイト
   - Arduino
+  global_club_id: 480c06b1-c7db-4922-8f08-7454ca28cdd3
 - id: 314
   order: '282031'
   created_at: '2023-11-12'
@@ -3538,6 +3540,7 @@
   tags:
   - Scratch
   - Minecraft
+  global_club_id: 45e17a8f-8178-42e9-a7a1-dc678f3848cb
 - id: 249
   order: '282201'
   created_at: '2020-06-21'
@@ -3577,6 +3580,7 @@
   - ラズベリーパイ
   - HTML
   - CSS
+  global_club_id: 1700a138-2909-4e4e-9e75-88ebcbbbc55a
 - id: 35
   order: '292010'
   created_at: '2014-10-26'
@@ -4707,3 +4711,4 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 86794277-80b2-4add-9d48-dad501c81642
