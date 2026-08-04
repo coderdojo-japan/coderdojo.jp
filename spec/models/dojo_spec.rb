@@ -237,8 +237,6 @@ RSpec.describe Dojo, :type => :model do
         # 単一カラムでは表現できない。counter の再設計とあわせて対応する。
         42  => '西宮・梅田（2 クラブ）',
         224 => '大田・邑南、他（6 クラブ）',
-        # 候補の絞り込みに追加情報が要るもの
-        294 => '平群（Clubs API 側に該当クラブが見当たらない）',
       }.freeze
 
       it 'is set for every active dojo' do

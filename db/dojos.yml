@@ -3641,7 +3641,8 @@
 - id: 294
   order: '293423'
   created_at: '2022-12-12'
-  note: Active for years. 奈良・生駒・平群で合同運用 https://coderdojo-nara-ikoma.connpass.com/
+  inactivated_at: '2024-07-13'
+  note: 2024-07-13 平群での開催は休止中。奈良・生駒と合同運用 https://coderdojo-nara-ikoma.connpass.com/event/321777/
   name: 平群
   prefecture_id: 29
   url: https://nara-coderdojo.github.io/
