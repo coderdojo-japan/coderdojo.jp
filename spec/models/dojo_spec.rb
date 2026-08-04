@@ -227,6 +227,44 @@ RSpec.describe Dojo, :type => :model do
         end
       end
 
+      # DojoMap は active な Dojo だけを地図に出す。閉鎖済みの Dojo は Clubs API 側からも
+      # クラブごと消えているため、埋めるべき対象は active に限られる。
+      #
+      # 下記は現時点で値を入れられない Dojo。解決したらこの一覧から消すこと。
+      # 一覧に無い active な Dojo が増えたら、このテストが落ちて気づける。
+      dojos_without_global_club_id = {
+        # 連名道場。1 エントリが Clubs API 上の複数クラブに対応するため、
+        # 単一カラムでは表現できない。counter の再設計とあわせて対応する。
+        42  => '西宮・梅田（2 クラブ）',
+        224 => '大田・邑南、他（6 クラブ）',
+        # 候補の絞り込みに追加情報が要るもの
+        216 => '那覇（候補が同じ道場か判断できない）',
+        265 => '八戸@吹上（候補が改名後の同一クラブか判断できない）',
+        291 => '八尾（同名の候補が 2 つある）',
+        294 => '平群（Clubs API 側に該当クラブが見当たらない）',
+      }.freeze
+
+      it 'is set for every active dojo' do
+        missing = Dojo.load_attributes_from_yaml.reject { |dojo| dojo['inactivated_at'].present? }
+                      .reject { |dojo| dojo['global_club_id'].present? }
+                      .reject { |dojo| dojos_without_global_club_id.key?(dojo['id']) }
+
+        expect(missing).to be_empty,
+          "global_club_id が未設定の active な Dojo: " +
+          missing.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
+      end
+
+      it 'has no stale entry in the exception list' do
+        resolved = Dojo.load_attributes_from_yaml.select do |dojo|
+          dojos_without_global_club_id.key?(dojo['id']) &&
+            (dojo['global_club_id'].present? || dojo['inactivated_at'].present?)
+        end
+
+        expect(resolved).to be_empty,
+          "解決済みなので dojos_without_global_club_id から消してください: " +
+          resolved.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
+      end
+
       it 'is not shared by two dojos' do
         ids = dojos_with_global_club_id.map { |dojo| dojo['global_club_id'] }
         duplicated = ids.tally.select { |_, count| count > 1 }.keys
