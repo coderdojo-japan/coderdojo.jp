@@ -206,5 +206,34 @@ RSpec.describe Dojo, :type => :model do
       expect(duplicate_ids).to be_empty,
         "重複しているID: #{duplicate_ids.join(', ')}"
     end
+
+    # global_club_id は Raspberry Pi 財団の Clubs API 上のクラブ ID (UUID)。
+    # DojoMap が名前ではなくこの ID で突合できるようにするために持たせている。
+    #
+    # 現時点では YAML に置いてあるだけで、どこからも読まれていない。
+    # 値の妥当性はこの spec だけが守っているため、手作業の追記で起きやすい
+    # typo と重複をここで検出する。
+    # 経緯は PR #1868 を参照。
+    # https://github.com/coderdojo-japan/coderdojo.jp/pull/1868
+    describe 'global_club_id' do
+      let(:dojos_with_global_club_id) do
+        Dojo.load_attributes_from_yaml.select { |dojo| dojo['global_club_id'].present? }
+      end
+
+      it 'is a valid UUID' do
+        dojos_with_global_club_id.each do |dojo|
+          expect(dojo['global_club_id']).to match(/\A\h{8}-\h{4}-\h{4}-\h{4}-\h{12}\z/),
+            "ID: #{dojo['id']} (#{dojo['name']}) の global_club_id が UUID 形式ではありません: #{dojo['global_club_id']}"
+        end
+      end
+
+      it 'is not shared by two dojos' do
+        ids = dojos_with_global_club_id.map { |dojo| dojo['global_club_id'] }
+        duplicated = ids.tally.select { |_, count| count > 1 }.keys
+
+        expect(duplicated).to be_empty,
+          "重複している global_club_id: #{duplicated.join(', ')}"
+      end
+    end
   end
 end

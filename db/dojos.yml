@@ -13,6 +13,7 @@
   - Arduino
   - ラズベリーパイ
   - 電子工作
+  global_club_id: '09718f70-1a91-41de-bea3-a5d09ef099c4'
 - id: 104
   order: '011002'
   created_at: '2016-09-26'
@@ -28,6 +29,7 @@
   - ラズベリーパイ
   - Python
   - Unity
+  global_club_id: d6ffcdbc-ab34-4327-ab4c-e5aa15891bc9
 - id: 253
   order: '012050'
   created_at: '2020-09-10'
@@ -41,6 +43,7 @@
   tags:
   - Scratch
   - 電子工作
+  global_club_id: 350ed28b-d2fa-4406-8bee-8b7209324754
 - id: 100
   order: '012319'
   created_at: '2017-09-20'
@@ -60,6 +63,7 @@
   - Python
   - Rust
   - Unity
+  global_club_id: e527094d-5525-4188-a239-5b1c568a8495
 - id: 261
   order: '012173'
   created_at: '2021-01-09'
@@ -74,6 +78,7 @@
   - micro:bit
   - PHP
   - Java
+  global_club_id: 2fbba227-6a47-4d61-86df-62f059df6da2
 - id: 265
   order: '022039'
   created_at: '2021-02-28'
@@ -128,6 +133,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 7dc24b24-8560-4b5e-92c1-031aa2fa13db
 - id: 109
   order: '032166'
   created_at: '2017-09-25'
@@ -140,6 +146,7 @@
   - Scratch
   - micro:bit
   - ラズベリーパイ
+  global_club_id: 4f1bc4c3-4bde-47f7-9d84-b8c0038f8c06
 - id: 107
   order: '032069'
   created_at: '2017-06-20'
@@ -153,6 +160,7 @@
   - Scratch
   - Webサイト
   - micro:bit
+  global_club_id: b42038ba-536e-410a-8111-252232fd1ae4
 - id: 3
   order: '041009'
   created_at: '2014-01-23'
@@ -164,6 +172,7 @@
   description: 仙台市泉区で不定期開催
   tags:
   - Scratch
+  global_club_id: bcf764a4-0650-4a2b-8176-9c478d635632
 - id: 90
   order: '041009'
   created_at: '2017-07-01'
@@ -191,6 +200,7 @@
   - Webサイト
   - Linux
   - BASIC
+  global_club_id: '05886113-3319-4a05-a79d-ac249cd00e9e'
 - id: 85
   order: '042072'
   created_at: '2017-03-27'
@@ -233,6 +243,7 @@
   - JavaScript
   - micro:bit
   - MakeyMakey
+  global_club_id: 9cff3729-57e5-4f58-ae92-d655538d0530
 - id: 59
   order: '044458'
   created_at: '2016-10-06'
@@ -260,6 +271,7 @@
   - Webサイト
   - 電子工作
   - 3Dプリンタ
+  global_club_id: 626d6cb8-b7b1-4c1e-a607-06292e7ac8a9
 - id: 139
   order: '052035'
   created_at: '2018-03-27'
@@ -299,6 +311,7 @@
   - micro:bit
   - Unity
   - Minecraft
+  global_club_id: a99f7d3a-203d-4858-9f39-b0ebb720d2f5
 - id: 303
   order: '062031'
   created_at: '2023-07-12'
@@ -313,6 +326,7 @@
   - micro:bit
   - Java
   - Webサイト
+  global_club_id: c9729663-2c23-48bd-ae45-071a5e54291a
 - id: 325
   order: '062081'
   created_at: '2024-08-17'
@@ -326,6 +340,7 @@
   - micro:bit
   - Unity
   - Minecraft
+  global_club_id: 116f95d3-ba16-4c89-bb3c-3ef37994d39f
 - id: 215
   order: '063410'
   created_at: '2019-04-24'
@@ -353,6 +368,7 @@
   - ラズベリーパイ
   - ロボット工作
   - 電子工作
+  global_club_id: ea49c09a-2c90-47c8-a11d-6764efbc2d47
 - id: 165
   order: '072087'
   created_at: '2018-08-13'
@@ -367,6 +383,7 @@
   - ラズベリーパイ
   - Webサイト
   - Ruby
+  global_club_id: 87acaba4-6eb9-4700-b652-e62928593578
 - id: 292
   order: '072109'
   created_at: '2022-11-27'
@@ -381,6 +398,7 @@
   - micro:bit
   - Unity
   - ゲーム開発
+  global_club_id: ce99d5a6-645f-4c08-9edc-f5660553a35e
 - id: 149
   order: '072052'
   created_at: '2018-05-29'
@@ -394,6 +412,7 @@
   - Webサイト
   - Python
   - micro:bit
+  global_club_id: 71cf13bc-446f-482e-8581-3b50795d3528
 - id: 346
   order: '073687'
   created_at: '2025-11-29'
@@ -405,6 +424,7 @@
   tags:
   - Scratch
   - Roblox
+  global_club_id: d600a123-6181-418a-80ee-20a25d9af6e1
 - id: 223
   order: '075213'
   created_at: '2019-08-26'
@@ -421,6 +441,7 @@
   - Ruby
   - Python
   - tello
+  global_club_id: 859b0f40-230c-4a90-ad9f-4e536f33ff9a
 - id: 337
   order: '074071'
   created_at: '2025-05-09'
@@ -435,6 +456,7 @@
   - ラズベリーパイ
   - ロボット工作
   - 電子工作
+  global_club_id: 700c3760-6d11-44d8-8d36-c501e03c028f
 - id: 248
   order: '074667'
   created_at: '2020-06-20'
@@ -447,6 +469,7 @@
   - Scratch
   - micro:bit
   - IchigoJam
+  global_club_id: ccc1a8fc-3e37-4f32-a4a0-36862f85bb76
 - id: 156
   order: '082040'
   created_at: '2018-07-09'
@@ -459,6 +482,7 @@
   - Scratch
   - ラズベリーパイ
   - micro:bit
+  global_club_id: f472598c-b12a-4d40-8012-ecca335f437a
 - id: 134
   order: '082201'
   created_at: '2017-03-28'
@@ -470,6 +494,7 @@
   description: つくば市で毎月開催
   tags:
   - Scratch
+  global_club_id: 16609fdd-0d89-4c23-8d55-fe7f01416417
 - id: 73
   order: '082210'
   created_at: '2017-03-28'
@@ -481,6 +506,7 @@
   tags:
   - Scratch
   - IslayTouch
+  global_club_id: fc1fb126-fe99-4ef6-b8db-46f348869369
 - id: 203
   order: '082210'
   created_at: '2019-02-23'
@@ -493,6 +519,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: a041ad9b-09e5-4064-aa13-ea50804281fe
 - id: 65
   order: '082015'
   created_at: '2017-01-03'
@@ -504,6 +531,7 @@
   tags:
   - Scratch
   - Islay
+  global_club_id: af4cbdbe-95b1-4ec1-b74e-f3eb7d44be64
 - id: 222
   order: '082015'
   created_at: '2019-07-23'
@@ -516,6 +544,7 @@
   tags:
   - Scratch
   - C言語
+  global_club_id: c4e00ebe-fb3c-4f48-ac0e-b8201a18ff45
 - id: 176
   order: '082023'
   created_at: '2018-10-08'
@@ -541,6 +570,7 @@
   - Scratch
   - IoT
   - 電子工作
+  global_club_id: fcfec8ee-b0d5-442a-bdb1-1ec12c467bb2
 - id: 246
   order: '092011'
   created_at: '2020-03-11'
@@ -568,6 +598,7 @@
   - Scratch
   - Minecraft
   - Webサイト
+  global_club_id: adf6ea8c-9a1b-4d91-9263-23f70155577e
 - id: 242
   order: '092100'
   created_at: '2020-02-20'
@@ -583,6 +614,7 @@
   - micro:bit
   - Viscuit
   is_private: true
+  global_club_id: 4ce26624-81a5-43ee-ae81-6cfd761361c2
 - id: 280
   order: '092134'
   created_at: '2022-03-09'
@@ -596,6 +628,7 @@
   - Viscuit
   - micro:bit
   - Ruby
+  global_club_id: 7ff3f2ee-0c75-4443-a9ac-d602618512af
 - id: 89
   order: '092142'
   created_at: '2017-06-21'
@@ -610,6 +643,7 @@
   - Java
   - PHP
   - Webサイト
+  global_club_id: f5f518e4-4239-4b4a-8d15-735885ae1afc
 - id: 7
   order: '102016'
   created_at: '2016-10-17'
@@ -624,6 +658,7 @@
   - Minecraft
   - micro:bit
   - ゲーム開発
+  global_club_id: 3a1ef147-d9e7-4398-8c36-7ddf7036e343
 - id: 180
   order: '102075'
   created_at: '2018-08-08'
@@ -649,6 +684,7 @@
   - Scratch
   - Webサイト
   - アプリ開発
+  global_club_id: 32b5a941-46ce-4d8d-ace0-6bfb0e113adb
 - id: 263
   order: '111074'
   created_at: '2021-01-16'
@@ -664,6 +700,7 @@
   - Scratch
   - micro:bit
   - Unity
+  global_club_id: 7c0ca939-b98e-4fa5-aa6c-dcdf2cffd280
 - id: 12
   order: '112089'
   created_at: '2015-12-01'
@@ -702,6 +739,7 @@
   - Processing
   - micro:bit
   - Python
+  global_club_id: b7047446-18b0-4821-a49e-a11543098677
 - id: 11
   order: '112097'
   created_at: '2015-05-13'
@@ -716,6 +754,7 @@
   - Webサイト
   - JavaScript
   - micro:bit
+  global_club_id: f8a7ac3b-2b70-4a8b-a310-2f8ee127a9b9
 - id: 227
   order: '112241'
   created_at: '2019-10-07'
@@ -728,6 +767,7 @@
   - Scratch
   - micro:bit
   - Unity
+  global_club_id: 48dad885-33d5-441d-960e-d5cb860ccbb8
 - id: 10
   order: '112305'
   created_at: '2012-07-02'
@@ -743,6 +783,7 @@
   - micro:bit
   - 8x9Craft
   - Unity
+  global_club_id: 91e15c61-549a-486c-9827-178a324c689f
 - id: 238
   order: '112305'
   created_at: '2020-02-03'
@@ -785,6 +826,7 @@
   - 3Dモデリング
   - 映像制作
   - MESH
+  global_club_id: f7624fb3-6e16-4990-9bcb-3cf515d08876
 - id: 151
   order: '121002'
   created_at: '2018-04-24'
@@ -797,6 +839,7 @@
   description: 千葉市若葉区若松で毎月開催
   tags:
   - Scratch
+  global_club_id: 831a556f-4f1a-49d4-bd2d-240e3378af1b
 - id: 159
   order: '121003'
   created_at: '2018-12-02'
@@ -810,6 +853,7 @@
   tags:
   - Scratch
   - Viscuit
+  global_club_id: 542b0936-d7f7-49ef-9675-e352c3e5281c
 - id: 312
   order: '121003'
   created_at: '2023-11-01'
@@ -823,6 +867,7 @@
   - micro:bit
   - M5Stack
   - ラズベリーパイ
+  global_club_id: 6bf2fa03-261c-4326-bfe2-da91b6824399
 - id: 60
   order: '122033'
   created_at: '2016-12-15'
@@ -836,6 +881,7 @@
   - Scratch
   - micro:bit
   - Python
+  global_club_id: 1d5eaad4-447f-4397-b80b-356a76c4146b
 - id: 82
   order: '122033'
   created_at: '2017-03-28'
@@ -851,6 +897,7 @@
   - Minecraft
   - micro:bit
   - toio
+  global_club_id: dee0c196-91ca-446d-86e6-7fb30a47b83a
 - id: 86
   order: '122041'
   created_at: '2017-05-16'
@@ -864,6 +911,7 @@
   - Scratch
   - micro:bit
   - Mindstorms
+  global_club_id: 4fc8ca2d-3786-4194-a07c-7ab2be3579f2
 - id: 83
   order: '122068'
   created_at: '2017-04-27'
@@ -875,6 +923,7 @@
   description: 木更津市で隔月開催
   tags:
   - Scratch
+  global_club_id: 65d4e363-dec4-490c-ae97-c2018f844422
 - id: 114
   order: '122076'
   created_at: '2017-09-06'
@@ -885,6 +934,7 @@
   description: 松戸市で隔月開催
   tags:
   - Scratch
+  global_club_id: e82f29a3-25dd-4d4c-b2cf-1ba6f87f46d4
 - id: 20
   order: '122084'
   created_at: '2016-11-08'
@@ -918,6 +968,7 @@
   description: 柏市で毎月3回開催
   tags:
   - Scratch
+  global_club_id: a889512c-8a4a-48bb-8100-c07cb514a931
 - id: 125
   order: '122173'
   created_at: '2018-01-27'
@@ -929,6 +980,7 @@
   description: 柏市沼南で第2土曜に開催
   tags:
   - Scratch
+  global_club_id: 33a807ed-ea30-4c10-9764-eecc5f59e294
 - id: 112
   order: '122173'
   created_at: '2017-09-26'
@@ -940,6 +992,7 @@
   description: 柏市光ヶ丘で第3土曜に開催
   tags:
   - Scratch
+  global_club_id: ebc0a31a-bbc2-45d3-a844-4fad410f2191
 - id: 311
   order: '122173'
   created_at: '2023-09-18'
@@ -952,6 +1005,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: b68673dd-6ad2-4c26-b3be-c2c5b1fd6685
 - id: 24
   order: '122203'
   created_at: '2016-04-27'
@@ -963,6 +1017,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 7d3b2a2d-dbd2-49d1-87fc-0bf487e10765
 - id: 284
   order: '122211'
   created_at: '2022-06-17'
@@ -979,6 +1034,7 @@
   - JavaScript
   - Node.js
   - micro:bit
+  global_club_id: f415204f-3cfa-48ef-af8e-4a79ddf3f074
 - id: 251
   order: '122246'
   created_at: '2020-07-29'
@@ -994,6 +1050,7 @@
   - micro:bit
   - Python
   - Webサイト
+  global_club_id: 19ae9948-e778-49b9-bbd7-ef3d895518f9
 - id: 21
   order: '122271'
   created_at: '2016-11-08'
@@ -1009,6 +1066,7 @@
   - Webサイト
   - PHP
   - Ruby
+  global_club_id: d7563ebf-f2d6-491e-9be8-8b0bd856ed4f
 - id: 152
   order: '122301'
   created_at: '2018-06-30'
@@ -1057,6 +1115,7 @@
   description: 成田市で毎月開催
   tags:
   - Scratch
+  global_club_id: 0f582494-c6ad-4b88-ad8a-dc18567a825e
 - id: 121
   order: '131016'
   created_at: '2017-11-28'
@@ -1071,6 +1130,7 @@
   - Scratch
   - Viscuit
   - micro:bit
+  global_club_id: a3dd7047-dc91-40e4-8f40-54131fb03c3f
 - id: 97
   order: '131016'
   created_at: '2017-08-16'
@@ -1082,6 +1142,7 @@
   description: 千代田区で毎月開催
   tags:
   - Scratch
+  global_club_id: acf28552-4b40-48ed-a0f8-cfb88380bd7a
 - id: 307
   order: '131016'
   created_at: '2023-08-23'
@@ -1096,6 +1157,7 @@
   - ラズベリーパイ
   - Webサイト
   - JavaScript
+  global_club_id: b4fefae6-214f-4afd-b404-20a6062e83ba
 - id: 274
   order: '131016'
   created_at: '2021-09-14'
@@ -1110,6 +1172,7 @@
   - PHP
   - Java
   - Python
+  global_club_id: 35c73302-7e19-47a8-9dca-4a5340a10749
 - id: 319
   order: '131024'
   created_at: '2024-06-02'
@@ -1120,6 +1183,7 @@
   description: 中央区で隔月開催
   tags:
   - Scratch
+  global_club_id: deb9b382-737b-492e-83c1-9c1ac77098ac
 - id: 326
   order: '131024'
   created_at: '2024-08-27'
@@ -1131,6 +1195,7 @@
   tags:
   - Scratch
   - Webサイト
+  global_club_id: ce5cc9fd-59c6-4e11-863e-17218face5fc
 - id: 289
   order: '131032'
   created_at: '2022-10-23'
@@ -1145,6 +1210,7 @@
   - 電子工作
   - Webサイト
   - アプリ開発
+  global_club_id: 74c41f4f-2854-4c18-b81f-7f3ef9befcca
 - id: 295
   order: '131032'
   created_at: '2022-12-16'
@@ -1158,6 +1224,7 @@
   tags:
   - JavaScript
   - Webサイト
+  global_club_id: db1c7de3-9bd6-4fb6-8a13-ea70098c59f1
 - id: 331
   order: '131032'
   created_at: '2024-12-19'
@@ -1172,6 +1239,7 @@
   - Scratch
   - Webサイト
   - アプリ開発
+  global_club_id: bba216fc-b2af-49b9-98f3-a5ba46579da6
 - id: 341
   order: '131032'
   created_at: '2025-07-20'
@@ -1187,6 +1255,7 @@
   - TinkerCad
   - Fusion360
   - Mindstorms
+  global_club_id: 84f71084-cbb9-4712-b0fc-1e15cd47f90f
 - id: 335
   order: '131041'
   created_at: '2025-03-18'
@@ -1198,6 +1267,7 @@
   tags:
   - Scratch
   - Minecraft
+  global_club_id: 1237536f-44cf-44a7-8fb6-464fb12f3865
 - id: 58
   order: '131041'
   created_at: '2017-09-26'
@@ -1222,6 +1292,7 @@
   description: 新宿区で毎月開催
   tags:
   - Scratch
+  global_club_id: c0403789-70b9-4d31-8ff3-fa8215362ba9
 - id: 315
   order: '131041'
   created_at: '2023-11-16'
@@ -1236,6 +1307,7 @@
   - Webサイト
   - Arduino
   - 電子工作
+  global_club_id: 5a299787-5fa0-42c3-a73d-63ea0e956c0f
 - id: 302
   order: '131059'
   created_at: 2023-06-08
@@ -1250,6 +1322,7 @@
   - LEGO
   - Minecraft
   - Osmo
+  global_club_id: 288a173c-626f-4079-b5e3-3d09ef17764f
 - id: 173
   order: '131091'
   created_at: '2018-09-26'
@@ -1264,6 +1337,7 @@
   - ラズベリーパイ
   - ロボット
   - 映像制作
+  global_club_id: b21b22ed-00d7-4d2c-a90e-919a70b2b634
 - id: 185
   order: '131091'
   created_at: '2018-11-20'
@@ -1278,6 +1352,7 @@
   - micro:bit
   - Music Blocks
   - Swift
+  global_club_id: 7cef9212-c023-4755-8df8-826da6dbdd66
 - id: 313
   order: '131113'
   created_at: '2023-11-07'
@@ -1300,6 +1375,7 @@
   tags:
   - Scratch
   - Webサイト
+  global_club_id: 5b475bc8-cc83-4824-a0da-cd5000325eee
 - id: 17
   order: '131121'
   created_at: '2012-03-12'
@@ -1327,6 +1403,7 @@
   - HTML
   - CSS
   - JavaScript
+  global_club_id: 4d7fe211-4b93-4e9a-98a6-9e4ac9ccf944
 - id: 342
   order: '131121'
   created_at: '2025-08-12'
@@ -1338,6 +1415,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 4e31fc13-205c-4738-9b62-2722d890f6ed
 - id: 19
   order: '131130'
   created_at: '2020-01-30'
@@ -1354,6 +1432,7 @@
   - Swift
   - JavaScript
   - デザイン
+  global_club_id: 58fdf748-3829-46c9-8d1c-06a62a2838ad
 - id: 338
   order: '131130'
   created_at: '2025-05-26'
@@ -1369,6 +1448,7 @@
   - UVプリンタ
   - レーザーカッター
   - 刺繍ミシン
+  global_club_id: 4a2185e1-79ff-4b1c-a17b-9e66792036a1
 - id: 15
   order: '131148'
   created_at: '2016-07-20'
@@ -1383,6 +1463,7 @@
   - Webサイト
   - JavaScript
   - Arduino
+  global_club_id: a73331d2-339b-47da-8156-903df5d1b115
 - id: 16
   order: '131156'
   created_at: '2016-09-09'
@@ -1398,6 +1479,7 @@
   - Webサイト
   - JavaScript
   - Processing
+  global_club_id: 11ca87f3-426f-4d27-8421-cd0d5cf835e7
 - id: 123
   order: '131164'
   created_at: '2018-01-25'
@@ -1411,6 +1493,7 @@
   - ゲーム開発
   - Webサイト
   - Java
+  global_club_id: 4dd95628-213e-4127-a370-687fac33e94d
 - id: 130
   order: '131172'
   created_at: '2018-02-21'
@@ -1421,6 +1504,7 @@
   description: 北区で毎月開催
   tags:
   - Scratch
+  global_club_id: 014a81c0-515a-4a9d-b71b-469fb72253df
 - id: 231
   order: '131199'
   created_at: '2019-10-30'
@@ -1436,6 +1520,7 @@
   - Webサイト
   - 動画編集
   - micro:bit
+  global_club_id: e3181464-9955-4520-9f9f-068cc279a4b4
 - id: 233
   order: '131211'
   created_at: '2019-11-19'
@@ -1448,6 +1533,7 @@
   description: 足立区で毎月開催
   tags:
   - Scratch
+  global_club_id: e092241e-2baf-461b-b68b-21173cf332db
 - id: 14
   order: '132012'
   created_at: '2015-06-22'
@@ -1461,6 +1547,7 @@
   - Scratch
   - Webサイト
   - PHP
+  global_club_id: 4fc38ca6-9f87-4c75-a4be-0b8f50db3cbd
 - id: 117
   order: '132021'
   created_at: '2017-11-18'
@@ -1474,6 +1561,7 @@
   - Minecraft
   - ラズベリーパイ
   - Arduino
+  global_club_id: 1c8ab0f9-e1ab-4874-b364-d620a84ea0dc
 - id: 221
   order: '132021'
   created_at: '2019-07-08'
@@ -1502,6 +1590,7 @@
   - micro:bit
   - Studuino
   - Java
+  global_club_id: 55d75d0a-fe80-4476-88b5-ae4a62a41957
 - id: 174
   order: '132047'
   created_at: '2018-10-05'
@@ -1527,6 +1616,7 @@
   - Python
   - ラズベリーパイ
   - RPA
+  global_club_id: bf17672b-d791-499e-8954-ed65b145f9aa
 - id: 228
   order: '132071'
   created_at: '2019-10-11'
@@ -1559,6 +1649,7 @@
   - ラズベリーパイ
   - Unity
   - Python
+  global_club_id: b0fd6944-6630-4440-ae2b-1c1423df6cd4
 - id: 212
   order: '132080'
   created_at: '2019-06-10'
@@ -1585,6 +1676,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: c4e6ae34-51c9-4e25-95e2-c498cf84fc9a
 - id: 13
   order: '132110'
   created_at: '2014-05-21'
@@ -1599,6 +1691,7 @@
   - micro:bit
   - toio
   - マルチメディア
+  global_club_id: ddfc605d-5cb8-49f6-a0ac-82884577f70e
 - id: 328
   order: '132128'
   created_at: '2024-10-29'
@@ -1613,6 +1706,7 @@
   - micro:bit
   - ラズベリーパイ
   - Arduino
+  global_club_id: 2bb8fdc7-3fdf-4287-a2af-be967439e4e8
 - id: 275
   order: '132152'
   created_at: '2021-09-22'
@@ -1641,6 +1735,7 @@
   - Ruby
   - Python
   - Node.js
+  global_club_id: 31f9b905-27c3-4fce-b047-ca958acb62ad
 - id: 147
   order: '132250'
   created_at: '2018-05-06'
@@ -1652,6 +1747,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: f18cb267-047a-4885-bb6d-2cf154d54300
 - id: 204
   order: '132233'
   created_at: '2019-02-26'
@@ -1668,6 +1764,7 @@
   - Minecraft
   - DICE CODE
   is_private: true
+  global_club_id: 1c187b9a-69ac-4fbd-a3bf-4765095485ad
 - id: 153
   order: '132241'
   created_at: '2018-05-30'
@@ -1679,6 +1776,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 3d037ab0-1ba5-4c94-97ef-2898a37bdb68
 - id: 70
   order: '141020'
   created_at: '2017-01-30'
@@ -1704,6 +1802,7 @@
   - Viscuit
   - embot
   - Hour of Code
+  global_club_id: 84393c3f-b802-498d-ac56-42c0671bffd6
 - id: 137
   order: '141062'
   created_at: '2018-03-24'
@@ -1716,6 +1815,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: ad0d7795-ca9f-4cb2-9da0-4b3e84c45467
 - id: 68
   order: '141097'
   created_at: '2017-01-09'
@@ -1756,6 +1856,7 @@
   - ScratchJr
   - Minecraft
   - Python
+  global_club_id: 8fccc724-3930-4245-a96f-2f38650d8471
 - id: 76
   order: '141135'
   created_at: '2017-04-03'
@@ -1769,6 +1870,7 @@
   - Scratch
   - Minecraft
   - Hour of Code
+  global_club_id: 66c4be41-3ba4-421b-93de-6bb3f47df08f
 - id: 154
   order: '141135'
   created_at: '2017-04-03'
@@ -1795,6 +1897,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 9b277d37-b4d6-4e27-8dbb-e8726fcff766
 - id: 179
   order: '141186'
   created_at: '2018-08-15'
@@ -1810,6 +1913,7 @@
   - ScratchJr
   - micro:bit
   - プログラミングゼミ
+  global_club_id: 3f098cf5-06be-4a94-8b96-60053818fc03
 - id: 190
   order: '141305'
   created_at: '2018-12-27'
@@ -1822,6 +1926,7 @@
   description: 川崎市で毎月開催
   tags:
   - Scratch
+  global_club_id: 5652aca9-cdb6-4181-9569-48928e28e5ac
 - id: 210
   order: '141305'
   created_at: '2019-05-05'
@@ -1836,6 +1941,7 @@
   - micro:bit
   - mBot
   - Minecraft
+  global_club_id: 5715c231-ded9-4bb9-a406-db116a166df1
 - id: 278
   order: '141330'
   created_at: '2022-01-04'
@@ -1850,6 +1956,7 @@
   - toio
   - Sphero
   - ドローン
+  global_club_id: 53fdf401-51bd-401c-8260-4632e89326c8
 - id: 138
   order: '142042'
   created_at: '2018-03-25'
@@ -1877,6 +1984,7 @@
   tags:
   - Scratch
   - Minecraft
+  global_club_id: 7ef14ebb-522a-4763-89b9-994f04219d51
 - id: 26
   order: '142051'
   created_at: '2016-12-14'
@@ -1903,6 +2011,7 @@
   - Node-RED
   - KNIME
   - Markdown
+  global_club_id: 01df8836-8a93-4e6d-9f49-594b461e500b
 - id: 199
   order: '142077'
   created_at: '2019-02-06'
@@ -1916,6 +2025,7 @@
   - Scratch
   - micro:bit
   - IchigoJam
+  global_club_id: 323b349a-3afc-46bb-8164-d2bd4f39f5c0
 - id: 247
   order: '142131'
   created_at: '2020-05-07'
@@ -1941,6 +2051,7 @@
   - micro:bit
   - Python
   - Webサイト
+  global_club_id: 618fbd6c-540e-4192-b9b6-45de228f3318
 - id: 91
   order: '142158'
   created_at: '2017-06-26'
@@ -1962,6 +2073,7 @@
   description: 厚木市で不定期開催
   tags:
   - Scratch
+  global_club_id: 23eb0988-9d02-48ce-90dd-1b471a9f7556
 - id: 5
   order: '151009'
   created_at: '2015-09-16'
@@ -1991,6 +2103,7 @@
   - ラズベリーパイ
   - Python
   - JavaScript
+  global_club_id: 3b543ede-20e5-4283-a0a6-c342fcb3ffc8
 - id: 293
   order: '160008'
   created_at: '2022-12-04'
@@ -2004,6 +2117,7 @@
   - 電子工作
   - Minecraft
   - App Inventor
+  global_club_id: 0b208aca-b939-4ad0-b2ef-286dacd9fc19
 - id: 267
   order: '162019'
   created_at: '2021-04-29'
@@ -2015,6 +2129,7 @@
   description: 富山市で毎月開催
   tags:
   - Scratch
+  global_club_id: 426b6d19-e524-40c0-b898-ab0240c61de3
 - id: 299
   order: '162027'
   created_at: '2023-04-28'
@@ -2029,6 +2144,7 @@
   - Minecraft
   - 電子工作
   - 3Dデザイン
+  global_club_id: da06459a-8b91-459b-8c2c-a81b46c791d7
 - id: 344
   order: '162051'
   created_at: '2025-10-27'
@@ -2041,6 +2157,7 @@
   - Scratch
   - micro:bit
   - MESH
+  global_club_id: 6a93d88f-6f44-4057-8a2a-d003896b0406
 - id: 279
   order: '162060'
   created_at: '2022-03-01'
@@ -2055,6 +2172,7 @@
   - LEGO
   - Scratch
   - Swift
+  global_club_id: '08b15c21-cbb4-4939-958a-59774c5a60eb'
 - id: 309
   order: '162078'
   created_at: '2023-09-07'
@@ -2069,6 +2187,7 @@
   - Python
   - Linux
   - LEGO
+  global_club_id: 7c0e84fa-9e60-4190-829d-44af85c313d6
 - id: 257
   order: '162086'
   created_at: '2020-11-13'
@@ -2083,6 +2202,7 @@
   - Webサイト
   - Minecraft
   - Toio
+  global_club_id: 6241b746-c101-43b4-ac7d-e0319f43a5dc
 - id: 276
   order: '162108'
   created_at: '2025-10-14'
@@ -2097,6 +2217,7 @@
   - Webサイト
   - LEGO
   - Viscuit
+  global_club_id: f126911d-5a5e-4fbe-89ef-de2feb46a232
 - id: 298
   order: '163228'
   created_at: '2023-02-24'
@@ -2110,6 +2231,7 @@
   - micro:bit
   - Minecraft
   - BASIC
+  global_club_id: e211e285-a6bb-46e3-b147-0edb45b18744
 - id: 6
   order: '172014'
   created_at: '2016-11-24'
@@ -2122,6 +2244,7 @@
   tags:
   - JavaScript
   - HackforPlay
+  global_club_id: 9f02bd31-4392-44fe-8a09-d7267b1a1991
 - id: 28
   order: '182010'
   created_at: '2013-08-14'
@@ -2147,6 +2270,7 @@
   - Scratch
   - Hour of Code
   - 電子工作
+  global_club_id: fdd3304b-486d-495f-b53e-0de47102dc6d
 - id: 195
   order: '192074'
   created_at: '2019-02-03'
@@ -2162,6 +2286,7 @@
   - ロボット
   - Python
   - Processing
+  global_club_id: 6e4ea7d6-2fa3-49f7-aae1-4dfbf44b92bf
 - id: 196
   order: '192091'
   created_at: '2019-02-03'
@@ -2177,6 +2302,7 @@
   - ロボット
   - Python
   - Processing
+  global_club_id: eb308faa-deb3-4d6e-bd5e-792c681e3cb9
 - id: 133
   order: '192104'
   created_at: '2018-03-02'
@@ -2204,6 +2330,7 @@
   - Webサイト
   - Minecraft
   - Python
+  global_club_id: 7c909980-9cf5-4f27-a98d-1f4454519333
 - id: 175
   order: '202029'
   created_at: '2018-10-05'
@@ -2219,6 +2346,7 @@
   - Viscuit
   - micro:bit
   - LEGO
+  global_club_id: b638526d-bae5-4d13-aa16-1d4461cbc3ee
 - id: 232
   order: '202037'
   created_at: '2019-11-10'
@@ -2231,6 +2359,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: f66b96dc-917a-4c65-9e33-7503d9fe4b29
 - id: 316
   order: '202053'
   created_at: '2023-12-05'
@@ -2245,6 +2374,7 @@
   - Webサイト
   - Minecraft
   - M5Stack
+  global_club_id: 6cd39679-f6e9-4d01-8b9c-d77c844e13e0
 - id: 94
   order: '202061'
   created_at: '2017-02-20'
@@ -2276,6 +2406,7 @@
   - PHP
   - Python
   - Arduino
+  global_club_id: 606bcdd2-0680-40d5-862f-a6faa32687e2
 - id: 27
   order: '202151'
   created_at: '2012-11-08'
@@ -2287,6 +2418,7 @@
   tags:
   - Scratch
   - Ruby
+  global_club_id: 818b53de-9308-47ef-9767-6da77a052074
 - id: 355
   order: '202177'
   created_at: '2026-07-10'
@@ -2298,6 +2430,7 @@
   tags:
   - Scratch
   - Webサイト
+  global_club_id: 50f7407f-7eaa-4a71-9a36-710bc4192737
 - id: 87
   order: '202207'
   created_at: '2017-05-11'
@@ -2313,6 +2446,7 @@
   - Viscuit
   - micro:bit
   - LEGO
+  global_club_id: d605e58a-7daa-429a-9204-1d1a56ff9505
 - id: 282
   order: '204234'
   created_at: '2022-03-17'
@@ -2327,6 +2461,7 @@
   - Webサイト
   - JavaScript
   - toio
+  global_club_id: e00d3a01-0620-4ac7-a9c6-508e9ef361ad
 - id: 285
   order: '212105'
   created_at: '2022-08-12'
@@ -2341,6 +2476,7 @@
   - micro:bit
   - クリスタ
   - LEGO
+  global_club_id: cb5e54eb-717b-42ee-88a3-fa7eb1b66fc5
 - id: 96
   order: '212211'
   created_at: '2017-09-26'
@@ -2352,6 +2488,7 @@
   description: 海津市で月2回開催
   tags:
   - Scratch
+  global_club_id: 0dc445e0-ce25-4242-a788-82cde8cc549f
 - id: 200
   order: '212016'
   created_at: '2019-02-06'
@@ -2364,6 +2501,7 @@
   - Scratch
   - LEGO
   - micro:bit
+  global_club_id: 193e95b4-c71f-43cf-a663-7a5dc179beb8
 - id: 197
   order: '212041'
   created_at: '2019-02-03'
@@ -2388,6 +2526,7 @@
   - Webサイト
   - micro:bit
   - ラズベリーパイ
+  global_club_id: 36a062a1-1a8c-4e04-aec1-c06308b1440e
 - id: 98
   order: '221309'
   created_at: '2016-02-25'
@@ -2401,6 +2540,7 @@
   - Webサイト
   - Minecraft
   - micro:bit
+  global_club_id: c9841a4d-e977-49f6-b3d4-9a9b3d72e391
 - id: 129
   order: '222038'
   created_at: '2018-02-18'
@@ -2415,6 +2555,7 @@
   - micro:bit
   - Mindstorms
   - IAIミニロボ
+  global_club_id: b939046d-a3b0-486a-bc88-09679fe800fe
 - id: 330
   order: '222071'
   created_at: '2024-12-09'
@@ -2429,6 +2570,7 @@
   - Webサイト
   - Minecraft
   - Unity
+  global_club_id: c8fd50c6-0145-44d5-8d93-161168b177e2
 - id: 300
   order: '222119'
   created_at: '2023-05-16'
@@ -2443,6 +2585,7 @@
   - Webサイト
   - JavaScript
   - Python
+  global_club_id: 4189b559-90c7-45ce-9f23-8df62e8b331a
 - id: 31
   order: '231002'
   created_at: '2014-10-20'
@@ -2453,6 +2596,7 @@
   description: 名古屋市中区で月2回開催
   tags:
   - Scratch
+  global_club_id: 7cf9aa56-37d2-4deb-8b75-29793ede6d3d
 - id: 2
   order: '231088'
   created_at: '2019-04-30'
@@ -2467,6 +2611,7 @@
   - viscuit
   - Minecraft
   - テキストプログラミング
+  global_club_id: 141b1722-5423-41e3-ac16-ab46c5c82dc0
 - id: 32
   order: '231002'
   created_at: '2014-12-08'
@@ -2479,6 +2624,7 @@
   - Scratch
   - Webサイト
   - 電子工作
+  global_club_id: 662f23bc-e2c7-4365-a3be-d7f29c1156b9
 - id: 30
   order: '232017'
   created_at: '2016-06-03'
@@ -2517,6 +2663,7 @@
   - レゴ
   - Webサイト
   - Minecraft
+  global_club_id: f9a2e202-8ef0-4b7a-96e8-07b61451fcc0
 - id: 118
   order: '232122'
   created_at: '2017-11-13'
@@ -2528,6 +2675,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 85796abb-f777-4edd-886d-af0345e8fde8
 - id: 241
   order: '232131'
   created_at: '2020-02-10'
@@ -2539,6 +2687,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: ac3f82c7-1505-49e1-b92b-e0cf86a3ecfb
 - id: 218
   order: '232157'
   created_at: '2019-06-23'
@@ -2550,6 +2699,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 94cc35b3-5efa-4835-8dd8-de3b5f534ead
 - id: 235
   order: '232203'
   created_at: '2020-01-03'
@@ -2562,6 +2712,7 @@
   tags:
   - Scratch
   - Viscuit
+  global_club_id: 7767c56f-358e-4bb8-bd47-c9d326d4f7d4
 - id: 84
   order: '232211'
   created_at: '2017-05-16'
@@ -2585,6 +2736,7 @@
   description: 大府市で毎月2回開催
   tags:
   - Scratch
+  global_club_id: 14ced3ef-6b38-4ba1-9be5-112c834c0bf9
 - id: 304
   order: '232238'
   created_at: '2023-07-28'
@@ -2598,6 +2750,7 @@
   - micro:bit
   - Viscuit
   - Hour of Code
+  global_club_id: 5f1057ff-473d-4380-8e1c-5b4d46ab7bd3
 - id: 71
   order: '232289'
   created_at: '2017-02-17'
@@ -2611,6 +2764,7 @@
   - micro:bit
   - Viscuit
   - Webサイト
+  global_club_id: ee79a38d-ab3f-43e6-b933-6b444fb3c8c2
 - id: 145
   order: '232301'
   created_at: '2018-04-22'
@@ -2623,6 +2777,7 @@
   - Scratch
   - micro:bit
   - 電子工作
+  global_club_id: 521e293f-abb9-4750-b5bd-275a4367fd08
 - id: 217
   order: '232343'
   created_at: '2019-06-20'
@@ -2637,6 +2792,7 @@
   - ラズベリーパイ
   - Arduino
   - IchigoJam
+  global_club_id: e15893b1-7d2d-484e-a8ba-31f3197d5cf1
 - id: 33
   order: '234249'
   created_at: '2016-08-12'
@@ -2661,6 +2817,7 @@
   - Scratch
   - micro:bit
   - Minecraft
+  global_club_id: '080efc54-d674-4c8e-99e6-162cb816e07c'
 - id: 62
   order: '242039'
   created_at: '2016-12-22'
@@ -2676,6 +2833,7 @@
   - micro:bit
   - LEGO
   - LabVIEW
+  global_club_id: d465a50b-79f5-4c46-ba37-084aaad17b74
 - id: 345
   order: '242110'
   created_at: '2025-11-23'
@@ -2688,6 +2846,7 @@
   - Scratch
   - micro:bit
   - Webサイト
+  global_club_id: 3a2f68c8-b54a-412b-bf28-915df1563b85
 - id: 37
   order: '252018'
   created_at: '2015-09-16'
@@ -2726,6 +2885,7 @@
   - Scratch
   - Unity
   - Webサイト
+  global_club_id: 14bf5604-1ca8-4d10-8187-b33fb5c2443f
 - id: 34
   order: '261009'
   created_at: '2014-10-14'
@@ -2737,6 +2897,7 @@
   tags:
   - Scratch
   - 8x9Craft
+  global_club_id: fa0ae0bf-b6b3-4d57-975b-6f095ab89c7a
 - id: 262
   order: '262048'
   created_at: '2021-01-12'
@@ -2747,6 +2908,7 @@
   description: 宇治市で不定期開催
   tags:
   - Scratch
+  global_club_id: 67cbaaab-e71e-4f98-aefc-6dc62d5ef197
 - id: 250
   order: '262129'
   created_at: '2020-06-27'
@@ -2776,6 +2938,7 @@
   - ラズベリーパイ
   - Python
   - 電子工作
+  global_club_id: 1e2e7ad6-06b7-46bc-adfe-28c616826d86
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
@@ -2817,6 +2980,7 @@
   - Ruby
   - mruby
   - 電子工作
+  global_club_id: 71008d87-7849-4be0-8868-578642d24718
 - id: 116
   order: '271004'
   created_at: '2017-11-02'
@@ -2830,6 +2994,7 @@
   - Scratch
   - 電子工作
   - Minecraft
+  global_club_id: af6b8dd7-0666-4c8e-87b0-89c2ffbb369c
 - id: 45
   order: '271004'
   created_at: '2016-07-13'
@@ -2855,6 +3020,7 @@
   - micro:bit
   - AI
   - 3Dモデリング
+  global_club_id: 7b441779-c5ab-45af-8823-1a87e95e5d6a
 - id: 297
   order: '271209'
   created_at: '2023-01-19'
@@ -2866,6 +3032,7 @@
   tags:
   - Scratch
   - Webサイト
+  global_club_id: a23e305c-493e-4738-b46e-48a8a9e86987
 - id: 266
   order: '271217'
   created_at: '2021-04-25'
@@ -2893,6 +3060,7 @@
   - Scratch
   - Webサイト
   - Minecraft
+  global_club_id: ee13db6f-0ffc-441c-bf7b-dea550233bd0
 - id: 46
   order: '271403'
   created_at: '2016-03-22'
@@ -2905,6 +3073,7 @@
   - Scratch
   - PHP
   - Java
+  global_club_id: 5b77f3b2-0e07-4884-8242-691f7acf5b44
 - id: 323
   order: '271403'
   created_at: '2024-07-30'
@@ -2918,6 +3087,7 @@
   - ラズベリーパイ
   - 電子工作
   - 3Dモデリング
+  global_club_id: d7178c1a-1372-4314-aee9-bb9444a2364a
 - id: 193
   order: '272035'
   created_at: '2019-01-16'
@@ -2930,6 +3100,7 @@
   - Scratch
   - Minecraft
   - micro:bit
+  global_club_id: 28f70fe5-4f18-45e5-8fbc-7718bfd4415b
 - id: 310
   order: '272035'
   created_at: '2023-09-17'
@@ -2942,6 +3113,7 @@
   - Scratch
   - micro:bit
   - 電子工作
+  global_club_id: b5614bc7-6348-4fed-be22-4831bdefae5a
 - id: 286
   order: '272043'
   created_at: '2022-08-28'
@@ -2955,6 +3127,7 @@
   - Python
   - Java
   - JavaScript
+  global_club_id: 4d6fb9e4-831c-48f0-9ba3-4d8fcd64ca36
 - id: 206
   order: '272051'
   created_at: '2019-02-28'
@@ -2968,6 +3141,7 @@
   - ラズベリーパイ
   - Ruby
   - Webサイト
+  global_club_id: 3d1dc877-932f-4e0d-a160-7ef254e5dbd7
 - id: 66
   order: '272078'
   created_at: '2017-01-04'
@@ -2978,6 +3152,7 @@
   description: 高槻市で不定期開催
   tags:
   - Scratch
+  global_club_id: a3925e95-810e-4bd0-bfcf-f498884c51c4
 - id: 40
   order: '272108'
   created_at: '2016-05-18'
@@ -2990,6 +3165,7 @@
   - Scratch
   - Webサイト
   - アプリ開発
+  global_club_id: 54fb4603-de0d-4de1-9fd9-518c5127caaa
 - id: 256
   order: '272116'
   created_at: '2020-11-07'
@@ -3004,6 +3180,7 @@
   - Scratch
   - Webサイト
   - アプリ開発
+  global_club_id: 0ff7c85c-c742-4331-91d3-fd20a93d22df
 - id: 202
   order: '272175'
   created_at: '2019-02-18'
@@ -3018,6 +3195,7 @@
   - JavaScript
   - Webサイト
   - Python
+  global_club_id: 7d105d74-f935-4648-b223-2a8452adcd26
 - id: 135
   order: '272183'
   created_at: '2018-03-13'
@@ -3031,6 +3209,7 @@
   - Scratch
   - micro:bit
   - ラズベリーパイ
+  global_club_id: 84bae693-65f0-4665-a829-c9c3dea34d6b
 - id: 108
   order: '272205'
   created_at: '2017-09-06'
@@ -3071,6 +3250,7 @@
   - Scratch
   - Webサイト
   - Android
+  global_club_id: 982ec608-8e50-49de-b7e4-e4321c5ca16d
 - id: 101
   order: '272124'
   created_at: '2017-08-03'
@@ -3110,6 +3290,7 @@
   - Scratch
   - Swift
   - Android
+  global_club_id: 1edba530-593e-454c-aaec-1a591193a876
 - id: 264
   order: '272264'
   created_at: '2021-02-28'
@@ -3151,6 +3332,7 @@
   description: 泉南市で毎月開催
   tags:
   - Scratch
+  global_club_id: 55f5d988-38b6-4ede-97d6-5da2a1d87ebb
 - id: 124
   order: '281018'
   created_at: '2018-01-26'
@@ -3165,6 +3347,7 @@
   - Processing
   - Webサイト
   - ラズベリーパイ
+  global_club_id: 43574426-3330-48b6-bba9-1a7f85e89f3e
 - id: 119
   order: '281069'
   created_at: '2017-11-08'
@@ -3179,6 +3362,7 @@
   - JavaScript
   - PHP
   - Java
+  global_club_id: 134b2829-8628-49f9-997b-23fc6f89647e
 - id: 67
   order: '281093'
   created_at: '2016-09-12'
@@ -3205,6 +3389,7 @@
   tags:
   - Scratch
   - JavaScript
+  global_club_id: e1447ba8-ba14-4350-927e-334fce62a24a
 - id: 305
   order: '281115'
   created_at: '2023-08-02'
@@ -3219,6 +3404,7 @@
   - マイコン
   - Python
   - Java
+  global_club_id: a273ea5c-2998-448e-8d61-b48de632d9af
 - id: 353
   order: '282014'
   created_at: '2026-05-13'
@@ -3234,6 +3420,7 @@
   - Ruby
   - JavaScript
   - GAS
+  global_club_id: e81586b2-f136-4468-b47f-a64f4f39c3b5
 - id: 50
   order: '282014'
   created_at: '2016-03-22'
@@ -3274,6 +3461,7 @@
   - Swift
   - JavaScript
   - Python
+  global_club_id: 9ac4d7e9-db9d-4914-8841-24f61c2cc5c1
 - id: 146
   order: '282057'
   created_at: '2018-04-24'
@@ -3289,6 +3477,7 @@
   - Webサイト
   - 電子工作
   - Python
+  global_club_id: 16037357-c116-4d42-a580-6c0011d7da52
 - id: 220
   order: '282065'
   created_at: '2019-07-07'
@@ -3302,6 +3491,7 @@
   - Scratch
   - micro:bit
   - Webサイト
+  global_club_id: ae7a96b4-8e76-4369-8b32-ae7297908223
 - id: 230
   order: '282154'
   created_at: '2019-11-01'
@@ -3336,6 +3526,7 @@
   - 3D CAD
   - ネットワーク
   - アマチュア無線
+  global_club_id: 69f7acfe-7d93-4671-a9a6-bee112e2919e
 - id: 340
   order: '282171'
   created_at: '2025-06-28'
@@ -3360,6 +3551,7 @@
   - ラズベリーパイ
   - C
   - HTML
+  global_club_id: 3ff02374-2857-4a61-9df2-325fa13c020f
 - id: 181
   order: '283011'
   created_at: '2018-10-18'
@@ -3370,6 +3562,7 @@
   description: 猪名川町で毎月開催
   tags:
   - Scratch
+  global_club_id: 838ad4e4-bcd1-4f22-8ae4-742c22579103
 - id: 343
   order: '284815'
   created_at: '2025-07-28'
@@ -3398,6 +3591,7 @@
   - micro:bit
   - toio
   - Minecraft
+  global_club_id: 0dc27210-c03a-4c3e-a819-0b5266a51654
 - id: 352
   order: '292010'
   created_at: '2026-03-29'
@@ -3411,6 +3605,7 @@
   - Luanti
   - KNIME
   - AI
+  global_club_id: 6ef9b413-4803-4fc2-995d-bf4da9c32863
 - id: 36
   order: '292095'
   created_at: '2016-04-25'
@@ -3425,6 +3620,7 @@
   - micro:bit
   - JavaScript
   - Webサイト
+  global_club_id: 2b19b06b-d9f1-4594-94d6-f2b40d4c1371
 - id: 236
   order: '292095'
   created_at: '2020-01-11'
@@ -3498,6 +3694,7 @@
   description: 和歌山市で毎月開催
   tags:
   - Scratch
+  global_club_id: c6d9f5ed-23c5-43ae-90fb-20e6edc02599
 - id: 327
   order: '302040'
   created_at: '2024-09-19'
@@ -3508,6 +3705,7 @@
   description: 有田市で毎月開催
   tags:
   - Scratch
+  global_club_id: f1c974d7-24c1-487b-b2b4-923c9468e6aa
 - id: 99
   order: '302066'
   created_at: '2017-09-06'
@@ -3521,6 +3719,7 @@
   - Scratch
   - ScratchJr
   - ラズベリーパイ
+  global_club_id: 9da287ec-f150-4a68-b4bf-cb735421a764
 - id: 38
   order: '302074'
   created_at: '2012-11-08'
@@ -3563,6 +3762,7 @@
   - Hour of Code
   - Mindstorms
   - CodeyRocky
+  global_club_id: f3a379c1-46c5-4a9f-9f9f-6469f0aa05d3
 - id: 224
   order: '320005'
   created_at: '2019-09-06'
@@ -3621,6 +3821,7 @@
   - Webサイト
   - Minecraft
   - ラズベリーパイ
+  global_club_id: '09a8ed76-403b-4833-b254-f7da95831b0a'
 - id: 78
   order: '325058'
   created_at: '2017-03-10'
@@ -3648,6 +3849,7 @@
   - Python
   - C#
   - アプリ開発
+  global_club_id: bd0c0cdc-d14a-4f2a-8c2b-18bf7c933105
 - id: 268
   order: '331015'
   created_at: '2021-05-01'
@@ -3661,6 +3863,7 @@
   - PHP
   - Unity
   - Webアプリ
+  global_club_id: 054617de-6f0a-4cb8-804c-f9b1ef95d3ea
 - id: 150
   order: '332020'
   created_at: '2018-05-29'
@@ -3674,6 +3877,7 @@
   tags:
   - Scratch
   - Minecraft
+  global_club_id: 8820005d-91ad-4db3-9f1b-3a32dec6c387
 - id: 132
   order: '332038'
   created_at: '2018-02-28'
@@ -3689,6 +3893,7 @@
   - micro:bit
   - Arduino
   - 電子工作
+  global_club_id: a127c893-cb9e-4564-b69f-9877f107c08a
 - id: 258
   order: '332054'
   created_at: '2020-12-07'
@@ -3716,6 +3921,7 @@
   - Scratch
   - micro:bit
   - Unity
+  global_club_id: 15f4c828-2c65-4c86-a6e2-67cd9659b45d
 - id: 53
   order: '341002'
   created_at: '2016-09-29'
@@ -3740,6 +3946,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 3128dae7-b802-49f3-b439-5772f4a0590f
 - id: 51
   order: '342076'
   created_at: '2016-06-01'
@@ -3764,6 +3971,7 @@
   - Scratch
   - Minecraft
   - LEGO
+  global_club_id: e50545a6-eafa-4841-8829-a018ba18a721
 - id: 194
   order: '342092'
   created_at: '2019-01-18'
@@ -3775,6 +3983,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 9b61788b-50cb-45bd-8160-c64a39e15111
 - id: 350
   order: '342122'
   created_at: '2026-02-05'
@@ -3788,6 +3997,7 @@
   - micro:bit
   - Webサイト
   - AI
+  global_club_id: 7b4f1b66-ee56-47c4-bb00-b5079b9742d4
 - id: 192
   order: '352021'
   created_at: '2019-01-14'
@@ -3817,6 +4027,7 @@
   - micro:bit
   - Webサイト
   - Python
+  global_club_id: e30947bb-ee5d-4960-973d-bb5d97d931d4
 - id: 92
   order: '352101'
   created_at: '2017-06-19'
@@ -3831,6 +4042,7 @@
   - Unity
   - Java
   - Webサイト
+  global_club_id: fa322844-dcb5-465a-be41-269f17dbe6e7
 - id: 270
   order: '352110'
   created_at: '2021-05-13'
@@ -3843,6 +4055,7 @@
   - ｍBot
   - Scratch
   - Minecraft
+  global_club_id: 959721ca-a351-4263-bb85-1f430b04b093
 - id: 103
   order: '362018'
   created_at: '2017-10-02'
@@ -3858,6 +4071,7 @@
   - JavaScript
   - PHP
   - Python
+  global_club_id: 71c8496c-c24d-4ea9-b6aa-b65585c531ba
 - id: 111
   order: '362085'
   created_at: '2017-09-26'
@@ -3869,6 +4083,7 @@
   description: 三好市で第2週に開催
   tags:
   - Minecraft
+  global_club_id: 543b619c-b1a8-48f5-b5f0-f9fe5bd1bfb2
 - id: 188
   order: '363421'
   created_at: '2018-12-13'
@@ -3884,6 +4099,7 @@
   - Ruby
   - Python
   - Drone
+  global_club_id: eecbd90a-0fdb-41dc-94e5-d3e9f6d6d57e
 - id: 290
   order: '372013'
   created_at: '2022-11-02'
@@ -3896,6 +4112,7 @@
   tags:
   - Webプログラミング
   - OSS
+  global_club_id: d9a2266b-d2c3-4541-9ff2-0a665a76be00
 - id: 234
   order: '372081'
   created_at: '2019-11-26'
@@ -3909,6 +4126,7 @@
   - Scratch
   - Webサイト
   - PHP
+  global_club_id: fa5c2498-e40d-4b9d-94fd-0c8c0ed53fdf
 - id: 239
   order: '382019'
   created_at: '2020-02-03'
@@ -3923,6 +4141,7 @@
   - Unity
   - Mindstorms
   - Python
+  global_club_id: 3812509c-ead6-43b0-810f-e1ad4773bdeb
 - id: 351
   order: '382051'
   created_at: '2026-02-15'
@@ -3937,6 +4156,7 @@
   - Webサイト
   - アプリ開発
   - ゲーム開発
+  global_club_id: 50b83e42-8f59-451a-804f-334c5911f399
 - id: 226
   order: '382108'
   created_at: '2019-10-02'
@@ -3949,6 +4169,7 @@
   - Scratch
   - toio
   - Webサイト
+  global_club_id: 35341a53-ce39-450e-a56d-27a5607e24dd
 - id: 332
   order: '394289'
   created_at: '2025-01-22'
@@ -3961,6 +4182,7 @@
   - Scratch
   - Mindstorms
   - Unity
+  global_club_id: 18704b53-1042-4464-9d49-8820c6ff8c97
 - id: 144
   order: '401005'
   created_at: '2018-04-22'
@@ -3974,6 +4196,7 @@
   tags:
   - Scratch
   - Webサイト
+  global_club_id: '069141d7-d173-4d6a-b91e-9ad79f1fd6ed'
 - id: 102
   order: '401307'
   created_at: '2017-09-18'
@@ -3987,6 +4210,7 @@
   - micro:bit
   - Webサイト
   - JavaScript
+  global_club_id: bcb999f5-9b59-4b21-a88b-b66b90aafecf
 - id: 183
   order: '401323'
   created_at: '2018-11-03'
@@ -4001,6 +4225,7 @@
   - Viscuit
   - ラズベリーパイ
   - Webサイト
+  global_club_id: 7071d8c6-abc1-474b-a4d2-7bdd452b1042
 - id: 113
   order: '401307'
   created_at: '2017-10-06'
@@ -4015,6 +4240,7 @@
   - micro:bit
   - Minecraft
   - Roblox
+  global_club_id: 327a7fd8-a875-4504-b294-59875e1c9e0b
 - id: 339
   order: '401374'
   created_at: '2025-06-11'
@@ -4027,6 +4253,7 @@
   - Scratch
   - micro:bit
   - Minecraft
+  global_club_id: 38abd14d-2633-4690-9bf4-601d86a8bfa9
 - id: 136
   order: '401307'
   created_at: '2018-03-19'
@@ -4041,6 +4268,7 @@
   - Scratch
   - ScratchJr
   - Ozobot
+  global_club_id: c7894750-2362-43f8-8336-1167a1c914e7
 - id: 54
   order: '402036'
   created_at: '2016-10-06'
@@ -4054,6 +4282,7 @@
   - micro:bit
   - Minecraft
   - Webサイト
+  global_club_id: 53703176-6fa2-40b8-b796-e97aa73de1bb
 - id: 172
   order: '402036'
   created_at: '2018-08-25'
@@ -4084,6 +4313,7 @@
   - micro:bit
   - Minecraft
   - Hour of Code
+  global_club_id: 94bc4dba-39d2-43c8-8ac7-d02054bdf9b6
 - id: 347
   order: '402109'
   created_at: '2025-12-03'
@@ -4097,6 +4327,7 @@
   - micro:bit
   - Webサイト
   - Minecraft
+  global_club_id: 1a5ece9e-b149-4cd1-b05f-9a3b8b39bb7a
 - id: 229
   order: '402150'
   created_at: '2019-10-26'
@@ -4109,6 +4340,7 @@
   tags:
   - Scratch
   - micro:bit
+  global_club_id: 3ff6d9eb-ef4c-4026-9842-9ed7b5b548d6
 - id: 273
   order: '402184'
   created_at: '2021-08-16'
@@ -4123,6 +4355,7 @@
   - Unity
   - Python
   - Minecraft
+  global_club_id: 13edfe3d-53f3-486b-a4c7-835b294f52e4
 - id: 191
   order: '402214'
   created_at: '2019-01-04'
@@ -4137,6 +4370,7 @@
   - Hour of Code
   - Webサイト
   - micro:bit
+  global_club_id: 721bc4db-8158-4c19-8e69-91f8afbc853a
 - id: 269
   order: '412015'
   created_at: '2021-05-03'
@@ -4152,6 +4386,7 @@
   - Scratch
   - micro:bit
   - Minecraft
+  global_club_id: 373cd200-f8b3-49fd-bbcd-ff72186a5e18
 - id: 349
   order: '412015'
   created_at: '2025-12-22'
@@ -4168,6 +4403,7 @@
   - Python
   - Excel
   - GAS
+  global_club_id: 1178be6f-f652-4dd1-bf95-3a8b9300b7a3
 - id: 122
   order: '413411'
   created_at: '2017-12-15'
@@ -4183,6 +4419,7 @@
   - プチコン
   - ラズベリーパイ
   - Minecraft
+  global_club_id: d717cf05-1307-49d6-bb49-fa4d8be7ae97
 - id: 120
   order: '422011'
   created_at: '2017-11-14'
@@ -4207,6 +4444,7 @@
   - Minecraft
   - Webサイト
   - 電子工作
+  global_club_id: 57efa1ba-4c02-4e9e-8419-d47d2f3c32d6
 - id: 178
   order: '431001'
   created_at: '2018-08-05'
@@ -4221,6 +4459,7 @@
   - micro:bit
   - Webサイト
   - Python
+  global_club_id: e03205bc-4467-4431-9fa7-5b12b6cf3b7e
 - id: 55
   order: '454419'
   created_at: '2016-09-15'
@@ -4234,6 +4473,7 @@
   - Scratch
   - IchigoJam
   - ラズベリーパイ
+  global_club_id: b7038c6b-1ded-4772-ad66-9dd3ff914390
 - id: 187
   order: '462012'
   created_at: '2018-12-09'
@@ -4247,6 +4487,7 @@
   - micro:bit
   - Minecraft
   - mBot
+  global_club_id: e8ff33b5-4140-4d25-b924-91bc22f06a96
 - id: 354
   order: '462241'
   created_at: '2026-06-11'
@@ -4261,6 +4502,7 @@
   - toio
   - Python
   - Webサイト
+  global_club_id: 5d8ca3ef-a771-4459-9bf7-184a5d3784ea
 - id: 216
   order: '472018'
   created_at: '2019-06-15'
@@ -4290,6 +4532,7 @@
   - Mindstorms
   - Minecraft
   - C-Style
+  global_club_id: 901f6e5c-f3de-4bb6-9279-825505872b41
 - id: 209
   order: '472077'
   created_at: '2019-03-15'
@@ -4306,6 +4549,7 @@
   - 電子工作
   - DTM
   is_private: true
+  global_club_id: 569a61a2-f793-4921-961e-df92e9dde294
 - id: 205
   order: '472085'
   created_at: '2019-02-28'
@@ -4321,6 +4565,7 @@
   - Minecraft
   - Mindstorms
   - C-Style
+  global_club_id: 29b2f7f6-b147-4650-9e9c-d5bb49bf5922
 - id: 198
   order: '472115'
   created_at: '2019-02-03'
@@ -4349,6 +4594,7 @@
   tags:
   - Scratch
   is_private: true
+  global_club_id: ce8d569c-a704-428d-a0ed-5d0bf8beff48
 - id: 186
   order: '472093'
   created_at: '2018-12-02'
@@ -4363,6 +4609,7 @@
   - micro:bit
   - Drone
   - 3Dプリンタ
+  global_club_id: 0a7bb96c-9cd6-4d96-b052-096186a0e012
 - id: 155
   order: '472131'
   created_at: '2018-07-07'
@@ -4377,6 +4624,7 @@
   - Scratch
   - micro:bit
   - Minecraft
+  global_club_id: b791f2e8-7cc1-4398-ae86-c8bdc2c14168
 - id: 56
   order: '472140'
   created_at: '2016-11-02'
@@ -4392,6 +4640,7 @@
   - micro:bit
   - Webサイト
   - Python
+  global_club_id: a2777888-5a0e-489a-ab1d-3e9760f4a447
 - id: 356
   order: '472158'
   created_at: '2026-08-03'
@@ -4406,6 +4655,7 @@
   - Unity
   - JavaScript
   - HTML
+  global_club_id: b115e722-3f39-4306-9041-3d323844182e
 - id: 336
   order: '473111'
   created_at: '2025-03-28'
@@ -4420,6 +4670,7 @@
   - micro:bit
   - toio
   - 3Dプリンタ
+  global_club_id: 8e4a0410-56d9-4ded-bdd2-e4334dc94f2c
 - id: 57
   order: '473251'
   created_at: '2016-12-19'
@@ -4432,6 +4683,7 @@
   - Scratch
   - Mindstorms
   - ラズベリーパイ
+  global_club_id: d6a7d7e6-6043-4efd-bba4-db5abf0d6372
 - id: 61
   order: '473502'
   created_at: '2012-07-09'
