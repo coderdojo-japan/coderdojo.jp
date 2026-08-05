@@ -842,7 +842,7 @@
   - Scratch
   global_club_id: 831a556f-4f1a-49d4-bd2d-240e3378af1b
 - id: 159
-  order: '121003'
+  order: '121002'
   created_at: '2018-12-02'
   inactivated_at: '2025-04-20'
   note: 2024-04-20 https://www.facebook.com/CoderDojoTOKE/posts/pfbid02jsCuPajVr3u88nqS8ebcxxBh3v96C21NJwTdPFc2vy1q9UrJo3UsXeHxQWcjVmLcl
@@ -856,7 +856,7 @@
   - Viscuit
   global_club_id: 542b0936-d7f7-49ef-9675-e352c3e5281c
 - id: 312
-  order: '121003'
+  order: '121002'
   created_at: '2023-11-01'
   name: 稲毛海岸
   prefecture_id: 12
@@ -1106,7 +1106,7 @@
   - Unity
   - Minecraft
 - id: 157
-  order: '122302'
+  order: '123226'
   created_at: '2018-11-25'
   inactivated_at: '2021-06-16'
   name: 酒々井
@@ -3802,7 +3802,7 @@
   - AR/AI
   - ラズベリーパイ
 - id: 225
-  order: '320225'
+  order: '322024'
   created_at: '2019-09-06'
   inactivated_at: '2023-01-08'
   name: 浜田
