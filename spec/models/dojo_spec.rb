@@ -206,5 +206,73 @@ RSpec.describe Dojo, :type => :model do
       expect(duplicate_ids).to be_empty,
         "重複しているID: #{duplicate_ids.join(', ')}"
     end
+
+    # global_club_id は Raspberry Pi 財団の Clubs API 上のクラブ ID (UUID)。
+    # DojoMap が名前ではなくこの ID で突合できるようにするために持たせている。
+    #
+    # 現時点では YAML に置いてあるだけで、どこからも読まれていない。
+    # 値の妥当性はこの spec だけが守っているため、手作業の追記で起きやすい
+    # typo と重複をここで検出する。
+    #
+    # 休止・閉鎖したクラブは Clubs API の一覧取得に現れないため、値が正しいかを
+    # 突合で確かめられない。そのため形式と重複だけを検証し、実在性は検証しない。
+    # UUID 単体の状態は club(id:) クエリで調べられる（応答が null なら存在しない、
+    # permissions のエラーなら存在するが非公開）。
+    #
+    # 経緯は PR #1868 を参照。
+    # https://github.com/coderdojo-japan/coderdojo.jp/pull/1868
+    describe 'global_club_id' do
+      let(:dojos_with_global_club_id) do
+        Dojo.load_attributes_from_yaml.select { |dojo| dojo['global_club_id'].present? }
+      end
+
+      it 'is a valid UUID' do
+        dojos_with_global_club_id.each do |dojo|
+          expect(dojo['global_club_id']).to match(/\A\h{8}-\h{4}-\h{4}-\h{4}-\h{12}\z/),
+            "ID: #{dojo['id']} (#{dojo['name']}) の global_club_id が UUID 形式ではありません: #{dojo['global_club_id']}"
+        end
+      end
+
+      # DojoMap は active な Dojo だけを地図に出す。閉鎖済みの Dojo は Clubs API 側からも
+      # クラブごと消えているため、埋めるべき対象は active に限られる。
+      #
+      # 下記は現時点で値を入れられない Dojo。解決したらこの一覧から消すこと。
+      # 一覧に無い active な Dojo が増えたら、このテストが落ちて気づける。
+      dojos_without_global_club_id = {
+        # 連名道場。1 エントリが Clubs API 上の複数クラブに対応するため、
+        # 単一カラムでは表現できない。counter の再設計とあわせて対応する。
+        42  => '西宮・梅田（2 クラブ）',
+        224 => '大田・邑南、他（6 クラブ）',
+      }.freeze
+
+      it 'is set for every active dojo' do
+        missing = Dojo.load_attributes_from_yaml.reject { |dojo| dojo['inactivated_at'].present? }
+                      .reject { |dojo| dojo['global_club_id'].present? }
+                      .reject { |dojo| dojos_without_global_club_id.key?(dojo['id']) }
+
+        expect(missing).to be_empty,
+          "global_club_id が未設定の active な Dojo: " +
+          missing.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
+      end
+
+      it 'has no stale entry in the exception list' do
+        resolved = Dojo.load_attributes_from_yaml.select do |dojo|
+          dojos_without_global_club_id.key?(dojo['id']) &&
+            (dojo['global_club_id'].present? || dojo['inactivated_at'].present?)
+        end
+
+        expect(resolved).to be_empty,
+          "解決済みなので dojos_without_global_club_id から消してください: " +
+          resolved.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
+      end
+
+      it 'is not shared by two dojos' do
+        ids = dojos_with_global_club_id.map { |dojo| dojo['global_club_id'] }
+        duplicated = ids.tally.select { |_, count| count > 1 }.keys
+
+        expect(duplicated).to be_empty,
+          "重複している global_club_id: #{duplicated.join(', ')}"
+      end
+    end
   end
 end
