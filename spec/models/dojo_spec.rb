@@ -329,4 +329,34 @@ RSpec.describe Dojo, :type => :model do
       end
     end
   end
+
+  # 連名道場（counter > 1）は 1 エントリが複数の道場を表す。
+  # 「集計対象の道場数」がこれを 1 と数えると、同じページの
+  # 「非集計対象を含む道場数」（SUM(counter)）と数え方が食い違う。
+  # 経緯は Issue #862 を参照。
+  # https://github.com/coderdojo-japan/coderdojo.jp/issues/862
+  describe '.aggregatable_annual_count' do
+    let(:period) { Time.zone.local(2020).all_year }
+
+    it 'counts a joint dojo as its counter' do
+      dojo = create(:dojo, name: '連名', counter: 3, created_at: Time.zone.local(2020, 5, 1))
+      create(:dojo_event_service, dojo_id: dojo.id)
+
+      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(3)
+    end
+
+    it 'counts a dojo once even when it has multiple event services' do
+      dojo = create(:dojo, name: '複数サービス', counter: 1, created_at: Time.zone.local(2020, 5, 1))
+      create(:dojo_event_service, dojo_id: dojo.id, name: :connpass,   group_id: '111')
+      create(:dojo_event_service, dojo_id: dojo.id, name: :doorkeeper, group_id: '222')
+
+      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(1)
+    end
+
+    it 'excludes a dojo without any event service' do
+      create(:dojo, name: '対象外', counter: 2, created_at: Time.zone.local(2020, 5, 1))
+
+      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(0)
+    end
+  end
 end
