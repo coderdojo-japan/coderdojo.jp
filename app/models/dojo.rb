@@ -73,7 +73,7 @@ class Dojo < ApplicationRecord
     # 「非集計対象を含む道場数」（annual_count）と数え方を揃えるため。
     #
     # joins ではなくサブクエリを使う。joins だとイベントサービスを複数持つ Dojo が
-    # 行数分だけ重複し、SUM が過大になる（現在 21 件が該当）。
+    # 行数分だけ重複し、SUM が過大になる（2026-08 時点で 21 件が該当）。
     def aggregatable_annual_count(period)
       Hash[
         where(id: DojoEventService.select(:dojo_id))

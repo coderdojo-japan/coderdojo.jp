@@ -342,7 +342,7 @@ RSpec.describe Dojo, :type => :model do
       dojo = create(:dojo, name: '連名', counter: 3, created_at: Time.zone.local(2020, 5, 1))
       create(:dojo_event_service, dojo_id: dojo.id)
 
-      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(3)
+      expect(Dojo.aggregatable_annual_count(period)['2020']).to eq(3)
     end
 
     it 'counts a dojo once even when it has multiple event services' do
@@ -350,13 +350,25 @@ RSpec.describe Dojo, :type => :model do
       create(:dojo_event_service, dojo_id: dojo.id, name: :connpass,   group_id: '111')
       create(:dojo_event_service, dojo_id: dojo.id, name: :doorkeeper, group_id: '222')
 
-      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(1)
+      expect(Dojo.aggregatable_annual_count(period)['2020']).to eq(1)
     end
 
     it 'excludes a dojo without any event service' do
       create(:dojo, name: '対象外', counter: 2, created_at: Time.zone.local(2020, 5, 1))
 
-      expect(Dojo.aggregatable_annual_count(period)['2020'].to_i).to eq(0)
+      # キーが無いことを検証する。値を .to_i すると、メソッドが空を返しても
+      # nil.to_i == 0 で通ってしまい、テストが機能しなくなる。
+      expect(Dojo.aggregatable_annual_count(period)).not_to have_key('2020')
+    end
+
+    # 分母となる annual_count も inactive を含むため、こちらも含めるのが正しい。
+    # 将来 active スコープを足す「修正」で分子だけが減ると、比率が壊れる。
+    it 'includes an inactive dojo when it has an event service' do
+      dojo = create(:dojo, name: '休止中', counter: 1,
+                    created_at: Time.zone.local(2020, 5, 1), inactivated_at: Time.zone.local(2021, 1, 1))
+      create(:dojo_event_service, dojo_id: dojo.id)
+
+      expect(Dojo.aggregatable_annual_count(period)['2020']).to eq(1)
     end
   end
 end
