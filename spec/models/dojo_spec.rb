@@ -206,13 +206,9 @@ RSpec.describe Dojo, :type => :model do
     # 適用できないため、こちらは形式面から守る。
     # https://github.com/coderdojo-japan/coderdojo.jp/pull/1869
     #
-    # 下記は現時点で検査数字が合っていないもの。直したらこの一覧から消すこと。
-    invalid_check_digit = {
-      157 => '酒々井（122302。酒々井町は 123226）',
-      159 => '土気（121003。千葉市は 121002）',
-      225 => '浜田（320225。浜田市は 322024）',
-      312 => '稲毛海岸（121003。千葉市は 121002）',
-    }.freeze
+    # 検査数字が合っていないものがあれば、直すまでの間ここに退避させる。
+    # 現在は空。PR #1874 で 4 件を db/city_code.csv の値に直した。
+    invalid_check_digit = {}.freeze
 
     # 上 5 桁に 6,5,4,3,2 を掛けた和を 11 で割った余りを 11 から引く。10 以上なら 1 の位。
     def check_digit_of(code)
