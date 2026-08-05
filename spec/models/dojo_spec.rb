@@ -197,6 +197,60 @@ RSpec.describe Dojo, :type => :model do
     end
   end
 
+  describe 'validate order (全国地方公共団体コード)' do
+    # order は総務省の全国地方公共団体コード。上 5 桁が自治体を表し、6 桁目は検査数字。
+    # 手で書いたときの typo は、値が実在するコードに化けない限り検査数字で捕まえられる。
+    #
+    # 提携先のクラブ座標を逆ジオコーディングして突き合わせたところ、実所在地と違う
+    # 自治体を指すものが 6 件見つかった（PR #1869）。座標での突合は全 Dojo には
+    # 適用できないため、こちらは形式面から守る。
+    # https://github.com/coderdojo-japan/coderdojo.jp/pull/1869
+    #
+    # 下記は現時点で検査数字が合っていないもの。直したらこの一覧から消すこと。
+    invalid_check_digit = {
+      157 => '酒々井（122302。酒々井町は 123226）',
+      159 => '土気（121003。千葉市は 121002）',
+      225 => '浜田（320225。浜田市は 322024）',
+      312 => '稲毛海岸（121003。千葉市は 121002）',
+    }.freeze
+
+    # 上 5 桁に 6,5,4,3,2 を掛けた和を 11 で割った余りを 11 から引く。10 以上なら 1 の位。
+    def check_digit_of(code)
+      weights = [6, 5, 4, 3, 2]
+      sum = code[0, 5].chars.each_with_index.sum { |digit, i| digit.to_i * weights[i] }
+      remainder = 11 - (sum % 11)
+      remainder >= 10 ? remainder % 10 : remainder
+    end
+
+    it 'computes the check digit correctly' do
+      # 総務省の公表値で算出規則そのものを検証する
+      { '130001' => true, '011002' => true, '472158' => true,
+        '130000' => false, '011003' => false }.each do |code, valid|
+        expect(check_digit_of(code) == code[5].to_i).to eq(valid), "#{code} の判定が期待と違います"
+      end
+    end
+
+    it 'has a valid check digit' do
+      invalid = Dojo.load_attributes_from_yaml.reject { |dojo| invalid_check_digit.key?(dojo['id']) }
+                    .reject { |dojo| check_digit_of(dojo['order'].to_s) == dojo['order'].to_s[5].to_i }
+
+      expect(invalid).to be_empty,
+        "order の検査数字が合っていません: " +
+        invalid.map { |dojo| "#{dojo['id']} (#{dojo['name']}) #{dojo['order']}" }.join(', ')
+    end
+
+    it 'has no stale entry in the exception list' do
+      resolved = Dojo.load_attributes_from_yaml.select do |dojo|
+        invalid_check_digit.key?(dojo['id']) &&
+          check_digit_of(dojo['order'].to_s) == dojo['order'].to_s[5].to_i
+      end
+
+      expect(resolved).to be_empty,
+        "解決済みなので invalid_check_digit から消してください: " +
+        resolved.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
+    end
+  end
+
   describe 'YAML data integrity' do
     it 'has no duplicate IDs' do
       yaml_data = Dojo.load_attributes_from_yaml
