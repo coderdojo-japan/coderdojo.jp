@@ -143,9 +143,16 @@ class StatsController < ApplicationController
 
           # HTML にしか無かった指標。本番の値を確かめるのに HTML を grep すると
           # 無関係な数字を拾うため、JSON でも取れるようにしている。
-          aggregatable_dojos: @annual_dojos_table.values.last,  # 集計対象となっている道場数
-          total_dojos:        @annual_dojos_whole.values.last,  # 非集計対象も含む道場数
-          period: { start: @period_start, end: @period_end },
+          #
+          # 上の total_events / total_ninjas は全期間の値だが、こちらは期間で
+          # 区切られる。同じ階層に置くと基準が違うことが読めないため入れ子にする。
+          # 非アクティブになった道場も含む点は HTML の表記と揃えている。
+          dojos_in_period: {
+            start:        @period_start,
+            end:          @period_end,
+            aggregatable: @annual_dojos_table[@period_end.to_s],  # 集計対象となっている道場数
+            total:        @annual_dojos_whole[@period_end.to_s],  # 非集計対象も含む道場数
+          },
         }
       }
     end
