@@ -167,6 +167,40 @@ RSpec.describe 'dojos' do
         expect(Dojo.find(@dojo_1.id).global_club_id).to be_nil
       end
 
+      # 下の 2 つは YAML の中身だけを見ても検出できない衝突。
+      # YAML 内に重複が無いので spec も CI も通り、本番 DB の既存行との間でだけ
+      # ユニーク制約に当たる。毎デプロイ走るタスクなので、当たると release が止まる。
+      it '別の道場へ移した UUID は、先に解放される' do
+        uuid = 'b115e722-0000-4000-8000-000000000003'
+        @dojo_1.update_columns(global_club_id: uuid)
+
+        # 移動先を先に並べる。解放しないまま save! すると、ここで衝突する
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
+                 .merge('global_club_id' => uuid),
+          dojo_base,
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_1.id).global_club_id).to be_nil
+        expect(Dojo.find(@dojo_2.id).global_club_id).to eq(uuid)
+      end
+
+      it 'YAML に無い道場が握っている UUID も解放される' do
+        # update_db_by_yaml は YAML に無い行を消さないため、DB にだけ残った行が
+        # UUID を握り続けることがある。この場合リポジトリのどこにも重複が見えない
+        uuid = 'b115e722-0000-4000-8000-000000000004'
+        @dojo_3.update_columns(global_club_id: uuid)
+
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          dojo_base.merge('global_club_id' => uuid)
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_3.id).global_club_id).to be_nil
+        expect(Dojo.find(@dojo_1.id).global_club_id).to eq(uuid)
+      end
+
       it '空文字 ⇒ nil に正規化される' do
         # 空文字のままだと 2 件目でユニークインデックスに引っかかり、
         # release スクリプトが落ちる

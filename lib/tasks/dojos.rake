@@ -29,10 +29,26 @@ namespace :dojos do
 
     # DB 反映する前に YAML データをチェックする
     # https://railsguides.jp/error_reporting.html
+    #
+    # 全行を検証してから書き始める。1 行でも不正なら、DB を触る前に止まる
+    dojos.each { |dojo| raise_if_invalid_dojo(dojo) }
+
+    # YAML と一致しなくなった global_club_id を先に解放する。
+    #
+    # このタスクは行ごとに save! するだけで、YAML に無い DB 行は消さない。
+    # そのため「UUID を道場 A から B へ移す」編集は、YAML 内に重複が生じないので
+    # CI をすり抜け、本番 DB の既存行との衝突としてのみ現れる。毎デプロイ走る
+    # タスクなので、当たると release ごと止まる。
+    #
+    # A と B の入れ替えや、DB にだけ残った行が UUID を握っている場合も同じ。
+    # 後者はリポジトリのどこにも重複が見えないため、原因にたどり着きにくい。
+    # 先に解放しておけば、いずれも 1 回のデプロイで解決する。
+    expected_global_club_id = dojos.to_h { |dojo| [dojo['id'], dojo['global_club_id'].presence] }
+    Dojo.where.not(global_club_id: nil).find_each do |d|
+      d.update_columns(global_club_id: nil) if expected_global_club_id[d.id] != d.global_club_id
+    end
 
     dojos.each do |dojo|
-      raise_if_invalid_dojo(dojo)
-
       d = Dojo.find_or_initialize_by(id: dojo['id'])
       d.name           = dojo['name']
       d.counter        = dojo['counter'] || 1
