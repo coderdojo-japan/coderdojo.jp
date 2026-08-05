@@ -120,7 +120,7 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
 ## DojoMap への反映（暫定手順）
 
-> ⚠️ Dojo が `global_club_id` を持つようになったら（[PR #1747](https://github.com/coderdojo-japan/coderdojo.jp/pull/1747)）、この節は丸ごと削除してください。
+> ⚠️ DojoMap が `global_club_id` で突合するようになったら（[Issue #1616](https://github.com/coderdojo-japan/coderdojo.jp/issues/1616)）、この節は丸ごと削除してください。
 
 [DojoMap](https://map.coderdojo.jp) は Clubs API 側のクラブ名と `db/dojos.yml` の `name` を、
 [`dojo2dojo.csv`](https://github.com/coderdojo-japan/map.coderdojo.jp/blob/main/dojo2dojo.csv) で突合しています。
