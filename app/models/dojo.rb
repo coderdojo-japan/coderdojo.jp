@@ -69,13 +69,18 @@ class Dojo < ApplicationRecord
       active.group_by_prefecture
     end
 
+    # 連名道場は 1 エントリが counter 個の道場を表すため、SUM(counter) で数える。
+    # 「非集計対象を含む道場数」（annual_count）と数え方を揃えるため。
+    #
+    # joins ではなくサブクエリを使う。joins だとイベントサービスを複数持つ Dojo が
+    # 行数分だけ重複し、SUM が過大になる（2026-08 時点で 21 件が該当）。
     def aggregatable_annual_count(period)
       Hash[
-        joins(:dojo_event_services)
+        where(id: DojoEventService.select(:dojo_id))
           .where(created_at: period)
           .group('year')
           .order('year ASC')
-          .pluck(Arel.sql("to_char(dojos.created_at, 'yyyy') AS year, COUNT(DISTINCT dojos.id)"))
+          .pluck(Arel.sql("to_char(created_at, 'yyyy') AS year, SUM(counter)"))
       ]
     end
 

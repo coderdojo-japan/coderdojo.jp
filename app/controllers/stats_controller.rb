@@ -68,17 +68,11 @@ class StatsController < ApplicationController
     end
 
     # 集計方法と集計対象
-    # TODO: 'DISTINCT dojo_id' cannot track joint-registrated dojos
-    #   cf. https://github.com/coderdojo-japan/coderdojo.jp/issues/682
-    # TODO: 集計対象となっている道場数の推移と合わせて調整すると良さそう
-    # joint_dojo_counter  = Dojo.where('counter > 1').map do |d|
-    #   d.dojo_event_services.any? ? (d.counter-1) : 0 # Remove itself from counting
-    # end.sum
-    # @aggregated_dojos   = DojoEventService.count('DISTINCT dojo_id') + joint_dojo_counter
     #
-    # MEMO: 色々不要!! 以下の *_table/whole の最新の値を出せば良いだけだった!!
-    # @dojos_aggregated        = DojoEventService.count('DISTINCT dojo_id')
-    # @dojos_included_inactive = stats.annual_sum_total_of_dojo_inactive_included
+    # 連名道場を数え落とす問題は Dojo.aggregatable_annual_count 側で解消済み。
+    # SUM(counter) で数えるようにしたため、下記の補正は不要になった。
+    # 経緯は Issue #862 を参照。
+    # https://github.com/coderdojo-japan/coderdojo.jp/issues/862
 
     # 「集計対象となっている道場数 / 非集計対象含む道場数」の推移
     @annual_dojos_table = stats.annual_sum_total_of_aggregatable_dojo
