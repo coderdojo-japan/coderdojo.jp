@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_07_14_184224) do
+ActiveRecord::Schema[8.0].define(version: 2026_08_05_073407) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
@@ -40,6 +40,8 @@ ActiveRecord::Schema[8.0].define(version: 2026_07_14_184224) do
     t.integer "counter", default: 1, null: false
     t.text "note", default: "", null: false
     t.datetime "inactivated_at"
+    t.string "global_club_id"
+    t.index ["global_club_id"], name: "index_dojos_on_global_club_id", unique: true
     t.index ["inactivated_at"], name: "index_dojos_on_inactivated_at"
   end
 

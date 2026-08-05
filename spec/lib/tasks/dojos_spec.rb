@@ -141,6 +141,47 @@ RSpec.describe 'dojos' do
       end
     end
 
+    # global_club_id は提携先のクラブ ID (UUID)。値を持たない道場のほうが多いので、
+    # 空文字が入ると DB のユニークインデックスが 2 件目で落ちる。nil に正規化する。
+    context 'global_club_id' do
+      let(:dojo_base) do
+        @dojo_1.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
+      end
+
+      it 'UUID 指定 ⇒ 保存される' do
+        uuid = 'b115e722-0000-4000-8000-000000000001'
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          dojo_base.merge('global_club_id' => uuid)
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_1.id).global_club_id).to eq(uuid)
+      end
+
+      it '指定なし ⇒ nil' do
+        allow(YAML).to receive(:unsafe_load_file).and_return([dojo_base])
+
+        @dojo_1.update_columns(global_club_id: 'b115e722-0000-4000-8000-000000000002')
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_1.id).global_club_id).to be_nil
+      end
+
+      it '空文字 ⇒ nil に正規化される' do
+        # 空文字のままだと 2 件目でユニークインデックスに引っかかり、
+        # release スクリプトが落ちる
+        allow(YAML).to receive(:unsafe_load_file).and_return([
+          dojo_base.merge('global_club_id' => ''),
+          @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
+                 .merge('global_club_id' => '')
+        ])
+
+        expect(@rake[task].invoke).to be_truthy
+        expect(Dojo.find(@dojo_1.id).global_club_id).to be_nil
+        expect(Dojo.find(@dojo_2.id).global_club_id).to be_nil
+      end
+    end
+
     context 'is_private' do
       let(:dojo_base) do
         @dojo_3.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }

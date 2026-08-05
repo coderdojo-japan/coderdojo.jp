@@ -260,9 +260,9 @@ RSpec.describe Dojo, :type => :model do
     # global_club_id は Raspberry Pi 財団の Clubs API 上のクラブ ID (UUID)。
     # DojoMap が名前ではなくこの ID で突合できるようにするために持たせている。
     #
-    # 現時点では YAML に置いてあるだけで、どこからも読まれていない。
-    # 値の妥当性はこの spec だけが守っているため、手作業の追記で起きやすい
-    # typo と重複をここで検出する。
+    # 値の出どころは YAML で、dojos:update_db_by_yaml が DB に反映する。
+    # DB 側にもユニークインデックスがあるが、それが守るのは重複だけなので、
+    # 手作業の追記で起きやすい typo はここで検出する。
     #
     # 休止・閉鎖したクラブは Clubs API の一覧取得に現れないため、値が正しいかを
     # 突合で確かめられない。そのため形式と重複だけを検証し、実在性は検証しない。
@@ -323,6 +323,27 @@ RSpec.describe Dojo, :type => :model do
         expect(duplicated).to be_empty,
           "重複している global_club_id: #{duplicated.join(', ')}"
       end
+    end
+  end
+
+  # 上の spec は YAML を見る。こちらは DB のユニークインデックスそのものを確かめる。
+  # YAML を経由しない経路（コンソールでの手直しなど）でも重複を防げることの確認。
+  describe 'global_club_id の一意性 (DB)' do
+    let(:uuid) { 'b115e722-0000-4000-8000-000000000001' }
+
+    it '同じ値を 2 つの Dojo に持たせられない' do
+      create(:dojo, name: '先に登録', global_club_id: uuid)
+
+      expect { create(:dojo, name: '後から登録', global_club_id: uuid) }
+        .to raise_error(ActiveRecord::RecordNotUnique)
+    end
+
+    it '値を持たない Dojo は何件でも共存できる' do
+      # PostgreSQL のユニークインデックスは NULL を重複とみなさない。
+      # 値を持てない道場が 78 件あるため、この性質に依存している
+      create(:dojo, name: '未設定 1', global_club_id: nil)
+
+      expect { create(:dojo, name: '未設定 2', global_club_id: nil) }.not_to raise_error
     end
   end
 

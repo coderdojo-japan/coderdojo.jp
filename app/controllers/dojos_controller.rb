@@ -34,6 +34,9 @@ class DojosController < ApplicationController
         created_at:  dojo.created_at,
         description: dojo.description,
         inactivated_at: dojo.inactivated_at,  # CSV用に追加
+        # DojoMap が提携先のクラブと突き合わせるための ID。値を持たない道場もあるので
+        # null が返る。詳細は Issue #1616
+        global_club_id: dojo.global_club_id,
       }
     end
 

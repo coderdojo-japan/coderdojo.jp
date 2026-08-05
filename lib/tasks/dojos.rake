@@ -45,6 +45,9 @@ namespace :dojos do
       d.prefecture_id  = dojo['prefecture_id']
       d.order          = dojo['order'] || search_order_number_by(dojo['name'])
       d.is_private     = dojo['is_private'].nil? ? false : dojo['is_private']
+      # 空文字は nil に落とす。DB のユニークインデックスは NULL を重複とみなさないが、
+      # 空文字は 2 件目で落ちるため（値を持たない道場が 78 件ある）
+      d.global_club_id = dojo['global_club_id'].presence
       d.inactivated_at = dojo['inactivated_at'] ? Time.zone.parse(dojo['inactivated_at']) : nil
       d.created_at     = d.new_record? ? Time.zone.now : dojo['created_at'] || d.created_at
       d.updated_at     = Time.zone.now
