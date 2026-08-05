@@ -135,10 +135,17 @@ class StatsController < ApplicationController
       format.html # => app/views/stats/show.html.erb
       format.json { render json: {
           # NOTE: Add JSON data upon requests
+          # 既存のキーは他リポジトリが参照しているため消さない。追加のみ行う。
           active_dojos: @sum_of_dojos,  # Required by other repos
           total_events: @sum_of_events,
           total_ninjas: @sum_of_participants,
           active_dojos_by_prefecture: @data_by_prefecture,
+
+          # HTML にしか無かった指標。本番の値を確かめるのに HTML を grep すると
+          # 無関係な数字を拾うため、JSON でも取れるようにしている。
+          aggregatable_dojos: @annual_dojos_table.values.last,  # 集計対象となっている道場数
+          total_dojos:        @annual_dojos_whole.values.last,  # 非集計対象も含む道場数
+          period: { start: @period_start, end: @period_end },
         }
       }
     end
