@@ -265,6 +265,32 @@ RSpec.describe "Dojos", type: :request do
       end
     end
 
+    # DojoMap は /dojos.json だけを見て提携先のクラブと突き合わせる。
+    # 名前ではなく UUID で突合できるようにするため、この列を JSON に出す。
+    # https://github.com/coderdojo-japan/coderdojo.jp/issues/1616
+    describe "global_club_id field in output" do
+      it "includes global_club_id in JSON response" do
+        uuid = 'b115e722-0000-4000-8000-000000000001'
+        @dojo_2020_active.update!(global_club_id: uuid)
+
+        get dojos_path(format: :json)
+        json_response = JSON.parse(response.body)
+
+        expect(json_response.find { |d| d["id"] == @dojo_2020_active.id }["global_club_id"]).to eq(uuid)
+      end
+
+      it "returns null for dojos without global_club_id" do
+        # 値を持たない道場のほうが多い。キーごと消えると読む側で分岐が増えるので、
+        # キーは常に出して null を返す
+        get dojos_path(format: :json)
+        json_response = JSON.parse(response.body)
+
+        entry = json_response.find { |d| d["id"] == @dojo_2020_active.id }
+        expect(entry).to have_key("global_club_id")
+        expect(entry["global_club_id"]).to be_nil
+      end
+    end
+
     describe "counter field in output" do
       it "includes counter field in JSON response" do
         get dojos_path(format: :json)
