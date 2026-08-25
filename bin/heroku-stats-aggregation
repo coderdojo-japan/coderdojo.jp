@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# 本番のイベント履歴を再集計する。
+#
+#   bin/heroku-stats-aggregation                        # 前週（週次ジョブと同じ）
+#   bin/heroku-stats-aggregation - - static_yaml        # static_yaml のみ全期間
+#   bin/heroku-stats-aggregation 2026/08/17 2026/08/23  # 期間を指定
+#
+# 引数は rake タスクの [from,to,provider,dojo_id] にそのまま渡る。
+#
+# タスク名と app 名をここで固定している。`heroku run rails ...` を直接叩くと、
+# 打ち間違いで別のタスク（db:drop など）や別アプリを本番で実行してしまう余地が残る。
+# 実行を許可する対象をこのスクリプトに絞れば、操作が集計だけに限定される。
+# cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1882
+set -euo pipefail
+
+task='statistics:aggregation'
+if [ $# -gt 0 ]; then
+  IFS=','
+  task="${task}[$*]"
+fi
+
+exec heroku run rails "$task" --app coderdojo-japan
