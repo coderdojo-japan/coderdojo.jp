@@ -56,6 +56,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
+  # 日付に依存する仕様（集計期間のガードなど）を、実行日によらず固定して検証するため
+  config.include ActiveSupport::Testing::TimeHelpers
 
   config.before(:suite) do
     Rails.application.load_seed

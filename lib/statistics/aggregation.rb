@@ -1,5 +1,16 @@
 module Statistics
   class Aggregation
+    # 外部プロバイダをこの日数より前に遡って再集計することを禁じる。
+    # 週次ジョブが遡るのは高々 13 日で、欠損に気付いてから復旧するまでの遅延を
+    # 足しても数週間に収まる。ガード自身の日付計算がずれても週次ジョブを
+    # 止めないよう、正当な遡りとの間に余裕を持たせている。
+    REAGGREGATION_LIMIT_DAYS = 90
+
+    # 上の制限を超えて実行したいときに指定する環境変数。
+    # 値には対象期間の開始日そのものを要求する。固定値だとシェルに export が
+    # 残り、別の実行まで意図せず承認してしまうため。
+    OVERRIDE_ENV_KEY = 'ALLOW_DESTRUCTIVE_REAGGREGATION'
+
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
       @provider  = args[:provider]
@@ -17,6 +28,9 @@ module Statistics
       dojo_info = "[#{@dojo_id}]" if @dojo_id
       puts "Aggregate for #{@from}~#{@to}#{dojo_info}"
       with_notifying do
+        # DB にも API にも触れる前に落とす
+        forbid_destructive_reaggregation!
+
         # 「削除だけが確定し、再登録されない」状態を残さないため、全体を1つの
         # トランザクションにまとめる。呼び出し側に任せると rails console から
         # 直接呼んだときに原子性が失われる。
@@ -119,6 +133,30 @@ module Statistics
       raise e
     end
 
+    # 集計は「対象期間の履歴を削除してから API で取り直す」ため、API から消えた
+    # イベントは復活しない。閉鎖した道場が connpass のグループごとページを削除して
+    # いると、実際に開催された履歴が失われる。古い期間ほどその危険が大きい。
+    #
+    # static_yaml は db/static_event_histories.yml が正史なので対象外。
+    # facebook は実装上 YAML を読むだけだが、外部プロバイダとして扱われている
+    # 分類の歪みをここに持ち込まないため、あえて特別扱いしない。
+    # cf. doc/how_to_aggregate_stats_and_events.md
+    def forbid_destructive_reaggregation!
+      return if @externals.empty?
+      return if @from >= Time.zone.today - REAGGREGATION_LIMIT_DAYS.days
+      return if ENV[OVERRIDE_ENV_KEY] == @from.to_s
+
+      raise ArgumentError, <<~MESSAGE
+        #{date_format(@from)} からの再集計を中止しました（#{REAGGREGATION_LIMIT_DAYS} 日より前のため）。
+
+        API から消えたイベントは再集計で復活せず、実際に開催された履歴が失われます。
+        欠損を直したいときは、該当する週だけを指定してください。
+
+        それでも実行する場合は、開始日を明示して許可してください:
+          #{OVERRIDE_ENV_KEY}=#{@from} rails 'statistics:aggregation[#{date_format(@from)},#{date_format(@to)}#{",#{@provider}" if @provider}]'
+      MESSAGE
+    end
+
     def delete_event_histories(kinds)
       target_period = @from.beginning_of_day..@to.end_of_day
       kinds.each do |kind|
@@ -145,8 +183,10 @@ module Statistics
       end
     end
 
+    # ISO 8601 で揃える。通知文にも、通知が添える再実行コマンドにも使う。
+    # rake タスクの引数は %Y-%m-%d を受け付けるので、そのままコピペできる。
     def date_format(date)
-      date.strftime('%Y/%m/%d')
+      date.strftime('%Y-%m-%d')
     end
 
     class Notifier
