@@ -20,6 +20,7 @@ module Statistics
         # 「削除だけが確定し、再登録されない」状態を残さないため、全体を1つの
         # トランザクションにまとめる。呼び出し側に任せると rails console から
         # 直接呼んだときに原子性が失われる。
+        # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
         EventHistory.transaction do
           delete_event_histories(@externals.keys)
           execute
@@ -107,6 +108,7 @@ module Statistics
     rescue => e
       # 通知したうえで再送出し、週次ジョブを失敗させる。握り潰すと、データが
       # 欠けたまま正常終了したように見える。
+      # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
       #
       # Slack への通知自体が失敗しても、元の例外を失わないようにする。
       begin
@@ -156,6 +158,7 @@ module Statistics
         def notify_failure(from, to, provider, dojo_id, exception)
           # 期間を指定せずに再実行すると「実行時点の前週」を集計するため、翌週以降に
           # 再実行しても欠けた週は埋まらない。再実行するコマンドを添える。
+          # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
           # zsh では [] がグロブとして解釈されるため、引用符ごとコピペできる形にする
           retry_command = "rails 'statistics:aggregation[#{from},#{to}#{",#{provider}" if provider}]'"
           notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n" \

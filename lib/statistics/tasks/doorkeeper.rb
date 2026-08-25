@@ -24,6 +24,7 @@ module Statistics
               next unless e[:group].to_s == dojo_event_service.group_id
 
               # connpass と同じく、開催日の変更に追随するため作成ではなく更新にする。
+              # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
               history = EventHistory.find_or_initialize_by(service_name: dojo_event_service.name,
                                                            event_id:     e[:id].to_s)
               history.update!(dojo_id:          dojo.id,

@@ -50,6 +50,7 @@ RSpec.describe Statistics::Aggregation do
 
     # 道場がイベントページを作り直さずに開催日だけ変更すると、集計期間の外に残った
     # 履歴と event_id が衝突し、集計が途中で止まっていた。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
     #
     # NOTE: 追随できるのは「期間外 -> 期間内」への移動のみ。期間外へ移された
     #       イベントは API が返さなくなるため、古い evented_at のまま残る。
@@ -73,6 +74,7 @@ RSpec.describe Statistics::Aggregation do
 
     # 例外を握り潰すと、削除だけが確定した状態で正常終了してしまう。
     # 週次ジョブを失敗させて、欠損に気付けるようにする。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
     it '集計に失敗したとき、例外を握り潰さない' do
       allow_any_instance_of(Statistics::Tasks::Connpass).to receive(:run).and_raise('connpass の取得に失敗しました')
 
@@ -81,6 +83,7 @@ RSpec.describe Statistics::Aggregation do
 
     # static_yaml は期間を問わず全件を入れ替えるため、削除が先に走ると
     # 他プロバイダの失敗に巻き込まれて履歴が丸ごと消える。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
     it '外部プロバイダの失敗で static_yaml のイベント履歴が消えない' do
       EventHistory.create!(dojo_id:      @d3.id,
                            dojo_name:    @d3.name,

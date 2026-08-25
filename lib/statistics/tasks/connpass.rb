@@ -29,6 +29,7 @@ module Statistics
           # 道場がイベントページを作り直さずに開催日だけ変更すると、集計期間の外に
           # 残った履歴と event_id が衝突して集計が止まる。作成ではなく更新にして
           # 開催日の変更に追随する。
+          # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
           history = EventHistory.find_or_initialize_by(service_name: dojo_event_service.name,
                                                        event_id:     e.fetch('id').to_s)
           history.update!(dojo_id:          dojo_event_service.dojo_id,
