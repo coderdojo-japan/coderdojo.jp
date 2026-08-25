@@ -2,10 +2,10 @@ require_relative '../statistics.rb'
 
 namespace :statistics do
   desc '指定期間/プロバイダのイベント履歴を集計します'
+  # トランザクションは Statistics::Aggregation#run が持つ。
+  # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
   task :aggregation, [:from, :to, :provider, :dojo_id] => :environment do |tasks, args|
-    EventHistory.transaction do
-      Statistics::Aggregation.new(args).run
-    end
+    Statistics::Aggregation.new(args).run
   end
 
   desc '集計が静かに壊れていないかを確認します（直近 N 日で 0 件のプロバイダを検知）'

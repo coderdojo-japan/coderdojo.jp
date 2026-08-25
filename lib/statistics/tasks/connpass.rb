@@ -26,15 +26,18 @@ module Statistics
           dojo_event_service = DojoEventService.find_by(group_id: e.dig('group', 'id').to_s)
           next unless dojo_event_service
 
-          EventHistory.create!(dojo_id:          dojo_event_service.dojo_id,
-                               dojo_name:        dojo_event_service.dojo.name,
-                               service_name:     dojo_event_service.name,
-                               service_group_id: dojo_event_service.group_id,
-                               event_id:         e.fetch('id'),
-                               event_url:        e.fetch('url'),
-                               participants:     e.fetch('accepted'),
-                               evented_at:       Time.zone.parse(e.fetch('started_at'))
-            )
+          # 道場がイベントページを作り直さずに開催日だけ変更すると、集計期間の外に
+          # 残った履歴と event_id が衝突して集計が止まる。作成ではなく更新にして
+          # 開催日の変更に追随する。
+          # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+          history = EventHistory.find_or_initialize_by(service_name: dojo_event_service.name,
+                                                       event_id:     e.fetch('id').to_s)
+          history.update!(dojo_id:          dojo_event_service.dojo_id,
+                          dojo_name:        dojo_event_service.dojo.name,
+                          service_group_id: dojo_event_service.group_id,
+                          event_url:        e.fetch('url'),
+                          participants:     e.fetch('accepted'),
+                          evented_at:       Time.zone.parse(e.fetch('started_at')))
         end
       end
 

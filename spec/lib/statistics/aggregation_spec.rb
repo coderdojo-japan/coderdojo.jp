@@ -17,15 +17,15 @@ RSpec.describe Statistics::Aggregation do
     let(:yaml_provider) { instance_double(EventService::Providers::StaticYaml) }
 
     before do
-      d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.example.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
-      d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.example.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
-      create(:dojo_event_service, dojo_id: d1.id, name: :connpass, group_id: 9876)
-      create(:dojo_event_service, dojo_id: d2.id, name: :doorkeeper, group_id: 5555)
+      @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.example.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
+      @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.example.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
+      create(:dojo_event_service, dojo_id: @d1.id, name: :connpass, group_id: 9876)
+      create(:dojo_event_service, dojo_id: @d2.id, name: :doorkeeper, group_id: 5555)
 
-      d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.example.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.com/dojo3', prefecture_id: 13)
+      @d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.example.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.com/dojo3', prefecture_id: 13)
       allow(EventService::Providers::StaticYaml).to receive(:new).and_return(yaml_provider)
       allow(yaml_provider).to receive(:fetch_events).and_return([
-        { 'dojo_id' => d3.id, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
+        { 'dojo_id' => @d3.id, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
       ])
     end
 
@@ -46,6 +46,57 @@ RSpec.describe Statistics::Aggregation do
       event = EventHistory.for(:connpass).first
       expect(event.service_group_id).to eq('9876')
       expect(event.participants).to eq(10)
+    end
+
+    # 道場がイベントページを作り直さずに開催日だけ変更すると、集計期間の外に残った
+    # 履歴と event_id が衝突し、集計が途中で止まっていた。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+    #
+    # NOTE: 追随できるのは「期間外 -> 期間内」への移動のみ。期間外へ移された
+    #       イベントは API が返さなくなるため、古い evented_at のまま残る。
+    #       全期間を差分同期しない限り直せないため、仕様として受け入れている。
+    it '開催日が変更されたイベントは、既存の履歴を更新する' do
+      existing = EventHistory.create!(dojo_id:          @d1.id,
+                                      dojo_name:        @d1.name,
+                                      service_name:     'connpass',
+                                      service_group_id: '9876',
+                                      event_id:         '12345',
+                                      event_url:        'https://coderdojo-okutama.connpass.com/event/12345/',
+                                      participants:     3,
+                                      evented_at:       Time.zone.parse('2016-01-01 10:00'))
+
+      expect{ subject }.not_to change{ EventHistory.for(:connpass).where(event_id: '12345').count }
+
+      existing.reload
+      expect(existing.evented_at).to   eq(Time.zone.parse('2017-05-07 10:00'))
+      expect(existing.participants).to eq(10)
+    end
+
+    # 例外を握り潰すと、削除だけが確定した状態で正常終了してしまう。
+    # 週次ジョブを失敗させて、欠損に気付けるようにする。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+    it '集計に失敗したとき、例外を握り潰さない' do
+      allow_any_instance_of(Statistics::Tasks::Connpass).to receive(:run).and_raise('connpass の取得に失敗しました')
+
+      expect{ subject }.to raise_error('connpass の取得に失敗しました')
+    end
+
+    # static_yaml は期間を問わず全件を入れ替えるため、削除が先に走ると
+    # 他プロバイダの失敗に巻き込まれて履歴が丸ごと消える。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+    it '外部プロバイダの失敗で static_yaml のイベント履歴が消えない' do
+      EventHistory.create!(dojo_id:      @d3.id,
+                           dojo_name:    @d3.name,
+                           service_name: 'static_yaml',
+                           event_id:     '99999',
+                           event_url:    'https://example.com/event/99999',
+                           participants: 5,
+                           evented_at:   Time.zone.parse('2023-12-10 14:00'))
+
+      allow_any_instance_of(Statistics::Tasks::Connpass).to receive(:run).and_raise('connpass の取得に失敗しました')
+
+      expect{ subject }.to raise_error('connpass の取得に失敗しました')
+      expect(EventHistory.for(:static_yaml).count).to eq(1)
     end
   end
 

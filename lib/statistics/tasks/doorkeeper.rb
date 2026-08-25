@@ -23,14 +23,16 @@ module Statistics
             (events || []).compact.each do |e|
               next unless e[:group].to_s == dojo_event_service.group_id
 
-              EventHistory.create!(dojo_id:          dojo.id,
-                                   dojo_name:        dojo.name,
-                                   service_name:     dojo_event_service.name,
-                                   service_group_id: dojo_event_service.group_id,
-                                   event_id:     e[:id],
-                                   event_url:    e[:public_url],
-                                   participants: e[:participants],
-                                   evented_at:   Time.zone.parse(e[:starts_at]))
+              # connpass と同じく、開催日の変更に追随するため作成ではなく更新にする。
+              # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+              history = EventHistory.find_or_initialize_by(service_name: dojo_event_service.name,
+                                                           event_id:     e[:id].to_s)
+              history.update!(dojo_id:          dojo.id,
+                              dojo_name:        dojo.name,
+                              service_group_id: dojo_event_service.group_id,
+                              event_url:        e[:public_url],
+                              participants:     e[:participants],
+                              evented_at:       Time.zone.parse(e[:starts_at]))
             end
             puts "    ✓ Successfully fetched #{events&.size || 0} events"
           rescue => e

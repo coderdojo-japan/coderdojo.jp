@@ -17,9 +17,18 @@ module Statistics
       dojo_info = "[#{@dojo_id}]" if @dojo_id
       puts "Aggregate for #{@from}~#{@to}#{dojo_info}"
       with_notifying do
-        delete_event_histories
-        execute
-        execute_once
+        # 「削除だけが確定し、再登録されない」状態を残さないため、全体を1つの
+        # トランザクションにまとめる。呼び出し側に任せると rails console から
+        # 直接呼んだときに原子性が失われる。
+        # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+        EventHistory.transaction do
+          delete_event_histories(@externals.keys)
+          execute
+          # static_yaml は期間を問わず全件を入れ替えるため、削除と再登録を隣接させる。
+          # 先に削除すると、外部プロバイダの失敗に巻き込まれて履歴が丸ごと消える。
+          delete_event_histories(@internals.keys)
+          execute_once
+        end
       end
     end
 
@@ -97,12 +106,22 @@ module Statistics
       yield
       Notifier.notify_success(date_format(@from), date_format(@to), @provider, @dojo_id)
     rescue => e
-      Notifier.notify_failure(date_format(@from), date_format(@to), @provider, @dojo_id, e)
+      # 通知したうえで再送出し、週次ジョブを失敗させる。握り潰すと、データが
+      # 欠けたまま正常終了したように見える。
+      # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+      #
+      # Slack への通知自体が失敗しても、元の例外を失わないようにする。
+      begin
+        Notifier.notify_failure(date_format(@from), date_format(@to), @provider, @dojo_id, e)
+      rescue => notification_error
+        $stdout.puts "Failed to notify: #{notification_error.message}"
+      end
+      raise e
     end
 
-    def delete_event_histories
+    def delete_event_histories(kinds)
       target_period = @from.beginning_of_day..@to.end_of_day
-      (@externals.keys + @internals.keys).each do |kind|
+      kinds.each do |kind|
         "Statistics::Tasks::#{kind.to_s.camelize}".constantize.delete_event_histories(target_period, @dojo_id)
       end
     end
@@ -137,7 +156,14 @@ module Statistics
         end
 
         def notify_failure(from, to, provider, dojo_id, exception)
-          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+          # 期間を指定せずに再実行すると「実行時点の前週」を集計するため、翌週以降に
+          # 再実行しても欠けた週は埋まらない。再実行するコマンドを添える。
+          # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+          # zsh では [] がグロブとして解釈されるため、引用符ごとコピペできる形にする
+          retry_command = "rails 'statistics:aggregation[#{from},#{to}#{",#{provider}" if provider}]'"
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n" \
+                 "原因を直したあと、期間を指定して再実行してください: #{retry_command}\n" \
+                 "#{exception.message}\n#{exception.backtrace.join("\n")}")
         end
 
         private
