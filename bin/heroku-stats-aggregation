@@ -4,7 +4,7 @@
 #
 #   bin/heroku-stats-aggregation                        # 前週（週次ジョブと同じ）
 #   bin/heroku-stats-aggregation - - static_yaml        # static_yaml のみ全期間
-#   bin/heroku-stats-aggregation 2026/08/17 2026/08/23  # 期間を指定
+#   bin/heroku-stats-aggregation 2026-08-17 2026-08-23  # 期間を指定
 #
 # 引数は rake タスクの [from,to,provider,dojo_id] にそのまま渡る。
 #

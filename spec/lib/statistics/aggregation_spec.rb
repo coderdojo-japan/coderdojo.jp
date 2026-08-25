@@ -100,6 +100,52 @@ RSpec.describe Statistics::Aggregation do
     end
   end
 
+  # 集計は「対象期間の履歴を削除してから API で取り直す」ため、API から消えた
+  # イベント（閉鎖した道場がページごと削除した等）は復活しない。古い期間を
+  # 再集計すると、実際に開催された履歴が失われる。
+  # 詳細は doc/how_to_aggregate_stats_and_events.md を参照。
+  describe '古い期間の再集計を止めるガード' do
+    # 実行日によって結果が変わらないよう時刻を固定する
+    around do |example|
+      travel_to(Time.zone.parse('2026-08-25 10:00')) { example.run }
+    end
+
+    # ここで確かめたいのはガードが発動するかどうかだけなので、集計の中身は空にする
+    let(:yaml_provider) { instance_double(EventService::Providers::StaticYaml) }
+
+    before do
+      allow(EventService::Providers::StaticYaml).to receive(:new).and_return(yaml_provider)
+      allow(yaml_provider).to receive(:fetch_events).and_return([])
+    end
+
+    def aggregate(args)
+      Statistics::Aggregation.new(args).run
+    end
+
+    it '週次ジョブ（引数なし＝前週）は止めない' do
+      expect{ aggregate({}) }.not_to raise_error
+    end
+
+    it '直近の期間を指定した復旧は止めない' do
+      expect{ aggregate(from: '2026-08-17', to: '2026-08-23') }.not_to raise_error
+    end
+
+    it '90 日より前の期間を外部プロバイダで再集計しようとすると止める' do
+      expect{ aggregate(from: '2015-01-01', to: '2015-12-31') }
+        .to raise_error(ArgumentError, /90 日/)
+    end
+
+    # 期間の「長さ」ではなく「古さ」で判定する。短い期間でも古ければ危険。
+    it '短い期間でも古ければ止める' do
+      expect{ aggregate(from: '2013-01-01', to: '2013-01-07') }
+        .to raise_error(ArgumentError, /90 日/)
+    end
+
+    it 'static_yaml だけなら全期間でも止めない' do
+      expect{ aggregate(from: '-', to: '-', provider: 'static_yaml') }.not_to raise_error
+    end
+  end
+
   describe 'private' do
     let(:sa) { Statistics::Aggregation.new(from: '-', to: '-') }
 
