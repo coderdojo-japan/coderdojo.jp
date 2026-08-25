@@ -11,6 +11,7 @@
 # タスク名と app 名をここで固定している。`heroku run rails ...` を直接叩くと、
 # 打ち間違いで別のタスク（db:drop など）や別アプリを本番で実行してしまう余地が残る。
 # 実行を許可する対象をこのスクリプトに絞れば、操作が集計だけに限定される。
+# cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1882
 set -euo pipefail
 
 task='statistics:aggregation'
