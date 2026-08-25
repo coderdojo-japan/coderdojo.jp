@@ -86,15 +86,19 @@ bin/heroku-stats-aggregation 2026-08-17 2026-08-23  # 期間を指定
 閉鎖した道場が connpass のグループごとページを削除していると、そのイベントは
 実際に開催されたのに API には存在しない。古い期間を再集計すると、この履歴が失われる。
 
-このため、**外部プロバイダを 90 日より前に遡って再集計することはできない**。
+このため、**開始日が 90 日より前なら、外部プロバイダの再集計は実行できない**。
 実行しようとすると、DB にも API にも触れる前に中止される。
 
-- 🚫 `statistics:aggregation[-,-]` — 全プロバイダの全期間。**実行できない**
-- 🚫 `statistics:aggregation[2015,2016,connpass]` — 古い期間の再集計も**実行できない**
+判定は開始日（from）だけを見る。終了日も、期間の長さも見ない。
+7 日間の指定でも、開始日が古ければ同じだけ古い履歴を消すため。
+
+- 🚫 `statistics:aggregation[-,-]` — 開始日が 2012-01-01 なので**実行できない**
+- 🚫 `statistics:aggregation[2015,2016,connpass]` — 開始日が 2015-01-01 なので**実行できない**
+- 🚫 `statistics:aggregation[2013-01-01,2013-01-07]` — 7 日間でも開始日が古いので**実行できない**
+- ⭕ `statistics:aggregation[2026-08-17,2026-08-23]` — 開始日が 90 日以内なら実行できる
 - ⭕ `statistics:aggregation[-,-,static_yaml]` — static_yaml は
   [`db/static_event_histories.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/static_event_histories.yml)
   が正史なので、何度実行しても同じ結果になる。制限の対象外
-- ⭕ `statistics:aggregation[2026-08-17,2026-08-23]` — 直近の期間なら指定できる
 
 中止されると、次のように理由が表示される。
 
