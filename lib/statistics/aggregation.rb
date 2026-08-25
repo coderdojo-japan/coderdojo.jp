@@ -6,11 +6,6 @@ module Statistics
     # 止めないよう、正当な遡りとの間に余裕を持たせている。
     REAGGREGATION_LIMIT_DAYS = 90
 
-    # 上の制限を超えて実行したいときに指定する環境変数。
-    # 値には対象期間の開始日そのものを要求する。固定値だとシェルに export が
-    # 残り、別の実行まで意図せず承認してしまうため。
-    OVERRIDE_ENV_KEY = 'ALLOW_DESTRUCTIVE_REAGGREGATION'
-
     def initialize(args)
       @from, @to = aggregation_period(args[:from], args[:to])
       @provider  = args[:provider]
@@ -144,16 +139,13 @@ module Statistics
     def forbid_destructive_reaggregation!
       return if @externals.empty?
       return if @from >= Time.zone.today - REAGGREGATION_LIMIT_DAYS.days
-      return if ENV[OVERRIDE_ENV_KEY] == @from.to_s
 
       raise ArgumentError, <<~MESSAGE
         #{date_format(@from)} からの再集計を中止しました（#{REAGGREGATION_LIMIT_DAYS} 日より前のため）。
 
         API から消えたイベントは再集計で復活せず、実際に開催された履歴が失われます。
         欠損を直したいときは、該当する週だけを指定してください。
-
-        それでも実行する場合は、開始日を明示して許可してください:
-          #{OVERRIDE_ENV_KEY}=#{@from} rails 'statistics:aggregation[#{date_format(@from)},#{date_format(@to)}#{",#{@provider}" if @provider}]'
+        例: rails 'statistics:aggregation[#{date_format(Time.zone.today.prev_week.beginning_of_week)},#{date_format(Time.zone.today.prev_week.end_of_week)}]'
       MESSAGE
     end
 

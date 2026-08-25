@@ -144,22 +144,6 @@ RSpec.describe Statistics::Aggregation do
     it 'static_yaml だけなら全期間でも止めない' do
       expect{ aggregate(from: '-', to: '-', provider: 'static_yaml') }.not_to raise_error
     end
-
-    # 環境変数に対象の開始日そのものを要求する。値が固定文字列だと、
-    # シェルに export が残って別の実行まで意図せず承認してしまう。
-    it '開始日を明示して許可したときは実行できる' do
-      ENV['ALLOW_DESTRUCTIVE_REAGGREGATION'] = '2015-01-01'
-      expect{ aggregate(from: '2015-01-01', to: '2015-12-31') }.not_to raise_error
-    ensure
-      ENV.delete('ALLOW_DESTRUCTIVE_REAGGREGATION')
-    end
-
-    it '許可した開始日と一致しなければ止める' do
-      ENV['ALLOW_DESTRUCTIVE_REAGGREGATION'] = '2015-01-01'
-      expect{ aggregate(from: '2016-01-01', to: '2016-12-31') }.to raise_error(ArgumentError)
-    ensure
-      ENV.delete('ALLOW_DESTRUCTIVE_REAGGREGATION')
-    end
   end
 
   describe 'private' do
