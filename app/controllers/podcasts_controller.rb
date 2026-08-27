@@ -50,8 +50,9 @@ class PodcastsController < ApplicationController
     # formats を明示する。省略するとリクエストの形式を引き継ぐため、/podcasts/14.jpg
     # のようなアクセスで _youtube_embed.jpeg.* を探しに行き ActionView::MissingTemplate
     # (500) になる。この埋め込みは常に HTML なので形式は固定でよい。
-    # 形式が合わないだけのリクエストは、この後の暗黙の render が 406 を返す。
-    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1888
+    # 形式が合わないだけのリクエストは、この後の暗黙の render が
+    # ActionController::UnknownFormat を投げ、Rails がそれを 406 にマップする。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1891
     embed = render_to_string(partial: 'podcasts/youtube_embed',
                              formats: [:html],
                              locals:  { youtube_id: youtube_id })

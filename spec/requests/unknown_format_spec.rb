@@ -27,6 +27,13 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     # YouTube 埋め込みを含む実ファイルがある id を使って再現する。
     let!(:episode) { create(:podcast, id: 14) }
 
+    # 14.md から YouTube 埋め込みが消えると render_to_string を通らなくなり、
+    # このテストは通ったまま回帰を検出しなくなる。前提を明示しておく。
+    it '前提: 14.md に YouTube 埋め込みが含まれる' do
+      expect(File.read(Rails.root.join('public/podcasts/14.md')))
+        .to match(Podcast::REGEX_YOUTUBE_ID)
+    end
+
     # public/podcasts/<id>.png はカバー画像として実在し、静的ファイルとして
     # 配信される（本番でも 200 image/png）。ここでは扱わない。
     %w[.jpg .json].each do |ext|
