@@ -41,7 +41,14 @@ if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
     # unwanted environments such as :test.  NOTE: This option *does not* work if
     # you don't set the 'environment' option.
     # https://github.com/airbrake/airbrake-ruby#ignore_environments
+    #
+    # 手元で RAILS_ENV=production を実行したときも production 扱いになるため、
+    # この一覧だけでは本番の通知に混ざる。Rails のアップグレード検証などで
+    # production のブートを確認するのは定石なので、気をつけるのではなく
+    # Heroku 上かどうかで機械的に切り分ける。DYNO は dyno 内でのみ設定される。
+    # cf. https://devcenter.heroku.com/articles/dyno-metadata
     c.ignore_environments = %w[test staging development]
+    c.ignore_environments << Rails.env if ENV['DYNO'].nil?
 
     # A list of parameters that should be filtered out of what is sent to
     # Airbrake. By default, all "password" attributes will have their contents

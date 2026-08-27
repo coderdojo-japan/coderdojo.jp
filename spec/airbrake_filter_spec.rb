@@ -52,4 +52,14 @@ RSpec.describe 'Airbrake の SIGTERM フィルタ' do
     expect(source).not_to match(/notice\.exception/)
     expect(source).to match(/notice\.stash\[:exception\]/)
   end
+
+  # ローカルで RAILS_ENV=production を実行すると、ignore_environments は
+  # production を除外していないため素通りし、本番の Airbrake に通知が飛ぶ。
+  # Rails のアップグレード検証では production でのブート確認が定石なので、
+  # 運用で気をつけるのではなく、Heroku 上かどうかで機械的に判定する。
+  # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1885
+  it 'Heroku 以外での実行を通知対象から外している' do
+    source = Rails.root.join('config/initializers/airbrake.rb').read
+    expect(source).to match(/ENV\['DYNO'\]/)
+  end
 end
