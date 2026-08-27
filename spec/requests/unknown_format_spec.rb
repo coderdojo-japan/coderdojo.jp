@@ -3,6 +3,7 @@ require 'rails_helper'
 # HTML しか返さないアクションに .json でアクセスすると 500 になっていた。
 # クローラーが .json を試すたびに Airbrake へ通知が飛び、本物のエラーが埋もれる。
 # 形式が合わないだけなのでサーバエラーではなく 406 を返す。
+# cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1887
 RSpec.describe '対応していない形式でのリクエスト', type: :request do
   # respond_to を持たない（HTML 専用の）アクション
   %w[
