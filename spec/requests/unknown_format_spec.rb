@@ -27,9 +27,9 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     # YouTube 埋め込みを含む実ファイルがある id を使って再現する。
     let!(:episode) { create(:podcast, id: 14) }
 
-# public/podcasts/<id>.png はカバー画像として実在し、静的ファイルとして
-# 配信される（本番でも 200 image/png）。ここでは扱わない。
-%w[.jpg .json].each do |ext|
+    # public/podcasts/<id>.png はカバー画像として実在し、静的ファイルとして
+    # 配信される（本番でも 200 image/png）。ここでは扱わない。
+    %w[.jpg .json].each do |ext|
       it "#{ext} でのアクセスは 406 を返す（500 にしない）" do
         get "/podcasts/14#{ext}"
         expect(response).to have_http_status(:not_acceptable)
