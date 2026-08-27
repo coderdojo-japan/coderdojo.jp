@@ -60,6 +60,7 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
   # text/plain が :md の別名になり、Mime::Type.lookup('text/plain') が
   # :text ではなく :md を返す。その結果この保険が働かず、html と json 以外の
   # 形式（.jpg など）でのアクセスがすべて 500 になっていた。
+  # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1893
   describe 'エラーページ描画の保険' do
     it "text/plain は :text に解決される（:md の別名にしない）" do
       expect(Mime::Type.lookup('text/plain').symbol).to eq :text
