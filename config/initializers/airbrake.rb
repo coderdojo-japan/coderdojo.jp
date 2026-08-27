@@ -41,7 +41,14 @@ if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
     # unwanted environments such as :test.  NOTE: This option *does not* work if
     # you don't set the 'environment' option.
     # https://github.com/airbrake/airbrake-ruby#ignore_environments
+    #
+    # 手元で RAILS_ENV=production を実行したときも production 扱いになるため、
+    # この一覧だけでは本番の通知に混ざる。Rails のアップグレード検証などで
+    # production のブートを確認するのは定石なので、気をつけるのではなく
+    # Heroku 上かどうかで機械的に切り分ける。DYNO は dyno 内でのみ設定される。
+    # cf. https://devcenter.heroku.com/articles/dyno-metadata
     c.ignore_environments = %w[test staging development]
+    c.ignore_environments << Rails.env if ENV['DYNO'].nil?
 
     # A list of parameters that should be filtered out of what is sent to
     # Airbrake. By default, all "password" attributes will have their contents
@@ -70,8 +77,12 @@ if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
   # when it needs to stop an existing Puma process, typically during a new deployment/restart.
   # Puma traps this signal, which surfaces as SignalException: SIGTERM in the stack trace from launcher.rb.
   # It does not necessarily indicate a bug in the application.
+  # 例外は notice.stash[:exception] から取り出す。Airbrake::Notice に exception
+  # メソッドは無く、呼ぶと通知のたびに NoMethodError になる。
+  # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1884
   Airbrake.add_filter do |notice|
-    if notice.exception.is_a?(SignalException) && notice.exception.message == 'SIGTERM'
+    exception = notice.stash[:exception]
+    if exception.is_a?(SignalException) && exception.message == 'SIGTERM'
       notice.ignore!
     end
   end
