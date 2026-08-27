@@ -4,5 +4,5 @@
 # Mime::Type.register "text/richtext", :rtf
 
 # MarkdownファイルのMIMEタイプを設定
-Mime::Type.register 'text/markdown', :md, %w( text/plain )
+Mime::Type.register 'text/markdown', :md
 Rack::Mime::MIME_TYPES['.md'] = 'text/markdown; charset=utf-8'

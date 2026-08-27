@@ -53,4 +53,20 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     get '/dojos/activity'
     expect(response).to have_http_status(:ok)
   end
+
+  # rambulance はエラーページを描画できないときの保険として
+  # request.formats に text/plain を足す。ところが :md を
+  # `Mime::Type.register 'text/markdown', :md, %w( text/plain )` と登録すると
+  # text/plain が :md の別名になり、Mime::Type.lookup('text/plain') が
+  # :text ではなく :md を返す。その結果この保険が働かず、html と json 以外の
+  # 形式（.jpg など）でのアクセスがすべて 500 になっていた。
+  describe 'エラーページ描画の保険' do
+    it "text/plain は :text に解決される（:md の別名にしない）" do
+      expect(Mime::Type.lookup('text/plain').symbol).to eq :text
+    end
+
+    it ':md は text/markdown として使える' do
+      expect(Mime::Type.lookup('text/markdown').symbol).to eq :md
+    end
+  end
 end
