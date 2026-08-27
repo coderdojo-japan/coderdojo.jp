@@ -47,7 +47,14 @@ class PodcastsController < ApplicationController
 
     return content unless content.match?(Podcast::REGEX_YOUTUBE_ID)
     youtube_id = content.match(Podcast::REGEX_YOUTUBE_ID)[1]
-    embed = render_to_string(partial: 'podcasts/youtube_embed', locals: { youtube_id: youtube_id })
+    # formats を明示する。省略するとリクエストの形式を引き継ぐため、/podcasts/14.jpg
+    # のようなアクセスで _youtube_embed.jpeg.* を探しに行き ActionView::MissingTemplate
+    # (500) になる。この埋め込みは常に HTML なので形式は固定でよい。
+    # 形式が合わないだけのリクエストは、この後の暗黙の render が 406 を返す。
+    # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1888
+    embed = render_to_string(partial: 'podcasts/youtube_embed',
+                             formats: [:html],
+                             locals:  { youtube_id: youtube_id })
     content.gsub!(/<a[^>]+>\s*<img[^>]+Cover Photo[^>]*>\s*<\/a>/m, embed)
     return content unless content.match?(Podcast::REGEX_TIMESTAMP)
     content.gsub!(Podcast::REGEX_TIMESTAMP) do
