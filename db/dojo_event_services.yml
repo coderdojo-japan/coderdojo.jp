@@ -27,6 +27,12 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 鞍手（福岡県鞍手郡鞍手町）
+- dojo_id: 358
+  name: connpass
+  group_id: 18059
+  url: https://coderdojokurate.connpass.com/
+
 # 三木（兵庫県三木市）
 - dojo_id: 357
   name: connpass
