@@ -126,6 +126,21 @@ RSpec.describe Statistics::Aggregation do
       expect{ aggregate({}) }.not_to raise_error
     end
 
+    # 週次ジョブは毎週月曜 01:00 UTC（10:00 JST）に走る。ガードが誤って止めると、
+    # 今回復旧したのと同じ「静かな欠損」を生む。実際の実行曜日で確かめておく。
+    it '月曜の定期実行でも止めない' do
+      travel_to(Time.zone.parse('2026-08-31 10:00'))  # 月曜
+      expect(Time.zone.today.wday).to eq(1)
+      expect{ aggregate({}) }.not_to raise_error
+    end
+
+    # 復旧のために遡る期間は、気付いてから対応するまでの遅延を含めても数週間に収まる。
+    it '60 日前まで遡る復旧は止めない' do
+      from = (Time.zone.today - 60).strftime('%Y-%m-%d')
+      to   = (Time.zone.today - 54).strftime('%Y-%m-%d')
+      expect{ aggregate(from: from, to: to) }.not_to raise_error
+    end
+
     it '直近の期間を指定した復旧は止めない' do
       expect{ aggregate(from: '2026-08-17', to: '2026-08-23') }.not_to raise_error
     end
