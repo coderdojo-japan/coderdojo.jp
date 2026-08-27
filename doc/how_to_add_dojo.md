@@ -21,6 +21,8 @@
 6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) に追加する
 7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
+9. マージ後、下記「[DojoMap への反映](#dojomap-への反映暫定手順)」の 1 行を追加する
+10. 本番環境への反映を確認し、下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
 
 [&raquo; これまでの対応例 (PR) を見る](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
 
@@ -42,7 +44,7 @@ Web: https://coderdojo-naha.doorkeeper.jp/
 Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/naha
 ```
 
-上記のような申請を受け取ったら `db/dojos.yml` に次のように追記します。   
+上記のような申請を受け取ったら `db/dojos.yml` に次のように追記します。
 (order 順に追加すると見やすくてベターです)
 
 
@@ -73,9 +75,10 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `logo` | 省略可。[public/img/dojos](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/img/dojos) にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |
 | `description` | 既存のパターンに沿って記載。`prefecture_id`があるので都道府県情報は省略。例: `xx市で毎月開催` |
-| `tags` | 周知したい技術タグを掲載 (最大5つ) |
+| `tags` | 周知したい技術タグを掲載 (最大5つ)。**申請文の表記をそのまま写さず、既存の表記に揃えます** (詳細は後述) |
+| `global_club_id` | 掲載申請の「承認確認」URL に含まれる UUID (詳細は後述) |
 | `is_active` | 省略可。非アクティブになったらfalseにする |
-| `is_private` | 省略可。プライベートならtrueにする |
+| `is_private` | 省略可。**Clubs で Private Dojo として承認されている**場合のみ true にします (詳細は後述) |
 
 
 - `id` は後述するコマンドで自動的に作成・書き出しされるため、省略してください。
@@ -88,6 +91,42 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
   - ロゴ画像が省略されていた場合は `default.webp` を入力してください。
   - ロゴ画像があれば `.png` と `.webp` に変換し、[TinyPNG](https://tinypng.com/) で圧縮し、`public/img/dojos` に**２つとも** 置いてください。
   - ロゴ画像が正方形ではない場合、表示が崩れることがあるため、[Macのプレビューで画像に余白を追加](https://www.google.com/search?q=Mac+プレビュー+画像+余白)し、正方形にしてください。
+  - 元画像が JPEG の場合は、**先に減色してノイズを除いてから**圧縮してください。
+    JPEG を直接通すと圧縮ノイズを「色」として保持し、PNG がかえって肥大化します。
+
+    ```bash
+    $ magick in.jpg -colors 32 -strip PNG8:clean.png
+    ```
+
+    実測（フラットな色のロゴ / 400x400）は、直接通すと PNG 19.9 KB、
+    先にノイズを除くと PNG 4.2 KB でした。写真素材ならこの前処理は不要です。
+
+- `tags` は**既存の表記に揃えてください**。申請文の表記をそのまま写すと、
+  日本語のページで同じ技術が別々の表記に分かれてしまいます。
+  - 例: 申請に `Raspberry Pi` とあっても、`db/dojos.yml` での表記は `ラズベリーパイ` です。
+  - 日本語で書いて問題ありません。英語版の統計ページでは
+    [`translate_dojo_tag`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/app/helpers/application_helper.rb)
+    が自動で英訳します。
+  - 迷ったら既存の件数を数えてください。0 件なら新しい語彙なので、似た表記を探し直します。
+
+    ```bash
+    $ grep -c '^  - ラズベリーパイ$' db/dojos.yml
+    ```
+
+- `global_club_id` には掲載申請の「承認確認」URL に含まれる UUID を入力します。
+  - 例: `https://codeclub.org/ja/clubs/69fb131d-9c46-40ff-9b70-f79b9302e92b`
+    のとき `global_club_id: 69fb131d-9c46-40ff-9b70-f79b9302e92b` となります。
+  - 申請に「承認確認」URL が無い場合は省略してください。
+  - DB 側にユニーク制約があります。後述の DojoMap でも突合に使えます。
+
+- `is_private` は **Clubs（旧 Zen）で Private Dojo として承認されている** Dojo にのみ
+  true にします。省略した場合は公開扱いです。
+  - イベント 1 回の参加制限とは別物です。「今回は◯◯中学校の生徒限定です」という告知は
+    その回が限定なだけで、Dojo そのものが非公開とは限りません。
+  - **掲載時に判断できなくても構いません。** 開催告知が継続して参加を限定していたら、
+    代表者に確認したうえで `true` にしてください（告知は見直すきっかけであって、
+    判断の根拠は Clubs 側の登録状況です）。
+  - 詳細は [プライベート道場とは？](https://coderdojo.jp/docs/private-dojo) を参照してください。
 
 yaml ファイルに各項目を追記したら次のコマンドを実行し、DB に新規 Dojo 情報を反映させます。
 
@@ -157,7 +196,7 @@ coderdojo.jp では開催日、及び参加人数などを集計し、統計ペ�
 統計情報 - CoderDojo Japan
 https://coderdojo.jp/stats
 
-集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。   
+集計は手作業でなく、イベントページのAPIを利用し自動化して行っています。
 このため、新規 Dojo を追加する際は、集計対象にも追加をお願いします。
 
 集計対象は [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) で管理しています。以下のように追記してください。
@@ -211,6 +250,35 @@ https://coderdojo.jp/stats
   $ brew install jq
   ```
 
+### 取得した `group_id` が正しいか確かめる
+
+`bin/c-search` と `bin/d-search` はグループ ID を返しますが、**それが目的のグループかどうかは検証しません**。
+実際にイベントを取得できるか確かめてください。`.env` に `CONNPASS_API_KEY` と
+`DOORKEEPER_API_TOKEN` が必要です。
+
+`connpass` は期間を指定しなければ全期間を取得します。
+
+```bash
+$ bundle exec rails runner '
+provider = EventService::Providers::Connpass.new
+provider.fetch_events(group_id: 18059).each { |e| puts "#{e["started_at"]}  #{e["title"]}" }'
+#=> 2026-10-04T13:00:00+09:00  第1回 CoderDojo鞍手
+```
+
+`doorkeeper` は**既定では昨日までしか取得しません**（`fetch_events` の `until_at` の
+既定値が `Time.zone.yesterday.end_of_day` のため）。これから開催する回を見たいので、
+期間を明示します。キーはシンボルで、日時は `starts_at` です。
+
+```bash
+$ bundle exec rails runner '
+provider = EventService::Providers::Doorkeeper.new
+provider.fetch_events(group_id: 5238, since_at: Time.zone.now, until_at: 1.year.from_now)
+        .each { |e| puts "#{e[:starts_at]}  #{e[:title]}" }'
+```
+
+0 件のときは、まだイベントが立っていないだけのこともあります。
+グループページに開催予定があるのに 0 件なら `group_id` を疑ってください。
+
 <br>
 
 ## 本番環境への反映方法
@@ -223,3 +291,42 @@ dojos.yml, dojo_event_services.yml の更新を GitHub に push すると、次�
 1. すべてのテストが成功すると、本番環境へのデプロイが始まります
 
 したがって、Pull Request 時点で CI がパスしていれば、基本的にはマージ後に本番環境 (coderdojo.jp) に反映されます。
+
+<br>
+
+## 掲載完了メールの送り方
+
+本番環境への反映を確認したら、掲載申請の連絡先に完了を伝えます。
+
+> ⚠️ 代表者名と連絡先メールアドレスは個人情報です。
+> **コミットメッセージ・Pull Request・Issue には書かないでください。**
+> このリポジトリは公開されており、あとから編集しても履歴には残ります。
+
+`<>` の箇所を書き換えて使ってください。
+
+```
+CoderDojo<Dojo名> <代表者名>さん,
+
+coderdojo.jp への掲載申請ありがとうございます!
+CoderDojo Japan の<担当者名>です。
+
+いただいた申請内容をベースに、以下の通り掲載が完了いたしました！
+
+https://coderdojo.jp/
+<掲載されたカードのスクリーンショット>
+
+CoderDojo 運営者向けの資料や、
+CoderDojo 運営者向けのパートナー法人からのサポートなどは
+以下のページにまとめてありますので、コチラもご参考になれば幸いです。
+https://coderdojo.jp/kata#support
+
+上記の他、何か気になる点などありましたら
+お気軽にご返信いただけると幸いです！
+
+引き続きよろしくお願いいたします。
+
+<担当者名>
+```
+
+申請内容だけでは判断できなかったことがあれば、この返信で併せて聞くと確実です。
+（例: 参加者を限定して運営しているか = 前述の `is_private` の判断）
