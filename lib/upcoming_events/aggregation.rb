@@ -43,7 +43,17 @@ module UpcomingEvents
       yield
       Notifier.notify_success(@provider)
     rescue => e
-      Notifier.notify_failure(@provider, e)
+      # 通知したうえで再送出し、ジョブを失敗させる。握り潰すと、イベント情報が
+      # 古いまま正常終了したように見え、異常に気づけない。統計集計と同じ方針。
+      # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1881
+      #
+      # Slack への通知自体が失敗しても、元の例外を失わないようにする。
+      begin
+        Notifier.notify_failure(@provider, e)
+      rescue => notification_error
+        $stdout.puts "Failed to notify: #{notification_error.class}: #{notification_error.message}"
+      end
+      raise e
     end
 
     def delete_upcoming_events
