@@ -49,8 +49,15 @@ module EventService
             raise e
           end
         rescue Faraday::ServerError => e
-          # 502, 503, 504: Server errors
-          if [502, 503, 504].include?(e.response[:status]) && retry_count < 2
+          # 500, 502, 503, 504: Server errors
+          #
+          # 500 も対象にする。2026/08 に Doorkeeper が特定のグループへ 500 を返し、
+          # リトライされずに収集全体が停止した。その後 API は 200 を返しており、
+          # 一過性の障害だった。
+          #
+          # Faraday::ServerError は 5xx すべてを捕まえるが、再試行するのは
+          # 一過性でありうる主要な 4 つに絞る。501 などは再試行しても直らない。
+          if [500, 502, 503, 504].include?(e.response[:status]) && retry_count < 2
             wait_time = 2 ** retry_count * 5  # Exponential backoff: 5, 10 seconds
             puts "Server error (#{e.response[:status]}) for group_id: #{group_id}."
             puts "Retrying in #{wait_time} seconds... (attempt #{retry_count + 1}/2)"
