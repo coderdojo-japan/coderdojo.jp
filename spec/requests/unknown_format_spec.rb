@@ -5,6 +5,11 @@ require 'rails_helper'
 # 形式が合わないだけなのでサーバエラーではなく 406 を返す。
 # cf. https://github.com/coderdojo-japan/coderdojo.jp/pull/1887
 RSpec.describe '対応していない形式でのリクエスト', type: :request do
+  # test 環境は consider_all_requests_local が true で exceptions_app を通らない。
+  # そのままだとエラーページの描画不備を検出できず、本番だけ 500 になる。
+  # 実際 PR #1888 / #1891 / #1893 の 3 件を、この spec は通したまま見逃した。
+  include Rambulance::TestHelper
+
   # respond_to を持たない（HTML 専用の）アクション
   %w[
     /dojos/activity.json
@@ -13,7 +18,7 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     /spaces.json
   ].each do |path|
     it "#{path} は 406 を返す（500 にしない）" do
-      get path
+      with_exceptions_app { get path }
       expect(response).to have_http_status(:not_acceptable)
     end
   end
@@ -38,19 +43,19 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     # 配信される（本番でも 200 image/png）。ここでは扱わない。
     %w[.jpg .json].each do |ext|
       it "#{ext} でのアクセスは 406 を返す（500 にしない）" do
-        get "/podcasts/14#{ext}"
+        with_exceptions_app { get "/podcasts/14#{ext}" }
         expect(response).to have_http_status(:not_acceptable)
       end
     end
 
     it 'HTML でのアクセスは従来どおり 200 を返す' do
-      get '/podcasts/14'
+      with_exceptions_app { get '/podcasts/14' }
       expect(response).to have_http_status(:ok)
     end
   end
 
   it 'HTML でのアクセスは従来どおり 200 を返す' do
-    get '/dojos/activity'
+    with_exceptions_app { get '/dojos/activity' }
     expect(response).to have_http_status(:ok)
   end
 
