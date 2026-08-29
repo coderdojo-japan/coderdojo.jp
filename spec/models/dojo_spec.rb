@@ -297,7 +297,14 @@ RSpec.describe Dojo, :type => :model do
       # 地図には 1 エントリにつき 1 件しか出ないため（upsert_dojos_geojson.rb の
       # 重複排除）、7 箇所は地図に出ていない。どのクラブが選ばれるかは Clubs API の
       # 返却順まかせだったので、地図に出ていたクラブの UUID を設定して固定した。
-      # 全箇所を出すには 1 エントリ 1 クラブへの分割が要る（各 note に TODO）。
+      #
+      # 全箇所を地図に出すには 1 エントリ 1 クラブへの分割が要る。掲載名の変更を
+      # 伴うため運営者への確認が必要で、counter の再設計とあわせて扱う。
+      #
+      # この経緯は db/dojos.yml の note には書かない。note を長くすると
+      # dojos:migrate_adding_id_to_yaml が YAML を書き直す際に折り返され、
+      # 次の実行者に無関係な差分が出る（実際に起こして戻した）。
+      # 同じ理由で、YAML にインラインコメントを置いても書き直しで消える。
       it 'is set for every active dojo' do
         missing = Dojo.load_attributes_from_yaml.reject { |dojo| dojo['inactivated_at'].present? }
                       .reject { |dojo| dojo['global_club_id'].present? }
