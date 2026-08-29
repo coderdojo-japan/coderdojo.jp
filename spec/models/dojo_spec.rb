@@ -286,34 +286,20 @@ RSpec.describe Dojo, :type => :model do
       # DojoMap は active な Dojo だけを地図に出す。閉鎖済みの Dojo は Clubs API 側からも
       # クラブごと消えているため、埋めるべき対象は active に限られる。
       #
-      # 下記は現時点で値を入れられない Dojo。解決したらこの一覧から消すこと。
-      # 一覧に無い active な Dojo が増えたら、このテストが落ちて気づける。
-      dojos_without_global_club_id = {
-        # 連名道場。1 エントリが Clubs API 上の複数クラブに対応するため、
-        # 単一カラムでは表現できない。counter の再設計とあわせて対応する。
-        42  => '西宮・梅田（2 クラブ）',
-        224 => '大田・邑南、他（6 クラブ）',
-      }.freeze
-
+      # 2026年8月29日、例外だった連名道場 2 件（西宮・梅田、大田・邑南、他）にも値を
+      # 入れ、active な Dojo は全件が global_club_id を持つ状態になった。連名道場は
+      # 1 エントリが Clubs API 上の複数クラブに対応するが、地図には元から 1 件しか
+      # 出ていない（重複排除がある）。どのクラブが選ばれるかは API の返却順まかせ
+      # だったので、地図に出ていたクラブの UUID をそのまま設定して固定した。
+      #
+      # これにより DojoMap は dojo2dojo.csv の名前照合を必要としなくなる。
       it 'is set for every active dojo' do
         missing = Dojo.load_attributes_from_yaml.reject { |dojo| dojo['inactivated_at'].present? }
                       .reject { |dojo| dojo['global_club_id'].present? }
-                      .reject { |dojo| dojos_without_global_club_id.key?(dojo['id']) }
 
         expect(missing).to be_empty,
           "global_club_id が未設定の active な Dojo: " +
           missing.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
-      end
-
-      it 'has no stale entry in the exception list' do
-        resolved = Dojo.load_attributes_from_yaml.select do |dojo|
-          dojos_without_global_club_id.key?(dojo['id']) &&
-            (dojo['global_club_id'].present? || dojo['inactivated_at'].present?)
-        end
-
-        expect(resolved).to be_empty,
-          "解決済みなので dojos_without_global_club_id から消してください: " +
-          resolved.map { |dojo| "#{dojo['id']} (#{dojo['name']})" }.join(', ')
       end
 
       it 'is not shared by two dojos' do
