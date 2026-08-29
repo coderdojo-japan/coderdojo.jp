@@ -287,12 +287,17 @@ RSpec.describe Dojo, :type => :model do
       # クラブごと消えているため、埋めるべき対象は active に限られる。
       #
       # 2026年8月29日、例外だった連名道場 2 件（西宮・梅田、大田・邑南、他）にも値を
-      # 入れ、active な Dojo は全件が global_club_id を持つ状態になった。連名道場は
-      # 1 エントリが Clubs API 上の複数クラブに対応するが、地図には元から 1 件しか
-      # 出ていない（重複排除がある）。どのクラブが選ばれるかは API の返却順まかせ
-      # だったので、地図に出ていたクラブの UUID をそのまま設定して固定した。
-      #
+      # 入れ、active な**エントリ**は全件が global_club_id を持つ状態になった。
       # これにより DojoMap は dojo2dojo.csv の名前照合を必要としなくなる。
+      #
+      # ただし「エントリ数」と「道場数」は一致しない。連名道場は counter で
+      # 実際の箇所数を持つ（西宮・梅田は 2、大田・邑南、他は 7）。
+      # エントリ 202 に対し、counter を合算した道場数は 209（stats の active_dojos）。
+      #
+      # 地図には 1 エントリにつき 1 件しか出ないため（upsert_dojos_geojson.rb の
+      # 重複排除）、7 箇所は地図に出ていない。どのクラブが選ばれるかは Clubs API の
+      # 返却順まかせだったので、地図に出ていたクラブの UUID を設定して固定した。
+      # 全箇所を出すには 1 エントリ 1 クラブへの分割が要る（各 note に TODO）。
       it 'is set for every active dojo' do
         missing = Dojo.load_attributes_from_yaml.reject { |dojo| dojo['inactivated_at'].present? }
                       .reject { |dojo| dojo['global_club_id'].present? }
