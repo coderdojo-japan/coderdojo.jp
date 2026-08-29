@@ -2954,6 +2954,7 @@
   - Webサイト
   - 電子工作
   counter: 2
+  global_club_id: 1e10bdbc-8d55-438b-8714-380b073378b9
 - id: 43
   order: '271004'
   created_at: '2016-09-27'
@@ -3788,6 +3789,7 @@
   - Ruby
   - micro:bit
   counter: 7
+  global_club_id: 0c422d07-3cd2-4cdb-a8fe-a54eec5c3605
 - id: 211
   order: '322059'
   created_at: '2019-06-11'
