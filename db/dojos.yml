@@ -2944,6 +2944,7 @@
 - id: 42
   order: '271004'
   created_at: '2014-02-11'
+  note: 'TODO: 連名道場。Clubs 上の 2 クラブのうち 1 件しか地図に出ない。全件を出すには 1 エントリ 1 クラブへ分割する'
   name: 西宮・梅田
   prefecture_id: 27
   url: https://coderdojo-nishinomiya.info/
@@ -3776,7 +3777,7 @@
 - id: 224
   order: '320005'
   created_at: '2019-09-06'
-  note: 2024-11-22 から別イベント管理サービスを使用 https://reserva.be/iwapro/news?search_osh_no=46684&mode=list_detail
+  note: '2024-11-22 から別イベント管理サービスを使用 https://reserva.be/iwapro/news?search_osh_no=46684&mode=list_detail / TODO: 連名道場。Clubs 上の 7 クラブのうち 1 件しか地図に出ない。全件を出すには 1 エントリ 1 クラブへ分割する'
   name: 大田・邑南、他
   prefecture_id: 32
   url: https://iwapro.connpass.com/
