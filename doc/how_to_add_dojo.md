@@ -21,7 +21,8 @@
 6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) に追加する
 7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
-9. 本番環境への反映を確認し、下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
+9. 本番環境への反映を確認し、下記「[DojoMap への反映](#dojomap-への反映)」で地図も先に更新する
+10. 下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
 
 [&raquo; これまでの対応例 (PR) を見る](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
 
@@ -177,7 +178,30 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 **この値が入っていれば、地図側での作業は要りません。**
 
 デプロイの翌朝 5:59 (JST) に DojoMap の日次 Actions がデータを取得し、地図を再生成してデプロイします。
-すぐ反映したい場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) を手動実行してください。
+
+### 掲載完了メールを送る前に、地図も更新しておく
+
+日次の反映を待つと、運営者は「今日 coderdojo.jp を見て、明日 DojoMap を見る」と
+**2 回確認する**ことになります。メールを送る前に手動で更新しておけば、1 回で両方見てもらえます。
+
+> ⚠️ **先に coderdojo.jp 側に出ていることを確認してください。**
+> Heroku の release フェーズ（`script/release.sh` の `dojos:update_db_by_yaml`）が終わるまで
+> `/dojos.json` は古い値を返します。その前に DojoMap を起動すると、
+> **ジョブは成功するのに地図には出ません。** 成功したように見えるので気づけません。
+
+```bash
+# 1. coderdojo.jp に出るまで待つ（Dojo 名は掲載したものに書き換える）
+until curl -s https://coderdojo.jp/dojos.json | grep -q '"name":"鞍手"'; do sleep 15; done
+
+# 2. DojoMap の日次ジョブを起動する
+gh workflow run scheduler_daily.yml --repo coderdojo-japan/map.coderdojo.jp --ref main
+
+# 3. 地図に出るまで待つ（数分かかります）
+until curl -s https://map.coderdojo.jp/dojos.json | grep -q '"name_japan":"鞍手"'; do sleep 30; done
+```
+
+ブラウザから実行する場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) の
+「Run workflow」を押してください。
 
 地図に載ったかは https://map.coderdojo.jp/dojos.json で確認できます。
 
@@ -307,6 +331,7 @@ dojos.yml, dojo_event_services.yml の更新を GitHub に push すると、次�
 ## 掲載完了メールの送り方
 
 本番環境への反映を確認したら、掲載申請の連絡先に完了を伝えます。
+**[DojoMap への反映](#dojomap-への反映)を先に済ませてください。** 地図に出ていない状態で送ると、運営者に 2 回確認させることになります。
 
 > ⚠️ 代表者名と連絡先メールアドレスは個人情報です。
 > **コミットメッセージ・Pull Request・Issue には書かないでください。**
@@ -324,6 +349,9 @@ CoderDojo Japan の<担当者名>です。
 
 https://coderdojo.jp/
 <掲載されたカードのスクリーンショット>
+
+地図からも探せるようになりました。
+https://map.coderdojo.jp/
 
 CoderDojo 運営者向けの資料や、
 CoderDojo 運営者向けのパートナー法人からのサポートなどは
