@@ -63,3 +63,38 @@ RSpec.describe 'Airbrake の SIGTERM フィルタ' do
     expect(source).to match(/ENV\['DYNO'\]/)
   end
 end
+
+# クライアントが対応していない形式を要求しただけのアクセスは、アプリの異常ではない。
+# 406 を返すのが正しい挙動なので、Airbrake へ通知せず本物のエラーを埋もれさせない。
+#
+# 実例: PHP の脆弱性スキャンが https://coderdojo.jp/news.php を叩き、
+# news#index の respond_to が ActionController::UnknownFormat を送出した。
+RSpec.describe 'Airbrake の UnknownFormat フィルタ' do
+  let(:filter) do
+    lambda do |notice|
+      notice.ignore! if notice.stash[:exception].is_a?(ActionController::UnknownFormat)
+    end
+  end
+
+  def build_notice(exception)
+    Airbrake::Notice.new(exception)
+  end
+
+  it 'UnknownFormat は通知しない' do
+    notice = build_notice(ActionController::UnknownFormat.new)
+    filter.call(notice)
+    expect(notice).to be_ignored
+  end
+
+  it 'ふつうの例外は通知する' do
+    notice = build_notice(RuntimeError.new('何かがおかしい'))
+    filter.call(notice)
+    expect(notice).not_to be_ignored
+  end
+
+  # 上のテストは書き方を確かめるだけで、initializer がそう書いているかは見ていない。
+  it 'initializer が UnknownFormat を無視している' do
+    source = Rails.root.join('config/initializers/airbrake.rb').read
+    expect(source).to match(/ActionController::UnknownFormat/)
+  end
+end

@@ -87,6 +87,17 @@ if (project_id =  ENV['AIRBRAKE_PROJECT_ID']) &&
     end
   end
 
+  # NOTE: 対応していない形式でのアクセスは、アプリの異常ではなくクライアント側の
+  # 誤りなので通知しない。406 を返すのが正しい挙動であり、通知すると本物のエラーが
+  # 埋もれる。実例は PHP の脆弱性スキャンによる /news.php へのアクセス。
+  #
+  # 同じ理由で無視してよい 4xx の例外は他にもあるが（RoutingError,
+  # InvalidAuthenticityToken など）、まとめて無視すると本当に知りたい事象まで
+  # 落としかねない。実際に通知が来たものから 1 つずつ足す。
+  Airbrake.add_filter do |notice|
+    notice.ignore! if notice.stash[:exception].is_a?(ActionController::UnknownFormat)
+  end
+
   # If you want to convert your log messages to Airbrake errors, we offer an
   # integration with the Logger class from stdlib.
   # https://github.com/airbrake/airbrake#logger
