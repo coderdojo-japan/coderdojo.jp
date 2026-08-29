@@ -21,8 +21,7 @@
 6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) に追加する
 7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
-9. マージ後、下記「[DojoMap への反映](#dojomap-への反映暫定手順)」の 1 行を追加する
-10. 本番環境への反映を確認し、下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
+9. 本番環境への反映を確認し、下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
 
 [&raquo; これまでの対応例 (PR) を見る](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
 
@@ -77,7 +76,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `description` | 既存のパターンに沿って記載。`prefecture_id`があるので都道府県情報は省略。例: `xx市で毎月開催` |
 | `tags` | 周知したい技術タグを掲載 (最大5つ)。**申請文の表記をそのまま写さず、既存の表記に揃えます** (詳細は後述) |
 | `global_club_id` | 掲載申請の「承認確認」URL に含まれる UUID (詳細は後述) |
-| `is_active` | 省略可。非アクティブになったらfalseにする |
+| `inactivated_at` | 省略可。休止・閉鎖したら、その日付を入れる (例: `'2026-08-29'`) |
 | `is_private` | 省略可。**Clubs で Private Dojo として承認されている**場合のみ true にします (詳細は後述) |
 
 
@@ -116,8 +115,22 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 - `global_club_id` には掲載申請の「承認確認」URL に含まれる UUID を入力します。
   - 例: `https://codeclub.org/ja/clubs/69fb131d-9c46-40ff-9b70-f79b9302e92b`
     のとき `global_club_id: 69fb131d-9c46-40ff-9b70-f79b9302e92b` となります。
-  - 申請に「承認確認」URL が無い場合は省略してください。
-  - DB 側にユニーク制約があります。後述の DojoMap でも突合に使えます。
+  - **休止・閉鎖していない Dojo では省略できません。** 未設定だと spec が落ちます。
+  - 申請に「承認確認」URL が無い場合は、DojoMap が保存している Clubs API のキャッシュから探します。
+
+    ```bash
+    curl -s https://raw.githubusercontent.com/coderdojo-japan/map.coderdojo.jp/main/_data/dojos_earth.json |
+      ruby -rjson -e 'JSON.parse(STDIN.read).select { |c| c["countryCode"] == "JP" }
+                          .each { |c| puts "#{c["id"]}  #{c["name"]}" }' | grep -i naha
+    ```
+
+    **Clubs 上の登録名は掲載名と大きく異なることがあります。** ローマ字のもの
+    （`那覇` に対して `Naha`、`赤羽` に対して `Akabane, Tokyo`）だけでなく、
+    日本語でも別の名前のもの（`播磨科学公園都市` に対して `テクノ@光都`）があります。
+    掲載名で grep すると空振りするので、ローマ字・地名・会場名で探してください。
+  - それでも見つからない場合、Clubs 側にまだクラブが無い可能性があります。
+    申請者に [codeclub.org](https://codeclub.org/) での登録状況を確認してください。
+  - DB 側にユニーク制約があります。後述の DojoMap はこの値で突合します。
 
 - `is_private` は **Clubs（旧 Zen）で Private Dojo として承認されている** Dojo にのみ
   true にします。省略した場合は公開扱いです。
@@ -157,35 +170,32 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
 <br>
 
-## DojoMap への反映（暫定手順）
+## DojoMap への反映
 
-> ⚠️ DojoMap が `global_club_id` で突合するようになったら（[Issue #1616](https://github.com/coderdojo-japan/coderdojo.jp/issues/1616)）、この節は丸ごと削除してください。
+[DojoMap](https://map.coderdojo.jp) は `db/dojos.yml` の `global_club_id` で
+[Clubs API](https://clubs-api.raspberrypi.org/) 上のクラブと突合します。
+**この値が入っていれば、地図側での作業は要りません。**
 
-[DojoMap](https://map.coderdojo.jp) は Clubs API 側のクラブ名と `db/dojos.yml` の `name` を、
-[`dojo2dojo.csv`](https://github.com/coderdojo-japan/map.coderdojo.jp/blob/main/dojo2dojo.csv) で突合しています。
-**この表に無い Dojo は地図に出ません。**
-
-```
-南城	CoderDojo南城
-```
-
-- 左列: `db/dojos.yml` の `name` と完全一致
-- 右列: [Clubs API](https://clubs-api.raspberrypi.org/) 上のクラブ名と完全一致（`_data/dojos_earth.json` で確認できます）
-- 区切りは**タブ 1 個**。スペースに変換されると日次ビルドが落ちます
-
-右列は Dojo 名と大きく異なることがあります（例: `三木` に対して `三木市 ・西神@ 三木山総合体育館　ふくいく`）。
-名前で探さず、**掲載申請の「承認確認」URL の UUID** と一致する `id` のクラブを選んでください。
-
-この 1 行を追加して push すれば、あとは DojoMap の日次 Actions が GeoJSON を再生成してデプロイします。
+デプロイの翌朝 5:59 (JST) に DojoMap の日次 Actions がデータを取得し、地図を再生成してデプロイします。
 すぐ反映したい場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) を手動実行してください。
 
-突合の結果は https://map.coderdojo.jp/dojo2dojo.json で確認できます
-（配信されるまで数十秒かかることがあります）。
+地図に載ったかは https://map.coderdojo.jp/dojos.json で確認できます。
 
 ```bash
-curl -s https://map.coderdojo.jp/dojo2dojo.json | ruby -rjson -e 'pp JSON.parse(STDIN.read).find { |x| x["name_japan"] == "南城" }'
+curl -s https://map.coderdojo.jp/dojos.json | ruby -rjson -e 'pp JSON.parse(STDIN.read).find { |x| x["name_japan"] == "南城" }'
 #=> {"global_club_id" => "b115e722-...", "name_japan" => "南城", "name_earth" => "CoderDojo南城", ...}
 ```
+
+出てこない場合は次のいずれかです。いずれも DojoMap 側では直せません。
+
+| 状態 | 対応 | 気づき方 |
+|---|---|---|
+| `global_club_id` が Clubs 上のクラブと一致しない | `db/dojos.yml` の値を現在のものに更新する | **Slack に通知が飛ぶ** |
+| Clubs 上に座標が無い、または準備中・活動中のどちらでもない | Clubs の管理画面で登録内容を直してもらう | [日次 Actions のログ](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml)にのみ出る |
+
+経緯は [map#42](https://github.com/coderdojo-japan/map.coderdojo.jp/pull/42) を参照してください。
+以前は `dojo2dojo.csv` でクラブ名を突合しており、新しい Dojo を追加するたび
+地図側に 1 行足す作業が必要でした。
 
 <br>
 
