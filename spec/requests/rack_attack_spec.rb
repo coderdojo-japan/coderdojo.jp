@@ -18,7 +18,11 @@ require 'rails_helper'
 #
 # 遮断はルーティングより前で効くので、通知も自然に止まる。
 RSpec.describe 'Rack::Attack', type: :request do
+  # test 環境のキャッシュは null_store で、Fail2Ban の BAN が保存されない。
+  # 本番は memory_store なので、そのままでは本番と違う経路を検証してしまう。
   before do
+    @original_store = Rack::Attack.cache.store
+    Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
     Rack::Attack.enabled = true
     Rack::Attack.reset!
   end
@@ -26,6 +30,7 @@ RSpec.describe 'Rack::Attack', type: :request do
   after do
     Rack::Attack.enabled = false
     Rack::Attack.reset!
+    Rack::Attack.cache.store = @original_store
   end
 
   describe '.php へのアクセス' do
@@ -59,5 +64,35 @@ RSpec.describe 'Rack::Attack', type: :request do
   it 'wp-login を遮断する' do
     get '/wp-login', env: { 'REMOTE_ADDR' => '203.0.113.3' }
     expect(response).to have_http_status(:forbidden)
+  end
+
+  # .php を Fail2Ban に含めると、1 回踏んだだけで IP ごと 24 時間締め出される。
+  # 攻撃者には妥当だが、古いリンクやブックマークで .php を踏んだ利用者まで
+  # サイト全体から締め出してしまう。wp-login と違い .php は誤って踏む範囲が広い。
+  #
+  # 実際、この挙動で開発者自身の IP が本番から締め出された（2026/08/29）。
+  describe '.php を踏んでも他のアクセスは遮断しない' do
+    let(:ip) { '203.0.113.10' }
+
+    it '.php を繰り返しても通常のページを見られる' do
+      3.times { get '/news.php', env: { 'REMOTE_ADDR' => ip } }
+      expect(response).to have_http_status(:forbidden)
+
+      get '/', env: { 'REMOTE_ADDR' => ip }
+      expect(response).not_to have_http_status(:forbidden)
+    end
+  end
+
+  # wp-login は攻撃の意図が明確なので、これまでどおり IP を BAN する
+  describe 'wp-login を踏んだ IP は締め出す' do
+    let(:ip) { '203.0.113.11' }
+
+    # maxretry: 1 は「2 回目で BAN」を意味する（1 回目でカウントが 1 になる）
+    it 'wp-login を繰り返すと通常のページも遮断される' do
+      2.times { get '/wp-login', env: { 'REMOTE_ADDR' => ip } }
+
+      get '/', env: { 'REMOTE_ADDR' => ip }
+      expect(response).to have_http_status(:forbidden)
+    end
   end
 end
