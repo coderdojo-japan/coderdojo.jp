@@ -191,14 +191,24 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 
 ```bash
 # 1. coderdojo.jp に出るまで待つ（Dojo 名は掲載したものに書き換える）
-until curl -s https://coderdojo.jp/dojos.json | grep -q '"name":"鞍手"'; do sleep 15; done
+for _ in $(seq 20); do
+  curl -s https://coderdojo.jp/dojos.json | grep -q '"name":"鞍手"' && echo '掲載を確認' && break
+  sleep 15
+done
 
 # 2. DojoMap の日次ジョブを起動する
 gh workflow run scheduler_daily.yml --repo coderdojo-japan/map.coderdojo.jp --ref main
 
-# 3. 地図に出るまで待つ（数分かかります）
-until curl -s https://map.coderdojo.jp/dojos.json | grep -q '"name_japan":"鞍手"'; do sleep 30; done
+# 3. 地図に出るまで待つ（ジョブは 2〜3 分ほどで終わります）
+for _ in $(seq 20); do
+  curl -s https://map.coderdojo.jp/dojos.json | grep -q '"name_japan":"鞍手"' && echo '地図を確認' && break
+  sleep 20
+done
 ```
+
+**打ち切り付きにしてあります。** 地図に出るかどうかは Clubs 側の登録にも依るため
+（下の切り分けを参照）、出ないまま待ち続けることがあるためです。
+確認のメッセージが出ないまま終わったら、下の表で切り分けてください。
 
 ブラウザから実行する場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) の
 「Run workflow」を押してください。
