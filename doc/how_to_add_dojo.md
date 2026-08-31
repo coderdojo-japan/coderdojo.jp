@@ -21,7 +21,7 @@
 6. 下記「[データの読み方](#データの読み方申請内容と対応例)」を参考に、申請内容から新しい Dojo データを [`db/dojos.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojos.yml) に追加する
 7. 下記「[統計システムへの追加](#統計システムへの追加)」を参考に、イベント管理サービスを [`db/dojo_event_services.yml`](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/dojo_event_services.yml) に追加する
 8. 上記の作業結果をコミットし、Pull Request (PR) を送る
-9. 本番環境への反映を確認し、下記「[DojoMap への反映](#dojomap-への反映)」で地図も先に更新する
+9. 本番環境への反映を確認し、メールを送る前に下記「[DojoMap への反映](#dojomap-への反映)」で地図も更新する
 10. 下記「[掲載完了メールの送り方](#掲載完了メールの送り方)」で申請者に伝える
 
 [&raquo; これまでの対応例 (PR) を見る](https://github.com/coderdojo-japan/coderdojo.jp/pulls?q=is:pr+"Add+CoderDojo")
@@ -51,7 +51,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 ```yaml
 - order: '472018'
   name: 那覇
-  counter: 1                       # 省略化。連名道場のときに使います (後述)
+  counter: 1                       # 省略可。連名道場のときに使います (後述)
   prefecture_id: 47
   logo: "/img/dojos/default.webp"  #  ロゴがあれば naha.webp として追加
   url: https://coderdojo-naha.doorkeeper.jp/
@@ -70,7 +70,7 @@ Zen: https://zen.coderdojo.com/dojos/jp/okinawa-ken/okinawa-okinawa-prefecture/n
 | `created_at` | **入力しない。** タスク実行時に自動で追加されます  (詳細は後述) |
 | `order` | [全国地方公共団体コード](http://www.soumu.go.jp/denshijiti/code.html) (詳細は後述) |
 | `name` | Dojo名 |
-| `counter` | 省略化。[連名道場](https://github.com/coderdojo-japan/coderdojo.jp/issues/610)を登録する際に使います |
+| `counter` | 省略可。[連名道場](https://github.com/coderdojo-japan/coderdojo.jp/issues/610)を登録する際に使います |
 | `prefecture_id` | [db/seeds.rb](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/db/seeds.rb) の県番号 |
 | `logo` | 省略可。[public/img/dojos](https://github.com/coderdojo-japan/coderdojo.jp/tree/main/public/img/dojos) にあるDojoロゴ画像パス |
 | `url` | 公式Webサイト (イベント管理ページも可) |
@@ -190,34 +190,36 @@ Pull Request 例: https://github.com/coderdojo-japan/coderdojo.jp/pull/274
 > **ジョブは成功するのに地図には出ません。** 成功したように見えるので気づけません。
 
 ```bash
-# 1. coderdojo.jp に出るまで待つ（Dojo 名は掲載したものに書き換える）
-for _ in $(seq 20); do
-  curl -s https://coderdojo.jp/dojos.json | grep -q '"name":"鞍手"' && echo '掲載を確認' && break
-  sleep 15
-done
+DOJO=鞍手   # 掲載した Dojo 名に書き換える
 
-# 2. DojoMap の日次ジョブを起動する
-gh workflow run scheduler_daily.yml --repo coderdojo-japan/map.coderdojo.jp --ref main
+# 出るまで待つ（見つかれば 0、時間切れなら 1 を返す）
+wait_until() {   # $1: URL  $2: 探す文字列  $3: 待機秒（最大 20 回）
+  for _ in $(seq 20); do
+    curl -s "$1" | grep -qF "$2" && return 0
+    sleep "$3"
+  done
+  return 1
+}
 
-# 3. 地図に出るまで待つ（ジョブは 2〜3 分ほどで終わります）
-for _ in $(seq 20); do
-  curl -s https://map.coderdojo.jp/dojos.json | grep -q '"name_japan":"鞍手"' && echo '地図を確認' && break
-  sleep 20
-done
+wait_until https://coderdojo.jp/dojos.json  "\"name\":\"$DOJO\""        15 \
+  && gh workflow run scheduler_daily.yml --repo coderdojo-japan/map.coderdojo.jp --ref main \
+  && wait_until https://map.coderdojo.jp/dojos.json "\"name_japan\":\"$DOJO\"" 20 \
+  && echo "地図に出ました" \
+  || echo "途中で止まりました。下の切り分けを見てください"
 ```
 
-**打ち切り付きにしてあります。** 地図に出るかどうかは Clubs 側の登録にも依るため
-（下の切り分けを参照）、出ないまま待ち続けることがあるためです。
-確認のメッセージが出ないまま終わったら、下の表で切り分けてください。
+**`&&` でつないであります。** coderdojo.jp に出る前に DojoMap を起動してしまうと
+上の事故が起きるため、前の段階が終わらなければ次に進まない形にしています。
+待ち時間にも上限があるので、出ないまま待ち続けることはありません。
 
 ブラウザから実行する場合は [Daily Update](https://github.com/coderdojo-japan/map.coderdojo.jp/actions/workflows/scheduler_daily.yml) の
-「Run workflow」を押してください。
+「Run workflow」を押してください。**その場合は先に coderdojo.jp 側を目視で確認してください。**
 
-地図に載ったかは https://map.coderdojo.jp/dojos.json で確認できます。
+どのクラブと突合したかまで見る場合は、次のように中身を確認します。
 
 ```bash
-curl -s https://map.coderdojo.jp/dojos.json | ruby -rjson -e 'pp JSON.parse(STDIN.read).find { |x| x["name_japan"] == "南城" }'
-#=> {"global_club_id" => "b115e722-...", "name_japan" => "南城", "name_earth" => "CoderDojo南城", ...}
+curl -s https://map.coderdojo.jp/dojos.json | ruby -rjson -e 'pp JSON.parse(STDIN.read).find { |x| x["name_japan"] == "鞍手" }'
+#=> {"global_club_id" => "69fb131d-...", "name_japan" => "鞍手", "name_earth" => "CoderDojo鞍手", ...}
 ```
 
 出てこない場合は次のいずれかです。いずれも DojoMap 側では直せません。
