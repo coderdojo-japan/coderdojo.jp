@@ -3010,6 +3010,19 @@
   - AI
   - 3Dモデリング
   global_club_id: 7b441779-c5ab-45af-8823-1a87e95e5d6a
+- id: 359
+  order: '271144'
+  created_at: '2026-09-01'
+  name: 東淀川@マナベル
+  prefecture_id: 27
+  logo: "/img/dojos/higashiyodogawa-manabell.webp"
+  url: https://www.mana-bell.org/coderdojo/
+  description: 大阪市東淀川区で隔週開催
+  tags:
+  - Minecraft
+  - JavaScript
+  - Roblox
+  global_club_id: fd10f107-2cc2-4a26-9c82-6cbb51dd8025
 - id: 297
   order: '271209'
   created_at: '2023-01-19'
