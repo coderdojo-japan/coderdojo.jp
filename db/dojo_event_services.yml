@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 東淀川@マナベル（大阪府大阪市東淀川区）- 独自サイトで告知 (毎月第2・第4木曜)
+# イベント管理サービスが判明したら group_id を取得してコメントアウトを外す。
+#- dojo_id: 359
+#  name: ???
+#  group_id: ???
+#  url: https://codeclub.org/ja/clubs/fd10f107-2cc2-4a26-9c82-6cbb51dd8025
+
 # 鞍手（福岡県鞍手郡鞍手町）
 - dojo_id: 358
   name: connpass
