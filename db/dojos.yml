@@ -2148,7 +2148,7 @@
 - id: 279
   order: '162060'
   created_at: '2022-03-01'
-  note: 2025-12-31 https://minecraftcup.com/works/workarticle/?work_id=5658
+  note: 2025-12-31 https://web.archive.org/web/20260214071325/https://minecraftcup.com/works/workarticle/?work_id=5658
   name: 滑川
   prefecture_id: 16
   url: https://www.coderdojo-namerikawa.org
@@ -3732,7 +3732,7 @@
   order: '302066'
   created_at: '2017-09-06'
   inactivated_at: '2026-08-29'
-  note: 2024-12-31 https://minecraftcup.com/works/workarticle/?work_id=3656
+  note: 2024-12-31 https://mccup.jp/works2024/workarticle2024/?work_id=3656
   name: 南紀田辺
   prefecture_id: 30
   url: https://coderdojo-nanki-tanabe.jimdo.com/
