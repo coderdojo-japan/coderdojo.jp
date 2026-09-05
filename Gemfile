@@ -23,7 +23,6 @@ gem 'openssl' # Avoid version mismatch with system OpenSSL
 
 gem 'rambulance'         # Error handling pages: https://github.com/yuki24/rambulance
 gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
-gem 'rack-host-redirect' # Enable redirection
 gem 'secure_headers'     # Enable SSL and CORS
 gem 'rinku'              # Enable Auto Link for Podcasts
 gem 'sitemap_generator'  # Sitemap: https://github.com/kjvarga/sitemap_generator
