@@ -87,6 +87,21 @@ RSpec.describe 'www から apex へのリダイレクト' do
     end
   end
 
+  # gem の get_updated_uri_opts は request.host.downcase を呼ぶ。
+  # Host ヘッダが壊れていると Rack::Request#host は nil を返し、NoMethodError になる。
+  # URI() は通ってしまう形（末尾コロンなど）があるので、URI の可否だけでは足りない。
+  describe 'Host ヘッダが壊れているとき' do
+    {
+      'ポートが数値でない' => 'www.coderdojo.jp:abc',
+      '末尾がコロン'       => 'www.coderdojo.jp:',
+      '括弧が壊れている'   => '[',
+    }.each do |label, host|
+      it "#{label}でも 500 にせず、後段へ渡す" do
+        expect(get(host, '/kata').status).to eq 404
+      end
+    end
+  end
+
   describe 'RFC3986 で許されない文字を含むパス' do
     # リダイレクト先を組み立てられないものは、後段へ渡して 404 にする。
     # apex 側の同じパスと同じ扱いになる。
