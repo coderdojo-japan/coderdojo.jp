@@ -8,17 +8,29 @@ module ApplicationHelper
     end
   end
 
+  # Host ヘッダは検証していない (config.hosts 未設定) ため、非 ASCII の
+  # バイト列がそのまま Host に入ることがある。Puma が env に入れる HTTP_HOST は
+  # ASCII-8BIT で、request.url や *_url ヘルパーはそれを引き継ぐ。
+  # UTF-8 のビューに結合すると Encoding::CompatibilityError でページごと 500 になる。
+  #
+  # 入口は request.url だけではない。コントローラの @url、ビューの dojo_url /
+  # dojos_url など、Host を含む値は複数の経路から来る。全部がここを通るので、
+  # 個々の呼び出し元ではなくここで一度だけ落とす。
+  def sanitize_url(url)
+    url.to_s.dup.force_encoding(Encoding::UTF_8).scrub('')
+  end
+
   def full_url(page_url)
     # When URL is composed by Rails
     if page_url.empty?
       # Set og:url with request param
-      request.url
+      sanitize_url(request.url)
     elsif page_url.starts_with? '/'
       # Set og:url with given param
       'https://coderdojo.jp' + page_url
     else
       # 例: https://coderdojo.jp/...
-      page_url
+      sanitize_url(page_url)
     end
   end
 
