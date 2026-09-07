@@ -1368,6 +1368,8 @@
 - id: 321
   order: '131113'
   created_at: '2024-06-10'
+  inactivated_at: '2026-09-07'
+  note: 2026-09-07 https://coderdojo-kamata.connpass.com/
   name: 蒲田
   prefecture_id: 13
   url: https://coderdojo-kamata.connpass.com/
