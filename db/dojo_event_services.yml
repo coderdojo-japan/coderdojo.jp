@@ -728,11 +728,16 @@
   group_id: 11027
   url: https://coderdojo-utsunomiya.doorkeeper.jp/
 
-# 津和野
+# 津和野（島根）- connpass に移行済み。
+# 記録保持のため、他の Dojo と同様に Doorkeeper のデータも保持しています。
 - dojo_id: 245
   name: doorkeeper
   group_id: 11024
   url: https://coderdojo-tsuwano.doorkeeper.jp/
+- dojo_id: 245
+  name: connpass
+  group_id: 15105
+  url: https://coderdojo-tsuwano.connpass.com/
 
 # 沖縄@補聴器のぴあ (Private)
 #- dojo_id: 244
