@@ -23,6 +23,9 @@ RSpec.describe 'www から apex へのリダイレクト' do
   MAPPING = { %w[coderdojo-japan.herokuapp.com www.coderdojo.jp] => 'coderdojo.jp' }.freeze
 
   # 後段のアプリは 404 を返すだけのものに差し替える。
+  #
+  # ここで見たいのは「後段へ渡ったか」であって、本番の応答そのものではない。
+  # 404 はこのスタブが返す値で、本番ではパスがルートに一致すればその応答になる。
   # リダイレクトされなかった時に、例外ではなく通常の応答になることを見たい。
   let(:downstream) { ->(_env) { [404, { 'content-type' => 'text/plain' }, ['not found']] } }
   let(:stack)      { Rack::SafeHostRedirect.new(downstream, MAPPING) }
@@ -103,7 +106,7 @@ RSpec.describe 'www から apex へのリダイレクト' do
   end
 
   describe 'RFC3986 で許されない文字を含むパス' do
-    # リダイレクト先を組み立てられないものは、後段へ渡して 404 にする。
+    # リダイレクト先を組み立てられないものは、後段へ渡す。
     # apex 側の同じパスと同じ扱いになる。
 
     # 実際に届いたもの（Next.js のテンプレートが展開されないまま参照された形）

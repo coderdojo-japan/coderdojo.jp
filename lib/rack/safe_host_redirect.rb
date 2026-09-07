@@ -14,8 +14,10 @@ module Rack
   #   www.coderdojo.jp/foo[bar]        URI::InvalidURIError（パスの文字）
   #   Host: www.coderdojo.jp:          NoMethodError（host が nil。URI() は通る）
   #
-  # 前提が崩れているものは、リダイレクトせず後段へ渡す。ルーティングに一致しないので
-  # 404 になり、apex 側の同じリクエストと同じ扱いになる。
+  # 前提が崩れているものは、リダイレクトせず後段へ渡す。apex 宛と同じ扱いになり、
+  # パスがルートに一致すればその応答を、しなければ 404 を返す。
+  # （Host が壊れていても応答は返る。このアプリは config.hosts を設定しておらず、
+  #   Host の検証は元から行っていない。検証したいなら別の手当てが要る）
   #
   # rescue で super を包まない。super には「リダイレクトしない場合の @app.call(env)」も
   # 含まれるため、後段が同じ例外を投げると後段を 2 回呼ぶ。POST の副作用や
