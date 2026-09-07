@@ -8,7 +8,7 @@ module ApplicationHelper
     end
   end
 
-  # Host ヘッダは検証していない (config.hosts 未設定) ため、非 ASCII の
+  # 本番は config.hosts で不正な Host を 403 にするが、それが無い環境では非 ASCII の
   # バイト列がそのまま Host に入ることがある。Puma が env に入れる HTTP_HOST は
   # ASCII-8BIT で、request.url や *_url ヘルパーはそれを引き継ぐ。
   # UTF-8 のビューに結合すると Encoding::CompatibilityError でページごと 500 になる。
