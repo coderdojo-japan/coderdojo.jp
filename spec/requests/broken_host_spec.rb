@@ -8,8 +8,8 @@ require 'rails_helper'
 # Puma が env に入れる HTTP_HOST は ASCII-8BIT で、request.url や *_url ヘルパーは
 # そのエンコーディングを引き継ぐ。UTF-8 のビューに結合すると落ちる。
 #
-# このアプリは config.hosts を設定しておらず Host を検証しないので、
-# 任意のホスト名がそのままレイアウトに反映される。
+# 本番は config.hosts で不正な Host を 403 にする。この spec は test 環境
+# (config.hosts が空) で動くので、その手前の防御が効いていることを見る。
 #
 # == 1 ページだけ見ても足りない ==
 # 最初は /kata だけを検査していた。Host を含む値の入口は複数あり、

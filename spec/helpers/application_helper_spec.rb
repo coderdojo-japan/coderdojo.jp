@@ -14,7 +14,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   #
   # Puma が env に入れる HTTP_HOST は ASCII-8BIT で、request.url もその
   # エンコーディングを引き継ぐ。それを UTF-8 のビューに結合すると落ちる。
-  # このアプリは config.hosts を設定しておらず、Host は検証されない。
+  # 本番は config.hosts で 403 にするが、それが無い環境での防御を見る。
   describe '#full_url' do
     context '引数が空のとき' do
       it 'リクエストの URL を返す' do

@@ -89,9 +89,26 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
+  # Heroku に登録しているドメイン。下の 2 つの設定で同じ集合を使う。
+  # ズレると www へのリダイレクトが 403 になるため、1 箇所で定義する。
+  canonical_host = 'coderdojo.jp'
+  alias_hosts    = %w[www.coderdojo.jp coderdojo-japan.herokuapp.com]
+
+  # Host ヘッダを検証する。
+  #
+  # Heroku のルータは「登録ドメイン + `:` 以降は何でも」を通すため、
+  # `Host: coderdojo.jp:abc` のような値がアプリまで届く。実際に
+  # /docs/<存在しない> が 500 になっていた（2026-09-07 に本番で確認）。
+  # X-Forwarded-Host も検証対象になるので、og:url に任意のホストが
+  # 反映される状態も閉じる。
+  #
+  # 上のヘルスチェック用の除外は付けない。/up のルートが存在しないため、
+  # 付けても意味のないバイパスが増えるだけになる。
+  config.hosts = [canonical_host, *alias_hosts]
+
   # Redirect if not in correct domains
   config.middleware.use Rack::SafeHostRedirect, {
-    %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
+    alias_hosts => canonical_host
   }
 
   # Mailer settings

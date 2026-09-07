@@ -16,8 +16,10 @@ module Rack
   #
   # 前提が崩れているものは、リダイレクトせず後段へ渡す。apex 宛と同じ扱いになり、
   # パスがルートに一致すればその応答を、しなければ 404 を返す。
-  # （Host が壊れていても応答は返る。このアプリは config.hosts を設定しておらず、
-  #   Host の検証は元から行っていない。検証したいなら別の手当てが要る）
+  # 本番は config.hosts が Host と X-Forwarded-Host を検証するが、
+  # Rack::Request#host はそれより優先して Forwarded ヘッダ (RFC 7239) を読む。
+  # config.hosts は Forwarded を見ないので、ここに来る host が正規とは限らない。
+  # 実測: Host: coderdojo.jp + Forwarded: host="www.coderdojo.jp:" で host は nil になる。
   #
   # rescue で super を包まない。super には「リダイレクトしない場合の @app.call(env)」も
   # 含まれるため、後段が同じ例外を投げると後段を 2 回呼ぶ。POST の副作用や
