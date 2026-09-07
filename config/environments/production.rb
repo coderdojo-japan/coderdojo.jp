@@ -1,4 +1,6 @@
 require "active_support/core_ext/integer/time"
+# ミドルウェアは初期化時に定数を解決するため、autoload では間に合わない
+require_relative "../../lib/rack/safe_host_redirect"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -88,7 +90,7 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   # Redirect if not in correct domains
-  config.middleware.use Rack::HostRedirect, {
+  config.middleware.use Rack::SafeHostRedirect, {
     %w(coderdojo-japan.herokuapp.com www.coderdojo.jp) => 'coderdojo.jp'
   }
 
