@@ -1,18 +1,5 @@
 class DojosController < ApplicationController
 
-  # 開催日を共有している道場 (借りる側の ID => 貸す側の ID)。
-  # 借りる側はイベントサービスを登録していないため、group_id からは導けない。
-  #
-  # ここに書いた ID は、テストで作る道場と衝突すると無関係な開催日が混ざる。
-  # 衝突しないことは spec/models/dojo_factory_spec.rb で守っている。
-  SHARED_EVENT_DATE_DOJOS = {
-     36 =>  35, # 生駒は奈良の開催日を参照 (同じ connpass)
-    294 =>  35, # 平群は奈良の開催日を参照 (同じ connpass)
-    112 =>  23, # 南柏は柏の開催日を参照 (同じイベントサービス)
-    311 =>  23, # 柏の葉は柏の開催日を参照 (同じイベントサービス)
-    106 => 205, # 宜野湾は浦添の開催日を参照 (同じ主催者)
-  }.freeze
-
   # GET /dojos[.html|.json|.csv]
   def index
     # yearパラメータがある場合は、その年末時点でアクティブだった道場に絞り込む
@@ -142,8 +129,17 @@ class DojosController < ApplicationController
       }
     end
 
-    # 開催日を共有している道場に、貸す側の開催日を反映する
-    SHARED_EVENT_DATE_DOJOS.each { |target_id, source_id| sync_event_date(target_id, source_id) }
+    # 同じイベントサービスを共有している道場の開催日を同期
+    # 生駒 (ID: 36) と平群 (ID: 294) は奈良 (ID: 35) と同じ connpass を使用
+    sync_event_date(36,  35) # 生駒は奈良の開催日を参照
+    sync_event_date(294, 35) # 平群は奈良の開催日を参照
+
+    # 南柏 (ID: 112) と柏の葉 (ID: 311) は柏 (ID: 23) と同じイベントサービスを使用
+    sync_event_date(112, 23) # 南柏は、柏の開催日を参照
+    sync_event_date(311, 23) # 柏の葉は柏の開催日を参照
+
+    # 宜野湾 (ID: 106) は浦添 (ID: 205) と同じ主催者で運営
+    sync_event_date(106, 205) # 宜野湾は浦添の開催日を参照
 
     # アクティブな道場と非アクティブな道場を分けてソート
     active_dojos   = @latest_event_by_dojos.select { |d| d[:is_active] }
