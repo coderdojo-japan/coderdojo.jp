@@ -953,7 +953,7 @@
   inactivated_at: '2023-10-26'
   name: 野田
   prefecture_id: 12
-  url: https://mamejuku.org/coderdojonoda/
+  url: https://web.archive.org/web/20240915141214/https://mamejuku.org/coderdojonoda/
   logo: "/img/dojos/default.webp"
   description: 野田市で毎月開催
   tags:
@@ -1111,7 +1111,7 @@
   inactivated_at: '2021-06-16'
   name: 酒々井
   prefecture_id: 12
-  url: https://home.omegane-pr.com/coderdojo/
+  url: https://web.archive.org/web/20190818000252/https://home.omegane-pr.com/coderdojo/
   logo: "/img/dojos/shisui.webp"
   description: 印旛郡酒々井町で毎月開催
   tags:
@@ -2647,7 +2647,7 @@
   inactivated_at: '2022-03-16'
   name: 一宮
   prefecture_id: 23
-  url: https://hauska-paikka.jp/event/coderdojo/
+  url: https://coderdojo-ichinomiya.connpass.com/
   logo: "/img/dojos/ichinomiya.webp"
   description: 一宮市新生で月2回開催
   tags:
@@ -3220,7 +3220,7 @@
   inactivated_at: '2023-10-26'
   name: みのお
   prefecture_id: 27
-  url: http://www.coderdojo-minoh.org/
+  url: https://coderdojo-minoh.connpass.com/
   logo: "/img/dojos/minoh.webp"
   description: 箕面市で毎月開催
   tags:
@@ -3504,7 +3504,7 @@
   inactivated_at: '2022-03-16'
   name: あしや
   prefecture_id: 28
-  url: https://coderdojo-ashiya.org/
+  url: https://coderdojo-ashiya.doorkeeper.jp/
   logo: "/img/dojos/ashiya.webp"
   description: 芦屋市で毎月開催
   tags:
@@ -3854,7 +3854,7 @@
   inactivated_at: '2019-04-27'
   name: 吉賀
   prefecture_id: 32
-  url: http://www.coderdojo-yoshika.com/
+  url: https://coderdojo-yoshika.connpass.com/
   logo: "/img/dojos/yoshika.webp"
   description: 鹿足郡吉賀町で不定期開催
   tags:
@@ -4330,7 +4330,7 @@
   inactivated_at: '2023-10-26'
   name: 日吉
   prefecture_id: 40
-  url: https://coderdojo-hiyoshi.com/
+  url: https://coderdojo-hiyoshi.connpass.com/
   logo: "/img/dojos/default.webp"
   description: 久留米市日吉校区で隔月開催
   tags:
