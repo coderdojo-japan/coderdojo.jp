@@ -77,7 +77,6 @@ Rails.application.routes.draw do
   resources :docs,     only: %i(index show)
   resources :news,     only: %i(index)
   resources :podcasts, only: %i(index show)
-  resources :spaces,   only: %i(index)
 
   get "/podcast",          to: redirect('/podcasts')
   get "/podcasts/feed"     => "podcasts#feed"
@@ -96,7 +95,7 @@ Rails.application.routes.draw do
 
   # Upcoming Events
   get '/events'        => 'events#index'
-  
+
   # Legacy redirect: /events/latest moved to /dojos/activity
   get '/events/latest', to: redirect('/dojos/activity')
 
