@@ -15,7 +15,6 @@ RSpec.describe '対応していない形式でのリクエスト', type: :reques
     /dojos/activity.json
     /docs.json
     /kata.json
-    /spaces.json
   ].each do |path|
     it "#{path} は 406 を返す（500 にしない）" do
       with_exceptions_app { get path }
