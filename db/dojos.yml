@@ -1277,7 +1277,7 @@
   inactivated_at: '2020-08-20'
   name: 高田馬場
   prefecture_id: 13
-  url: http://coderdojo-tdbb.com/
+  url: https://web.archive.org/web/20180106223341/http://coderdojo-tdbb.com/
   logo: "/img/dojos/takadanobaba.webp"
   description: 新宿区高田馬場で毎月開催
   tags:
@@ -1516,7 +1516,7 @@
   inactivated_at: '2023-10-26'
   name: 板橋@桜川
   prefecture_id: 13
-  url: https://coderdojo.sakuragawa.tokyo/
+  url: https://web.archive.org/web/20230529153203/https://coderdojo.sakuragawa.tokyo/
   logo: "/img/dojos/itabashi.webp"
   description: 板橋区で毎月開催
   tags:
@@ -3236,7 +3236,7 @@
   inactivated_at: '2021-07-19'
   name: 柏原
   prefecture_id: 27
-  url: https://www.coderdojo-fujiidera-kashiwara.com
+  url: https://web.archive.org/web/20220930101545/https://www.coderdojo-fujiidera-kashiwara.com/
   logo: "/img/dojos/coderdojo.webp"
   description: 柏原市で毎月開催
   tags:
@@ -3306,7 +3306,7 @@
   inactivated_at: '2021-07-19'
   name: 藤井寺
   prefecture_id: 27
-  url: https://www.coderdojo-fujiidera-kashiwara.com
+  url: https://web.archive.org/web/20220930101545/https://www.coderdojo-fujiidera-kashiwara.com/
   logo: "/img/dojos/coderdojo.webp"
   description: 藤井寺市で毎月開催
   tags:
@@ -3322,7 +3322,7 @@
   note: 2021-07-25 https://coderdojo-fujiidera.localinfo.jp/posts/19955576
   name: 藤井寺・柏原
   prefecture_id: 27
-  url: https://www.coderdojo-fujiidera-kashiwara.com
+  url: https://web.archive.org/web/20220930101545/https://www.coderdojo-fujiidera-kashiwara.com/
   logo: "/img/dojos/fujiidera-kashiwara.webp"
   description: 藤井寺市/柏原市で毎月開催
   tags:
