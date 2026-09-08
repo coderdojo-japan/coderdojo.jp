@@ -930,7 +930,7 @@
   created_at: '2017-09-06'
   name: 松戸
   prefecture_id: 12
-  url: https://code4matsudo.org/category/coder-dojo-matsudo/
+  url: https://coderdojomatsudo.connpass.com/
   logo: "/img/dojos/default.webp"
   description: 松戸市で隔月開催
   tags:
@@ -1502,7 +1502,7 @@
   created_at: '2018-02-21'
   name: 赤羽
   prefecture_id: 13
-  url: https://coderdojo-akabane.com/
+  url: https://coderdojo-akabane.connpass.com/
   logo: "/img/dojos/akabane.webp"
   description: 北区で毎月開催
   tags:
