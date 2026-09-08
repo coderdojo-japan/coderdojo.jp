@@ -61,5 +61,16 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Rails.application.load_seed
+
+    # テストで作る道場の ID を、実在の道場より大きい値から始める。
+    # DojosController は開催日を共有する道場を ID の即値で束ねているため
+    # (SHARED_EVENT_DATE_DOJOS)、テストの道場がその ID を引き当てると、
+    # 無関係な開催日とリンクが行に混ざる。
+    #
+    # PostgreSQL のシーケンスはトランザクションでロールバックされないので、
+    # 採番はスイート全体で進み続ける。CI は毎回まっさらな DB なので 1 から
+    # 始まり、実行順序 (config.order = :random) によって、どの example が
+    # 衝突するかが変わる。実際に main の CI で 1 件落ちた (2026-09-08)。
+    ActiveRecord::Base.connection.execute('ALTER SEQUENCE dojos_id_seq RESTART WITH 100000')
   end
 end
