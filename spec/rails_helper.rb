@@ -27,6 +27,20 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+# テストで作る道場の ID の開始値。実在の道場より大きくする。
+#
+# DojosController#activity は開催日を共有する道場を sync_event_date に
+# ID の即値で渡している。テストの道場がその ID を引き当てると、
+# 無関係な開催日とリンクが行に混ざる。
+#
+# PostgreSQL のシーケンスはトランザクションでロールバックされないので、
+# 採番はスイート全体で進み続ける。CI は毎回まっさらな DB なので 1 から始まり、
+# 実行順序 (config.order = :random) によって、どの example が衝突するかが
+# 実行ごとに変わる。経緯は PR #1919 を参照。
+#
+# この値が十分に大きいことは spec/models/dojo_factory_spec.rb で検証している。
+TEST_DOJO_ID_START = 100_000
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = ["#{::Rails.root}/spec/fixtures"]
@@ -61,5 +75,8 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Rails.application.load_seed
+    ActiveRecord::Base.connection.execute(
+      "ALTER SEQUENCE dojos_id_seq RESTART WITH #{TEST_DOJO_ID_START}"
+    )
   end
 end
