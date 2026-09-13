@@ -24,7 +24,7 @@ RSpec.describe 'dojos' do
     let(:task) { 'dojos:update_db_by_yaml' }
 
     it '単純追加' do
-      allow(YAML).to receive(:unsafe_load_file).and_return([
+      allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
         { 'order'         => '152064',
           'created_at'    => '2018-02-17',
           'name'          => '新発田',
@@ -59,7 +59,7 @@ RSpec.describe 'dojos' do
     end
 
     it '単純更新' do
-      allow(YAML).to receive(:unsafe_load_file).and_return([
+      allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
         @dojo_1.attributes.keep_if { |k,v| %w(id order prefecture_id logo url description tags).include?(k) }.merge('name' => 'dojo_1(mod)')
       ])
 
@@ -81,7 +81,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'inactivated_at 指定なし ⇒ アクティブ' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base
         ])
 
@@ -101,7 +101,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'inactivated_at: nil 指定 ⇒ アクティブ' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('inactivated_at' => nil)
         ])
 
@@ -122,7 +122,7 @@ RSpec.describe 'dojos' do
 
       it 'inactivated_at に日付指定 ⇒ 非アクティブ' do
         inactivation_date = '2023-01-15'
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('inactivated_at' => inactivation_date)
         ])
 
@@ -150,7 +150,7 @@ RSpec.describe 'dojos' do
 
       it 'UUID 指定 ⇒ 保存される' do
         uuid = 'b115e722-0000-4000-8000-000000000001'
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('global_club_id' => uuid)
         ])
 
@@ -159,7 +159,7 @@ RSpec.describe 'dojos' do
       end
 
       it '指定なし ⇒ nil' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([dojo_base])
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([dojo_base])
 
         @dojo_1.update_columns(global_club_id: 'b115e722-0000-4000-8000-000000000002')
 
@@ -175,7 +175,7 @@ RSpec.describe 'dojos' do
         @dojo_1.update_columns(global_club_id: uuid)
 
         # 移動先を先に並べる。解放しないまま save! すると、ここで衝突する
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
                  .merge('global_club_id' => uuid),
           dojo_base,
@@ -192,7 +192,7 @@ RSpec.describe 'dojos' do
         uuid = 'b115e722-0000-4000-8000-000000000004'
         @dojo_3.update_columns(global_club_id: uuid)
 
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('global_club_id' => uuid)
         ])
 
@@ -204,7 +204,7 @@ RSpec.describe 'dojos' do
       it '空文字 ⇒ nil に正規化される' do
         # 空文字のままだと 2 件目でユニークインデックスに引っかかり、
         # release スクリプトが落ちる
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('global_club_id' => ''),
           @dojo_2.attributes.keep_if { |k,v| %w(id order name prefecture_id logo url description tags).include?(k) }
                  .merge('global_club_id' => '')
@@ -222,7 +222,7 @@ RSpec.describe 'dojos' do
       end
 
       it '指定なし ⇒ 非プライベート' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base
         ])
 
@@ -241,7 +241,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'true 指定 ⇒ プライベート' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('is_private' => true)
         ])
 
@@ -259,7 +259,7 @@ RSpec.describe 'dojos' do
       end
 
       it 'false 指定 ⇒ 非プライベート' do
-        allow(YAML).to receive(:unsafe_load_file).and_return([
+        allow(Dojo).to receive(:load_attributes_from_yaml).and_return([
           dojo_base.merge('is_private' => false)
         ])
 
