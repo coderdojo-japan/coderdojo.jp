@@ -41,8 +41,10 @@ class Dojo < ApplicationRecord
   #validate  :number_of_tags
 
   class << self
+    # db/dojos.yml は外部からの PR でも編集されるため、任意のクラスを生成するタグは読み込まない。
+    # 許可するのは、クォートせずに書いた日付が変換される Date だけ
     def load_attributes_from_yaml
-      YAML.unsafe_load_file(DOJO_INFO_YAML_PATH)
+      YAML.safe_load_file(DOJO_INFO_YAML_PATH, permitted_classes: [Date])
     end
 
     def dump_attributes_to_yaml(attributes)

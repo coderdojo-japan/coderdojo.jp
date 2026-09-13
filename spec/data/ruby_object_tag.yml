@@ -1,0 +1,4 @@
+- id: 1
+  order: '011002'
+  name: 札幌
+- !ruby/object:Object {}

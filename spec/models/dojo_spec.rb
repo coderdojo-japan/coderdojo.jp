@@ -54,6 +54,7 @@ RSpec.describe Dojo, :type => :model do
   end
 
   describe 'validate yaml format' do
+    # 実物の db/dojos.yml を読み、不正な構文やタグを CI で検出する。フィクスチャに差し替えない
     it 'should not raise Psych::SyntaxError' do
       expect{ Dojo.load_attributes_from_yaml }.not_to raise_error
     end
@@ -67,6 +68,13 @@ RSpec.describe Dojo, :type => :model do
 
       Dojo.send(:remove_const, :DOJO_INFO_YAML_PATH)
       Dojo::DOJO_INFO_YAML_PATH = orig_yaml
+    end
+
+    # db/dojos.yml は外部からの PR でも編集されるため、任意のクラスを生成するタグは読み込まない
+    it 'should raise Psych::DisallowedClass for Ruby object tags' do
+      stub_const('Dojo::DOJO_INFO_YAML_PATH', Rails.root.join('spec', 'data', 'ruby_object_tag.yml'))
+
+      expect{ Dojo.load_attributes_from_yaml }.to raise_error(Psych::DisallowedClass)
     end
   end
 
