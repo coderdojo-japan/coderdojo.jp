@@ -860,6 +860,8 @@
 - id: 312
   order: '121002'
   created_at: '2023-11-01'
+  inactivated_at: '2025-07-13'
+  note: 2025-07-13 https://coderdojo-inagekaigan.connpass.com/event/359305/
   name: 稲毛海岸
   prefecture_id: 12
   url: https://coderdojo-inagekaigan.connpass.com/
