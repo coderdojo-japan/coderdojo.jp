@@ -85,6 +85,8 @@ if __FILE__ == $PROGRAM_NAME
       exit 0
     when :failed
       warn "❌ v#{release['version']} が #{release['status']} です（#{release['description']}）"
+      # リリースの JSON には output_stream_url もあるが、署名付き URL なので出力しない。
+      # このリポジトリは公開で、Actions のログも公開されるため
       warn "   詳細: heroku releases:output v#{release['version']} --app #{app}"
       exit 1
     end
