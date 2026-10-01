@@ -67,3 +67,11 @@ jobs:
           heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email:    ${{ secrets.HEROKU_EMAIL }}
+
+      # Actions の success は配送の成功でしかない。Heroku がビルドをスキップしても
+      # push は成功するため緑になる (PR #1942)。本番に届いたかはリリースの状態で見る
+      - name: ✅ リリースが本番に届いたことを確認する
+        env:
+          HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        run: ruby .github/scripts/wait_for_heroku_release.rb
