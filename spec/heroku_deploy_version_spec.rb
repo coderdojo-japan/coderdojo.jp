@@ -9,11 +9,11 @@ require 'rails_helper'
 #
 # PR #1847 / #1848 で test.yml は v3 に戻したが daily.yml が v4 のまま残り、
 # 毎朝のニュース取得のデプロイが 8/2 から 10/1 まで止まっていた (PR #1942)。
-# 片方だけ直す事故を繰り返さないよう、全経路が同じ版であることをここで守る。
+# 片方だけ直す事故を繰り返さないよう、全経路が揃っていることをここで守る。
 #
 # 上流が直って版を上げる時は、このテストも同じ PR で更新する。
 # 意図した更新なのか取り残しなのかを、その場で判断させるのが目的。
-RSpec.describe 'Heroku deploy action version consistency' do
+RSpec.describe 'Heroku deploy workflows' do
   PINNED_VERSION = 'v3.15.15'.freeze
 
   let(:workflows) { Rails.root.glob('.github/workflows/*.yml') }
@@ -38,5 +38,18 @@ RSpec.describe 'Heroku deploy action version consistency' do
       "heroku-deploy の版が #{PINNED_VERSION} と違います: " +
       mismatched.map { |file, version| "#{file} (#{version})" }.join(', ') +
       '。v4 は push 先を refs/head/main と組み立てるため、Heroku がビルドをスキップします。'
+  end
+
+  it '本番到達の確認ステップが両経路で同じ' do
+    # 確認ステップは 2 つのワークフローに重複して書いている。
+    # 片方だけ古くなるのが今回の事故そのものだったので、同一性を機械的に守る。
+    # YAML として読むため、インデントの違いには影響されない
+    steps = workflows.filter_map { |path|
+      YAML.safe_load(path.read).dig('jobs', 'deploy', 'steps')&.last
+    }
+
+    expect(steps.size).to eq(2), 'deploy ジョブを持つワークフローが 2 つではありません'
+    expect(steps.uniq.size).to eq(1),
+      'deploy ジョブの最後のステップが daily.yml と test.yml でずれています'
   end
 end
