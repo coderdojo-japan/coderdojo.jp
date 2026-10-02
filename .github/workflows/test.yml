@@ -67,3 +67,22 @@ jobs:
           heroku_api_key:  ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email:    ${{ secrets.HEROKU_EMAIL }}
+      # Actions の success は配送の成功でしかない。git push は release フェーズの完了まで
+      # 待つが、release が失敗しても push は成功扱いになり、ビルドがスキップされた時も
+      # 同じく緑になる (PR #1942)。本番に届いたかはリリースの状態で見る。
+      #
+      # 本番の配信物との照合は使えない。script/release.sh は news:upsert を
+      # podcasts:upsert より先に走らせ、release dyno は旧 dyno と同じ DB を使うため、
+      # 後半が落ちても配信物だけは期待どおりに見えてしまう。
+      - name: ✅ リリースが本番に届いたことを確認する
+        env:
+          HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        run: |
+          # GITHUB_SHA は daily.yml が db/news.yml を push する前の main を指すので使えない
+          sha=$(git rev-parse --short=7 HEAD)
+          releases=$(heroku releases --json --num 5 --app "$HEROKU_APP_NAME")
+          echo "$releases" | jq -r '.[] | "v\(.version)\t\(.status)\t\(.description)"'
+          echo "$releases" | jq -e --arg sha "$sha" \
+            'any(.[]; (.description | contains($sha)) and .status == "succeeded")' > /dev/null \
+            || { echo "::error::$sha のリリースが succeeded ではありません。heroku releases:output で確認してください"; exit 1; }
