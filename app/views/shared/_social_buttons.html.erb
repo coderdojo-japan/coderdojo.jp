@@ -1,15 +1,28 @@
-<% content_for :javascript do %>
-  <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-  </script>
-<% end %>
-
 <ul class="social_buttons">
   <li>
     <div class="fb-like" data-action="like" data-href="<%= full_url(yield(:url)) %>" data-layout="button_count" data-share="true" data-show-faces="true"></div>
   </li>
   <li>
-    <a class="twitter-share-button" data-hashtags="CoderDojo" data-lang="ja" data-text="<%= full_title(yield(:title)) %>" data-url="<%= full_url(yield(:url)) %>" data-via="CoderDojoJapan" href="https://twitter.com/share" width="100">Tweet</a>
+    <%# widgets.js を読み込まず、intent/tweet へのリンクにする。見た目は RSS ボタンと同じ CSS で描く %>
+    <% tweet = { text: full_title(yield(:title)), url: full_url(yield(:url)), via: 'CoderDojoJapan', hashtags: 'CoderDojo' } %>
+    <%= link_to "https://twitter.com/intent/tweet?#{tweet.to_query}", class: 'share-button share-button--x', target: '_blank' do %>
+      <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      ポスト
+    <% end %>
   </li>
+  <% if local_assigns[:rss] %>
+    <li>
+      <%= link_to rss, class: 'share-button share-button--rss', title: 'RSS フィードを購読する' do %>
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" fill="currentColor">
+          <circle cx="2.5" cy="13.5" r="2.5"/>
+          <path d="M0 6a10 10 0 0 1 10 10H7.5A7.5 7.5 0 0 0 0 8.5z"/>
+          <path d="M0 0a16 16 0 0 1 16 16h-2.5A13.5 13.5 0 0 0 0 2.5z"/>
+        </svg>
+        RSS
+      <% end %>
+    </li>
+  <% end %>
   <%# コメントアウトされたはてなブックマークとLINEのボタンは省略 %>
-</ul> 
+</ul>

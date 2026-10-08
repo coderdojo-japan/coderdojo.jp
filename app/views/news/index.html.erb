@@ -22,14 +22,14 @@
 
   <section class="text-center list" style='margin-bottom: 30px;'>
     <%= render 'shared/dojo_letter_signup' %>
-    <%= render 'shared/social_buttons' %>
+    <%= render 'shared/social_buttons', rss: news_index_path(format: :rss) %>
   </section>
 
   <section class='news' style='padding: 50px 0px;'>
     <% if @news_items.any? %>
       <div class="news-list">
         <% @news_items.each do |news| %>
-	  
+
           <article class="news-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
             <h3 style="margin-bottom: 10px;">
 	      <% if news.internal_link? %>
@@ -62,6 +62,6 @@
 <div class='container'>
   <section class="text-center list" style='margin-bottom: 100px;'>
     <%= render 'shared/dojo_letter_signup' %>
-    <%= render 'shared/social_buttons' %>
+    <%= render 'shared/social_buttons', rss: news_index_path(format: :rss) %>
   </section>  
 </div>

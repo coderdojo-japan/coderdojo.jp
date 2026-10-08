@@ -291,6 +291,26 @@ h1,h2,h3,h4,h5,h6 {
 .social_buttons iframe {
   margin: 0 !important;
 }
+// シェア・購読ボタンの共通の形（高さ 20px の角丸）。色だけを修飾子で変える
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 12px;
+  border-radius: 9999px;
+  color: #fff;
+  font: 500 13px/20px "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+.share-button--x   { background-color: #000; }
+.share-button--rss { background-color: #f26522; }
 
 // Partner section
 .partners_logo {
