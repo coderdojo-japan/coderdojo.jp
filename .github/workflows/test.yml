@@ -40,10 +40,11 @@ jobs:
         with:
           bundler-cache: true
 
+      # seed は spec/rails_helper.rb が読み込むので、ここではテスト用 DB を作るだけにする
       - name: 🧪 Prepare DB
-        run: |
-          bundle exec rails db:create
-          bundle exec rails db:setup
+        run: bundle exec rails db:create db:schema:load
+        env:
+          RAILS_ENV: test
 
       - name: 🔧 Test
         run: bundle exec rspec spec
