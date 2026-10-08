@@ -49,6 +49,13 @@ RSpec.describe 'Host ヘッダが壊れているリクエスト', type: :request
     expect(response.status).not_to eq 500
   end
 
+  # フィードの URL も full_url から組み立てている
+  it '/news.rss が 500 にならない' do
+    get '/news.rss', headers: { 'HTTP_HOST' => BROKEN_HOST }
+
+    expect(response.status).not_to eq 500
+  end
+
   # Rails は X-Forwarded-Host を無条件に採用するので、Host と同じ入口になる
   it 'X-Forwarded-Host 経由でも 500 にならない' do
     get '/docs', headers: { 'HTTP_X_FORWARDED_HOST' => BROKEN_HOST }
