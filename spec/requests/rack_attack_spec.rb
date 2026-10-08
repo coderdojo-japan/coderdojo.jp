@@ -19,7 +19,7 @@ require 'rails_helper'
 # 遮断はルーティングより前で効くので、通知も自然に止まる。
 RSpec.describe 'Rack::Attack', type: :request do
   # test 環境のキャッシュは null_store で、Fail2Ban の BAN が保存されない。
-  # 本番は memory_store なので、そのままでは本番と違う経路を検証してしまう。
+  # 本番は Rails 既定の file_store なので、そのままでは本番と違う経路を検証してしまう。
   before do
     @original_store = Rack::Attack.cache.store
     Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
@@ -152,6 +152,34 @@ RSpec.describe 'Rack::Attack', type: :request do
         }
         expect(response).not_to have_http_status(:forbidden)
       end
+    end
+  end
+
+  # POST /stretch3 は、このサイトで唯一の書き込みエンドポイント。
+  # 1 つの Dojo で 20〜30 人が同じ回線から送信しても届かない上限にしている。
+  describe 'POST /stretch3 の回数制限' do
+    let(:params) do
+      { stretch3: { email: 'parent@example.com', parent_name: '保護者', participant_name: '参加者', dojo_name: 'CoderDojo テスト' } }
+    end
+
+    # 1 時間の区切りをまたぐとカウントが戻るので、時刻を固定する
+    around { |example| travel_to(Time.zone.parse('2026-10-08 10:05')) { example.run } }
+
+    it '同じ IP から 1 時間に 60 回までは受け付け、61 回目は 429 を返す' do
+      60.times do
+        post '/stretch3', params: params, env: { 'REMOTE_ADDR' => '203.0.113.30' }
+        expect(response).not_to have_http_status(:too_many_requests)
+      end
+
+      post '/stretch3', params: params, env: { 'REMOTE_ADDR' => '203.0.113.30' }
+      expect(response).to have_http_status(:too_many_requests)
+    end
+
+    it '別の IP からの送信は制限しない' do
+      61.times { post '/stretch3', params: params, env: { 'REMOTE_ADDR' => '203.0.113.31' } }
+
+      post '/stretch3', params: params, env: { 'REMOTE_ADDR' => '203.0.113.32' }
+      expect(response).not_to have_http_status(:too_many_requests)
     end
   end
 end
