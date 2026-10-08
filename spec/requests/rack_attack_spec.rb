@@ -143,6 +143,15 @@ RSpec.describe 'Rack::Attack', type: :request do
         }
         expect(response).to have_http_status(:forbidden)
       end
+
+      it 'Forwarded ヘッダで遮断対象の IP を名乗っても、X-Forwarded-For の送信元で判定する' do
+        get '/', env: {
+          'REMOTE_ADDR'          => router,
+          'HTTP_X_FORWARDED_FOR' => '203.0.113.20',
+          'HTTP_FORWARDED'       => 'for=3.112.252.14'
+        }
+        expect(response).not_to have_http_status(:forbidden)
+      end
     end
   end
 end
