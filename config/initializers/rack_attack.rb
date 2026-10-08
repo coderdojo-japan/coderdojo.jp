@@ -58,3 +58,14 @@ JPCERT_REPORTED_IPS = %w[
 Rack::Attack.blocklist('jpcert reported ips') do |req|
   JPCERT_REPORTED_IPS.include?(req.ip)
 end
+
+# POST /stretch3 は、このサイトで唯一の書き込みエンドポイント。
+# JPCERT/CC の注意喚起 (JPCERT-AT-2026-0030) の推奨に沿い、送信元 IP ごとに回数を制限する。
+# 1 つの Dojo で 20〜30 人が同じ回線から送信しても届かない上限にしている。
+#
+# Rails の rate_limit ではなく Rack::Attack を使うのは、上の遮断と同じく
+# ルーティングより前で 429 を返し、Airbrake への通知が発生しないため。
+# start_with? にしているのは /stretch3.json などの表記ゆれも同じルートに届くため。
+Rack::Attack.throttle('stretch3 form', limit: 60, period: 1.hour) do |req|
+  req.ip if req.post? && req.path.start_with?('/stretch3')
+end
