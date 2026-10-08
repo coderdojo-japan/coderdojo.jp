@@ -119,5 +119,30 @@ RSpec.describe 'Rack::Attack', type: :request do
       get '/', env: { 'REMOTE_ADDR' => '203.0.113.20' }
       expect(response).not_to have_http_status(:forbidden)
     end
+
+    # 本番の Heroku では REMOTE_ADDR がルータ (10.x) になり、
+    # ルータが実際の送信元 IP を X-Forwarded-For の末尾に追記する。
+    describe 'Heroku のルータを経由したアクセス' do
+      let(:router) { '10.1.2.3' }
+
+      it 'X-Forwarded-For 末尾の送信元 IP で遮断する' do
+        get '/', env: { 'REMOTE_ADDR' => router, 'HTTP_X_FORWARDED_FOR' => '3.112.252.14' }
+        expect(response).to have_http_status(:forbidden)
+      end
+
+      it 'X-Forwarded-For の先頭を偽装しても遮断する' do
+        get '/', env: { 'REMOTE_ADDR' => router, 'HTTP_X_FORWARDED_FOR' => '203.0.113.20, 3.112.252.14' }
+        expect(response).to have_http_status(:forbidden)
+      end
+
+      it 'Forwarded ヘッダで送信元を偽装しても遮断する' do
+        get '/', env: {
+          'REMOTE_ADDR'          => router,
+          'HTTP_X_FORWARDED_FOR' => '3.112.252.14',
+          'HTTP_FORWARDED'       => 'for=203.0.113.20'
+        }
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
   end
 end

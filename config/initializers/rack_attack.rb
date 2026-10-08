@@ -1,5 +1,12 @@
 Rails.application.config.middleware.use Rack::Attack
 
+# 送信元 IP は X-Forwarded-For だけから判定する。
+#
+# Rack 3 の既定では Forwarded ヘッダ (RFC 7239) を X-Forwarded-For より優先する。
+# Heroku のルータが追記するのは X-Forwarded-For だけなので、クライアントが
+# Forwarded を付けると送信元 IP を偽装でき、下の IP 単位の遮断をすり抜けられる。
+Rack::Request.forwarded_priority = [:x_forwarded]
+
 # wp-login への攻撃は意図が明確なので、その IP を 24 時間締め出す。
 Rack::Attack.blocklist('fail2ban pentesters') do |req|
   Rack::Attack::Fail2Ban.filter("pentesters-#{req.ip}", :maxretry => 1, :findtime => 1.hour, :bantime => 24.hours) do
