@@ -95,4 +95,23 @@ RSpec.describe 'Rack::Attack', type: :request do
       expect(response).to have_http_status(:forbidden)
     end
   end
+
+  # JPCERT/CC の注意喚起 (JPCERT-AT-2026-0030) で報告された送信元 IP
+  # https://www.jpcert.or.jp/at/2026/at260030.html
+  describe 'JPCERT/CC が報告した送信元 IP' do
+    %w[
+      3.112.252.14 54.95.112.6 69.10.51.162 172.86.91.7
+      210.149.87.120 213.163.202.171 221.216.140.49 221.216.140.129
+    ].each do |ip|
+      it "#{ip} からのアクセスを遮断する" do
+        get '/', env: { 'REMOTE_ADDR' => ip }
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+
+    it 'それ以外の IP からのアクセスは遮断しない' do
+      get '/', env: { 'REMOTE_ADDR' => '203.0.113.20' }
+      expect(response).not_to have_http_status(:forbidden)
+    end
+  end
 end

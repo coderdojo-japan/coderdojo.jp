@@ -30,3 +30,18 @@ end
 Rack::Attack.blocklist('php probes') do |req|
   req.path.end_with?('.php')
 end
+
+# JPCERT/CC の注意喚起 (JPCERT-AT-2026-0030) で、国内組織への不正アクセスの
+# 送信元として報告された IP を遮断する（2026/10/08 公開）。
+# https://www.jpcert.or.jp/at/2026/at260030.html
+#
+# 3.112.252.14 と 54.95.112.6 は AWS 東京リージョンのアドレスで、今後ほかの
+# 利用者に割り当て直される可能性がある。2027/01 を目安に、外すか見直す。
+JPCERT_REPORTED_IPS = %w[
+  3.112.252.14 54.95.112.6 69.10.51.162 172.86.91.7
+  210.149.87.120 213.163.202.171 221.216.140.49 221.216.140.129
+].to_set.freeze
+
+Rack::Attack.blocklist('jpcert reported ips') do |req|
+  JPCERT_REPORTED_IPS.include?(req.ip)
+end
