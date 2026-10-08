@@ -56,6 +56,39 @@ RSpec.describe "News", type: :request do
       expect(response.body).to include(@news2.url)
     end
 
+    it "シェアボタンの隣に RSS フィードへのボタンを表示する" do
+      get news_index_path
+
+      buttons = Nokogiri::HTML(response.body).css(".social_buttons a.share-button--rss")
+      expect(buttons).not_to be_empty
+      expect(buttons.map { |a| a["href"] }.uniq).to eq([news_index_path(format: :rss)])
+    end
+
+    # X のボタンは widgets.js ではなく intent/tweet へのリンクにし、RSS ボタンと同じ CSS で描く
+    it "X のシェアボタンを intent/tweet へのリンクとして表示する" do
+      get news_index_path
+
+      html   = Nokogiri::HTML(response.body)
+      link   = html.at_css(".social_buttons a.share-button--x")
+      uri    = URI.parse(link["href"])
+      params = Rack::Utils.parse_query(uri.query)
+
+      expect("#{uri.host}#{uri.path}").to eq("twitter.com/intent/tweet")
+      expect(params["url"]).to eq(news_index_url)
+      expect(params["text"]).to include("CoderDojo ニュース")
+      expect(params["via"]).to eq("CoderDojoJapan")
+      expect(params["hashtags"]).to eq("CoderDojo")
+      expect(response.body).not_to include("platform.twitter.com/widgets.js")
+    end
+
+    # シェアボタンは共通の部分テンプレートなので、RSS ボタンが他のページに出ないことも見る
+    it "他のページのシェアボタンには RSS ボタンを表示しない" do
+      get docs_path
+
+      expect(Nokogiri::HTML(response.body).css(".social_buttons")).not_to be_empty
+      expect(Nokogiri::HTML(response.body).css("a.share-button--rss")).to be_empty
+    end
+
     it "ニュースがない場合は適切なメッセージを表示する" do
       News.destroy_all
       get news_index_path
