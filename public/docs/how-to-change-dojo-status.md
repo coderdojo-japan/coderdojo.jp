@@ -5,7 +5,7 @@
 <br>
 
 <blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 0em 0em 3em'>
-  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、<b>毎年11月〜12月ごろに数クリックで終わる年次調査アンケート</b>が、クラブ登録・管理サイト (Code Club) から「<a href='https://gyazo.com/96060f077afc251c45525c6a4fcbaf79'><code>*ACTION NEEDED* Important check-in ... (後略)</code></a>」といった件名のメールで届くようになります。本メールに未回答の場合「<code>活動停止中 (Inactive)</code>」と判断されるのでご注意ください。(<a href='https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/'>&raquo; 参考事例を見る</a>)<br>
+  <p><strong>✍️ NOTE:</strong> CoderDojo として承認されると、<b>毎年11月〜12月ごろに数クリックで終わる年次調査アンケート</b>が、クラブ登録・管理サイト (Code Club) から「<a href='/img/docs-code-club-check-in-email.jpg'><code>*ACTION NEEDED* Important check-in ... (後略)</code></a>」といった件名のメールで届くようになります。本メールに未回答の場合「<code>活動停止中 (Inactive)</code>」と判断されるのでご注意ください。(<a href='https://www.facebook.com/groups/coderdojo.jp/permalink/2018794594900596/'>&raquo; 参考事例を見る</a>)<br>
     <br>
     <small>※
       上記の他、<a href='/signup#terms'>一定期間、活動の状況が確認できない場合</a>も Inactive となります。参加者やその保護者が「最寄りの Dojo を見つけたけど今は活動してないみたい... 😭」となってしまうのを未然に防ぐため、お手数ですがご協力いただけると幸いです 🙇
@@ -32,7 +32,7 @@
 4. 権限があれば、Dojo に関する情報を更新・変更することができます
 5. 変更が完了したら、前項の流れで現在の状態をご確認ください
 
-![ダッシュボード画面](https://i.gyazo.com/7ff1ca9d44efc7515010daf055c6b15d.png)
+![ダッシュボード画面](/img/docs-clubs-dashboard.png)
 
 <br>
 
@@ -44,7 +44,7 @@
 
 1. 何らかの原因により、アカウントが一時的に凍結されている可能性があります。
 1. [CoderDojo に承認されると登録できる](/kata#support-programs)ようになる [Global Community Slack](https://coderdojo.jp/kata#global-community-slack) のアカウントをお持ちの場合は、同 Slack にある `#support` チャンネルで質問をすると、詳しい状況をご確認いただけます。
-  ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
+  ![foundation-supportチャンネル](/img/docs-foundation-support-channel.png)
 1. [Global Community Slack](https://coderdojo.jp/kata#global-community-slack) のアカウントをお持ちではない場合は、[CoderDojo Foundation のヘルプページ](https://coderdojo.com/ja-JP/help)の下部にあるお問い合わせフォームより、お問い合わせください。（[Google翻訳](https://translate.google.co.jp/?hl=ja&sl=ja&tl=en&op=translate)や[DeepL](https://www.deepl.com/ja/translator)などで日英翻訳するとスムーズです。）
 
 <br>

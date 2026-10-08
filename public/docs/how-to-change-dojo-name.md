@@ -13,7 +13,7 @@ CoderDojo では、次の手続きで Dojo 名を変更することができま�
 3. Dojo の管理画面が表示されたら、`Edit Club Profile` をクリックする
 4. 権限があれば、Dojo に関する情報を更新・変更することができます
 
-![ダッシュボード画面](https://i.gyazo.com/7ff1ca9d44efc7515010daf055c6b15d.png)
+![ダッシュボード画面](/img/docs-clubs-dashboard.png)
 
 <br>
 

@@ -62,7 +62,7 @@ CoderDojo コミュニティの１つに [CoderDojo 紙屋町](https://web.archi
 
 というメッセージと共に、CoderDojo 広島から CoderDojo 紙屋町に名称が変更されました。
 
-[![全文のスクショ](https://i.gyazo.com/4fcbe0cac2e8f0b1dcbbb24c2bc2bbf7.png)](https://web.archive.org/web/20260311163658/https://www.coderdojo-hiroshima.com/archives/1225)
+[![全文のスクショ](/img/docs-naming-kamiyacho.png)](https://web.archive.org/web/20260311163658/https://www.coderdojo-hiroshima.com/archives/1225)
 
 参考記事: [CoderDojo紙屋町に名称変更しました！ − CoderDojo紙屋町](https://web.archive.org/web/20260311163658/https://www.coderdojo-hiroshima.com/archives/1225)
 

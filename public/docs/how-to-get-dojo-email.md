@@ -33,7 +33,7 @@ kashiwa.jp@coderdojo.com というメールアドレスを使いたいのです�
 2. CoderDojo を含む世界中の非営利 Club コミュニティ (Code Club コミュニティ) 関係者が集まる連絡網「[Global Community Slack](/kata#global-community-slack)」に加入する
 3.  Slack コミュニティ内にある `#support` チャンネルで、メールアドレスを取得したい旨を投稿する
   - 英語での投稿が望ましいです。[Google翻訳](https://translate.google.co.jp/?hl=ja&sl=ja&tl=en&op=translate)や[DeepL](https://www.deepl.com/ja/translator)などで日英翻訳するとスムーズです
-    ![foundation-supportチャンネル](https://i.gyazo.com/0931ccad2aacd0ad72e20d42913ad648.png)
+    ![foundation-supportチャンネル](/img/docs-foundation-support-channel.png)
 
 
 
