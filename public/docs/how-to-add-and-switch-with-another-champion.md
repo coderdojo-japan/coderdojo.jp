@@ -13,7 +13,7 @@ CoderDojo の代表者は、別の代表者を追加登録後、自分自身の�
    <!--<img alt='CoderDojo Zen - Invite Champion' src='/img/zen-invite-champion.png' /><br><br>-->
 5. 最後に、招待した人を共同代表者 (`Leader`) にします（必要に応じて自分自身の Role の変更または削除もできます）
 
-![ダッシュボード画面](https://i.gyazo.com/7ff1ca9d44efc7515010daf055c6b15d.png)
+![ダッシュボード画面](/img/docs-clubs-dashboard.png)
 
 <br>
 

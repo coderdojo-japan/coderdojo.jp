@@ -13,7 +13,7 @@ CoderDojo では、Dojo を継続的に続けられなくなったとき、そ�
 5. 現在の状態を「非アクティブ (Inactive)」に変更し、更新する   
    ※ メールを送って状態を変更する場合もあります。その場合は画面の指示にしたがってください
 
-![ダッシュボード画面](https://i.gyazo.com/7ff1ca9d44efc7515010daf055c6b15d.png)
+![ダッシュボード画面](/img/docs-clubs-dashboard.png)
 
 <br>
 
