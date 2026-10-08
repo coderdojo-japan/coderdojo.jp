@@ -9,6 +9,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       format.html # デフォルトのHTMLビュー
+      format.rss  # GET /news.rss
       format.json {
         # JSON レスポンス時は variant を無視する
         # rack-user_agent gem による variant 設定が JSON レスポンスに影響しないようにする
