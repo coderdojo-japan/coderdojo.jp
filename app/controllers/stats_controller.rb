@@ -123,9 +123,10 @@ class StatsController < ApplicationController
     end
 
     @data_by_prefecture = {}
+    counters_by_prefecture = Dojo.active.group(:prefecture_id).sum(:counter)
     Prefecture.order(:id).each do |p|
       prefecture_name = @lang == 'en' ? helpers.prefecture_name_in_english(p.name) : p.name
-      @data_by_prefecture[prefecture_name] = Dojo.active.where(prefecture_id: p.id).sum(:counter)
+      @data_by_prefecture[prefecture_name] = counters_by_prefecture.fetch(p.id, 0)
     end
     @data_by_prefecture_count = @data_by_prefecture.select{|k,v| v>0}.count
 

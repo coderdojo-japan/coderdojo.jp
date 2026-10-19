@@ -32,6 +32,28 @@ RSpec.describe "Stats", type: :request do
       expect(json['active_dojos']).to eq(Dojo.active.sum(:counter))
     end
 
+    it "都道府県ごとのアクティブな道場数を、道場の無い都道府県も 0 として返す" do
+      osaka = Prefecture.find_by!(name: '大阪府')
+      create(:dojo, name: '大阪の連名', counter: 2, prefecture_id: osaka.id)
+      create(:dojo, name: '大阪の休止中', counter: 1, prefecture_id: osaka.id, inactivated_at: 1.year.ago)
+      get "/stats.json"
+
+      expect(json['active_dojos_by_prefecture']).to include('大阪府' => 2, '鳥取県' => 0)
+    end
+
+    it "都道府県が増えても、都道府県ごとの道場数を数えるクエリの回数は増えない" do
+      count_queries = lambda do
+        count = 0
+        counter = ->(*, payload) { count += 1 unless payload[:name] == 'SCHEMA' }
+        ActiveSupport::Notifications.subscribed(counter, 'sql.active_record') { get "/stats.json" }
+        count
+      end
+
+      before_count = count_queries.call
+      3.times { |i| Prefecture.create!(name: "テスト県#{i}", region: '関東') }
+      expect(count_queries.call).to eq before_count
+    end
+
     it "期間内の道場数を入れ子で返す" do
       # 集計対象はイベントサービスを持つ Dojo のみ。連名道場は counter 個と数える
       expect(json['dojos_in_period']).to eq({
