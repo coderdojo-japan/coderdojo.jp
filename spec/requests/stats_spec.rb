@@ -50,7 +50,8 @@ RSpec.describe "Stats", type: :request do
       end
 
       before_count = count_queries.call
-      3.times { |i| Prefecture.create!(name: "テスト県#{i}", region: '関東') }
+      # seed は ID を指定して入れるので、新しい DB ではシーケンスが進んでいない。ID も指定する
+      3.times { |i| Prefecture.create!(id: Prefecture.maximum(:id) + 1, name: "テスト県#{i}", region: '関東') }
       expect(count_queries.call).to eq before_count
     end
 
