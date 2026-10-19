@@ -104,12 +104,17 @@ class DojosController < ApplicationController
     # アクティブな道場を先に、非アクティブな道場を後に表示
     dojos = Dojo.active.to_a + Dojo.inactive.to_a
 
+    # 道場ごとの直近のイベントを 1 回のクエリでまとめて引く（道場ごとに引くと道場の数だけクエリが走る）
+    latest_events = EventHistory.select('DISTINCT ON (dojo_id) dojo_id, evented_at, event_url')
+                                .order(:dojo_id, evented_at: :desc)
+                                .index_by(&:dojo_id)
+
     dojos.each do |dojo|
       link_in_note = dojo.note.match(URI.regexp)
       # YYYY-MM-DD、YYYY/MM/DD、または YYYY年MM月DD日 形式の日付を抽出
       date_in_note = dojo.note.match(/(\d{4}-\d{1,2}-\d{1,2}|\d{4}\/\d{1,2}\/\d{1,2}|\d{4}年\d{1,2}月\d{1,2}日)/)
 
-      latest_event = dojo.event_histories.newest.first
+      latest_event = latest_events[dojo.id]
 
       @latest_event_by_dojos << {
         id:         dojo.id,

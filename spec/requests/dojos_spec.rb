@@ -515,6 +515,31 @@ RSpec.describe "Dojos", type: :request do
       expect(newer_index).to be < older_index
     end
 
+    it "道場の数が増えても、直近の開催日を引くクエリの回数は増えない" do
+      count_queries = lambda do
+        count = 0
+        counter = ->(*, payload) { count += 1 unless payload[:name] == 'SCHEMA' }
+        ActiveSupport::Notifications.subscribed(counter, 'sql.active_record') { get activity_dojos_path }
+        count
+      end
+
+      before_count = count_queries.call
+      3.times { |i| create(:dojo, name: "Added Dojo #{i}", inactivated_at: nil) }
+      expect(count_queries.call).to eq before_count
+    end
+
+    it "道場ごとに、いちばん新しいイベントの開催日を表示する" do
+      [[1.year.ago, 'https://example.com/old'], [2.months.ago, 'https://example.com/new']].each_with_index do |(at, url), i|
+        EventHistory.create!(dojo_id: @active_dojo.id, dojo_name: @active_dojo.name, event_url: url,
+                             evented_at: at, participants: 1, service_name: 'static_yml',
+                             service_group_id: 'static', event_id: 100 + i)
+      end
+
+      get activity_dojos_path
+      expect(response.body).to include('https://example.com/new')
+      expect(response.body).not_to include('https://example.com/old')
+    end
+
     it "redirects from old URL /events/latest" do
       get "/events/latest"
       expect(response).to redirect_to(activity_dojos_path)
