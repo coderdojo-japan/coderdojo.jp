@@ -32,5 +32,11 @@ module CoderdojoJp
 
     # Fixture paths
     config.fixture_paths = [Rails.root.join('spec/fixtures')]
+
+    # HTML と JSON を gzip して返す。Heroku のルーターは応答を圧縮しない。
+    # assets は gzip 済みのファイルを ActionDispatch::Static が返すので、対象は HTML と JSON に絞る。
+    # Static は public_file_server が無効な環境では積まれないため、どの環境にもある Rack::Sendfile の後ろに置く。
+    # Rack::ETag より外側に置くこと。内側だと gzip の時刻が入った本文で ETag を計算し、304 が返らなくなる
+    config.middleware.insert_after Rack::Sendfile, Rack::Deflater, include: %w[text/html application/json]
   end
 end
