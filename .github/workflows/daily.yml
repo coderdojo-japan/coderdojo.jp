@@ -86,6 +86,10 @@ jobs:
         heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
         heroku_email:    ${{ secrets.HEROKU_EMAIL    }}
+        # --force を使わない。このアクションは、Heroku の方が新しくて push が拒否されると --force で送り直すので、
+        # 後から終わった古い回が、本番を古いコミットに戻しうる（続けてマージした時など）。
+        # --force なしなら、古い回の push は早送りにならず Heroku に拒否され、その回が失敗する
+        dontuseforce:    true
     # Actions の success は配送の成功でしかない。git push は release フェーズの完了まで
     # 待つが、release が失敗しても push は成功扱いになり、ビルドがスキップされた時も
     # 同じく緑になる (PR #1942)。本番に届いたかはリリースの状態で見る。
