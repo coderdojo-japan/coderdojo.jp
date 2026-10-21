@@ -12,7 +12,7 @@ RSpec.describe 'Docs', type: :request do
       get docs_path
       cover = Nokogiri::HTML(response.body).at('section.cover img')
       expect(cover['src']).to end_with '/img/ogp-docs.jpg'
-      expect(cover['loading']).to be_nil
+      expect(cover['loading']).to eq 'eager'
       expect(cover['fetchpriority']).to eq 'high'
     end
   end

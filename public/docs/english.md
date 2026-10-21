@@ -4,8 +4,8 @@ This page briefly explains about [the CoderDojo community](#about), [its growth 
 
 <div style="padding-top: 30px;">
   <a href='https://map.coderdojo.jp/'>
-    <img class="lazyload" loading='lazy' alt='CoderDojo Map in Japan'
-     src='/spinner.svg' data-src='/img/dojomap_rect.webp' >
+    <img loading='lazy' alt='CoderDojo Map in Japan'
+     src='/img/dojomap_rect.webp' >
   </a>
 </div>
 <div style="text-align:center">Figure: Dojos in Japan (Source: <a href='https://map.coderdojo.jp/'>DojoMap</a>)</div>
@@ -29,8 +29,8 @@ This page briefly explains about [the CoderDojo community](#about), [its growth 
 In the early days of CoderDojo, when it was present in fewer than 10 countries with around 100 dojos, the first Japanese dojo session took place at [OpenSource Cafe](https://medium.com/opensource-cafe) in 2012.
 
 <div style="padding: 10px 0px;">
-  <img class='lazyload' loading='lazy' alt="Photo of the 1st dojo session in OpenSource Cafe"
-   src='/coderdojo-japan_cover.min.webp' data-src="/coderdojo-japan_cover.webp" />
+  <img loading='lazy' alt="Photo of the 1st dojo session in OpenSource Cafe"
+   src='/coderdojo-japan_cover.webp' />
 </div>
 
 <br>
@@ -38,8 +38,8 @@ In the early days of CoderDojo, when it was present in fewer than 10 countries w
 Like in other countires, the CoderDojo community in Japan has been growing steadily year after year. It is now reaching 200 active dojos (see details in the slides below).
 
 <div style="padding: 10px 0px;">
-  <img class='lazyload' loading='lazy' alt="How the CoderDojo community spreads out in Japan"
-   src='/spinner.svg' data-src="/img/dojomap_geo.gif" />
+  <img loading='lazy' alt="How the CoderDojo community spreads out in Japan"
+   src='/img/dojomap_geo.gif' />
 </div>
 
 <div>
@@ -62,8 +62,8 @@ As the CoderDojo community in Japan grew, the demand from companies to support t
 
 <div style="padding: 10px 0px;">
   <a href='/docs/regional-license_en'>
-    <img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
-     src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' />
+    <img loading='lazy' alt="Photo of License Agreement between Foundation and Japan."
+     src='/coderdojo-japan-2016_rect.png' />
   </a>
 </div>
 
@@ -73,15 +73,15 @@ Since incorporated, as one of [the official national partners](https://codeclub.
 
 <div style="padding: 20px 0px;">
   <a href='https://www.pokemon-foundation.or.jp/news/5/'>
-    <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
-     src='/spinner.svg' data-src='/coderdojo-japan-partners.png' />
+    <img loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
+     src='/coderdojo-japan-partners.png' />
   </a>
 </div>
 
 <div style="padding: 20px 0px;">
   <a href='/podcasts/30'>
-    <img class='lazyload' loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
-     src='/spinner.svg' data-src='/podcasts/30.png' />
+    <img loading='lazy' alt="Number of coporate partners of CoderDojo Japan"
+     src='/podcasts/30.png' />
   </a>
 </div>
 
@@ -91,8 +91,8 @@ Since incorporated, as one of [the official national partners](https://codeclub.
 With substantial support from our partners, we continue to contribute to the CoderDojo community in Japan and around the world with [CoderDojo Foundation and Raspberry Pi Foundation](https://web.archive.org/web/20240721015650/https://coderdojo.com/2017/05/26/coderdojo-and-raspberry-pi-join-forces/). If you would like to visit a nearby dojo, please check the map named [DojoMap](https://map.coderdojo.jp/) below to find one. 🗺️
 
 <a href='https://map.coderdojo.jp/'>
-  <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
-   src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
+  <img loading='lazy' alt='DojoMap の掲載例'
+   src='/img/dojomap_ss.webp' >
 </a>
 <center>
   <a href='https://map.coderdojo.jp/'>

@@ -24,28 +24,28 @@
 
 ### 名称は右横か真下に置く
 「CoderDojo」という文をロゴの*右横*に置くことが推奨されますが、ロゴの真下に名称を置いて利用することもできます。
-<img alt="Text Beside/Below Logo" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-samples.png">
+<img alt="Text Beside/Below Logo" loading='lazy' src='/img/logo-samples.png'>
 
 ### 背景が明るい場合は黒文字
 背景が明るい色の場合は、文字を黒色にします。
-<img alt="Text in Black" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-black-text.png">
+<img alt="Text in Black" loading='lazy' src='/img/logo-black-text.png'>
 
 ### 背景が暗い場合は白文字
 背景が暗い色の場合は、文字を白色にします。
-<img alt="Text in White" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-white-text.png">
+<img alt="Text in White" loading='lazy' src='/img/logo-white-text.png'>
 
 ### ロゴの間違った利用方法
 次のような形でロゴを利用しないでください。
-<img alt="Logos not good examples" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-not-good.png">
+<img alt="Logos not good examples" loading='lazy' src='/img/logo-not-good.png'>
 
 ## [🎨️](#original) 独自のロゴを作成する場合 {#original}
 
 上記の点に注意して既存の CoderDojo ロゴをそのままご利用することも可能ですが、**上記のガイドラインに沿って、自由にロゴを作成することも可能**です。
 
 以下は、CoderDojo コミュニティで使われているロゴの良い作成例です。
-<img alt="Logo Examples 1/3" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-examples-1.png">
-<img alt="Logo Examples 2/3" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-examples-2.png">
-<img alt="Logo Examples 3/3" class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/logo-examples-3.png">
+<img alt="Logo Examples 1/3" loading='lazy' src='/img/logo-examples-1.png'>
+<img alt="Logo Examples 2/3" loading='lazy' src='/img/logo-examples-2.png'>
+<img alt="Logo Examples 3/3" loading='lazy' src='/img/logo-examples-3.png'>
 
 <br>
 
@@ -53,8 +53,8 @@
 
 <div style="margin-top: 30px; text-align: center;">図: 日本各地の道場 (<a href='/#dojos'>coderdojo.jp/#dojos</a>) への掲載例</div>
 <a href='/#dojos'>
-  <img class="lazyload" loading='lazy' alt='CoderDojo ロゴの例'
-   src='/spinner.svg' data-src='/img/cover_dojos.png'>
+  <img loading='lazy' alt='CoderDojo ロゴの例'
+   src='/img/cover_dojos.png'>
 </a>
 
 <div class='btn-cover' style="margin: 20px auto;">

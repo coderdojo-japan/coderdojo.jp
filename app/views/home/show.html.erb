@@ -7,7 +7,7 @@
 
 <section class="cover">
   <%# 画面の最初に見える一番大きな要素（LCP）なので、遅延読み込みにせず最初から本番の画像を読む %>
-  <%= image_tag '/coderdojo-japan_cover.webp', alt: 'CoderDojo Japan カバー画像', fetchpriority: 'high' %>
+  <%= image_tag '/coderdojo-japan_cover.webp', alt: 'CoderDojo Japan カバー画像', loading: 'eager', fetchpriority: 'high' %>
 </section>
 
 <section class="introduction text-center list">
@@ -54,7 +54,7 @@
 
   <div class="home-point-thumbnail" style="margin-top: 30px; margin-bottom: 30px;">
     <%= link_to(
-      lazy_image_tag('/video-thumbnail.webp', alt: 'あなたが CoderDojo に来る理由は何ですか？', min: true),
+      image_tag('/video-thumbnail.webp', alt: 'あなたが CoderDojo に来る理由は何ですか？'),
       'https://www.youtube.com/watch?v=5Q3r4XQflFs&list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e&index=1'
     ) %>
   </div>
@@ -116,7 +116,7 @@
 
   <div class="home-point-thumbnail" style="margin-top: 30px; margin-bottom: 15px;">
     <%= link_to(
-      lazy_image_tag('dojocon-japan-2025.webp', alt: 'DojoCon Japan 開催のお知らせ', style: 'margin-bottom: 15px;'),
+      image_tag('dojocon-japan-2025.webp', alt: 'DojoCon Japan 開催のお知らせ', style: 'margin-bottom: 15px;'),
       'https://dojocon2025.coderdojo.jp/'
     ) %>
   </div>
@@ -153,7 +153,7 @@
 
   <div id="map" class="detail-introduction" style="padding-bottom: 10px;">
     <%= link_to(
-      lazy_image_tag('/img/dojomap_ss.webp', alt: '地図から Dojo を探せるアプリ「DojoMap」',
+      image_tag('/img/dojomap_ss.webp', alt: '地図から Dojo を探せるアプリ「DojoMap」',
 		     title: '地図から探せるアプリ「DojoMap」'),
       'https://map.coderdojo.jp/'
     ) %>
@@ -299,7 +299,7 @@
     </p>
     <div class="kata">
       <%= link_to(
-        lazy_image_tag('/kata_cover.webp', alt: 'Kata カバー画像', min: true, style: 'margin-bottom: 15px;'),
+        image_tag('/kata_cover.webp', alt: 'Kata カバー画像', style: 'margin-bottom: 15px;'),
         '/kata'
       ) %>
     </div>

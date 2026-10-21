@@ -9,7 +9,7 @@
       <h1 style="line-height: 1.4em;">
         ポケモン素材の<br class="ignore-pc" />ダウンロード
       </h1>
-      <%= lazy_image_tag '/img/pokemon_scratch.png', alt: 'ポケモン・ワークショップのカバー画像', min: true, style: 'padding-bottom: 50px; border-radius: 4px;' %>
+      <%= image_tag '/img/pokemon_scratch.png', alt: 'ポケモン・ワークショップのカバー画像', loading: 'eager', fetchpriority: 'high', style: 'padding-bottom: 50px; border-radius: 4px;' %>
     </div>
     <p>
       『<%= link_to 'プログラミングでポケモンをうごかしてみよう', pokemon_workshop_path %>』のワークショップで使うポケモン素材です。

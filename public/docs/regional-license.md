@@ -135,7 +135,7 @@ CoderDojo Foundation (当時の名称: `HELLO WORLD Foundation`) と一般社団
 
 本ライセンス契約、および本ライセンス契約またはその主題や形成に起因あるいは関連するいかなる紛争または申し立ては（非契約の紛争または申し立てを含む）、アイルランドの法律に準拠し、アイルランドの法律に従って解釈される。当事者らは、本ライセンス契約に起因あるいは関連するいずれの紛争または申し立てを解決するため、アイルランド裁判所が独占的な管轄権を有することについて取消し不能な形で同意する。
 
-<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/sign_ja.png" alt='調印サイン（日本語）'/>
+<img loading='lazy' src='/img/sign_ja.png' alt='調印サイン（日本語）'/>
 
 <br>
 

@@ -7,7 +7,7 @@ CoderDojo に興味を持って頂きありがとうございます。本資料�
 
 <br>
 
-<img alt="CoderDojo Japan のカバー画像" class='lazyload' loading='lazy' src='/coderdojo-japan_cover.min.webp' data-src="/coderdojo-japan_cover.webp">
+<img alt="CoderDojo Japan のカバー画像" loading='lazy' src='/coderdojo-japan_cover.webp'>
 
 ## ☯️ CoderDojo とは?
 
@@ -15,7 +15,7 @@ CoderDojo は、子どものためのプログラミング道場です。2011年
 
 <br>
 
-<a href='https://map.coderdojo.jp/'><img alt="写真: 地図から Dojo を探す「DojoMap」" class='lazyload' loading='lazy' src='/spinner.svg' data-src='/img/dojomap_rect.webp'></a>
+<a href='https://map.coderdojo.jp/'><img alt="写真: 地図から Dojo を探す「DojoMap」" loading='lazy' src='/img/dojomap_rect.webp'></a>
 <div style="text-align:center">参考: 日本各地にある CoderDojo の様子 (引用元: <a href='https://map.coderdojo.jp/'>DojoMap</a>)</div>
 
 <br>
@@ -24,7 +24,7 @@ CoderDojo の特徴の１つは、幅広い分野の方々によって支えら�
 
 <br>
 
-<img alt="写真: CoderDojo を支える方々の懇親会" class='lazyload' loading='lazy' src='/kata/coderdojo-zero.min.webp' data-src="/kata/coderdojo-zero.webp">
+<img alt="写真: CoderDojo を支える方々の懇親会" loading='lazy' src='/kata/coderdojo-zero.webp'>
 <div style="text-align:center">写真: CoderDojo を支える方々の懇親会の様子</div>
 
 
@@ -34,7 +34,7 @@ CoderDojo の特徴の１つは、幅広い分野の方々によって支えら�
 
 <br>
 
-<img alt="写真: CoderDojo 西宮・梅田における風景" class='lazyload' loading='lazy' src='/kata_cover_plain.min.webp' data-src="/kata_cover_plain.webp">
+<img alt="写真: CoderDojo 西宮・梅田における風景" loading='lazy' src='/kata_cover_plain.webp'>
 <div style="text-align:center">写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</div>
 
 <br>

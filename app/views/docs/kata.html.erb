@@ -9,7 +9,7 @@
 </style>
 
 <!-- Set your background image for this header on the line below. -->
-<header class='kata-header lazyload' loading='lazy' style="padding-top: 100px; background-image: url('/kata_cover_plain.webp')">
+<header class='kata-header' style="padding-top: 100px; background-image: url('/kata_cover_plain.webp')">
   <div class='container'>
     <div class='row'>
       <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
@@ -56,7 +56,7 @@
 	<p>CoderDojo は、子どものためのプログラミング道場です。2011年にアイルランドから始まった<%= link_to '国際的な非営利活動', dojomap_url('/world'), style: "white-space: nowrap;" %>で、日本には<%= link_to "#{@dojo_count}以上", root_path(anchor: 'dojos') %>の道場があります。全国各地で<%= link_to "毎年#{Dojo::NUM_OF_ANNUAL_EVENTS}回以上", stats_path %>開催され、<%= link_to "年間#{Dojo::NUM_OF_ANNUAL_NINJAS}人以上", stats_path %>の子ども達が楽しみながら様々な作品を創っています。</p>
 	<br>
 	<p>各 Dojo は、チャンピオンやメンターと呼ばれる協力者によって自主的に運営されています。プログラマーやデザイナーだけでなく、学生や教員、アーティストやフリーランス、起業家や投資家などの方々が分野横断的に協力しあって、それぞれの Dojo が継続的に運営されています。もちろん、参加者自身や参加者の親が運営に協力する事例も多いです。</p>
-	<%= lazy_image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;', min: true) %>
+	<%= image_tag('/kata/coderdojo-zero.webp', alt: 'CoderDojo を支える方々の写真', style: 'margin-top: 30px; margin-bottom: 40px;') %>
 
 	<h3 id='welcome'>
 	  <a href='#welcome'>✅</a>
@@ -81,7 +81,7 @@
 	</ul>
 
 	<div class='home-point-video'>
-	  <iframe class='lazyload' loading='lazy' width="813" height="457" src="https://www.youtube.com/embed/5Q3r4XQflFs?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e" title="あなたが CoderDojo に来る理由は何ですか？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	  <iframe loading='lazy' width="813" height="457" src="https://www.youtube.com/embed/5Q3r4XQflFs?list=PL94GDfaSQTmKzw7RLjbmUgl8VyfBR9E8e" title="あなたが CoderDojo に来る理由は何ですか？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</div>
 
 	<p>CoderDojo の雰囲気は掴めたでしょうか? もっと詳しく知るには<strong>実際に参加してみるのが近道</strong>です。<%= link_to '日本の道場一覧', root_path(anchor: 'dojos') %></a>や<%= link_to '近日開催の道場', events_path %>、もしくは<%= link_to '地図情報（DojoMap）', dojomap_url %> から最寄りの道場を探してみましょう!</p>
@@ -361,7 +361,7 @@
 	  <a href='#learn'>🎓</a>
 	  学ぶ
 	</h2>
-	<%= lazy_image_tag('/kata/learn.webp', alt: 'CoderDojo 梅田の様子', min: true, style: 'margin-bottom: 30px;') %>
+	<%= image_tag('/kata/learn.webp', alt: 'CoderDojo 梅田の様子', style: 'margin-bottom: 30px;') %>
 
 	<p>CoderDojo は日本各地で<%= link_to "毎年#{Dojo::NUM_OF_ANNUAL_EVENTS}回以上", stats_path %>開催されているため、CoderDojo で得られた知見を元に教材が作られることも多いです。</p>
 	<p>CoderDojo 関係者が制作した教材を中心にまとめてみたので、参加者や運営者、メンターなどのご参考になれば嬉しいです。</p>
@@ -664,7 +664,7 @@
 	  <a href='#challenge'>🏆</a>
 	  腕試し
 	</h2>
-	<%= lazy_image_tag('/kata/challenge.webp', alt: 'DojoCon Japan の様子', min: true, style: 'margin-bottom: 30px;') %>
+	<%= image_tag('/kata/challenge.webp', alt: 'DojoCon Japan の様子', style: 'margin-bottom: 30px;') %>
 
 	<p>プログラミングはやればやるほど日に日に力がついていきます。「プログラミングに少し慣れたかな」と感じたら、腕試しのつもりで<a href='#challenge-contests'>コンテスト</a>や<a href='#challenge-supports'>支援プログラム</a>に挑戦してみてはいかがでしょうか?</p>
 	<p>空手や柔道に大会があるように、プログラミング界隈にも全国の応募者が毎年「ワザ」を磨き合う場があります。海外のコンテストであれば、世界中の同世代と学び合う機会もあります 🤝✨</p>
@@ -870,7 +870,7 @@
 	  <a href='#startup'>☯️</a>
 	  CoderDojo を立ち上げる
 	</h2>
-	<%= lazy_image_tag('/kata/startup.webp', alt: 'CoderDojo 調布の様子', min: true, style: 'margin-bottom: 30px;') %>
+	<%= image_tag('/kata/startup.webp', alt: 'CoderDojo 調布の様子', style: 'margin-bottom: 30px;') %>
 
 	<p>CoderDojo の参加者が自由に作品を創れるように、<strong>CoderDojo という「場」そのものを創ることもできます。</strong></p>
 	<p>とはいえ誰でも今すぐ名乗れるわけではありません。<a href="https://www.j-platpat.inpit.go.jp/c1800/TR/JP-1357811-20170505/5C263F4C39C728E3508F107B2F2A6E9A167FE92DE098F8B2D84E210E18FDA614/49/ja">「CoderDojo」という国際商標</a>を使うためのルールを確認し、認可を得る必要があります。例えば CoderDojo では性別や人種を理由に参加拒否したり、参加者から料金を徴収することができません。もし会場費が掛かる場合であっても、募金やスポンサーなどで費用を工面する必要があります。</p>
@@ -908,7 +908,7 @@
 	  Dojo の設立・初回開催までの流れ<span style="font-size: 20px; font-weight: 400;">（制作: <a href="https://coderdojo-kodaira.github.io/">CoderDojo Kodaira</a>）</span>
 	</h3>
 
-	<%= lazy_image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート', min: true) %>
+	<%= image_tag('/kata/startup-flowchart.webp', alt: 'CoderDojo の立ち上げから開催までのフローチャート') %>
 	<br>
 	<blockquote style='border: 1px solid black; padding: .5em 1.5em; margin: 2em 0em'>
 	  <p>
@@ -950,7 +950,7 @@
 	      <p>
 		📝
 		<%= link_to 'CoderDojo 財団と Raspberry Pi 財団の合併', raspi_url %>に伴い、現在は１つのシステムに統合されています。概要は <a href="https://techcrunch.com/2017/05/26/raspberry-pi-foundation-and-coderdojo-to-code-club-together/">TechCrunch の記事 (英語)</a> からご確認いただけます。
-		<%= link_to lazy_image_tag('/kata/coderdojo-and-raspi.webp', alt: 'Photo of "CoderDojo and Raspberry Pi Join Forces"', style: 'margin: 30px auto 20px'), 'https://www.google.com/search?q=CoderDojo+and+Raspberry+Pi+Join+Forces' %>
+		<%= link_to image_tag('/kata/coderdojo-and-raspi.webp', alt: 'Photo of "CoderDojo and Raspberry Pi Join Forces"', style: 'margin: 30px auto 20px'), 'https://www.google.com/search?q=CoderDojo+and+Raspberry+Pi+Join+Forces' %>
 	      </p>
 	    </blockquote>
 	  </li>
@@ -962,8 +962,8 @@
 		📝
 		CoderDojo では、ラズベリーパイ財団や CoderDojo 財団などが共同で運営している、<a href='https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> <span style='font-size: smaller'>(Code Club コミュニティ)</span> で新規クラブ登録・管理を行っています。
 
-		<!--<%= link_to lazy_image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>-->
-		<%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 10px auto 20px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
+		<!--<%= link_to image_tag('/kata/startup-coderdojo.webp', alt: 'クラブ登録サイトのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/en/coderdojo-community' %>-->
+		<%= link_to image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 10px auto 20px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
 	      </p>
 	    </blockquote>
 	    <br>
@@ -988,7 +988,7 @@
 		    <small>(ボランティアのための子ども安全保護チェックリスト)</small>
 		  </li>
 		</ul>
-		<%= lazy_image_tag('/kata/startup-application.webp', alt: '新規クラブ登録の初期画面', style: 'margin: 10px auto 20px') %>
+		<%= image_tag('/kata/startup-application.webp', alt: '新規クラブ登録の初期画面', style: 'margin: 10px auto 20px') %>
 	      </p>
 	    </blockquote>
 	  </li>
@@ -1002,7 +1002,7 @@
 		なおクラブ登録・管理プラットフォーム「Code Club」には CoderDojo 以外のクラブもあるため、CoderDojo であることを明確にするため<strong>「CoderDojo」という接頭語があると良い</strong>です。詳しくは「<strong><%= link_to 'CoderDojo 命名ガイドライン', doc_path('naming-guidelines') %></strong>」をご参照ください。<br>
 		<br>
 		またこのステップで入力した開催地域の情報が CoderDojo の地図アプリ「<a href='https://map.coderdojo.jp/'>DojoMap</a>」などでも活用されています。
-		<%= link_to lazy_image_tag('/img/dojomap_rect.webp', alt: 'CoderDojo の地図アプリ「DojoMap」のスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://map.coderdojo.jp/' %>
+		<%= link_to image_tag('/img/dojomap_rect.webp', alt: 'CoderDojo の地図アプリ「DojoMap」のスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://map.coderdojo.jp/' %>
 	      </p>
 	    </blockquote>
 	  </li>
@@ -1016,7 +1016,7 @@
 		<br>
 		審査に関するよくある質問と回答については <a href='https://codeclub.org/ja/help'>FAQ ページ</a>からご確認いただけます。また審査状況や審査結果については<a href='https://codeclub.org/ja/help#code-club'>同ページ下部にある連絡フォーム</a>よりお問い合わせください。
 		<br>
-		<%= link_to lazy_image_tag('/kata/startup-contact.webp', alt: 'よくある質問 (FAQ) 内にある問い合わせフォームのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/ja/help#code-club' %>
+		<%= link_to image_tag('/kata/startup-contact.webp', alt: 'よくある質問 (FAQ) 内にある問い合わせフォームのスクショ (一部)', style: 'margin: 30px auto 20px'), 'https://codeclub.org/ja/help#code-club' %>
 	      </p>
 	    </blockquote>
 	  </li>
@@ -1042,7 +1042,7 @@
 	  <a href='#support'>🎁</a>
 	  CoderDojo 運営者向けの支援・資料
 	</h2>
-	<%= lazy_image_tag('/kata/support.webp', alt: 'CoderDojo in Minecraft', min: true, style: 'margin-bottom: 30px') %>
+	<%= image_tag('/kata/support.webp', alt: 'CoderDojo in Minecraft', style: 'margin-bottom: 30px') %>
 
 	<p><a href="/kata#startup">CoderDojo を立ち上げ</a>、承認された Dojo がスムーズに運営できるように、様々な支援・資料が用意されています。CoderDojo 運営者を対象とした<a href='#support-programs'>パートナー法人による支援</a>や、CoderDojo 関係者が作成した<a href='#support-docs'>運営者向け資料</a>が皆さんの Dojo 運営に役立てば嬉しいです 😌💖</p>
 
@@ -1074,7 +1074,7 @@
 	      <small>(提供: <%= link_to 'Raspberry Pi & CoderDojo Foundation', raspi_url %>)</small>
 	    </h4>
 	    <p><%= link_to 'ラズベリーパイ財団や CoderDojo 財団', raspi_url %>などが共同で運営している、<a href='https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan'>CoderDojo を含む世界中の非営利 Club コミュニティ</a> <span style='font-size: smaller'>(Code Club コミュニティ)</span> 関係者が集まる連絡網「<b><a href='https://codeclub.org/en/slack'>Code Club Slack</a></b>」があります。英語でのコミュニケーションとなりますが世界中の運営者とも情報交換できる場ですので、よければ<b><a href='https://codeclub.org/en/slack'>コチラ</a></b>から申請してみてください。</p>
-	    <%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 5px auto 30px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
+	    <%= link_to image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 5px auto 30px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
 	    <br>
 	  </li>
 	  <li>
@@ -1450,7 +1450,7 @@
 	  <a href='#faq'>✅</a>
 	  FAQ
 	</h2>
-	<%= lazy_image_tag('/kata/faq.webp', alt: '統計情報：参加者数の推移', min: true, style: 'margin-bottom: 30px;') %>
+	<%= image_tag('/kata/faq.webp', alt: '統計情報：参加者数の推移', style: 'margin-bottom: 30px;') %>
 
 	<p>よくある質問を本項にまとめています。ご参考になれば幸いです 😸</p>
 	<br>
@@ -1526,7 +1526,7 @@
 	    <h4 id='q-kata-abroad'>Q. 海外の CoderDojo に参加してみることはできますか?</h4>
 	    <p>CoderDojo コミュニティには地域ごとに <%= link_to 'CoderDojo Japan', doc_path('about') %> のような公式法人（National Partners）があります。公式法人がある地域は比較的活発な地域となっていますので、下記ページから興味ある地域の公式法人にコンタクトしてみると良いかもしれません。</p>
 	    <p><b><a href="https://codeclub.org/en/our-partners#:~:text=National%20Partners">🌐 National Partners - Raspberry Pi Foundation</a></b></p>
-	    <%= link_to lazy_image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 5px auto 30px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
+	    <%= link_to image_tag('/kata/startup-partners.webp', alt: 'National Partners (一部)', style: 'margin: 5px auto 30px'), 'https://codeclub.org/en/our-partners#:~:text=CoderDojo%20Japan' %>
 	    <br>
 	  </li>
 	  <li>
