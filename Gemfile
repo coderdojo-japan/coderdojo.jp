@@ -63,7 +63,7 @@ end
 
 group :development, :test do
   gem 'rake'
-  gem 'rspec-rails', '~> 6.1.1'
+  gem 'rspec-rails', '~> 8.0.4'
   gem 'rspec-retry'
 
   gem 'capybara'
