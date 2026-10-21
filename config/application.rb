@@ -11,6 +11,10 @@ module CoderdojoJp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.1
 
+    # image_tag の画像は、HTML 標準の loading="lazy" で遅延読み込みする。
+    # 画面の最初に見える画像（カバー画像など）は、ビューで loading: 'eager' を指定する
+    config.action_view.image_loading = 'lazy'
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.

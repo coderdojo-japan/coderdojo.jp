@@ -9,8 +9,8 @@ CoderDojo は、主に7〜17歳を対象とした子どものためのプログ�
 
 <div style="margin: 40px auto 40px;">
   <a href='https://map.coderdojo.jp/'>
-    <img class='lazyload' loading='lazy' alt="図: 地図から Dojo を探す「DojoMap」" 
-         style='margin-bottom: 10px' src='/spinner.svg' data-src='/img/dojomap_rect.webp'>
+    <img loading='lazy' alt="図: 地図から Dojo を探す「DojoMap」" 
+         style='margin-bottom: 10px' src='/img/dojomap_rect.webp'>
   </a>
   <center>図: 地図から Dojo を探す「<a href='https://map.coderdojo.jp/'>DojoMap</a>」</center>
 </div>
@@ -19,8 +19,8 @@ CoderDojo は、主に7〜17歳を対象とした子どものためのプログ�
 
 
 <div style="margin: 40px auto 40px;">
-  <img class='lazyload' loading='lazy' alt='写真: 日本で初めての CoderDojo 開催の様子'
-       style='margin-bottom: 10px;' src='coderdojo-japan_cover.min.webp' data-src="coderdojo-japan_cover.webp" />
+  <img loading='lazy' alt='写真: 日本で初めての CoderDojo 開催の様子'
+       style='margin-bottom: 10px;' src='coderdojo-japan_cover.webp' />
   <center>写真: 日本で初めての CoderDojo 開催の様子</center>
 </div>
 
@@ -28,8 +28,8 @@ CoderDojoの普及に伴い、個人だけでなく法人とも連携しやす�
 
 <div>
   <a href='https://news.coderdojo.jp/2021/04/23/programming-with-pokemon/'>
-    <img class='lazyload' loading='lazy' style='margin: 40px auto 10px;'
-         src='/spinner.svg' data-src="/img/partners.png" alt="写真: パートナー法人の年次推移" />
+    <img loading='lazy' style='margin: 40px auto 10px;'
+         src='/img/partners.png' alt="写真: パートナー法人の年次推移" />
   </a>
   <center>
     図: パートナー法人の年次推移
@@ -45,8 +45,8 @@ CoderDojoの普及に伴い、個人だけでなく法人とも連携しやす�
 CoderDojo の特徴は、様々な業界で働いている方々が協力して築き上げる、非営利コミュニティである点です。CoderDojo の黎明期は技術者が比較的多かったのですが、現在は技術者だけでなく、デザイナーやマーケター、学生や研究者、教育者や経営者などにも広がりを見せています。
 
 <div>
-  <img class='lazyload' loading='lazy' style="margin: 40px auto 10px;"
-       src='/spinner.svg' data-src="/kata/coderdojo-zero.webp" alt="写真: CoderDojo の運営者向けイベントの様子" />
+  <img loading='lazy' style="margin: 40px auto 10px;"
+       src='/kata/coderdojo-zero.webp' alt="写真: CoderDojo の運営者向けイベントの様子" />
   <center>写真: CoderDojo の<a href='https://takadanobaba.keizai.biz/headline/187/'>運営者向けイベント</a>の様子</center>
 </div>
 
@@ -55,8 +55,8 @@ CoderDojo の特徴は、様々な業界で働いている方々が協力して�
 CoderDojo には統一されたカリキュラムがなく、代わりに子ども達の作りたいモノを後押しします。例えばアドバイスを求められたときに一緒に考えたり、子ども同士で作品を発表しあう機会を設けたりなど、参加者の自発的な学びや参加者同士の学び合いを推奨しています。このため多くの CoderDojo は、子ども達が自身の興味・関心を追究する『広場』のような場所となっています。
 
 <div style="margin: 40px auto 40px;">
-  <img class='lazyload' loading='lazy' alt="写真: CoderDojo 西宮・梅田における風景"
-       style='margin-bottom: 10px;' src='/kata_cover_plain.min.webp' data-src="/kata_cover_plain.webp" />
+  <img loading='lazy' alt="写真: CoderDojo 西宮・梅田における風景"
+       style='margin-bottom: 10px;' src='/kata_cover_plain.webp' />
   <center>写真: <a href="http://coderdojo-nishinomiya.info/">CoderDojo 西宮・梅田</a>における風景</center>
 </div>
 
@@ -67,8 +67,8 @@ CoderDojo には統一されたカリキュラムがなく、代わりに子ど�
 CoderDojo コミュニティは日本でも2012年から少しずつ広がっていき、現在は[{{ NUM_OF_JAPAN_DOJOS }}以上の道場](/#dojos)が各地域で活動しています。
 
 <div style="margin: 40px auto 40px;">
-  <img class='lazyload' loading='lazy' alt="図: CoderDojo が各地域に広がっていく様子"
-       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-1.gif" />
+  <img loading='lazy' alt="図: CoderDojo が各地域に広がっていく様子"
+       style='margin-bottom: 10px;' src='/stats-1.gif' />
   <center>図: CoderDojo が各地域に広がっていく様子 (<a href='https://jp.quora.com/CoderDojoは日本でどのようにして広まっていきいましたか'>引用元</a>)</center>
 </div>
 
@@ -76,16 +76,16 @@ CoderDojo コミュニティは日本でも2012年から少しずつ広がって
 CoderDojo は全国各地で毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上、累計{{ NUM_OF_TOTAL_EVENTS }}回以上のイベントが開催されています。
 
 <div style="margin: 40px auto 40px;">
-  <img class='lazyload' loading='lazy' alt="図: Dojo 開催回数の年次推移"
-       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-2.webp" />
+  <img loading='lazy' alt="図: Dojo 開催回数の年次推移"
+       style='margin-bottom: 10px;' src='/stats-2.webp' />
   <center>図: Dojo 開催回数の年次推移</center>
 </div>
 
 年間では延べ{{ NUM_OF_ANNUAL_NINJAS }}人以上の子ども達が参加し、これまでの累計の延べ参加者数は{{ NUM_OF_TOTAL_NINJAS }}人になります。
 
 <div style="margin: 40px auto 40px;">
-  <img class='lazyload' loading='lazy' alt="図: Dojo 参加者数の年次推移"
-       style='margin-bottom: 10px;' src='/spinner.svg' data-src="/stats-3.webp" />
+  <img loading='lazy' alt="図: Dojo 参加者数の年次推移"
+       style='margin-bottom: 10px;' src='/stats-3.webp' />
   <center>図: Dojo 参加者数の年次推移</center>
 </div>
 
@@ -102,7 +102,7 @@ CoderDojo は全国各地で毎年{{ NUM_OF_ANNUAL_EVENTS }}回以上、累計{{
 中には、CoderDojo を Google 検索や図書館などと組み合わせて学ぶ参加者もいます。
 
 <div style="padding: 40px 0px;">
-  <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/coderdojo-mitoujr.png" alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
+  <a href="https://speakerdeck.com/yasulab/coderdojo-japan-2018?slide=45"><img loading='lazy' src='/img/coderdojo-mitoujr.png' alt="写真: CoderDojo 参加者が未踏ジュニアで発表している様子" /></a>
   <center>写真: CoderDojo コミュニティについて小学生 (当時) が発表していた様子</center>
 </div>
 -->
@@ -165,7 +165,7 @@ info@coderdojo.jp
   - 例3: [CoderDojo コミュニティ向けポッドキャスト「DojoCast」への出演](/podcasts/23) <br><br>
 - `C:` CoderDojo Japan 公式Webサイトのトップページに、ロゴ画像を掲載できます
 
-<img class='lazyload' loading='lazy' src='/spinner.svg' data-src="/img/partners-on-web.png" alt="図: 公式Webサイトに掲載するパートナー紹介例" />
+<img loading='lazy' src='/img/partners-on-web.png' alt="図: 公式Webサイトに掲載するパートナー紹介例" />
 <center>図: <a href='/#partners'>公式Webサイト</a>に掲載するパートナー紹介例</center>
 
 

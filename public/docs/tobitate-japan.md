@@ -7,8 +7,8 @@
 高校生・高専生・大学生を対象とした文科省主催の取り組みで、返済不要の奨学金や研修など通して **好きなこと** で留学ができるプログラムです。
 
 <a href='#example'>
-  <img class="lazyload img-responsive center-block" alt="CoderDojo 留学 - Supported by トビタテ！留学 JAPAN"
-       style="width: 90%; margin: 50px auto;" data-src="/docs/tobitate-coderdojo-1.webp" loading="lazy" src="/spinner.svg"/>
+  <img class="img-responsive center-block" alt="CoderDojo 留学 - Supported by トビタテ！留学 JAPAN"
+       style="width: 90%; margin: 50px auto;" loading="lazy" src="/docs/tobitate-coderdojo-1.webp"/>
 </a>
 
 <br>
@@ -31,8 +31,8 @@
 ## [🌐](#example) CoderDojo 留学の例 {#example}
 
 <a href='https://www.docswell.com/s/tuntun19/5MXX8X-DojoCon2024/1'>
-  <img class="lazyload img-responsive center-block" alt="英語が苦手な人がアイルランドで CoderDojo に参加した話"
-       style="width: 100%; margin: 30px -10px; padding: 0px 0px;" data-src="/docs/tobitate-coderdojo-2.webp" loading="lazy" src="/spinner.svg"/>
+  <img class="img-responsive center-block" alt="英語が苦手な人がアイルランドで CoderDojo に参加した話"
+       style="width: 100%; margin: 30px -10px; padding: 0px 0px;" loading="lazy" src="/docs/tobitate-coderdojo-2.webp"/>
 </a>
 
 ### [&raquo; スライド資料を見る](https://www.docswell.com/s/tuntun19/5MXX8X-DojoCon2024/1) / [&raquo; 文部科学省の紹介ページを見る](https://tobitate-mext.jasso.go.jp/zukan/detail-2999)

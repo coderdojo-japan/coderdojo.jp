@@ -11,14 +11,14 @@ CoderDojo として承認されたら、Dojo 情報を coderdojo.jp に掲載す
 
 <div style="margin-top: 30px; text-align: center;">図1: 日本各地の道場 (<a href='/#dojos'>coderdojo.jp/#dojos</a>) への掲載例</div>
 <a href='/#dojos'>
-  <img class="lazyload" loading='lazy' alt='CoderDojo 情報の掲載例'
-   src='/spinner.svg' data-src='/img/cover_dojos.png'>
+  <img loading='lazy' alt='CoderDojo 情報の掲載例'
+   src='/img/cover_dojos.png'>
 </a>
 
 <div style="margin-top: 30px; text-align: center;">図2: DojoMap (<a href='https://map.coderdojo.jp/'>map.coderdojo.jp</a>) への掲載例</div>
 <a href='https://map.coderdojo.jp/'>
-  <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
-   src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
+  <img loading='lazy' alt='DojoMap の掲載例'
+   src='/img/dojomap_ss.webp' >
 </a>
 
 <br>

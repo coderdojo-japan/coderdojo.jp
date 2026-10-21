@@ -4,7 +4,7 @@
 <% provide(:meta_image, '/img/ogp-events.jpeg') %>
 
 <section class="cover">
-  <%= lazy_image_tag('/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', min: true) %>
+  <%= image_tag('/events_cover.jpg', alt: 'Cover Photo on Upcoming Events', loading: 'eager', fetchpriority: 'high') %>
 </section>
 
 <section id="events" class="text-center" style="margin-bottom: 100px;">

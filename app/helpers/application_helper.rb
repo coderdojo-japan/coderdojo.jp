@@ -77,27 +77,6 @@ module ApplicationHelper
     request.path.starts_with? "/kata"
   end
 
-  # 画像を aFarkas/lazysizes 経由で遅延読み込みする
-  # cf. https://github.com/aFarkas/lazysizes
-  def lazy_image_tag(source, options={})
-    options['data-src'] = asset_path(source)
-    options['loading']  = 'lazy' # Optimize if available
-    options[:class].blank? ?
-      options[:class] = "lazyload" :
-      options[:class] = "lazyload #{options[:class]}"
-
-    if options[:min] == true
-      # Use minified image path: foo.png -> foo.min.png
-      image_tag(asset_path(source.split('.').join('.min.')), options)
-    elsif !options[:min].blank?
-      # The minified path above can be overridden if path is given.
-      image_tag(asset_path(options[:min]), options)
-    else
-      # Default minified image is spinner.
-      image_tag(asset_path('/spinner.svg'), options)
-    end
-  end
-
   def welcome_path(options={anchor: 'welcome'}); root_path(options); end
   def news_path   (options={anchor: 'news'});    root_path(options); end
 

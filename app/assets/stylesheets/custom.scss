@@ -84,16 +84,6 @@ img.emoji {
   border-radius: 0px;
 }
 
-/* Lazyload with fade animation */
-.lazyload,
-.lazyloading {
-	opacity: 6;
-}
-.lazyloaded {
-	opacity: 1;
-	transition: opacity 300ms;
-}
-
 /* Wide Cover Photo (used by DojoCast, News, Docs, etc.) */
 .cover-wide {
   border-radius: 0px;

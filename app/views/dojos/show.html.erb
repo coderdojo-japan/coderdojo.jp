@@ -4,7 +4,7 @@
 <% provide :meta_image, "/img/ogp-events.jpeg" %>
 
 <section class="cover">
-  <%= lazy_image_tag "/events_cover.jpg", alt: "Cover Photo on Upcoming Events", min: true %>
+  <%= image_tag "/events_cover.jpg", alt: "Cover Photo on Upcoming Events", loading: 'eager', fetchpriority: 'high' %>
 </section>
 
 <section id="events" class="text-center" style="margin-bottom: 100px;">
@@ -12,7 +12,7 @@
   <h1>☯️
     CoderDojo <%= @dojo.name %> - 統計情報
   </h1>
-  <%= link_to lazy_image_tag(@dojo.logo, alt: "CoderDojo #{@dojo.name}", class: 'dojo-picture'), @dojo.url,
+  <%= link_to image_tag(@dojo.logo, alt: "CoderDojo #{@dojo.name}", class: 'dojo-picture'), @dojo.url,
               class: 'dojo-picture-link', target: "_blank", rel: "external noopener" %>
   <p style="margin: 0 0px 40px 10px; line-height: 1.5em;">
     <%= link_to "CoderDojo #{@dojo[:name]}", @dojo[:url] %>に関する<br class='ignore-pc'>公開されている統計情報をまとめたページです。

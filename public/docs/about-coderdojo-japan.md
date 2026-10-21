@@ -45,8 +45,8 @@
 CoderDojo は、主に7〜17歳を対象とした子どものためのプログラミング道場です。2011年にアイルランドから始まった国際的な非営利活動で、**日本には{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上の道場**が各地域で活動しています。
 
 <a href='https://map.coderdojo.jp/'>
-  <img class="lazyload" loading='lazy' alt='DojoMap の掲載例'
-   src='/spinner.svg' data-src='/img/dojomap_ss.webp' >
+  <img loading='lazy' alt='DojoMap の掲載例'
+   src='/img/dojomap_ss.webp' >
 </a>
 <center>
   <a href='https://map.coderdojo.jp/'>
@@ -137,7 +137,7 @@ info@coderdojo.jp
 
 <br>
 
-<a href='https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html'><img class="lazyload" src='/coderdojo-japan-2016.min.webp' data-src="/coderdojo-japan-2016.webp" alt='CoderDojo Japan 設立時の写真 with CoderDojo Foundation' /></a>
+<a href='https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html'><img loading='lazy' src='/coderdojo-japan-2016.webp' alt='CoderDojo Japan 設立時の写真 with CoderDojo Foundation' /></a>
 
 <br>
 
@@ -166,7 +166,7 @@ info@coderdojo.jp
 
 ### ケンブリッジ大学で日本の活動を共有している写真
 <a href='https://dojocon2016.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html'>
-  <img class="lazyload" src='/coderdojo-japan-at-cambridge2016.min.webp' data-src="/coderdojo-japan-at-cambridge.webp" alt='ケンブリッジ大学で日本の活動を共有している写真' />
+  <img loading='lazy' src='/coderdojo-japan-at-cambridge.webp' alt='ケンブリッジ大学で日本の活動を共有している写真' />
 </a>
 
 
@@ -194,7 +194,7 @@ CoderDojo Japan では、定期的にオンラインでミーティングを実�
 <div class="home-point-video">
   <iframe width="100%" frameborder="0" src="https://www.youtube.com/embed/fcIVHHeKQLQ?rel=0" allowfullscreen></iframe>
 </div>
-<a href="/podcasts/19"><img class="lazyload" data-src="/img/DojoCast_019_shownote.png" /></a>
+<a href="/podcasts/19"><img loading='lazy' src='/img/DojoCast_019_shownote.png' /></a>
 -->
 
 

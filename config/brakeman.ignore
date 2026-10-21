@@ -91,13 +91,13 @@
     {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 4,
-      "fingerprint": "b29f98f4da690ffb7c663390c21db3a71174dae17d06234deab9d6655af6babe",
+      "fingerprint": "9c96faffc868e69e5dffaeadbe6b6c462669df22f704359cea9056ac52a92af8",
       "check_name": "LinkToHref",
       "message": "Potentially unsafe model attribute in `link_to` href",
       "file": "app/views/shared/_dojo.html.erb",
       "line": 3,
       "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
-      "code": "link_to(lazy_image_tag(Dojo.new.logo, :alt => (\"CoderDojo #{Dojo.new.name}\"), :class => \"dojo-picture\"), Dojo.new.url, :target => \"_blank\", :rel => \"external noopener\")",
+      "code": "link_to(image_tag(Dojo.new.logo, :alt => (\"CoderDojo #{Dojo.new.name}\"), :class => \"dojo-picture\"), Dojo.new.url, :target => \"_blank\", :rel => \"external noopener\")",
       "render_path": [
         {
           "type": "controller",
@@ -179,13 +179,13 @@
     {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 4,
-      "fingerprint": "e86b8054ce40ae9caeeafa36440f0f982cd6a57d8d54dc772334a8ac70390b3a",
+      "fingerprint": "b6d3e3a1527d6f3f0183dcc63b8c6e8e23b39d4eb07a76085b27dac9ff9e6283",
       "check_name": "LinkToHref",
       "message": "Potentially unsafe model attribute in `link_to` href",
       "file": "app/views/dojos/show.html.erb",
       "line": 15,
       "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
-      "code": "link_to(lazy_image_tag(Dojo.find(params[:id]).logo, :alt => (\"CoderDojo #{Dojo.find(params[:id]).name}\"), :class => \"dojo-picture\"), Dojo.find(params[:id]).url, :class => \"dojo-picture-link\", :target => \"_blank\", :rel => \"external noopener\")",
+      "code": "link_to(image_tag(Dojo.find(params[:id]).logo, :alt => (\"CoderDojo #{Dojo.find(params[:id]).name}\"), :class => \"dojo-picture\"), Dojo.find(params[:id]).url, :class => \"dojo-picture-link\", :target => \"_blank\", :rel => \"external noopener\")",
       "render_path": [
         {
           "type": "controller",

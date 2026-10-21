@@ -16,7 +16,7 @@ RSpec.feature "Top", type: :feature do
       visit "/"
       cover = find('section.cover img')
       expect(cover[:src]).to end_with '/coderdojo-japan_cover.webp'
-      expect(cover[:loading]).to be_nil
+      expect(cover[:loading]).to eq 'eager'
       expect(cover[:fetchpriority]).to eq 'high'
     end
   end
