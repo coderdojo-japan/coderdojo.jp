@@ -2,12 +2,13 @@ require 'rails_helper'
 
 # 画像の遅延読み込みは、JS のライブラリ（lazysizes）ではなく HTML 標準の loading="lazy" で行う
 RSpec.describe '画像の遅延読み込み', type: :request do
-  it 'image_tag の画像は、既定で loading="lazy" になる' do
+  it 'image_tag の画像は、既定で loading="lazy" になり、最初から本番の画像を src に持つ' do
     get root_path
-    images = Nokogiri::HTML(response.body).css('img')
+    logo = Nokogiri::HTML(response.body).at('#header-logo img')
 
-    expect(images).not_to be_empty
-    expect(images.select { it['loading'] == 'lazy' }).not_to be_empty
+    expect(logo['loading']).to eq 'lazy'
+    expect(logo['src']).to end_with '/img/header-logo.png'
+    expect(logo['data-src']).to be_nil
   end
 
   it '画面の最初に見えるカバー画像は、遅延読み込みにしない' do
