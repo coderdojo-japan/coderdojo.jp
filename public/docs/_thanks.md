@@ -1,6 +1,6 @@
 # 💌 お問い合わせありがとうございます 
 
-<img class='lazyload' loading='lazy' style='margin: 40px auto;width:120px;display:block;border-radius:0;' src='/spinner.svg' data-src='/img/mail-icon.png' alt='お問い合わせありがとうございます' />
+<img fetchpriority='high' style='margin: 40px auto;width:120px;display:block;border-radius:0;' src='/img/mail-icon.png' alt='お問い合わせありがとうございます' />
 
 <blockquote>
   <p style="font-size: 80%">

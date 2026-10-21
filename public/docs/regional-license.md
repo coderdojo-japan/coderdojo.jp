@@ -1,6 +1,6 @@
 # 🌐 地域ライセンス契約書
 
-<img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+<img fetchpriority='high' alt="Photo of License Agreement between Foundation and Japan." src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
 
 CoderDojo Foundation (当時の名称: `HELLO WORLD Foundation`) と一般社団法人 CoderDojo Japan (英名: `CoderDojo Japan Association`) の間で締結された地域ライセンス契約書です。2016年の契約当時の写しとなります。
 

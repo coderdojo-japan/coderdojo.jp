@@ -6,6 +6,33 @@ RSpec.describe 'Docs', type: :request do
       get docs_path
       expect(response.body).to include(Document.all.last.title)
     end
+
+    # カバー画像は画面の最初に見える一番大きな要素（LCP）なので、遅延読み込みにしない
+    it 'loads the cover image first' do
+      get docs_path
+      cover = Nokogiri::HTML(response.body).at('section.cover img')
+      expect(cover['src']).to end_with '/img/ogp-docs.jpg'
+      expect(cover['loading']).to be_nil
+      expect(cover['fetchpriority']).to eq 'high'
+    end
+  end
+
+  describe 'GET /docs/:id のカバー画像' do
+    subject(:html) do
+      get doc_path('about-coderdojo-japan')
+      Nokogiri::HTML(response.body)
+    end
+
+    it '見出しの直後のカバー画像は、遅延読み込みにせず最初から本番の画像を読む' do
+      cover = html.at('section.doc img')
+      expect(cover['src']).to end_with '/coderdojo-japan_mix-cover.webp'
+      expect(cover['loading']).to be_nil
+      expect(cover['fetchpriority']).to eq 'high'
+    end
+
+    it 'OGP の画像は、カバー画像から作る' do
+      expect(html.at('meta[property="og:image"]')['content']).to end_with '/coderdojo-japan_mix-cover.png'
+    end
   end
 
   describe 'GET /docs/:id' do

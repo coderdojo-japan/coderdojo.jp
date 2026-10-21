@@ -1,6 +1,6 @@
 # 🌐 CoderDojo Regional License
 
-<img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+<img fetchpriority='high' alt="Photo of License Agreement between Foundation and Japan." src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
 
 Regional license agreement between CoderDojo Foundation and CoderDojo Japan Association, dated August 27th, 2016.
 
