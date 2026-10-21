@@ -10,5 +10,14 @@ RSpec.feature "Top", type: :feature do
       expect(page).to have_text  '問い合わせ'
       expect(page).to have_text  '一般社団法人'
     end
+
+    # カバー画像は画面の最初に見える一番大きな要素（LCP）なので、遅延読み込みにせず最初から本番の画像を読む
+    scenario "The cover image is loaded first" do
+      visit "/"
+      cover = find('section.cover img')
+      expect(cover[:src]).to end_with '/coderdojo-japan_cover.webp'
+      expect(cover[:loading]).to be_nil
+      expect(cover[:fetchpriority]).to eq 'high'
+    end
   end
 end

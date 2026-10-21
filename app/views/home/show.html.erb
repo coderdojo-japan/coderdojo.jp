@@ -6,7 +6,8 @@
 </div>
 
 <section class="cover">
-  <%= lazy_image_tag '/coderdojo-japan_cover.webp', alt: 'CoderDojo Japan カバー画像', min: true %>
+  <%# 画面の最初に見える一番大きな要素（LCP）なので、遅延読み込みにせず最初から本番の画像を読む %>
+  <%= image_tag '/coderdojo-japan_cover.webp', alt: 'CoderDojo Japan カバー画像', fetchpriority: 'high' %>
 </section>
 
 <section class="introduction text-center list">
@@ -157,7 +158,7 @@
       'https://map.coderdojo.jp/'
     ) %>
   </div>
-  
+
   <p style="margin: 0 30px 20px 30px;">
     近くの道場を探してみましょう！
     <br class="ignore-sp">
@@ -211,7 +212,7 @@
   </ul>
 
   <%= render 'shared/dojo_letter_signup' %>
-  
+
   <div class="btn-cover" style="margin-top: 40px;">
     <a class="btn-blue" href="<%= news_index_path %>">
       <i class="far fa-newspaper"></i>
