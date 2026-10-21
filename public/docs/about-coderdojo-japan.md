@@ -1,6 +1,6 @@
 # ☯️ 一般社団法人 CoderDojo Japan とは {#top}
 
-<img class="lazyload" src='/coderdojo-japan_mix-cover.min.webp' data-src="/coderdojo-japan_mix-cover.webp" alt='CoderDojo Japan カバー画像' style='margin-bottom: 30px;' />
+<img fetchpriority='high' src='/coderdojo-japan_mix-cover.webp' alt='CoderDojo Japan カバー画像' style='margin-bottom: 30px;' />
 
 <p id='teikan'>一般社団法人 CoderDojo Japan では、全国{{ NUM_OF_JAPAN_DOJOS }}ヶ所以上ある非営利のプログラミング道場「CoderDojo」の活動の輪を広げ、より一層楽しいものにしていくために、以下の事業を行っております。</p>
 

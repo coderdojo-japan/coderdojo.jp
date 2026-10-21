@@ -4,7 +4,8 @@
 <% provide :meta_image, "/img/ogp-docs.jpg" %>
 
 <section class="cover">
-  <%= lazy_image_tag '/img/ogp-docs.jpg', alt: 'Cover Photo on Docs', min: false, class: 'cover-wide' %>
+  <%# 画面の最初に見える一番大きな要素（LCP）なので、遅延読み込みにせず最初から本番の画像を読む %>
+  <%= image_tag '/img/ogp-docs.jpg', alt: 'Cover Photo on Docs', class: 'cover-wide', fetchpriority: 'high' %>
 </section>
 
 <div class='container'>

@@ -1,6 +1,6 @@
 # 🏢 一般社団法人 CoderDojo Japan 定款
 
-<img class='lazyload' loading='lazy' alt='Photo of announcement to found the CoderDojo Japan Association.' src='/spinner.svg' data-src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
+<img fetchpriority='high' alt='Photo of announcement to found the CoderDojo Japan Association.' src='/coderdojo-japan-2016_rect.png' style='padding: 30px 0px;' />
 
 [一般社団法人 CoderDojo Japan](/about) の定款です。2016年の設立当時の写しとなります。
 

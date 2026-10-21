@@ -1,6 +1,6 @@
 # ☯️ DojoCon Japan 開催ガイドライン
 
-<img class='lazyload' loading='lazy' alt="Photo of License Agreement between Foundation and Japan." src='/spinner.svg' data-src='/dojocon-japan_object.webp' style='padding: 0px 0px 40px;' />
+<img fetchpriority='high' alt="Photo of License Agreement between Foundation and Japan." src='/dojocon-japan_object.webp' style='padding: 0px 0px 40px;' />
 
 本記事は、これまでの DojoCon Japan 実行委員長の方々を中心にまとめられた開催ガイドラインです。DojoCon Japan の開催に興味ある方にとってお役に立てば幸いです。
 

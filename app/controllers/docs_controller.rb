@@ -33,7 +33,9 @@ class DocsController < ApplicationController
 
     @content    = Kramdown::Document.new(@doc.content, input: 'GFM').to_html
     @url        = request.url
-    @meta_image = Nokogiri::HTML.parse(@content).at("//img")&.attribute('data-src')&.value || "/img/ogp-docs.jpeg"
+    # 最初の画像を OGP に使う。遅延読み込みの画像は data-src、冒頭のカバー画像のように最初から読む画像は src にある
+    first_image = Nokogiri::HTML.parse(@content).at("//img")
+    @meta_image = first_image&.[]('data-src') || first_image&.[]('src') || "/img/ogp-docs.jpeg"
     if @meta_image.end_with? '.webp'
       # .webp -> .jpg
       # .webp -> .png
