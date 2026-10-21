@@ -1,20 +1,35 @@
-# GitHub Actions の更新を Dependabot に追跡させる設定。
+# Dependabot の定期の更新（version updates）の設定。
 #
-# 未設置だったため actions/checkout が v3/v4 のまま放置され、
-# 「Node.js 20 is deprecated」の警告が出ていた。以降は Dependabot が
-# 更新 PR を出すので、同じ形の陳腐化を防げる。
+# 脆弱性を直す更新（security updates）はこの設定と関係なく、advisory が出るとすぐ PR が出る。
+# ここで決めるのは、それ以外の「新しくする」更新だけ。
 #
-# NOTE: gem のセキュリティ更新は設定ファイル不要で動くため、
-#       ここに bundler を足さなくても既存の挙動は変わらない。
+# - 月 1 回、gem の minor と patch を 1 本の PR にまとめる（major は個別の PR になる）
+# - cooldown: 公開から 7 日経った版だけを提案する。乗っ取られた gem の悪い版は公開直後に見つかって
+#   取り下げられることが多く、7 日あればどの曜日に公開されても週末と平日 5 日をまたぐ
+#   （cooldown は security updates には効かない）
+# - GitHub Actions は、checkout が v3/v4 のまま放置され「Node.js 20 is deprecated」の警告が出ていたので追跡している
 #
-# 経緯（なぜ bundler を含めないか等）は PR #1837 を参照。
+# 経緯は PR #1837（GitHub Actions を追跡する）を参照。
 # https://github.com/coderdojo-japan/coderdojo.jp/pull/1837
 version: 2
 updates:
+  - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+        patterns: ["*"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: "Bump"
     ignore:
