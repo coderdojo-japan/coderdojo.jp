@@ -5,7 +5,7 @@ gem 'bootsnap'
 gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
-gem 'rails', '~> 8.1.0'
+gem 'rails', '~> 8.1.4'
 
 gem 'jbuilder'
 gem 'jquery-rails'
@@ -39,7 +39,7 @@ gem 'kramdown-parser-gfm'
 # https://coderdojo.jp/events
 gem 'faraday'
 gem 'koala'
-gem 'lazy_high_charts', '1.5.8'
+gem 'lazy_high_charts', '1.6.1'
 gem 'connpass_api_v2' # https://github.com/sue445/connpass_api_v2-ruby
 
 # Protect from attacks for Security
