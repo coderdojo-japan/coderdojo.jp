@@ -66,6 +66,11 @@ jobs:
   deploy:
     needs: daily
     if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
+    # 続けてマージされた時に、Heroku へのデプロイが重ならないよう 1 つずつ、待った順に動かす。同じアプリに配る test.yml の deploy も同じ group
+    concurrency:
+      group: deploy-main
+      cancel-in-progress: false
+      queue: max
     runs-on: ubuntu-24.04
 
     steps:
