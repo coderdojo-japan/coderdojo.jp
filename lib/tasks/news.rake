@@ -44,12 +44,17 @@ def fetch_dojo_news_posts(api_endpoint)
     break if page >= Integer(response['X-WP-TotalPages'])
   end
 
+  # 0 件だと合計の 1 割の下限をくぐることがあるので、取得元ごとに止める
+  raise 'WordPress API から取得した記事が 0 件です' if items.empty?
+
   items
 end
 
 # PR TIMES RSS フィードからすべてのプレスリリースを取得するメソッド
 def fetch_prtimes_posts(rss_feed_url)
   feed = RSS::Parser.parse(rss_feed_url, false)
+  raise 'PR TIMES から取得した記事が 0 件です' if feed.items.empty?
+
   feed.items.map do |item|
     published_at = if item.respond_to?(:dc_date) && item.dc_date
                      item.dc_date.in_time_zone('Asia/Tokyo').iso8601
@@ -68,6 +73,8 @@ end
 # DojoCast ポッドキャスト RSS フィードから取得するメソッド
 def fetch_podcast_posts(rss_feed_url)
   feed = RSS::Parser.parse(rss_feed_url, false)
+  raise 'DojoCast から取得したエピソードが 0 件です' if feed.items.empty?
+
   feed.items.map do |item|
     # タイトルの先頭3桁の数字から内部リンクを生成
     # 例: "033 - タイトル" → /podcasts/33
