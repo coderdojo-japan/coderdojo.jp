@@ -2111,6 +2111,20 @@
   - Python
   - JavaScript
   global_club_id: 3b543ede-20e5-4283-a0a6-c342fcb3ffc8
+- id: 360
+  order: '152161'
+  created_at: '2026-10-22'
+  name: 糸魚川
+  prefecture_id: 15
+  logo: "/img/dojos/default.webp"
+  url: https://coderdojo-itoigawa.doorkeeper.jp/
+  description: 糸魚川市で隔月開催
+  tags:
+  - Scratch
+  - Minecraft
+  - kintone
+  - Webサイト
+  global_club_id: 4597e57a-84e9-47ba-a2ec-6bdfb5edbf6a
 - id: 267
   order: '162019'
   created_at: '2021-04-29'
