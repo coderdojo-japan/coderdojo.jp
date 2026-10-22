@@ -329,12 +329,12 @@
     <a href="#map">🗾</a>
     <%= @lang == 'en' ? 'Dojos by Region' : '地域別の道場数' %>
   </h2>
-  
+
   <div style="margin: 20px auto; text-align: center;">
     <a href="<%= dojomap_url %>" style="display: inline-block;">
-      <img src="/img/dojomap_ss.webp" 
-           alt="<%= @lang == 'en' ? 'DojoMap - Map of CoderDojo in Japan' : 'DojoMap - CoderDojo を地図から探す' %>" 
-           style="max-width: 600px; width: 100%;" 
+      <img src="/img/dojomap_ss.webp"
+           alt="<%= @lang == 'en' ? 'DojoMap - Map of CoderDojo in Japan' : 'DojoMap - CoderDojo を地図から探す' %>"
+           style="max-width: 600px; width: 100%;"
            loading="lazy">
     </a>
     <p style="margin-top: 10px;">
@@ -343,9 +343,9 @@
       </a>
     </p>
   </div>
-  
+
   <div class="japan-map">
-    <!-- 
+    <!--
     <p id="japan-map-text" style="margin: 20px auto; font-size: 140%;">
       名前: 道場数
     </p>
@@ -440,8 +440,8 @@
 
 <script>
   $(function(){
-    var areas      = JSON.parse('<%= @data_by_region.to_json.gsub(/&quot;/, "\"") %>');
-    var dataByPref = JSON.parse('<%= @data_by_prefecture.to_json.gsub(/&quot;/, "\"") %>');
+    var areas      = <%= @data_by_region.to_json.html_safe %>;
+    var dataByPref = <%= @data_by_prefecture.to_json.html_safe %>;
 
     $("#japan-map-container").japanMap({
       // NOTE: Tweak stats_controller if you want to tweak map colors
