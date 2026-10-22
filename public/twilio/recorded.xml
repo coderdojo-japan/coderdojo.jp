@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Response>
+  <Say language="ja-JP" voice="woman">
+    メッセージをお預かりしました。
+    お電話、ありがとうございました。
+  </Say>
+
+  <Hangup/>
+</Response>
