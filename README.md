@@ -101,25 +101,6 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
 
 
-<!--
-<div id='howto-develop-docker'></div><br>
-
-### :whale: Docker を利用したセットアップ方法
-
-上記の他、Docker を使ったセットアップ方法もあります。[Docker](https://www.docker.com/community-edition) をインストールし、下記の手順でセットアップしてください 🛠💨
-
-Doorkeeperのイベントを取得するために、[こちらでPublic API Access Tokenを生成](https://manage.doorkeeper.jp/user/oauth/applications)しておく必要があります。
-
-1. 本リポジトリを fork 後、clone します
-1. `.env.sample` をコピーして `.env` にリネームします
-1. `.env`に、環境変数`DOORKEEPER_API_TOKEN=<生成したPublic API Access Token>` を追記します
-1. ターミナルから `$ docker compose up` を実行します
-1. ターミナルから `$ docker compose exec rails bin/setup` を実行します
-1. ブラウザから [localhost:3000](http://localhost:3000) にアクセスします
-1. [coderdojo.jp](https://coderdojo.jp/) と同様のサイトが表示できれば完了です
--->
-  
-
 <div id='howto-develop-ci'></div><br>
 
 ### [:rocket:](#howto-develop-ci) CI/Deploy 構成
