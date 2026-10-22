@@ -10,6 +10,17 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).to include("最新データ")
       expect(response.body).to include("View in English")
     end
+
+    # HAML から ERB へ変えた時に、地図のデータが &quot; のまま埋め込まれて JS で読めなくなっていた
+    it "日本地図のデータを、JS がそのまま読める JSON で埋め込む" do
+      create(:dojo)
+      get "/stats"
+
+      %w[areas dataByPref].each do |name|
+        literal = response.body[/var #{name}\s*=\s*(.+);$/, 1]
+        expect { JSON.parse(literal) }.not_to raise_error, "#{name} を JSON として読めません: #{literal.to_s[0, 80]}"
+      end
+    end
   end
 
   # /stats.json は他リポジトリからも参照される。既存キーは消さず追加のみ行う。
