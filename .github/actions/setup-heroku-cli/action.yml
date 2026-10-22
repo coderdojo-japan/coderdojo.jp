@@ -1,0 +1,23 @@
+name: 'Set up Heroku CLI'
+description: 'akhileshns/heroku-deploy が使う heroku CLI を入れる'
+runs:
+  using: "composite"
+  steps:
+    # heroku CLI が入っているランナーは ubuntu-22.04 だけで、22.04 は 2027年4月17日に廃止される
+    # (actions/runner-images#14254)。22.04 のランナーと同じく Heroku の apt リポジトリから入れる
+    # (actions/runner-images の images/ubuntu/scripts/build/install-heroku.sh)
+    - name: 🟪 Set up Heroku CLI
+      shell: bash
+      run: |
+        curl -fsSL https://cli-assets.heroku.com/channels/stable/apt/release.key \
+          | sudo gpg --batch --yes --dearmor -o /usr/share/keyrings/heroku.gpg
+        echo "deb [signed-by=/usr/share/keyrings/heroku.gpg] https://cli-assets.heroku.com/channels/stable/apt ./" \
+          | sudo tee /etc/apt/sources.list.d/heroku.list > /dev/null
+        # Heroku のリポジトリだけを更新する。スケジューラでは記事などを main に push した後で動くので、
+        # 無関係なリポジトリの不調で落ちると、コミットは入ったのに本番へ届かない
+        sudo apt-get update -qq \
+          -o Dir::Etc::sourcelist=/etc/apt/sources.list.d/heroku.list \
+          -o Dir::Etc::sourceparts=- \
+          -o APT::Get::List-Cleanup=0
+        sudo apt-get install -y -qq heroku
+        heroku --version

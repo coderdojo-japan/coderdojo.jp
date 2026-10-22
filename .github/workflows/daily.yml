@@ -66,15 +66,17 @@ jobs:
   deploy:
     needs: daily
     if: ${{ needs.daily.outputs.FOUND_NEWS == 'true' }}
-    # TODO: ubuntu-latest image needs to install heroku CLI to deploy.
-    # https://github.com/AkhileshNS/heroku-deploy/issues/188
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - name: ☑️ Checkout code
       uses: actions/checkout@v7
       with:
         ref: main
+
+    # heroku-deploy と後続の heroku releases は Heroku CLI を呼ぶが、ubuntu-24.04 のイメージには入っていない
+    - name: 🟪 Set up Heroku CLI
+      uses: ./.github/actions/setup-heroku-cli
 
     - name: 🚀 Deploy to Heroku
       # heroku-deploy は v3 に固定する。v4 は push 先を refs/head/main と組み立てており

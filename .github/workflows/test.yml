@@ -52,11 +52,11 @@ jobs:
   deploy:
     needs: test
     if: github.ref == 'refs/heads/main'
-    # TODO: This workflows depend on Ubuntu version.
-    # https://github.com/AkhileshNS/heroku-deploy/issues/186
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+      # heroku-deploy と後続の heroku releases は Heroku CLI を呼ぶが、ubuntu-24.04 のイメージには入っていない
+      - uses: ./.github/actions/setup-heroku-cli
       # heroku-deploy は v3 に固定する。v4 は push 先を refs/head/main と組み立てており
       # (正しくは refs/heads/main)、Heroku 側が main への push と認識できずに
       # `Pushed to branch other than [main, master], skipping build.` としてビルドを
