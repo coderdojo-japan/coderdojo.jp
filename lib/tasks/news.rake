@@ -25,10 +25,10 @@ def fetch_dojo_news_posts(api_endpoint)
     uri.query = URI.encode_www_form(page: page, per_page: 100, status: 'publish')
 
     response = Net::HTTP.get_response(uri)
-    break unless response.is_a?(Net::HTTPSuccess)
+    # 失敗を空として扱うと、YAML の上書きとデプロイ時の news:upsert で DB から記事が消えるので止める
+    raise "WordPress API から取得できません（ページ #{page}）: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
 
     posts = JSON.parse(response.body)
-    break if posts.empty?
 
     posts.each do |post|
       items << {
@@ -39,6 +39,9 @@ def fetch_dojo_news_posts(api_endpoint)
     end
 
     TASK_LOGGER.info("📄 WordPress API: ページ #{page} から #{posts.size} 件取得")
+
+    # 最後のページの次は 400 が返るので、総ページ数で止める
+    break if page >= Integer(response['X-WP-TotalPages'])
   end
 
   items
