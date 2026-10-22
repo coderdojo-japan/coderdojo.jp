@@ -93,9 +93,8 @@ namespace :news do
     # ロガー設定（ファイル＋コンソール出力）
     TASK_LOGGER.info('==== START news:fetch ====')
 
-    # 1. news.yml を空にする
-    File.write(NEWS_YAML_PATH, [].to_yaml)
-    TASK_LOGGER.info("📄 news.yml をリセットしました")
+    # 1. 前回の件数を覚えておく（取得に失敗した時に、空の news.yml を残さないよう先に消さない）
+    previous_count = File.exist?(NEWS_YAML_PATH) ? Array(YAML.load_file(NEWS_YAML_PATH)).size : 0
 
     # 2. 環境に応じたデータソースから取得
     if Rails.env.test? || Rails.env.staging?
@@ -120,6 +119,13 @@ namespace :news do
       TASK_LOGGER.info("📻 DojoCast から #{podcast_items.size} 件を取得")
 
       items = dojo_news_items + prtimes_items + podcast_items
+    end
+
+    # 取得元が記事の一部しか返さないと、news.yml が縮み、デプロイ時の news:upsert が DB から記事を消す。
+    # 記事の削除で 1〜2 件減ることはあるが、1 割以上減るのは取得の失敗とみなして止める。
+    # 本当に大量に消す時は、db/news.yml を手で編集してコミットする
+    if items.size < previous_count * 0.9
+      raise "取得した記事が前回より大きく減りました（#{previous_count} 件 → #{items.size} 件）。取得元を確かめてください"
     end
 
     # 3. 古い順にソートして ID を付与（ISO 8601 なら文字列のままソート可能）
