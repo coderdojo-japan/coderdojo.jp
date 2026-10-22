@@ -47,6 +47,8 @@ jobs:
 
   run-on-heroku:
     needs: daily
+    # news:fetch が失敗しても（news.coderdojo.jp が落ちている時など）、イベントの集計は続ける
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
