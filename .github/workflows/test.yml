@@ -22,6 +22,7 @@ jobs:
 
     services:
       db:
+        # 本番（Heroku Postgres）と同じメジャー版にする。本番の DB を上げたら、ここも上げる
         image: postgres:17-alpine
         ports:
           - 5432:5432
