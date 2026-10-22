@@ -27,6 +27,13 @@
 ### 以下、Dojo 情報まとめ ###
 ### (dojos.yml の追加順) ###
 
+# 糸魚川（新潟県糸魚川市）
+# Doorkeeper のイベントページが公開されたら group_id を取得してコメントアウトを外す。
+#- dojo_id: 360
+#  name: doorkeeper
+#  group_id: ???
+#  url: https://coderdojo-itoigawa.doorkeeper.jp/
+
 # 東淀川@マナベル（大阪府大阪市東淀川区）- 独自サイトで告知 (毎月第2・第4木曜)
 # イベント管理サービスが判明したら group_id を取得してコメントアウトを外す。
 #- dojo_id: 359
