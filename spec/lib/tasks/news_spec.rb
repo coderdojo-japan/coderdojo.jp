@@ -5,7 +5,10 @@ RSpec.describe 'news:upsert' do
   let(:news_yaml_path) { Rails.root.join('db', 'news.yml') }
   
   before(:all) do
-    # Rakeタスクをロード
+    # NOTE: 登録簿を新しくしてから読む。共有のまま load_tasks を重ねると、
+    #       他の spec が読んだタスクの中身まで重ねて登録され、1 回の invoke で
+    #       タスクが 2 回以上走る（2026年10月23日）
+    Rake.application = Rake::Application.new
     Rails.application.load_tasks
   end
   
