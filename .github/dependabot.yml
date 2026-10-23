@@ -1,12 +1,14 @@
 # Dependabot の定期の更新（version updates）の設定。
 #
-# 脆弱性を直す更新（security updates）はこの設定と関係なく、advisory が出るとすぐ PR が出る。
-# ここで決めるのは、それ以外の「新しくする」更新だけ。
+# 脆弱性を直す更新（security updates）は schedule と cooldown に関係なく、advisory が出るとすぐ PR が出る。
+# ただし ignore は security updates にも効く（公式の dependabot options reference で、ignore には security updates の印がある）。
 #
 # - 月 1 回、gem の minor と patch を 1 本の PR にまとめる（major は個別の PR になる）
 # - cooldown: 公開から 7 日経った版だけを提案する。乗っ取られた gem の悪い版は公開直後に見つかって
 #   取り下げられることが多く、7 日あればどの曜日に公開されても週末と平日 5 日をまたぐ
 #   （cooldown は security updates には効かない）
+# - Rails はグループから外して単独の PR にする。Rails の minor がほかの gem と同じ 1 本の PR に混ざって、
+#   気づかずに上がるのを防ぐため。上げるのは移行の作業として人が扱う
 # - GitHub Actions は、checkout が v3/v4 のまま放置され「Node.js 20 is deprecated」の警告が出ていたので追跡している
 #
 # 経緯は PR #1837（GitHub Actions を追跡する）を参照。
@@ -24,6 +26,7 @@ updates:
         applies-to: version-updates
         update-types: [minor, patch]
         patterns: ["*"]
+        exclude-patterns: ["rails"]
     ignore:
       # lazy_high_charts 1.6 は同梱していた Highcharts の JS（highcharts.js・highcharts-more.js）を外した。
       # app/assets/javascripts/application.js がそれを require しているので、上げると assets が組み立てられず
