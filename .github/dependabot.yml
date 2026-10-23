@@ -8,7 +8,8 @@
 #   取り下げられることが多く、7 日あればどの曜日に公開されても週末と平日 5 日をまたぐ
 #   （cooldown は security updates には効かない）
 # - Rails はグループから外して単独の PR にする。Rails の minor がほかの gem と同じ 1 本の PR に混ざって、
-#   気づかずに上がるのを防ぐため。上げるのは移行の作業として人が扱う
+#   気づかずに上がるのを防ぐため。Rails の更新は止めていない。patch の PR はほかの更新と同じように確かめてマージし、
+#   minor と major の PR は新しい版が出たことの合図として受け取り、移行の作業として人が扱う
 # - GitHub Actions は、checkout が v3/v4 のまま放置され「Node.js 20 is deprecated」の警告が出ていたので追跡している
 #
 # 経緯は PR #1837（GitHub Actions を追跡する）を参照。
