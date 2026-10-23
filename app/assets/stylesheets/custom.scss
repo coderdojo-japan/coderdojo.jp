@@ -1047,6 +1047,11 @@ section {
     display: block;
     width: 100%;
   }
+  // スマホで指で押しやすい高さにし、16px 未満だと iOS が選ぶ時に画面を拡大するので文字を 16px にする
+  select.form__field {
+    min-height: 44px;
+    font-size: 16px;
+  }
   &__submit {
     appearance: none;
     background: $main-blue;

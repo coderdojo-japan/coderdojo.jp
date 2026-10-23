@@ -1,6 +1,4 @@
+# Stretch3 の AI 拡張ブロックの利用申請。個人情報は集めず、どの道場からの申請かだけを残す
 class Stretch3 < ApplicationRecord
-  validates :email,            presence: true
-  validates :parent_name,      presence: true
-  validates :participant_name, presence: true
-  validates :dojo_name,        presence: true
+  belongs_to :dojo
 end
