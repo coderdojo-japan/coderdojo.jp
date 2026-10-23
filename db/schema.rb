@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_23_150000) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_23_160000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
@@ -93,10 +93,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_23_150000) do
 
   create_table "stretch3s", force: :cascade do |t|
     t.datetime "created_at", null: false
-    t.string "dojo_name"
-    t.string "email"
-    t.string "parent_name"
-    t.string "participant_name"
     t.datetime "updated_at", null: false
     t.bigint "dojo_id"
     t.index ["dojo_id"], name: "index_stretch3s_on_dojo_id"
