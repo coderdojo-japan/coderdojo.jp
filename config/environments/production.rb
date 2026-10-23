@@ -27,7 +27,9 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
-  config.assume_ssl = true
+  # Heroku は X-Forwarded-Proto で http か https かを伝えるので、使わない。
+  # true にすると http の通信も https とみなし、force_ssl が https へ転送しなくなる。
+  # config.assume_ssl = true
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
