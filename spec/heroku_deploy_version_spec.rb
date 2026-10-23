@@ -14,13 +14,15 @@ require 'rails_helper'
 # 上流が直って版を上げる時は、このテストも同じ PR で更新する。
 # 意図した更新なのか取り残しなのかを、その場で判断させるのが目的。
 RSpec.describe 'Heroku deploy workflows' do
-  PINNED_VERSION = 'v3.15.15'.freeze
+  # タグは付け替えられるので、v3.15.15 が指すコミットの SHA で固定している。
+  # 行末の `# v3.15.15` は Dependabot が版を読むためのもので、SHA と一緒に更新する
+  PINNED_VERSION = '1b080913896a5d6d44a18e9e208f8eb1fee9b0f7 # v3.15.15'.freeze
 
   let(:workflows) { Rails.root.glob('.github/workflows/*.yml') }
 
   let(:used_versions) do
     workflows.flat_map { |path|
-      path.read.scan(%r{uses:\s*akhileshns/heroku-deploy@(\S+)}).flatten
+      path.read.scan(%r{uses:\s*akhileshns/heroku-deploy@(\S+(?:[ \t]+#[ \t]*\S+)?)}).flatten
           .map { |version| [path.basename.to_s, version] }
     }
   end
