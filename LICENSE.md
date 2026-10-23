@@ -26,6 +26,8 @@ Also [Scrivito gem](https://rubygems.org/gems/scrivito) is publishd under LGPL-3
 > Sorry for the late reply, I wanted to confer with our team.   
 > There is no conflict in the licenses and you are welcome to use the MIT license.  
 
+The Highcharts JS files in `vendor/assets/javascripts/highcharts/` are published by Highsoft AS under [their own license](https://www.highcharts.com/license), not under the MIT License.
+
 So, this application's code can be simply forked, copied, and modified under the MIT License below! 🆗
 
 <hr>
