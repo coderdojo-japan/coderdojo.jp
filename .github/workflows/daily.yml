@@ -90,7 +90,7 @@ jobs:
       # スキップする。push 自体は成功するため Actions は success と表示され、
       # デプロイされていないことに気付けない。branch 入力を指定しても解消しない。
       # 詳細は PR #1847 / #1848 を参照。
-      uses: akhileshns/heroku-deploy@v3.15.15
+      uses: akhileshns/heroku-deploy@1b080913896a5d6d44a18e9e208f8eb1fee9b0f7 # v3.15.15
       with:
         heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
