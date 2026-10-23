@@ -200,7 +200,7 @@ GEM
       addressable (~> 2.8)
       childprocess (~> 5.0)
       logger (~> 1.6)
-    lazy_high_charts (1.5.8)
+    lazy_high_charts (1.6.1)
       hash-deep-merge
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
@@ -535,7 +535,7 @@ DEPENDENCIES
   koala
   kramdown
   kramdown-parser-gfm
-  lazy_high_charts (= 1.5.8)
+  lazy_high_charts
   letter_opener_web
   listen
   memory_profiler
