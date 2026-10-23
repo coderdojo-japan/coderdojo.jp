@@ -28,13 +28,6 @@ updates:
         update-types: [minor, patch]
         patterns: ["*"]
         exclude-patterns: ["rails"]
-    ignore:
-      # lazy_high_charts 1.6 は同梱していた Highcharts の JS（highcharts.js・highcharts-more.js）を外した。
-      # app/assets/javascripts/application.js がそれを require しているので、上げると assets が組み立てられず
-      # 全ページが表示できなくなる。Gemfile で 1.5.8 に固定し、Highcharts を別に用意するまで上げない。
-      # ignore は security updates にも効くので、この gem に advisory が出ても PR は来ない。GitHub の Dependabot alerts で見る。
-      # 経緯は PR #1961 を参照。
-      - dependency-name: lazy_high_charts
   - package-ecosystem: github-actions
     directory: /
     schedule:
