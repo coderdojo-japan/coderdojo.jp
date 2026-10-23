@@ -4,7 +4,13 @@ require 'rake'
 # 取得元が 200 を返しても記事の一部しか返さないと、db/news.yml が縮み、デプロイ時の news:upsert が
 # DB から記事を消す（2025年11月に 147 件 → 0 件、2026年10月に 201 件 → 49 件）。前回から大きく減ったら止める
 RSpec.describe 'news:fetch の件数の下限' do
-  before(:all) { Rails.application.load_tasks }
+  # NOTE: 登録簿を新しくしてから読む。共有のまま load_tasks を重ねると、
+  #       他の spec が読んだタスクの中身まで重ねて登録され、1 回の invoke で
+  #       タスクが 2 回以上走る（2026年10月23日）
+  before(:all) do
+    Rake.application = Rake::Application.new
+    Rails.application.load_tasks
+  end
 
   let(:news_yaml_path) { Rails.root.join('db', 'news.yml') }
   let(:task) { Rake::Task['news:fetch'] }

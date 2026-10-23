@@ -4,7 +4,13 @@ require 'rake'
 # news.coderdojo.jp の取得に失敗したまま空で返すと、news:fetch が db/news.yml を上書きし、
 # デプロイ時の news:upsert が DB から記事を消してしまう（2026年10月22日に 120 件が消えた）
 RSpec.describe 'fetch_dojo_news_posts' do
-  before(:all) { Rails.application.load_tasks }
+  # NOTE: 登録簿を新しくしてから読む。共有のまま load_tasks を重ねると、
+  #       他の spec が読んだタスクの中身まで重ねて登録され、1 回の invoke で
+  #       タスクが 2 回以上走る（2026年10月23日）
+  before(:all) do
+    Rake.application = Rake::Application.new
+    Rails.application.load_tasks
+  end
 
   let(:endpoint) { 'https://news.example.com/wp-json/wp/v2/posts' }
 
