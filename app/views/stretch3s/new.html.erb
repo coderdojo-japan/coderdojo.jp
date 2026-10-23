@@ -40,20 +40,9 @@
 
     <%= form_with model: @stretch3, url: stretch3_path, class: 'form' do |f| %>
       <div class="field">
-        <%= f.label :email, "メールアドレス" %>
-        <%= f.email_field :email, required: true, autocomplete: "email", class: "form__field", placeholder: '例: coderdojo@example.com' %>
-      </div>
-      <div class="field">
-        <%= f.label :parent_name, "保護者の名前" %>
-        <%= f.text_field :parent_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道場' %>
-      </div>
-      <div class="field">
-        <%= f.label :participant_name, "利用者の名前" %>
-        <%= f.text_field :participant_name, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道子' %>
-      </div>
-      <div class="field">
-        <%= f.label :dojo_name, "道場名" %>
-        <%= f.text_field :dojo_name, required: true, class: "form__field", placeholder: '例: CoderDojo 瀬戸' %>
+        <%= f.label :dojo_id, "利用する道場" %>
+        <%= f.select :dojo_id, grouped_options_for_select(@dojo_options, @stretch3.dojo_id),
+                     { prompt: '道場を選んでください' }, required: true, class: "form__field" %>
       </div>
       <div class="form__terms">
         <h2 class="form__h2">利用規約</h2>
@@ -139,4 +128,4 @@
       </p>
     <% end %>
   </section>
-</div> 
+</div>
