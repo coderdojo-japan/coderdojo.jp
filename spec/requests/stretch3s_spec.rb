@@ -43,12 +43,12 @@ RSpec.describe 'Stretch3', type: :request do
       expect(Stretch3.last.dojo).to eq(dojo)
     end
 
-    # 古いフォームや直接の送信で個人情報が届いても、保存しない
-    it '個人情報が送られても保存しない' do
+    # 古いフォームや直接の送信で余計な項目が届いても、道場だけを記録する
+    it '道場のほかには何も保存する列を持たない' do
       post '/stretch3', params: { stretch3: { dojo_id: dojo.id, email: 'parent@example.com', parent_name: '保護者', participant_name: '参加者' } }
 
-      record = Stretch3.last
-      expect([record.email, record.parent_name, record.participant_name]).to all(be_nil)
+      expect(Stretch3.last.dojo).to eq(dojo)
+      expect(Stretch3.column_names).to contain_exactly('id', 'dojo_id', 'created_at', 'updated_at')
     end
 
     it '道場を選んでいなければ記録せず、フォームに戻る' do
