@@ -82,7 +82,7 @@ GEM
     airbrake-ruby (6.2.2)
       rbtree3 (~> 0.6)
     ast (2.4.3)
-    autoprefixer-rails (10.4.21.0)
+    autoprefixer-rails (10.6.1.0)
       execjs (~> 2)
     backport (1.2.0)
     base64 (0.3.0)
@@ -116,7 +116,7 @@ GEM
     connpass_api_v2 (0.1.2)
       faraday (>= 2.0.0)
       faraday-mashify
-    crass (1.0.7)
+    crass (1.0.8)
     csv (3.3.6)
     date (3.6.0)
     diff-lcs (1.6.2)
@@ -127,7 +127,8 @@ GEM
     drb (2.2.3)
     erb (6.0.7)
     erubi (1.13.1)
-    execjs (2.10.0)
+    execjs (2.10.2)
+      json (>= 2)
     factory_bot (6.6.0)
       activesupport (>= 6.1.0)
     factory_bot_rails (6.5.1)
@@ -161,7 +162,7 @@ GEM
     globalid (1.4.0)
       activesupport (>= 6.1)
     hash-deep-merge (0.1.1)
-    hashie (5.1.0)
+    hashie (5.2.0)
       logger
     highline (3.0.1)
     i18n (1.15.2)
@@ -224,7 +225,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.2.1)
-    matrix (0.4.2)
+    matrix (0.4.3)
     memory_profiler (1.1.0)
     mini_mime (1.1.5)
     minitest (6.0.6)
@@ -393,7 +394,7 @@ GEM
     rspec-support (3.13.7)
     rss (0.3.3)
       rexml
-    rubocop (1.92.0)
+    rubocop (1.92.1)
       json (>= 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -455,7 +456,7 @@ GEM
       yard (~> 0.9, >= 0.9.24)
       yard-activesupport-concern (~> 0.0)
       yard-solargraph (~> 0.1)
-    sorbet-runtime (0.6.13584)
+    sorbet-runtime (0.6.13591)
     sord (7.1.0)
       commander (~> 5.0)
       parlour (~> 9.1)
