@@ -20,6 +20,19 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).not_to include('Highcharts')
     end
 
+    # Chart.js は /stats だけで使うので、全ページの application.js には入れず、/stats で defer で読み込む。
+    # Chartkick のグラフは、Chart.js が後から読み込まれるのを chartkick:load で待つ
+    it "Chart.js を /stats だけで、描画を止めずに読み込む" do
+      get "/stats"
+      expect(response.body).to match(%r{<script src="/assets/charts(-\h+)?(\.debug)?\.js" defer="defer"></script>})
+
+      get "/"
+      expect(response.body).not_to include('/assets/charts')
+
+      expect(Rails.application.assets['application.js'].to_s).not_to include('Chart.js v4')
+      expect(Rails.application.assets['charts.js'].to_s).to include('Chart.js v4', 'htmlTooltip', 'chartkick:load')
+    end
+
     # マウスを重ねた時も Highcharts と同じにする（吹き出しは chartkick_plugins.js の htmlTooltip で描く）
     it "4 つのグラフとも、吹き出しを HTML で描き、マウスに一番近い点を示す" do
       create(:dojo, tags: ['Scratch'])
