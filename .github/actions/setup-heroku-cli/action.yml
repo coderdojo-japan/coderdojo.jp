@@ -1,5 +1,5 @@
 name: 'Set up Heroku CLI'
-description: 'akhileshns/heroku-deploy が使う heroku CLI を入れる'
+description: 'デプロイ後の確認（heroku releases）が使う heroku CLI を入れる'
 runs:
   using: "composite"
   steps:

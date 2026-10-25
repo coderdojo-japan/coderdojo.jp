@@ -79,26 +79,21 @@ jobs:
       with:
         ref: main
 
-    # heroku-deploy と後続の heroku releases は Heroku CLI を呼ぶが、ubuntu-24.04 のイメージには入っていない
+    # 後続の heroku releases は Heroku CLI を呼ぶが、ubuntu-24.04 のイメージには入っていない
     - name: 🟪 Set up Heroku CLI
       uses: ./.github/actions/setup-heroku-cli
 
     - name: 🚀 Deploy to Heroku
-      # heroku-deploy は v3 に固定する。v4 は push 先を refs/head/main と組み立てており
-      # (正しくは refs/heads/main)、Heroku 側が main への push と認識できずに
-      # `Pushed to branch other than [main, master], skipping build.` としてビルドを
-      # スキップする。push 自体は成功するため Actions は success と表示され、
-      # デプロイされていないことに気付けない。branch 入力を指定しても解消しない。
-      # 詳細は PR #1847 / #1848 を参照。
-      uses: akhileshns/heroku-deploy@1b080913896a5d6d44a18e9e208f8eb1fee9b0f7 # v3.15.15
+      # Heroku の API キーを第三者の action に渡さないよう、自前の action で git push する。
+      # 以前の akhileshns/heroku-deploy の v4 は push 先を refs/head/main と組み立て、Heroku がビルドを
+      # 黙ってスキップした (PR #1847 / #1848)。自前の action は refs/heads/main へ push する。
+      # 強制 push はしないので、後から終わった古い回の push は早送りにならず Heroku に拒否され、その回が失敗する。
+      # 全経路が同じ版かは spec/heroku_deploy_version_spec.rb で守っている。
+      uses: yasslab/heroku_deploy_action@c08735737346db5c70a7adcf8d5dcc251e547e34 # v1.0.0
       with:
         heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
         heroku_email:    ${{ secrets.HEROKU_EMAIL    }}
-        # --force を使わない。このアクションは、Heroku の方が新しくて push が拒否されると --force で送り直すので、
-        # 後から終わった古い回が、本番を古いコミットに戻しうる（続けてマージした時など）。
-        # --force なしなら、古い回の push は早送りにならず Heroku に拒否され、その回が失敗する
-        dontuseforce:    true
     # Actions の success は配送の成功でしかない。git push は release フェーズの完了まで
     # 待つが、release が失敗しても push は成功扱いになり、ビルドがスキップされた時も
     # 同じく緑になる (PR #1942)。本番に届いたかはリリースの状態で見る。
