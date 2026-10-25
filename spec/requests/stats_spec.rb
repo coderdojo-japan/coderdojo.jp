@@ -20,6 +20,15 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).not_to include('Highcharts')
     end
 
+    # マウスを重ねた時も Highcharts と同じにする（吹き出しは chartkick_plugins.js の htmlTooltip で描く）
+    it "4 つのグラフとも、吹き出しを HTML で描き、マウスに一番近い点を示す" do
+      create(:dojo, tags: ['Scratch'])
+      get "/stats"
+
+      expect(response.body.scan('"htmlTooltip":{"enabled":true}').size).to eq(4)
+      expect(response.body.scan('"interaction":{"mode":"nearest","intersect":false}').size).to eq(4)
+    end
+
     # HAML から ERB へ変えた時に、地図のデータが &quot; のまま埋め込まれて JS で読めなくなっていた
     it "日本地図のデータを、JS がそのまま読める JSON で埋め込む" do
       create(:dojo)
