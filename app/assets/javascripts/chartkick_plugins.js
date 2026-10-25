@@ -5,6 +5,8 @@
 //               押すと、その系列を隠したり出したりする（Highcharts と同じ。Chart.js の凡例は横に並べる）
 // - barLabels:  棒の中の上の方に、数を白い字で書く
 // - kFormat:    目盛り（scales.*.ticks.kFormat: true）の数を「3.5k」のように千を k で書く
+// - htmlTooltip: マウスを重ねた時の吹き出しを HTML で描く。薄い灰色の地に系列の色の枠と影、
+//               点を指す矢印、「● 名前: 値（太字）」（Highcharts と同じ。Chart.js の吹き出しは値だけを太字にできない）
 (function () {
   if (typeof Chart === 'undefined') return;
 
@@ -97,6 +99,86 @@
         });
       });
       ctx.restore();
+    }
+  });
+
+  function tooltipElement(chart) {
+    var holder = chart.canvas.parentNode;
+    var box = holder.querySelector('.chartkick-tooltip');
+    if (box) return box;
+
+    holder.style.position = 'relative';
+    box = document.createElement('div');
+    box.className = 'chartkick-tooltip';
+    box.style.cssText = 'position:absolute; z-index:1; pointer-events:none; white-space:nowrap; text-align:left; opacity:0;' +
+      'transition:opacity .15s; padding:5px 8px 6px; border:1px solid; border-radius:3px;' +
+      'background:rgba(247,247,247,0.85); box-shadow:1px 1px 3px rgba(0,0,0,0.25);' +
+      'color:#333333; font-size:12px; line-height:16px; font-family:' + FONT_FAMILY + ';';
+    // 矢印は枠の色の三角に、地の色の三角を 1px ずらして重ねる
+    ['outer', 'inner'].forEach(function (name) {
+      var arrow = document.createElement('div');
+      arrow.className = 'chartkick-tooltip-' + name;
+      arrow.style.cssText = 'position:absolute; width:0; height:0; border-style:solid; border-color:transparent;' +
+        (name === 'outer' ? 'bottom:-7px; margin-left:-7px; border-width:7px 7px 0;' :
+                            'bottom:-6px; margin-left:-6px; border-width:6px 6px 0; border-top-color:#f7f7f7;');
+      box.appendChild(arrow);
+    });
+    box.appendChild(document.createElement('div'));
+    holder.appendChild(box);
+    return box;
+  }
+
+  function showTooltip(context) {
+    var chart = context.chart;
+    var tooltip = context.tooltip;
+    var box = tooltipElement(chart);
+    if (tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+      box.style.opacity = 0;
+      return;
+    }
+
+    var point = tooltip.dataPoints[0];
+    var dataset = point.dataset;
+    var color = dataset.type === 'line' ? dataset.borderColor : dataset.backgroundColor;
+
+    var content = box.lastChild;
+    content.textContent = '';
+    var header = document.createElement('span');
+    header.style.fontSize = '10px';
+    header.textContent = point.label;
+    var dot = document.createElement('span');
+    dot.style.color = color;
+    dot.textContent = '●';
+    var value = document.createElement('b');
+    value.textContent = String(point.parsed.y);
+    content.appendChild(header);
+    content.appendChild(document.createElement('br'));
+    content.appendChild(dot);
+    content.appendChild(document.createTextNode(' ' + dataset.label + ': '));
+    content.appendChild(value);
+
+    box.style.borderColor = color;
+    box.querySelector('.chartkick-tooltip-outer').style.borderTopColor = color;
+
+    // 点（棒は上端）の真上に置く。グラフの外にはみ出す時は箱だけずらし、矢印は点を指したままにする
+    var x = chart.canvas.offsetLeft + point.element.x;
+    var y = chart.canvas.offsetTop + point.element.y;
+    var width = box.offsetWidth;
+    var left = Math.max(0, Math.min(x - width / 2, chart.canvas.parentNode.clientWidth - width));
+    box.style.left = left + 'px';
+    box.style.top = (y - box.offsetHeight - 10) + 'px';
+    box.querySelector('.chartkick-tooltip-outer').style.left = (x - left) + 'px';
+    box.querySelector('.chartkick-tooltip-inner').style.left = (x - left) + 'px';
+    box.style.opacity = 1;
+  }
+
+  Chart.register({
+    id: 'htmlTooltip',
+    defaults: { enabled: false },
+    beforeInit: function (chart) {
+      var plugins = chart.config.options.plugins || {};
+      if (!plugins.htmlTooltip || !plugins.htmlTooltip.enabled) return;
+      plugins.tooltip = Object.assign({}, plugins.tooltip, { enabled: false, external: showTooltip });
     }
   });
 

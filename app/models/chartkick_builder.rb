@@ -82,15 +82,19 @@ class ChartkickBuilder
       Chart.new(series, options)
     end
 
-    # 棒の太さは Highcharts の既定（1 本分の幅の 48%）: 0.6 × 0.8
+    # 棒の太さは Highcharts の既定（1 本分の幅の 48%）: 0.6 × 0.8。
+    # マウスを重ねた棒は 10% 明るくする（Highcharts の既定）
     def column_dataset(color)
-      { backgroundColor: color, borderWidth: 0, categoryPercentage: 0.6, barPercentage: 0.8 }
+      { backgroundColor: color, hoverBackgroundColor: brighten(color, 0.1), borderWidth: 0,
+        categoryPercentage: 0.6, barPercentage: 0.8 }
     end
 
-    # 線の太さ 2px・点の半径 4px（縁取りなし）は Highcharts の既定
+    # 線の太さ 2px・点の半径 4px（縁取りなし）は Highcharts の既定。
+    # マウスを重ねた点は半径を 2 増やし、周りに半径 10・透明度 0.25 の輪を付ける（Highcharts の既定）
     def line_dataset(color)
-      { type: 'line', borderWidth: 2, tension: 0, pointRadius: 4, pointHoverRadius: 5,
-        pointBorderWidth: 0, pointBackgroundColor: color, backgroundColor: color }
+      { type: 'line', borderWidth: 2, tension: 0, pointRadius: 4, pointBorderWidth: 0,
+        pointHoverRadius: 6, pointHoverBorderWidth: 8, pointHoverBorderColor: rgba(color, 0.25),
+        pointBackgroundColor: color, pointHoverBackgroundColor: color, backgroundColor: color }
     end
 
     # 目盛りは 0 から max まで step ごとに全部出す（Chartkick の既定は本数を減らす）。
@@ -117,8 +121,11 @@ class ChartkickBuilder
             title:  { display: true, text: title, color: TEXT_COLOR, font: font(18),
                       padding: { top: 10, bottom: 15 } },
             legend: { display: false },
-            tooltip: { titleFont: font(12), bodyFont: font(12) }
+            # 吹き出しは chartkick_plugins.js で HTML で描く
+            htmlTooltip: { enabled: true }
           },
+          # マウスに一番近い点を示す（Highcharts の既定）
+          interaction: { mode: 'nearest', intersect: false },
           scales: {
             x: { ticks: { color: LABEL_COLOR, font: font(11), minRotation: 45, maxRotation: 45 },
                  grid: { display: false },
@@ -126,6 +133,17 @@ class ChartkickBuilder
           }
         }
       }
+    end
+
+    # Highcharts の Color#brighten と同じく、RGB のそれぞれに 255 × amount（小数は切り捨て）を足す
+    def brighten(hex, amount)
+      r, g, b = hex.delete_prefix('#').scan(/../).map { (it.hex + (255 * amount).to_i).clamp(0, 255) }
+      format('#%02X%02X%02X', r, g, b)
+    end
+
+    def rgba(hex, alpha)
+      r, g, b = hex.delete_prefix('#').scan(/../).map(&:hex)
+      "rgba(#{r}, #{g}, #{b}, #{alpha})"
     end
 
     def font(size, weight = 'normal')
