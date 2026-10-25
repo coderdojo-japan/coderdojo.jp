@@ -15,9 +15,9 @@ RSpec.describe 'dojo_event_services' do
 
   describe 'dojo_event_services:upsert' do
     before :each do
-      @dojo_1 = create(:dojo, name: 'dojo_1', email: 'mail_1@test', tags: %w(Scratch ラズベリーパイ), description: '月1回開催', prefecture_id: 13)
-      @dojo_2 = create(:dojo, name: 'dojo_2', email: 'mail_2@test', tags: %w(Scratch), description: '隔週開催', prefecture_id: 13)
-      @dojo_3 = create(:dojo, name: 'dojo_3', email: 'mail_3@test', tags: %w(Scratch ラズベリーパイ Webサイト), description: '月1回開催', prefecture_id: 13)
+      @dojo_1 = create(:dojo, name: 'dojo_1', tags: %w(Scratch ラズベリーパイ), description: '月1回開催', prefecture_id: 13)
+      @dojo_2 = create(:dojo, name: 'dojo_2', tags: %w(Scratch), description: '隔週開催', prefecture_id: 13)
+      @dojo_3 = create(:dojo, name: 'dojo_3', tags: %w(Scratch ラズベリーパイ Webサイト), description: '月1回開催', prefecture_id: 13)
 
       create(:dojo_event_service, dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10001', url: 'https://coder-dojo-11.doorkeeper.jp/')
       create(:dojo_event_service, dojo_id: @dojo_1.id, name: :doorkeeper, group_id: '10002', url: 'https://coder-dojo-12.doorkeeper.jp/')

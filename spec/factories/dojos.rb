@@ -3,7 +3,6 @@ FactoryBot.define do
     # ID は DB のシーケンスに任せる。開始値は spec/rails_helper.rb で
     # 実在の道場より大きい値に進めている（→ spec/models/dojo_factory_spec.rb）。
     name          { 'dojo name' }
-    email         { '' }
     description   { 'description' }
     prefecture_id { 13 }
     tags          { ['Scratch'] }

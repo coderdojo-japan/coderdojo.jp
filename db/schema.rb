@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_23_160000) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_25_170000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
@@ -29,7 +29,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_23_160000) do
     t.integer "counter", default: 1, null: false
     t.datetime "created_at", precision: nil, null: false
     t.string "description"
-    t.string "email"
     t.string "global_club_id"
     t.datetime "inactivated_at"
     t.boolean "is_private", default: false, null: false
