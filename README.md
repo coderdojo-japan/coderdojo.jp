@@ -108,26 +108,22 @@ https://speakerdeck.com/yasulab/case-study-rails-cms-for-coderdojo
 [coderdojo.jp](https://coderdojo.jp/)  は現在、次の構成でテスト・デプロイされています。
 
 - CI: [GitHub Actions](https://github.com/coderdojo-japan/coderdojo.jp/actions)
-- Deploy: Heroku + [Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)
+- Deploy: GitHub Actions から Heroku へ + [Release Phase](https://devcenter.heroku.com/ja/articles/release-phase)
 - 関連PR: [:octocat: replace travis with github actions and heroku integration](https://github.com/coderdojo-japan/coderdojo.jp/pull/1315)
 
-各コミットが push される度に CI が動きます。`main` ブランチに新しいコミットが追加され、CI が pass すると、Heroku 側でデプロイ前/デプロイ後の各種スクリプトが実行されます。
+各コミットが push される度に CI が動きます。`main` ブランチに新しいコミットが追加され、CI が pass すると、同じ workflow の `deploy` ジョブが Heroku へデプロイし、Heroku 側でデプロイ前/デプロイ後の各種スクリプトが実行されます。
 
-- テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/.github/workflows/test.yml)
-- デプロイ前: Bundle, Asset Precomiple, Heroku Buildpack など
+- テスト(CI): [.github/workflows/test.yml](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/.github/workflows/test.yml) の `test` ジョブ
+- デプロイ: 同じ test.yml の `deploy` ジョブ（`test` が pass した時だけ動く）
+- デプロイ前: Bundle, Asset Precompile, Heroku Buildpack など
 - デプロイ後: [script/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/script/release.sh), [Procfile](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/Procfile)
 
-GitHub Actions に `deploy` workflow を入れることもできましたが、次の２つの目的から現在は分離しています。
-
-1. CI フローと Deploy フローの責務を分離し、本番環境のログの機密性を高める
-   - 例: デプロイ関連のログは [Heroku Activity Logs](https://dashboard.heroku.com/apps/coderdojo-japan/activity) に集約させ、誰でもアクセスできる状態にしない
-2. [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase) を使い、本番環境の安定性を高める
-   - 例: Heroku デプロイ後に実行するスクリプトが失敗したとき、デプロイ自体がロールバックするようにし、本番環境が落ちる可能性を小さくする
+デプロイ後のスクリプトは [Heroku Release Phase](https://devcenter.heroku.com/ja/articles/release-phase) で動きます。スクリプトが失敗したときはリリースが止まり、それまでの版がそのまま動き続けるので、本番環境が落ちる可能性を小さくできます。
 
 
 <div id='howto-develop-tasks'></div><br>
 
-### [:gem:](#howto-develop-tasks) CI で実行される各種 Ruby スクリプト (Rake タスク)
+### [:gem:](#howto-develop-tasks) デプロイ時に実行される各種 Ruby スクリプト (Rake タスク)
 
 最新版は [script/release.sh](https://github.com/coderdojo-japan/coderdojo.jp/blob/main/script/release.sh) からご確認いただけます。
 
@@ -141,15 +137,17 @@ bundle exec rails db:seed
 # db/dojos.yml の内容をDBに反映するタスク
 bundle exec rails dojos:update_db_by_yaml
 
-# DBの内容を db/dojos.yml に反映するタスク
-bundle exec rails dojos:migrate_adding_id_to_yaml
+# db/news.yml の内容をDBに反映するタスク
+bundle exec rails news:upsert
 
-# 近日開催の道場を更新するタスク
+# db/dojo_event_services.yml の内容をDBに反映するタスク
 bundle exec rails dojo_event_services:upsert
 
 # ポッドキャスト「DojoCast」のデータを反映するタスク
 bundle exec rails podcasts:upsert
 ```
+
+なお DB の内容から db/dojos.yml を作り直す場合は、手元で `bundle exec rails dojos:migrate_adding_id_to_yaml` を実行します（デプロイ時には実行されません）。
 
 
 <div id='howto-develop-jobs'></div><br>
@@ -161,15 +159,21 @@ bundle exec rails podcasts:upsert
 - :octocat: [workflows/daily.yml](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/daily.yml) (毎日)
 
    ```console
+   # 【毎日】ニュースフィードを取得し、db/news.yml を更新してデプロイ (毎朝9:00am)
+   $ bundle exec rails news:fetch
+
    # 【毎日】近日開催のイベント収集 (毎朝9:00am)
    $ bundle exec rails upcoming_events:aggregation
    ```
 
 - :octocat: [workflows/weekly.yml](https://github.com/coderdojo-japan/coderdojo.jp/actions/workflows/weekly.yml) (毎週)
 
-   ```
+   ```console
    # 【毎週】統計情報ページ用のデータ収集 (毎週月曜10am)
    $ bundle exec rails statistics:aggregation
+
+   # 【毎週】集計が静かに壊れていないかの確認 (データ収集の後)
+   $ bundle exec rails statistics:sanity_check
    ```
 
 
@@ -206,7 +210,7 @@ bundle exec rails podcasts:upsert
   - 利用例: [📅 CoderDojo カレンダーを作ってみた](https://qiita.com/takatama/items/60276143e441c1c4f078) (関連PR: [coderdojo.jp#1547](https://github.com/coderdojo-japan/coderdojo.jp/pull/1547))
 - **Stats API: https://coderdojo.jp/stats.json**
   - 利用例: [☯️ DojoCon Japan](https://dojocon.coderdojo.jp/) (関連PR: [dojocon.coderdojo.jp#1](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/pull/1))
-  - 利用例: [☯️ DecaDojo](https://decadojo.coderdojo.jp/) (関連PR: [dojocon.coderdojo.jp#18](https://github.com/coderdojo-japan/decadojo.coderdojo.jp/pull/19))
+  - 利用例: [☯️ DecaDojo](https://decadojo.coderdojo.jp/) (関連PR: [decadojo.coderdojo.jp#19](https://github.com/coderdojo-japan/decadojo.coderdojo.jp/pull/19))
   - 利用例: [:octocat: CoderDojo Japan](https://github.com/coderdojo-japan) ([関連コミット](https://github.com/coderdojo-japan/.github/compare/f2ef92..231027))
 
 なお本サイト内 DB の各テーブルおよびそのデータ（一般公開部分のみ）は、以下のファイルからご確認いただけます。
