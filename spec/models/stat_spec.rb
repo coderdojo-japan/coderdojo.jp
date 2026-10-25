@@ -15,7 +15,6 @@ RSpec.describe Stat, type: :model do
       # 2020年から活動開始、2022年に非アクティブ化
       @dojo1 = Dojo.create!(
         name: 'CoderDojo テスト1',
-        email: 'test1@example.com',
         description: 'テスト用Dojo1の説明',
         tags: ['Scratch', 'Python'],
         url: 'https://test1.coderdojo.jp',
@@ -27,7 +26,6 @@ RSpec.describe Stat, type: :model do
       # 2021年から活動開始、現在も活動中
       @dojo2 = Dojo.create!(
         name: 'CoderDojo テスト2',
-        email: 'test2@example.com',
         description: 'テスト用Dojo2の説明',
         tags: ['Scratch'],
         url: 'https://test2.coderdojo.jp',
@@ -39,7 +37,6 @@ RSpec.describe Stat, type: :model do
       # 2019年から活動開始、2020年に非アクティブ化
       @dojo3 = Dojo.create!(
         name: 'CoderDojo テスト3',
-        email: 'test3@example.com',
         description: 'テスト用Dojo3の説明',
         tags: ['JavaScript'],
         url: 'https://test3.coderdojo.jp',
@@ -92,7 +89,6 @@ RSpec.describe Stat, type: :model do
       # テスト用のDojoを作成（複数作成して、一部を非アクティブ化）
       dojo1 = Dojo.create!(
         name: 'CoderDojo テスト1',
-        email: 'test1@example.com',
         description: 'テスト用Dojo1の説明',
         tags: ['Scratch'],
         url: 'https://test1.coderdojo.jp',
@@ -104,7 +100,6 @@ RSpec.describe Stat, type: :model do
       # 2022年に非アクティブ化される道場
       dojo2 = Dojo.create!(
         name: 'CoderDojo テスト2',
-        email: 'test2@example.com',
         description: 'テスト用Dojo2の説明',
         tags: ['Python'],
         url: 'https://test2.coderdojo.jp',
@@ -116,7 +111,6 @@ RSpec.describe Stat, type: :model do
       # 2023年に非アクティブ化される道場
       dojo3 = Dojo.create!(
         name: 'CoderDojo テスト3',
-        email: 'test3@example.com',
         description: 'テスト用Dojo3の説明',
         tags: ['Ruby'],
         url: 'https://test3.coderdojo.jp',

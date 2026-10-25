@@ -14,7 +14,6 @@ class Dojo < ApplicationRecord
   has_many   :event_histories,     dependent: :destroy
 
   serialize :tags, coder: YAML
-  before_save { self.email = self.email.downcase }
 
   scope :default_order, -> { order(prefecture_id: :asc, order: :asc) }
   scope :active,        -> { where(inactivated_at: nil) }
@@ -32,7 +31,6 @@ class Dojo < ApplicationRecord
   }
 
   validates :name,        presence: true, length: { maximum: 50 }
-  validates :email,       presence: false
   validates :order,       presence: false
   validates :description, presence: true, length: { maximum: 50 }
   validates :logo,        presence: false

@@ -52,7 +52,6 @@ namespace :dojos do
       d = Dojo.find_or_initialize_by(id: dojo['id'])
       d.name           = dojo['name']
       d.counter        = dojo['counter'] || 1
-      d.email          = ''
       d.description    = dojo['description']
       d.logo           = dojo['logo']
       d.tags           = dojo['tags']

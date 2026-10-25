@@ -17,12 +17,12 @@ RSpec.describe Statistics::Aggregation do
     let(:yaml_provider) { instance_double(EventService::Providers::StaticYaml) }
 
     before do
-      @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.example.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
-      @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.example.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
+      @d1 = create(:dojo, name: 'Dojo1', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
+      @d2 = create(:dojo, name: 'Dojo2', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
       create(:dojo_event_service, dojo_id: @d1.id, name: :connpass, group_id: 9876)
       create(:dojo_event_service, dojo_id: @d2.id, name: :doorkeeper, group_id: 5555)
 
-      @d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.example.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.com/dojo3', prefecture_id: 13)
+      @d3 = create(:dojo, name: 'Dojo3', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.com/dojo3', prefecture_id: 13)
       allow(EventService::Providers::StaticYaml).to receive(:new).and_return(yaml_provider)
       allow(yaml_provider).to receive(:fetch_events).and_return([
         { 'dojo_id' => @d3.id, 'event_url' => 'https://example.com/event/12345', 'evented_at' => '2023-12-10 14:00', 'participants' => 1 }
@@ -278,10 +278,10 @@ RSpec.describe Statistics::Aggregation do
 
     context 'find_dojos_by(services)' do
       before :each do
-        @d1 = create(:dojo, name: 'Dojo1', email: 'info@dojo1.example.com', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
-        @d2 = create(:dojo, name: 'Dojo2', email: 'info@dojo2.example.com', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
-        @d3 = create(:dojo, name: 'Dojo3', email: 'info@dojo3.example.com', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.net/dojo3', prefecture_id: 13)
-        @d4 = create(:dojo, name: 'Dojo4', email: 'info@dojo4.example.com', description: 'CoderDojo4', tags: %w(CoderDojo4), url: 'https://example.com/dojo4', prefecture_id: 13)
+        @d1 = create(:dojo, name: 'Dojo1', description: 'CoderDojo1', tags: %w(CoderDojo1), url: 'https://example.com/dojo1', prefecture_id: 13)
+        @d2 = create(:dojo, name: 'Dojo2', description: 'CoderDojo2', tags: %w(CoderDojo2), url: 'https://example.org/dojo2', prefecture_id: 13)
+        @d3 = create(:dojo, name: 'Dojo3', description: 'CoderDojo3', tags: %w(CoderDojo3), url: 'https://example.net/dojo3', prefecture_id: 13)
+        @d4 = create(:dojo, name: 'Dojo4', description: 'CoderDojo4', tags: %w(CoderDojo4), url: 'https://example.com/dojo4', prefecture_id: 13)
         create(:dojo_event_service, dojo_id: @d1.id, name: :connpass,   group_id: 9876)
         create(:dojo_event_service, dojo_id: @d2.id, name: :doorkeeper, group_id: 5555)
         create(:dojo_event_service, dojo_id: @d2.id, name: :connpass,   group_id: 9877)
