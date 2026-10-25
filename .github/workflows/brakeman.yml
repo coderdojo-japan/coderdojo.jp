@@ -4,6 +4,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# GITHUB_TOKEN は checkout にしか使わない
+permissions:
+  contents: read
+
 jobs:
   brakeman:
     runs-on: ubuntu-latest

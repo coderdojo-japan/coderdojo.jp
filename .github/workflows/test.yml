@@ -10,6 +10,10 @@ on:
   # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
   workflow_dispatch:
 
+# GITHUB_TOKEN は checkout にしか使わない（Heroku へは secrets の API キーで送る）
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest

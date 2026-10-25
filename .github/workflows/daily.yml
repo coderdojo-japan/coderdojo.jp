@@ -8,9 +8,16 @@ on:
   # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
   workflow_dispatch:
 
+# GITHUB_TOKEN は既定では読み取りだけにし、main へ push する daily ジョブにだけ書き込みを渡す
+permissions:
+  contents: read
+
 jobs:
   daily:
     runs-on: ubuntu-latest
+    # 取ったニュースをコミットして main へ push する
+    permissions:
+      contents: write
     outputs:
       FOUND_NEWS: ${{ steps.check_news.outputs.FOUND_NEWS }}
 
