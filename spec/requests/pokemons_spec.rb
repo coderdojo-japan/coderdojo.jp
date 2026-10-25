@@ -9,7 +9,16 @@ RSpec.describe 'Pokemons', type: :request do
 
     expect(response).to have_http_status(:success)
     expect(response.body).to include('ポケモン素材の利用規約')
-    expect(response.body).to include('本フォームは現在無効です。')
+    expect(response.body).to include('オンライン版に移行しました')
+  end
+
+  it 'GET /pokemon に、名前やメールアドレスの入力欄を出さない' do
+    get pokemon_path
+
+    html = Nokogiri::HTML(response.body)
+    expect(html.css('main form, .introduction form, .introduction input')).to be_empty
+    expect(response.body).not_to include('保護者の名前')
+    expect(response.body).not_to include('メールアドレス')
   end
 
   it 'GET /pokemon/workshop がこれまでどおり表示される' do

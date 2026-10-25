@@ -1,5 +1,5 @@
 <% provide(:title, '『プログラミングでポケモンをうごかしてみよう』に参加する皆さまへ') %>
-<% provide(:desc,  '『プログラミングでポケモンをうごかしてみよう』のワークショップで必要となるポケモン素材のダウンロードお申し込みフォームです。') %>
+<% provide(:desc,  '『プログラミングでポケモンをうごかしてみよう』のワークショップで使うポケモン素材のご案内です。') %>
 <% provide(:url,         '/pokemon') %>
 <% provide(:meta_image,  '/img/pokemon_scratch.png') %>
 
@@ -20,23 +20,8 @@
         本ワークショップは、2024年度にダウンロード版からオンライン版に移行しました。CoderDojo 運営者の方で本ワークショップ実施予定の方は <%= link_to 'Kata', kata_path(anchor: 'pokemon') %> に記載されているリンク先から詳細をご確認ください。
       </p>
     </blockquote>
-    <%= form_with url: pokemon_path, class: 'form' do |f| %>
-      <div class="field">
-        <%= f.label :email, "メールアドレス" %>
-        <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", class: "form__field", placeholder: '例: coderdojo@example.com', disabled: true %>
-      </div>
-      <div class="field">
-        <%= f.label :parent_name, "保護者の名前" %>
-        <%= f.text_field :parent_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道場', disabled: true %>
-      </div>
-      <div class="field">
-        <%= f.label :participant_name, "参加者の名前" %>
-        <%= f.text_field :participant_name, autofocus: true, required: true, autocomplete: "name", class: "form__field", placeholder: '例: コーダー 道子', disabled: true %>
-      </div>
-      <div class="field">
-        <%= f.label :dojo_name, "道場名" %>
-        <%= f.text_field :dojo_name, autofocus: true, required: true, class: "form__field", placeholder: '例: CoderDojo 柏', disabled: true %>
-      </div>
+    <%# ダウンロードの申込フォーム（メールアドレス・名前の入力欄）は、オンライン版への移行で停止したので外した %>
+    <div class="form">
       <div class="form__terms">
         <h2 class="form__h2">ポケモン素材の利用規約</h2>
         <p><small>必ず、こちらの<%= link_to 'ポケモン素材の利用規約（全文）', 'https://bit.ly/pokemon-sozai-tos', rel: 'noopener', target: '_blank' %>をご確認ください。</small></p>
@@ -49,12 +34,6 @@
           <li><small>本素材の著作権その他一切の権利は、株式会社ポケモンまたは株式会社ポケモンに権利を許諾した第三者に帰属しています。本素材または本素材を使った作品の頒布、譲渡、公衆送信、貸与、リース、輸出、再許諾などはできません。</small></li>
         </ul>
       </div>
-      <div class="field">
-        <%= f.check_box :term_of_use, required: true, disabled: true, style: "display:inline" %>
-        <%= f.label :term_of_use, "上記の利用規約（全文）に同意する", style: "display:inline" %>
-      </div>
-
-      <%= f.submit "申し込む", class: "form__submit", style: "background-color: #ccc;", disabled: true, title: "本フォームは現在無効です。" %>
 
       <p class="form-notes">
         Scratchは、Scratch財団がMITメディアラボのライフロング・キンダーガーテン・グループの協力により開発しているプロジェクトです。
@@ -62,6 +41,6 @@
 	©Pokémon. ©Nintendo/Creatures Inc./GAME FREAK inc.<br>
 	<small>ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの登録商標です。</small>
       </p>
-    <% end %>
+    </div>
   </section>
-</div> 
+</div>
