@@ -17,3 +17,5 @@ jobs:
       - uses: yasslab/dependabot_auto_merge@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          # 本番の Heroku の API キーを渡す action なので、SHA を上げる PR は自動でマージせず、人が action の差分を読んでからマージする
+          exclude-gems: rails,jekyll,yasslab/heroku_deploy_action
