@@ -12,7 +12,6 @@ class StatsController < ApplicationController
     stats         = Stat.new(period)
 
     # 推移グラフ
-    @high_charts_globals          = HighChartsBuilder.global_options
     @annual_dojos_chart           = stats.annual_dojos_chart(@lang)
     @annual_event_histories_chart = stats.annual_event_histories_chart(@lang)
     @annual_participants_chart    = stats.annual_participants_chart(@lang)
@@ -25,47 +24,31 @@ class StatsController < ApplicationController
     # https://github.com/coderdojo-japan/coderdojo.jp/issues/190
 
     # 道場タグ分布
-    @dojo_tag_chart  = LazyHighCharts::HighChart.new('graph') do |f|
-      number_of_tags = 10
-      title_text = @lang == 'en' ? "CoderDojo Tag Distribution (Top #{number_of_tags})" : "CoderDojo タグ分布 (上位 #{number_of_tags})"
-      f.title(text: title_text)
+    number_of_tags = 10
 
-      # Use 'tally' method when using Ruby 2.7.0 or higher
-      # cf. https://twitter.com/yasulab/status/1154566199511941120
-      #tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
-      tags = Dojo.active.map(&:tags).flatten.tally
+    # Use 'tally' method when using Ruby 2.7.0 or higher
+    # cf. https://twitter.com/yasulab/status/1154566199511941120
+    #tags = Dojo.active.map(&:tags).flatten.group_by(&:itself).transform_values(&:count)
+    tags = Dojo.active.map(&:tags).flatten.tally
 
-      # Add tags for multiple dojos: https://github.com/coderdojo-japan/coderdojo.jp/issues/992
-      Dojo.active.where('counter > 1').each do |dojo|
-        dojo.tags.each {|tag| tags[tag] += (dojo.counter - 1) }
-      end
-      tags = tags.sort_by{|key, value| value}.reverse.to_h
-
-      # タグ名を言語に応じて翻訳
-      tag_labels = if @lang == 'en'
-        tags.keys.take(number_of_tags).map { |tag| helpers.translate_dojo_tag(tag) }.reverse
-      else
-        tags.keys.take(number_of_tags).reverse
-      end
-
-      f.xAxis categories: tag_labels
-      f.yAxis title: { text: '' }, showInLegend: false, opposite: true,
-              tickInterval: 40, max: 240
-      f.series type: 'column', name: @lang == 'en' ? "Number of Dojos" : "対応道場数", yAxis: 0, showInLegend: false,
-               data: tags.values.take(number_of_tags).reverse,
-               dataLabels: {
-                 enabled: true,
-                 y: 20,
-                 color: 'white',
-                 align: 'center',
-                 style: {
-                   textShadow: false,
-                 }
-               }
-
-      f.chart width: 600, alignTicks: false
-      f.colors ["#A0CEFB", "#A0CEFB"]
+    # Add tags for multiple dojos: https://github.com/coderdojo-japan/coderdojo.jp/issues/992
+    Dojo.active.where('counter > 1').each do |dojo|
+      dojo.tags.each {|tag| tags[tag] += (dojo.counter - 1) }
     end
+    tags = tags.sort_by{|key, value| value}.reverse.to_h
+
+    # タグ名を言語に応じて翻訳
+    tag_labels = if @lang == 'en'
+      tags.keys.take(number_of_tags).map { |tag| helpers.translate_dojo_tag(tag) }.reverse
+    else
+      tags.keys.take(number_of_tags).reverse
+    end
+
+    @dojo_tag_chart = ChartkickBuilder.build_dojo_tags(
+      tag_labels, tags.values.take(number_of_tags).reverse,
+      title: @lang == 'en' ? "CoderDojo Tag Distribution (Top #{number_of_tags})" : "CoderDojo タグ分布 (上位 #{number_of_tags})",
+      name:  @lang == 'en' ? "Number of Dojos" : "対応道場数"
+    )
 
     # 集計方法と集計対象
     #

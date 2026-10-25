@@ -39,7 +39,7 @@ gem 'kramdown-parser-gfm'
 # https://coderdojo.jp/events
 gem 'faraday'
 gem 'koala'
-gem 'lazy_high_charts'
+gem 'chartkick', '5.2.1'  # /stats のグラフ（Chart.js）。5.3.0 は公開から日が浅いので 1 つ前の版
 gem 'connpass_api_v2' # https://github.com/sue445/connpass_api_v2-ruby
 
 # Protect from attacks for Security

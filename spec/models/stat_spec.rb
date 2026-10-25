@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Stat, type: :model do
+  # グラフの棒（:column）か折れ線（:line）の値を、年の順に取り出す
+  def values_of(chart, kind)
+    series = chart.series.find { |s| (s.dig(:dataset, :type) == 'line') == (kind == :line) }
+    series[:data].map(&:last)
+  end
+
   describe '#annual_dojos_with_historical_data' do
     let(:period) { Date.new(2020, 1, 1)..Date.new(2023, 12, 31) }
     let(:stat) { Stat.new(period) }
@@ -74,7 +80,7 @@ RSpec.describe Stat, type: :model do
       })
 
       result = stat.annual_dojos_chart
-      expect(result).to be_a(LazyHighCharts::HighChart)
+      expect(result).to be_a(ChartkickBuilder::Chart)
     end
   end
 
@@ -179,18 +185,14 @@ RSpec.describe Stat, type: :model do
       expect(event_data['2024']).to eq(18)
 
       # グラフデータを生成
-      chart = HighChartsBuilder.build_annual_event_histories(event_data)
-      series_data = chart.series_data
+      chart = ChartkickBuilder.build_annual_event_histories(event_data)
 
-      if series_data
-        # 年間の開催回数（棒グラフ）が負でないことを確認
-        annual_counts = series_data.find { |s| s[:type] == 'column' }
-        if annual_counts && annual_counts[:data]
-          annual_counts[:data].each_with_index do |count, i|
-            year = 2012 + i  # テストデータの開始年は2012
-            expect(count).to be >= 0, "#{year}年の開催回数が負の値としてグラフに表示されます: #{count}"
-          end
-        end
+      # 年間の開催回数（棒グラフ）が負でないことを確認
+      annual_counts = values_of(chart, :column)
+      expect(annual_counts).not_to be_empty
+      annual_counts.each_with_index do |count, i|
+        year = 2012 + i  # テストデータの開始年は2012
+        expect(count).to be >= 0, "#{year}年の開催回数が負の値としてグラフに表示されます: #{count}"
       end
     end
 
@@ -220,18 +222,14 @@ RSpec.describe Stat, type: :model do
       expect(participant_data['2024']).to eq(108)  # 18イベント × 6人
 
       # グラフデータを生成
-      chart = HighChartsBuilder.build_annual_participants(participant_data)
-      series_data = chart.series_data
+      chart = ChartkickBuilder.build_annual_participants(participant_data)
 
-      if series_data
-        # 年間の参加者数（棒グラフ）が負でないことを確認
-        annual_counts = series_data.find { |s| s[:type] == 'column' }
-        if annual_counts && annual_counts[:data]
-          annual_counts[:data].each_with_index do |count, i|
-            year = 2012 + i  # テストデータの開始年は2012
-            expect(count).to be >= 0, "#{year}年の参加者数が負の値としてグラフに表示されます: #{count}"
-          end
-        end
+      # 年間の参加者数（棒グラフ）が負でないことを確認
+      annual_counts = values_of(chart, :column)
+      expect(annual_counts).not_to be_empty
+      annual_counts.each_with_index do |count, i|
+        year = 2012 + i  # テストデータの開始年は2012
+        expect(count).to be >= 0, "#{year}年の参加者数が負の値としてグラフに表示されます: #{count}"
       end
     end
 
@@ -243,28 +241,23 @@ RSpec.describe Stat, type: :model do
       }
 
       # グラフデータを生成
-      chart = HighChartsBuilder.build_annual_dojos(dojo_data)
-      series_data = chart.series_data
+      chart = ChartkickBuilder.build_annual_dojos(dojo_data)
 
-      if series_data
-        # 開設数（棒グラフ）- 新規開設された道場の数
-        change_data = series_data.find { |s| s[:type] == 'column' }
-        if change_data && change_data[:data]
-          change_data[:data].each_with_index do |value, i|
-            year = 2012 + i
-            # 「開設数」は新規開設を意味するため、負の値は論理的に不適切
-            expect(value).to be >= 0, "#{year}年の「開設数」が負の値です: #{value}。開設数は新規開設された道場数を表すため、0以上である必要があります"
-          end
-        end
+      # 開設数（棒グラフ）- 新規開設された道場の数
+      change_data = values_of(chart, :column)
+      expect(change_data).not_to be_empty
+      change_data.each_with_index do |value, i|
+        year = 2012 + i
+        # 「開設数」は新規開設を意味するため、負の値は論理的に不適切
+        expect(value).to be >= 0, "#{year}年の「開設数」が負の値です: #{value}。開設数は新規開設された道場数を表すため、0以上である必要があります"
+      end
 
-        # 累積数（線グラフ）は常に0以上
-        total_data = series_data.find { |s| s[:type] == 'line' }
-        if total_data && total_data[:data]
-          total_data[:data].each_with_index do |count, i|
-            year = 2012 + i
-            expect(count).to be >= 0, "#{year}年の累積道場数が負の値です: #{count}"
-          end
-        end
+      # 累積数（線グラフ）は常に0以上
+      total_data = values_of(chart, :line)
+      expect(total_data).not_to be_empty
+      total_data.each_with_index do |count, i|
+        year = 2012 + i
+        expect(count).to be >= 0, "#{year}年の累積道場数が負の値です: #{count}"
       end
     end
   end
