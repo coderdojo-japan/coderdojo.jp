@@ -234,7 +234,7 @@ bundle exec rails podcasts:upsert
   <br><br>
   [![YassLab Logo](https://yasslab.jp/img/logos/800x200.png)](https://yasslab.jp/)
 
-:point_right: See [HISTORY.md](HISTORY.md) for more details and acknowledgements.
+:point_right: See [HISTORY.md](HISTORY.md) for details.
 
 
 
