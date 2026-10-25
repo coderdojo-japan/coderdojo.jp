@@ -150,7 +150,8 @@
     dot.style.color = color;
     dot.textContent = '●';
     var value = document.createElement('b');
-    value.textContent = String(point.parsed.y);
+    // 3 桁ごとに「,」で区切る（Highcharts の lang.thousandsSep: ','。0e52994b）
+    value.textContent = point.parsed.y.toLocaleString('en-US');
     content.appendChild(header);
     content.appendChild(document.createElement('br'));
     content.appendChild(dot);

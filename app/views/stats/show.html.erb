@@ -7,6 +7,9 @@
 <!-- jQuery Japan Map -->
 <script type="text/javascript" src="/js/jquery.japan-map.js"></script>
 
+<!-- グラフ（Chartkick と Chart.js）。描画を止めないよう defer で読み込む -->
+<%= javascript_include_tag 'charts', defer: true %>
+
 <section id="top" style="padding-top:40px; background-color: white; max-width: 400px; margin: 0 auto;">
   <%= image_tag 'stats_cover.png', alt: 'Cover photo for CoderDojo Stats' %>
 </section>
