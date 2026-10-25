@@ -33,6 +33,16 @@ RSpec.describe "Stats", type: :request do
       expect(Rails.application.assets['charts.js'].to_s).to include('Chart.js v4', 'htmlTooltip', 'chartkick:load')
     end
 
+    # 横軸は年とタグ名（category）で、時間の軸は使わない。Chartkick 同梱の Chart.bundle.js は
+    # 日付のライブラリ（date-fns とアダプタ）まで含んで 855KB あるので、Chart.js 本体の圧縮版を使う
+    it "Chart.js は本体の圧縮版を使い、日付のライブラリは読み込まない" do
+      charts = Rails.application.assets['charts.js'].to_s
+
+      expect(charts).to include('Chart.js v4.5.1')
+      expect(charts).not_to include('date-fns')
+      expect(charts).not_to include('sourceMappingURL')
+    end
+
     # マウスを重ねた時も Highcharts と同じにする（吹き出しは chartkick_plugins.js の htmlTooltip で描く）
     it "4 つのグラフとも、吹き出しを HTML で描き、マウスに一番近い点を示す" do
       create(:dojo, tags: ['Scratch'])
