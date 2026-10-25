@@ -4,6 +4,10 @@ on:
     types: [review_requested]
     branches:
       - "*"
+# GITHUB_TOKEN は使わない（Slack へは secrets のトークンで送る）
+permissions:
+  contents: read
+
 jobs:
   event:
     runs-on: ubuntu-latest
