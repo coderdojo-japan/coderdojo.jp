@@ -11,6 +11,15 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).to include("View in English")
     end
 
+    # グラフは Chartkick（Chart.js）で描く。Highcharts は使わない
+    it "4 つのグラフを Chartkick で描く" do
+      create(:dojo, tags: ['Scratch'])
+      get "/stats"
+
+      expect(response.body.scan('new Chartkick["ColumnChart"]').size).to eq(4)
+      expect(response.body).not_to include('Highcharts')
+    end
+
     # HAML から ERB へ変えた時に、地図のデータが &quot; のまま埋め込まれて JS で読めなくなっていた
     it "日本地図のデータを、JS がそのまま読める JSON で埋め込む" do
       create(:dojo)

@@ -39,15 +39,13 @@
 
   <style>
     /* 中央寄せにする */
-    .chart-wrapper { margin: 40px auto; }
+    .chart-wrapper { margin: 40px auto; max-width: <%= ChartkickBuilder::WIDTH %>px; }
   </style>
   <div align="center">
-    <%= high_chart_globals(@high_charts_globals) %>
-
     <!-- 道場数、開催数、参加数の推移グラフ -->
-    <div class='chart-wrapper'><%= high_chart("annual_dojos",           @annual_dojos_chart) %></div>
-    <div class='chart-wrapper'><%= high_chart("annual_event_histories", @annual_event_histories_chart) %></div>
-    <div class='chart-wrapper'><%= high_chart("annual_participants",    @annual_participants_chart) %></div>
+    <% [@annual_dojos_chart, @annual_event_histories_chart, @annual_participants_chart].each do |chart| %>
+      <div class='chart-wrapper'><%= column_chart chart.series, **chart.options %></div>
+    <% end %>
   </div>
 
   <h2 id="latest" style="margin-top: 70px; color: #333333;">
@@ -79,7 +77,7 @@
 
   <div id="tag" style="margin-top: 20px;" align="center">
     <br>
-    <%= high_chart("dojo_tag_chart", @dojo_tag_chart) %>
+    <div class='chart-wrapper' style='margin-top: 0;'><%= column_chart @dojo_tag_chart.series, **@dojo_tag_chart.options %></div>
   </div>
 
   <h2 id="table" style="margin-top: 70px; color: #333333;">

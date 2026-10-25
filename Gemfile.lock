@@ -107,6 +107,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     cgi (0.5.2)
+    chartkick (5.2.1)
     childprocess (5.1.0)
       logger (~> 1.5)
     commander (5.0.0)
@@ -161,7 +162,6 @@ GEM
       ffi (~> 1.0)
     globalid (1.4.0)
       activesupport (>= 6.1)
-    hash-deep-merge (0.1.1)
     hashie (5.2.0)
       logger
     highline (3.0.1)
@@ -200,8 +200,6 @@ GEM
       addressable (~> 2.8)
       childprocess (~> 5.0)
       logger (~> 1.6)
-    lazy_high_charts (1.6.1)
-      hash-deep-merge
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
     letter_opener_web (3.0.0)
@@ -523,6 +521,7 @@ DEPENDENCIES
   bootstrap-sass
   brakeman
   capybara
+  chartkick (= 5.2.1)
   connpass_api_v2
   csv
   dotenv-rails
@@ -535,7 +534,6 @@ DEPENDENCIES
   koala
   kramdown
   kramdown-parser-gfm
-  lazy_high_charts
   letter_opener_web
   listen
   memory_profiler

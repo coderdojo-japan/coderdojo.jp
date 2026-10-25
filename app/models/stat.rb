@@ -38,9 +38,9 @@ class Stat
       active_dojos: annual_dojos_with_historical_data,
       new_dojos: annual_new_dojos_count
     }
-    HighChartsBuilder.build_annual_dojos(data, lang)
+    ChartkickBuilder.build_annual_dojos(data, lang)
   end
-  
+
   # 各年末時点でアクティブだったDojo数を集計（過去の非アクティブDojoも含む）
   def annual_dojos_with_historical_data
     (@period.first.year..@period.last.year).each_with_object({}) do |year, hash|
@@ -50,7 +50,7 @@ class Stat
       hash[year.to_s] = count
     end
   end
-  
+
   # 各年に新規開設されたDojo数を集計
   def annual_new_dojos_count
     (@period.first.year..@period.last.year).each_with_object({}) do |year, hash|
@@ -63,11 +63,11 @@ class Stat
   end
 
   def annual_event_histories_chart(lang = 'ja')
-    HighChartsBuilder.build_annual_event_histories(annual_count_of_event_histories, lang)
+    ChartkickBuilder.build_annual_event_histories(annual_count_of_event_histories, lang)
   end
 
   def annual_participants_chart(lang = 'ja')
-    HighChartsBuilder.build_annual_participants(annual_sum_of_participants, lang)
+    ChartkickBuilder.build_annual_participants(annual_sum_of_participants, lang)
   end
 
   private
