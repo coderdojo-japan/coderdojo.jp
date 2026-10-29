@@ -53,6 +53,19 @@ RSpec.describe Document do
     end
   end
 
+  describe '#updated_at' do
+    # 本番では GitHub API から最終更新日を取る。届かなくても仮の日付で表示は続けるが、失敗は報告する
+    it 'GitHub API に届かなかったら仮の日付を返し、例外を報告する' do
+      error = SocketError.new('getaddrinfo')
+      allow(Rails.env).to receive(:production?).and_return(true)
+      allow(Net::HTTP).to receive(:get).and_raise(error)
+      allow(Rails.error).to receive(:report)
+
+      expect(Document.new('kata').updated_at).to eq '2020-02-02T12:34:56+09:00'
+      expect(Rails.error).to have_received(:report).with(error)
+    end
+  end
+
   describe 'meta descriptions' do
     it 'すべての公開ドキュメントの meta description に HTML タグが含まれていないこと' do
       # 全ドキュメントファイルを取得（記録用ページ "_" で始まるものを除く）
