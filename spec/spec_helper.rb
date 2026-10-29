@@ -54,10 +54,6 @@ RSpec.configure do |config|
   config.verbose_retry = true
   # show exception that triggers a retry if verbose_retry is set to true
   config.display_try_failure_messages = true
-  # run retry only on features
-  config.around :each, :js do |ex|
-    ex.run_with_retry retry: 3
-  end
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
