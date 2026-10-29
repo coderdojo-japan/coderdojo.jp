@@ -97,3 +97,16 @@ else
     "Skipping Airbrake configuration"
   )
 end
+
+# rescue で捕まえた例外は Rails.error.report で報告し、ここで Airbrake に送る。
+# 送り先を替える時は、この購読者だけを差し替える
+class AirbrakeErrorSubscriber
+  def report(error, handled:, severity:, context:, source: nil)
+    # 捕まえていない例外は、Airbrake の Rack ミドルウェアが既に送っている
+    return unless handled
+
+    Airbrake.notify(error, severity:, source:)
+  end
+end
+
+Rails.error.subscribe(AirbrakeErrorSubscriber.new)

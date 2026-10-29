@@ -39,8 +39,9 @@ class Document
       data = JSON.parse(json)
 
       data.first['commit']['committer']['date'].gsub('Z', "+09:00")
-    rescue
+    rescue => e
       # Return dummy data if calling GitHub API failed
+      Rails.error.report(e)
       "2020-02-02T12:34:56+09:00"
     end
 

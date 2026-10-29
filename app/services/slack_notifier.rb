@@ -28,6 +28,7 @@ class SlackNotifier
       response.code.to_i.between?(200, 299)
     rescue StandardError => e
       Rails.logger.warn("Slack通知エラー: #{e.class} #{e.message}")
+      Rails.error.report(e)
       false
     end
   end
