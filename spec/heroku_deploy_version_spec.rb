@@ -14,9 +14,10 @@ require 'rails_helper'
 # 版を上げる時は、このテストも同じ PR で更新する。
 # 意図した更新なのか取り残しなのかを、その場で判断させるのが目的。
 RSpec.describe 'Heroku deploy workflows' do
-  # タグは付け替えられるので、v1.0.0 が指すコミットの SHA で固定している。
-  # 行末の `# v1.0.0` は Dependabot が版を読むためのもので、SHA と一緒に更新する
-  PINNED_VERSION = 'yasslab/heroku_deploy_action@c08735737346db5c70a7adcf8d5dcc251e547e34 # v1.0.0'.freeze
+  # タグは付け替えられるので、v1.0.0 が指すコミットで固定している。コミットは lockfile（actions.lock）が記録し、
+  # 実行時に GitHub が照合する（workflow の行は gh actions-lock がタグに書き換える）
+  PINNED_VERSION = 'yasslab/heroku_deploy_action@v1.0.0'.freeze
+  PINNED_COMMIT  = 'sha1-c08735737346db5c70a7adcf8d5dcc251e547e34'.freeze
 
   let(:workflows) { Rails.root.glob('.github/workflows/*.yml') }
 
@@ -41,6 +42,15 @@ RSpec.describe 'Heroku deploy workflows' do
       "デプロイのアクションが #{PINNED_VERSION} と違います: " +
       mismatched.map { |file, version| "#{file} (#{version})" }.join(', ') +
       '。全経路を同じアクション・同じ版にそろえてください。'
+  end
+
+  it 'その版が lockfile で同じコミットに固定されている' do
+    lockfile = YAML.safe_load(Rails.root.join('.github/workflows/actions.lock').read)
+
+    expect(lockfile.dig('dependencies', PINNED_VERSION, 'commit')).to eq(PINNED_COMMIT)
+    used_versions.each do |file, version|
+      expect(lockfile.dig('workflows', ".github/workflows/#{file}")).to include(version)
+    end
   end
 
   it '本番到達の確認ステップが両経路で同じ' do
