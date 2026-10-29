@@ -23,12 +23,12 @@ jobs:
 
     steps:
     - name: ☑️ Checkout code
-      uses: actions/checkout@v7
+      uses: actions/checkout@v7.0.1
       with:
         fetch-depth: 2
 
     - name: 💎 Setup Ruby
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@v1.335.0
       with:
         bundler-cache: true
 
@@ -82,7 +82,7 @@ jobs:
 
     steps:
     - name: ☑️ Checkout code
-      uses: actions/checkout@v7
+      uses: actions/checkout@v7.0.1
       with:
         ref: main
 
@@ -96,7 +96,7 @@ jobs:
       # 黙ってスキップした (PR #1847 / #1848)。自前の action は refs/heads/main へ push する。
       # 強制 push はしないので、後から終わった古い回の push は早送りにならず Heroku に拒否され、その回が失敗する。
       # 全経路が同じ版かは spec/heroku_deploy_version_spec.rb で守っている。
-      uses: yasslab/heroku_deploy_action@c08735737346db5c70a7adcf8d5dcc251e547e34 # v1.0.0
+      uses: yasslab/heroku_deploy_action@v1.0.0
       with:
         heroku_api_key:  ${{ secrets.HEROKU_API_KEY  }}
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
