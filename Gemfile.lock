@@ -408,7 +408,6 @@ GEM
       prism (~> 1.7)
     ruby-mp3info (0.8.10)
     ruby-progressbar (1.13.0)
-    rubyzip (3.7.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -422,11 +421,6 @@ GEM
     secure_headers (7.3.0)
       cgi (>= 0.1)
     securerandom (0.4.1)
-    selenium-webdriver (4.51.0)
-      base64 (~> 0.2)
-      logger (~> 1.4)
-      rubyzip (>= 1.2.2, < 4.0)
-      websocket (~> 1.0)
     sitemap_generator (7.1.1)
       builder (~> 3.0)
     solargraph (0.61.0)
@@ -488,7 +482,6 @@ GEM
       actionview (>= 8.0.0)
       bindex (>= 0.4.0)
       railties (>= 8.0.0)
-    websocket (1.2.11)
     websocket-driver (0.8.2)
       base64
       websocket-extensions (>= 0.1.0)
@@ -558,7 +551,6 @@ DEPENDENCIES
   ruby-mp3info
   sass-rails (>= 5)
   secure_headers
-  selenium-webdriver
   sitemap_generator
   solargraph
   spring
