@@ -36,9 +36,12 @@ RSpec.describe "CSP の報告", type: :request do
     expect(Rails.logger).to have_received(:info).with(a_string_starting_with('[CSP]').and(including('script-src-elem')).and(satisfy { !it.include?("\n") }))
   end
 
-  it "形の崩れた報告でも、例外にせず受け流す" do
-    post '/csp_report', params: 'not json', headers: { 'Content-Type' => 'application/csp-report' }
+  # 報告は誰でも送れる。例外にすると 500 を返し、Airbrake にも通知が届く
+  ['not json', '[]', 'null', '1', '{"csp-report": "x"}'].each do |body|
+    it "形の崩れた報告（#{body}）でも、例外にせず受け流す" do
+      post '/csp_report', params: body, headers: { 'Content-Type' => 'application/csp-report' }
 
-    expect(response).to have_http_status(:no_content)
+      expect(response).to have_http_status(:no_content)
+    end
   end
 end

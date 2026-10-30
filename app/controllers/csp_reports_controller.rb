@@ -4,10 +4,12 @@ class CspReportsController < ActionController::Base
   skip_forgery_protection
 
   MAX_BODY_BYTES = 8.kilobytes
-  FIELDS         = %w(document-uri effective-directive violated-directive blocked-uri source-file line-number script-sample).freeze
+  # disposition で、強制した方針（enforce）と報告だけの方針（report）の違反を分ける
+  FIELDS         = %w(disposition document-uri effective-directive violated-directive blocked-uri source-file line-number script-sample).freeze
 
   def create
-    report = JSON.parse(request.body.read(MAX_BODY_BYTES).to_s)['csp-report']
+    body   = JSON.parse(request.body.read(MAX_BODY_BYTES).to_s)
+    report = body['csp-report'] if body.is_a?(Hash)
     Rails.logger.info("[CSP] #{report.slice(*FIELDS).transform_values { it.to_s[0, 200] }.to_json}") if report.is_a?(Hash)
   rescue JSON::ParserError
     # 形の崩れた報告は捨てる
