@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root "home#show"
 
+  # ブラウザが送る CSP の違反の報告
+  post '/csp_report', to: 'csp_reports#create'
+
   # Render legal documents by using Keiyaku CSS
   # https://github.com/cognitom/keiyaku-css
   #get "/docs/charter",           to: redirect('/charter')
