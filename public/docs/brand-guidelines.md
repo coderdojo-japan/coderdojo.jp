@@ -4,7 +4,7 @@
 
 本ページでは CoderDojo の名称を書くときの注意点や、CoderDojo のロゴを利用する際の注意点についてまとめています。ロゴやチラシの画像データ、および配色やフォントなどの注意事項については [CoderDojo Style Guide](http://dojo.soy/style) (英語) を参照してください。
 
-## [🌐](#english) 英語における表記:  {#english}
+## [🌐](#english) 英語における表記 {#english}
 
 - 「CoderDojo」は１つの単語であり、２つの単語ではありません
   - ❌ 間違った例:「Coder Dojo」
@@ -13,14 +13,14 @@
 - 各地域の CoderDojo は単数形で、複数形ではありません
   - ❌ 間違った例: 「下北沢には CoderDojos があります」
 
-## [🗾](#japanese) 日本語における表記: {#japanese}
+## [🗾](#japanese) 日本語における表記 {#japanese}
 - 日本語では次のように表記します。
   - ✅ 日本語: 「コーダー道場」
   - ✅ ひらがな: 「こーだーどうじょう」
   - ✅ カタカナ: 「コーダードウジョウ」
   - ❌ 間違った例: 「Coder道場」
 
-## [☯️](#logo) ロゴに関する表記: {#logo}
+## [☯️](#logo) ロゴに関する表記 {#logo}
 
 ### 名称は右横か真下に置く
 「CoderDojo」という文をロゴの*右横*に置くことが推奨されますが、ロゴの真下に名称を置いて利用することもできます。
@@ -38,9 +38,10 @@
 次のような形でロゴを利用しないでください。
 <img alt="Logos not good examples" loading='lazy' src='/img/logo-not-good.png'>
 
+
 ## [🎨️](#original) 独自のロゴを作成する場合 {#original}
 
-上記の点に注意して既存の CoderDojo ロゴをそのままご利用することも可能ですが、**上記のガイドラインに沿って、自由にロゴを作成することも可能**です。
+[承認された CoderDojo](/kata#startup) は、上記の点に注意して既存の CoderDojo ロゴをそのままご利用することも可能ですが、**上記のガイドラインに沿って、自由にロゴを作成することも可能**です。
 
 以下は、CoderDojo コミュニティで使われているロゴの良い作成例です。
 <img alt="Logo Examples 1/3" loading='lazy' src='/img/logo-examples-1.png'>
