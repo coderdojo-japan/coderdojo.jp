@@ -22,6 +22,31 @@ RSpec.describe "CSP の報告", type: :request do
     expect(header).not_to match(/script-src[^;]*'unsafe-inline'/)
   end
 
+  # 本番のページで読み込みを確かめた外部の JS は、報告しない（直すべきインラインの JS の報告が埋もれないように）
+  %w(/ /docs /about /english /podcasts /sotechsha2).each do |path|
+    it "#{path} が出力する外部の JS を、違反として報告しない" do
+      get path
+
+      header  = response.headers['Content-Security-Policy-Report-Only']
+      sources = header.split(';').find { it.strip.start_with?('script-src ') }.split.drop(1)
+      scripts = Nokogiri::HTML(response.body).css('script[src]').map { it['src'] }
+      scripts = scripts.select { it.start_with?('https://', '//') }.map { it.sub(%r{\A//}, 'https://').split(/[?#]/, 2).first }.uniq
+      expect(scripts).to include('https://kit.fontawesome.com/82f32b9df5.js')
+
+      scripts.each do |url|
+        allowed = sources.any? { url == it || url.start_with?("#{it.delete_suffix('/')}/") }
+        expect(allowed).to be(true), "CSP に #{url} の許可がない"
+      end
+    end
+  end
+
+  it "誰でもパッケージを置ける CDN は、ホストごとには許さない" do
+    get root_path
+
+    header = response.headers['Content-Security-Policy-Report-Only']
+    expect(header).not_to match(%r{https://(cdn\.jsdelivr\.net|unpkg\.com)[ ;]})
+  end
+
   it "今の方針は、これまでどおり強制する" do
     get root_path
 
