@@ -40,11 +40,19 @@ RSpec.describe "CSP の報告", type: :request do
     end
   end
 
+  # CSP は転送先のホストも照らす。Wufoo の form.js は www から static へ転送される
+  it "JS から読む外部の JS と、その転送先も許す" do
+    get root_path
+
+    header = response.headers['Content-Security-Policy-Report-Only']
+    expect(header).to include('https://www.wufoo.com/scripts/embed/form.js', 'https://static.wufoo.com/scripts/embed/form.js')
+  end
+
   it "誰でもパッケージを置ける CDN は、ホストごとには許さない" do
     get root_path
 
     header = response.headers['Content-Security-Policy-Report-Only']
-    expect(header).not_to match(%r{https://(cdn\.jsdelivr\.net|unpkg\.com)[ ;]})
+    expect(header).not_to match(%r{https://(cdn\.jsdelivr\.net|unpkg\.com)/?[ ;]})
   end
 
   it "今の方針は、これまでどおり強制する" do

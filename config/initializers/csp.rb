@@ -17,7 +17,9 @@ SecureHeaders::Configuration.default do |config|
   # 読み込みを確かめた外部の JS だけに絞った時に、何が止まるかを、止めずに報告だけして数える。
   # 報告は CspReportsController がログに残す。
   # 1 ファイルだけ読む配信元はそのファイルだけを許す。jsDelivr は誰でもパッケージを置けるので、ホストごとには許さない。
-  # GTM（gtag）・Facebook・X・はてな・Google は、そこから別の JS も読むのでホストを許す。
+  # Facebook・X・はてな・Google は、そこから別の JS も読むのでホストを許す。www.googletagmanager.com の gtag/js は、
+  # このアプリからは直接読まないが、本番では analytics.js を読んだ後にどのページでも読まれている。
+  # Wufoo の form.js は static.wufoo.com へ転送される（CSP は転送先のホストも照らす）。
   # www.googletagmanager.com と apis.google.com は、強制する時に許し方を見直す（JSONP などで迂回に使われうる）
   config.csp_report_only = {
     report_only:      true,
@@ -35,6 +37,7 @@ SecureHeaders::Configuration.default do |config|
                     https://b.st-hatena.com
                     https://apis.google.com
                     https://www.wufoo.com/scripts/embed/form.js
+                    https://static.wufoo.com/scripts/embed/form.js
                     https://speakerdeck.com/assets/embed.js),
     object_src:  %w('none'),
     base_uri:    %w('self'),
