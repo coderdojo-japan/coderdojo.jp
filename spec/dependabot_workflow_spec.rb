@@ -9,8 +9,8 @@ RSpec.describe 'Dependabot auto-merge workflow' do
   let(:permissions) { workflow['permissions'] }
   let(:steps)       { workflow.dig('jobs', 'dependabot', 'steps') }
 
-  # CI を待つのに gh pr view --json statusCheckRollup を使う。これは checks・statuses・actions の
-  # 3 つを読み、1 つでも欠けると GraphQL のエラーで止まる（approve 済み・CI 緑のまま、マージされないだけになる）
+  # CI を待つのに gh pr view --json statusCheckRollup を使う。public のリポジトリでは権限が無くても読めるが、
+  # private に変えると、欠けた時に GraphQL のエラーで止まる（approve 済み・CI 緑のまま、マージされないだけになる）
   it 'CI の結果（statusCheckRollup）を読める' do
     expect(permissions).to include('checks' => 'read', 'statuses' => 'read')
     # actions は write。下のデプロイの呼び出しにも要る（write は read を含む）

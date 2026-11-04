@@ -8,8 +8,8 @@ on:
 permissions:
   contents:      write
   pull-requests: write
-  # CI を待つのに gh pr view --json statusCheckRollup を使う。checks・statuses・actions の 3 つを読み、
-  # 1 つでも欠けると GraphQL のエラーで止まる（approve 済み・CI 緑のまま、マージされないだけになる）
+  # CI を待つのに gh pr view --json statusCheckRollup を使う。public のリポジトリでは権限が無くても読めるが、
+  # private に変えた時に黙って止まらないよう、読む権限をそろえておく（private では欠けると GraphQL のエラーで止まる）
   checks:        read
   statuses:      read
   # actions は write。read は statusCheckRollup に要り、write は下でデプロイの workflow を呼ぶのに要る
