@@ -13,10 +13,10 @@ RSpec.describe Document do
       expect(doc.filename).to eq("..-..-..-etc-passwd")
     end
 
-    it 'null バイトが含まれる場合もそのまま処理する' do
+    it 'null バイトを - に変換する' do
       doc = Document.new("test\x00file")
-      # ActiveStorage::Filename は null バイトをそのまま保持
-      expect(doc.filename).to eq("test\x00file")
+      # Rails 8.1.4.1 から ActiveStorage::Filename は null バイトを - に変換
+      expect(doc.filename).to eq("test-file")
     end
 
     it 'バックスラッシュを処理する' do
