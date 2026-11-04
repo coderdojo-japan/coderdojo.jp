@@ -8,6 +8,12 @@ on:
 permissions:
   contents:      write
   pull-requests: write
+  # CI を待つのに gh pr view --json statusCheckRollup を使う。checks・statuses・actions の 3 つを読み、
+  # 1 つでも欠けると GraphQL のエラーで止まる（approve 済み・CI 緑のまま、マージされないだけになる）
+  checks:        read
+  statuses:      read
+  # actions は write。read は statusCheckRollup に要り、write は下でデプロイの workflow を呼ぶのに要る
+  actions:       write
 
 jobs:
   dependabot:
@@ -19,3 +25,46 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # 本番の Heroku の API キーを渡す action なので、SHA を上げる PR は自動でマージせず、人が action の差分を読んでからマージする
           exclude-gems: rails,jekyll,yasslab/heroku_deploy_action
+
+      # GITHUB_TOKEN で起こした出来事は workflow を動かさない（GitHub の仕様。再帰を防ぐため）。
+      # そのため上の自動マージが成功しても main への push が test.yml を呼ばず、本番に届かないまま
+      # 全部緑に見える。workflow_dispatch は例外なので明示的に呼ぶ（spec/dependabot_workflow_spec.rb）。
+      #
+      # `if: !cancelled()`: 上の action はマージを済ませた後に失敗する経路がある。
+      # 既定の「前が成功した時だけ」にすると、マージ済みなのに本番が古いまま止まる。
+      # マージされていなければ（除外した gem など）呼ばずに正常終了する。
+      #
+      # `gh workflow run` は 204 を返すだけで run ができたかは返さないので、run が増えたことを見てから成功にする
+      - name: 🚀 マージできたらデプロイを呼ぶ
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+
+          merged=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json merged --jq .merged)
+          if [ "$merged" != "true" ]; then
+            echo "PR #$PR_NUMBER はマージされていないので、デプロイは呼びません（除外した gem では正常）"
+            exit 0
+          fi
+
+          latest_dispatch_run() {
+            gh run list --repo "$GITHUB_REPOSITORY" --workflow test.yml \
+                        --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId // 0'
+          }
+
+          before=$(latest_dispatch_run)
+          gh workflow run test.yml --repo "$GITHUB_REPOSITORY" --ref main
+
+          for _ in $(seq 1 12); do
+            sleep 5
+            after=$(latest_dispatch_run)
+            if [ "$after" != "$before" ]; then
+              echo "test.yml の run を作りました: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$after"
+              exit 0
+            fi
+          done
+
+          echo "::error::test.yml を呼んだのに run が作られませんでした。本番には届いていません"
+          exit 1
