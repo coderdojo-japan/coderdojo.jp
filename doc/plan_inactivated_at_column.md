@@ -1,5 +1,11 @@
 # inactivated_at カラム追加の実装計画
 
+> **この移行は完了しています（2025-08。記録として残しています）。**
+> `is_active` 列は `20250814115324_remove_is_active_from_dojos` で削除され、`db/dojos.yml` にも
+> `is_active: false` は 1 件も残っていません。本文に出てくる `rails dojos:extract_inactivated_at_from_git`
+> は、入力（YAML の `is_active: false` と `is_active` 列）が無くなって動かなくなったので削除しました。
+> 以降、Dojo の活動状態は `inactivated_at` だけで決まります（`nil` なら活動中）。
+
 ## 背景と目的
 
 ### 現状の問題点 (Issue #1373)
@@ -67,7 +73,7 @@ class ChangeNoteToTextInDojos < ActiveRecord::Migration[7.0]
   def up
     change_column :dojos, :note, :text, null: false, default: ""
   end
-  
+
   def down
     # 255文字を超えるデータがある場合は警告
     long_notes = Dojo.where("LENGTH(note) > 255").pluck(:id, :name)
@@ -75,7 +81,7 @@ class ChangeNoteToTextInDojos < ActiveRecord::Migration[7.0]
       raise ActiveRecord::IrreversibleMigration, 
         "Cannot revert: These dojos have notes longer than 255 chars: #{long_notes}"
     end
-    
+
     change_column :dojos, :note, :string, null: false, default: ""
   end
 end
@@ -93,46 +99,46 @@ class Dojo < ApplicationRecord
   # 既存のスコープを維持（後方互換性のため）
   scope :active,   -> { where(is_active: true) }
   scope :inactive, -> { where(is_active: false) }
-  
+
   # 新しいスコープを追加
   scope :active_at, ->(date) { 
     where('created_at <= ?', date)
       .where('inactivated_at IS NULL OR inactivated_at > ?', date) 
   }
-  
+
   # ヘルパーメソッド
   def active_at?(date)
     created_at <= date && (inactivated_at.nil? || inactivated_at > date)
   end
-  
+
   def active?
     inactivated_at.nil?
   end
-  
+
   # 再活性化メソッド
   def reactivate!
     if inactivated_at.present?
       # 非活動期間を note に記録
       inactive_period = "#{inactivated_at.strftime('%Y-%m-%d')}〜#{Date.today}"
-      
+
       if note.present?
         self.note += "\n非活動期間: #{inactive_period}"
       else
         self.note = "非活動期間: #{inactive_period}"
       end
     end
-    
+
     update!(
       is_active: true,
       inactivated_at: nil
     )
   end
-  
+
   # is_activeとinactivated_atの同期（移行期間中）
   before_save :sync_active_status
-  
+
   private
-  
+
   def sync_active_status
     if is_active_changed?
       if is_active == false && inactivated_at.nil?
@@ -183,22 +189,22 @@ end
 desc 'Git履歴からinactivated_at日付を抽出してYAMLファイルに反映'
 task extract_inactivated_at_from_git: :environment do
   require 'git'
-  
+
   yaml_path = Rails.root.join('db', 'dojos.yml')
   git = Git.open(Rails.root)
-  
+
   # YAMLファイルの内容を行番号付きで読み込む
   yaml_lines = File.readlines(yaml_path)
-  
+
   inactive_dojos = Dojo.inactive.where(inactivated_at: nil)
-  
+
   inactive_dojos.each do |dojo|
     puts "Processing: #{dojo.name} (ID: #{dojo.id})"
-    
+
     # is_active: false が記載されている行を探す
     target_line_number = nil
     in_dojo_block = false
-    
+
     yaml_lines.each_with_index do |line, index|
       # Dojoブロックの開始を検出
       if line.match?(/^- id: #{dojo.id}$/)
@@ -206,28 +212,28 @@ task extract_inactivated_at_from_git: :environment do
       elsif line.match?(/^- id: \d+$/)
         in_dojo_block = false
       end
-      
+
       # 該当Dojoブロック内で is_active: false を見つける
       if in_dojo_block && line.match?(/^\s*is_active: false/)
         target_line_number = index + 1  # git blameは1-indexedなので+1
         break
       end
     end
-    
+
     if target_line_number
       # git blame を使って該当行の最新コミット情報を取得
       # --porcelain で解析しやすい形式で出力
       blame_cmd = "git blame #{yaml_path} -L #{target_line_number},+1 --porcelain"
       blame_output = `#{blame_cmd}`.strip
-      
+
       # コミットIDを抽出（最初の行の最初の要素）
       commit_id = blame_output.lines[0].split.first
-      
+
       if commit_id && commit_id.match?(/^[0-9a-f]{40}$/)
         # コミット情報を取得
         commit = git.gcommit(commit_id)
         inactivated_date = commit.author_date
-        
+
         # YAMLファイルのDojoブロックを見つけて更新
         yaml_updated = false
         yaml_lines.each_with_index do |line, index|
@@ -237,7 +243,7 @@ task extract_inactivated_at_from_git: :environment do
             while insert_index < yaml_lines.length && !yaml_lines[insert_index].match?(/^- id:/)
               insert_index += 1
             end
-            
+
             # inactivated_at 行を挿入
             yaml_lines.insert(insert_index - 1, 
               "  inactivated_at: #{inactivated_date.strftime('%Y-%m-%d %H:%M:%S')}\n")
@@ -245,7 +251,7 @@ task extract_inactivated_at_from_git: :environment do
             break
           end
         end
-        
+
         if yaml_updated
           # YAMLファイルを書き戻す
           File.write(yaml_path, yaml_lines.join)
@@ -261,7 +267,7 @@ task extract_inactivated_at_from_git: :environment do
       puts "  ✗ Could not find 'is_active: false' line in YAML"
     end
   end
-  
+
   puts "\nSummary:"
   puts "Total inactive dojos: #{inactive_dojos.count}"
   puts "YAML file has been updated with inactivated_at dates"
@@ -287,7 +293,7 @@ task :set_inactivated_at_from_csv, [:csv_path] => :environment do |t, args|
   CSV.foreach(args[:csv_path], headers: true) do |row|
     dojo = Dojo.find_by(id: row['dojo_id'])
     next unless dojo
-    
+
     dojo.update!(inactivated_at: row['inactivated_at'])
     puts "Updated #{dojo.name}: inactivated_at = #{row['inactivated_at']}"
   end
@@ -309,12 +315,12 @@ end
 desc 'Dojoを再活性化する'
 task :reactivate_dojo, [:dojo_id] => :environment do |t, args|
   dojo = Dojo.find(args[:dojo_id])
-  
+
   if dojo.inactivated_at.present?
     inactive_period = "#{dojo.inactivated_at.strftime('%Y-%m-%d')}〜#{Date.today}"
     puts "再活性化: #{dojo.name}"
     puts "非活動期間: #{inactive_period}"
-    
+
     dojo.reactivate!
     puts "✓ 完了しました"
   else
@@ -359,7 +365,7 @@ class Stat
     end_of_year = Time.zone.local(year).end_of_year
     Dojo.active_at(end_of_year).sum(:counter)
   end
-  
+
   def annual_dojos_chart(lang = 'ja')
     # 変更前: Dojo.active のみを集計
     # 変更後: 各年末時点でアクティブだったDojo数を集計
@@ -367,10 +373,10 @@ class Stat
     (@period.first.year..@period.last.year).each do |year|
       data[year.to_s] = annual_sum_total_of_dojo_at_year(year)
     end
-    
+
     HighChartsBuilder.build_annual_dojos(data, lang)
   end
-  
+
   # 統計値の変化の例
   # 2018年: 旧) 180道場 → 新) 220道場（2019年に非アクティブになった40道場を含む）
   # 2019年: 旧) 200道場 → 新) 220道場（その年に非アクティブになった道場も年末まで含む）
@@ -400,11 +406,11 @@ def self.aggregatable_annual_count_with_inactive(period)
     FROM yearly_counts
     ORDER BY year
   SQL
-  
+
   result = connection.execute(
     sanitize_sql([sql, { start_date: period.first, end_date: period.last }])
   )
-  
+
   Hash[result.values]
 end
 ```
@@ -423,7 +429,7 @@ class Dojo < ApplicationRecord
   def is_active
     inactivated_at.nil?
   end
-  
+
   def is_active=(value)
     self.inactivated_at = value ? nil : Time.current
   end
@@ -657,17 +663,17 @@ class GitExtractionValidator
   def self.run
     yaml_path = Rails.root.join('db', 'dojos.yml')
     git = Git.open(Rails.root)
-    
+
     issues = []
     success_count = 0
-    
+
     Dojo.inactive.each do |dojo|
       yaml_content = File.read(yaml_path)
       unless yaml_content.match?(/^- id: #{dojo.id}$/)
         issues << "Dojo #{dojo.id} (#{dojo.name}) not found in YAML"
         next
       end
-      
+
       # is_active: false の存在確認
       dojo_block = extract_dojo_block(yaml_content, dojo.id)
       if dojo_block.match?(/is_active: false/)
@@ -676,11 +682,11 @@ class GitExtractionValidator
         issues << "Dojo #{dojo.id} (#{dojo.name}) missing 'is_active: false' in YAML"
       end
     end
-    
+
     puts "📊 検証結果:"
     puts "  成功: #{success_count}"
     puts "  問題: #{issues.count}"
-    
+
     if issues.any?
       puts "\n⚠️  以下の問題が見つかりました:"
       issues.each { |issue| puts "  - #{issue}" }
@@ -690,17 +696,17 @@ class GitExtractionValidator
       true
     end
   end
-  
+
   private
-  
+
   def self.extract_dojo_block(yaml_content, dojo_id)
     lines = yaml_content.lines
     start_idx = lines.index { |l| l.match?(/^- id: #{dojo_id}$/) }
     return "" unless start_idx
-    
+
     end_idx = lines[(start_idx + 1)..-1].index { |l| l.match?(/^- id: \d+$/) }
     end_idx = end_idx ? start_idx + end_idx : lines.length - 1
-    
+
     lines[start_idx..end_idx].join
   end
 end
@@ -716,14 +722,14 @@ class InactivatedDateApplier
   def self.run(dry_run: true)
     yaml_path = Rails.root.join('db', 'dojos.yml')
     backup_path = yaml_path.to_s + ".backup.#{Time.now.strftime('%Y%m%d_%H%M%S')}"
-    
+
     if dry_run
       puts "🔍 DRY RUN モード - 実際の変更は行いません"
     else
       FileUtils.cp(yaml_path, backup_path)
       puts "📦 バックアップ作成: #{backup_path}"
     end
-    
+
     # Git履歴抽出実行
     puts "🔄 Git履歴から日付を抽出中..."
     if dry_run
@@ -731,7 +737,7 @@ class InactivatedDateApplier
     else
       system("rails dojos:extract_inactivated_at_from_git")
     end
-    
+
     # 変更内容の確認
     if dry_run
       puts "\n📋 変更プレビュー:"
@@ -747,31 +753,31 @@ class InactivatedDateApplier
         FileUtils.cp(backup_path, yaml_path)
         return false
       end
-      
+
       # DBへの反映
       puts "\n🗄️  データベースに反映中..."
       system("rails dojos:update_db_by_yaml")
-      
+
       # 統計値の比較
       compare_statistics
     end
-    
+
     true
   end
-  
+
   private
-  
+
   def self.compare_statistics
     puts "\n📊 統計値の変化:"
     puts "Year | Before | After | Diff"
     puts "-----|--------|-------|------"
-    
+
     (2012..2024).each do |year|
       date = Time.zone.local(year).end_of_year
       before = Dojo.active.where('created_at <= ?', date).sum(:counter)
       after = Dojo.active_at(date).sum(:counter)
       diff = after - before
-      
+
       puts "#{year} | #{before.to_s.rjust(6)} | #{after.to_s.rjust(5)} | #{diff > 0 ? '+' : ''}#{diff}"
     end
   end
@@ -798,7 +804,7 @@ end
 # app/models/concerns/statistics_optimizable.rb
 module StatisticsOptimizable
   extend ActiveSupport::Concern
-  
+
   class_methods do
     def active_count_by_year_optimized(start_year, end_year)
       sql = <<-SQL
@@ -820,7 +826,7 @@ module StatisticsOptimizable
         )
         SELECT * FROM yearly_counts ORDER BY year
       SQL
-      
+
       result = connection.execute(sql)
       result.map { |row| [row['year'].to_s, row['counter_sum'].to_i] }.to_h
     end
@@ -837,41 +843,41 @@ class MigrationDashboard
     puts "\n" + "="*60
     puts " inactivated_at 移行ダッシュボード ".center(60)
     puts "="*60
-    
+
     total = Dojo.count
     active = Dojo.active.count
     inactive = Dojo.inactive.count
     migrated = Dojo.inactive.where.not(inactivated_at: nil).count
     pending = inactive - migrated
-    
+
     puts "\n📊 Dojo統計:"
     puts "  全Dojo数: #{total}"
     puts "  アクティブ: #{active} (#{(active.to_f/total*100).round(1)}%)"
     puts "  非アクティブ: #{inactive} (#{(inactive.to_f/total*100).round(1)}%)"
-    
+
     puts "\n📈 移行進捗:"
     puts "  完了: #{migrated}/#{inactive} (#{(migrated.to_f/inactive*100).round(1)}%)"
     puts "  残り: #{pending}"
-    
+
     # プログレスバー
     progress = migrated.to_f / inactive * 50
     bar = "█" * progress.to_i + "░" * (50 - progress.to_i)
     puts "  [#{bar}]"
-    
+
     puts "\n🔍 データ品質:"
     mismatched = Dojo.where(
       "(is_active = true AND inactivated_at IS NOT NULL) OR " \
       "(is_active = false AND inactivated_at IS NULL)"
     ).count
-    
+
     puts "  不整合: #{mismatched} 件"
-    
+
     if mismatched > 0
       puts "  ⚠️  データ不整合が検出されました！"
     else
       puts "  ✅ データ整合性: OK"
     end
-    
+
     puts "\n" + "="*60
   end
 end
