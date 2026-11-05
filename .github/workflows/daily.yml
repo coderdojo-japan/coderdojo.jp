@@ -65,7 +65,7 @@ jobs:
 
     - name: 📅 Run upcoming_events:aggregation on Heroku
       run: |
-        heroku run rails upcoming_events:aggregation --app $HEROKU_APP_NAME
+        heroku run --exit-code rails upcoming_events:aggregation --app $HEROKU_APP_NAME
       env:
         HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
         HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
