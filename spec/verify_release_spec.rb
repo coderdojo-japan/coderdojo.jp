@@ -224,11 +224,12 @@ RSpec.describe VerifyRelease do
       expect(env['HEROKU_API_KEY']).to include('secrets.HEROKU_API_KEY')
     end
 
-    # Daily Workflow（09:00 JST）が配った後に見る。前に見ると、その日の配達を待たずに鳴る
-    it 'Daily Workflow の後の時刻に動かす' do
+    # Daily Workflow が db/news.yml を push するのは 09:20〜09:27 JST。その直後に見ると
+    # HEAD が 2 時間の猶予に収まって必ず pending になり、その日の daily.yml の deploy の失敗を見逃す
+    it '猶予（2 時間）を越えた時刻に動かす' do
       cron = workflow[true]['schedule'].first['cron']
 
-      expect(cron).to eq('30 0 * * *')
+      expect(cron).to eq('0 3 * * *') # 12:00 JST
     end
   end
 
@@ -306,7 +307,12 @@ RSpec.describe VerifyRelease do
   end
 
   # 設定変数の変更などで slug が付かないリリースが挟まることがある。
-  # 新しい順に探して、slug を持つ最初のものを使う
+  # 新しい順に探して、status が succeeded で slug を持つ最初のものを使う。
+  #
+  # ここで status を見落とすとセンサーが黙る。Procfile の `release: ./script/release.sh` が落ちると、
+  # リリースは新しい commit の slug を持ったまま failed で残り、本番は前の版のまま。
+  # status を無視すると、その slug の commit が main の HEAD と一致して ok になる
+  # （status の enum は failed / pending / succeeded / expired。api.heroku.com/schema で確認）
   describe '.running_commit' do
     before do
       allow(described_class).to receive(:heroku_get).with("/apps/#{app}/releases", any_args).and_return(releases)
@@ -316,9 +322,9 @@ RSpec.describe VerifyRelease do
 
     let(:releases) do
       [
-        { 'version' => 9, 'slug' => nil },
-        { 'version' => 8, 'slug' => { 'id' => 'slug-2' } },
-        { 'version' => 7, 'slug' => { 'id' => 'slug-1' } }
+        { 'version' => 9, 'status' => 'succeeded', 'slug' => nil },
+        { 'version' => 8, 'status' => 'succeeded', 'slug' => { 'id' => 'slug-2' } },
+        { 'version' => 7, 'status' => 'succeeded', 'slug' => { 'id' => 'slug-1' } }
       ]
     end
 
@@ -328,7 +334,45 @@ RSpec.describe VerifyRelease do
 
     it 'slug を持つリリースが無ければ nil を返す（judge が unknown にする）' do
       allow(described_class).to receive(:heroku_get).with("/apps/#{app}/releases", any_args)
-                                                   .and_return([{ 'version' => 9, 'slug' => nil }])
+                                                   .and_return([{ 'version' => 9, 'status' => 'succeeded',
+                                                                  'slug' => nil }])
+
+      expect(described_class.running_commit(app: app, token: 'x')).to be_nil
+    end
+
+    # 本題。release phase が落ちた朝に、その slug を「動いているもの」として読むと ok で黙る
+    context 'release phase が落ちた（failed）リリースが最新の時' do
+      let(:releases) do
+        [
+          { 'version' => 10, 'status' => 'failed',    'slug' => { 'id' => 'slug-3' } },
+          { 'version' => 9,  'status' => 'succeeded', 'slug' => { 'id' => 'slug-2' } }
+        ]
+      end
+
+      it 'failed のリリースは読まず、前の succeeded の commit を返す' do
+        expect(described_class.running_commit(app: app, token: 'x')).to eq(running)
+        expect(described_class).not_to have_received(:heroku_get).with("/apps/#{app}/slugs/slug-3", any_args)
+      end
+    end
+
+    # 09:30 にまだ release phase が走っている時も、その slug を読むと ok で黙る
+    context 'まだ走っている（pending）リリースが最新の時' do
+      let(:releases) do
+        [
+          { 'version' => 10, 'status' => 'pending',   'slug' => { 'id' => 'slug-3' } },
+          { 'version' => 9,  'status' => 'succeeded', 'slug' => { 'id' => 'slug-2' } }
+        ]
+      end
+
+      it 'pending のリリースは読まず、前の succeeded の commit を返す' do
+        expect(described_class.running_commit(app: app, token: 'x')).to eq(running)
+      end
+    end
+
+    it 'succeeded のリリースが 1 つも無ければ nil を返す（judge が unknown にする）' do
+      allow(described_class).to receive(:heroku_get).with("/apps/#{app}/releases", any_args)
+                                                   .and_return([{ 'version' => 10, 'status' => 'failed',
+                                                                  'slug' => { 'id' => 'slug-3' } }])
 
       expect(described_class.running_commit(app: app, token: 'x')).to be_nil
     end

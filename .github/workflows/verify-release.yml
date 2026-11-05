@@ -11,8 +11,11 @@ name: Verify Release
 
 on:
   schedule:
-    # GitHub の cron は UTC。00:30 UTC = 09:30 JST（Daily Workflow の 09:00 JST の後に見る）
-    - cron: '30 0 * * *'
+    # GitHub の cron は UTC。03:00 UTC = 12:00 JST。
+    # 09:30 JST にしないのは、Daily Workflow が db/news.yml を push するのが 09:20〜09:27 JST で、
+    # その直後だと HEAD が 2 時間の猶予に収まって必ず pending（exit 0）になるため。
+    # ニュースのある日の daily.yml の deploy が落ちた時（#1973 で実際に起きた形）を、その日のうちに見る
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:

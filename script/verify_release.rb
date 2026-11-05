@@ -91,15 +91,22 @@ module VerifyRelease
       "#{(seconds / 3600.0).round(1)} 時間"
     end
 
-    # 最新のリリースのうち、slug を持つものの commit を返す。
+    # 最新のリリースのうち、**status が succeeded で** slug を持つものの commit を返す。
     # 設定変数の変更などで slug が付かないリリースが挟まることがあるので、新しい順に探す。
+    #
+    # status を見ないと黙る: Procfile に `release: ./script/release.sh` があり、これが落ちると
+    # リリースは**新しい commit の slug を持ったまま `failed`** で残り、本番は前の版のままになる。
+    # status を無視すると、その slug の commit が main の HEAD と一致して `ok` になる
+    # （status の enum は failed / pending / succeeded / expired。api.heroku.com/schema で確認）。
+    # test.yml の「リリースが本番に届いたことを確認する」step も `.status == "succeeded"` を見ており、
+    # 同じ基準にそろえる。`current` は使わない（release phase が落ちた release にも付く）
     # NOTE: Cedar（Procfile と slug）の前提。Fir 世代（OCI image）に移すとリリースは
     #       `slug` ではなく `oci_image` を持つので、ここを直す。移すまでは毎日 :unknown で鳴るだけで、
     #       黙って ok になることはない
     def running_commit(app:, token:)
       releases = heroku_get("/apps/#{app}/releases", token: token,
                                                      range: 'version ..; order=desc,max=20')
-      release = Array(releases).find { |r| r.dig('slug', 'id') }
+      release = Array(releases).find { |r| r['status'] == 'succeeded' && r.dig('slug', 'id') }
       return nil unless release
 
       heroku_get("/apps/#{app}/slugs/#{release.dig('slug', 'id')}", token: token)['commit']
@@ -242,7 +249,9 @@ if $PROGRAM_NAME == __FILE__
     running = VerifyRelease.running_commit(app: app, token: token)
     verdict = VerifyRelease.judge(running: running, head: head, head_time: head_time, now: Time.now)
   rescue StandardError => e
-    verdict = { status: :broken, message: "照合そのものに失敗しました: #{e.class}: #{e.message}" }
+    # 例外の文は公開の Issue の本文に入る。アプリ名が混ざる経路を先に塞ぐ
+    message = "照合そのものに失敗しました: #{e.class}: #{e.message}".gsub(app, '<app>')
+    verdict = { status: :broken, message: message }
     running = nil
   end
 
