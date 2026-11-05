@@ -45,6 +45,12 @@ RSpec.describe 'Verify Release workflow' do
     expect(notify['run']).to include('gh issue create', 'gh issue edit')
   end
 
+  # checkout が落ちた日、gh は git remote からリポジトリを決められず
+  # `fatal: not a git repository` で止まる。run が赤いだけで Issue が立たない
+  it 'リポジトリを --repo で渡す（checkout が落ちた日も Issue を立てる）' do
+    expect(steps.last['run'].scan('--repo "$GITHUB_REPOSITORY"').size).to eq(3)
+  end
+
   # release phase が落ちたリリースは、新しい commit の slug を持ったまま failed で残り、
   # 本番は前の版のまま。status を見ないと、その description が HEAD と一致して緑になる。
   # any() にすると過去 10 件に紛れて、ロールバック中でも緑になる

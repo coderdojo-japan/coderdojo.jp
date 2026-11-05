@@ -94,12 +94,15 @@ jobs:
 
         直ったら**手で閉じてください**（揃っても自動では閉じません）。ずれている間は毎日この本文が更新されます。"
 
-        # 題名の完全一致で 1 本だけ持つ。env.ISSUE_TITLE で渡してシェルの引用を挟まない
-        number=$(gh issue list --state open --limit 100 --json number,title \
+        # 題名の完全一致で 1 本だけ持つ。env.ISSUE_TITLE で渡してシェルの引用を挟まない。
+        # --repo を付けるのは、checkout が落ちた日にここも落ちないため（gh は git remote から
+        # リポジトリを決めるので、workspace に .git が無いと `fatal: not a git repository` で
+        # 止まり、run が赤いだけで Issue が立たない。dependabot.yml と同じ書き方）
+        number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --limit 100 --json number,title \
                    --jq '[.[] | select(.title == env.ISSUE_TITLE)][0].number // empty')
         if [ -n "$number" ]; then
-          gh issue edit "$number" --body "$body"
+          gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --body "$body"
           echo "既にある Issue #$number の本文を更新しました"
         else
-          gh issue create --title "$ISSUE_TITLE" --body "$body"
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$ISSUE_TITLE" --body "$body"
         fi
