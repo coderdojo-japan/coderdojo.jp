@@ -1,0 +1,44 @@
+# 本番で動いているコミットと main の HEAD を照合する。ずれていたら落ちて Issue を 1 本立てる。
+#
+# なぜ要るか: 本番へ配る経路が 3 つ（test.yml の push・dependabot からの dispatch・daily.yml）あり、
+# どれも「動いた時に自分が成功したか」しか見ていない。工程がそもそも起動しなかった日には黙る。
+# 実例: #1973 のマージコミット 8c5ee7f には test.yml の run が無く（マージが github-actions[bot] だった。
+# #2025 で原因を修正）、そのコミットへの配達は翌朝の daily.yml だけで、その deploy は failure だった。
+# どちらの穴も「本番が main に追いついているか」を誰にも教えない。それを外から見るのがここ。
+# 判定は script/verify_release.rb（spec/verify_release_spec.rb で固定）。
+
+name: Verify Release
+
+on:
+  schedule:
+    # GitHub の cron は UTC。00:30 UTC = 09:30 JST（Daily Workflow の 09:00 JST の後に見る）
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # ずれていた時に Issue を 1 本だけ立てる（既にあれば本文を更新して通知を増やさない）
+  issues: write
+
+jobs:
+  verify:
+    # schedule は既定ブランチでしか動かないが、workflow_dispatch は任意のブランチから起こせる。
+    # その時 `git rev-parse HEAD` はそのブランチを指すので、本番と比べて偽の stale になり Issue まで立つ
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v7.0.1
+      with:
+        # 何コミット遅れているかを数えるので、浅い clone にしない
+        fetch-depth: 0
+        persist-credentials: false
+
+    # Ruby は runner に入っているので bundler は使わない（判定は net/http と json だけで足りる）
+    - name: 🔎 本番のリリースと main を照合
+      run: ruby script/verify_release.rb
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_APP:     ${{ secrets.HEROKU_APP_NAME }}
+        GH_TOKEN:       ${{ secrets.GITHUB_TOKEN }}

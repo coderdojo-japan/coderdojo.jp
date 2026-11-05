@@ -26,6 +26,8 @@ workflows:
         - 'yasslab/heroku_deploy_action@v1.0.0'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v7.0.1'
+    '.github/workflows/verify-release.yml':
+        - 'actions/checkout@v7.0.1'
     '.github/workflows/weekly.yml': []
 dependencies:
     'actions/checkout@v7.0.1':
