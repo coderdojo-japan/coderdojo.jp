@@ -1,0 +1,108 @@
+# 本番が main に追いついているかを、毎日 12:00 JST に照合する。
+#
+# なぜ要るか: 本番へ配る経路が 3 つ（test.yml の push・dependabot.yml からの dispatch・daily.yml）
+# あり、どれも「動いた時に自分が成功したか」しか見ていない。工程がそもそも起動しなかった日には黙る。
+# 実例: #1973 のマージコミット 8c5ee7f には test.yml の run が無く（マージが github-actions[bot] で、
+# GITHUB_TOKEN で起こした push は workflow を動かさない。#2025 で原因を修正）、そのコミットへの配達は
+# 翌朝の daily.yml だけで、その deploy は failure だった。
+# どちらの穴も「本番が main に追いついているか」を誰にも教えない。それを外から見るのがここ。
+#
+# 判定は test.yml の「リリースが本番に届いたことを確認する」step と同じ道具（Heroku CLI + jq）。
+# **小さいまま始める。** 足りないと分かった時に足す（遅れているコミット数・経過時間の整形・
+# 複数アプリへの展開など）。先に作らない。
+
+name: Verify Release
+
+on:
+  schedule:
+    # GitHub の cron は UTC。03:00 UTC = 12:00 JST。
+    # 09:30 JST にしないのは、Daily Workflow が db/news.yml を push するのが 09:20〜09:27 JST で、
+    # その直後だと下の猶予（2 時間）に必ず収まって、その日の配達の失敗を見逃すため
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # ずれていた時に Issue を 1 本だけ立てる（既にあれば本文を更新して通知を増やさない）
+  issues: write
+
+jobs:
+  verify:
+    # schedule は既定ブランチでしか動かないが、workflow_dispatch は任意のブランチから起こせる。
+    # その時 HEAD はそのブランチを指すので、本番と比べて偽の Issue が立つ
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-24.04
+
+    env:
+      ISSUE_TITLE: 🚨 本番が main に追いついていません
+
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v7.0.1
+      with:
+        persist-credentials: false
+
+    # ubuntu-24.04 のイメージに Heroku CLI は入っていない（test.yml・daily.yml と同じ）
+    - name: 🟪 Set up Heroku CLI
+      uses: ./.github/actions/setup-heroku-cli
+
+    - name: 🔎 本番のリリースと main を照合
+      env:
+        HEROKU_API_KEY:  ${{ secrets.HEROKU_API_KEY  }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      run: |
+        set -euo pipefail
+        sha=$(git rev-parse --short=7 HEAD)
+        echo "SHA=$sha" >> "$GITHUB_ENV"
+
+        # デプロイは数分かかる。マージ直後のずれで鳴らすと、人が見なくなる
+        age=$(( $(date +%s) - $(git log -1 --format=%ct) ))
+        if [ "$age" -lt 7200 ]; then
+          echo "main の HEAD ($sha) は $((age / 60)) 分前。デプロイ中かもしれないので今日は待ちます"
+          exit 0
+        fi
+
+        # status が succeeded のものだけ見る。release phase が落ちたリリースは
+        # **新しい commit の slug を持ったまま failed** で残り、本番は前の版のままになる。
+        # any() ではなく最新の 1 件を見る: 過去 10 件に紛れると、ロールバック中でも緑になる
+        releases=$(heroku releases --json --num 10 --app "$HEROKU_APP_NAME")
+        echo "$releases" | jq -r '.[] | "v\(.version)\t\(.status)\t\(.description)"'
+        echo "$releases" | jq -e --arg sha "$sha" \
+          '[.[] | select(.status == "succeeded")][0].description | contains($sha)' > /dev/null \
+          || { echo "::error::本番が main ($sha) に追いついていません"; exit 1; }
+
+        echo "✅ 本番は $sha です"
+
+    # ずれ・Heroku が読めない・jq が落ちた、をこの 1 本で拾う。
+    # run が赤くなるだけだと、気づけるのは cron の行を最後に変更した人のメールだけになる
+    - name: 📮 落ちたら Issue にする
+      if: failure()
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        set -euo pipefail
+        body="本番が main（\`${SHA:-不明}\`）に追いついていないか、照合そのものに失敗しました。
+
+        - 走った run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+        - 確かめた時刻: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')
+
+        ### 見るところ
+
+        1. \`Test & Deploy\` に \`event: push\` の run があるか（無ければデプロイが呼ばれていません）
+        2. 直前のマージが \`github-actions[bot]\` なら、\`dependabot.yml\` が \`test.yml\` を呼べたか
+        3. run があって赤ならそのログ、緑なのに届いていないなら Heroku 側
+
+        直ったら**手で閉じてください**（揃っても自動では閉じません）。ずれている間は毎日この本文が更新されます。"
+
+        # 題名の完全一致で 1 本だけ持つ。env.ISSUE_TITLE で渡してシェルの引用を挟まない。
+        # --repo を付けるのは、checkout が落ちた日にここも落ちないため（gh は git remote から
+        # リポジトリを決めるので、workspace に .git が無いと `fatal: not a git repository` で
+        # 止まり、run が赤いだけで Issue が立たない。dependabot.yml と同じ書き方）
+        number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --limit 100 --json number,title \
+                   --jq '[.[] | select(.title == env.ISSUE_TITLE)][0].number // empty')
+        if [ -n "$number" ]; then
+          gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --body "$body"
+          echo "既にある Issue #$number の本文を更新しました"
+        else
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$ISSUE_TITLE" --body "$body"
+        fi
