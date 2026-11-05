@@ -3,6 +3,9 @@ require 'connpass_api_v2'
 module EventService
   module Providers
       class Connpass
+        # 制限が続く時に待ち続けると、ジョブが終わらず失敗にも気づけないので回数を区切る（5・10・15 秒）
+        MAX_RETRIES_ON_TOO_MANY_REQUESTS = 3
+
         def initialize
           @client = ConnpassApiV2.client(ENV['CONNPASS_API_KEY'])
         end
@@ -41,6 +44,7 @@ module EventService
             params[:start] = 1
 
             loop do
+              retry_count = 0
               begin
                 args = params.merge(param_period).compact
                 res = @client.get_events(**args)
@@ -49,9 +53,13 @@ module EventService
                 # この制限を超過すると、HTTPステータスコード 429 Too Many Requests が返されます。
                 # cf. https://connpass.com/about/api/v2/
                 sleep 1
-              rescue ConnpassApiV2::Error => e
-                sleep 5 && retry if e.response&.status == 429
-                raise e
+              # connpass_api_v2 は Faraday の raise_error をそのまま使うので、429 は Faraday の例外で上がる
+              # （ConnpassApiV2::Error ではない。spec/lib/upcoming_events/resilience_spec.rb）
+              rescue Faraday::TooManyRequestsError
+                retry_count += 1
+                raise if retry_count > MAX_RETRIES_ON_TOO_MANY_REQUESTS
+                sleep 5 * retry_count
+                retry
               end
 
               break if res.results_returned.zero?

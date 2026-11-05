@@ -67,6 +67,46 @@ RSpec.describe '近日開催イベント収集の耐障害性' do
     end
   end
 
+  # A'. connpass の 429（1 秒に 1 リクエストの制限）は待ってリトライする
+  #
+  # == 不具合の経緯（2026/11）==
+  # 2026-11-05 09:14 JST に本番の収集が Faraday::TooManyRequestsError で止まった。
+  # 429 を待ってリトライするコードはあったが ConnpassApiV2::Error を捕まえていた。
+  # connpass_api_v2 は Faraday の raise_error をそのまま使うので、上がるのは
+  # Faraday の例外で、リトライは一度も効いていなかった。
+  describe EventService::Providers::Connpass do
+    let(:page) { ConnpassApiV2::Response.new('results_returned' => 0, 'results_available' => 0, 'events' => []) }
+    let(:too_many_requests) { Faraday::TooManyRequestsError.new('the server responded with status 429', status: 429) }
+
+    before do
+      # リトライの待機で時間を使わない
+      allow_any_instance_of(described_class).to receive(:sleep)
+    end
+
+    context '429 が返ったとき' do
+      it '待ってリトライして回復する' do
+        calls = 0
+        allow_any_instance_of(ConnpassApiV2::Client).to receive(:get_events) do
+          calls += 1
+          raise too_many_requests if calls == 1
+          page
+        end
+
+        expect { described_class.new.fetch_events(group_id: 9876) }.not_to raise_error
+        expect(calls).to eq 2
+      end
+    end
+
+    # 制限が続く時に無限に待ち続けると、ジョブが終わらず失敗にも気づけない
+    context '429 が続くとき' do
+      it '回数を区切って例外を送出する' do
+        allow_any_instance_of(ConnpassApiV2::Client).to receive(:get_events).and_raise(too_many_requests)
+
+        expect { described_class.new.fetch_events(group_id: 9876) }.to raise_error(Faraday::TooManyRequestsError)
+      end
+    end
+  end
+
   # C. 収集に失敗したらジョブも失敗させる
   describe UpcomingEvents::Aggregation do
     include_context 'Use stubs UpcomingEvents for Connpass'
