@@ -127,7 +127,12 @@ module VerifyRelease
       JSON.parse(res.body)
     end
 
-    def git(args) = `git #{args}`.strip
+    # シェルを通さず、引数は配列で渡す（brakeman の Command Injection を避けるためだけでなく、
+    # 引数に空白や記号が入った時に壊れないため）。読めなければ空文字を返し、呼ぶ側で止める
+    def git(*args)
+      out, status = Open3.capture2('git', *args)
+      status.success? ? out.strip : ''
+    end
 
     # 何コミット遅れているかを添える。履歴が浅い・祖先でない時は諦める（報告は続ける）。
     # running は Heroku の API 由来なのでシェルを通さない。
@@ -226,8 +231,10 @@ if $PROGRAM_NAME == __FILE__
   abort 'HEROKU_APP がありません（secrets.HEROKU_APP_NAME を渡してください）' if app.empty?
   abort 'HEROKU_API_KEY がありません' if token.empty?
 
-  head      = VerifyRelease.git('rev-parse HEAD')
-  head_time = Time.at(VerifyRelease.git('log -1 --format=%ct').to_i)
+  head      = VerifyRelease.git('rev-parse', 'HEAD')
+  head_time = Time.at(VerifyRelease.git('log', '-1', '--format=%ct').to_i)
+  # HEAD が読めないまま進むと、本番と「空のコミット」を比べて意味のない stale を立てる
+  abort 'main の HEAD が読めませんでした（fetch-depth を確かめてください）' if head.empty?
 
   # センサー自身が落ちた時も Issue にする。run が赤くなるだけだと、その赤を見る人が
   # 「cron の行を最後に変更した人」のメールだけになり、「赤が出ても誰も見ない」形に戻る
