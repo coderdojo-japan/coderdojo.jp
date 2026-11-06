@@ -3,6 +3,9 @@ require "uri"
 require "json"
 
 class SlackNotifier
+  # Webhook が消された・無効になった時は、例外ではなく 2xx 以外の応答が返る
+  class DeliveryError < StandardError; end
+
   class << self
     # @param message [String] 通知するメッセージ
     # @param webhook_url [String] SlackのWebhook URL
@@ -25,7 +28,10 @@ class SlackNotifier
       ) { |http| http.request(request) }
 
       Rails.logger.info("Slack通知レスポンスコード: #{response.code}")
-      response.code.to_i.between?(200, 299)
+      return true if response.code.to_i.between?(200, 299)
+
+      Rails.error.report(DeliveryError.new("Slack通知が #{response.code} で拒否されました"))
+      false
     rescue StandardError => e
       Rails.logger.warn("Slack通知エラー: #{e.class} #{e.message}")
       Rails.error.report(e)

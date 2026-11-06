@@ -13,4 +13,16 @@ RSpec.describe SlackNotifier do
     expect(described_class.post_message('統計を集計しました', webhook_url)).to be false
     expect(Rails.error).to have_received(:report).with(error)
   end
+
+  # Webhook が消された・無効になった時、Slack は例外ではなく 2xx 以外の応答を返す
+  it 'Slack に拒否されたら false を返し、応答のコードを報告する' do
+    response = Net::HTTPNotFound.new('1.1', '404', 'Not Found')
+    allow(Net::HTTP).to receive(:start).and_return(response)
+    allow(Rails.error).to receive(:report)
+
+    expect(described_class.post_message('統計を集計しました', webhook_url)).to be false
+    expect(Rails.error).to have_received(:report).with(
+      an_instance_of(SlackNotifier::DeliveryError).and(having_attributes(message: /404/))
+    )
+  end
 end
