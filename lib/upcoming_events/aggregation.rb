@@ -73,11 +73,11 @@ module UpcomingEvents
         def notify_success(provider)
           # NOTE: UNIX 哲学に沿って、成功時は何も表示せず失敗時 (notify_failure) のみ通知する
           #       https://ja.wikipedia.org/wiki/UNIX哲学#:~:text=沈黙のルール
-          # notify("近日開催イベント情報#{provider_info(provider)}を収集しました")
+          # notify("近日開催イベント情報#{provider_info(provider)}を収集しました", news_hook_url)
         end
 
         def notify_failure(provider, exception)
-          notify("近日開催イベント情報の収集#{provider_info(provider)}でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}")
+          notify("近日開催イベント情報の収集#{provider_info(provider)}でエラーが発生しました\n#{exception.message}\n#{exception.backtrace.join("\n")}", error_hook_url)
         end
 
         private
@@ -86,17 +86,18 @@ module UpcomingEvents
           provider ? "(#{provider})" : nil
         end
 
-        def slack_hook_url
-          @slack_hook_url ||= ENV['SLACK_HOOK_URL']
+        # 成功の知らせは #coderdojo-news、失敗は #coderdojo-error に届ける
+        def news_hook_url
+          ENV['SLACK_HOOK_URL']
         end
 
-        def notifierable?
-          slack_hook_url.present?
+        def error_hook_url
+          ENV['SLACK_ERROR_HOOK_URL']
         end
 
-        def notify(msg)
+        def notify(msg, hook_url)
           $stdout.puts msg
-          SlackNotifier.post_message(msg, slack_hook_url) if notifierable?
+          SlackNotifier.post_message(msg, hook_url) if hook_url.present?
         end
       end
     end

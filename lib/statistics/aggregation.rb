@@ -184,7 +184,7 @@ module Statistics
     class Notifier
       class << self
         def notify_success(from, to, provider, dojo_id)
-          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計を行いました")
+          notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計を行いました", news_hook_url)
         end
 
         def notify_failure(from, to, provider, dojo_id, exception)
@@ -195,7 +195,7 @@ module Statistics
           retry_command = "rails 'statistics:aggregation[#{from},#{to}#{",#{provider}" if provider}]'"
           notify("#{from}~#{to}#{provider_info(provider)}#{dojo_info(dojo_id)}のイベント履歴の集計でエラーが発生しました\n" \
                  "原因を直したあと、期間を指定して再実行してください: #{retry_command}\n" \
-                 "#{exception.message}\n#{exception.backtrace.join("\n")}")
+                 "#{exception.message}\n#{exception.backtrace.join("\n")}", error_hook_url)
         end
 
         private
@@ -208,17 +208,18 @@ module Statistics
           dojo_id ? "[#{dojo_id}]" : nil
         end
 
-        def slack_hook_url
-          @slack_hook_url ||= ENV['SLACK_HOOK_URL']
+        # 成功の知らせは #coderdojo-news、失敗は #coderdojo-error に届ける
+        def news_hook_url
+          ENV['SLACK_HOOK_URL']
         end
 
-        def notifierable?
-          slack_hook_url.present?
+        def error_hook_url
+          ENV['SLACK_ERROR_HOOK_URL']
         end
 
-        def notify(msg)
+        def notify(msg, hook_url)
           $stdout.puts msg
-          SlackNotifier.post_message(msg, slack_hook_url) if notifierable?
+          SlackNotifier.post_message(msg, hook_url) if hook_url.present?
         end
       end
     end
