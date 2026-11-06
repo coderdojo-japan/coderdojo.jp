@@ -107,7 +107,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     cgi (0.5.2)
-    chartkick (5.2.1)
+    chartkick (5.3.0)
     childprocess (5.1.0)
       logger (~> 1.5)
     commander (5.0.0)
@@ -521,7 +521,7 @@ DEPENDENCIES
   bootstrap-sass
   brakeman
   capybara
-  chartkick (= 5.2.1)
+  chartkick (= 5.3.0)
   connpass_api_v2
   csv
   dotenv-rails
