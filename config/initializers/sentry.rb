@@ -5,6 +5,6 @@ Sentry.init do |config|
   config.enabled_environments            = %w[production]
   # rescue で捕まえて Rails.error.report した例外も送る（Airbrake は AirbrakeErrorSubscriber で受けている）
   config.rails.register_error_subscriber = true
-  config.traces_sample_rate              = 0.0
-  config.excluded_exceptions            += %w[ActiveRecord::RecordNotFound ActionController::RoutingError]
+  # traces_sample_rate は書かない。0.0 でも計測の仕組みが動き、全リクエストで記録を作る（送らないだけ）
+  # 404・UnknownFormat・InvalidType などは sentry-rails の既定で送らない。Airbrake には届くので、件数は Sentry の方が少なく出る
 end
