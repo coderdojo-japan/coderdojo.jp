@@ -421,6 +421,13 @@ GEM
     secure_headers (7.3.0)
       cgi (>= 0.1)
     securerandom (0.4.1)
+    sentry-rails (7.2.0)
+      railties (>= 5.2.0)
+      sentry-ruby (~> 7.2.0)
+    sentry-ruby (7.2.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      logger
     sitemap_generator (7.1.1)
       builder (~> 3.0)
     solargraph (0.61.0)
@@ -551,6 +558,8 @@ DEPENDENCIES
   ruby-mp3info
   sass-rails (>= 5)
   secure_headers
+  sentry-rails
+  sentry-ruby
   sitemap_generator
   solargraph
   spring

@@ -23,6 +23,8 @@ gem 'openssl' # Avoid version mismatch with system OpenSSL
 
 gem 'rambulance'         # Error handling pages: https://github.com/yuki24/rambulance
 gem 'airbrake'           # Error Monitoring by Airbrake: https://github.com/airbrake/airbrake
+gem 'sentry-ruby'        # Error Monitoring by Sentry: https://github.com/getsentry/sentry-ruby
+gem 'sentry-rails'
 gem 'rack-host-redirect' # Enable redirection
 gem 'secure_headers'     # Enable SSL and CORS
 gem 'rinku'              # Enable Auto Link for Podcasts
