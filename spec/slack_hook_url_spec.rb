@@ -7,4 +7,8 @@ RSpec.describe 'テスト中の Slack 通知' do
   it 'SLACK_HOOK_URL が設定されていない' do
     expect(ENV.key?('SLACK_HOOK_URL')).to be false
   end
+
+  it 'SLACK_ERROR_HOOK_URL が設定されていない' do
+    expect(ENV.key?('SLACK_ERROR_HOOK_URL')).to be false
+  end
 end

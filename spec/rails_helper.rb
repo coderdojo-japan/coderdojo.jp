@@ -3,6 +3,7 @@ ENV['RAILS_ENV'] ||= 'test'
 ENV['CONNPASS_API_KEY'] = 'DUMMY_CONNPASS_API_KEY'
 # 手元のシェルの値で、テストが本物の Slack に通知しないようにする
 ENV.delete('SLACK_HOOK_URL')
+ENV.delete('SLACK_ERROR_HOOK_URL')
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
