@@ -1,7 +1,11 @@
 ---
-- id: 201
-  url: https://news.coderdojo.jp/2026/10/11/dojoletter-vol-102-2026%e5%b9%b409%e6%9c%88%e5%8f%b7/
+- id: 202
+  url: https://news.coderdojo.jp/2026/11/07/dojoletter-vol-102-2026%e5%b9%b409%e6%9c%88%e5%8f%b7/
   title: DojoLetter Vol.102 2026年09月号
+  published_at: '2026-11-07T22:16:10+09:00'
+- id: 201
+  url: https://news.coderdojo.jp/2026/10/11/dojoletter-vol-101-2026%e5%b9%b408%e6%9c%88%e5%8f%b7/
+  title: DojoLetter Vol.101 2026年08月号
   published_at: '2026-10-11T22:14:36+09:00'
 - id: 200
   url: https://prtimes.jp/main/html/rd/p/000000022.000038935.html
