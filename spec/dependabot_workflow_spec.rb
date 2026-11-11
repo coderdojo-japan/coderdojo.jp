@@ -39,6 +39,13 @@ RSpec.describe 'Dependabot auto-merge workflow' do
       expect(dispatch_step['if'].to_s).to include('!cancelled()')
     end
 
+    # gh pr view --json に merged という項目は無く、`Unknown JSON field` で落ちる。
+    # 自動マージは済んだのにデプロイが呼ばれず、本番が古いまま止まった（#2034）
+    it 'マージ済みかは gh pr view が返す state で見る' do
+      expect(dispatch_step['run']).to include('--json state', '"MERGED"')
+      expect(dispatch_step['run']).not_to include('--json merged')
+    end
+
     # `gh workflow run` は 204 を返すだけで、run が作られたかは返さない
     it '呼んだだけで終わらせず、run が作られたか確かめて落ちる' do
       expect(dispatch_step['run']).to include('gh run list')
