@@ -43,8 +43,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          merged=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json merged --jq .merged)
-          if [ "$merged" != "true" ]; then
+          # gh pr view --json に merged は無い（Unknown JSON field で落ちる）。state は OPEN・CLOSED・MERGED
+          state=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json state --jq .state)
+          if [ "$state" != "MERGED" ]; then
             echo "PR #$PR_NUMBER はマージされていないので、デプロイは呼びません（除外した gem では正常）"
             exit 0
           fi
