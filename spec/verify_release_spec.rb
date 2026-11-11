@@ -5,8 +5,8 @@ require 'yaml'
 # 判定そのものは test.yml と同じ道具（Heroku CLI + jq）なので、ここで見るのは
 # **設定を間違えると黙る／誤って鳴る**ところだけにする。
 #
-# 判定ロジックの単体テストは置かない。中身は jq 1 行と `age -lt 7200` の 1 行で、
-# どちらも test.yml に実運用の前例がある。足りないと分かった時に足す。
+# 判定の jq は、環境変数の設定で誤って鳴った（#2033）ので、リリースの並びに当てて確かめる。
+# `age -lt 7200` の 1 行は test.yml に実運用の前例があるので単体テストを置かない。
 RSpec.describe 'Verify Release workflow' do
   let(:workflow) { YAML.safe_load_file(Rails.root.join('.github/workflows/verify-release.yml')) }
   let(:steps)    { workflow.dig('jobs', 'verify', 'steps') }
@@ -55,12 +55,54 @@ RSpec.describe 'Verify Release workflow' do
   # 本番は前の版のまま。status を見ないと、その description が HEAD と一致して緑になる。
   # any() にすると過去 10 件に紛れて、ロールバック中でも緑になる
   it '最新の succeeded なリリース 1 件だけを本番と見る' do
-    expect(check_code).to include('select(.status == "succeeded")][0]')
+    expect(check_code).to include('select(.status == "succeeded"', ')][0]')
     expect(check_code).not_to include('any(')
   end
 
   # パイプの途中が落ちた時に緑で通ると、センサー自身が黙る
   it 'シェルの失敗を握りつぶさない' do
     expect(check['run']).to include('set -euo pipefail')
+  end
+
+  # 判定の jq を、workflow から取り出してリリースの並びに当てる（jq は ubuntu のランナーにある）
+  describe '判定の jq' do
+    let(:filter) { check_code[/jq -e --arg sha "\$sha" \\\s*'(.+?)'/m, 1] }
+
+    def release(version, status, description) = { version:, status:, description: }
+
+    def caught_up?(releases, sha: '2e22bdc')
+      _, status = Open3.capture2('jq', '-e', '--arg', 'sha', sha, filter, stdin_data: releases.to_json)
+      status.success?
+    end
+
+    it '最新が HEAD の Deploy なら追いついている' do
+      expect(caught_up?([release(4154, 'succeeded', 'Deploy 2e22bdce')])).to be true
+    end
+
+    # 環境変数の設定・アドオンの付け外しもリリースになるが、slug（コード）は変わらない。
+    # これを本番の版と見ると、デプロイの後に環境変数を変えただけで赤になる（#2033）
+    it 'デプロイの後に環境変数を変えても、追いついていると見る' do
+      releases = [release(4155, 'succeeded', 'Set SENTRY_DSN config vars'),
+                  release(4154, 'succeeded', 'Deploy 2e22bdce')]
+      expect(caught_up?(releases)).to be true
+    end
+
+    it '最新の Deploy が古い版なら追いついていない' do
+      releases = [release(4155, 'succeeded', 'Set SENTRY_DSN config vars'),
+                  release(4153, 'succeeded', 'Deploy 4423dab4')]
+      expect(caught_up?(releases)).to be false
+    end
+
+    it 'HEAD の Deploy が failed なら追いついていない' do
+      releases = [release(4155, 'failed',    'Deploy 2e22bdce'),
+                  release(4154, 'succeeded', 'Deploy 4423dab4')]
+      expect(caught_up?(releases)).to be false
+    end
+
+    it 'ロールバック中は追いついていない' do
+      releases = [release(4156, 'succeeded', 'Rollback to v4153'),
+                  release(4154, 'succeeded', 'Deploy 2e22bdce')]
+      expect(caught_up?(releases)).to be false
+    end
   end
 end
