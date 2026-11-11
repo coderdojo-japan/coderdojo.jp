@@ -64,11 +64,13 @@ jobs:
 
         # status が succeeded のものだけ見る。release phase が落ちたリリースは
         # **新しい commit の slug を持ったまま failed** で残り、本番は前の版のままになる。
-        # any() ではなく最新の 1 件を見る: 過去 10 件に紛れると、ロールバック中でも緑になる
+        # any() ではなく最新の 1 件を見る: 過去 10 件に紛れると、ロールバック中でも緑になる。
+        # 見るのはコードを入れ替える Deploy と Rollback だけ。環境変数の設定などもリリースになるが
+        # description に SHA が無く、デプロイの後に環境変数を変えただけで赤になる（#2033）
         releases=$(heroku releases --json --num 10 --app "$HEROKU_APP_NAME")
         echo "$releases" | jq -r '.[] | "v\(.version)\t\(.status)\t\(.description)"'
         echo "$releases" | jq -e --arg sha "$sha" \
-          '[.[] | select(.status == "succeeded")][0].description | contains($sha)' > /dev/null \
+          '[.[] | select(.status == "succeeded" and (.description | test("^(Deploy|Rollback) ")))][0].description | contains($sha)' > /dev/null \
           || { echo "::error::本番が main ($sha) に追いついていません"; exit 1; }
 
         echo "✅ 本番は $sha です"
