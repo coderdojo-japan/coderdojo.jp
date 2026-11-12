@@ -38,7 +38,7 @@ RSpec.describe "Stats", type: :request do
     it "Chart.js は本体の圧縮版を使い、日付のライブラリは読み込まない" do
       charts = Rails.application.assets['charts.js'].to_s
 
-      expect(charts).to include('Chart.js v4.5.1')
+      expect(charts).to include('Chart.js v4.6.1')
       expect(charts).not_to include('date-fns')
       expect(charts).not_to include('sourceMappingURL')
     end
