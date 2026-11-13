@@ -15,6 +15,10 @@ module CoderdojoJp
     # 画面の最初に見える画像（カバー画像など）は、ビューで loading: 'eager' を指定する
     config.action_view.image_loading = 'lazy'
 
+    # 添付ファイルを使わず画像も加工しないので、加工の仕組みを切る。
+    # 有効なままだと image_processing gem が無いという WARN が起動のたびに出る（spec/active_storage_spec.rb）
+    config.active_storage.variant_processor = :disabled
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
