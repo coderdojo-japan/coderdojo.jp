@@ -72,9 +72,9 @@
             <img class="search-icon" alt="検索アイコン" src="/img/search.svg">
             検索で探す
           </label>
-          <%= check_box_tag :search, "検索アイコン", false, class: 'search-checkbox', onclick: 'focusSearchBox()' %>
+          <%= check_box_tag :search, "検索アイコン", false, class: 'search-checkbox' %>
           <div class="search">
-            <input id="searchbox" placeholder="例: コンテスト、教材" type="text">
+            <input id="searchbox" placeholder="例: コンテスト、教材" type="text" data-algolia-app-id="<%= ENV['ALGOLIA_APP_ID'] %>" data-algolia-api-key="<%= ENV['ALGOLIA_API_KEY'] %>">
             <div id="hits"></div>
             <div id="pagination"></div>
           </div>
@@ -83,18 +83,3 @@
     </div>
   </div>
 </nav>
-
-<% content_for :javascript do %>
-  <script>
-    function focusSearchBox() {
-      document.getElementById("searchbox").focus();
-    };
-
-    document.addEventListener('click', (e) => {
-      if(e.target.closest('#header-nav-toggle') || !e.target.closest('#header-nav-toggle')) {
-        const element = document.getElementById('header-nav-toggle')
-        element.classList.remove('in');
-      }
-    })
-  </script>
-<% end %> 
