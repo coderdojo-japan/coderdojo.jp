@@ -27,34 +27,34 @@
       <%= link_to raw('&raquo; 推移グラフで見る'), stats_path, style: 'color: #007bff; text-decoration: none;' %>
     </div>
   </p>
-  
+
   <!-- 年次データを取得する -->
   <div style="margin: 30px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; max-width: 600px;">
     <h3 id="table">
       <a href="#table">📊</a>
       年次データを取得する
     </h3>
-    
+
     <%= render_inline_flash_messages %>
-    
+
     <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px;">
       <%= label_tag :year, '対象期間:', style: 'font-weight: bold;' %>
-      <%= select_tag :year, 
+      <%= select_tag :year,
           options_for_select(
             (2012..Date.current.year).to_a.reverse.map { |y| [y.to_s + '年', y] },
             params[:year]
           ),
           include_blank: '全期間',
-          onchange: "window.location.href = this.value ? '#{dojos_path}?year=' + this.value + '#table' : '#{dojos_path}#table'",
+          data: { year_filter: dojos_path },
           style: 'padding: 5px; border: 1px solid #ced4da; border-radius: 4px; cursor: pointer;' %>
-      
-      <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]), 
+
+      <%= link_to 'CSV', dojos_path(format: :csv, year: params[:year]),
           style: 'padding: 5px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 4px;' %>
-      
-      <%= link_to 'JSON', dojos_path(format: :json, year: params[:year]), 
+
+      <%= link_to 'JSON', dojos_path(format: :json, year: params[:year]),
           style: 'padding: 5px 15px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px;' %>
     </div>
-    
+
     <p style="font-size: smaller; color: #6c757d; margin-top: 15px;">
       対象期間を選択すると、その時点のアクティブな道場の一覧を表示・ダウンロードできます。
     </p>

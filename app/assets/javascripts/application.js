@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require layout
+//= require pages
 //
 // /stats のグラフの JS は charts.js に分けている（全ページでは読み込まない）。
 // require_tree . にすると charts.js も入るので、ファイルを足す時はここに 1 つずつ書く
