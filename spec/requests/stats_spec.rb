@@ -57,8 +57,9 @@ RSpec.describe "Stats", type: :request do
       create(:dojo)
       get "/stats"
 
-      %w[areas dataByPref].each do |name|
-        literal = response.body[/var #{name}\s*=\s*(.+);$/, 1]
+      container = Nokogiri::HTML(response.body).at_css('#japan-map-container')
+      %w[data-areas data-by-prefecture].each do |name|
+        literal = container[name]
         expect { JSON.parse(literal) }.not_to raise_error, "#{name} を JSON として読めません: #{literal.to_s[0, 80]}"
       end
     end

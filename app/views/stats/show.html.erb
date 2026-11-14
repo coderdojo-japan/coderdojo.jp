@@ -351,7 +351,8 @@
       名前: 道場数
     </p>
     -->
-    <div id="japan-map-container"></div>
+    <%# 地図の色は stats_controller で決める。描くのは app/assets/javascripts/pages.js %>
+    <%= tag.div id: 'japan-map-container', data: { areas: @data_by_region, by_prefecture: @data_by_prefecture } %>
   </div>
 
   <!-- NOTE: Always show dojos with accordion style to compact -->
@@ -438,34 +439,3 @@
   span.table-label { font-size: 7px; }
   span.table-item  { font-size: xx-small; }
 </style>
-
-<script>
-  $(function(){
-    var areas      = <%= @data_by_region.to_json.html_safe %>;
-    var dataByPref = <%= @data_by_prefecture.to_json.html_safe %>;
-
-    $("#japan-map-container").japanMap({
-      // NOTE: Tweak stats_controller if you want to tweak map colors
-      areas: areas,
-      selection: "prefecture",
-      borderLineWidth: 0.1,
-      drawsBoxLine: false,
-      movesIslands: true,
-      showsAreaName: true,
-      showsPrefectureName: false,
-      prefectureNameType: "short",
-      width: 651,
-      font: "Hiragino Kaku Gothic Pro",
-      fontSize: 12,
-      fontColor: "white",
-      fontShadowColor: "#444455",
-      onSelect: function(data){
-        // This code is used for tapping by Mobile devices
-        $("#japan-map-text").html(data.name + ": " + dataByPref[data.name]);
-      },
-      onHover: function(data){
-        $("#japan-map-text").html(data.name + ": " + dataByPref[data.name]);
-      }
-    });
-  });
-</script>

@@ -385,7 +385,8 @@ RSpec.describe "Dojos", type: :request do
         get dojos_path
         expect(response.body).to include('対象期間')
         expect(response.body).to include('<select')
-        expect(response.body).to include('onchange')
+        # 選んだら移る処理は app/assets/javascripts/pages.js が data-year-filter の行き先で行う
+        expect(response.body).to include(%(data-year-filter="#{dojos_path}"))
         expect(response.body).to include('2012')
         expect(response.body).to include(Date.current.year.to_s)
       end
