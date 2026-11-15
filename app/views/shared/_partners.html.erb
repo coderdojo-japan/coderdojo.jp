@@ -1,11 +1,3 @@
-<% content_for :javascript do %>
-  <script>
-    $(function() {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  </script>
-<% end %>
-
 <ul>
   <li style="margin: 20px auto;"><%= link_to image_tag('/partners/case-shinjuku.png', alt: 'CASE Shinjuku', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'オフィスの提供'), '/podcasts/8', target: "_blank" %></li>
   <li style="margin: 20px auto;"><%= link_to image_tag('/partners/yasslab.webp', alt: 'YassLab 株式会社', data: { toggle: 'tooltip', placement: 'bottom' }, title: 'Webサイトの運営および開発支援'), 'https://github.com/coderdojo-japan/coderdojo.jp#history', target: "_blank" %></li>
@@ -64,4 +56,4 @@
     <li><%= link_to image_tag('/partners/code-for-everyone.webp', alt: 'みんなのコード', data: { toggle: 'tooltip', placement: 'bottom' }, title: '学校との連携支援'), 'https://news.coderdojo.jp/2019/02/04/from-minnnanocode-to-coderdojo-japan/', target: "_blank" %></li>
   -->
 
-</ul> 
+</ul>

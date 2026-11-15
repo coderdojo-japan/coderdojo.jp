@@ -2,20 +2,8 @@ require 'rails_helper'
 
 # CSP を強制する時、script-src に 'unsafe-inline' を残すと XSS を止められない。
 # そこでビューにインラインの JS（src の無い <script>・onclick= などの属性）を書かず、
-# app/assets/javascripts のファイルに置く。まだ残っているファイルは ALLOWED に並べ、直したら外す
+# app/assets/javascripts のファイルに置く
 RSpec.describe 'ビューのインラインの JS', type: :request do
-  def allowed
-    %w(
-      app/views/dojos/index.html.erb
-      app/views/home/show.html.erb
-      app/views/shared/_dojos.html+smartphone.erb
-      app/views/shared/_dojos_stats.html.erb
-      app/views/shared/_partners.html.erb
-      app/views/shared/_social_buttons_raw.html.erb
-      app/views/stats/show.html.erb
-    )
-  end
-
   def views
     Dir.glob(Rails.root.join('app/views/**/*.erb')).map { it.delete_prefix("#{Rails.root}/") }.sort
   end
@@ -27,19 +15,25 @@ RSpec.describe 'ビューのインラインの JS', type: :request do
       body.include?('javascript_tag')
   end
 
-  it '許可した一覧の外のビューには、インラインの JS が無い' do
-    offenders = views.reject { allowed.include?(it) }.select { inline_js?(File.read(it)) }
+  it 'ビューには、インラインの JS が無い' do
+    offenders = views.select { inline_js?(File.read(it)) }
 
     expect(offenders).to be_empty, "インラインの JS が残っている: #{offenders.join(', ')}"
   end
 
-  it '許可した一覧のファイルは、まだインラインの JS を含んでいる（直したら一覧から外す）' do
-    stale = allowed.reject { File.exist?(it) && inline_js?(File.read(it)) }
+  # ソースを照らすだけでは、パーシャルやヘルパーが出す JS を見落とすので、描画した HTML も照らす
+  %i(root_path dojos_path stats_path).each do |path|
+    it "#{path} の描画した HTML に、インラインの JS が無い" do
+      get send(path)
+      doc = Nokogiri::HTML(response.body)
+      # Chartkick のヘルパー（column_chart）はグラフごとにインラインの script を出す。データの渡し方を変える次の PR で外す
+      scripts = doc.css('script:not([src])').reject { path == :stats_path && it.text.include?('new Chartkick') }
 
-    expect(stale).to be_empty, "一覧から外す: #{stale.join(', ')}"
+      expect(scripts.map { it.text.strip[0, 40] }).to be_empty
+      expect(doc.xpath('//@*[starts-with(name(), "on")]').map(&:name)).to be_empty
+    end
   end
 
-  # ソースを照らすだけでは、パーシャルやヘルパーが出す JS を見落とすので、描画した HTML も照らす
   it 'レイアウトとヘッダーは、描画した HTML にインラインの JS を出さない' do
     get docs_path
     doc = Nokogiri::HTML(response.body)
