@@ -2,7 +2,7 @@
 # 見た目は、以前使っていた Highcharts の既定の値（書体・文字の大きさと色・棒の太さ・点の大きさ）にそろえる。
 # 凡例・棒の上の数・目盛りの k 表記は app/assets/javascripts/chartkick_plugins.js で描く
 class ChartkickBuilder
-  # ビューでは column_chart chart.series, **chart.options と使う
+  # ビューでは column_chart_tag chart と使う（app/helpers/charts_helper.rb）
   Chart = Struct.new(:series, :options)
 
   WIDTH       = 600  # 大きな画面での最大の幅。ビューの枠で決める

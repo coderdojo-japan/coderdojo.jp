@@ -26,10 +26,8 @@ RSpec.describe 'ビューのインラインの JS', type: :request do
     it "#{path} の描画した HTML に、インラインの JS が無い" do
       get send(path)
       doc = Nokogiri::HTML(response.body)
-      # Chartkick のヘルパー（column_chart）はグラフごとにインラインの script を出す。データの渡し方を変える次の PR で外す
-      scripts = doc.css('script:not([src])').reject { path == :stats_path && it.text.include?('new Chartkick') }
 
-      expect(scripts.map { it.text.strip[0, 40] }).to be_empty
+      expect(doc.css('script:not([src])').map { it.text.strip[0, 40] }).to be_empty
       expect(doc.xpath('//@*[starts-with(name(), "on")]').map(&:name)).to be_empty
     end
   end

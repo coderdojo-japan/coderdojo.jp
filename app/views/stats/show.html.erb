@@ -47,7 +47,7 @@
   <div align="center">
     <!-- 道場数、開催数、参加数の推移グラフ -->
     <% [@annual_dojos_chart, @annual_event_histories_chart, @annual_participants_chart].each do |chart| %>
-      <div class='chart-wrapper'><%= column_chart chart.series, **chart.options %></div>
+      <div class='chart-wrapper'><%= column_chart_tag chart %></div>
     <% end %>
   </div>
 
@@ -80,7 +80,7 @@
 
   <div id="tag" style="margin-top: 20px;" align="center">
     <br>
-    <div class='chart-wrapper' style='margin-top: 0;'><%= column_chart @dojo_tag_chart.series, **@dojo_tag_chart.options %></div>
+    <div class='chart-wrapper' style='margin-top: 0;'><%= column_chart_tag @dojo_tag_chart %></div>
   </div>
 
   <h2 id="table" style="margin-top: 70px; color: #333333;">
