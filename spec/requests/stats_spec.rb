@@ -11,17 +11,24 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).to include("View in English")
     end
 
-    # グラフは Chartkick（Chart.js）で描く。Highcharts は使わない
-    it "4 つのグラフを Chartkick で描く" do
+    # グラフは Chartkick（Chart.js）で描く。Highcharts は使わない。
+    # Chartkick のヘルパーはグラフごとにインラインの <script> を出すので使わず、
+    # データと設定を div の data 属性で渡して charts.js で描く（spec/requests/inline_script_spec.rb）
+    it "4 つのグラフを Chartkick で描き、データと設定を data 属性で渡す" do
       create(:dojo, tags: ['Scratch'])
       get "/stats"
 
-      expect(response.body.scan('new Chartkick["ColumnChart"]').size).to eq(4)
+      charts = Nokogiri::HTML(response.body).css('[data-chartkick-type]')
+      expect(charts.map { it['data-chartkick-type'] }).to eq(['ColumnChart'] * 4)
+      charts.each do |chart|
+        expect(JSON.parse(chart['data-chartkick-data'])).to be_an(Array).and be_present
+        expect(JSON.parse(chart['data-chartkick-options'])).to include('library')
+      end
       expect(response.body).not_to include('Highcharts')
     end
 
     # Chart.js は /stats だけで使うので、全ページの application.js には入れず、/stats で defer で読み込む。
-    # Chartkick のグラフは、Chart.js が後から読み込まれるのを chartkick:load で待つ
+    # defer の script は本文を読み終えてから動くので、charts.js の最後で data 属性の div を探して描ける
     it "Chart.js を /stats だけで、描画を止めずに読み込む" do
       get "/stats"
       expect(response.body).to match(%r{<script src="/assets/charts(-\h+)?(\.debug)?\.js" defer="defer"></script>})
@@ -30,7 +37,7 @@ RSpec.describe "Stats", type: :request do
       expect(response.body).not_to include('/assets/charts')
 
       expect(Rails.application.assets['application.js'].to_s).not_to include('Chart.js v4')
-      expect(Rails.application.assets['charts.js'].to_s).to include('Chart.js v4', 'htmlTooltip', 'chartkick:load')
+      expect(Rails.application.assets['charts.js'].to_s).to include('Chart.js v4', 'htmlTooltip', 'data-chartkick-type')
     end
 
     # 横軸は年とタグ名（category）で、時間の軸は使わない。Chartkick 同梱の Chart.bundle.js は
@@ -48,8 +55,9 @@ RSpec.describe "Stats", type: :request do
       create(:dojo, tags: ['Scratch'])
       get "/stats"
 
-      expect(response.body.scan('"htmlTooltip":{"enabled":true}').size).to eq(4)
-      expect(response.body.scan('"interaction":{"mode":"nearest","intersect":false}').size).to eq(4)
+      options = Nokogiri::HTML(response.body).css('[data-chartkick-options]').map { JSON.parse(it['data-chartkick-options']) }
+      expect(options.map { it.dig('library', 'plugins', 'htmlTooltip') }).to eq([{ 'enabled' => true }] * 4)
+      expect(options.map { it.dig('library', 'interaction') }).to eq([{ 'mode' => 'nearest', 'intersect' => false }] * 4)
     end
 
     # HAML から ERB へ変えた時に、地図のデータが &quot; のまま埋め込まれて JS で読めなくなっていた
