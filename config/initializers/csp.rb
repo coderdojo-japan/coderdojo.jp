@@ -21,12 +21,14 @@ SecureHeaders::Configuration.default do |config|
   # このアプリからは直接読まないが、本番では analytics.js を読んだ後にどのページでも読まれている。
   # Wufoo の form.js は static.wufoo.com へ転送される（CSP は転送先のホストも照らす）。
   # www.googletagmanager.com と apis.google.com は、強制する時に許し方を見直す（JSONP などで迂回に使われうる）
+  # この方針は次に強制する形で、強制の前に止まるものがほかに無いかを数える。
+  # 検索の docsearch.js v2 は eval を使うので、'unsafe-eval' は強制しても残す
   config.csp_report_only = {
     report_only:      true,
     preserve_schemes: true,
 
     default_src: src,
-    script_src:  %w('self' 'report-sample'
+    script_src:  %w('self' 'unsafe-eval' 'report-sample'
                     https://kit.fontawesome.com/82f32b9df5.js
                     https://cdn.jsdelivr.net/npm/@twemoji/api@17.0.3/dist/twemoji.min.js
                     https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js

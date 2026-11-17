@@ -18,8 +18,19 @@ RSpec.describe "CSP の報告", type: :request do
     get root_path
 
     header = response.headers['Content-Security-Policy-Report-Only']
-    expect(header).to include("script-src 'self' 'report-sample'", "object-src 'none'", "base-uri 'self'", 'report-uri /csp_report')
+    expect(header).to include("script-src 'self' ", "object-src 'none'", "base-uri 'self'", 'report-uri /csp_report')
+    expect(header[/script-src [^;]*/].split).to include("'report-sample'")
     expect(header).not_to match(/script-src[^;]*'unsafe-inline'/)
+  end
+
+  # Report-Only の方針は、次に強制する形にして、強制する前に止まるものを数える。
+  # 検索（docsearch.js v2）は eval を使うので、強制しても 'unsafe-eval' は残す
+  it "Report-Only の方針は、強制する形と同じく eval を許し、インラインの JS は許さない" do
+    get root_path
+
+    script_src = response.headers['Content-Security-Policy-Report-Only'].split(';').find { it.strip.start_with?('script-src ') }
+    expect(script_src.split).to include("'unsafe-eval'")
+    expect(script_src.split).not_to include("'unsafe-inline'")
   end
 
   # 本番のページで読み込みを確かめた外部の JS は、報告しない（直すべきインラインの JS の報告が埋もれないように）
