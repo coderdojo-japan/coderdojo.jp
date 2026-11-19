@@ -89,48 +89,6 @@ img.emoji {
   border-radius: 0px;
 }
 
-#searchbox {
-  padding-left: 5px;
-  font-size: 90%;
-}
-
-.algolia-autocomplete {
-  /* Main dropdown wrapper */
-  //  max-width: 100px;
-}
-
-.algolia-autocomplete .ds-dropdown-menu {
-  //  width: 200px;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  /* Main category (eg. Getting Started) */
-  //  color: darkgray;
-  //  border: 1px solid gray;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-  /* Category (eg. Downloads) */
-  //  color: gray;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--title {
-  /* Title (eg. Bootstrap CDN) */
-  //  font-weight: bold;
-  //  color: black;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--text {
-  /* Description description (eg. Bootstrap currently works...) */
-  //  font-size: 0.8rem;
-  //  color: gray;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-  /* Highlighted text */
-  //  color: blue;
-}
-
 /* 改行位置の調整 */
 .ignore-pc {
   display: none;

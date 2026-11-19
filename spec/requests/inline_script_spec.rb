@@ -45,7 +45,7 @@ RSpec.describe 'ビューのインラインの JS', type: :request do
 
     expect(doc.css('script:not([src])').map { it.text.strip[0, 40] }).to be_empty
     expect(doc.xpath('//@*[starts-with(name(), "on")]').map(&:name)).to be_empty
-    expect(doc.at_css('#searchbox').keys).to include('data-algolia-app-id', 'data-algolia-api-key')
+    expect(doc.at_css('#docsearch').keys).to include('data-algolia-app-id', 'data-algolia-api-key')
   end
 
   it '検出する書き方を見分ける' do
