@@ -13,9 +13,7 @@ SecureHeaders::Configuration.default do |config|
   # www.googletagmanager.com と apis.google.com はホストごと許すので、JSONP などで迂回に使われうる。絞るのは別の課題とする。
   # Wufoo の form.js は static.wufoo.com へ転送される（CSP は転送先のホストも照らす）。
   # 検索の docsearch.js v2 は eval を使うので、'unsafe-eval' は残す（外せるのは docsearch v3 に移した後）
-  # development は Rails のエラー画面と web-console がインラインの JS を使うので、止めずに報告だけにする
-  config.csp = {
-    report_only:      Rails.env.development?,
+  policy = {
     preserve_schemes: true,
 
     default_src: src,
@@ -36,4 +34,13 @@ SecureHeaders::Configuration.default do |config|
     base_uri:    %w('self'),
     report_uri:  ['/csp_report']
   }
+
+  # development は Rails のエラー画面と web-console がインラインの JS を使うので、止めずに報告だけにする
+  # （secure_headers は csp に report_only を書くと起動時に例外を出すので、強制を外して csp_report_only に渡す）
+  if Rails.env.development?
+    config.csp             = SecureHeaders::OPT_OUT
+    config.csp_report_only = policy
+  else
+    config.csp = policy
+  end
 end
