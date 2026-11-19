@@ -181,6 +181,12 @@ body {
 }
 
 /* DocSearch by Algolia */
+// 検索の画面を、上に固定したヘッダー（Bootstrap の navbar-fixed-top・z-index 1030）より前に出す。
+// DocSearch の既定は 200 で、幅 768px 以下では画面の上端から描くので、入力欄と「閉じる」がヘッダーの下に隠れる。
+// DocSearch の CSS はこのファイルより後に読むので、body を足してセレクタを強くする
+body .DocSearch-Container {
+  z-index: 1040;
+}
 .search-icon {
   width: 16px;
   border-radius: 0;
