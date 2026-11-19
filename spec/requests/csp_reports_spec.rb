@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-# 今の CSP はどのスクリプトも通すので、XSS を止めない。スクリプトを絞った方針を止めずに報告だけ（Report-Only）にして、
-# 何が止まるかを数える。報告はこのアプリの /csp_report で受けて、ログに残す
+# スクリプトは、このサイトの JS と、本番のページで読み込みを確かめた外部の JS だけを許す。
+# 違反はこのアプリの /csp_report で受けて、ログに残す
 RSpec.describe "CSP の報告", type: :request do
   let(:report) do
     {
@@ -14,21 +14,20 @@ RSpec.describe "CSP の報告", type: :request do
     }
   end
 
-  it "スクリプトを絞った方針を、止めずに報告だけする" do
+  it "スクリプトを絞った方針を強制し、違反を報告する" do
     get root_path
 
-    header = response.headers['Content-Security-Policy-Report-Only']
+    header = response.headers['Content-Security-Policy']
     expect(header).to include("script-src 'self' ", "object-src 'none'", "base-uri 'self'", 'report-uri /csp_report')
     expect(header[/script-src [^;]*/].split).to include("'report-sample'")
     expect(header).not_to match(/script-src[^;]*'unsafe-inline'/)
   end
 
-  # Report-Only の方針は、次に強制する形にして、強制する前に止まるものを数える。
   # 検索（docsearch.js v2）は eval を使うので、強制しても 'unsafe-eval' は残す
-  it "Report-Only の方針は、強制する形と同じく eval を許し、インラインの JS は許さない" do
+  it "eval は許し、インラインの JS とどのホストも通す * は許さない" do
     get root_path
 
-    script_src = response.headers['Content-Security-Policy-Report-Only'].split(';').find { it.strip.start_with?('script-src ') }
+    script_src = response.headers['Content-Security-Policy'].split(';').find { it.strip.start_with?('script-src ') }
     expect(script_src.split).to include("'unsafe-eval'")
     expect(script_src.split).not_to include("'unsafe-inline'")
   end
@@ -38,7 +37,7 @@ RSpec.describe "CSP の報告", type: :request do
     it "#{path} が出力する外部の JS を、違反として報告しない" do
       get path
 
-      header  = response.headers['Content-Security-Policy-Report-Only']
+      header  = response.headers['Content-Security-Policy']
       sources = header.split(';').find { it.strip.start_with?('script-src ') }.split.drop(1)
       scripts = Nokogiri::HTML(response.body).css('script[src]').map { it['src'] }
       scripts = scripts.select { it.start_with?('https://', '//') }.map { it.sub(%r{\A//}, 'https://').split(/[?#]/, 2).first }.uniq
@@ -55,21 +54,21 @@ RSpec.describe "CSP の報告", type: :request do
   it "JS から読む外部の JS と、その転送先も許す" do
     get root_path
 
-    header = response.headers['Content-Security-Policy-Report-Only']
+    header = response.headers['Content-Security-Policy']
     expect(header).to include('https://www.wufoo.com/scripts/embed/form.js', 'https://static.wufoo.com/scripts/embed/form.js')
   end
 
   it "誰でもパッケージを置ける CDN は、ホストごとには許さない" do
     get root_path
 
-    header = response.headers['Content-Security-Policy-Report-Only']
+    header = response.headers['Content-Security-Policy']
     expect(header).not_to match(%r{https://(cdn\.jsdelivr\.net|unpkg\.com)/?[ ;]})
   end
 
-  it "今の方針は、これまでどおり強制する" do
+  it "Report-Only の方針は出さない（強制する方針と同じになったので）" do
     get root_path
 
-    expect(response.headers['Content-Security-Policy']).to include("script-src *")
+    expect(response.headers).not_to have_key('Content-Security-Policy-Report-Only')
   end
 
   it "ブラウザの報告を受け取り、1 行のログに残す" do
