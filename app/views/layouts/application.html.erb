@@ -100,7 +100,10 @@
     <%= yield :javascript %>
 
     <!-- DocSearch (v3): https://docsearch.algolia.com/docs/DocSearch-v3 -->
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.9.0/dist/umd/index.js"></script>
+    <!-- 版を固定し、integrity で中身を照合する。上げる時は版と integrity を一緒に替える（CSP の許可の URL も） -->
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.9.0/dist/umd/index.js"
+            integrity="sha384-QhsjJ84XKaqUeM7eZpvYApdPamFboJLQg4BD2CCCSiUOL4cWzLp5caae6oW/oAXh"
+            crossorigin="anonymous"></script>
 
     <div id="fb-root"></div>
   </body>
