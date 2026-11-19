@@ -21,6 +21,13 @@ RSpec.describe 'ビューのインラインの JS', type: :request do
     expect(offenders).to be_empty, "インラインの JS が残っている: #{offenders.join(', ')}"
   end
 
+  # /docs/:id と /podcasts/:id は Markdown の中の HTML をそのまま出すので、そこも照らす
+  it "public/docs と public/podcasts の文書には、インラインの JS が無い" do
+    offenders = Dir.glob(Rails.root.join("public/{docs,podcasts}/*.md")).select { inline_js?(File.read(it)) }.map { File.basename(it) }
+
+    expect(offenders).to be_empty, "インラインの JS が残っている: #{offenders.join(", ")}"
+  end
+
   # ソースを照らすだけでは、パーシャルやヘルパーが出す JS を見落とすので、描画した HTML も照らす
   %i(root_path dojos_path stats_path).each do |path|
     it "#{path} の描画した HTML に、インラインの JS が無い" do
