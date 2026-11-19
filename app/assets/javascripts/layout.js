@@ -10,32 +10,40 @@ document.addEventListener('click', function() {
   if (nav) { nav.classList.remove('in'); }
 });
 
-// 検索アイコンを押したら、検索欄に入力できるようにする
-document.addEventListener('DOMContentLoaded', function() {
-  var searchCheckbox = document.querySelector('.search-checkbox');
-  var searchbox      = document.getElementById('searchbox');
-  if (searchCheckbox && searchbox) {
-    searchCheckbox.addEventListener('click', function() { searchbox.focus(); });
-  }
-});
-
 // Twemoji parse
 document.addEventListener('DOMContentLoaded', function() {
   if (window.twemoji) { twemoji.parse(document.body); }
 });
 
-// DocSearch (v2): https://docsearch.algolia.com/
-// 検索専用の API キーは、ヘッダーの #searchbox の data 属性で渡す
+// DocSearch (v3): https://docsearch.algolia.com/docs/DocSearch-v3
+// 検索専用の API キーは、ヘッダーの #docsearch の data 属性で渡す。
+// v3 のボタンは隠した #docsearch に描き、ヘッダーの「検索で探す」を押したら、そのボタンを押して検索の画面を開く
 document.addEventListener('DOMContentLoaded', function() {
-  var searchbox = document.getElementById('searchbox');
-  if (!searchbox || !window.docsearch) { return; }
+  var container = document.getElementById('docsearch');
+  var button    = document.getElementById('search-button');
+  if (!container || !button || !window.docsearch) { return; }
 
   docsearch({
-    appId:  searchbox.dataset.algoliaAppId,
-    apiKey: searchbox.dataset.algoliaApiKey,
-    indexName:     'coderdojo',
-    inputSelector: '#searchbox',
-    debug: false // Set true if you want to inspect the dropdown
+    container: container,
+    appId:     container.dataset.algoliaAppId,
+    apiKey:    container.dataset.algoliaApiKey,
+    indexName: 'coderdojo',
+    placeholder: '例: コンテスト、教材',
+    translations: {
+      modal: {
+        searchBox:   { resetButtonTitle: '消す', cancelButtonText: '閉じる' },
+        startScreen: { recentSearchesTitle: '最近の検索', noRecentSearchesText: '最近の検索はありません',
+                       saveRecentSearchButtonTitle: '保存する', removeRecentSearchButtonTitle: '履歴から消す',
+                       favoriteSearchesTitle: '保存した検索', removeFavoriteSearchButtonTitle: '保存から消す' },
+        errorScreen: { titleText: '結果を取得できませんでした', helpText: 'ネットワークの接続を確かめてください' },
+        footer:      { selectText: '選ぶ', navigateText: '移動', closeText: '閉じる', searchByText: '検索:' },
+        noResultsScreen: { noResultsText: '見つかりませんでした:', suggestedQueryText: '次の言葉で探してみてください:' }
+      }
+    }
+  });
+  button.addEventListener('click', function() {
+    var docsearchButton = container.querySelector('.DocSearch-Button');
+    if (docsearchButton) { docsearchButton.click(); }
   });
 });
 

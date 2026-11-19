@@ -23,12 +23,12 @@ RSpec.describe "CSP の報告", type: :request do
     expect(header).not_to match(/script-src[^;]*'unsafe-inline'/)
   end
 
-  # 検索（docsearch.js v2）は eval を使うので、強制しても 'unsafe-eval' は残す
-  it "eval は許し、インラインの JS とどのホストも通す * は許さない" do
+  # 検索の DocSearch v3 は eval を使わないので、eval も止める
+  it "eval もインラインの JS も許さない" do
     get root_path
 
     script_src = response.headers['Content-Security-Policy'].split(';').find { it.strip.start_with?('script-src ') }
-    expect(script_src.split).to include("'unsafe-eval'")
+    expect(script_src.split).not_to include("'unsafe-eval'")
     expect(script_src.split).not_to include("'unsafe-inline'")
   end
 
