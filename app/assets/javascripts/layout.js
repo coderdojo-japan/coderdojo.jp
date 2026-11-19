@@ -73,3 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
   ga('create', 'UA-62337761-1', 'auto');
   ga('send',   'pageview');
 });
+
+// 送信ボタンの二重押しを防ぐ。f.submit が付ける data-disable-with の文言に替えて押せなくする
+// （jquery_ujs が受け持っていた分。押したボタンの値が送られるよう、無効にするのは送信が始まった後にする）
+document.addEventListener('submit', function(event) {
+  var buttons = event.target.querySelectorAll('input[data-disable-with], button[data-disable-with]');
+  setTimeout(function() {
+    buttons.forEach(function(button) {
+      var text = button.dataset.disableWith;
+      if (button.tagName === 'INPUT') { button.value = text; } else { button.textContent = text; }
+      button.disabled = true;
+    });
+  }, 0);
+});
