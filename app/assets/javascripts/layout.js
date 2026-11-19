@@ -80,9 +80,24 @@ document.addEventListener('submit', function(event) {
   var buttons = event.target.querySelectorAll('input[data-disable-with], button[data-disable-with]');
   setTimeout(function() {
     buttons.forEach(function(button) {
-      var text = button.dataset.disableWith;
-      if (button.tagName === 'INPUT') { button.value = text; } else { button.textContent = text; }
+      button.dataset.enableWith = button.tagName === 'INPUT' ? button.value : button.textContent;
+      setButtonText(button, button.dataset.disableWith);
       button.disabled = true;
     });
   }, 0);
 });
+
+// 「戻る」でキャッシュから表示した時は、無効にしたボタンを元の文言で押せるように戻す。
+// 初めて開いた時の pageshow は load の後に届くので、読み込み中に押したボタンを戻さないよう persisted の時だけにする
+window.addEventListener('pageshow', function(event) {
+  if (!event.persisted) { return; }
+  document.querySelectorAll('[data-enable-with]').forEach(function(button) {
+    setButtonText(button, button.dataset.enableWith);
+    button.disabled = false;
+    delete button.dataset.enableWith;
+  });
+});
+
+function setButtonText(button, text) {
+  if (button.tagName === 'INPUT') { button.value = text; } else { button.textContent = text; }
+}

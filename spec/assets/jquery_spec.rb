@@ -16,4 +16,10 @@ RSpec.describe 'application.js の jQuery' do
     expect(source).not_to include('Unobtrusive scripting adapter for jQuery')
     expect(source).to include('[data-disable-with]')
   end
+
+  # 「戻る」でキャッシュから表示した時に、無効にしたボタンを押せるように戻す（jquery_ujs と同じ）
+  it '戻った時に送信ボタンを戻す' do
+    expect(source).to include("addEventListener('pageshow'")
+    expect(source).to include('event.persisted')
+  end
 end
