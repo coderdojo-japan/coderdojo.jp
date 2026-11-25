@@ -12,15 +12,6 @@ document.addEventListener('change', function(event) {
   window.location.href = select.value ? path + '?year=' + select.value + '#table' : path + '#table';
 });
 
-// 道場の一覧（トップのスマホ表示・/stats）: 都道府県を開いたら矢印を下向きにし、閉じたら戻す。
-// Bootstrap 3 の collapse のイベントは jQuery で出るので、jQuery で受ける
-$(document).on('shown.bs.collapse', '#accordion .collapse', function() {
-  $(this).parent().find('.fa-chevron-right').removeClass('fa-chevron-right').addClass('fa-chevron-down');
-});
-$(document).on('hidden.bs.collapse', '#accordion .collapse', function() {
-  $(this).parent().find('.fa-chevron-down').removeClass('fa-chevron-down').addClass('fa-chevron-right');
-});
-
 // 道場・パートナーの画像のツールチップ（Bootstrap 3）
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();

@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require jquery3
-//= require bootstrap-sprockets
+//= require bootstrap/transition
+//= require bootstrap/tooltip
 //= require layout
 //= require pages
 //
