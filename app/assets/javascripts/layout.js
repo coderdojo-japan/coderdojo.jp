@@ -4,11 +4,37 @@
 // 本文の末尾で読む DocSearch も定義された後に動く。application.js に async・defer を付けるとこの前提が崩れる。
 // 外部の JS（Twemoji・DocSearch など）が広告ブロック等で読めなくても他の処理が止まらないよう、処理ごとに分ける
 
-// どこをクリックしてもメニューを閉じる
-document.addEventListener('click', function() {
-  var nav = document.getElementById('header-nav-toggle');
-  if (nav) { nav.classList.remove('in'); }
+// 開閉（スマホのヘッダーのメニュー・スマホの道場一覧）。Bootstrap 3 の collapse.js の代わりに、
+// data-toggle="collapse" を押したら、data-target か href の要素の in を付け外しする（HTML と CSS は Bootstrap 3 のまま）。
+// ヘッダーのメニューは、メニューの開閉ボタン以外のどこをクリックしても閉じる
+document.addEventListener('click', function(event) {
+  var trigger    = event.target.closest('[data-toggle="collapse"]');
+  var navTrigger = document.querySelector('[data-target="#header-nav-toggle"]');
+  var nav        = document.getElementById('header-nav-toggle');
+
+  if (trigger !== navTrigger && nav && nav.classList.contains('in')) { toggleCollapse(navTrigger); }
+  if (!trigger) { return; }
+
+  event.preventDefault();
+  toggleCollapse(trigger);
 });
+
+function toggleCollapse(trigger) {
+  var target = document.querySelector(trigger.dataset.target || trigger.getAttribute('href'));
+  if (!target) { return; }
+
+  var open = target.classList.toggle('in');
+  target.setAttribute('aria-expanded', open);
+  trigger.setAttribute('aria-expanded', open);
+  trigger.classList.toggle('collapsed', !open);
+
+  // 道場一覧の都道府県の矢印: 開いたら下向き、閉じたら右向き
+  var arrow = trigger.querySelector('.fa-chevron-right, .fa-chevron-down');
+  if (arrow) {
+    arrow.classList.toggle('fa-chevron-right', !open);
+    arrow.classList.toggle('fa-chevron-down',  open);
+  }
+}
 
 // Twemoji parse
 document.addEventListener('DOMContentLoaded', function() {
