@@ -75,10 +75,21 @@
   .graycolors .color {
     width: calc(14.28% - 8px);
   }
+  .copy-toast {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2000;
+    padding: 8px 15px 8px 25px;
+    font-weight: bold;
+    color: #468847;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: #dff0d8 url(/img/icon-checkmark.png) no-repeat 3px 7px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
 </style>
-<div id='copy' style='color:#fff;opacity:0;'></div>
-
-<script type='text/javascript' src="/js/notify.js"></script>
 
 <script type="text/javascript" src="/js/styleguides.js"></script>
 
