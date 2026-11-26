@@ -6,9 +6,7 @@
       <span class="dojo-name dojo-name-sp">
         <%= link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener" %>
         <% if not dojo.counter == 1 %>
-          <span class="dojo-counter" data-original-title="道場数"
-                data-placement="bottom"
-                data-toggle="tooltip"><%= dojo.counter %></span>
+          <span class="dojo-counter" data-tooltip="道場数"><%= dojo.counter %></span>
         <% end %>
       </span>
       <span class="dojo-description">

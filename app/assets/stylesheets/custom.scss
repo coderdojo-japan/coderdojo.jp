@@ -641,15 +641,9 @@ body>footer a:hover {
   display: block;
   margin: .5em 0;
   font-weight: bold;
-  .tooltip-arrow {
-    border-bottom-color: #777 !important;
-  }
-  .tooltip-inner {
-    background:  #777;
-    color:       #ffffff;
-  }
 }
 .dojo-counter {
+  --tooltip-bg: #777;
   font-weight: bold;
   background:  #B8B8B8;
   color:       #ffffff;
@@ -858,11 +852,10 @@ body>footer a:hover {
     background: #99CCFF
   }
 
-  // Tags after 5th tag are shown as Bootstrap tooltip.
-  .tooltip.tags-more-tooltip {
-    opacity: 1 !important;
-    .tooltip-arrow { border-bottom-color: #99CCFF !important; }
-    .tooltip-inner {    background-color: #99CCFF !important; color: #fff !important; }
+  // 6 個目以降のタグは tooltip で出す（タグと同じ色）
+  .tags-more {
+    --tooltip-bg: #99CCFF;
+    --tooltip-opacity: 1;
   }
 }
 
@@ -1086,4 +1079,60 @@ section {
   font-size: 0.7em;
   margin-left: 0.2em;
   opacity: 0.9;
+}
+
+// tooltip（道場数・6 個目以降のタグ・パートナーの説明）。Bootstrap 3 の tooltip と同じ見た目を CSS だけで描く。
+// data-tooltip の文を、カーソルを載せた時・フォーカスした時に要素の下に出す。
+// img には ::before・::after が付かないので、画像は外側のリンクに data-tooltip を付ける
+[data-tooltip] {
+  position: relative;
+
+  // 画像を包むリンクは、画像の下端を基準に出す（inline のままだと文字の行の下に出て、画像に重なる）
+  &:is(a) {
+    display: inline-block;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1070;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s linear;
+  }
+
+  // 上向きの三角
+  &::before {
+    content: '';
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-width: 0;
+    border-bottom-color: var(--tooltip-bg, #000);
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    margin-top: 5px;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 200px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #fff;
+    text-align: center;
+    white-space: normal;
+    background: var(--tooltip-bg, #000);
+    border-radius: 4px;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus-visible::before,
+  &:focus-visible::after {
+    opacity: var(--tooltip-opacity, .9);
+  }
 }

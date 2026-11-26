@@ -1,16 +1,12 @@
 require 'rails_helper'
 
-# Bootstrap 3 の JS は、使う tooltip（と、その表示の切り替えに使う transition）だけを読む。
-# 開閉（ヘッダーのメニュー・スマホの道場一覧）は layout.js で受け持つ。
-# collapse.js を一緒に読むと、同じクリックで 2 回開閉して開かなくなる
+# Bootstrap 3 の JS は読まない。開閉（ヘッダーのメニュー・スマホの道場一覧）は layout.js で受け持ち、
+# tooltip は data-tooltip 属性を CSS で描く（spec/requests/tooltip_spec.rb）
 RSpec.describe 'application.js の Bootstrap 3' do
   let(:source) { Rails.application.assets.find_asset('application.js').to_s }
 
-  it 'tooltip と transition だけを読む' do
-    expect(source).to include('Bootstrap: tooltip.js')
-    expect(source).to include('Bootstrap: transition.js')
-    expect(source).not_to include('Bootstrap: collapse.js')
-    expect(source).not_to include('Bootstrap: modal.js')
+  it 'Bootstrap 3 の JS を読まない' do
+    expect(source).not_to include('Bootstrap: ')
   end
 
   # collapse.js も '[data-toggle="collapse"]' を含むので、layout.js の関数の名前で確かめる
