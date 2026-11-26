@@ -77,6 +77,20 @@ RSpec.describe "Stats", type: :request do
       expect(labels['関東 (2)']).to eq [378.9, 275.3]
       expect(labels['北海道 (1)']).to eq [442.3, 70.3]
     end
+
+    # 本番の地方は「九州」（福岡〜鹿児島）と「沖縄」（沖縄県）に分かれている。seed も同じに分ける
+    it "九州と沖縄を別の地方として数える" do
+      create(:dojo, prefecture_id: 40, order: 401005)  # 福岡県
+      create(:dojo, prefecture_id: 47, order: 472018)  # 沖縄県
+      get "/stats"
+
+      labels = Nokogiri::HTML(response.body).css('svg.japan-map text').map(&:text)
+      expect(labels).to contain_exactly('九州 (1)', '沖縄 (1)')
+
+      get "/english/stats"
+      labels = Nokogiri::HTML(response.body).css('svg.japan-map text').map(&:text)
+      expect(labels).to contain_exactly('Kyushu (1)', 'Okinawa (1)')
+    end
   end
 
   # /stats.json は他リポジトリからも参照される。既存キーは消さず追加のみ行う。
