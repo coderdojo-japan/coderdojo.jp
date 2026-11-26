@@ -91,6 +91,6 @@
   }
 </style>
 
-<script type="text/javascript" src="/js/styleguides.js"></script>
+<script type="text/javascript" src="/js/styleguides.js?v=7f0e3d94"></script>
 
 
