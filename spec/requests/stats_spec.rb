@@ -60,16 +60,22 @@ RSpec.describe "Stats", type: :request do
       expect(options.map { it.dig('library', 'interaction') }).to eq([{ 'mode' => 'nearest', 'intersect' => false }] * 4)
     end
 
-    # HAML から ERB へ変えた時に、地図のデータが &quot; のまま埋め込まれて JS で読めなくなっていた
-    it "日本地図のデータを、JS がそのまま読める JSON で埋め込む" do
-      create(:dojo)
+    # 日本地図は JS（jQuery のプラグイン）を使わず、県の形の SVG に、地方名と道場数を SVG の文字で重ねて描く
+    it "日本地図を SVG で描き、地方名と道場数を重ねる" do
+      create(:dojo, counter: 2)                     # 東京（関東）
+      create(:dojo, prefecture_id: 1, order: 11001)   # 北海道
       get "/stats"
+      doc = Nokogiri::HTML(response.body)
 
-      container = Nokogiri::HTML(response.body).at_css('#japan-map-container')
-      %w[data-areas data-by-prefecture].each do |name|
-        literal = container[name]
-        expect { JSON.parse(literal) }.not_to raise_error, "#{name} を JSON として読めません: #{literal.to_s[0, 80]}"
-      end
+      expect(response.body).not_to include('japan-map.js')
+      map = doc.at_css('svg.japan-map')
+      expect(map.at_css('image')['href']).to match(%r{\A/assets/japan-map(-\h+)?\.svg\z})
+      labels = map.css('text').to_h { [it.text, [it['x'].to_f, it['y'].to_f]] }
+      expect(labels.keys).to contain_exactly('関東 (2)', '北海道 (1)')
+      # 地方名は、プラグインと同じく、その地方の県の中心の平均に置く
+      # （関東 = 茨城〜神奈川の 7 県。北海道は 1 県なので、その県の点）
+      expect(labels['関東 (2)']).to eq [378.9, 275.3]
+      expect(labels['北海道 (1)']).to eq [442.3, 70.3]
     end
   end
 

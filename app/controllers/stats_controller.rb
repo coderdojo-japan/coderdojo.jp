@@ -77,7 +77,7 @@ class StatsController < ApplicationController
     # 日本各地の道場
     @data_by_region = []
     @regions_and_dojos = Dojo.group_by_region_on_active
-    @regions_and_dojos.each_with_index do |(region, dojos), index|
+    @regions_and_dojos.each do |region, dojos|
       # 地域名の英語化
       region_name = if @lang == 'en'
         case region
@@ -96,11 +96,9 @@ class StatsController < ApplicationController
         region
       end
 
+      # 日本地図の地方名と道場数（app/helpers/japan_map_helper.rb）
       @data_by_region << {
-        code:        index+1,
         name:        "#{region_name} (#{dojos.pluck(:counter).sum})",
-        color:       "dodgerblue",  # Area Color
-        hoverColor:  "dodgerblue", # Another option: "deepskyblue"
         prefectures: Prefecture.where(region: region).map(&:id)
       }
     end
