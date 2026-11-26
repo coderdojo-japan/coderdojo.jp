@@ -4,11 +4,16 @@ document.addEventListener('click', function(event) {
   var swatch = event.target.closest('[data-color]');
   if (!swatch) return;
 
-  var div = document.getElementById('copy');
-  div.innerHTML = '';
-  div.appendChild(document.createTextNode(swatch.dataset.color));
-  window.getSelection().selectAllChildren(div);
-  document.execCommand('copy');
-  $.notify.defaults({autoHideDelay: 2000, arrowShow: false, globalPosition: 'bottom right'});
-  $.notify("コピーしました", "success");
+  navigator.clipboard.writeText(swatch.dataset.color).then(function() {
+    showToast('コピーしました');
+  });
 });
+
+// 右下に 2 秒だけ出す通知。見た目は public/docs/styleguides.md の .copy-toast
+function showToast(text) {
+  var toast = document.createElement('div');
+  toast.className   = 'copy-toast';
+  toast.textContent = text;
+  document.body.appendChild(toast);
+  setTimeout(function() { toast.remove(); }, 2000);
+}
