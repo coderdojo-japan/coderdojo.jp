@@ -8,7 +8,6 @@ gem 'puma_worker_killer'
 gem 'rails', '~> 8.1.4'
 
 gem 'jbuilder'
-gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
