@@ -1,7 +1,6 @@
 // 特定のページで動かす JS。CSP を強制する時に 'unsafe-inline' を外せるよう、
 // ビューの <script> と onchange 属性から移した（spec/requests/inline_script_spec.rb）。
-// 全ページで読むので、どの処理も対象の要素が無ければ何もしない。
-// application.js は <head> で同期して読むので、$(function) は本文を読み終えてから動く
+// 全ページで読むので、どの処理も対象の要素が無ければ何もしない
 
 // 道場一覧（/dojos）: 対象期間を選んだら、その年の表へ移る
 document.addEventListener('change', function(event) {
@@ -41,33 +40,3 @@ document.addEventListener('DOMContentLoaded', function() {
   document.head.appendChild(script);
 });
 
-// 統計（/stats）の日本地図。jquery.japan-map.js は /stats だけで読む。
-// 地図の色と数は、#japan-map-container の data 属性で渡す
-$(function() {
-  var container = document.getElementById('japan-map-container');
-  if (!container || !$.fn.japanMap) { return; }
-
-  var areas      = JSON.parse(container.dataset.areas);
-  var dataByPref = JSON.parse(container.dataset.byPrefecture);
-  var showCount  = function(data) {
-    $('#japan-map-text').text(data.name + ': ' + dataByPref[data.name]);
-  };
-
-  $(container).japanMap({
-    areas: areas,
-    selection: 'prefecture',
-    borderLineWidth: 0.1,
-    drawsBoxLine: false,
-    movesIslands: true,
-    showsAreaName: true,
-    showsPrefectureName: false,
-    prefectureNameType: 'short',
-    width: 651,
-    font: 'Hiragino Kaku Gothic Pro',
-    fontSize: 12,
-    fontColor: 'white',
-    fontShadowColor: '#444455',
-    onSelect: showCount, // スマホでタップした時
-    onHover:  showCount
-  });
-});

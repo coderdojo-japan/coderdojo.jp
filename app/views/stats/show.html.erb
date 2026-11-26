@@ -4,9 +4,6 @@
 <% provide(:meta_image, '/img/ogp-stats.jpeg') %>
 <% provide(:lang, @lang) %>
 
-<!-- jQuery Japan Map -->
-<script type="text/javascript" src="/js/jquery.japan-map.js"></script>
-
 <!-- グラフ（Chartkick と Chart.js）。描画を止めないよう defer で読み込む -->
 <%= javascript_include_tag 'charts', defer: true %>
 
@@ -346,13 +343,28 @@
   </div>
 
   <div class="japan-map">
-    <!--
-    <p id="japan-map-text" style="margin: 20px auto; font-size: 140%;">
-      名前: 道場数
-    </p>
-    -->
-    <%# 地図の色は stats_controller で決める。描くのは app/assets/javascripts/pages.js %>
-    <%= tag.div id: 'japan-map-container', data: { areas: @data_by_region, by_prefecture: @data_by_prefecture } %>
+    <%# 県の形は画像、地方名と道場数は文字で重ねる（app/helpers/japan_map_helper.rb） %>
+    <% width, height = JapanMapHelper::JAPAN_MAP_SIZE %>
+    <svg class="japan-map" viewBox="0 0 <%= width %> <%= height %>" role="img"
+         aria-label="<%= @lang == 'en' ? 'Map of Japan with the number of dojos by region' : '地方ごとの道場数を載せた日本地図' %>">
+      <defs>
+        <filter id="japan-map-label-shadow" x="-20%" y="-60%" width="140%" height="220%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+          <feFlood flood-color="#444455"/>
+          <feComposite in2="blur" operator="in" result="shadow"/>
+          <feMerge>
+            <feMergeNode in="shadow"/><feMergeNode in="shadow"/><feMergeNode in="shadow"/><feMergeNode in="shadow"/><feMergeNode in="shadow"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <image href="<%= image_path('japan-map.svg') %>" width="<%= width %>" height="<%= height %>"/>
+      <g class="japan-map-labels" filter="url(#japan-map-label-shadow)">
+        <% japan_map_labels(@data_by_region).each do |label| %>
+          <text x="<%= label[:x] %>" y="<%= label[:y] %>"><%= label[:name] %></text>
+        <% end %>
+      </g>
+    </svg>
   </div>
 
   <!-- NOTE: Always show dojos with accordion style to compact -->

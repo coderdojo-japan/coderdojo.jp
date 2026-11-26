@@ -923,20 +923,25 @@ body>footer a:hover {
   }
 }
 
-#japan-map-container canvas {
-  margin: 20px auto 30px;
-}
-#japan-map-text {
+// /stats の日本地図（app/views/stats/show.html.erb）。以前の canvas の地図と同じ幅・余白にする
+.japan-map svg {
   display: block;
+  width: 100%;
+  max-width: 651px;
+  margin: 20px auto 30px;
+
+  text {
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    font-size: 10.16px; // 以前の 12px（幅 651px の canvas）を、地図の座標（幅 551）に直した値
+    fill: #fff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
 }
 
 @media only screen and (max-width: 651px) {
-  #japan-map-container canvas {
+  .japan-map svg {
     margin: 50px auto;
-    width: 100%;
-  }
-  #japan-map-text {
-    display: none;
   }
 }
 
