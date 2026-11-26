@@ -5,10 +5,7 @@
     <span class="dojo-name">
       <%= link_to "#{dojo.name} (#{dojo.prefecture.name})", dojo.url, target: "_blank", rel: "external noopener" %>
       <% if not dojo.counter == 1 %>
-        <span class="dojo-counter"
-              data-original-title="道場数"
-              data-placement="bottom"
-              data-toggle="tooltip"><%= dojo.counter %></span>
+        <span class="dojo-counter" data-tooltip="道場数"><%= dojo.counter %></span>
       <% end %>
     </span>
   </header>
@@ -19,14 +16,7 @@
     <% end %>
 
     <% if dojo.tags.length > 5 %>
-      <li data-toggle="tooltip"
-          data-placement="bottom"
-          data-html="true"
-          data-template='<div class="tooltip tags-more-tooltip" role="tooltip">
-	   	           <div class="tooltip-arrow"></div>
-		           <div class="tooltip-inner"></div>
-		         </div>'
-          title="<%= dojo.tags[5..].join(', ') %>">...</li>
+      <li class="tags-more" data-tooltip="<%= dojo.tags[5..].join(', ') %>">...</li>
     <% end %>
   </ul>
 

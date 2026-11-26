@@ -12,11 +12,6 @@ document.addEventListener('change', function(event) {
   window.location.href = select.value ? path + '?year=' + select.value + '#table' : path + '#table';
 });
 
-// 道場・パートナーの画像のツールチップ（Bootstrap 3）
-$(function() {
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
 // トップのお問い合わせフォーム（Wufoo）。フォームの名前は div の data 属性で渡す
 document.addEventListener('DOMContentLoaded', function() {
   var box = document.querySelector('[data-wufoo-form]');
